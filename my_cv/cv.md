@@ -60,7 +60,7 @@ Converteo est un cabinet de conseil leader en France, spécialiste du Digital et
 | Automatisation QA Analytics | Browserbase, Stagehand, Vercel AI SDK | Navigation autonome pour récupérer dataLayer & hits analytics à chaque étape du parcours utilisateur, automatisation de la recette |
 | Personas Synthétiques UX | Browser Use, Steel Dev, Gemini API | Évaluation automatisée de l'UX d'un site et benchmark concurrentiel via agents de navigation |
 | Outils internes productivité | Claude API (Anthropic) | Système d'assistance personnel pour les tâches quotidiennes, intégré comme OS de productivité |
-| Promotion Claude Code | Claude Code CLI | Évangélisation interne et formation des équipes aux outils Anthropic |
+| Promotion Claude Code | Claude Code CLI | Évangélisation interne et formation des équipes aux outils IA/LLM |
 
 **Clients accompagnés :**
 Club Med, Fédération Française de Football (FFF), Sephora, Accor, Engie, FDJ, TotalEnergies, Hermès, L'Oréal, LVMH, Samsung, Yves Rocher
@@ -266,18 +266,18 @@ Empirik est une agence webmarketing spécialisée dans l'exploitation intelligen
 
 ---
 
-## Pourquoi je veux rejoindre Anthropic
+## Vision & Ambitions
 
 Je suis convaincu que nous vivons un moment charnière dans l'histoire de la technologie, comparable à l'invention de l'imprimerie. Les LLMs transforment fondamentalement notre façon de travailler et de créer de la valeur.
 
-Après 3 ans à explorer et déployer des solutions IA génératives pour mes clients, et en tant qu'utilisateur quotidien et promoteur de Claude, je souhaite contribuer directement à l'adoption responsable de ces technologies au sein des grandes entreprises.
+Après 3 ans à explorer et déployer des solutions IA génératives pour mes clients, je souhaite continuer à contribuer à l'adoption responsable de ces technologies au sein des grandes entreprises.
 
 Mon expérience unique combine :
 - **12 ans d'accompagnement technique de grands comptes** sur des cycles d'achat complexes
 - **Une expertise hands-on en développement d'agents et solutions LLM**
 - **Une capacité éprouvée à traduire des concepts techniques en valeur business** pour des audiences variées (C-level, équipes IT, développeurs)
 
-Je veux aider les entreprises à comprendre et exploiter le potentiel de Claude, tout en contribuant à la mission d'Anthropic : créer une IA fiable, interprétable et bénéfique.
+Mon objectif : aider les entreprises à comprendre et exploiter le potentiel des LLMs, tout en promouvant une IA fiable, interprétable et bénéfique.
 
 ---
 
