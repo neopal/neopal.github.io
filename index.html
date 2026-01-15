@@ -338,7 +338,7 @@
         <!-- Main Content -->
         <main class="flex-1 min-w-0">
         <!-- Hero Section -->
-        <section class="min-h-screen flex flex-col items-center text-center px-4 md:px-6 border-b border-charcoal/5 relative pb-20" id="hero">
+        <section class="min-h-screen flex flex-col items-center text-center px-4 md:px-6 border-b border-charcoal/5" id="hero">
             <div class="flex-1 flex items-center py-4">
                 <div class="max-w-4xl space-y-6 md:space-y-12">
                 <div class="text-[9px] md:text-[11px] uppercase tracking-[0.3em] md:tracking-[0.4em] font-bold opacity-50">Senior Lead Analytics & Applied AI</div>
@@ -369,18 +369,19 @@
                 </div>
                 </div>
             </div>
-            <!-- Scroll indicator - fixed at bottom -->
-            <a href="#positions" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40 hover:opacity-70 transition-opacity">
-                <img src="assets/casquette.png" alt="" class="w-8 md:w-10 h-8 md:h-10" />
-                <svg width="16" height="10" viewBox="0 0 20 12" class="animate-bounce">
-                    <rect x="0" y="0" width="4" height="4" fill="currentColor"/>
-                    <rect x="4" y="4" width="4" height="4" fill="currentColor"/>
-                    <rect x="8" y="8" width="4" height="4" fill="currentColor"/>
-                    <rect x="12" y="4" width="4" height="4" fill="currentColor"/>
-                    <rect x="16" y="0" width="4" height="4" fill="currentColor"/>
-                </svg>
-            </a>
         </section>
+
+        <!-- Scroll indicator - fixed at bottom of viewport, hidden after scroll -->
+        <a href="#positions" id="scrollIndicator" class="fixed bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40 hover:opacity-70 transition-opacity z-40">
+            <img src="assets/casquette.png" alt="" class="w-8 md:w-10 h-8 md:h-10" />
+            <svg width="16" height="10" viewBox="0 0 20 12" class="animate-bounce">
+                <rect x="0" y="0" width="4" height="4" fill="currentColor"/>
+                <rect x="4" y="4" width="4" height="4" fill="currentColor"/>
+                <rect x="8" y="8" width="4" height="4" fill="currentColor"/>
+                <rect x="12" y="4" width="4" height="4" fill="currentColor"/>
+                <rect x="16" y="0" width="4" height="4" fill="currentColor"/>
+            </svg>
+        </a>
 
         <!-- Roles & Versatility -->
         <section class="py-24 px-6 md:px-12 bg-charcoal text-parchment relative overflow-hidden" id="positions">
@@ -878,6 +879,19 @@ Le CV complet de Pierre-Adrien est fourni ci-dessous. Utilise ces informations p
 
         // Initialize scroll spy when DOM is ready
         document.addEventListener('DOMContentLoaded', initScrollSpy);
+
+        // Hide scroll indicator after scrolling past hero
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        window.addEventListener('scroll', () => {
+            const heroHeight = document.getElementById('hero').offsetHeight;
+            if (window.scrollY > heroHeight * 0.3) {
+                scrollIndicator.style.opacity = '0';
+                scrollIndicator.style.pointerEvents = 'none';
+            } else {
+                scrollIndicator.style.opacity = '';
+                scrollIndicator.style.pointerEvents = '';
+            }
+        });
 
         // Set dynamic years in hero section
         document.getElementById('yearsExp').textContent = YEARS_EXP;
