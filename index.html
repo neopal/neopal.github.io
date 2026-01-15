@@ -372,7 +372,7 @@
         </section>
 
         <!-- Scroll indicator - fixed at bottom of viewport, hidden after scroll -->
-        <a href="#positions" id="scrollIndicator" class="fixed bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40 hover:opacity-70 transition-opacity z-40">
+        <a href="#positions" id="scrollIndicator" class="fixed bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40 hover:opacity-70 transition-all duration-300 z-40">
             <img src="assets/casquette.png" alt="" class="w-8 md:w-10 h-8 md:h-10" />
             <svg width="16" height="10" viewBox="0 0 20 12" class="animate-bounce">
                 <rect x="0" y="0" width="4" height="4" fill="currentColor"/>
@@ -882,16 +882,16 @@ Le CV complet de Pierre-Adrien est fourni ci-dessous. Utilise ces informations p
 
         // Hide scroll indicator after scrolling past hero
         const scrollIndicator = document.getElementById('scrollIndicator');
-        window.addEventListener('scroll', () => {
-            const heroHeight = document.getElementById('hero').offsetHeight;
-            if (window.scrollY > heroHeight * 0.3) {
-                scrollIndicator.style.opacity = '0';
-                scrollIndicator.style.pointerEvents = 'none';
+        function updateScrollIndicator() {
+            const heroBottom = document.getElementById('hero').getBoundingClientRect().bottom;
+            if (heroBottom < window.innerHeight * 0.5) {
+                scrollIndicator.classList.add('opacity-0', 'pointer-events-none');
             } else {
-                scrollIndicator.style.opacity = '';
-                scrollIndicator.style.pointerEvents = '';
+                scrollIndicator.classList.remove('opacity-0', 'pointer-events-none');
             }
-        });
+        }
+        window.addEventListener('scroll', updateScrollIndicator);
+        updateScrollIndicator(); // Initial check
 
         // Set dynamic years in hero section
         document.getElementById('yearsExp').textContent = YEARS_EXP;
