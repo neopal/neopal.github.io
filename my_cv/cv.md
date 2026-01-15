@@ -283,4 +283,22 @@ Mon objectif : aider les entreprises à comprendre et exploiter le potentiel des
 
 ---
 
+## Bonus - Centres d'intérêt personnels
+
+### Cinéma
+- **Comédies cultes** : Fan absolu des ZAZ (Zucker-Abrahams-Zucker) - Naked Gun, Top Secret, Airplane!
+- Humour absurde et parodique
+
+### Jeux Vidéo
+| Genre | Favoris |
+|-------|---------|
+| Point & Click | Day of the Tentacle, tout Tim Schafer (Grim Fandango, Psychonauts, Full Throttle) |
+| Rogue-lite | Hades, Dead Cells, Blue Prince |
+| Jeux indés d'auteur | Chicory: A Colorful Tale, What Remains of Edith Finch, The Operator, Cocoon |
+| Jeux de logique/puzzle | The Witness, Superliminal, The Talos Principle |
+
+*Ces informations sont partagées pour humaniser les échanges - le chatbot peut en parler si on lui pose des questions personnelles.*
+
+---
+
 *Dernière mise à jour : Janvier 2025*
