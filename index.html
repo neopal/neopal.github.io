@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Pierre-Adrien LAIR | Senior Lead Analytics & Applied AI</title>
+    <meta name="description" content="Senior Lead Analytics avec 12 ans d'expérience, spécialisé en IA appliquée et accompagnement grands comptes."/>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "parchment": "#F5F2ED",
+                        "charcoal": "#1A1A1A",
+                        "anthropic-orange": "#D97706",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"],
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer base {
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                @apply bg-parchment text-charcoal antialiased selection:bg-charcoal selection:text-parchment;
+            }
+            h1, h2, h3, h4 {
+                @apply font-display font-medium tracking-tight;
+            }
+        }
+        .logo-text {
+            letter-spacing: 0.15em;
+            font-weight: 700;
+        }
+        .brutalist-border {
+            border: 1px solid #1A1A1A;
+        }
+        .divider-thin {
+            height: 1px;
+            @apply bg-charcoal/10;
+        }
+        .vertical-line {
+            width: 1px;
+            @apply bg-charcoal/20;
+        }
+        @media print {
+            /* Hide non-essential elements */
+            .no-print,
+            #sideNavDesktop,
+            #sideNavMobile,
+            #mobileNavOverlay,
+            #chatModal,
+            footer,
+            #hero,
+            #positions,
+            #clients,
+            #publications {
+                display: none !important;
+            }
+
+            /* Reset page */
+            @page {
+                size: A4;
+                margin: 10mm;
+            }
+
+            body {
+                background: white !important;
+                font-size: 9pt !important;
+                line-height: 1.3 !important;
+            }
+
+            /* Layout container */
+            .lg\\:flex {
+                display: block !important;
+            }
+
+            /* Compact experience */
+            #experience {
+                padding: 8px 0 !important;
+            }
+            #experience .grid {
+                display: block !important;
+            }
+            #experience h2 {
+                font-size: 11pt !important;
+                position: static !important;
+                margin-bottom: 8px !important;
+            }
+            #experience h3 {
+                font-size: 10pt !important;
+                margin-bottom: 2px !important;
+            }
+            #experience .text-lg {
+                font-size: 8pt !important;
+                margin-bottom: 4px !important;
+            }
+            #experience .space-y-24 {
+                gap: 8px !important;
+            }
+            #experience .space-y-24 > div {
+                margin-bottom: 8px !important;
+                padding-bottom: 6px !important;
+                border-bottom: 1px solid #eee !important;
+            }
+            #experience .md\\:pl-16 {
+                padding-left: 0 !important;
+            }
+            #experience .vertical-line,
+            #experience .absolute {
+                display: none !important;
+            }
+            #experience .space-y-6 {
+                gap: 2px !important;
+            }
+            #experience ul {
+                font-size: 7pt !important;
+                margin-top: 4px !important;
+            }
+            #experience .space-y-3,
+            #experience .space-y-4 {
+                gap: 2px !important;
+                margin-top: 4px !important;
+            }
+            /* Hide detailed AI projects in print - keep partnerships */
+            #experience .space-y-4:last-child {
+                display: none !important;
+            }
+            #experience .flex-wrap span {
+                font-size: 6pt !important;
+                padding: 1px 3px !important;
+            }
+
+            /* Compact stack */
+            #stack {
+                padding: 8px 0 !important;
+                background: #f0f0f0 !important;
+                color: black !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                page-break-inside: avoid !important;
+            }
+            #stack .mb-20 {
+                margin-bottom: 6px !important;
+            }
+            #stack h2 {
+                font-size: 10pt !important;
+                margin-bottom: 4px !important;
+            }
+            #stack h4 {
+                font-size: 8pt !important;
+                margin-bottom: 2px !important;
+            }
+            #stack p {
+                font-size: 6pt !important;
+                line-height: 1.2 !important;
+            }
+            #stack .grid {
+                display: grid !important;
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 1px !important;
+            }
+            #stack .p-10 {
+                padding: 6px !important;
+                background: #f8f8f8 !important;
+            }
+            #stack .space-y-6 {
+                gap: 2px !important;
+            }
+
+            /* Certifications compact */
+            #certifications {
+                padding: 6px 0 !important;
+                background: white !important;
+                page-break-inside: avoid !important;
+            }
+            #certifications h2 {
+                font-size: 9pt !important;
+                margin-bottom: 4px !important;
+            }
+            #certifications .mb-16 {
+                margin-bottom: 4px !important;
+            }
+            #certifications .flex-wrap {
+                gap: 2px !important;
+            }
+            #certifications span {
+                font-size: 5pt !important;
+                padding: 1px 3px !important;
+            }
+
+            /* Print-specific header */
+            .print-header {
+                display: block !important;
+            }
+
+            /* Prevent page breaks */
+            section {
+                page-break-inside: avoid !important;
+            }
+
+            /* Hide date labels */
+            .text-\\[10px\\].font-mono {
+                font-size: 7pt !important;
+            }
+        }
+
+        .print-header {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+    <!-- Print-only compact header -->
+    <div class="print-header" style="display:none; border-bottom: 1px solid #ccc; padding-bottom: 8px; margin-bottom: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div>
+                <h1 style="font-size: 20pt; font-weight: bold; margin: 0;">PIERRE-ADRIEN LAIR</h1>
+                <p style="font-size: 9pt; color: #666; margin: 2px 0 0 0;">Senior Lead Analytics & Applied AI</p>
+            </div>
+            <div style="text-align: right; font-size: 8pt;">
+                <p style="margin: 0;">lairpierreadrien@gmail.com</p>
+                <p style="margin: 0;">linkedin.com/in/pierre-adrien-lair-55a6a850</p>
+                <p style="margin: 0;">Paris & Normandie, France</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Header with Burger -->
+    <header class="lg:hidden sticky top-0 z-50 bg-parchment/90 backdrop-blur-md border-b border-charcoal/10 px-6 py-4 no-print">
+        <div class="flex justify-between items-center">
+            <button onclick="toggleMobileNav()" class="p-2 hover:bg-charcoal/10 rounded transition-colors" aria-label="Menu">
+                <span class="material-symbols-outlined text-xl">menu</span>
+            </button>
+            <div class="logo-text text-sm">PA<span class="opacity-30">\</span>L</div>
+            <div class="flex items-center gap-2">
+                <button onclick="openChat()" class="p-2 bg-charcoal text-parchment rounded hover:bg-charcoal/80 transition-all">
+                    <span class="material-symbols-outlined text-sm">chat</span>
+                </button>
+                <button onclick="exportPDF()" class="p-2 border border-charcoal rounded hover:bg-charcoal hover:text-parchment transition-all">
+                    <span class="material-symbols-outlined text-sm">download</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Side Navigation -->
+    <nav id="sideNavMobile" class="lg:hidden fixed left-0 top-0 bottom-0 w-64 bg-charcoal text-parchment z-[70] transform -translate-x-full transition-transform duration-300 ease-out no-print">
+        <div class="p-8 h-full flex flex-col">
+            <div class="flex justify-between items-center mb-12">
+                <span class="text-[10px] uppercase tracking-[0.3em] opacity-40">Navigation</span>
+                <button onclick="toggleMobileNav()" class="p-1 hover:opacity-50 transition-opacity">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="space-y-8 flex-1">
+                <a href="#hero" onclick="toggleMobileNav()" class="block text-2xl font-display uppercase tracking-wide hover:opacity-50 transition-opacity">Profil</a>
+                <a href="#experience" onclick="toggleMobileNav()" class="block text-2xl font-display uppercase tracking-wide hover:opacity-50 transition-opacity">Parcours</a>
+                <a href="#stack" onclick="toggleMobileNav()" class="block text-2xl font-display uppercase tracking-wide hover:opacity-50 transition-opacity">Techs</a>
+                <a href="#publications" onclick="toggleMobileNav()" class="block text-2xl font-display uppercase tracking-wide hover:opacity-50 transition-opacity">Publications</a>
+            </div>
+            <div class="pt-8 border-t border-parchment/20 space-y-4">
+                <div class="flex items-center gap-3 text-xs">
+                    <div class="size-2 bg-anthropic-orange rounded-full animate-pulse"></div>
+                    <span class="uppercase tracking-widest">En poste</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="mobileNavOverlay" class="lg:hidden fixed inset-0 bg-charcoal/50 z-[65] hidden no-print" onclick="toggleMobileNav()"></div>
+
+    <!-- Desktop CTA Buttons - Fixed top right -->
+    <header class="hidden lg:flex fixed top-6 right-8 z-50 items-center gap-4 no-print">
+        <button onclick="openChat()" class="px-5 py-3 bg-charcoal text-parchment text-[11px] uppercase tracking-widest font-bold hover:bg-charcoal/80 transition-all flex items-center gap-2 shadow-lg">
+            <span class="material-symbols-outlined text-base">chat</span>
+            Ask AI
+        </button>
+        <button onclick="exportPDF()" class="px-5 py-3 bg-parchment border-2 border-charcoal text-[11px] uppercase tracking-widest font-bold hover:bg-charcoal hover:text-parchment transition-all flex items-center gap-2 shadow-lg">
+            <span class="material-symbols-outlined text-base">download</span>
+            PDF
+        </button>
+    </header>
+
+    <!-- Layout Container -->
+    <div class="lg:flex max-w-7xl mx-auto">
+        <!-- Sticky Side Navigation - Desktop only, prominent -->
+        <nav id="sideNavDesktop" class="hidden lg:block w-56 shrink-0 no-print">
+            <div class="sticky top-12 p-8 space-y-10">
+                <!-- Nav Links -->
+                <div class="space-y-6">
+                    <a href="#hero" class="nav-link flex items-center gap-4 opacity-40 hover:opacity-100 transition-opacity" data-section="hero">
+                        <span class="w-6 h-0.5 bg-charcoal transition-all duration-300"></span>
+                        <span class="text-sm uppercase tracking-[0.15em] font-bold">Profil</span>
+                    </a>
+                    <a href="#experience" class="nav-link flex items-center gap-4 opacity-40 hover:opacity-100 transition-opacity" data-section="experience">
+                        <span class="w-6 h-0.5 bg-charcoal transition-all duration-300"></span>
+                        <span class="text-sm uppercase tracking-[0.15em] font-bold">Parcours</span>
+                    </a>
+                    <a href="#stack" class="nav-link flex items-center gap-4 opacity-40 hover:opacity-100 transition-opacity" data-section="stack">
+                        <span class="w-6 h-0.5 bg-charcoal transition-all duration-300"></span>
+                        <span class="text-sm uppercase tracking-[0.15em] font-bold">Techs</span>
+                    </a>
+                    <a href="#publications" class="nav-link flex items-center gap-4 opacity-40 hover:opacity-100 transition-opacity" data-section="publications">
+                        <span class="w-6 h-0.5 bg-charcoal transition-all duration-300"></span>
+                        <span class="text-sm uppercase tracking-[0.15em] font-bold">Publications</span>
+                    </a>
+                </div>
+                <!-- Divider -->
+                <div class="h-px w-12 bg-charcoal/20"></div>
+                <!-- Bottom section -->
+                <div class="space-y-5">
+                    <div class="flex items-center gap-3">
+                        <div class="size-2.5 bg-anthropic-orange rounded-full animate-pulse"></div>
+                        <span class="text-xs uppercase tracking-widest opacity-60">En poste</span>
+                    </div>
+                    <div class="flex gap-4 text-sm uppercase tracking-widest font-medium">
+                        <a href="https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">Li</a>
+                        <a href="https://x.com/pal_analytics" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">X</a>
+                        <a href="mailto:lairpierreadrien@gmail.com" class="opacity-40 hover:opacity-100 transition-opacity">@</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="flex-1 min-w-0">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col items-center text-center px-6 border-b border-charcoal/5" id="hero">
+            <div class="flex-1 flex items-center">
+                <div class="max-w-4xl space-y-12">
+                <div class="text-[11px] uppercase tracking-[0.4em] font-bold opacity-50">Senior Lead Analytics & Applied AI</div>
+                <h1 class="text-5xl md:text-[90px] leading-[0.9] logo-text uppercase">
+                    PIERRE-ADRIEN<span class="opacity-20">\</span>LAIR
+                </h1>
+                <div class="h-px w-32 bg-charcoal mx-auto"></div>
+                <p class="text-xl md:text-2xl font-light leading-relaxed text-charcoal/90 max-w-3xl mx-auto">
+                    <span id="yearsExp"></span> ans d'accompagnement des grands comptes sur leurs enjeux data & analytics.
+                    Aujourd'hui, je construis des agents IA et solutions LLM pour transformer la productivite des equipes.
+                </p>
+                <div class="text-sm text-charcoal/60 space-y-2">
+                    <p class="flex items-center justify-center gap-1.5"><span class="material-symbols-outlined text-base opacity-50">location_on</span>Paris & Normandie, France</p>
+                    <div class="flex justify-center gap-6 text-[10px] uppercase tracking-widest">
+                        <a href="mailto:lairpierreadrien@gmail.com" class="hover:opacity-50 transition-opacity">Email</a>
+                        <a href="https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/" target="_blank" class="hover:opacity-50 transition-opacity">LinkedIn</a>
+                        <a href="https://x.com/pal_analytics" target="_blank" class="hover:opacity-50 transition-opacity">X/Twitter</a>
+                    </div>
+                </div>
+                <div class="pt-8 flex flex-col md:flex-row justify-center gap-6">
+                    <a class="px-12 py-5 bg-charcoal text-parchment text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-charcoal/90 transition-all flex items-center justify-center leading-none" href="#experience">
+                        Voir mon parcours
+                    </a>
+                    <button onclick="openChat()" class="group px-10 py-4 border border-charcoal text-charcoal text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-charcoal hover:text-parchment transition-all flex items-center gap-3">
+                        <img src="assets/avatar.png" alt="" class="w-8 h-8 rounded-full group-hover:scale-110 transition-transform" />
+                        Poser une question
+                    </button>
+                </div>
+                </div>
+            </div>
+            <!-- Scroll indicator - pushed to bottom -->
+            <a href="#positions" class="mb-8 flex flex-col items-center gap-2 opacity-40 hover:opacity-70 transition-opacity">
+                <img src="assets/casquette.png" alt="" class="w-10 h-10" />
+                <!-- Pixel art arrow (5 squares) -->
+                <svg width="20" height="12" viewBox="0 0 20 12" class="animate-bounce">
+                    <rect x="0" y="0" width="4" height="4" fill="currentColor"/>
+                    <rect x="4" y="4" width="4" height="4" fill="currentColor"/>
+                    <rect x="8" y="8" width="4" height="4" fill="currentColor"/>
+                    <rect x="12" y="4" width="4" height="4" fill="currentColor"/>
+                    <rect x="16" y="0" width="4" height="4" fill="currentColor"/>
+                </svg>
+            </a>
+        </section>
+
+        <!-- Roles & Versatility -->
+        <section class="py-24 px-6 md:px-12 bg-charcoal text-parchment relative overflow-hidden" id="positions">
+            <div class="max-w-7xl mx-auto relative">
+                <div class="mb-16 space-y-4 text-center">
+                    <div class="text-[10px] uppercase tracking-[0.4em] opacity-40">Versatilite</div>
+                    <h2 class="text-4xl md:text-5xl uppercase font-bold tracking-tight">Casquettes</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-parchment/20">
+                    <div class="bg-charcoal p-10 space-y-4 hover:bg-parchment/5 transition-colors text-center">
+                        <div class="text-xs font-mono opacity-40">01</div>
+                        <h4 class="text-xl uppercase font-bold">Solutions Architect</h4>
+                        <p class="text-sm text-parchment/60">Applied AI / LLM</p>
+                    </div>
+                    <div class="bg-charcoal p-10 space-y-4 hover:bg-parchment/5 transition-colors text-center">
+                        <div class="text-xs font-mono opacity-40">02</div>
+                        <h4 class="text-xl uppercase font-bold">Analytics Manager</h4>
+                        <p class="text-sm text-parchment/60">Data & Insights</p>
+                    </div>
+                    <div class="bg-charcoal p-10 space-y-4 hover:bg-parchment/5 transition-colors text-center">
+                        <div class="text-xs font-mono opacity-40">03</div>
+                        <h4 class="text-xl uppercase font-bold">Analytics Engineer</h4>
+                        <p class="text-sm text-parchment/60">Data Architecture</p>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <div class="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-widest">
+                        <div class="size-2 bg-anthropic-orange rounded-full animate-pulse"></div>
+                        <span>En poste — a l'ecoute de vos besoins consulting pour Converteo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="py-32 px-6 md:px-12 max-w-7xl mx-auto" id="experience">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <div class="md:col-span-4">
+                    <h2 class="text-4xl uppercase tracking-tighter sticky top-32">Parcours<br/>Professionnel</h2>
+                </div>
+                <div class="md:col-span-8 relative">
+                    <div class="absolute left-0 top-0 bottom-0 vertical-line hidden md:block"></div>
+                    <div class="space-y-24">
+
+                        <!-- Converteo Senior Lead -->
+                        <div class="relative md:pl-16">
+                            <div class="absolute left-0 top-2 -ml-[4.5px] size-2 bg-charcoal rounded-full hidden md:block"></div>
+                            <div class="space-y-6">
+                                <div class="text-[10px] font-mono opacity-40 tracking-widest">JANVIER 2025 — PRESENT</div>
+                                <h3 class="text-2xl md:text-3xl font-bold uppercase tracking-tight">Senior Lead Analytics & AI</h3>
+                                <div class="text-xs font-bold uppercase tracking-widest text-charcoal/60">Converteo — Paris</div>
+                                <p class="text-lg text-charcoal/70 leading-relaxed max-w-2xl">
+                                    Direction de la vision Analytics & Conversion au sein d'une practice de 150+ consultants.
+                                    Responsable de la R&D IA appliquee aux metiers analytics : developpement d'agents autonomes,
+                                    automatisation QA, et evaluation UX par IA.
+                                </p>
+
+                                <!-- Partenariats stratégiques -->
+                                <div class="space-y-3 pt-2">
+                                    <div class="text-xs font-bold uppercase tracking-widest opacity-50">Partenariats strategiques</div>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-3 py-1 text-[10px] uppercase tracking-wider font-bold border border-charcoal/20 hover:border-charcoal/40 transition-colors">Google</span>
+                                        <span class="px-3 py-1 text-[10px] uppercase tracking-wider font-bold border border-charcoal/20 hover:border-charcoal/40 transition-colors">Meta</span>
+                                        <span class="px-3 py-1 text-[10px] uppercase tracking-wider font-bold border border-charcoal/20 hover:border-charcoal/40 transition-colors">Amplitude</span>
+                                        <span class="px-3 py-1 text-[10px] uppercase tracking-wider font-bold border border-charcoal/20 hover:border-charcoal/40 transition-colors">Piano</span>
+                                        <span class="px-3 py-1 text-[10px] uppercase tracking-wider font-bold border border-charcoal/20 hover:border-charcoal/40 transition-colors">AB Tasty</span>
+                                        <span class="px-3 py-1 text-[10px] uppercase tracking-wider font-bold border border-charcoal/20 hover:border-charcoal/40 transition-colors">Kameleoon</span>
+                                        <span class="px-3 py-1 text-[10px] uppercase tracking-wider font-bold border border-charcoal/20 hover:border-charcoal/40 transition-colors">Didomi</span>
+                                        <span class="px-3 py-1 text-[10px] uppercase tracking-wider font-bold border border-charcoal/20 hover:border-charcoal/40 transition-colors">CommandersAct</span>
+                                        <span class="px-3 py-1 text-[10px] uppercase tracking-wider font-bold border border-charcoal/20 hover:border-charcoal/40 transition-colors">Datama</span>
+                                    </div>
+                                </div>
+
+                                <!-- Projets IA -->
+                                <div class="space-y-4 pt-4">
+                                    <div class="text-xs font-bold uppercase tracking-widest opacity-50">Projets IA realises</div>
+                                    <ul class="grid grid-cols-1 gap-3 text-sm">
+                                        <li class="flex items-start gap-3">
+                                            <span class="material-symbols-outlined text-sm pt-0.5 text-anthropic-orange">robot_2</span>
+                                            <span><strong>Agents Tracking</strong> — Google ADK + Gemini pour automatiser GTM</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="material-symbols-outlined text-sm pt-0.5 text-anthropic-orange">bug_report</span>
+                                            <span><strong>QA Automatisee</strong> — Browserbase + Stagehand pour recette analytics</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="material-symbols-outlined text-sm pt-0.5 text-anthropic-orange">person_search</span>
+                                            <span><strong>Personas Synthetiques</strong> — Browser Use + Steel Dev pour audit UX</span>
+                                        </li>
+                                        <li class="flex items-start gap-3">
+                                            <span class="material-symbols-outlined text-sm pt-0.5 text-anthropic-orange">terminal</span>
+                                            <span><strong>Outils Claude</strong> — Claude API comme OS de productivite quotidien</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Converteo Lead -->
+                        <div class="relative md:pl-16">
+                            <div class="absolute left-0 top-2 -ml-[4.5px] size-2 bg-charcoal/40 rounded-full hidden md:block"></div>
+                            <div class="space-y-6">
+                                <div class="text-[10px] font-mono opacity-40 tracking-widest">NOVEMBRE 2019 — MARS 2025</div>
+                                <h3 class="text-2xl md:text-3xl font-bold uppercase tracking-tight">Lead Analytics</h3>
+                                <div class="text-xs font-bold uppercase tracking-widest text-charcoal/60">Converteo — Paris</div>
+                                <p class="text-lg text-charcoal/70 leading-relaxed max-w-2xl">
+                                    Garant de la methodologie et du delivery de la practice Analytics & Conversion.
+                                    Lancement de l'initiative R&D IA generative (depuis GPT-3/Davinci en 2022).
+                                    Formation de 200+ consultants sur tracking & analytics.
+                                </p>
+                                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm font-medium pt-4">
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-sm pt-1">check_circle</span>
+                                        200+ consultants formes
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="material-symbols-outlined text-sm pt-1">check_circle</span>
+                                        R&D IA generative depuis 2022
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Empirik -->
+                        <div class="relative md:pl-16">
+                            <div class="absolute left-0 top-2 -ml-[4.5px] size-2 bg-charcoal/20 rounded-full hidden md:block"></div>
+                            <div class="space-y-6">
+                                <div class="text-[10px] font-mono opacity-40 tracking-widest">MAI 2017 — NOVEMBRE 2019</div>
+                                <h3 class="text-2xl md:text-3xl font-bold uppercase tracking-tight">Head of Analytics</h3>
+                                <div class="text-xs font-bold uppercase tracking-widest text-charcoal/60">Empirik — Lyon</div>
+                                <p class="text-lg text-charcoal/70 leading-relaxed max-w-2xl">
+                                    Responsable de l'offre Analytics. Accompagnement clients sur toute la chaine de valeur data :
+                                    conseil outils, tag management, analytics, data engineering (BigQuery), CRO, attribution.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Converteo Consultant -->
+                        <div class="relative md:pl-16">
+                            <div class="absolute left-0 top-2 -ml-[4.5px] size-2 bg-charcoal/20 rounded-full hidden md:block"></div>
+                            <div class="space-y-6">
+                                <div class="text-[10px] font-mono opacity-40 tracking-widest">FEVRIER 2014 — AVRIL 2017</div>
+                                <h3 class="text-2xl md:text-3xl font-bold uppercase tracking-tight">Senior Consultant Digital & Data</h3>
+                                <div class="text-xs font-bold uppercase tracking-widest text-charcoal/60">Converteo — Paris</div>
+                                <p class="text-lg text-charcoal/70 leading-relaxed max-w-2xl">
+                                    AMOA projets digitaux, audits e-business & webanalytics, recommandations strategiques,
+                                    conception d'outils de suivi, implementation tracking.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Stack -->
+        <section class="bg-charcoal text-parchment py-32 px-6 md:px-12" id="stack">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-20 space-y-4">
+                    <div class="text-[10px] uppercase tracking-[0.4em] opacity-40">Competences</div>
+                    <h2 class="text-4xl md:text-5xl uppercase font-bold tracking-tight">Stack Technique</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-px bg-parchment/20 border border-parchment/20">
+                    <div class="bg-charcoal p-10 space-y-6 hover:bg-parchment/5 transition-colors">
+                        <div class="text-xs font-mono opacity-40">01</div>
+                        <h4 class="text-xl uppercase font-bold">IA & LLM</h4>
+                        <p class="text-sm text-parchment/60 leading-relaxed">
+                            Claude API, Gemini API, OpenAI API, Google ADK, Vercel AI SDK, Browserbase, Stagehand, Browser Use
+                        </p>
+                    </div>
+                    <div class="bg-charcoal p-10 space-y-6 hover:bg-parchment/5 transition-colors">
+                        <div class="text-xs font-mono opacity-40">02</div>
+                        <h4 class="text-xl uppercase font-bold">Analytics & Data</h4>
+                        <p class="text-sm text-parchment/60 leading-relaxed">
+                            Google Analytics, Piano, Adobe Analytics, Amplitude, Mixpanel, ContentSquare, Google Tag Manager, CommandersAct, Didomi, Axeptio
+                        </p>
+                    </div>
+                    <div class="bg-charcoal p-10 space-y-6 hover:bg-parchment/5 transition-colors">
+                        <div class="text-xs font-mono opacity-40">03</div>
+                        <h4 class="text-xl uppercase font-bold">CRO & Analyse</h4>
+                        <p class="text-sm text-parchment/60 leading-relaxed">
+                            Kameleoon, AB Tasty, Optimizely, Dynamic Yield, Datama
+                        </p>
+                    </div>
+                    <div class="bg-charcoal p-10 space-y-6 hover:bg-parchment/5 transition-colors">
+                        <div class="text-xs font-mono opacity-40">04</div>
+                        <h4 class="text-xl uppercase font-bold">Data & Cloud</h4>
+                        <p class="text-sm text-parchment/60 leading-relaxed">
+                            Python, JavaScript, SQL, dbt, Google Cloud Platform, BigQuery, Looker Studio, Tableau
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clients -->
+        <section class="py-32 px-6 md:px-12 max-w-7xl mx-auto" id="clients">
+            <div class="text-center space-y-12">
+                <div class="space-y-4">
+                    <div class="text-[10px] uppercase tracking-[0.4em] opacity-40">References</div>
+                    <h2 class="text-4xl md:text-5xl uppercase font-bold tracking-tight">Clients Accompagnes</h2>
+                </div>
+                <div class="flex flex-wrap justify-center gap-8 text-lg md:text-xl font-display uppercase tracking-wide text-charcoal/70">
+                    <span class="hover:text-charcoal transition-colors">Hermes</span>
+                    <span class="opacity-30">|</span>
+                    <span class="hover:text-charcoal transition-colors">LVMH</span>
+                    <span class="opacity-30">|</span>
+                    <span class="hover:text-charcoal transition-colors">L'Oreal</span>
+                    <span class="opacity-30">|</span>
+                    <span class="hover:text-charcoal transition-colors">Sephora</span>
+                    <span class="opacity-30">|</span>
+                    <span class="hover:text-charcoal transition-colors">Club Med</span>
+                    <span class="opacity-30">|</span>
+                    <span class="hover:text-charcoal transition-colors">Accor</span>
+                    <span class="opacity-30">|</span>
+                    <span class="hover:text-charcoal transition-colors">TotalEnergies</span>
+                    <span class="opacity-30">|</span>
+                    <span class="hover:text-charcoal transition-colors">Engie</span>
+                    <span class="opacity-30">|</span>
+                    <span class="hover:text-charcoal transition-colors">FFF</span>
+                    <span class="opacity-30">|</span>
+                    <span class="hover:text-charcoal transition-colors">FDJ</span>
+                    <span class="opacity-30">|</span>
+                    <span class="hover:text-charcoal transition-colors">Samsung</span>
+                    <span class="opacity-30">|</span>
+                    <span class="hover:text-charcoal transition-colors">Yves Rocher</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="py-24 px-6 md:px-12 bg-charcoal/5" id="certifications">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 space-y-4">
+                    <div class="text-[10px] uppercase tracking-[0.4em] opacity-40">Certifications</div>
+                    <h2 class="text-3xl uppercase font-bold tracking-tight">Accreditations</h2>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4 text-[10px] uppercase tracking-widest font-bold">
+                    <span class="px-4 py-2 border border-charcoal/20 hover:border-charcoal transition-colors">Google Analytics</span>
+                    <span class="px-4 py-2 border border-charcoal/20 hover:border-charcoal transition-colors">Google Tag Manager Partner</span>
+                    <span class="px-4 py-2 border border-charcoal/20 hover:border-charcoal transition-colors">Looker Certified</span>
+                    <span class="px-4 py-2 border border-charcoal/20 hover:border-charcoal transition-colors">Amplitude Partner</span>
+                    <span class="px-4 py-2 border border-charcoal/20 hover:border-charcoal transition-colors">AB Tasty Expert</span>
+                    <span class="px-4 py-2 border border-charcoal/20 hover:border-charcoal transition-colors">Kameleoon Gold</span>
+                    <span class="px-4 py-2 border border-charcoal/20 hover:border-charcoal transition-colors">Didomi Certified</span>
+                    <span class="px-4 py-2 border border-charcoal/20 hover:border-charcoal transition-colors">Addingwell Partner of the Year</span>
+                    <span class="px-4 py-2 border border-charcoal/20 hover:border-charcoal transition-colors">ADK Introduction Courses</span>
+                    <span class="px-4 py-2 border border-charcoal/20 hover:border-charcoal transition-colors">AppsFlyer</span>
+                    <span class="px-4 py-2 border border-charcoal/20 hover:border-charcoal transition-colors">Eulerian DDP</span>
+                    <span class="px-4 py-2 border border-charcoal/20 hover:border-charcoal transition-colors">TagCommander</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section class="py-24 px-6 md:px-12 max-w-7xl mx-auto" id="publications">
+            <div class="text-center mb-16 space-y-4">
+                <div class="text-[10px] uppercase tracking-[0.4em] opacity-40">Thought Leadership</div>
+                <h2 class="text-3xl uppercase font-bold tracking-tight">Publications & Webinars</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <a href="https://www.linkedin.com/pulse/gutenberg-llm-claude-code-ou-le-moment-presse-%C3%A0-imprimer-lair-jifhe/" target="_blank" class="p-8 border border-charcoal/10 hover:border-charcoal/30 transition-colors group">
+                    <div class="text-[10px] uppercase tracking-widest opacity-40 mb-4">Article LinkedIn</div>
+                    <h4 class="text-lg font-bold group-hover:opacity-70 transition-opacity">Gutenberg, LLM, Claude Code ou le moment "presse a imprimer"</h4>
+                </a>
+                <a href="https://converteo.com/ressources/webinar-ia-strategie-optimisation-experience-client/" target="_blank" class="p-8 border border-charcoal/10 hover:border-charcoal/30 transition-colors group">
+                    <div class="text-[10px] uppercase tracking-widest opacity-40 mb-4">Webinar Converteo</div>
+                    <h4 class="text-lg font-bold group-hover:opacity-70 transition-opacity">IA & Strategie : optimisation de l'experience client</h4>
+                </a>
+                <a href="https://converteo.com/ressources/webinar-privacy-comment-limiter-les-impacts-data-marketing-optimiser-ses-taux-de-consentement/" target="_blank" class="p-8 border border-charcoal/10 hover:border-charcoal/30 transition-colors group">
+                    <div class="text-[10px] uppercase tracking-widest opacity-40 mb-4">Webinar Converteo</div>
+                    <h4 class="text-lg font-bold group-hover:opacity-70 transition-opacity">Privacy : limiter les impacts data marketing</h4>
+                </a>
+                <a href="https://converteo.com/blog/lookup-exploiter-le-potentiel-de-linterface-ga4-avec-les-collections/" target="_blank" class="p-8 border border-charcoal/10 hover:border-charcoal/30 transition-colors group">
+                    <div class="text-[10px] uppercase tracking-widest opacity-40 mb-4">Blog Converteo</div>
+                    <h4 class="text-lg font-bold group-hover:opacity-70 transition-opacity">Lookup : exploiter le potentiel de GA4 avec les collections</h4>
+                </a>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="py-24 px-6 md:px-12 bg-charcoal/5">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16 space-y-4">
+                    <div class="text-[10px] uppercase tracking-[0.4em] opacity-40">Formation</div>
+                    <h2 class="text-3xl uppercase font-bold tracking-tight">Education</h2>
+                </div>
+                <div class="flex flex-col md:flex-row justify-center gap-12 text-center">
+                    <div class="space-y-2">
+                        <div class="text-lg font-bold">ICN Business School</div>
+                        <div class="text-sm text-charcoal/60">Master Marketing & Management</div>
+                        <div class="text-xs opacity-40">2010-2014</div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-lg font-bold">Universite de Sherbrooke</div>
+                        <div class="text-sm text-charcoal/60">Exchange - Management Information Systems</div>
+                        <div class="text-xs opacity-40">2013</div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-lg font-bold">Lycee Carnot, Paris</div>
+                        <div class="text-sm text-charcoal/60">Classe Preparatoire ECS</div>
+                        <div class="text-xs opacity-40">2007-2009</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    </div><!-- End Layout Container -->
+
+    <!-- Footer -->
+    <footer class="bg-charcoal text-parchment pt-24 pb-12 px-6 md:px-12 no-print">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20 mb-24">
+                <div class="space-y-8">
+                    <div class="logo-text text-2xl uppercase">PIERRE-ADRIEN<span class="opacity-30">\</span>LAIR</div>
+                    <p class="text-parchment/60 max-w-sm leading-relaxed text-sm">
+                        Convaincu que l'IA doit etre deployee de maniere responsable et benefique.
+                        Passion pour la formation, le mentorat et la transformation des avancees technologiques en valeur business.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <div class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">Contact</div>
+                        <ul class="space-y-4 text-xs font-bold uppercase tracking-widest">
+                            <li><a class="hover:opacity-50 transition-opacity" href="https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/" target="_blank">LinkedIn</a></li>
+                            <li><a class="hover:opacity-50 transition-opacity" href="https://x.com/pal_analytics" target="_blank">X / Twitter</a></li>
+                            <li><a class="hover:opacity-50 transition-opacity" href="mailto:lairpierreadrien@gmail.com">Email</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">Status</div>
+                        <div class="flex items-center gap-3 text-xs font-bold uppercase tracking-widest">
+                            <div class="size-2 bg-anthropic-orange rounded-full animate-pulse"></div>
+                            <span>En poste</span>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-40">Langues</div>
+                            <div class="text-xs">Francais (natif) / English (fluent)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-12 border-t border-parchment/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[9px] font-mono opacity-30 uppercase tracking-[0.2em]">
+                <span>&copy; 2025 Pierre-Adrien Lair</span>
+                <div class="flex gap-8">
+                    <button onclick="exportPDF()" class="hover:opacity-100 transition-opacity">Telecharger PDF</button>
+                    <button onclick="openChat()" class="hover:opacity-100 transition-opacity">Ask AI</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Modal -->
+    <div id="chatModal" class="fixed inset-0 z-[100] pointer-events-none">
+        <div id="chatOverlay" class="absolute inset-0 bg-charcoal/80 backdrop-blur-sm opacity-0 transition-opacity duration-300" onclick="closeChat()"></div>
+        <div id="chatPanel" class="absolute right-0 top-0 bottom-0 w-full md:w-[500px] bg-parchment flex flex-col transform translate-x-full transition-transform duration-300 ease-out shadow-2xl">
+            <div class="p-6 border-b border-charcoal/10 flex justify-between items-center">
+                <div class="flex items-center gap-4">
+                    <img src="assets/avatar.png" alt="Pierre-Adrien" class="w-12 h-12 rounded-full" />
+                    <div>
+                        <div class="text-xs uppercase tracking-widest opacity-40">Discutez avec</div>
+                        <div class="font-bold">Pierre-Adrien (IA)</div>
+                    </div>
+                </div>
+                <button onclick="closeChat()" class="p-2 hover:bg-charcoal/10 rounded-full transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div id="chatMessages" class="flex-1 overflow-y-auto p-6 space-y-4">
+                <div class="text-sm text-charcoal/60 text-center py-8">
+                    <img src="assets/avatar.png" alt="" class="w-16 h-16 rounded-full mx-auto mb-4 opacity-50" />
+                    <p class="mb-2">Bonjour ! Je suis un assistant IA qui connait le CV de Pierre-Adrien.</p>
+                    <p>Posez-moi vos questions : experience, competences, projets...</p>
+                </div>
+            </div>
+            <div class="p-6 border-t border-charcoal/10">
+                <form onsubmit="sendMessage(event)" class="flex gap-3">
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Votre question..."
+                        class="flex-1 px-4 py-3 border border-charcoal/20 bg-white focus:outline-none focus:border-charcoal text-sm"
+                    />
+                    <button type="submit" class="px-6 py-3 bg-charcoal text-parchment text-xs uppercase tracking-widest font-bold hover:bg-charcoal/80 transition-colors">
+                        Envoyer
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Dynamic years calculation
+        const CAREER_START = 2014;
+        const YEARS_EXP = new Date().getFullYear() - CAREER_START;
+
+        // CV Content - loaded from cv.md
+        let cvContent = null;
+
+        // System prompt for the AI
+        const SYSTEM_PROMPT = `Tu es un assistant IA qui represente Pierre-Adrien LAIR dans le cadre de sa candidature.
+Tu reponds aux questions des recruteurs de maniere professionnelle, concise et engageante.
+
+INSTRUCTIONS:
+- Reponds a la premiere personne comme si tu etais Pierre-Adrien
+- Adapte la longueur de ta reponse a la question:
+  * Question simple → 2-3 phrases
+  * Question "presentez-vous" ou demandant des details → 4-6 phrases MAX, va droit au but
+  * Ne depasse JAMAIS 150 mots
+- Structure tes reponses: commence par le plus important, termine par une ouverture
+- Mets en avant les realisations concretes et chiffrees quand c'est pertinent
+- Pierre-Adrien est passionne par les LLMs en general (Claude, Gemini, GPT...), le vibe coding, et les opportunites qu'offrent ces modeles pour transformer les metiers
+- Ne mentionne PAS une entreprise IA specifique sauf si la question le demande explicitement
+- Si on te pose une question hors sujet, ramene poliment sur le profil
+- IMPORTANT: Termine TOUJOURS ta reponse proprement, jamais en plein milieu d'une phrase
+
+Le CV complet de Pierre-Adrien est fourni ci-dessous. Utilise ces informations pour repondre.
+`;
+
+        // Fetch CV content from cv.md
+        async function loadCVContent() {
+            if (cvContent) return cvContent;
+            try {
+                const response = await fetch('my_cv/cv.md');
+                cvContent = await response.text();
+                return cvContent;
+            } catch (error) {
+                console.error('Erreur chargement CV:', error);
+                return 'CV non disponible';
+            }
+        }
+
+        // Preload CV on page load
+        loadCVContent();
+
+        // Gemini API Key - REPLACE WITH YOUR KEY
+        const GEMINI_API_KEY = 'AIzaSyAIIFnYtbZOv6iOZzs_J5iPWARDPmZYZ_Q';
+
+        // Mobile Navigation Toggle
+        function toggleMobileNav() {
+            const nav = document.getElementById('sideNavMobile');
+            const overlay = document.getElementById('mobileNavOverlay');
+            const isOpen = !nav.classList.contains('-translate-x-full');
+
+            if (isOpen) {
+                nav.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            } else {
+                nav.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        // Scroll Spy - highlight active section in nav
+        function initScrollSpy() {
+            const sections = ['hero', 'experience', 'stack', 'publications'];
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            function updateActiveLink() {
+                const scrollPos = window.scrollY + window.innerHeight / 3;
+
+                let currentSection = sections[0];
+                for (const sectionId of sections) {
+                    const section = document.getElementById(sectionId);
+                    if (section && section.offsetTop <= scrollPos) {
+                        currentSection = sectionId;
+                    }
+                }
+
+                navLinks.forEach(link => {
+                    const linkSection = link.getAttribute('data-section');
+                    const line = link.querySelector('span:first-child');
+
+                    if (linkSection === currentSection) {
+                        link.classList.remove('opacity-40');
+                        link.classList.add('opacity-100');
+                        line.classList.remove('w-6');
+                        line.classList.add('w-10');
+                    } else {
+                        link.classList.add('opacity-40');
+                        link.classList.remove('opacity-100');
+                        line.classList.add('w-6');
+                        line.classList.remove('w-10');
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveLink);
+            updateActiveLink(); // Initial call
+        }
+
+        // Initialize scroll spy when DOM is ready
+        document.addEventListener('DOMContentLoaded', initScrollSpy);
+
+        // Set dynamic years in hero section
+        document.getElementById('yearsExp').textContent = YEARS_EXP;
+
+        function openChat() {
+            const modal = document.getElementById('chatModal');
+            const overlay = document.getElementById('chatOverlay');
+            const panel = document.getElementById('chatPanel');
+
+            modal.classList.add('pointer-events-auto');
+            modal.classList.remove('pointer-events-none');
+            document.body.style.overflow = 'hidden';
+
+            // Trigger animations
+            requestAnimationFrame(() => {
+                overlay.classList.remove('opacity-0');
+                overlay.classList.add('opacity-100');
+                panel.classList.remove('translate-x-full');
+                panel.classList.add('translate-x-0');
+            });
+
+            // Focus input after animation
+            setTimeout(() => document.getElementById('chatInput').focus(), 350);
+        }
+
+        function closeChat() {
+            const modal = document.getElementById('chatModal');
+            const overlay = document.getElementById('chatOverlay');
+            const panel = document.getElementById('chatPanel');
+
+            // Reverse animations
+            overlay.classList.add('opacity-0');
+            overlay.classList.remove('opacity-100');
+            panel.classList.add('translate-x-full');
+            panel.classList.remove('translate-x-0');
+
+            // Hide modal after animation completes
+            setTimeout(() => {
+                modal.classList.remove('pointer-events-auto');
+                modal.classList.add('pointer-events-none');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        function addMessage(content, isUser = false) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `p-4 rounded ${isUser ? 'bg-charcoal text-parchment ml-8' : 'bg-white border border-charcoal/10 mr-8'}`;
+            messageDiv.innerHTML = `<p class="text-sm whitespace-pre-wrap">${content}</p>`;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        async function sendMessage(event) {
+            event.preventDefault();
+            const input = document.getElementById('chatInput');
+            const question = input.value.trim();
+            if (!question) return;
+
+            addMessage(question, true);
+            input.value = '';
+
+            // Check if API key is set
+            if (GEMINI_API_KEY === 'YOUR_GEMINI_API_KEY_HERE') {
+                addMessage("Erreur: La cle API Gemini n'est pas configuree. Contactez Pierre-Adrien directement pour vos questions.");
+                return;
+            }
+
+            // Show loading
+            const loadingDiv = document.createElement('div');
+            loadingDiv.id = 'loadingMessage';
+            loadingDiv.className = 'p-4 rounded bg-white border border-charcoal/10 mr-8';
+            loadingDiv.innerHTML = '<p class="text-sm text-charcoal/50">Reflexion en cours...</p>';
+            document.getElementById('chatMessages').appendChild(loadingDiv);
+
+            try {
+                // Load CV content
+                const cv = await loadCVContent();
+                const fullContext = `${SYSTEM_PROMPT}\n\n---CV---\n${cv}\n---FIN CV---\n\nQuestion du recruteur: ${question}`;
+
+                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        contents: [{
+                            parts: [{
+                                text: fullContext
+                            }]
+                        }],
+                        generationConfig: {
+                            temperature: 0.7,
+                            maxOutputTokens: 2048,
+                        }
+                    })
+                });
+
+                const data = await response.json();
+
+                // Remove loading
+                document.getElementById('loadingMessage')?.remove();
+
+                if (data.candidates && data.candidates[0]?.content?.parts[0]?.text) {
+                    addMessage(data.candidates[0].content.parts[0].text);
+                } else if (data.error) {
+                    addMessage(`Erreur API: ${data.error.message}`);
+                } else {
+                    addMessage("Desole, je n'ai pas pu generer une reponse. Reessayez.");
+                }
+            } catch (error) {
+                document.getElementById('loadingMessage')?.remove();
+                addMessage(`Erreur de connexion: ${error.message}`);
+            }
+        }
+
+        function exportPDF() {
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>CV Pierre-Adrien LAIR</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        @page { size: A4; margin: 12mm; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 9pt; line-height: 1.4; color: #1a1a1a; }
+        .header { display: flex; justify-content: space-between; border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; margin-bottom: 10px; }
+        .header h1 { font-size: 18pt; font-weight: 700; letter-spacing: 0.05em; }
+        .header .subtitle { font-size: 9pt; color: #666; margin-top: 2px; }
+        .header .contact { text-align: right; font-size: 8pt; }
+        .header .contact p { margin: 1px 0; }
+        .section { margin-bottom: 10px; }
+        .section-title { font-size: 10pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 1px solid #ccc; padding-bottom: 3px; margin-bottom: 6px; }
+        .job { margin-bottom: 8px; }
+        .job-header { display: flex; justify-content: space-between; align-items: baseline; }
+        .job-title { font-size: 9pt; font-weight: 700; }
+        .job-date { font-size: 7pt; color: #666; }
+        .job-company { font-size: 8pt; color: #444; margin-bottom: 2px; }
+        .job-desc { font-size: 8pt; color: #333; margin-bottom: 3px; }
+        .badges { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 3px; }
+        .badge { font-size: 6pt; padding: 1px 4px; border: 1px solid #ccc; text-transform: uppercase; letter-spacing: 0.05em; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+        .stack-box h4 { font-size: 8pt; font-weight: 700; text-transform: uppercase; margin-bottom: 2px; }
+        .stack-box p { font-size: 7pt; color: #555; }
+        .certs { display: flex; flex-wrap: wrap; gap: 3px; }
+        .cert { font-size: 6pt; padding: 2px 5px; background: #f5f5f5; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div>
+            <h1>PIERRE-ADRIEN LAIR</h1>
+            <p class="subtitle">Senior Lead Analytics & Applied AI | ${new Date().getFullYear() - 2014} ans d'experience</p>
+        </div>
+        <div class="contact">
+            <p>lairpierreadrien@gmail.com</p>
+            <p>linkedin.com/in/pierre-adrien-lair-55a6a850</p>
+            <p>Paris & Normandie, France</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Parcours Professionnel</div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Senior Lead Analytics & AI</span>
+                <span class="job-date">Jan 2025 - Present</span>
+            </div>
+            <div class="job-company">Converteo - Paris</div>
+            <div class="job-desc">Direction vision Analytics & Conversion (150+ consultants). R&D IA appliquee : agents autonomes, automatisation QA, evaluation UX par IA.</div>
+            <div class="badges">
+                <span class="badge">Google</span>
+                <span class="badge">Meta</span>
+                <span class="badge">Amplitude</span>
+                <span class="badge">Piano</span>
+                <span class="badge">AB Tasty</span>
+                <span class="badge">Kameleoon</span>
+                <span class="badge">Didomi</span>
+                <span class="badge">CommandersAct</span>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Lead Analytics</span>
+                <span class="job-date">Nov 2019 - Mars 2025</span>
+            </div>
+            <div class="job-company">Converteo - Paris</div>
+            <div class="job-desc">Garant methodologie et delivery practice Analytics. R&D IA Generative (depuis 2022). Formation 200+ consultants.</div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Consultant Senior / Head of Analytics</span>
+                <span class="job-date">Mai 2017 - Nov 2019</span>
+            </div>
+            <div class="job-company">Empirik - Lyon</div>
+            <div class="job-desc">Responsable offre Analytics. Conseil outils, tag management, data engineering, CRO & UX.</div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Senior Consultant Digital & Data</span>
+                <span class="job-date">Fev 2014 - Avr 2017</span>
+            </div>
+            <div class="job-company">Converteo - Paris</div>
+            <div class="job-desc">AMOA projets digitaux, audits e-business & webanalytics, recommandations strategiques.</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Stack Technique</div>
+        <div class="grid-4">
+            <div class="stack-box">
+                <h4>IA & LLM</h4>
+                <p>Claude API, Gemini API, OpenAI, Google ADK, Vercel AI SDK, Browserbase, Stagehand</p>
+            </div>
+            <div class="stack-box">
+                <h4>Analytics & Data</h4>
+                <p>Google Analytics, Piano, Adobe Analytics, Amplitude, Mixpanel, Google Tag Manager, CommandersAct, Didomi</p>
+            </div>
+            <div class="stack-box">
+                <h4>CRO & Analyse</h4>
+                <p>Kameleoon, AB Tasty, Optimizely, Dynamic Yield, Datama</p>
+            </div>
+            <div class="stack-box">
+                <h4>Data & Cloud</h4>
+                <p>Python, JavaScript, SQL, dbt, Google Cloud Platform, BigQuery, Looker Studio, Tableau</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Certifications</div>
+        <div class="certs">
+            <span class="cert">Google Analytics</span>
+            <span class="cert">Google Tag Manager Partner</span>
+            <span class="cert">Looker Certified</span>
+            <span class="cert">Amplitude Partner</span>
+            <span class="cert">AB Tasty Expert</span>
+            <span class="cert">Kameleoon Gold</span>
+            <span class="cert">Didomi Certified</span>
+            <span class="cert">Addingwell Partner of the Year</span>
+            <span class="cert">ADK Introduction Courses</span>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Formation</div>
+        <p style="font-size: 8pt;">Master Marketing, Business & Management - ICN Business School (2010-2014) | Exchange Program MIS - Universite de Sherbrooke, Canada (2013)</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Clients de Reference</div>
+        <p style="font-size: 8pt;">Hermes, LVMH, L'Oreal, Sephora, Club Med, Accor, TotalEnergies, Engie, FFF, FDJ, Samsung, Yves Rocher</p>
+    </div>
+</body>
+</html>
+            `);
+            printWindow.document.close();
+            printWindow.focus();
+            setTimeout(() => { printWindow.print(); }, 250);
+        }
+
+        // Close chat on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeChat();
+        });
+    </script>
+</body>
+</html>
