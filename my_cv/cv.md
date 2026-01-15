@@ -68,7 +68,7 @@ Club Med, Fédération Française de Football (FFF), Sephora, Accor, Engie, FDJ,
 ---
 
 ### Converteo — Lead Analytics
-**Novembre 2019 - Mars 2025** (5 ans 5 mois) | Paris, France
+**Novembre 2019 - Décembre 2024** (5 ans 2 mois) | Paris, France
 
 *Contexte : Retour a Paris & Normandie, opportunite de prendre des responsabilites elargies dans un cabinet de plus grande envergure (450 personnes) et de lancer la R&D IA.*
 
