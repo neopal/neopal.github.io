@@ -63,10 +63,7 @@ Site CV/Portfolio interactif pour **Pierre-Adrien LAIR** avec chatbot IA intégr
 ## Points d'attention
 
 ### Clé API Gemini
-```javascript
-const GEMINI_API_KEY = 'AIzaSyAIIFnYtbZOv6iOZzs_J5iPWARDPmZYZ_Q';  // ~ligne 920
-```
-Si quota dépassé, le chatbot affiche une erreur.
+Définie dans `index.html` (~ligne 920). Si quota dépassé, le chatbot affiche une erreur.
 
 ### Années d'expérience dynamiques
 ```javascript
