@@ -20,7 +20,7 @@ Senior Lead avec 12 ans d'expérience en conseil digital et data, spécialisé d
 
 Mon moteur : permettre aux équipes et aux clients de travailler mieux demain qu'aujourd'hui, en concevant des architectures techniques qui allient innovation et pragmatisme business.
 
-Convaincu que l'IA doit être déployée de manière responsable et bénéfique, je suis un promoteur actif des LLMs (Claude, Gemini, GPT) et du vibe coding au sein de mon organisation.
+Convaincu que l'IA doit être déployée de manière responsable et bénéfique, je suis un promoteur actif des LLMs (Claude, Gemini, GPT, Mistral) et de l'IA générative (image, vidéo) au sein de mon organisation.
 
 **Philosophie de carriere :** Ma progression de consultant a senior lead suit l'evolution naturelle en cabinet de conseil, mais resulte aussi d'opportunites que je me suis creees en cherchant toujours a faire au mieux. J'associe resultats techniques, expertise pointue, fidelisation client et developpement business - c'est cette combinaison qui m'a permis d'evoluer.
 
@@ -59,8 +59,8 @@ Converteo est un cabinet de conseil leader en France, spécialiste du Digital et
 | Agents de Tracking Management | Google ADK (Agent Dev Kit), Gemini API | Automatisation des tâches de tag management : déploiement de variables sur multiples tags GTM en une commande |
 | Automatisation QA Analytics | Browserbase, Stagehand, Vercel AI SDK | Navigation autonome pour récupérer dataLayer & hits analytics à chaque étape du parcours utilisateur, automatisation de la recette |
 | Personas Synthétiques UX | Browser Use, Steel Dev, Gemini API | Évaluation automatisée de l'UX d'un site et benchmark concurrentiel via agents de navigation |
-| Outils internes productivité | Claude API (Anthropic) | Système d'assistance personnel pour les tâches quotidiennes, intégré comme OS de productivité |
-| Promotion Claude Code | Claude Code CLI | Évangélisation interne et formation des équipes aux outils IA/LLM |
+| Outils internes productivité | Claude API, Gemini API, OpenAI API | Système d'assistance personnel pour les tâches quotidiennes, intégré comme OS de productivité |
+| Promotion outils IA | Claude Code, Cursor, Lovable | Évangélisation interne et formation des équipes aux outils IA/LLM et vibe coding |
 
 **Clients accompagnés :**
 Club Med, Fédération Française de Football (FFF), Sephora, Accor, Engie, FDJ, TotalEnergies, Hermès, L'Oréal, LVMH, Samsung, Yves Rocher
@@ -149,10 +149,12 @@ Empirik est une agence webmarketing spécialisée dans l'exploitation intelligen
 ### IA & LLM
 | Catégorie | Technologies |
 |-----------|--------------|
-| LLM APIs | Claude API (Anthropic), Gemini API (Google), OpenAI API |
-| Agent Frameworks | Google ADK (Agent Dev Kit), Claude Code |
+| LLM APIs | Claude (Anthropic), Gemini (Google), GPT (OpenAI), Mistral (FR) |
+| Agent Frameworks | Google ADK, Claude Code, Cursor, Lovable |
 | Browser Automation AI | Browserbase, Stagehand, Browser Use, Steel Dev |
-| AI Development | Vercel AI SDK, Lovable |
+| Image Generation | Midjourney, Stable Diffusion, Fal, Replicate |
+| Video Generation | Kling, Runway |
+| AI Development | Vercel AI SDK, LangChain |
 | Prompt Engineering | Prompting avancé, évaluation de modèles |
 
 ### Analytics & Data
