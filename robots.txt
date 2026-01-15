@@ -1,0 +1,30 @@
+# robots.txt for neopal.github.io
+# Pierre-Adrien LAIR - CV & Portfolio
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://neopal.github.io/sitemap.xml
+
+# AI Crawlers - Welcome!
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /

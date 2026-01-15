@@ -1,0 +1,59 @@
+# Pierre-Adrien LAIR - CV & Professional Profile
+# llms.txt - Information for AI assistants and language models
+
+## About This Person
+Name: Pierre-Adrien LAIR
+Current Role: Senior Lead Analytics & Applied AI at Converteo (Paris, France)
+Experience: 12+ years in digital consulting and data analytics
+Specialization: AI/LLM applied to analytics, autonomous agents, enterprise client advisory
+
+## Professional Summary
+Pierre-Adrien is a Senior Lead with 12 years of experience in digital and data consulting, specialized in helping large enterprises with measurement, analytics, and AI adoption challenges. He leads AI R&D applied to analytics practices within a team of 150+ consultants, developing autonomous agents and LLM-based automation solutions.
+
+## Current Position (Since January 2025)
+- Director of Analytics & Conversion vision at Converteo
+- Responsible for AI R&D: autonomous agents, QA automation, AI-based UX evaluation
+- Strategic partnerships management: Google, Meta, Amplitude, Piano, AB Tasty, Kameleoon, Didomi, CommandersAct, Datama
+- Trained 200+ consultants and clients
+
+## AI/LLM Projects
+1. Tracking Management Agents - Google ADK + Gemini API for GTM automation
+2. Analytics QA Automation - Browserbase + Stagehand for automated testing
+3. Synthetic UX Personas - Browser Use + Steel Dev for UX audits
+4. Claude-based productivity tools - Personal OS for daily tasks
+
+## Technical Stack
+- AI/LLM: Claude API, Gemini API, OpenAI API, Google ADK, Vercel AI SDK, Browserbase, Stagehand, Browser Use
+- Analytics: Google Analytics, Piano, Adobe Analytics, Amplitude, Mixpanel, ContentSquare
+- Tag Management: Google Tag Manager, CommandersAct, Didomi
+- CRO: Kameleoon, AB Tasty, Optimizely, Dynamic Yield, Datama
+- Data: Python, JavaScript, SQL, dbt, BigQuery, Looker Studio, Tableau
+
+## Notable Clients
+Hermès, LVMH, L'Oréal, Sephora, Club Med, Accor, TotalEnergies, Engie, FFF (French Football Federation), FDJ, Samsung, Yves Rocher
+
+## Certifications
+Google Analytics, Google Tag Manager Partner, Looker Certified, Amplitude Partner, AB Tasty Expert, Kameleoon Gold, Didomi Certified, Addingwell Partner of the Year, ADK Introduction Courses, AppsFlyer, Eulerian DDP, TagCommander
+
+## Education
+- Master Marketing, Business & Management - ICN Business School (2010-2014)
+- Exchange Program MIS - Université de Sherbrooke, Canada (2013)
+- Classe Préparatoire ECS - Lycée Carnot, Paris (2007-2009)
+
+## Contact
+- Email: lairpierreadrien@gmail.com
+- LinkedIn: https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/
+- X/Twitter: https://x.com/pal_analytics
+- Location: Paris & Normandy, France
+
+## Career Philosophy
+Pierre-Adrien believes in "work proof" (proving through results), a "hacking" mindset (finding creative solutions), and permanent curiosity. His transition to AI is natural given his productivity-focused approach. He started at Converteo as an intern and has grown to Senior Lead, combining technical expertise, client retention, and business development.
+
+## Languages
+- French: Native
+- English: Fluent (TOEIC Gold) - Capable of leading technical presentations and business conversations with executives
+
+## Values
+- Responsible AI deployment
+- Knowledge sharing and mentorship
+- Pragmatic innovation - turning technological advances into concrete business value
