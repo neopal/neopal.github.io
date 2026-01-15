@@ -312,6 +312,15 @@
         .print-header {
             display: none;
         }
+
+        /* Comic Sans Easter Egg Mode */
+        body.comic-sans-mode,
+        body.comic-sans-mode * {
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive !important;
+        }
+        body.comic-sans-mode .logo-text {
+            letter-spacing: 0.05em !important;
+        }
     </style>
 </head>
 
@@ -423,6 +432,11 @@
                         <a href="https://x.com/pal_analytics" target="_blank" class="opacity-40 hover:opacity-100 transition-opacity">X</a>
                         <a href="mailto:lairpierreadrien@gmail.com" class="opacity-40 hover:opacity-100 transition-opacity">@</a>
                     </div>
+                    <!-- Comic Sans Easter Egg -->
+                    <button onclick="toggleComicSans()" class="mt-4 text-[8px] uppercase tracking-widest opacity-30 hover:opacity-60 transition-opacity flex items-center gap-2">
+                        <span id="fontToggleIcon">○</span>
+                        <span id="fontToggleLabel">Comic Sans</span>
+                    </button>
                 </div>
             </div>
         </nav>
@@ -982,6 +996,29 @@ Le CV complet de Pierre-Adrien est fourni ci-dessous. Utilise ces informations p
         }
         window.addEventListener('scroll', updateScrollIndicator);
         updateScrollIndicator(); // Initial check
+
+        // Comic Sans Easter Egg Toggle
+        function toggleComicSans() {
+            const body = document.body;
+            const icon = document.getElementById('fontToggleIcon');
+            const label = document.getElementById('fontToggleLabel');
+
+            body.classList.toggle('comic-sans-mode');
+            const isComic = body.classList.contains('comic-sans-mode');
+
+            icon.textContent = isComic ? '●' : '○';
+            label.textContent = isComic ? 'Classic' : 'Comic Sans';
+
+            // Save preference
+            localStorage.setItem('comicSansMode', isComic);
+        }
+
+        // Restore Comic Sans preference on load
+        if (localStorage.getItem('comicSansMode') === 'true') {
+            document.body.classList.add('comic-sans-mode');
+            document.getElementById('fontToggleIcon').textContent = '●';
+            document.getElementById('fontToggleLabel').textContent = 'Classic';
+        }
 
         // Set dynamic years in hero section
         document.getElementById('yearsExp').textContent = YEARS_EXP;
