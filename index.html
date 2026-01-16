@@ -98,6 +98,15 @@
     }
     </script>
 
+    <!-- PostHog Analytics -->
+    <script>
+        !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags resetGroups onFeatureFlags addFeatureFlagsHandler onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+        posthog.init('phc_FACNCLu1wavY5qlWXOARKj21D2qQYY5C1CNXvJkkFok', {
+            api_host: 'https://eu.i.posthog.com',
+            defaults: '2025-11-30'
+        })
+    </script>
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
@@ -1012,6 +1021,24 @@ Utilise le CV fourni ci-dessous pour repondre avec precision.
         window.addEventListener('scroll', updateScrollIndicator);
         updateScrollIndicator(); // Initial check
 
+        // PostHog Scroll Depth Tracking
+        const scrollThresholds = [25, 50, 75, 100];
+        const trackedScrollDepths = new Set();
+
+        function trackScrollDepth() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+            scrollThresholds.forEach(threshold => {
+                if (scrollPercent >= threshold && !trackedScrollDepths.has(threshold)) {
+                    trackedScrollDepths.add(threshold);
+                    posthog.capture('scroll_depth', { depth: threshold + '%' });
+                }
+            });
+        }
+        window.addEventListener('scroll', trackScrollDepth);
+
         // Comic Sans Easter Egg Toggle
         function toggleComicSans() {
             const body = document.body;
@@ -1039,6 +1066,8 @@ Utilise le CV fourni ci-dessous pour repondre avec precision.
         document.getElementById('yearsExp').textContent = YEARS_EXP;
 
         function openChat() {
+            posthog.capture('chat_opened');
+
             const modal = document.getElementById('chatModal');
             const overlay = document.getElementById('chatOverlay');
             const panel = document.getElementById('chatPanel');
@@ -1096,6 +1125,9 @@ Utilise le CV fourni ci-dessous pour repondre avec precision.
             addMessage(question, true);
             input.value = '';
 
+            // Track inquiry
+            posthog.capture('chat_inquiry', { question: question });
+
             // Check if API key is set
             if (!_t || _t.length < 30) {
                 addMessage("Erreur: La cle API Gemini n'est pas configuree. Contactez Pierre-Adrien directement pour vos questions.");
@@ -1138,19 +1170,26 @@ Utilise le CV fourni ci-dessous pour repondre avec precision.
                 document.getElementById('loadingMessage')?.remove();
 
                 if (data.candidates && data.candidates[0]?.content?.parts[0]?.text) {
-                    addMessage(data.candidates[0].content.parts[0].text);
+                    const responseText = data.candidates[0].content.parts[0].text;
+                    addMessage(responseText);
+                    posthog.capture('chat_response', { success: true, response: responseText });
                 } else if (data.error) {
                     addMessage(`Erreur API: ${data.error.message}`);
+                    posthog.capture('chat_response', { success: false, error: data.error.message });
                 } else {
                     addMessage("Desole, je n'ai pas pu generer une reponse. Reessayez.");
+                    posthog.capture('chat_response', { success: false, error: 'empty_response' });
                 }
             } catch (error) {
                 document.getElementById('loadingMessage')?.remove();
                 addMessage(`Erreur de connexion: ${error.message}`);
+                posthog.capture('chat_response', { success: false, error: 'network_error', message: error.message });
             }
         }
 
         function exportPDF() {
+            posthog.capture('pdf_export');
+
             const printWindow = window.open('', '_blank');
             printWindow.document.write(`
 <!DOCTYPE html>
