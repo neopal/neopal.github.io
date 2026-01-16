@@ -1,0 +1,11 @@
+# Local files (not pushed to GitHub)
+*.local.md
+*.local.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
