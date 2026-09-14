@@ -3,15 +3,20 @@
 
 ## About This Person
 Name: Pierre-Adrien LAIR
-Current Role: Senior Lead Analytics & Applied AI at Converteo (Paris, France)
+Current Role: Senior Lead Analytics & AI, and Director of the AI LAB at Converteo (Paris, France)
 Experience: 12+ years in digital consulting and data analytics
-Specialization: AI/LLM applied to analytics, autonomous agents, enterprise client advisory
+Specialization: Applied AI engineering (LLM agents, MCP servers, agent skills), analytics measurement, enterprise client advisory
 
 ## Professional Summary
-Pierre-Adrien is a Senior Lead with 12 years of experience in digital and data consulting, specialized in helping large enterprises with measurement, analytics, and AI adoption challenges. He leads AI R&D applied to analytics practices within a team of 150+ consultants, developing autonomous agents and LLM-based automation solutions.
+Pierre-Adrien is a Senior Lead with 12 years of experience in digital and data consulting, holding a dual role at Converteo:
+1. Senior Lead Measurement & Analytics - owns the Analytics & Conversion vision for a 150+ consultant practice and advises large enterprises on measurement challenges.
+2. Director of the Converteo AI LAB - runs the entity that centralises the firm's agentic expertise, arbitrates the AI project portfolio, and industrialises the production of agents, skills and MCP servers for 450 employees.
+
+He builds and ships LLM systems in production: multi-step agents (Google ADK), MCP servers, reusable sub-agents and skills, browser automation, and the internal platforms that expose them to teams (Next.js, Cloud Run, Firestore, GCP CI/CD).
 
 ## Current Position (Since January 2025)
 - Director of Analytics & Conversion vision at Converteo
+- Director of the Converteo AI LAB: portfolio arbitration, technology validation, industrialisation of agents/skills/MCP servers, dissemination across the firm
 - Responsible for AI R&D: autonomous agents, QA automation, AI-based UX evaluation
 - Strategic partnerships management: Google, Meta, Amplitude, Piano, AB Tasty, Kameleoon, Didomi, CommandersAct, Datama
 - Trained 200+ consultants and clients
@@ -20,10 +25,13 @@ Pierre-Adrien is a Senior Lead with 12 years of experience in digital and data c
 1. Tracking Management Agents - Google ADK + Gemini API for GTM automation
 2. Analytics QA Automation - Browserbase + Stagehand for automated testing
 3. Synthetic UX Personas - Browser Use + Steel Dev for UX audits
-4. Claude-based productivity tools - Personal OS for daily tasks
+4. MCP server - Playwright MCP exposed to a Google ADK agent for dataLayer and hit capture
+5. AI LAB Hub - internal production platform he designed, built and deployed himself (Next.js, Cloud Run, Firestore, IAP auth, Cloud Build CI/CD)
+6. Claude-based productivity tools - Personal OS for daily tasks
 
 ## Technical Stack
-- AI/LLM: Claude API, Gemini API, OpenAI API, Google ADK, Vercel AI SDK, Browserbase, Stagehand, Browser Use
+- AI/LLM: Claude API, Gemini API, OpenAI API, Mistral, Google ADK, MCP (Model Context Protocol), A2A, agent skills, sub-agents, Vercel AI SDK, LangChain, Browserbase, Stagehand, Browser Use, Steel Dev
+- Deployment: Google Cloud Run, Firebase/Firestore, Cloud Build (CI/CD), GCP IAP, Next.js
 - Analytics: Google Analytics, Piano, Adobe Analytics, Amplitude, Mixpanel, ContentSquare
 - Tag Management: Google Tag Manager, CommandersAct, Didomi
 - CRO: Kameleoon, AB Tasty, Optimizely, Dynamic Yield, Datama
@@ -39,6 +47,16 @@ Google Analytics, Google Tag Manager Partner, Looker Certified, Amplitude Partne
 - Master Marketing, Business & Management - ICN Business School (2010-2014)
 - Exchange Program MIS - Université de Sherbrooke, Canada (2013)
 - Classe Préparatoire ECS - Lycée Carnot, Paris (2007-2009)
+
+## Recent Publications (2026)
+- "La solution de Navier-Stokes par OpenAI : bien plus qu'un probleme mathematique" - LinkedIn article, September 2026
+- "Gutenberg, LLM, Claude Code ou le moment presse a imprimer" - LinkedIn article, January 2026
+- WebMCP: how a website exposes tools directly to AI agents (Chrome flag, Lighthouse audits) - August 2026
+- AI Act article 50: Anthropic signs the code of practice and watermarks Claude outputs - August 2026
+- Anthropic Threat Intelligence report read as a 2027 AI roadmap - September 2026
+- Claude's Constitution and "The Adolescence of Technology" - February 2026
+- CNIL formal notices on cookie banners and effective consent withdrawal - February 2026
+LinkedIn publishing on applied AI, agentic standards and AI governance, since January 2026.
 
 ## Contact
 - Email: lairpierreadrien@gmail.com

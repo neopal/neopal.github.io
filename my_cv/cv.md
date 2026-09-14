@@ -1,6 +1,6 @@
 # Pierre-Adrien LAIR
 
-**Senior Lead Analytics & Applied AI Specialist**
+**Senior Lead Analytics & AI — Directeur du LAB IA @ Converteo**
 
 Paris & Normandy, France
 
@@ -16,7 +16,12 @@ Paris & Normandy, France
 
 ## Résumé Professionnel
 
-Senior Lead avec 12 ans d'expérience en conseil digital et data, spécialisé dans l'accompagnement des grands comptes sur leurs enjeux de mesure, d'analytics et d'adoption de l'IA. Je dirige la R&D IA appliquée aux métiers analytics au sein d'une practice de 150 consultants, en développant des agents autonomes et des solutions d'automatisation basées sur les LLMs.
+Senior Lead avec 12 ans d'expérience en conseil digital et data, sur une double casquette :
+
+- **Senior Lead Measurement & Analytics** — je porte la vision Analytics & Conversion d'une practice de 150 consultants et j'accompagne les grands comptes sur leurs enjeux de mesure.
+- **Directeur du LAB IA Converteo** — je dirige l'entité qui centralise l'expertise agentique du cabinet, arbitre le portefeuille de projets IA et industrialise la production d'agents, de skills et d'outils internes.
+
+Concrètement, je conçois et je déploie des systèmes LLM en production : agents multi-étapes (Google ADK), serveurs MCP, sub-agents et skills réutilisables, automatisation de navigation — et les plateformes internes qui les exposent aux équipes (Next.js, Cloud Run, Firestore, CI/CD GCP).
 
 Mon moteur : permettre aux équipes et aux clients de travailler mieux demain qu'aujourd'hui, en concevant des architectures techniques qui allient innovation et pragmatisme business.
 
@@ -31,6 +36,8 @@ Convaincu que l'IA doit être déployée de manière responsable et bénéfique,
 
 **Apprentissage d'un echec :** Pour un grand voyagiste, j'ai cree des agents autonomes de QA/recette analytics. J'ai sous-estime la mise en production (erreurs inattendues), la gestion des contextes longs, et globalement le vrai travail de dev necessaire pour assurer fiabilite et robustesse. Lecon : l'innovation IA doit etre ancree dans la realite metier, et le passage du prototype a la production demande une rigueur d'ingenierie que je continue d'apprendre.
 
+*Ce que j'en ai fait :* j'ai arrete de m'arreter au prototype. Le hub du LAB IA, que j'ai construit et mis en ligne moi-meme, tourne en production sur Cloud Run avec authentification IAP, persistance Firestore et deploiement continu via Cloud Build. La rigueur d'ingenierie qui manquait au projet precedent, appliquee cette fois de bout en bout.
+
 **ADN productiviste :** Ma transition vers l'IA est naturelle car je suis fondamentalement oriente productivite et j'adore la promesse des agents autonomes. Anecdote fondatrice : j'ai demarre chez Converteo en stage, et mon maitre de stage me demandait d'utiliser Excel SANS souris - ca m'a marque et forge mon approche "raccourcis, automatisation, efficacite".
 
 **Pourquoi Converteo :** Je suis TOUJOURS chez Converteo (pas parti). Belle progression de carriere + culture humaine dans un cabinet de conseil devenu leader sur les sujets web & app analytics. Opportunites d'evolution constantes et possibilite de me reinventer (analytics → IA). J'y ai demarre en stage et j'y suis encore Senior Lead aujourd'hui.
@@ -39,7 +46,7 @@ Convaincu que l'IA doit être déployée de manière responsable et bénéfique,
 
 ## Expériences Professionnelles
 
-### Converteo — Senior Lead Analytics & AI
+### Converteo — Senior Lead Analytics & AI · Directeur du LAB IA
 **Janvier 2025 - Présent** | Paris, France (Hybride)
 
 Converteo est un cabinet de conseil leader en France, spécialiste du Digital et de la Data (450 collaborateurs).
@@ -48,6 +55,7 @@ Converteo est un cabinet de conseil leader en France, spécialiste du Digital et
 - **Direction de la vision Analytics & Conversion** au sein de la practice (150+ personnes)
 - **Définition et évolution des offres** : collecte de données, analyses & insights, application de l'IA aux métiers analytics
 - **Management des partenariats stratégiques** : Google, Meta, AB Tasty, Kameleoon, Didomi, CommandersAct, Amplitude, Piano, Datama
+- **Direction du LAB IA Converteo** : pilotage de l'entité qui centralise l'expertise agentique du cabinet — arbitrage du portefeuille de projets, validation des technologies, industrialisation des assets (agents, skills, serveurs MCP) et diffusion aux 450 collaborateurs
 - **Innovation & R&D IA** : responsable de l'exploration et du prototypage de solutions IA génératives appliquées aux métiers
 - **Thought Leadership** : webinars, publications, représentation externe
 - **Knowledge Management** : onboarding, standardisation des méthodologies, formation interne (200+ consultants et clients formés)
@@ -59,6 +67,8 @@ Converteo est un cabinet de conseil leader en France, spécialiste du Digital et
 | Agents de Tracking Management | Google ADK (Agent Dev Kit), Gemini API | Automatisation des tâches de tag management : déploiement de variables sur multiples tags GTM en une commande |
 | Automatisation QA Analytics | Browserbase, Stagehand, Vercel AI SDK | Navigation autonome pour récupérer dataLayer & hits analytics à chaque étape du parcours utilisateur, automatisation de la recette |
 | Personas Synthétiques UX | Browser Use, Steel Dev, Gemini API | Évaluation automatisée de l'UX d'un site et benchmark concurrentiel via agents de navigation |
+| Serveur MCP navigation | Playwright MCP, Google ADK | Exposition d'outils de navigation à un agent ADK pour la capture de dataLayer et de hits |
+| Hub LAB IA (production) | Next.js, Cloud Run, Firestore, IAP, Cloud Build | Plateforme interne de showcase et de pilotage du LAB : catalogue des réalisations, référentiel technos, roadmap et suivi d'investissement — conçue, développée et déployée par mes soins |
 | Outils internes productivité | Claude API, Gemini API, OpenAI API | Système d'assistance personnel pour les tâches quotidiennes, intégré comme OS de productivité |
 | Promotion outils IA | Claude Code, Cursor, Lovable | Évangélisation interne et formation des équipes aux outils IA/LLM et vibe coding |
 
@@ -151,10 +161,12 @@ Empirik est une agence webmarketing spécialisée dans l'exploitation intelligen
 |-----------|--------------|
 | LLM APIs | Claude (Anthropic), Gemini (Google), GPT (OpenAI), Mistral (FR) |
 | Agent Frameworks | Google ADK, Claude Code, Cursor, Lovable |
+| Protocoles agentiques | MCP (Model Context Protocol), A2A, sub-agents, agent skills, WebMCP |
 | Browser Automation AI | Browserbase, Stagehand, Browser Use, Steel Dev |
 | Image Generation | Midjourney, Stable Diffusion, Fal, Replicate |
 | Video Generation | Kling, Runway |
-| AI Development | Vercel AI SDK, LangChain |
+| AI Development | Vercel AI SDK, LangChain, Next.js |
+| Déploiement | Cloud Run, Firebase/Firestore, Cloud Build (CI/CD), GCP IAP |
 | Prompt Engineering | Prompting avancé, évaluation de modèles |
 
 ### Analytics & Data
@@ -217,11 +229,30 @@ Empirik est une agence webmarketing spécialisée dans l'exploitation intelligen
 
 | Titre | Éditeur | Date |
 |-------|---------|------|
-| [Gutenberg, LLM, Claude Code ou le moment "presse à imprimer"](https://www.linkedin.com/pulse/gutenberg-llm-claude-code-ou-le-moment-presse-%C3%A0-imprimer-lair-jifhe/) | LinkedIn | 2024 |
+| [La solution de Navier-Stokes par OpenAI : bien plus qu'un problème mathématique](https://www.linkedin.com/pulse/la-solution-de-navier-stokes-par-openai-bien-plus-quun-lair-ewave) | LinkedIn | Septembre 2026 |
+| [Gutenberg, LLM, Claude Code ou le moment "presse à imprimer"](https://www.linkedin.com/pulse/gutenberg-llm-claude-code-ou-le-moment-presse-%C3%A0-imprimer-lair-jifhe/) | LinkedIn | Janvier 2026 |
 | [Lookup : exploiter le potentiel de l'interface GA4 avec les collections](https://converteo.com/blog/lookup-exploiter-le-potentiel-de-linterface-ga4-avec-les-collections/) | Converteo | 2023 |
 | [Comment débugger Google Analytics pour son site ?](https://www.empirik.fr/) | Empirik | Mai 2018 |
 | [Google Analytics se met en conformité RGPD](https://www.empirik.fr/) | Empirik | Avril 2018 |
 | [Comprendre et suivre le consommateur cross-canal](https://converteo.com/) | Converteo | Mars 2015 |
+
+### Veille & publications LinkedIn — 2026
+
+Publications sur l'IA appliquée, les standards agentiques et la gouvernance, depuis janvier 2026.
+
+| Sujet | Date |
+|-------|------|
+| [Anthropic Threat Intelligence : lire le rapport comme une roadmap IA 2027](https://www.linkedin.com/feed/update/urn:li:activity:7504084336040730626/) | Septembre 2026 |
+| [Navier-Stokes, OpenAI et la traçabilité des sessions de recherche](https://www.linkedin.com/feed/update/urn:li:activity:7503489463528955904/) | Septembre 2026 |
+| [WebMCP : quand un site expose ses outils directement aux agents (Chrome, Lighthouse)](https://www.linkedin.com/feed/update/urn:li:activity:7483146303976341504/) | Août 2026 |
+| [AI Act article 50 : Anthropic signe le code de pratique et filigrane les sorties de Claude](https://www.linkedin.com/feed/update/urn:li:activity:7492849177010384897/) | Août 2026 |
+| [La Constitution de Claude & "The Adolescence of Technology"](https://www.linkedin.com/feed/update/urn:li:activity:7422557763630784512/) | Février 2026 |
+| [Bandeaux cookies : les mises en demeure CNIL et l'effectivité du retrait de consentement](https://www.linkedin.com/feed/update/urn:li:activity:7428009634726326272/) | Février 2026 |
+| [Reconnaître un texte écrit à l'IA : le catalogue des tics de langage](https://www.linkedin.com/feed/update/urn:li:activity:7420427513270542336/) | Février 2026 |
+| [Wrap-up IA 2025 : ce qu'il ne fallait pas louper](https://www.linkedin.com/feed/update/urn:li:activity:7418177771165769728/) | Février 2026 |
+| [Les 8 stades du vibe analyste](https://www.linkedin.com/feed/update/urn:li:activity:7417875652118216704/) | Janvier 2026 |
+
+---
 
 ### Webinars & Interventions
 
@@ -272,12 +303,13 @@ Empirik est une agence webmarketing spécialisée dans l'exploitation intelligen
 
 Je suis convaincu que nous vivons un moment charnière dans l'histoire de la technologie, comparable à l'invention de l'imprimerie. Les LLMs transforment fondamentalement notre façon de travailler et de créer de la valeur.
 
-Après 3 ans à explorer et déployer des solutions IA génératives pour mes clients, je souhaite continuer à contribuer à l'adoption responsable de ces technologies au sein des grandes entreprises.
+Après 4 ans à explorer et déployer des solutions IA génératives pour mes clients, je souhaite continuer à contribuer à l'adoption responsable de ces technologies au sein des grandes entreprises.
 
-Mon expérience unique combine :
-- **12 ans d'accompagnement technique de grands comptes** sur des cycles d'achat complexes
-- **Une expertise hands-on en développement d'agents et solutions LLM**
+Mon expérience combine :
+- **12 ans d'accompagnement technique de grands comptes** sur des cycles de décision complexes, au contact direct des équipes métier et IT
+- **Une expertise hands-on en développement et déploiement d'agents** : agents multi-étapes, serveurs MCP, skills réutilisables, mise en production sur GCP
 - **Une capacité éprouvée à traduire des concepts techniques en valeur business** pour des audiences variées (C-level, équipes IT, développeurs)
+- **La direction d'une entité d'innovation** qui transforme des prototypes en assets réutilisables et les diffuse à l'échelle d'un cabinet de 450 personnes
 
 Mon objectif : aider les entreprises à comprendre et exploiter le potentiel des LLMs, tout en promouvant une IA fiable, interprétable et bénéfique.
 
@@ -301,4 +333,4 @@ Mon objectif : aider les entreprises à comprendre et exploiter le potentiel des
 
 ---
 
-*Dernière mise à jour : Janvier 2025*
+*Dernière mise à jour : Septembre 2026*
