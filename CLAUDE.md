@@ -41,9 +41,20 @@ Site CV/Portfolio interactif pour **Pierre-Adrien LAIR** avec chatbot IA intégr
 - Répond à la 1ère personne comme Pierre-Adrien
 - **Important** : Ne mentionne pas d'entreprise IA spécifique sauf si demandé
 
-### 2. Export PDF
-- Fonction `exportPDF()` génère un CV one-page dans nouvelle fenêtre
-- Layout custom en HTML inline (pas CSS print)
+### 2. Export PDF (ATS-friendly, bilingue)
+- `exportPDF('fr')` / `exportPDF('en')` ouvrent une fenêtre et déclenchent l'impression
+- Contenu dans `CV_DATA` (index.html) : FR et EN, même structure, ~870 mots chacun
+- Rendu par `buildCVHtml(lang)` ; styles dans `CV_STYLES`
+- Layout ATS d'après `career-ops-hq/career-ops` (`templates/ats`) : **une seule colonne**,
+  chaque champ en `display:block`, ligatures désactivées, typo 9.5-11.5px, titres de
+  sections standards. Ne jamais réintroduire de `flex`/`grid` : les parsers lisent en travers.
+- `atsNormalize()` convertit la ponctuation typographique en ASCII (tirets cadratins,
+  guillemets courbes, espaces insécables, chasse nulle). La sortie doit rester 100% ASCII.
+- Sortie sur 2 pages A4 (~1.8). C'est voulu : la version one-page précédente ne contenait
+  que 288 mots.
+- `CV_CONTACT.phone` est vide — le renseigner l'ajoute en première ligne de contact.
+- Limite connue : l'impression navigateur injecte URL/date en en-tête si l'utilisateur ne
+  décoche pas "En-têtes et pieds de page". Un bandeau `.hint` (masqué à l'impression) le rappelle.
 
 ### 3. Navigation
 - Desktop : sidebar sticky à gauche avec scroll-spy

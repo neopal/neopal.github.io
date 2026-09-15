@@ -376,9 +376,10 @@
                 <button onclick="openChat()" class="p-2 bg-charcoal text-parchment rounded hover:bg-charcoal/80 transition-all">
                     <span class="material-symbols-outlined text-sm">chat</span>
                 </button>
-                <button onclick="exportPDF()" class="p-2 border border-charcoal rounded hover:bg-charcoal hover:text-parchment transition-all">
+                <button onclick="exportPDF('fr')" class="p-2 border border-charcoal rounded hover:bg-charcoal hover:text-parchment transition-all" aria-label="Telecharger le CV en PDF (francais)">
                     <span class="material-symbols-outlined text-sm">download</span>
                 </button>
+                <button onclick="exportPDF('en')" class="p-2 border border-charcoal rounded text-[9px] font-bold hover:bg-charcoal hover:text-parchment transition-all" aria-label="Download CV as PDF (English)">EN</button>
             </div>
         </div>
     </header>
@@ -414,9 +415,13 @@
             <span class="material-symbols-outlined text-base">chat</span>
             Ask AI
         </button>
-        <button onclick="exportPDF()" class="px-5 py-3 bg-parchment border-2 border-charcoal text-[11px] uppercase tracking-widest font-bold hover:bg-charcoal hover:text-parchment transition-all flex items-center gap-2 shadow-lg">
+        <button onclick="exportPDF('fr')" class="px-5 py-3 bg-parchment border-2 border-charcoal text-[11px] uppercase tracking-widest font-bold hover:bg-charcoal hover:text-parchment transition-all flex items-center gap-2 shadow-lg">
             <span class="material-symbols-outlined text-base">download</span>
-            PDF
+            PDF FR
+        </button>
+        <button onclick="exportPDF('en')" class="px-5 py-3 bg-parchment border-2 border-charcoal text-[11px] uppercase tracking-widest font-bold hover:bg-charcoal hover:text-parchment transition-all flex items-center gap-2 shadow-lg">
+            <span class="material-symbols-outlined text-base">download</span>
+            PDF EN
         </button>
     </header>
 
@@ -898,7 +903,8 @@
             <div class="pt-12 border-t border-parchment/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[9px] font-mono opacity-30 uppercase tracking-[0.2em]">
                 <span>&copy; 2025 Pierre-Adrien Lair</span>
                 <div class="flex gap-8">
-                    <button onclick="exportPDF()" class="hover:opacity-100 transition-opacity">Telecharger PDF</button>
+                    <button onclick="exportPDF('fr')" class="hover:opacity-100 transition-opacity">PDF Francais</button>
+                    <button onclick="exportPDF('en')" class="hover:opacity-100 transition-opacity">PDF English</button>
                     <button onclick="openChat()" class="hover:opacity-100 transition-opacity">Ask AI</button>
                 </div>
             </div>
@@ -1233,157 +1239,353 @@ Utilise le CV fourni ci-dessous pour repondre avec precision.
             }
         }
 
-        function exportPDF() {
-            posthog.capture('pdf_export');
+        // ---------------------------------------------------------------
+        // CV PDF export - ATS-friendly, bilingual (FR / EN)
+        //
+        // Layout follows career-ops-hq/career-ops templates/ats:
+        //  - single column throughout (no flex rows, no grid), so a parser
+        //    reads the DOM in the same order a human reads the page
+        //  - each job field on its own block-level line
+        //  - ligatures disabled: they extract as broken glyphs from PDFs
+        //  - 9.5-11.5px type only; standard section headings
+        //  - all text normalised to ASCII-safe punctuation before render
+        //
+        // Output runs to 2 pages. That is deliberate for a 12-year profile:
+        // the previous one-page version carried 288 words, which told a
+        // reader almost nothing.
+        //
+        // Data strings are double-quoted throughout; French elisions
+        // (d', l', aujourd'hui) would otherwise need escaping on every line.
+        // ---------------------------------------------------------------
 
-            const printWindow = window.open('', '_blank');
-            printWindow.document.write(`
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>CV Pierre-Adrien LAIR</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        @page { size: A4; margin: 12mm; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 9pt; line-height: 1.4; color: #1a1a1a; }
-        .header { display: flex; justify-content: space-between; border-bottom: 2px solid #1a1a1a; padding-bottom: 8px; margin-bottom: 10px; }
-        .header h1 { font-size: 18pt; font-weight: 700; letter-spacing: 0.05em; }
-        .header .subtitle { font-size: 9pt; color: #666; margin-top: 2px; }
-        .header .contact { text-align: right; font-size: 8pt; }
-        .header .contact p { margin: 1px 0; }
-        .section { margin-bottom: 10px; }
-        .section-title { font-size: 10pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; border-bottom: 1px solid #ccc; padding-bottom: 3px; margin-bottom: 6px; }
-        .job { margin-bottom: 8px; }
-        .job-header { display: flex; justify-content: space-between; align-items: baseline; }
-        .job-title { font-size: 9pt; font-weight: 700; }
-        .job-date { font-size: 7pt; color: #666; }
-        .job-company { font-size: 8pt; color: #444; margin-bottom: 2px; }
-        .job-desc { font-size: 8pt; color: #333; margin-bottom: 3px; }
-        .badges { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 3px; }
-        .badge { font-size: 6pt; padding: 1px 4px; border: 1px solid #ccc; text-transform: uppercase; letter-spacing: 0.05em; }
-        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-        .stack-box h4 { font-size: 8pt; font-weight: 700; text-transform: uppercase; margin-bottom: 2px; }
-        .stack-box p { font-size: 7pt; color: #555; }
-        .certs { display: flex; flex-wrap: wrap; gap: 3px; }
-        .cert { font-size: 6pt; padding: 2px 5px; background: #f5f5f5; }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <div>
-            <h1>PIERRE-ADRIEN LAIR</h1>
-            <p class="subtitle">Senior Lead Analytics & AI - Directeur du LAB IA @ Converteo | ${new Date().getFullYear() - 2014} ans d'experience</p>
-        </div>
-        <div class="contact">
-            <p>lairpierreadrien@gmail.com</p>
-            <p>linkedin.com/in/pierre-adrien-lair-55a6a850</p>
-            <p>Paris & Normandie, France</p>
-        </div>
-    </div>
+        // Converts typographic punctuation that PDF text extraction and older
+        // parsers mangle. Same replacement set as career-ops.
+        function atsNormalize(str) {
+            return String(str)
+                .replace(/—|–|−/g, "-")            // em dash, en dash, minus
+                .replace(/‘|’|‛/g, "'")            // curly single quotes
+                .replace(/“|”|‟/g, '"')            // curly double quotes
+                .replace(/…/g, "...")                        // ellipsis
+                .replace(/​|‌|‍|﻿/g, "")      // zero-width chars
+                .replace(/ /g, " ")                          // non-breaking space
+                .replace(/·/g, "-");                         // middle dot
+        }
 
-    <div class="section">
-        <div class="section-title">Parcours Professionnel</div>
+        var CV_CONTACT = {
+            name: "Pierre-Adrien LAIR",
+            email: "lairpierreadrien@gmail.com",
+            linkedin: "linkedin.com/in/pierre-adrien-lair-55a6a850",
+            linkedinUrl: "https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/",
+            site: "neopal.github.io",
+            siteUrl: "https://neopal.github.io/",
+            location: "Paris & Normandie, France",
+            phone: ""   // add the number here and it renders as the first
+                        // contact line; recruiter screens expect one.
+        };
 
-        <div class="job">
-            <div class="job-header">
-                <span class="job-title">Senior Lead Analytics & AI - Directeur du LAB IA</span>
-                <span class="job-date">Jan 2025 - Present</span>
-            </div>
-            <div class="job-company">Converteo - Paris</div>
-            <div class="job-desc">Double casquette : vision Analytics & Conversion (150+ consultants) et direction du LAB IA Converteo. Industrialisation d'agents multi-etapes (Google ADK), de serveurs MCP et de skills ; mise en production sur GCP (Cloud Run, Firestore, CI/CD) pour 450 collaborateurs.</div>
-            <div class="badges">
-                <span class="badge">Google</span>
-                <span class="badge">Meta</span>
-                <span class="badge">Amplitude</span>
-                <span class="badge">Piano</span>
-                <span class="badge">AB Tasty</span>
-                <span class="badge">Kameleoon</span>
-                <span class="badge">Didomi</span>
-                <span class="badge">CommandersAct</span>
-            </div>
-        </div>
+        var CV_DATA = {
+            fr: {
+                lang: "fr",
+                docTitle: "CV Pierre-Adrien LAIR",
+                role: "Senior Lead Analytics & AI - Directeur du LAB IA @ Converteo",
+                sections: {
+                    summary: "Profil", competencies: "Competences cles",
+                    experience: "Parcours professionnel", projects: "Projets",
+                    skills: "Competences techniques", education: "Formation",
+                    certifications: "Certifications", languages: "Langues"
+                },
+                summary: "Douze ans de conseil technique aupres de grands comptes, aujourd'hui consacres a la conception et a la mise en production de systemes LLM. Je dirige le LAB IA de Converteo (cabinet Digital & Data, 450 collaborateurs), ou je pilote la practice agentique du cabinet - agents, serveurs MCP et skills reutilisables - en parallele de la vision Analytics & Conversion d'une practice de 150 consultants. Profil hands-on : je concois, developpe et deploie moi-meme, puis j'accompagne les equipes clientes pour integrer ces systemes dans leur environnement.",
+                competencies: ["Developpement d'agents LLM", "Serveurs MCP", "Prompt engineering", "Deploiement IA en entreprise", "Discovery technique", "Architecture analytics", "Tag management", "Montee en competence des equipes", "Relation grands comptes"],
+                experience: [
+                    {
+                        role: "Senior Lead Analytics & AI - Directeur du LAB IA",
+                        company: "Converteo", location: "Paris, France",
+                        period: "Janvier 2025 - aujourd'hui",
+                        bullets: [
+                            "Direction du LAB IA : arbitrage du portefeuille de projets IA, validation des technologies et industrialisation des assets (agents, skills, serveurs MCP) pour un cabinet de 450 collaborateurs.",
+                            "Conception et mise en production de systemes LLM : agents multi-etapes en Python (Google ADK), serveurs MCP, automatisation de navigation.",
+                            "Developpement et deploiement en autonomie de la plateforme interne du LAB (Next.js, Cloud Run, Firestore, authentification IAP, CI/CD Cloud Build).",
+                            "Direction de la vision Analytics & Conversion au sein d'une practice de 150+ consultants : definition des offres, methodologies et standards de delivery.",
+                            "Management des partenariats strategiques : Google, Meta, Amplitude, Piano, AB Tasty, Kameleoon, Didomi, CommandersAct, Datama.",
+                            "Accompagnement grands comptes : Hermes, LVMH, L'Oreal, Sephora, Club Med, Accor, TotalEnergies, Engie, FFF, FDJ, Samsung, Yves Rocher.",
+                            "Thought leadership : webinars, publications et representation externe sur l'IA appliquee et les standards agentiques."
+                        ]
+                    },
+                    {
+                        role: "Lead Analytics", company: "Converteo", location: "Paris, France",
+                        period: "Novembre 2019 - Decembre 2024",
+                        bullets: [
+                            "Garant de la methodologie et du delivery de la practice Analytics & Conversion.",
+                            "Lancement de l'initiative R&D IA generative des 2022 (GPT-3 / Davinci), avant sa structuration en LAB IA.",
+                            "Intervention experte sur les programmes analytics complexes et les escalades techniques.",
+                            "Formation de 200+ consultants et clients sur le tracking, l'analytics et l'IA appliquee.",
+                            "Structuration des methodologies de tracking pour l'ensemble de la practice ; relations editeurs et partenaires."
+                        ]
+                    },
+                    {
+                        role: "Consultant Senior / Head of Analytics", company: "Empirik", location: "Lyon, France",
+                        period: "Mai 2017 - Novembre 2019",
+                        bullets: [
+                            "Responsable de l'offre Analytics : pilotage de toute la chaine de valeur data online, de la collecte a l'activation.",
+                            "Conseil en choix d'outils : analytics, CRM, UX, A/B testing, DMP, marketing automation, data visualisation.",
+                            "Tag management : plans de marquage et implementation (Google Tag Manager, TagCommander, Adobe Tag Manager).",
+                            "Data engineering : architecture de donnees marketing sur Google Cloud / BigQuery, restitution Data Studio et Tableau.",
+                            "CRO & UX : activation de programmes d'A/B testing et d'analyse comportementale."
+                        ]
+                    },
+                    {
+                        role: "Senior Consultant Digital & Data", company: "Converteo", location: "Paris, France",
+                        period: "Fevrier 2014 - Avril 2017",
+                        bullets: [
+                            "AMOA de projets digitaux : expression de besoins, evaluation de prestataires, recette.",
+                            "Audits e-business et webanalytics : analyses statistiques, audits ergonomiques, etudes quali/quanti.",
+                            "Recommandations strategiques : acquisition, segmentation, parcours cross-device, marketing automation.",
+                            "Conception d'outils de suivi : scorecards, reportings automatises, tableaux de bord."
+                        ]
+                    }
+                ],
+                projects: [
+                    { title: "Serveur MCP pour la QA analytics", desc: "Serveur MCP exposant des outils de navigation Playwright a un agent Google ADK, pour capturer le dataLayer et les hits analytics au fil du parcours utilisateur.", tech: "Python, Google ADK, Playwright MCP, Vertex AI" },
+                    { title: "Agents autonomes de recette analytics", desc: "Navigation autonome recuperant dataLayer et hits a chaque etape du tunnel, pour automatiser la recette de tracking sur des sites grands comptes.", tech: "Browserbase, Stagehand, Vercel AI SDK, TypeScript" },
+                    { title: "Agents de tag management", desc: "Automatisation des taches de tag management : deploiement d'une variable sur de multiples tags GTM a partir d'une seule commande en langage naturel.", tech: "Python, Google ADK, Gemini API, API GTM" },
+                    { title: "Hub du LAB IA (en production)", desc: "Plateforme interne de showcase et de pilotage du LAB : catalogue des realisations, referentiel technologique, roadmap et suivi d'investissement. Concue, developpee et deployee en autonomie.", tech: "Next.js, TypeScript, Cloud Run, Firestore, IAP, Cloud Build" },
+                    { title: "Personas synthetiques pour l'audit UX", desc: "Agents de navigation evaluant automatiquement l'UX d'un site et realisant un benchmark concurrentiel.", tech: "Browser Use, Steel Dev, Gemini API" }
+                ],
+                skills: [
+                    ["IA & LLM", "Claude API, Gemini API, OpenAI API, Mistral, Google ADK, MCP (Model Context Protocol), sub-agents, agent skills, Vercel AI SDK, LangChain, prompt engineering"],
+                    ["Automatisation navigateur", "Browserbase, Stagehand, Browser Use, Steel Dev, Playwright"],
+                    ["Langages", "Python, JavaScript / TypeScript, SQL, R"],
+                    ["Cloud & deploiement", "Google Cloud Platform, Cloud Run, Firestore, BigQuery, Cloud Build (CI/CD), IAP, Next.js"],
+                    ["Analytics", "Google Analytics (GA4), Adobe Analytics, Piano, Amplitude, Mixpanel, Matomo, Firebase"],
+                    ["Tag management & privacy", "Google Tag Manager, CommandersAct, Adobe Tag Manager, Didomi"],
+                    ["CRO & UX", "AB Tasty, Kameleoon, ContentSquare, Hotjar"]
+                ],
+                education: [
+                    { title: "Master Marketing, Business & Management", org: "ICN Business School, Nancy", year: "2010 - 2014" },
+                    { title: "Programme d'echange - Management Information Systems", org: "Universite de Sherbrooke, Canada", year: "2013" },
+                    { title: "Classe preparatoire ECS", org: "Lycee Carnot, Paris", year: "2007 - 2009" }
+                ],
+                certifications: "Amplitude Delivery Partner (2025), Kameleoon Gold Partner (2025), AppsFlyer Essentials (2025), AB Tasty User Expert (2020), Google Tag Manager Certified Partner (2017), Eulerian DDP (2016), TagCommander (2015), Google Analytics (2014)",
+                languages: "Francais (natif) - Anglais (courant, TOEIC Gold)",
+                printHint: "Avant d'enregistrer en PDF : decochez l'option En-tetes et pieds de page dans la fenetre d'impression, sinon l'URL et la date sont inserees dans le fichier."
+            },
 
-        <div class="job">
-            <div class="job-header">
-                <span class="job-title">Lead Analytics</span>
-                <span class="job-date">Nov 2019 - Déc 2024</span>
-            </div>
-            <div class="job-company">Converteo - Paris</div>
-            <div class="job-desc">Garant methodologie et delivery practice Analytics. R&D IA Generative (depuis 2022). Formation 200+ consultants.</div>
-        </div>
+            en: {
+                lang: "en",
+                docTitle: "Pierre-Adrien LAIR - CV",
+                role: "Senior Lead Analytics & AI - AI Lab Director at Converteo",
+                sections: {
+                    summary: "Professional Summary", competencies: "Core Competencies",
+                    experience: "Work Experience", projects: "Projects",
+                    skills: "Skills", education: "Education",
+                    certifications: "Certifications", languages: "Languages"
+                },
+                summary: "Twelve years of technical consulting for enterprise clients, now focused on designing and shipping LLM systems in production. I direct the AI Lab at Converteo (450-person Digital & Data consultancy), where I lead the firm's agentic practice - agents, MCP servers and reusable skills - alongside the Analytics & Conversion vision for a 150-consultant practice. Hands-on: I design, build and deploy these systems myself, then work directly with client teams to embed them in their environments.",
+                competencies: ["LLM agent development", "MCP servers", "Prompt engineering", "Enterprise AI deployment", "Technical discovery", "Analytics architecture", "Tag management", "Team enablement", "Enterprise stakeholder management"],
+                experience: [
+                    {
+                        role: "Senior Lead Analytics & AI - AI Lab Director",
+                        company: "Converteo", location: "Paris, France",
+                        period: "January 2025 - Present",
+                        bullets: [
+                            "Direct the AI Lab: arbitrate the AI project portfolio, validate technologies, and industrialise assets (agents, skills, MCP servers) for a 450-person consultancy.",
+                            "Design and ship LLM systems in production: multi-step agents in Python (Google ADK), MCP servers, and browser automation.",
+                            "Built and deployed the Lab's internal platform single-handedly (Next.js, Cloud Run, Firestore, IAP authentication, Cloud Build CI/CD).",
+                            "Own the Analytics & Conversion vision across a 150+ consultant practice: offering definition, methodology and delivery standards.",
+                            "Manage strategic partnerships: Google, Meta, Amplitude, Piano, AB Tasty, Kameleoon, Didomi, CommandersAct, Datama.",
+                            "Enterprise engagements: Hermes, LVMH, L'Oreal, Sephora, Club Med, Accor, TotalEnergies, Engie, FFF, FDJ, Samsung, Yves Rocher.",
+                            "Thought leadership: webinars, published articles and external representation on applied AI and agentic standards."
+                        ]
+                    },
+                    {
+                        role: "Lead Analytics", company: "Converteo", location: "Paris, France",
+                        period: "November 2019 - December 2024",
+                        bullets: [
+                            "Owned methodology and delivery for the Analytics & Conversion practice.",
+                            "Launched the generative AI R&D initiative in 2022 (GPT-3 / Davinci era), which later became the AI Lab.",
+                            "Expert escalation point on complex analytics programmes.",
+                            "Trained 200+ consultants and clients on tracking, analytics and applied AI.",
+                            "Structured tracking methodology across the practice; owned vendor and partner relationships."
+                        ]
+                    },
+                    {
+                        role: "Senior Consultant / Head of Analytics", company: "Empirik", location: "Lyon, France",
+                        period: "May 2017 - November 2019",
+                        bullets: [
+                            "Owned the Analytics offering end to end, across the full online data value chain from collection to activation.",
+                            "Tooling advisory: analytics, CRM, UX, A/B testing, DMP, marketing automation and data visualisation.",
+                            "Tag management: tracking plans and implementation (Google Tag Manager, TagCommander, Adobe Tag Manager).",
+                            "Data engineering: marketing data architecture on Google Cloud / BigQuery, reporting in Data Studio and Tableau.",
+                            "CRO & UX: ran A/B testing and behavioural analysis programmes."
+                        ]
+                    },
+                    {
+                        role: "Senior Consultant Digital & Data", company: "Converteo", location: "Paris, France",
+                        period: "February 2014 - April 2017",
+                        bullets: [
+                            "Business analysis on digital projects: requirements definition, vendor evaluation and acceptance testing.",
+                            "E-business and web analytics audits: statistical analysis, usability audits, qualitative and quantitative studies.",
+                            "Strategic recommendations: acquisition, segmentation, cross-device journeys, marketing automation.",
+                            "Built tracking tooling: scorecards, automated reporting and dashboards."
+                        ]
+                    }
+                ],
+                projects: [
+                    { title: "MCP server for analytics QA", desc: "An MCP server exposing Playwright navigation tools to a Google ADK agent, capturing the dataLayer and analytics hits as it moves through a user journey.", tech: "Python, Google ADK, Playwright MCP, Vertex AI" },
+                    { title: "Autonomous analytics QA agents", desc: "Autonomous navigation capturing dataLayer and analytics hits at each funnel step, automating tracking acceptance testing on enterprise sites.", tech: "Browserbase, Stagehand, Vercel AI SDK, TypeScript" },
+                    { title: "Tag management agents", desc: "Automates tag management work: deploys a variable across multiple GTM tags from a single natural-language command.", tech: "Python, Google ADK, Gemini API, GTM API" },
+                    { title: "AI Lab hub (in production)", desc: "Internal showcase and governance platform for the Lab: catalogue of work, technology reference, roadmap and investment tracking. Designed, built and deployed single-handedly.", tech: "Next.js, TypeScript, Cloud Run, Firestore, IAP, Cloud Build" },
+                    { title: "Synthetic UX personas", desc: "Navigation agents that automatically evaluate the UX of a site and run competitive benchmarks.", tech: "Browser Use, Steel Dev, Gemini API" }
+                ],
+                skills: [
+                    ["AI & LLM", "Claude API, Gemini API, OpenAI API, Mistral, Google ADK, MCP (Model Context Protocol), sub-agents, agent skills, Vercel AI SDK, LangChain, prompt engineering"],
+                    ["Browser automation", "Browserbase, Stagehand, Browser Use, Steel Dev, Playwright"],
+                    ["Languages", "Python, JavaScript / TypeScript, SQL, R"],
+                    ["Cloud & deployment", "Google Cloud Platform, Cloud Run, Firestore, BigQuery, Cloud Build (CI/CD), IAP, Next.js"],
+                    ["Analytics", "Google Analytics (GA4), Adobe Analytics, Piano, Amplitude, Mixpanel, Matomo, Firebase"],
+                    ["Tag management & privacy", "Google Tag Manager, CommandersAct, Adobe Tag Manager, Didomi"],
+                    ["CRO & UX", "AB Tasty, Kameleoon, ContentSquare, Hotjar"]
+                ],
+                education: [
+                    { title: "MSc Marketing, Business & Management", org: "ICN Business School, Nancy, France", year: "2010 - 2014" },
+                    { title: "Exchange programme - Management Information Systems", org: "Universite de Sherbrooke, Canada", year: "2013" },
+                    { title: "Classe preparatoire ECS (intensive undergraduate programme)", org: "Lycee Carnot, Paris, France", year: "2007 - 2009" }
+                ],
+                certifications: "Amplitude Delivery Partner (2025), Kameleoon Gold Partner (2025), AppsFlyer Essentials (2025), AB Tasty User Expert (2020), Google Tag Manager Certified Partner (2017), Eulerian DDP (2016), TagCommander (2015), Google Analytics (2014)",
+                languages: "French (native) - English (fluent, TOEIC Gold)",
+                printHint: "Before saving as PDF: uncheck the Headers and footers option in the print dialog, otherwise the URL and date are baked into the file."
+            }
+        };
 
-        <div class="job">
-            <div class="job-header">
-                <span class="job-title">Consultant Senior / Head of Analytics</span>
-                <span class="job-date">Mai 2017 - Nov 2019</span>
-            </div>
-            <div class="job-company">Empirik - Lyon</div>
-            <div class="job-desc">Responsable offre Analytics. Conseil outils, tag management, data engineering, CRO & UX.</div>
-        </div>
+        var CV_STYLES = [
+            "* { margin:0; padding:0; box-sizing:border-box;",
+            "    font-variant-ligatures:none; font-feature-settings:'liga' 0,'clig' 0,'dlig' 0; }",
+            "@page { size:A4; margin:14mm; }",
+            "html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }",
+            "body { font-family:'Liberation Sans','Helvetica Neue',Arial,'DejaVu Sans',sans-serif;",
+            "       font-size:10.5px; line-height:1.5; color:#1a1a1a; background:#fff;",
+            "       font-variant-ligatures:none; }",
+            ".page { max-width:182mm; margin:0 auto; }",
+            ".hint { background:#fff8e6; border:1px solid #e0c98a; padding:8px 10px; margin-bottom:14px;",
+            "        font-size:11px; color:#6b5520; line-height:1.5; }",
+            "@media print { .hint { display:none !important; } }",
+            ".header { margin-bottom:14px; border-bottom:2px solid #1a1a1a; padding-bottom:8px; }",
+            ".header h1 { font-size:23px; font-weight:700; line-height:1.2; margin-bottom:3px; }",
+            ".header .role { font-size:11.5px; color:#333; font-weight:600; margin-bottom:5px; }",
+            ".contact-row { display:block; font-size:10px; line-height:1.7; color:#555; }",
+            ".contact-row span, .contact-row a { display:block; color:#555; text-decoration:none; }",
+            ".section { margin-bottom:13px; }",
+            ".section-title { font-size:11.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.07em;",
+            "                 color:#1a1a1a; border-bottom:1px solid #999; padding-bottom:2px; margin-bottom:7px; }",
+            ".summary-text { font-size:10.5px; line-height:1.6; color:#2f2f2f; }",
+            ".competency-item { display:inline; font-size:10.5px; color:#2c3e50; }",
+            ".job { margin-bottom:11px; }",
+            ".job-role { display:block; font-weight:700; font-size:11px; color:#1a1a1a; margin-bottom:1px; }",
+            ".job-company { display:block; font-weight:600; font-size:10.5px; color:#333; margin-bottom:1px; }",
+            ".job-location { display:block; font-size:9.5px; color:#777; margin-bottom:1px; }",
+            ".job-period { display:block; font-size:9.5px; color:#777; margin-bottom:4px; }",
+            ".job ul { padding-left:16px; margin-top:3px; }",
+            ".job li { font-size:10px; line-height:1.5; color:#333; margin-bottom:2px; }",
+            ".project { margin-bottom:8px; }",
+            ".project-title { display:block; font-weight:700; font-size:10.5px; color:#1a1a1a; margin-bottom:1px; }",
+            ".project-desc { font-size:10px; color:#333; line-height:1.5; }",
+            ".project-tech { font-size:9.5px; color:#777; margin-top:1px; }",
+            ".edu-item { margin-bottom:6px; }",
+            ".edu-title { display:block; font-weight:600; font-size:10.5px; color:#1a1a1a; }",
+            ".edu-org { display:block; font-size:10px; color:#555; }",
+            ".edu-year { display:block; font-size:9.5px; color:#777; }",
+            ".skill-item { margin-bottom:3px; font-size:10px; color:#333; line-height:1.5; }",
+            ".skill-category { font-weight:700; color:#1a1a1a; }",
+            ".plain { font-size:10px; color:#333; line-height:1.55; }",
+            ".header, .edu-item, .job, .project, .skill-item { break-inside:avoid; page-break-inside:avoid; }",
+            ".section-title, .job-role, .job-company, .job-location, .job-period, .project-title {",
+            "    break-after:avoid; page-break-after:avoid; }",
+            ".project-tech { break-before:avoid; page-break-before:avoid; }"
+        ].join("\n");
 
-        <div class="job">
-            <div class="job-header">
-                <span class="job-title">Senior Consultant Digital & Data</span>
-                <span class="job-date">Fev 2014 - Avr 2017</span>
-            </div>
-            <div class="job-company">Converteo - Paris</div>
-            <div class="job-desc">AMOA projets digitaux, audits e-business & webanalytics, recommandations strategiques.</div>
-        </div>
-    </div>
+        function cvEscape(s) {
+            return atsNormalize(s)
+                .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
 
-    <div class="section">
-        <div class="section-title">Stack Technique</div>
-        <div class="grid-4">
-            <div class="stack-box">
-                <h4>IA & LLM</h4>
-                <p>Claude API, Gemini API, OpenAI, Google ADK, MCP, agent skills, Vercel AI SDK, Browserbase, Stagehand, Cloud Run</p>
-            </div>
-            <div class="stack-box">
-                <h4>Analytics & Data</h4>
-                <p>Google Analytics, Piano, Adobe Analytics, Amplitude, Mixpanel, Google Tag Manager, CommandersAct, Didomi</p>
-            </div>
-            <div class="stack-box">
-                <h4>CRO & Analyse</h4>
-                <p>Kameleoon, AB Tasty, Optimizely, Dynamic Yield, Datama</p>
-            </div>
-            <div class="stack-box">
-                <h4>Data & Cloud</h4>
-                <p>Python, JavaScript, SQL, dbt, Google Cloud Platform, BigQuery, Looker Studio, Tableau</p>
-            </div>
-        </div>
-    </div>
+        function buildCVHtml(lang) {
+            var d = CV_DATA[lang] || CV_DATA.fr;
+            var c = CV_CONTACT;
+            var S = d.sections;
+            var e = cvEscape;
+            var out = [];
+            function section(title, body) {
+                out.push('<div class="section"><div class="section-title">' + e(title) + "</div>" + body + "</div>");
+            }
 
-    <div class="section">
-        <div class="section-title">Certifications</div>
-        <div class="certs">
-            <span class="cert">Google Analytics</span>
-            <span class="cert">Google Tag Manager Partner</span>
-            <span class="cert">Looker Certified</span>
-            <span class="cert">Amplitude Partner</span>
-            <span class="cert">AB Tasty Expert</span>
-            <span class="cert">Kameleoon Gold</span>
-            <span class="cert">Didomi Certified</span>
-            <span class="cert">Addingwell Partner of the Year</span>
-            <span class="cert">ADK Introduction Courses</span>
-        </div>
-    </div>
+            out.push('<!DOCTYPE html><html lang="' + d.lang + '"><head><meta charset="utf-8">');
+            out.push("<title>" + e(d.docTitle) + "</title><style>" + CV_STYLES + "</style></head><body><div class=\"page\">");
+            out.push('<div class="hint">' + e(d.printHint) + "</div>");
 
-    <div class="section">
-        <div class="section-title">Formation</div>
-        <p style="font-size: 8pt;">Master Marketing, Business & Management - ICN Business School (2010-2014) | Exchange Program MIS - Universite de Sherbrooke, Canada (2013)</p>
-    </div>
+            // Header - one contact item per line, so parsers keep them separate
+            var contact = [];
+            if (c.phone) contact.push('<a href="tel:' + e(c.phone) + '">' + e(c.phone) + "</a>");
+            contact.push('<a href="mailto:' + e(c.email) + '">' + e(c.email) + "</a>");
+            contact.push('<a href="' + e(c.linkedinUrl) + '">' + e(c.linkedin) + "</a>");
+            contact.push('<a href="' + e(c.siteUrl) + '">' + e(c.site) + "</a>");
+            contact.push("<span>" + e(c.location) + "</span>");
+            out.push('<div class="header"><h1>' + e(c.name) + '</h1><div class="role">' + e(d.role) +
+                '</div><div class="contact-row">' + contact.join("") + "</div></div>");
 
-    <div class="section">
-        <div class="section-title">Clients de Reference</div>
-        <p style="font-size: 8pt;">Hermes, LVMH, L'Oreal, Sephora, Club Med, Accor, TotalEnergies, Engie, FFF, FDJ, Samsung, Yves Rocher</p>
-    </div>
-</body>
-</html>
-            `);
+            section(S.summary, '<div class="summary-text">' + e(d.summary) + "</div>");
+
+            section(S.competencies, '<div class="plain">' + d.competencies.map(function (t) {
+                return '<span class="competency-item">' + e(t) + "</span>";
+            }).join(" - ") + "</div>");
+
+            section(S.experience, d.experience.map(function (j) {
+                return '<div class="job">' +
+                    '<div class="job-role">' + e(j.role) + "</div>" +
+                    '<div class="job-company">' + e(j.company) + "</div>" +
+                    '<div class="job-location">' + e(j.location) + "</div>" +
+                    '<div class="job-period">' + e(j.period) + "</div><ul>" +
+                    j.bullets.map(function (b) { return "<li>" + e(b) + "</li>"; }).join("") +
+                    "</ul></div>";
+            }).join(""));
+
+            section(S.projects, d.projects.map(function (p) {
+                return '<div class="project">' +
+                    '<div class="project-title">' + e(p.title) + "</div>" +
+                    '<div class="project-desc">' + e(p.desc) + "</div>" +
+                    '<div class="project-tech">' + e(p.tech) + "</div></div>";
+            }).join(""));
+
+            section(S.skills, d.skills.map(function (row) {
+                return '<div class="skill-item"><span class="skill-category">' + e(row[0]) + " : </span>" + e(row[1]) + "</div>";
+            }).join(""));
+
+            section(S.education, d.education.map(function (ed) {
+                return '<div class="edu-item">' +
+                    '<div class="edu-title">' + e(ed.title) + "</div>" +
+                    '<div class="edu-org">' + e(ed.org) + "</div>" +
+                    '<div class="edu-year">' + e(ed.year) + "</div></div>";
+            }).join(""));
+
+            section(S.certifications, '<div class="plain">' + e(d.certifications) + "</div>");
+            section(S.languages, '<div class="plain">' + e(d.languages) + "</div>");
+
+            out.push("</div></body></html>");
+            return out.join("");
+        }
+
+        function exportPDF(lang) {
+            var code = (lang === "en") ? "en" : "fr";
+            posthog.capture(code === "en" ? "pdf_export_en" : "pdf_export");
+
+            var printWindow = window.open("", "_blank");
+            if (!printWindow) {
+                alert("Le navigateur a bloque la fenetre. Autorisez les pop-ups pour ce site, puis reessayez.");
+                return;
+            }
+            printWindow.document.write(buildCVHtml(code));
             printWindow.document.close();
             printWindow.focus();
-            setTimeout(() => { printWindow.print(); }, 250);
+            setTimeout(function () { printWindow.print(); }, 350);
         }
 
         // Close chat on Escape key
