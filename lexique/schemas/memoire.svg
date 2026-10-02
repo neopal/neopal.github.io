@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="memoire-t">
+<title id="memoire-t">La mémoire d'un assistant : à la fin d'une conversation, le produit écrit des notes dans un stockage séparé du modèle, puis il en recolle une partie dans le contexte de la conversation suivante ; les paramètres du modèle ne changent pas.</title>
+<text class="m d" x="0" y="14">lundi</text>
+<rect class="bx" x="0" y="22" width="150" height="70" rx="6"/>
+<text class="m" x="12" y="44">conversation</text>
+<text class="m mu" x="12" y="62">« je suis à</text>
+<text class="m mu" x="12" y="80">Half Moon Bay »</text>
+<text class="m d" x="210" y="14">jeudi</text>
+<rect class="bx" x="210" y="22" width="150" height="70" rx="6"/>
+<text class="m" x="222" y="44">contexte</text>
+<rect class="bxa dash" x="218" y="50" width="134" height="22" rx="3"/>
+<text class="m ac" x="226" y="66">Half Moon Bay</text>
+<text class="m mu" x="222" y="84">+ ta question</text>
+<path class="la" d="M75 92 v40 h30"/>
+<path class="la" d="M99 126 l6 6 l-6 6"/>
+<text class="m ac" x="12" y="150">écrire</text>
+<rect class="bxa" x="110" y="112" width="140" height="62" rx="6"/>
+<text class="b" x="180" y="137" text-anchor="middle">notes</text>
+<text class="m mu" x="180" y="158" text-anchor="middle">hors du modèle</text>
+<path class="la" d="M250 142 h35 v-50"/>
+<path class="la" d="M279 98 l6 -6 l6 6"/>
+<text class="m ac" x="296" y="150">relire</text>
+<path class="lr dash" d="M60 214 h40 v-40"/>
+<path class="lr" d="M94 180 l6 -6 l6 6"/>
+<text class="m red" x="0" y="232">page piégée</text>
+<rect class="bx" x="200" y="196" width="160" height="44" rx="6"/>
+<text class="m" x="280" y="214" text-anchor="middle">modèle</text>
+<text class="m mu" x="280" y="231" text-anchor="middle">paramètres figés</text>
+<text class="i mu" x="0" y="270">Le modèle reste le même, et il relit jeudi</text>
+<text class="i mu" x="0" y="290">ce que le produit a noté lundi.</text>
+</svg>

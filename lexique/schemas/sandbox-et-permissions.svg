@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="sandbox-et-permissions-t">
+<title id="sandbox-et-permissions-t">Trois commandes d'un agent face à deux barrières : une règle de permission qui interdit « rm » arrête la première commande mais pas la même écrite « /bin/rm », alors que le sandbox bloque les trois, y compris l'appel à un site non approuvé.</title>
+<text class="m d" x="0" y="16">commande de l'agent</text>
+<text class="m d" x="252" y="16" text-anchor="middle">règle</text>
+<text class="m d" x="252" y="32" text-anchor="middle">« rm »</text>
+<text class="m ac" x="324" y="16" text-anchor="middle">sandbox</text>
+<path class="lm" d="M0 44 h360"/>
+<text class="m" x="0" y="74">rm -rf ~/Photos</text>
+<path class="lr" d="M244 64 l16 16 M260 64 l-16 16"/>
+<path class="lr" d="M316 64 l16 16 M332 64 l-16 16"/>
+<path class="ln" d="M0 98 h360"/>
+<text class="m" x="0" y="128">/bin/rm -rf ~/Photos</text>
+<path class="lm" d="M243 128 l6 6 l12 -14"/>
+<text class="m mu" x="252" y="152" text-anchor="middle">passe</text>
+<path class="lr" d="M316 118 l16 16 M332 118 l-16 16"/>
+<path class="ln" d="M0 166 h360"/>
+<text class="m" x="0" y="196">curl site-inconnu.com</text>
+<text class="m mu" x="252" y="196" text-anchor="middle">hors règle</text>
+<path class="lr" d="M316 186 l16 16 M332 186 l-16 16"/>
+<path class="ln" d="M0 220 h360"/>
+<text class="i mu" x="0" y="248">La règle lit le texte de la commande, et le</text>
+<text class="i mu" x="0" y="268">sandbox bloque au niveau du système, même</text>
+<text class="i mu" x="0" y="288">quand la commande est écrite autrement.</text>
+</svg>
