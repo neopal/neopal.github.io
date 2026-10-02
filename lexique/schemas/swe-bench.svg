@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 322" role="img" aria-labelledby="swe-bench-t">
+<title id="swe-bench-t">Déroulé d'une tâche SWE-bench : l'agent reçoit un ticket GitHub et le code du projet, modifie le code, puis les tests écrits par les développeurs, cachés à l'agent, décident si le ticket est résolu.</title>
+<rect class="bx" x="0" y="8" width="165" height="34" rx="6"/>
+<text class="m" x="82" y="30" text-anchor="middle">ticket GitHub</text>
+<rect class="bx" x="195" y="8" width="165" height="34" rx="6"/>
+<text class="m" x="277" y="30" text-anchor="middle">code du projet</text>
+<path class="lm" d="M82 42 v16 h195 v-16 M180 58 v16"/>
+<path class="lm" d="M175 68 l5 6 l5 -6"/>
+<rect class="bxa" x="75" y="76" width="210" height="36" rx="6"/>
+<text class="m" x="180" y="99" text-anchor="middle">l'agent modifie le code</text>
+<path class="lm" d="M180 112 v22"/><path class="lm" d="M175 128 l5 6 l5 -6"/>
+<rect class="bx dash" x="75" y="138" width="210" height="52" rx="6"/>
+<text class="m" x="180" y="160" text-anchor="middle">tests des développeurs</text>
+<text class="m mu" x="180" y="179" text-anchor="middle">cachés à l'agent</text>
+<path class="lm" d="M140 190 v18 h-58 v10"/><path class="lm" d="M77 212 l5 6 l5 -6"/>
+<path class="lm" d="M220 190 v18 h58 v10"/><path class="lm" d="M273 212 l5 6 l5 -6"/>
+<text class="m" x="82" y="238" text-anchor="middle">tous passent</text>
+<text class="big ac" x="82" y="262" text-anchor="middle">résolu</text>
+<text class="m" x="278" y="238" text-anchor="middle">un test échoue</text>
+<text class="big mu" x="278" y="262" text-anchor="middle">non résolu</text>
+<text class="i mu" x="0" y="294">Un patch qui fait passer les tests compte</text>
+<text class="i mu" x="0" y="314">comme une réussite, même s'il est mal écrit.</text>
+</svg>

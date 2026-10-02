@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 332" role="img" aria-labelledby="modeles-de-raisonnement-t">
+<title id="modeles-de-raisonnement-t">Un modèle classique passe de la question à la réponse ; un modèle de raisonnement écrit d'abord un brouillon où il essaie une piste, repère une erreur et revient en arrière, puis répond.</title>
+<text class="m mu" x="0" y="16">modèle classique</text>
+<rect class="bx" x="0" y="26" width="110" height="32" rx="4"/>
+<text x="55" y="47" text-anchor="middle">question</text>
+<path class="lm" d="M118 42 h28"/><path class="lm" d="M140 37 l6 5 l-6 5"/>
+<rect class="bxa" x="154" y="26" width="110" height="32" rx="4"/>
+<text class="ac" x="209" y="47" text-anchor="middle">réponse</text>
+<text class="m mu" x="0" y="96">modèle de raisonnement</text>
+<rect class="bx" x="0" y="106" width="110" height="32" rx="4"/>
+<text x="55" y="127" text-anchor="middle">question</text>
+<path class="lm" d="M112 122 h14"/><path class="lm" d="M120 117 l6 5 l-6 5"/>
+<rect class="bx dash" x="132" y="106" width="228" height="176" rx="4"/>
+<text class="m d" x="146" y="128">chain-of-thought</text>
+<text x="146" y="156">pose le problème</text>
+<text x="146" y="184">essaie une piste</text>
+<text class="red" x="146" y="212">repère une erreur</text>
+<text x="146" y="240">reprend une autre piste</text>
+<text x="146" y="268">vérifie le résultat</text>
+<path class="lm" d="M300 207 h40 v-28 h-16"/><path class="lm" d="M330 174 l-6 5 l6 5"/>
+<path class="lm" d="M130 263 h-14"/><path class="lm" d="M122 258 l-6 5 l6 5"/>
+<rect class="bxa" x="0" y="247" width="110" height="32" rx="4"/>
+<text class="ac" x="55" y="268" text-anchor="middle">réponse</text>
+<text class="i mu" x="0" y="306">Le brouillon s'écrit token par token, et ces</text>
+<text class="i mu" x="0" y="326">tokens se paient comme ceux de la réponse.</text>
+</svg>

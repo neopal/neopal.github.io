@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 282" role="img" aria-labelledby="prediction-du-mot-suivant-t">
+<title id="prediction-du-mot-suivant-t">Quatre passages successifs dans le modèle : à chaque pas, le texte déjà écrit entre dans le LLM, qui en sort un token, puis ce token est ajouté au texte du passage suivant.</title>
+<text class="m d" x="0" y="14">texte en entrée</text>
+<text class="m d" x="309" y="14" text-anchor="middle">sortie</text>
+<rect class="bx" x="0" y="26" width="196" height="34" rx="5"/>
+<text x="10" y="48">Il était une</text>
+<path class="lm" d="M200 43 h12"/><path class="lm" d="M207 39 l5 4 l-5 4"/>
+<rect class="bx" x="216" y="26" width="42" height="34" rx="5"/>
+<text class="m mu" x="237" y="47" text-anchor="middle">LLM</text>
+<path class="lm" d="M262 43 h12"/><path class="lm" d="M269 39 l5 4 l-5 4"/>
+<rect class="bxa" x="278" y="26" width="62" height="34" rx="5"/>
+<text class="ac b" x="309" y="48" text-anchor="middle">fois</text>
+<path class="la" d="M309 62 V68 Q309 72 303 72 H100 Q94 72 94 76 V80"/>
+<path class="la" d="M90 76 l4 5 l4 -5"/>
+<rect class="bx" x="0" y="84" width="196" height="34" rx="5"/>
+<text x="10" y="106">Il était une <tspan class="ac b">fois</tspan></text>
+<path class="lm" d="M200 101 h12"/><path class="lm" d="M207 97 l5 4 l-5 4"/>
+<rect class="bx" x="216" y="84" width="42" height="34" rx="5"/>
+<text class="m mu" x="237" y="105" text-anchor="middle">LLM</text>
+<path class="lm" d="M262 101 h12"/><path class="lm" d="M269 97 l5 4 l-5 4"/>
+<rect class="bxa" x="278" y="84" width="62" height="34" rx="5"/>
+<text class="ac b" x="309" y="106" text-anchor="middle">un</text>
+<path class="la" d="M309 120 V126 Q309 130 303 130 H123 Q117 130 117 134 V138"/>
+<path class="la" d="M113 134 l4 5 l4 -5"/>
+<rect class="bx" x="0" y="142" width="196" height="34" rx="5"/>
+<text x="10" y="164">Il était une fois <tspan class="ac b">un</tspan></text>
+<path class="lm" d="M200 159 h12"/><path class="lm" d="M207 155 l5 4 l-5 4"/>
+<rect class="bx" x="216" y="142" width="42" height="34" rx="5"/>
+<text class="m mu" x="237" y="163" text-anchor="middle">LLM</text>
+<path class="lm" d="M262 159 h12"/><path class="lm" d="M269 155 l5 4 l-5 4"/>
+<rect class="bxa" x="278" y="142" width="62" height="34" rx="5"/>
+<text class="ac b" x="309" y="164" text-anchor="middle">roi</text>
+<path class="la" d="M309 178 V184 Q309 188 303 188 H141 Q135 188 135 192 V196"/>
+<path class="la" d="M131 192 l4 5 l4 -5"/>
+<rect class="bx" x="0" y="200" width="196" height="34" rx="5"/>
+<text x="10" y="222">Il était une fois un <tspan class="ac b">roi</tspan></text>
+<path class="lm" d="M200 217 h12"/><path class="lm" d="M207 213 l5 4 l-5 4"/>
+<rect class="bx" x="216" y="200" width="42" height="34" rx="5"/>
+<text class="m mu" x="237" y="221" text-anchor="middle">LLM</text>
+<path class="lm" d="M262 217 h12"/><path class="lm" d="M269 213 l5 4 l-5 4"/>
+<rect class="bxa" x="278" y="200" width="62" height="34" rx="5"/>
+<text class="ac b" x="309" y="222" text-anchor="middle">qui</text>
+<text class="i mu" x="0" y="262">Chaque token sorti repasse dans le modèle,</text>
+<text class="i mu" x="0" y="280">avec tout le texte qui le précède.</text>
+</svg>

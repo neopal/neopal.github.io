@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 390" role="img" aria-labelledby="boucle-agent-t">
+<title id="boucle-agent-t">La boucle agent en quatre temps : le harness envoie la conversation et les outils, le modèle demande un outil, le harness l'exécute et ajoute le résultat, le modèle relit tout puis repart pour un tour ou sort avec une réponse finale.</title>
+<rect class="bx" x="70" y="0" width="220" height="50" rx="8"/>
+<text class="m ac" x="82" y="21">1</text>
+<text class="m" x="98" y="21">le harness envoie</text>
+<text class="m mu" x="98" y="39">conversation, outils</text>
+<rect class="bx" x="195" y="104" width="165" height="50" rx="8"/>
+<text class="m ac" x="207" y="125">2</text>
+<text class="m" x="223" y="125">le modèle</text>
+<text class="m mu" x="223" y="143">demande un outil</text>
+<rect class="bx" x="70" y="208" width="220" height="50" rx="8"/>
+<text class="m ac" x="82" y="229">3</text>
+<text class="m" x="98" y="229">le harness exécute</text>
+<text class="m mu" x="98" y="247">et ajoute le résultat</text>
+<rect class="bxa" x="0" y="104" width="165" height="50" rx="8"/>
+<text class="m ac" x="12" y="125">4</text>
+<text class="m" x="28" y="125">le modèle relit</text>
+<text class="m mu" x="28" y="143">tout et décide</text>
+<path class="la" d="M290 25 Q320 25 320 98"/><path class="la" d="M314 92 l6 7 l6 -7"/>
+<path class="la" d="M320 160 Q320 233 296 233"/><path class="la" d="M303 227 l-7 6 l7 6"/>
+<path class="la" d="M70 233 Q40 233 40 160"/><path class="la" d="M34 166 l6 -7 l6 7"/>
+<path class="la" d="M40 98 Q40 25 64 25"/><path class="la" d="M57 19 l7 6 l-7 6"/>
+<text class="m ac" x="0" y="58">autre</text>
+<text class="m ac" x="0" y="76">outil</text>
+<path class="lm" d="M14 154 V290"/><path class="lm" d="M9 284 l5 6 l5 -6"/>
+<text class="m mu" x="24" y="282">fini</text>
+<rect class="bx" x="0" y="296" width="150" height="34" rx="6"/>
+<text x="14" y="318">réponse finale</text>
+<text class="i mu" x="0" y="362">À chaque tour, le modèle relit toute la</text>
+<text class="i mu" x="0" y="382">conversation, résultats d'outils compris.</text>
+</svg>

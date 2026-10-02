@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 306" role="img" aria-labelledby="comparatif-des-modeles-t">
+<title id="comparatif-des-modeles-t">Prix d'entrée et de sortie au million de tokens pour cinq modèles du tableau : la barre de sortie est à chaque fois de trois à six fois plus longue.</title>
+<rect class="fa" x="142" y="6" width="12" height="12" rx="2" opacity="0.4"/>
+<text class="m" x="160" y="17">entrée</text>
+<rect class="fa" x="232" y="6" width="12" height="12" rx="2"/>
+<text class="m" x="250" y="17">sortie</text>
+<text class="m" x="0" y="53">Claude Fable 5.1</text>
+<rect class="fa" x="142" y="38" width="34.0" height="9" rx="2" opacity="0.4"/>
+<rect class="fa" x="142" y="51" width="170.0" height="9" rx="2"/>
+<text class="m" x="0" y="91">GPT-6.1 Sol</text>
+<rect class="fa" x="142" y="76" width="6.8" height="9" rx="2" opacity="0.4"/>
+<rect class="fa" x="142" y="89" width="34.0" height="9" rx="2"/>
+<text class="m" x="0" y="129">Gemini 3.1 Pro</text>
+<rect class="fa" x="142" y="114" width="6.8" height="9" rx="2" opacity="0.4"/>
+<rect class="fa" x="142" y="127" width="40.8" height="9" rx="2"/>
+<text class="m" x="0" y="167">Grok 4.7</text>
+<rect class="fa" x="142" y="152" width="6.8" height="9" rx="2" opacity="0.4"/>
+<rect class="fa" x="142" y="165" width="20.4" height="9" rx="2"/>
+<text class="m" x="0" y="205">DeepSeek-V4-Pro</text>
+<rect class="fa" x="142" y="190" width="4.5" height="9" rx="2" opacity="0.4"/>
+<rect class="fa" x="142" y="203" width="13.5" height="9" rx="2"/>
+<path class="ln" d="M142 222 H312"/>
+<path class="ln" d="M142 222 v5"/>
+<text class="m mu" x="142" y="244" text-anchor="middle">0</text>
+<path class="ln" d="M176 222 v5"/>
+<text class="m mu" x="176" y="244" text-anchor="middle">10</text>
+<path class="ln" d="M210 222 v5"/>
+<text class="m mu" x="210" y="244" text-anchor="middle">20</text>
+<path class="ln" d="M244 222 v5"/>
+<text class="m mu" x="244" y="244" text-anchor="middle">30</text>
+<path class="ln" d="M278 222 v5"/>
+<text class="m mu" x="278" y="244" text-anchor="middle">40</text>
+<path class="ln" d="M312 222 v5"/>
+<text class="m mu" x="312" y="244" text-anchor="middle">50</text>
+<text class="m mu" x="0" y="244">$ / 1M tokens</text>
+<text class="i mu" x="0" y="276">Sur toutes les lignes, la sortie coûte de</text>
+<text class="i mu" x="0" y="296">trois à six fois plus que l'entrée.</text>
+</svg>

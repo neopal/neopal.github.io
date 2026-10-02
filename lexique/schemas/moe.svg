@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 358" role="img" aria-labelledby="moe-t">
+<title id="moe-t">Un token traverse deux couches d'un MoE à 8 experts : à chaque couche, le routeur en choisit 2, pas les mêmes, et les 6 autres restent chargés sans calculer.</title>
+<rect class="bxa" x="179" y="0" width="80" height="28" rx="5"/>
+<text class="ac b" x="219" y="19" text-anchor="middle">un token</text>
+<path class="la" d="M219 30 V44"/><path class="la" d="M215 39 l4 5 l4 -5"/>
+<text class="m d" x="0" y="63">couche 1</text>
+<rect class="bx" x="174" y="46" width="90" height="26" rx="5"/>
+<text class="m" x="219" y="63" text-anchor="middle">routeur</text>
+<path class="la" d="M219 72 L129 96"/>
+<path class="la" d="M219 72 L309 96"/>
+<rect class="bx" x="78" y="98" width="30" height="30" rx="4" opacity="0.55"/>
+<text class="m d" x="93" y="118" text-anchor="middle">E1</text>
+<rect class="bxa" x="114" y="98" width="30" height="30" rx="4"/>
+<text class="m ac b" x="129" y="118" text-anchor="middle">E2</text>
+<rect class="bx" x="150" y="98" width="30" height="30" rx="4" opacity="0.55"/>
+<text class="m d" x="165" y="118" text-anchor="middle">E3</text>
+<rect class="bx" x="186" y="98" width="30" height="30" rx="4" opacity="0.55"/>
+<text class="m d" x="201" y="118" text-anchor="middle">E4</text>
+<rect class="bx" x="222" y="98" width="30" height="30" rx="4" opacity="0.55"/>
+<text class="m d" x="237" y="118" text-anchor="middle">E5</text>
+<rect class="bx" x="258" y="98" width="30" height="30" rx="4" opacity="0.55"/>
+<text class="m d" x="273" y="118" text-anchor="middle">E6</text>
+<rect class="bxa" x="294" y="98" width="30" height="30" rx="4"/>
+<text class="m ac b" x="309" y="118" text-anchor="middle">E7</text>
+<rect class="bx" x="330" y="98" width="30" height="30" rx="4" opacity="0.55"/>
+<text class="m d" x="345" y="118" text-anchor="middle">E8</text>
+<path class="la" d="M129 130 L219 158"/>
+<path class="la" d="M309 130 L219 158"/>
+<path class="la" d="M219 158 V170"/><path class="la" d="M215 165 l4 5 l4 -5"/>
+<text class="m d" x="0" y="189">couche 2</text>
+<rect class="bx" x="174" y="172" width="90" height="26" rx="5"/>
+<text class="m" x="219" y="189" text-anchor="middle">routeur</text>
+<path class="la" d="M219 198 L93 222"/>
+<path class="la" d="M219 198 L237 222"/>
+<rect class="bxa" x="78" y="224" width="30" height="30" rx="4"/>
+<text class="m ac b" x="93" y="244" text-anchor="middle">E1</text>
+<rect class="bx" x="114" y="224" width="30" height="30" rx="4" opacity="0.55"/>
+<text class="m d" x="129" y="244" text-anchor="middle">E2</text>
+<rect class="bx" x="150" y="224" width="30" height="30" rx="4" opacity="0.55"/>
+<text class="m d" x="165" y="244" text-anchor="middle">E3</text>
+<rect class="bx" x="186" y="224" width="30" height="30" rx="4" opacity="0.55"/>
+<text class="m d" x="201" y="244" text-anchor="middle">E4</text>
+<rect class="bxa" x="222" y="224" width="30" height="30" rx="4"/>
+<text class="m ac b" x="237" y="244" text-anchor="middle">E5</text>
+<rect class="bx" x="258" y="224" width="30" height="30" rx="4" opacity="0.55"/>
+<text class="m d" x="273" y="244" text-anchor="middle">E6</text>
+<rect class="bx" x="294" y="224" width="30" height="30" rx="4" opacity="0.55"/>
+<text class="m d" x="309" y="244" text-anchor="middle">E7</text>
+<rect class="bx" x="330" y="224" width="30" height="30" rx="4" opacity="0.55"/>
+<text class="m d" x="345" y="244" text-anchor="middle">E8</text>
+<path class="la" d="M93 256 L219 276"/>
+<path class="la" d="M237 256 L219 276"/>
+<path class="la" d="M219 276 V284"/><path class="la" d="M215 279 l4 5 l4 -5"/>
+<text class="m mu" x="219" y="302" text-anchor="middle">couche suivante</text>
+<text class="i mu" x="0" y="332">Les experts éteints restent chargés en mémoire,</text>
+<text class="i mu" x="0" y="350">et le routeur refait son choix à chaque couche.</text>
+</svg>

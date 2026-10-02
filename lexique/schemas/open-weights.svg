@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 284" role="img" aria-labelledby="open-weights-t">
+<title id="open-weights-t">Ce que publie un modèle open weights (poids et licence) comparé à un modèle fully open, qui publie aussi le code, les données et les étapes d'entraînement.</title>
+<text class="m" x="209" y="16" text-anchor="middle">open weights</text>
+<text class="m" x="311" y="16" text-anchor="middle">fully open</text>
+<text class="m mu" x="0" y="52">poids</text>
+<rect class="bxa" x="164" y="32" width="90" height="30" rx="4"/>
+<text class="m ac" x="209" y="52" text-anchor="middle">publié</text>
+<rect class="bxa" x="266" y="32" width="90" height="30" rx="4"/>
+<text class="m ac" x="311" y="52" text-anchor="middle">publié</text>
+<text class="m mu" x="0" y="92">licence</text>
+<rect class="bxa" x="164" y="72" width="90" height="30" rx="4"/>
+<text class="m ac" x="209" y="92" text-anchor="middle">publié</text>
+<rect class="bxa" x="266" y="72" width="90" height="30" rx="4"/>
+<text class="m ac" x="311" y="92" text-anchor="middle">publié</text>
+<text class="m mu" x="0" y="132">code d'entraînement</text>
+<rect class="bx dash" x="164" y="112" width="90" height="30" rx="4"/>
+<text class="m d" x="209" y="132" text-anchor="middle">privé</text>
+<rect class="bxa" x="266" y="112" width="90" height="30" rx="4"/>
+<text class="m ac" x="311" y="132" text-anchor="middle">publié</text>
+<text class="m mu" x="0" y="172">données</text>
+<rect class="bx dash" x="164" y="152" width="90" height="30" rx="4"/>
+<text class="m d" x="209" y="172" text-anchor="middle">privé</text>
+<rect class="bxa" x="266" y="152" width="90" height="30" rx="4"/>
+<text class="m ac" x="311" y="172" text-anchor="middle">publié</text>
+<text class="m mu" x="0" y="212">étapes</text>
+<rect class="bx dash" x="164" y="192" width="90" height="30" rx="4"/>
+<text class="m d" x="209" y="212" text-anchor="middle">privé</text>
+<rect class="bxa" x="266" y="192" width="90" height="30" rx="4"/>
+<text class="m ac" x="311" y="212" text-anchor="middle">publié</text>
+<text class="i mu" x="0" y="254">Refaire l'entraînement demande les données,</text>
+<text class="i mu" x="0" y="274">qu'un modèle comme OLMo 3 publie aussi.</text>
+</svg>

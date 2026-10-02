@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="gpu-t">
+<title id="gpu-t">Les poids actifs passent de la mémoire HBM de 141 Go aux cœurs de calcul à 4,8 To par seconde, une fois par token écrit, et une partie des cœurs reste au repos pendant ce temps.</title>
+<text class="m" x="0" y="14">mémoire HBM, 141 Go</text>
+<text class="m" x="214" y="14">cœurs de calcul</text>
+<rect class="bx" x="0" y="24" width="138" height="110" rx="4"/>
+<rect class="fa" x="12" y="36" width="114" height="9" rx="2" opacity="0.55"/>
+<rect class="fa" x="12" y="51" width="114" height="9" rx="2" opacity="0.55"/>
+<rect class="fa" x="12" y="66" width="114" height="9" rx="2" opacity="0.55"/>
+<rect class="fa" x="12" y="81" width="114" height="9" rx="2" opacity="0.55"/>
+<rect class="fa" x="12" y="96" width="114" height="9" rx="2" opacity="0.55"/>
+<rect class="fa" x="12" y="111" width="114" height="9" rx="2" opacity="0.55"/>
+<text class="m mu" x="69" y="154" text-anchor="middle">poids actifs</text>
+<path class="la" d="M146 79 H204"/><path class="la" d="M198 74 l6 5 l-6 5"/>
+<text class="m ac" x="175" y="68" text-anchor="middle">4,8 To/s</text>
+<rect class="bx" x="212" y="24" width="148" height="110" rx="4"/>
+<rect class="fa" x="223" y="37" width="16" height="16" rx="3"/>
+<rect class="fd" x="245" y="37" width="16" height="16" rx="3"/>
+<rect class="fd" x="267" y="37" width="16" height="16" rx="3"/>
+<rect class="fd" x="289" y="37" width="16" height="16" rx="3"/>
+<rect class="fd" x="311" y="37" width="16" height="16" rx="3"/>
+<rect class="fd" x="333" y="37" width="16" height="16" rx="3"/>
+<rect class="fd" x="223" y="59" width="16" height="16" rx="3"/>
+<rect class="fa" x="245" y="59" width="16" height="16" rx="3"/>
+<rect class="fd" x="267" y="59" width="16" height="16" rx="3"/>
+<rect class="fa" x="289" y="59" width="16" height="16" rx="3"/>
+<rect class="fd" x="311" y="59" width="16" height="16" rx="3"/>
+<rect class="fd" x="333" y="59" width="16" height="16" rx="3"/>
+<rect class="fd" x="223" y="81" width="16" height="16" rx="3"/>
+<rect class="fd" x="245" y="81" width="16" height="16" rx="3"/>
+<rect class="fa" x="267" y="81" width="16" height="16" rx="3"/>
+<rect class="fd" x="289" y="81" width="16" height="16" rx="3"/>
+<rect class="fd" x="311" y="81" width="16" height="16" rx="3"/>
+<rect class="fd" x="333" y="81" width="16" height="16" rx="3"/>
+<rect class="fd" x="223" y="103" width="16" height="16" rx="3"/>
+<rect class="fd" x="245" y="103" width="16" height="16" rx="3"/>
+<rect class="fa" x="267" y="103" width="16" height="16" rx="3"/>
+<rect class="fd" x="289" y="103" width="16" height="16" rx="3"/>
+<rect class="fd" x="311" y="103" width="16" height="16" rx="3"/>
+<rect class="fd" x="333" y="103" width="16" height="16" rx="3"/>
+<text class="m mu" x="286" y="154" text-anchor="middle">en partie au repos</text>
+<path class="lm" d="M286 162 V184 H69 V168"/>
+<path class="lm" d="M64 174 l5 -6 l5 6"/>
+<text class="m" x="178" y="204" text-anchor="middle">une relecture par token écrit</text>
+<text class="i mu" x="0" y="240">Pendant qu'il écrit, le GPU attend surtout</text>
+<text class="i mu" x="0" y="260">sa mémoire, et une bonne part de ses cœurs</text>
+<text class="i mu" x="0" y="280">reste inutilisée.</text>
+</svg>

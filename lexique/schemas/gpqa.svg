@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="gpqa-t">
+<title id="gpqa-t">Échelle de réussite à GPQA : 34 % pour des non-spécialistes avec Internet, 39 % pour le meilleur modèle en 2023, 65 % pour les experts du domaine ; en 2026, quatre modèles entre 95,4 et 95,8 % tiennent tous dans une erreur type d'environ 1,4 point.</title>
+<path class="ln" d="M40 22 v296"/>
+<text class="m mu" x="32" y="27" text-anchor="end">100</text>
+<text class="m mu" x="32" y="323" text-anchor="end">0</text>
+<circle class="fa" cx="40" cy="34" r="5"/>
+<path class="ln dash" d="M46 34 h130"/>
+<circle class="mu" cx="40" cy="126" r="5"/>
+<text class="m" x="52" y="131">65 % experts du domaine</text>
+<circle class="mu" cx="40" cy="203" r="5"/>
+<text class="m" x="52" y="204">39 % meilleur modèle, 2023</text>
+<circle class="mu" cx="40" cy="217" r="5"/>
+<text class="m" x="52" y="224">34 % non-spécialistes</text>
+<text class="m mu" x="52" y="242">avec Internet</text>
+<rect class="bxa" x="176" y="8" width="184" height="104" rx="6"/>
+<path class="lm" d="M226 24 h100"/><circle class="fa" cx="276" cy="24" r="4"/>
+<path class="lm" d="M223 37 h100"/><circle class="fa" cx="273" cy="37" r="4"/>
+<path class="lm" d="M221 50 h100"/><circle class="fa" cx="271" cy="50" r="4"/>
+<path class="lm" d="M215 63 h100"/><circle class="fa" cx="265" cy="63" r="4"/>
+<text class="m" x="268" y="86" text-anchor="middle">95,4 à 95,8 % en 2026</text>
+<text class="m mu" x="268" y="103" text-anchor="middle">erreur type ± 1,4 pt</text>
+<text class="i mu" x="56" y="292">Les quatre modèles de tête tiennent</text>
+<text class="i mu" x="56" y="312">tous dans la marge d'erreur.</text>
+</svg>

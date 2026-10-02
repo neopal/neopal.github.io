@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 344" role="img" aria-labelledby="paradoxe-de-jevons-t">
+<title id="paradoxe-de-jevons-t">La chaîne décrite par Jevons : moins de charbon par tonne de fonte rend le haut-fourneau plus rentable, attire des capitaux, fait baisser le prix de la fonte, la demande grimpe et les fourneaux supplémentaires brûlent plus de charbon au total.</title>
+<rect class="bx" x="0" y="0" width="330" height="30" rx="4"/>
+<text class="" x="14" y="20">moins de charbon par tonne de fonte</text>
+<path class="lm" d="M165 32 V44"/><path class="lm" d="M160 38 l5 6 l5 -6"/>
+<rect class="bx" x="0" y="46" width="330" height="30" rx="4"/>
+<text class="" x="14" y="66">le haut-fourneau rapporte davantage</text>
+<path class="lm" d="M165 78 V90"/><path class="lm" d="M160 84 l5 6 l5 -6"/>
+<rect class="bx" x="0" y="92" width="330" height="30" rx="4"/>
+<text class="" x="14" y="112">il attire des capitaux</text>
+<path class="lm" d="M165 124 V136"/><path class="lm" d="M160 130 l5 6 l5 -6"/>
+<rect class="bx" x="0" y="138" width="330" height="30" rx="4"/>
+<text class="" x="14" y="158">la fonte devient moins chère</text>
+<path class="lm" d="M165 170 V182"/><path class="lm" d="M160 176 l5 6 l5 -6"/>
+<rect class="bx" x="0" y="184" width="330" height="30" rx="4"/>
+<text class="" x="14" y="204">la demande de fonte grimpe</text>
+<path class="lm" d="M165 216 V228"/><path class="lm" d="M160 222 l5 6 l5 -6"/>
+<rect class="bxa" x="0" y="230" width="330" height="30" rx="4"/>
+<text class="ac" x="14" y="250">plus de fourneaux, plus de charbon brûlé</text>
+<path class="la" d="M344 6 V24"/>
+<path class="la" d="M339 18 l5 6 l5 -6"/>
+<path class="lr" d="M344 236 V254"/>
+<path class="lr" d="M339 242 l5 -6 l5 6"/>
+<text class="i mu" x="0" y="294">En Écosse, le charbon par tonne de fonte est</text>
+<text class="i mu" x="0" y="314">tombé à moins d'un tiers, et la consommation</text>
+<text class="i mu" x="0" y="334">totale a été multipliée par dix.</text>
+</svg>

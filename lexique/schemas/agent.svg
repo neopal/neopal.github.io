@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 384" role="img" aria-labelledby="agent-t">
+<title id="agent-t">Workflow contre agent : le workflow suit un chemin écrit à l'avance, ticket puis résumer puis ranger en file ; l'agent choisit à chaque étape parmi plusieurs actions d'après le résultat de la précédente, ici chercher, puis reformuler après une recherche vide, puis répondre.</title>
+<text class="m d" x="0" y="14">workflow</text>
+<rect class="bx" x="0" y="24" width="72" height="34" rx="6"/>
+<text class="m" x="36" y="46" text-anchor="middle">ticket</text>
+<rect class="bx" x="96" y="24" width="100" height="34" rx="6"/>
+<text class="m" x="146" y="46" text-anchor="middle">résumer</text>
+<rect class="bx" x="220" y="24" width="140" height="34" rx="6"/>
+<text class="m" x="290" y="46" text-anchor="middle">ranger en file</text>
+<path class="lm" d="M75 41 h18"/><path class="lm" d="M87 36 l6 5 l-6 5"/>
+<path class="lm" d="M199 41 h18"/><path class="lm" d="M211 36 l6 5 l-6 5"/>
+<path class="ln" d="M0 80 h360"/>
+<text class="m d" x="0" y="104">agent</text>
+<text class="mu" x="360" y="104" text-anchor="end">« un train pour Lyon jeudi »</text>
+<rect class="bxa" x="0" y="118" width="110" height="30" rx="6"/>
+<text class="m" x="55" y="138" text-anchor="middle">chercher</text>
+<rect class="bx dash" x="125" y="118" width="110" height="30" rx="6" opacity="0.6"/>
+<text class="m d" x="180" y="138" text-anchor="middle">lire l'agenda</text>
+<rect class="bx dash" x="250" y="118" width="110" height="30" rx="6" opacity="0.6"/>
+<text class="m d" x="305" y="138" text-anchor="middle">répondre</text>
+<text class="m red" x="55" y="168" text-anchor="middle">aucun résultat</text>
+<path class="ln dash" d="M55 176 L55 204"/>
+<path class="la" d="M55 176 L180 204"/>
+<path class="ln dash" d="M55 176 L305 204"/>
+<rect class="bx dash" x="0" y="208" width="110" height="30" rx="6" opacity="0.6"/>
+<text class="m d" x="55" y="228" text-anchor="middle">lire l'agenda</text>
+<rect class="bxa" x="125" y="208" width="110" height="30" rx="6"/>
+<text class="m" x="180" y="228" text-anchor="middle">reformuler</text>
+<rect class="bx dash" x="250" y="208" width="110" height="30" rx="6" opacity="0.6"/>
+<text class="m d" x="305" y="228" text-anchor="middle">répondre</text>
+<text class="m mu" x="180" y="258" text-anchor="middle">des horaires</text>
+<path class="ln dash" d="M180 266 L55 294"/>
+<path class="ln dash" d="M180 266 L180 294"/>
+<path class="la" d="M180 266 L305 294"/>
+<rect class="bx dash" x="0" y="298" width="110" height="30" rx="6" opacity="0.6"/>
+<text class="m d" x="55" y="318" text-anchor="middle">reformuler</text>
+<rect class="bx dash" x="125" y="298" width="110" height="30" rx="6" opacity="0.6"/>
+<text class="m d" x="180" y="318" text-anchor="middle">lire l'agenda</text>
+<rect class="bxa" x="250" y="298" width="110" height="30" rx="6"/>
+<text class="m" x="305" y="318" text-anchor="middle">répondre</text>
+<text class="i mu" x="0" y="356">Le modèle choisit l'étape suivante après</text>
+<text class="i mu" x="0" y="376">avoir lu le résultat de la précédente.</text>
+</svg>

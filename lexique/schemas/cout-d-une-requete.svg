@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 280" role="img" aria-labelledby="cout-d-une-requete-t">
+<title id="cout-d-une-requete-t">Facture d'une question à GPT-6.1 Sol : 3 centimes pour l'entrée et la réponse visible, 0,08 dollar une fois compté le brouillon de raisonnement de 5 000 tokens, payé au tarif de sortie.</title>
+<text class="m mu" x="0" y="16">réponse visible seule</text>
+<rect class="fd" x="0" y="26" width="84" height="26" rx="2"/>
+<rect class="fa" x="85" y="26" width="21" height="26" rx="2"/>
+<text class="big" x="360" y="46" text-anchor="end">3 centimes</text>
+<text class="m mu" x="0" y="88">avec le brouillon</text>
+<rect class="fd" x="0" y="98" width="84" height="26" rx="2"/>
+<rect class="fa" x="85" y="98" width="175" height="26" rx="2" opacity="0.45"/>
+<rect class="fa" x="261" y="98" width="21" height="26" rx="2"/>
+<text class="big ac" x="360" y="118" text-anchor="end">0,08 $</text>
+<rect class="fd" x="0" y="155" width="14" height="14" rx="2"/>
+<text class="m" x="22" y="167">entrée</text>
+<text class="m d" x="126" y="167">12 000 tokens</text>
+<text class="m d" x="262" y="167">2 $ / M</text>
+<rect class="fa" x="0" y="179" width="14" height="14" rx="2" opacity="0.45"/>
+<text class="m" x="22" y="191">brouillon</text>
+<text class="m d" x="126" y="191">5 000 tokens</text>
+<text class="m d" x="262" y="191">10 $ / M</text>
+<rect class="fa" x="0" y="203" width="14" height="14" rx="2"/>
+<text class="m" x="22" y="215">réponse</text>
+<text class="m d" x="126" y="215">600 tokens</text>
+<text class="m d" x="262" y="215">10 $ / M</text>
+<text class="i mu" x="0" y="252">Le brouillon ne s'affiche pas, et il coûte</text>
+<text class="i mu" x="0" y="272">plus que l'entrée et la réponse réunies.</text>
+</svg>

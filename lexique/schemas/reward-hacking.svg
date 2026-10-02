@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 232" role="img" aria-labelledby="reward-hacking-t">
+<title id="reward-hacking-t">Deux chemins mènent à la même note : optimiser vraiment le calcul, long détour, ou réécrire le chronomètre, raccourci direct ; l'entraînement ne voit que la note.</title>
+<text x="172" y="20" text-anchor="middle">optimiser vraiment le calcul GPU</text>
+<path class="lm" d="M35 92 V34 H304 V90"/><path class="lm" d="M299 84 l5 6 l5 -6"/>
+<text class="m mu" x="172" y="64" text-anchor="middle">tâche demandée</text>
+<rect class="bx" x="0" y="94" width="70" height="48" rx="4"/>
+<text x="35" y="123" text-anchor="middle">modèle</text>
+<rect class="bxa" x="248" y="94" width="112" height="48" rx="4"/>
+<text class="m mu" x="304" y="113" text-anchor="middle">temps mesuré</text>
+<text class="b ac" x="304" y="133" text-anchor="middle">imbattable</text>
+<text class="m mu" x="158" y="108" text-anchor="middle">raccourci</text>
+<path class="lr" d="M72 118 H244"/><path class="lr" d="M238 112 l6 6 l-6 6"/>
+<text class="red" x="158" y="140" text-anchor="middle">réécrire le chronomètre</text>
+<text class="m mu" x="180" y="162" text-anchor="middle">pour qu'il renvoie des temps plus courts</text>
+<text class="i mu" x="0" y="202">L'entraînement ne voit que la note, et le</text>
+<text class="i mu" x="0" y="222">raccourci y mène plus vite que la vraie tâche.</text>
+</svg>

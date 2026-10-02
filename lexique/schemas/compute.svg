@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 326" role="img" aria-labelledby="compute-t">
+<title id="compute-t">La règle 6ND appliquée à Olmo 3 32B donne environ 1,1 × 10^24 opérations ; en dessous, l'entraînement est un gros bloc unique et l'inférence une suite de petites dépenses répétées à chaque requête.</title>
+<rect class="bx" x="0" y="4" width="56" height="72" rx="4"/>
+<text class="big ac" x="28" y="47" text-anchor="middle">6</text>
+<text class="big mu" x="70" y="47" text-anchor="middle">×</text>
+<rect class="bx" x="84" y="4" width="128" height="72" rx="4"/>
+<text class="big ac" x="148" y="30" text-anchor="middle">N</text>
+<text class="m mu" x="148" y="50" text-anchor="middle">paramètres</text>
+<text class="m" x="148" y="67" text-anchor="middle">32 milliards</text>
+<text class="big mu" x="222" y="47" text-anchor="middle">×</text>
+<rect class="bx" x="232" y="4" width="128" height="72" rx="4"/>
+<text class="big ac" x="296" y="30" text-anchor="middle">D</text>
+<text class="m mu" x="296" y="50" text-anchor="middle">tokens lus</text>
+<text class="m" x="296" y="67" text-anchor="middle">5 500 milliards</text>
+<path class="lm" d="M180 82 V102"/><path class="lm" d="M175 96 l5 6 l5 -6"/>
+<rect class="bxa" x="30" y="108" width="300" height="36" rx="4"/>
+<text class="m" x="180" y="131" text-anchor="middle">Olmo 3 32B : 1,1 × 10^24 opérations</text>
+<text class="m mu" x="0" y="186">entraînement</text>
+<text class="m mu" x="128" y="186">inférence, à chaque requête</text>
+<rect class="fa" x="0" y="196" width="112" height="34" rx="3"/>
+<rect class="fa" x="128" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="136.6" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="145.2" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="153.8" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="162.4" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="171" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="179.6" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="188.2" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="196.8" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="205.39999999999998" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="214" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="222.6" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="231.2" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="239.8" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="248.39999999999998" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="257" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="265.6" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="274.2" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="282.79999999999995" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="291.4" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="300" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="308.6" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="317.2" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="325.79999999999995" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="334.4" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<rect class="fa" x="343" y="216" width="4.6" height="14" rx="1" opacity="0.7"/>
+<path class="lm" d="M0 244 H356"/><path class="lm" d="M350 239 l6 5 l-6 5"/>
+<text class="m mu" x="356" y="264" text-anchor="end">temps</text>
+<text class="i mu" x="0" y="296">L'entraînement se paie une fois, alors que</text>
+<text class="i mu" x="0" y="316">l'inférence revient à chaque token lu ou écrit.</text>
+</svg>

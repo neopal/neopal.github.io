@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 296" role="img" aria-labelledby="slm-t">
+<title id="slm-t">Six petits modèles ouverts placés sur une échelle de paramètres : tous sauf Gemma 4 E4B restent sous les 4 milliards de la catégorie tiny, et Gemma 4 E2B passe dans small si l'on compte ses 5,1 milliards au total.</title>
+<rect class="fd" x="245.9" y="30" width="106.1" height="162" opacity="0.6"/>
+<text class="m d" x="198" y="22" text-anchor="middle">tiny</text>
+<text class="m d" x="299" y="22" text-anchor="middle">small</text>
+<text x="0" y="53">Qwen3.5-0.8B</text>
+<path class="ln" d="M150 48 H352" opacity="0.5"/>
+<circle class="fa" cx="171.7" cy="48" r="5"/>
+<text x="0" y="79">Qwen3.5-2B</text>
+<path class="ln" d="M150 74 H352" opacity="0.5"/>
+<circle class="fa" cx="213.9" cy="74" r="5"/>
+<text x="0" y="105">Gemma 4 E2B</text>
+<path class="ln" d="M150 100 H352" opacity="0.5"/>
+<path class="la" d="M220.3 100 H257.1"/>
+<circle class="bxa" cx="257.1" cy="100" r="5"/>
+<circle class="fa" cx="220.3" cy="100" r="5"/>
+<text x="0" y="131">SmolLM3-3B</text>
+<path class="ln" d="M150 126 H352" opacity="0.5"/>
+<circle class="fa" cx="232.6" cy="126" r="5"/>
+<text x="0" y="157">Phi-4-mini-instruct</text>
+<path class="ln" d="M150 152 H352" opacity="0.5"/>
+<circle class="fa" cx="243.5" cy="152" r="5"/>
+<text x="0" y="183">Gemma 4 E4B</text>
+<path class="ln" d="M150 178 H352" opacity="0.5"/>
+<path class="la" d="M251.3 178 H277.8"/>
+<circle class="bxa" cx="277.8" cy="178" r="5"/>
+<circle class="fa" cx="251.3" cy="178" r="5"/>
+<path class="lm" d="M150 192 H352"/>
+<path class="lm" d="M245.9 192 v6"/>
+<text class="m mu" x="245.9" y="214" text-anchor="middle">4 B</text>
+<path class="lm" d="M352.0 192 v6"/>
+<text class="m mu" x="352.0" y="214" text-anchor="end">40 B</text>
+<path class="lm dash" d="M245.9 30 V192"/>
+<circle class="fa" cx="5" cy="235" r="5"/>
+<text class="m mu" x="16" y="240">effectifs</text>
+<circle class="bxa" cx="110" cy="235" r="5"/>
+<text class="m mu" x="121" y="240">en tout, avec les tables</text>
+<text class="i mu" x="0" y="270">Gemma 4 E2B est tiny si l'on compte ses</text>
+<text class="i mu" x="0" y="288">paramètres effectifs, et small avec le total.</text>
+</svg>
