@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 262" role="img" aria-labelledby="deep-learning-t">
+<title id="deep-learning-t">Deux flux comparés : en programmation classique, des règles écrites à la main et des données donnent des réponses ; en apprentissage automatique, des données et leurs bonnes réponses donnent, après entraînement, des règles apprises sous forme de poids.</title>
+<text class="m mu" x="0" y="16">programmation classique</text>
+<rect class="bx" x="0" y="28" width="122" height="28" rx="4"/>
+<text class="m" x="61" y="47" text-anchor="middle">règles écrites</text>
+<rect class="bx" x="0" y="64" width="122" height="28" rx="4"/>
+<text class="m" x="61" y="83" text-anchor="middle">données</text>
+<path class="lm" d="M125 42 L142 60"/><path class="lm" d="M125 78 L142 60"/>
+<path class="lm" d="M142 60 H154"/><path class="lm" d="M149 55 l5 5 l-5 5"/>
+<rect class="bx" x="158" y="46" width="108" height="28" rx="4"/>
+<text class="m" x="212" y="65" text-anchor="middle">programme</text>
+<path class="lm" d="M268 60 H280"/><path class="lm" d="M275 55 l5 5 l-5 5"/>
+<rect class="bx" x="284" y="46" width="76" height="28" rx="4"/>
+<text class="m" x="322" y="65" text-anchor="middle">réponses</text>
+<path class="ln" d="M0 112 H360"/>
+<text class="m mu" x="0" y="136">apprentissage automatique</text>
+<rect class="bx" x="0" y="148" width="122" height="28" rx="4"/>
+<text class="m" x="61" y="167" text-anchor="middle">données</text>
+<rect class="bx" x="0" y="184" width="122" height="28" rx="4"/>
+<text class="m" x="61" y="203" text-anchor="middle">réponses</text>
+<path class="la" d="M125 162 L142 180"/><path class="la" d="M125 198 L142 180"/>
+<path class="la" d="M142 180 H154"/><path class="la" d="M149 175 l5 5 l-5 5"/>
+<rect class="bxa" x="158" y="166" width="108" height="28" rx="4"/>
+<text class="m" x="212" y="185" text-anchor="middle">entraînement</text>
+<path class="la" d="M268 180 H280"/><path class="la" d="M275 175 l5 5 l-5 5"/>
+<rect class="bxa" x="284" y="166" width="76" height="28" rx="4"/>
+<text class="m ac b" x="322" y="185" text-anchor="middle">poids</text>
+<text class="m ac" x="360" y="214" text-anchor="end">règles apprises</text>
+<text class="i mu" x="0" y="240">Le deep learning fait ce réglage dans un</text>
+<text class="i mu" x="0" y="258">réseau de neurones à nombreuses couches.</text>
+</svg>

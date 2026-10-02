@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 314" role="img" aria-labelledby="multimodal-t">
+<title id="multimodal-t">Une photo de 1 000 pixels sur 1 000 découpée en patchs de 28 pixels de côté devient 1 296 tokens visuels, placés dans la même suite que les tokens de la question écrite, puis lus ensemble par le modèle.</title>
+<text class="m mu" x="0" y="16">photo de 1 000 × 1 000 pixels</text>
+<rect class="fd" x="0" y="28" width="12" height="12" rx="1"/>
+<rect class="fd" x="13" y="28" width="12" height="12" rx="1"/>
+<rect class="fd" x="26" y="28" width="12" height="12" rx="1"/>
+<rect class="fd" x="39" y="28" width="12" height="12" rx="1"/>
+<rect class="fd" x="52" y="28" width="12" height="12" rx="1"/>
+<rect class="fd" x="65" y="28" width="12" height="12" rx="1"/>
+<rect class="fd" x="78" y="28" width="12" height="12" rx="1"/>
+<rect class="fd" x="91" y="28" width="12" height="12" rx="1"/>
+<rect class="fd" x="0" y="41" width="12" height="12" rx="1"/>
+<rect class="fd" x="13" y="41" width="12" height="12" rx="1"/>
+<rect class="fd" x="26" y="41" width="12" height="12" rx="1"/>
+<rect class="fd" x="39" y="41" width="12" height="12" rx="1"/>
+<rect class="fd" x="52" y="41" width="12" height="12" rx="1"/>
+<rect class="fd" x="65" y="41" width="12" height="12" rx="1"/>
+<rect class="fd" x="78" y="41" width="12" height="12" rx="1"/>
+<rect class="fd" x="91" y="41" width="12" height="12" rx="1"/>
+<rect class="fd" x="0" y="54" width="12" height="12" rx="1"/>
+<rect class="fd" x="13" y="54" width="12" height="12" rx="1"/>
+<rect class="fd" x="26" y="54" width="12" height="12" rx="1"/>
+<rect class="fd" x="39" y="54" width="12" height="12" rx="1"/>
+<rect class="fd" x="52" y="54" width="12" height="12" rx="1"/>
+<rect class="fa" x="65" y="54" width="12" height="12" rx="1"/>
+<rect class="fd" x="78" y="54" width="12" height="12" rx="1"/>
+<rect class="fd" x="91" y="54" width="12" height="12" rx="1"/>
+<rect class="fd" x="0" y="67" width="12" height="12" rx="1"/>
+<rect class="fd" x="13" y="67" width="12" height="12" rx="1"/>
+<rect class="fd" x="26" y="67" width="12" height="12" rx="1"/>
+<rect class="fd" x="39" y="67" width="12" height="12" rx="1"/>
+<rect class="fd" x="52" y="67" width="12" height="12" rx="1"/>
+<rect class="fd" x="65" y="67" width="12" height="12" rx="1"/>
+<rect class="fd" x="78" y="67" width="12" height="12" rx="1"/>
+<rect class="fd" x="91" y="67" width="12" height="12" rx="1"/>
+<rect class="fd" x="0" y="80" width="12" height="12" rx="1"/>
+<rect class="fd" x="13" y="80" width="12" height="12" rx="1"/>
+<rect class="fd" x="26" y="80" width="12" height="12" rx="1"/>
+<rect class="fd" x="39" y="80" width="12" height="12" rx="1"/>
+<rect class="fd" x="52" y="80" width="12" height="12" rx="1"/>
+<rect class="fd" x="65" y="80" width="12" height="12" rx="1"/>
+<rect class="fd" x="78" y="80" width="12" height="12" rx="1"/>
+<rect class="fd" x="91" y="80" width="12" height="12" rx="1"/>
+<rect class="fd" x="0" y="93" width="12" height="12" rx="1"/>
+<rect class="fd" x="13" y="93" width="12" height="12" rx="1"/>
+<rect class="fd" x="26" y="93" width="12" height="12" rx="1"/>
+<rect class="fd" x="39" y="93" width="12" height="12" rx="1"/>
+<rect class="fd" x="52" y="93" width="12" height="12" rx="1"/>
+<rect class="fd" x="65" y="93" width="12" height="12" rx="1"/>
+<rect class="fd" x="78" y="93" width="12" height="12" rx="1"/>
+<rect class="fd" x="91" y="93" width="12" height="12" rx="1"/>
+<rect class="fd" x="0" y="106" width="12" height="12" rx="1"/>
+<rect class="fd" x="13" y="106" width="12" height="12" rx="1"/>
+<rect class="fd" x="26" y="106" width="12" height="12" rx="1"/>
+<rect class="fd" x="39" y="106" width="12" height="12" rx="1"/>
+<rect class="fd" x="52" y="106" width="12" height="12" rx="1"/>
+<rect class="fd" x="65" y="106" width="12" height="12" rx="1"/>
+<rect class="fd" x="78" y="106" width="12" height="12" rx="1"/>
+<rect class="fd" x="91" y="106" width="12" height="12" rx="1"/>
+<rect class="fd" x="0" y="119" width="12" height="12" rx="1"/>
+<rect class="fd" x="13" y="119" width="12" height="12" rx="1"/>
+<rect class="fd" x="26" y="119" width="12" height="12" rx="1"/>
+<rect class="fd" x="39" y="119" width="12" height="12" rx="1"/>
+<rect class="fd" x="52" y="119" width="12" height="12" rx="1"/>
+<rect class="fd" x="65" y="119" width="12" height="12" rx="1"/>
+<rect class="fd" x="78" y="119" width="12" height="12" rx="1"/>
+<rect class="fd" x="91" y="119" width="12" height="12" rx="1"/>
+<path class="la" d="M79 60.0 H150"/>
+<text class="m" x="156" y="52">un patch de 28 × 28</text>
+<text class="m" x="156" y="70">pixels devient un</text>
+<text class="m" x="156" y="88">token visuel</text>
+<path class="lm" d="M52 136 V156"/><path class="lm" d="M47 151 l5 5 l5 -5"/>
+<rect class="fa" x="0" y="171" width="16" height="16" rx="2"/>
+<rect class="fa" x="20" y="171" width="16" height="16" rx="2"/>
+<rect class="fa" x="40" y="171" width="16" height="16" rx="2"/>
+<rect class="fa" x="60" y="171" width="16" height="16" rx="2"/>
+<rect class="fa" x="80" y="171" width="16" height="16" rx="2"/>
+<rect class="fa" x="100" y="171" width="16" height="16" rx="2"/>
+<text class="m mu" x="122" y="184">…</text>
+<rect class="bx" x="138" y="166" width="35" height="26" rx="4"/>
+<text class="m" x="156" y="184" text-anchor="middle">Que</text>
+<rect class="bx" x="177" y="166" width="35" height="26" rx="4"/>
+<text class="m" x="195" y="184" text-anchor="middle">dit</text>
+<rect class="bx" x="217" y="166" width="28" height="26" rx="4"/>
+<text class="m" x="231" y="184" text-anchor="middle">ce</text>
+<rect class="bx" x="248" y="166" width="67" height="26" rx="4"/>
+<text class="m" x="282" y="184" text-anchor="middle">panneau</text>
+<rect class="bx" x="319" y="166" width="20" height="26" rx="4"/>
+<text class="m" x="329" y="184" text-anchor="middle">?</text>
+<text class="m ac" x="0" y="212">1 296 tokens visuels</text>
+<text class="m mu" x="360" y="212" text-anchor="end">tokens du texte</text>
+<path class="lm" d="M180 222 V238"/><path class="lm" d="M175 233 l5 5 l5 -5"/>
+<rect class="bxa" x="110" y="244" width="140" height="28" rx="4"/>
+<text class="m" x="180" y="263" text-anchor="middle">le modèle</text>
+<text class="i mu" x="0" y="292">La photo et ta question forment une seule</text>
+<text class="i mu" x="0" y="310">suite de tokens, que le modèle lit ensemble.</text>
+</svg>
