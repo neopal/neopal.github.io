@@ -17,15 +17,15 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Prédiction du mot suivant | next-token prediction | publié | | AGT, LLM, HO, ULT, CAR | le chanteur qui ne connaît pas la chanson |
 | Fenêtre de contexte | context window | publié | | AGT, LLM, HO, ENT, CAR | la longueur de bande |
 | Embedding | embedding | publié | | AGT, LLM, HO, ULT, CAR | la carte du son |
-| Auto-attention | self-attention | en cours (vague 6) | P2 | AGT, LLM, HO, ULT, CAR | l'oreille qui monte certaines pistes |
-| Transformer | transformer | en cours (vague 6) | P2 | LLM, HO, ULT | la table de mixage complète |
+| Auto-attention | self-attention | publié | | AGT, LLM, HO, ULT, CAR | l'oreille qui monte certaines pistes |
+| Transformer | transformer | publié | | LLM, HO, ULT | la table de mixage complète |
 | Logits | logits | prévu | P3 | LLM | les VU-mètres avant le choix de la note |
 | Position | positional encoding | prévu | P3 | LLM | le numéro de mesure sur la partition |
 | LLM (grand modèle de langage) | large language model | publié | | LLM, HO, ULT | le groupe tout entier |
-| Réseau de neurones | neural network | en cours (vague 6) | P2 | HAM, ULT | le câblage de la console, potard relié à potard |
-| Apprentissage automatique et deep learning | machine learning, deep learning | en cours (vague 6) | P2 | LLM, ULT, CAR | régler à l'oreille plutôt qu'écrire la partition |
+| Réseau de neurones | neural network | publié | | HAM, ULT | le câblage de la console, potard relié à potard |
+| Apprentissage automatique et deep learning | machine learning, deep learning | publié | | LLM, ULT, CAR | régler à l'oreille plutôt qu'écrire la partition |
 | Encodeur et décodeur | encoder, decoder | prévu | P3 | LLM, HO, ULT | l'oreille qui analyse, la voix qui chante |
-| Multimodal | multimodal model | en cours (vague 6) | P2 | AGT, HO | le groupe qui voit enfin la salle |
+| Multimodal | multimodal model | publié | | AGT, HO | le groupe qui voit enfin la salle |
 | Modèle de diffusion | diffusion model | prévu | P3 | CAR | la bande pleine de souffle qu'on nettoie passe après passe |
 
 ## 2. Entraînement
@@ -35,7 +35,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Entraînement | training | publié | | LLM, ULT, HAM | l'ingé son qui règle la console |
 | Pré-entraînement | pre-training, base model | publié | | AGT, LLM, HO, ULT, CAR | écouter des millions de morceaux |
 | Date de coupure | knowledge cutoff | publié | | ULT, ENT | le dernier disque écouté |
-| Lois d'échelle et plateau | scaling laws | en cours (vague 6) | P2 | ULT | plus de potards, plus d'écoute |
+| Lois d'échelle et plateau | scaling laws | publié | | ULT | plus de potards, plus d'écoute |
 | Post-training, SFT | post-training, supervised fine-tuning | publié | | AGT, LLM, HO, ULT, CAR | les cours particuliers |
 | RLHF | reinforcement learning from human feedback | publié | | AGT, HO, CAR, ENT | le public qui applaudit |
 | DPO | direct preference optimization | prévu | P3 | LLM, HO | |
@@ -47,7 +47,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Architectures hybrides | hybrid architectures (Mamba, Gated DeltaNet) | prévu | P3 | | |
 | Petits modèles embarqués | small / on-device models | prévu | P2 | ENT, LLM | le groupe acoustique |
 | Open weights vs open source | open weights | publié | | LLM, ULT, HO | le preset donné à tout le monde |
-| Données d'entraînement | training data | en cours (vague 6) | P2 | LLM, HAM | la discothèque de l'ingé son |
+| Données d'entraînement | training data | publié | | LLM, HAM | la discothèque de l'ingé son |
 | Données synthétiques | synthetic data | prévu | P3 | ULT | s'entraîner sur ses propres maquettes |
 
 ## 3. Inférence
@@ -57,7 +57,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Inférence vs entraînement | inference | publié | | ULT | le concert vs les répétitions |
 | Température et sampling | temperature, sampling | publié | | AGT, LLM, HO | le curseur d'impro |
 | KV cache | KV cache | publié | | AGT, HO | les pistes déjà enregistrées |
-| Test-time compute | test-time compute | en cours (vague 6) | P2 | AGT, ULT, CAR | répéter avant de jouer |
+| Test-time compute | test-time compute | publié | | AGT, ULT, CAR | répéter avant de jouer |
 | Modèles de raisonnement, chain-of-thought | reasoning models, CoT | publié | | AGT, HO, ULT, CAR, ENT | le brouillon avant la prise |
 | Speculative decoding | speculative decoding | prévu | P3 | | |
 | Quantization | quantization | publié | | HO, CAR | du WAV au MP3 |
@@ -73,7 +73,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Flagornerie | sycophancy | publié | | ULT, CAR | jouer ce que le public veut entendre |
 | CoT infidèle | unfaithful chain-of-thought | prévu | P3 | CAR | |
 | Biais | bias | prévu | P2 | CAR, HO | |
-| Jailbreak | jailbreak | en cours (vague 6) | P2 | | |
+| Jailbreak | jailbreak | publié | | | |
 | Prompt injection | prompt injection | publié | | AGT, ENT, CAR | la fausse partition glissée sur le pupitre |
 | Mémorisation vs généralisation | memorization vs generalization | prévu | P2 | LLM, ULT, HAM | |
 | L'IA comprend-elle ? | understanding | prévu | P3 | LLM, HAM, ULT, HO | |
@@ -85,10 +85,10 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 
 | Terme | EN | Statut | Prio | Livres | Image |
 |---|---|---|---|---|---|
-| Alignement | alignment | en cours (vague 6) | P2 | ULT, HO | |
+| Alignement | alignment | publié | | ULT, HO | |
 | Reward hacking | reward hacking | publié | | HAM, HO | l'applaudimètre qui ne mesure que le volume |
 | Alignment faking | alignment faking | prévu | P3 | | |
-| Guardrails | guardrails | en cours (vague 6) | P2 | AGT, ENT | |
+| Guardrails | guardrails | publié | | AGT, ENT | |
 | Red teaming | red teaming | prévu | P3 | ENT | |
 | Évaluations de dangerosité | dangerous capability evals | prévu | P3 | | |
 | Interprétabilité | interpretability | prévu | P2 | ULT | ouvrir la console |
@@ -109,11 +109,11 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | RAG | retrieval-augmented generation | publié | | AGT, ULT, ENT, HO, CAR | la partition sur le pupitre |
 | Context engineering | context engineering | publié | | AGT, ENT, CAR | bien remplir la bande |
 | Mémoire externe | external memory | prévu | P2 | AGT, ENT, CAR | le carnet du groupe |
-| Multi-agents | multi-agent | en cours (vague 6) | P2 | AGT, ENT, CAR | plusieurs groupes sur la même tournée |
+| Multi-agents | multi-agent | publié | | AGT, ENT, CAR | plusieurs groupes sur la même tournée |
 | Evals | evals | publié | | AGT, CAR | les auditions |
 | Benchmarks | benchmarks | publié | | AGT, ULT, HO | le classement des ventes |
 | Sandbox et permissions | sandbox, permissions | prévu | P2 | AGT, ENT, CAR | la cabine insonorisée |
-| Human-in-the-loop | human-in-the-loop | en cours (vague 6) | P2 | AGT, ENT, CAR, HAM | le producteur qui valide chaque prise |
+| Human-in-the-loop | human-in-the-loop | publié | | AGT, ENT, CAR, HAM | le producteur qui valide chaque prise |
 | Agent vs workflow | agent vs workflow | publié | | CAR, AGT, ENT | la setlist figée contre le groupe qui choisit le morceau suivant |
 | Planification | planning | prévu | P2 | AGT, ENT | la setlist réécrite entre deux morceaux |
 | Compaction du contexte | context compaction | prévu | P2 | AGT, CAR | résumer le début de la bande avant qu'il s'efface |
@@ -131,7 +131,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Open weights, souveraineté | open weights, sovereignty | publié | | ULT, HO, ENT | |
 | GPU et puissance de calcul | GPU, compute | publié | | ULT, HO | les amplis et le groupe électrogène |
 | La leçon amère | bitter lesson | prévu | P2 | ULT, HAM | des millions d'heures d'écoute battent les cours de solfège |
-| IA générale (AGI) | AGI | en cours (vague 6) | P2 | ULT, HAM | |
+| IA générale (AGI) | AGI | publié | | ULT, HAM | |
 | Systèmes experts et IA symbolique | expert systems, symbolic AI | prévu | P3 | HAM, ULT | jouer en suivant un manuel de règles |
 | Effet IA | AI effect | prévu | P3 | HAM | « ce n'est que de la technique », dit-on dès que le groupe réussit le morceau |
 | Optimisation pour les moteurs génératifs (GEO) | generative engine optimization | prévu | P3 | CAR | |
@@ -144,7 +144,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Knowledge graph | knowledge graph | publié | | | la carte des connexions (le graphe du lexique lui-même) |
 | Vibe coding | vibe coding | publié | | AGT, ENT, CAR | |
 | Loop (boucle d'itération) | loop | publié | | HAM | |
-| Prompt et prompt engineering | prompt, prompt engineering | en cours (vague 6) | P1 | ULT, HO, CAR, LLM | la première mesure qu'on joue au groupe |
+| Prompt et prompt engineering | prompt, prompt engineering | publié | | ULT, HO, CAR, LLM | la première mesure qu'on joue au groupe |
 | Capacité inexploitée | capability overhang | prévu | P3 | CAR | le synthé dont on n'utilise que trois presets |
 
 ## 9. Mythes vs réalité (une idée fausse par fiche)

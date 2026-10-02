@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="lois-d-echelle-t">
+<title id="lois-d-echelle-t">Sur des axes où chaque graduation multiplie par dix, l'erreur des petits modèles mesurés s'aligne sur une droite ; on la prolonge pour prédire l'erreur d'un modèle bien plus gros avant de l'entraîner. Chaque calcul multiplié par dix retire environ 11 % d'erreur.</title>
+<text class="m mu" x="8" y="16">erreur (loss)</text>
+<path class="ln" d="M40 26 V214 H352"/>
+<path class="ln dash" d="M100 26 V214 M160 26 V214 M220 26 V214 M280 26 V214 M340 26 V214"/>
+<path class="ln dash" d="M40 70 H352 M40 120 H352 M40 170 H352"/>
+<path class="la" d="M50 44 L206 122"/>
+<path class="la dash" d="M206 122 L322 180"/>
+<circle class="fa" cx="56" cy="47" r="5"/>
+<circle class="fa" cx="86" cy="62" r="5"/>
+<circle class="fa" cx="116" cy="77" r="5"/>
+<circle class="fa" cx="146" cy="92" r="5"/>
+<circle class="fa" cx="176" cy="107" r="5"/>
+<circle class="bxa" cx="322" cy="180" r="9"/>
+<text class="m" x="70" y="132">petits modèles</text>
+<text class="m" x="70" y="149">mesurés</text>
+<text class="m ac" x="306" y="194" text-anchor="end">gros modèle prédit</text>
+<text class="m ac" x="306" y="210" text-anchor="end">avant son entraînement</text>
+<path class="lm" d="M86 62 H146 V92"/>
+<text class="m mu" x="116" y="38" text-anchor="middle">calcul × 10</text>
+<text class="m mu" x="154" y="80">erreur − 11 %</text>
+<text class="m mu" x="352" y="234" text-anchor="end">calcul d'entraînement</text>
+<text class="i mu" x="4" y="264">Chaque graduation multiplie par dix, ce qui</text>
+<text class="i mu" x="4" y="284">fait de la loi une droite qu'on prolonge.</text>
+</svg>

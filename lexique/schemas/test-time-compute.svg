@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="test-time-compute-t">
+<title id="test-time-compute-t">Deux façons de dépenser plus de calcul au moment de répondre : en série, un seul brouillon plus long avant la réponse ; en parallèle, plusieurs réponses indépendantes, puis un vote qui garde celle qui revient le plus souvent.</title>
+<text class="b" x="0" y="18">En série</text>
+<rect class="bx" x="0" y="32" width="64" height="34" rx="4"/>
+<text class="m" x="32" y="54" text-anchor="middle">17 × 24</text>
+<path class="lm" d="M68 49 h10"/>
+<rect class="fd" x="82" y="43" width="26" height="12" rx="2"/>
+<rect class="fd" x="112" y="43" width="26" height="12" rx="2"/>
+<rect class="fd" x="142" y="43" width="26" height="12" rx="2"/>
+<rect class="fd" x="172" y="43" width="26" height="12" rx="2"/>
+<rect class="fd" x="202" y="43" width="26" height="12" rx="2"/>
+<rect class="fd" x="232" y="43" width="26" height="12" rx="2"/>
+<path class="lm" d="M262 49 h20"/><path class="lm" d="M276 44 l6 5 l-6 5"/>
+<rect class="bxa" x="290" y="32" width="70" height="34" rx="4"/>
+<text class="m ac" x="325" y="54" text-anchor="middle">408</text>
+<text class="m mu" x="82" y="84">un brouillon plus long</text>
+<path class="ln" d="M0 108 H360"/>
+<text class="b" x="0" y="140">En parallèle</text>
+<rect class="bx" x="0" y="196" width="64" height="34" rx="4"/>
+<text class="m" x="32" y="218" text-anchor="middle">17 × 24</text>
+<path class="lm" d="M64 213 C 84 213 84 165 104 165"/>
+<path class="lm" d="M64 213 C 84 213 84 195 104 195"/>
+<path class="lm" d="M64 213 C 84 213 84 231 104 231"/>
+<path class="lm" d="M64 213 C 84 213 84 261 104 261"/>
+<rect class="fd" x="108" y="159" width="56" height="12" rx="2"/>
+<rect class="fd" x="108" y="189" width="56" height="12" rx="2"/>
+<rect class="fd" x="108" y="225" width="56" height="12" rx="2"/>
+<rect class="fd" x="108" y="255" width="56" height="12" rx="2"/>
+<text class="m" x="186" y="170" text-anchor="middle">408</text>
+<text class="m" x="186" y="200" text-anchor="middle">408</text>
+<text class="m red" x="186" y="236" text-anchor="middle">418</text>
+<text class="m" x="186" y="266" text-anchor="middle">408</text>
+<path class="lm" d="M206 165 C 224 165 224 213 238 213"/>
+<path class="lm" d="M206 195 C 224 195 224 213 238 213"/>
+<path class="lm" d="M206 231 C 224 231 224 213 238 213"/>
+<path class="lm" d="M206 261 C 224 261 224 213 238 213"/>
+<text class="m mu" x="242" y="218">vote</text>
+<path class="lm" d="M282 213 h4"/><path class="lm" d="M280 208 l6 5 l-6 5"/>
+<rect class="bxa" x="290" y="196" width="70" height="34" rx="4"/>
+<text class="m ac" x="325" y="218" text-anchor="middle">408</text>
+<text class="m mu" x="108" y="292">plusieurs réponses, la plus</text>
+<text class="m mu" x="108" y="309">fréquente l'emporte</text>
+</svg>

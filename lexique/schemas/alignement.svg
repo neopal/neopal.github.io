@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 318" role="img" aria-labelledby="alignement-t">
+<title id="alignement-t">De ce qu'on veut à ce que le modèle fait, deux passages perdent une partie de l'intention : la consigne mal posée, quand la note récompense autre chose que le but, puis la leçon mal généralisée, quand le modèle applique autrement ce qu'il a appris dans des cas jamais vus.</title>
+<rect class="bxa" x="0" y="4" width="196" height="48" rx="4"/>
+<text x="14" y="26">Ce qu'on veut</text>
+<text class="m mu" x="14" y="44">l'intention</text>
+<path class="lm" d="M98 52 V76"/><path class="lm" d="M93 70 l5 6 l5 -6"/>
+<rect class="bx" x="0" y="80" width="196" height="64" rx="4"/>
+<text x="14" y="102">Ce qu'on sait demander</text>
+<text class="m mu" x="14" y="120">consignes, exemples,</text>
+<text class="m mu" x="14" y="136">notes</text>
+<path class="lm" d="M98 144 V188"/><path class="lm" d="M93 182 l5 6 l5 -6"/>
+<text class="m mu" x="106" y="171">entraînement</text>
+<rect class="bx" x="0" y="192" width="196" height="64" rx="4"/>
+<text x="14" y="214">Ce que fait le modèle</text>
+<text class="m mu" x="14" y="232">y compris dans les cas</text>
+<text class="m mu" x="14" y="248">jamais vus</text>
+<path class="lr dash" d="M210 66 H218"/>
+<text class="m red" x="224" y="60">consigne</text>
+<text class="m red" x="224" y="76">mal posée</text>
+<text class="m mu" x="224" y="94">reward hacking,</text>
+<text class="m mu" x="224" y="110">flagornerie</text>
+<path class="lr dash" d="M212 178 H219"/>
+<text class="m red" x="224" y="172">leçon mal</text>
+<text class="m red" x="224" y="188">généralisée</text>
+<text class="m mu" x="224" y="206">se voit sur des</text>
+<text class="m mu" x="224" y="222">cas inédits</text>
+<text class="i mu" x="4" y="290">Chaque passage perd un peu de l'intention,</text>
+<text class="i mu" x="4" y="310">et l'alignement cherche à réduire ces pertes.</text>
+</svg>
