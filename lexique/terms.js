@@ -5341,5 +5341,1104 @@ window.DICO_TERMS = [
       }
     ]
   },
+  {
+    "id": "dead-internet",
+    "status": "live",
+    "num": "61",
+    "title": "Théorie de l'internet mort",
+    "en": "Dead Internet theory",
+    "aliases": [
+      "dead internet",
+      "dead internet theory"
+    ],
+    "aliasesFr": [
+      "internet mort"
+    ],
+    "jargon": [
+      {
+        "say": "bot traffic",
+        "means": "la part des visites d'un site faites par des programmes plutôt que par des personnes, des robots d'indexation aux scrapers en passant par les faux comptes"
+      },
+      {
+        "say": "AI crawler",
+        "means": "le robot d'un labo d'IA qui parcourt le web pour copier des pages, le plus souvent pour en faire des données d'entraînement"
+      },
+      {
+        "say": "LLM-run account",
+        "means": "un compte de réseau social dont les messages sont écrits par un modèle de langage ; l'expression qu'a employée Sam Altman dans un tweet de septembre 2025"
+      }
+    ],
+    "cat": "mythes",
+    "links": [
+      "ai-slop",
+      "agent",
+      "webmcp",
+      "entrainement",
+      "llm"
+    ],
+    "short": "La théorie de l'internet mort affirme que l'essentiel de ce qu'on lit et voit en ligne est produit par des programmes et non par des personnes. Née en 2021 sur un forum, elle mêle un constat qui se mesure et un complot qui ne repose sur rien.",
+    "image": "Transposée au studio, la théorie voudrait que la salle soit remplie de mannequins, que les applaudissements sortent d'une bande et que la maison de disques ait monté le tout pour te vendre ses albums. Les compteurs de la salle racontent une histoire moins romanesque. Un peu plus de la moitié des entrées sont bien des machines, mais beaucoup sont des techniciens venus recopier les partitions, comme les robots d'indexation, et non des faux fans.",
+    "imagineForm": "D",
+    "imagine": "Sous la vidéo d'un chat qui joue du piano, vue deux millions de fois, tu écris « Il reste des humains ici ? ». Moins d'une minute plus tard, un compte sans photo te répond : « Excellente question ! La place de l'humain dans le monde numérique est un sujet passionnant. »",
+    "full": [
+      "Le texte fondateur a été publié le 5 janvier 2021 par un utilisateur nommé IlluminatiPirate sur Agora Road's Macintosh Cafe, un petit forum, et reprenait des idées nées sur des imageboards comme Wizardchan. Selon lui, l'internet serait mort vers 2016 ou 2017, et le web qu'on croit humain serait écrit en grande partie par des intelligences artificielles, aidées d'influenceurs payés pour fabriquer la demande.",
+      "La suite du texte relève du complot. L'auteur y voit la main du gouvernement américain, qui se servirait de Google, de Facebook ou d'Amazon pour mener ce qu'il appelle un gaslighting de la population mondiale par l'IA, et sa preuve se résume à une liste de faits sans lien entre eux. En septembre 2021, un article de Kaitlyn Tiffany dans The Atlantic, « Maybe You Missed It, but the Internet 'Died' Five Years Ago », l'a fait sortir des forums, et c'est lui que toute la presse a cité ensuite.",
+      "La part des machines dans le trafic se mesure, en revanche, et Imperva comptait déjà 52 % de trafic automatisé en 2016, l'année même où la théorie date la mort de l'internet. Selon le rapport annuel d'Imperva sur les bots, publié en avril 2026, les programmes automatisés ont fait plus de 53 % des requêtes web en 2025, contre 51 % l'année précédente. Ce chiffre compte ensemble les robots d'indexation, les crawlers des labos d'IA et les bots malveillants, et il dit combien de machines visitent les pages, pas combien en écrivent.",
+      "Pour l'écriture, l'étude la plus citée vient de Graphite, une agence de référencement, qui a passé au détecteur 43 000 articles en anglais tirés de Common Crawl. La part jugée générée par l'IA y dépasse celle des textes humains en novembre 2024, puis plafonne autour de la moitié. Les auteurs notent eux-mêmes que ces articles apparaissent peu dans Google et dans ChatGPT, et que leur détecteur prend pour de l'IA 4,2 % de textes écrits avant ChatGPT.",
+      "Le web n'est donc pas mort, mais une bonne part de son trafic vient de machines, et près de la moitié de ses nouveaux articles en anglais aussi, selon le détecteur de Graphite."
+    ],
+    "then": "Le 3 septembre 2025, Sam Altman, le patron d'OpenAI, écrivait sur X qu'il n'avait jamais pris la théorie très au sérieux, mais qu'il voyait désormais beaucoup de comptes Twitter tenus par des LLM. En avril 2026, Imperva intitule son rapport annuel « les bots à l'ère des agents », parce que des programmes visitent désormais les sites pour le compte d'utilisateurs, pour y chercher des données ou y accomplir une tâche à leur place.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Si la moitié du trafic, ce sont des bots, nos stats d'audience sont fausses ?"
+      },
+      {
+        "who": "a",
+        "text": "Ce chiffre vaut pour le web entier, pas pour ton site ; regarde d'abord ce que ton outil de mesure filtre déjà, puis cherche les visites sans défilement ni clic, qui trahissent souvent un robot qui n'a pas été écarté."
+      }
+    ],
+    "avoid": "« Tout ce qu'on voit en ligne est faux. » Les mesures disent que plus de la moitié des requêtes viennent de machines, dont beaucoup de robots qui lisent sans écrire, pas que les gens ont disparu ; et les articles générés se classent encore mal dans Google.",
+    "video": null,
+    "sources": [
+      {
+        "label": "IlluminatiPirate, « Dead Internet Theory: Most of the Internet is Fake », Agora Road's Macintosh Cafe, 5 janvier 2021 (mort vers 2016-2017, gouvernement américain, gaslighting par l'IA)",
+        "url": "https://forum.agoraroad.com/index.php?threads/dead-internet-theory-most-of-the-internet-is-fake.3011/"
+      },
+      {
+        "label": "Wikipédia, Dead Internet theory (origine sur Wizardchan, article de Kaitlyn Tiffany dans The Atlantic en septembre 2021, 52 % de trafic automatisé en 2016 selon Imperva)",
+        "url": "https://en.wikipedia.org/wiki/Dead_Internet_theory"
+      },
+      {
+        "label": "Imperva, Bad Bot Report 2026: Bad Bots in the Agentic Age, 29 avril 2026 (plus de 53 % du trafic web automatisé en 2025, contre 51 % l'année précédente ; agents d'IA qui agissent pour le compte d'utilisateurs)",
+        "url": "https://www.imperva.com/blog/bad-bot-report-2026-bots-agentic-age/"
+      },
+      {
+        "label": "Graphite, More Articles Are Now Created by AI Than Humans, 14 octobre 2025 (43 000 URL de Common Crawl, croisement en novembre 2024, plafond, faux positifs à 4,2 %)",
+        "url": "https://graphite.io/five-percent/more-articles-are-now-created-by-ai-than-humans"
+      },
+      {
+        "label": "Sam Altman sur X, 3 septembre 2025 : « i never took the dead internet theory that seriously »",
+        "url": "https://x.com/sama/status/1963366714684707120"
+      }
+    ]
+  },
+  {
+    "id": "ai-slop",
+    "status": "live",
+    "num": "62",
+    "title": "AI slop",
+    "en": "AI slop",
+    "aliases": [
+      "slop",
+      "AI-generated slop"
+    ],
+    "aliasesFr": [],
+    "jargon": [
+      {
+        "say": "slop",
+        "means": "en anglais, d'abord la boue, puis les restes de nourriture et la pâtée ; Merriam-Webster le définit désormais comme du contenu numérique de faible qualité produit en masse par l'IA"
+      },
+      {
+        "say": "brainrot",
+        "means": "les vidéos absurdes calibrées pour retenir l'attention ; Kapwing y range l'AI slop et d'autres contenus du même genre"
+      },
+      {
+        "say": "content farm",
+        "means": "ferme de contenus, un site qui publie à la chaîne pour capter du trafic de recherche et des revenus publicitaires"
+      },
+      {
+        "say": "scaled content abuse",
+        "means": "le nom que Google donne depuis mars 2024 à la production de pages en masse pour remonter dans les résultats, qu'elle soit faite par des machines, des humains ou les deux"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "dead-internet",
+      "hallucination",
+      "cout-d-une-requete",
+      "paradoxe-de-jevons",
+      "llm"
+    ],
+    "short": "L'AI slop désigne le contenu généré par l'IA en grande quantité et sans soin, qu'il s'agisse de textes, d'images, de vidéos ou de musique, publié pour occuper l'espace ou capter des vues plutôt que pour être lu.",
+    "image": "Un studio qui ne coûte presque plus rien à louer, comme un modèle qui génère pour quelques centimes, finit par presser des disques à la chaîne. Personne ne les a commandés ni écoutés en entier, mais ils remplissent les bacs du disquaire au point que tu ne trouves plus l'album que tu étais venu chercher.",
+    "imagineForm": "A",
+    "imagine": "Au plus haut de juin 2026, Deezer recevait environ 90 000 morceaux entièrement générés par l'IA en une seule journée. À trois minutes le morceau, écouter cette livraison te prendrait 4 500 heures, plus de six mois sans dormir, et le jour où tu aurais fini, près de dix-sept millions de nouveaux morceaux t'attendraient.",
+    "full": [
+      "Le mot vient de l'anglais slop, la pâtée des cochons. Il circulait vers 2022 sur 4chan, Hacker News et YouTube, après la sortie des premiers générateurs d'images, et le 8 mai 2024 le programmeur Simon Willison l'a popularisé en reprenant un tweet de @deepfates. Le slop serait au contenu généré ce que le spam est au courrier, puisque dans les deux cas personne ne l'a demandé et personne ne l'a relu.",
+      "En mai 2025, le Chicago Sun-Times et une édition du Philadelphia Inquirer ont publié une liste de lectures pour l'été dont dix titres sur quinze n'existaient pas, comme un roman climatique d'Isabel Allende intitulé Tidewater Dreams. Son auteur, Marco Buscaglia, a reconnu l'avoir produite en partie avec l'IA sans vérifier. En octobre 2025, Kapwing a ouvert un compte YouTube neuf et compté 104 vidéos de slop parmi les 500 premiers Shorts qu'on lui proposait, soit 21 %.",
+      "Le slop ne coûte presque rien à produire, et c'est l'attention de chacun qui paie la différence. Chez Deezer, les morceaux générés sont passés de 10 % des nouveaux envois en janvier 2025 à plus de la moitié certains jours de juin 2026. Ils ne font pourtant que 1 à 3 % des écoutes, et jusqu'à 85 % de ces écoutes étaient frauduleuses en 2025, faites par des robots pour toucher des droits.",
+      "La recherche en ligne en porte le poids. En mars 2024, Google a étendu sa règle contre le spam à toute page produite en masse pour se classer, quel que soit l'outil, et annonçait ensuite 45 % de contenu peu original en moins dans ses résultats. Un moteur doit désormais trier ce qui a été écrit pour toi de ce qui a été écrit pour lui."
+    ],
+    "then": "Quand Simon Willison défend le mot, en mai 2024, il parle d'un phénomène que surtout les gens du métier savent repérer. En décembre 2025, Merriam-Webster en fait son mot de l'année et le définit comme du contenu numérique de faible qualité, produit en masse par l'IA.",
+    "office": [
+      {
+        "who": "q",
+        "text": "On peut sortir nos deux cents articles de blog SEO avec l'IA ce trimestre ?"
+      },
+      {
+        "who": "a",
+        "text": "Les produire, oui, mais Google vise depuis mars 2024 les pages faites en masse pour se classer, quel que soit l'outil ; publiez-en moins, relus par quelqu'un qui connaît le sujet, avec ce que vous êtes seuls à savoir."
+      }
+    ],
+    "avoid": "« Tout ce qui est fait avec l'IA, c'est du slop. » Le mot vise le contenu que personne n'a demandé ni relu ; un texte généré, vérifié et utile n'en est pas, et un texte humain bâclé pour le référencement en a tous les défauts.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Simon Willison, Slop is the new name for unwanted AI-generated content, 8 mai 2024 (comparaison avec le spam, tweet de @deepfates)",
+        "url": "https://simonwillison.net/2024/May/8/slop/"
+      },
+      {
+        "label": "Wikipédia, AI slop (usage du mot sur 4chan, Hacker News et YouTube vers 2022)",
+        "url": "https://en.wikipedia.org/wiki/AI_slop"
+      },
+      {
+        "label": "NBC News, Merriam-Webster names 'slop' as its 2025 word of the year, 15 décembre 2025 (définition)",
+        "url": "https://www.nbcnews.com/news/us-news/merriam-webster-word-of-the-year-2025-rcna247864"
+      },
+      {
+        "label": "NPR, How an AI-generated summer reading list got published in major newspapers, 20 mai 2025 (cinq titres réels sur quinze, Tidewater Dreams, Marco Buscaglia)",
+        "url": "https://www.npr.org/2025/05/20/nx-s1-5405022/fake-summer-reading-list-ai"
+      },
+      {
+        "label": "Kapwing, AI Slop Report: The Global Rise of Low-Quality AI Videos, 28 novembre 2025 (104 Shorts de slop sur les 500 premiers d'un compte neuf, données d'octobre 2025)",
+        "url": "https://www.kapwing.com/blog/ai-slop-report-the-global-rise-of-low-quality-ai-videos/"
+      },
+      {
+        "label": "Deezer Newsroom, AI music exceeds 50 percent of daily uploads, juillet 2026 (90 000 morceaux par jour et plus de 50 % des envois au plus haut de juin 2026, 1 à 3 % des écoutes, jusqu'à 85 % d'écoutes frauduleuses en 2025). Calcul de l'Imagine : 90 000 x 3 min = 270 000 min = 4 500 h = 187,5 jours ; 187,5 x 90 000 = 16,9 millions",
+        "url": "https://newsroom-deezer.com/2026/07/ai-music-exceeds-50-percent-daily-uploads-deezer/"
+      },
+      {
+        "label": "TechCrunch, Music streamer Deezer says more than 50% of daily uploads are AI-generated, 21 juillet 2026 (10 % des envois en janvier 2025)",
+        "url": "https://techcrunch.com/2026/07/21/music-streamer-deezer-says-more-than-50-of-daily-uploads-are-ai-generated/"
+      },
+      {
+        "label": "Google, New ways we're tackling spammy, low-quality content on Search, 5 mars 2024, mis à jour en avril (scaled content abuse, 45 % de contenu peu original en moins)",
+        "url": "https://blog.google/products/search/google-search-update-march-2024/"
+      }
+    ]
+  },
+  {
+    "id": "vibe-coding",
+    "status": "live",
+    "num": "63",
+    "title": "Vibe coding",
+    "en": "Vibe coding",
+    "aliases": [
+      "vibecoding",
+      "vibe code",
+      "vibe coder"
+    ],
+    "aliasesFr": [],
+    "jargon": [
+      {
+        "say": "Accept All",
+        "means": "le bouton qui applique d'un coup toutes les modifications proposées par l'IA ; Karpathy disait le presser à chaque fois, sans lire"
+      },
+      {
+        "say": "agentic engineering",
+        "means": "le nom que Karpathy préfère depuis février 2026 pour le travail professionnel avec des agents, où ils écrivent le code et où toi tu supervises"
+      },
+      {
+        "say": "app builder",
+        "means": "un outil comme Lovable, Replit ou v0 qui fabrique une application entière à partir d'une description en langage courant"
+      },
+      {
+        "say": "RLS",
+        "means": "Row Level Security, la règle de base de données qui dit quel utilisateur peut lire quelle ligne ; c'est elle qui manquait aux applications Lovable exposées en 2025"
+      }
+    ],
+    "cat": "methode",
+    "links": [
+      "loop",
+      "agent",
+      "harness",
+      "mythe-agent-autonome"
+    ],
+    "solutions": [
+      {
+        "name": "Lovable",
+        "kind": "générateur d'applications",
+        "url": "https://docs.lovable.dev/"
+      },
+      {
+        "name": "Replit",
+        "kind": "générateur d'applications",
+        "url": "https://replit.com/"
+      },
+      {
+        "name": "v0 (Vercel)",
+        "kind": "générateur d'applications",
+        "url": "https://v0.app/"
+      },
+      {
+        "name": "Cursor",
+        "kind": "éditeur de code",
+        "url": "https://cursor.com/"
+      },
+      {
+        "name": "Claude Code",
+        "kind": "agent de code",
+        "url": "https://claude.com/product/claude-code"
+      },
+      {
+        "name": "Cline",
+        "kind": "agent de code open source",
+        "url": "https://github.com/cline/cline"
+      }
+    ],
+    "short": "Le vibe coding consiste à faire écrire un programme par une IA en lui décrivant ce qu'on veut en langage courant, puis à accepter ses modifications sans lire le code, en jugeant seulement si le résultat a l'air de marcher.",
+    "image": "Tu fredonnes un air au groupe, il le joue, tu dis « plus de basse » et il remonte la basse, sans que tu aies jamais regardé la partition ni la console. Le groupe joue le rôle de l'agent, la partition celui du code. Pour une maquette du dimanche, c'est un bonheur ; pour sortir l'album, quelqu'un devra relire la partition mesure par mesure.",
+    "imagineForm": "B",
+    "imagine": "Commande à un chatbot un minuteur pomodoro en un seul fichier HTML, colle sa réponse dans un fichier minuteur.html et ouvre-le dans ton navigateur ; il y a de bonnes chances qu'il marche du premier coup. Cherche maintenant, dans le fichier, la ligne qui déclenche la sonnerie, et lance ton nouveau minuteur pour savoir combien de temps tu y passes.",
+    "full": [
+      "Le mot vient d'un tweet d'Andrej Karpathy, membre fondateur d'OpenAI et ancien responsable de l'IA chez Tesla, publié le 2 février 2025. Il y décrit une façon de coder où l'on se laisse porter et où l'on oublie que le code existe. Il parle à son outil au lieu de taper, clique toujours sur « Accept All », ne lit plus les modifications et recolle les messages d'erreur sans un mot. Il ajoutait que ce n'était « pas si mal » pour des projets jetables du week-end.",
+      "Le mot a vite dépassé son auteur. En mars 2025, Jared Friedman, associé de Y Combinator, annonçait que pour un quart des start-up de la promotion d'hiver, 95 % du code avait été écrit par l'IA, et le dictionnaire Collins l'a élu mot de l'année 2025. Des outils comme Lovable, Replit ou v0 fabriquent désormais une application entière à partir d'une simple description.",
+      "Le risque se loge dans ce que personne ne lit. En mars 2025, le développeur Matt Palmer a découvert que des applications générées par Lovable laissaient leur base de données ouverte, faute d'une règle d'accès que personne n'avait vérifiée. Sur 1 645 projets analysés, 170 laissaient lire des données à n'importe qui, des adresses mail aux clés d'API. En avril, un ingénieur de Palantir a montré qu'on pouvait en tirer des montants de dettes et des adresses personnelles. Lovable conteste en partie, en estimant que la protection des données revient à chaque client.",
+      "Le problème dépasse un outil. En juillet 2025, Veracode a fait écrire du code à plus de 100 modèles sur des tâches de test et trouvé une faille de sécurité dans 45 % des cas, sans que les modèles récents ou plus gros fassent mieux.",
+      "Le vibe coding est une loop sans vérification, où la seule question posée à chaque tour est « ça a l'air de marcher ? ». La version professionnelle garde la même boucle et ajoute ce qui vérifie ce que l'agent a écrit, un harness, des tests et des relectures."
+    ],
+    "then": "En février 2025, Karpathy réservait le vibe coding aux projets jetables, parce que les modèles marchaient « presque ». Le 4 février 2026, il constate que coder avec des agents devient le mode de travail par défaut des professionnels, avec plus de supervision, et propose d'appeler ce travail agentic engineering, pendant que vibe coding continue de désigner la version sans relecture.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Quelqu'un du marketing a monté notre outil de réservation en vibe coding en deux jours, on le met en ligne ?"
+      },
+      {
+        "who": "a",
+        "text": "Fais d'abord vérifier qui peut lire quoi dans la base et où sont rangées les clés d'API, puisque c'est exactement ce qui manquait aux 170 applications Lovable exposées en 2025."
+      }
+    ],
+    "avoid": "« Avec le vibe coding, plus besoin de savoir coder. » Pour une maquette, c'est vrai ; pour un outil qui stocke des données de clients, quelqu'un doit savoir lire ce que l'IA a écrit, ou au moins faire tourner les tests et les contrôles de sécurité qui le lisent à sa place.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Andrej Karpathy sur X, 2 février 2025 : « There's a new kind of coding I call \"vibe coding\" » (Accept All, « not too bad for throwaway weekend projects »)",
+        "url": "https://x.com/karpathy/status/1886192184808149383"
+      },
+      {
+        "label": "Andrej Karpathy sur X, 4 février 2026 : rétrospective d'un an, « agentic engineering », plus de supervision",
+        "url": "https://x.com/karpathy/status/2019137879310836075"
+      },
+      {
+        "label": "TechCrunch, A quarter of startups in YC's current cohort have codebases that are almost entirely AI-generated, 6 mars 2025 (Jared Friedman, 95 % du code)",
+        "url": "https://techcrunch.com/2025/03/06/a-quarter-of-startups-in-ycs-current-cohort-have-codebases-that-are-almost-entirely-ai-generated/"
+      },
+      {
+        "label": "RTÉ, Collins' Word of the Year for 2025 revealed, 6 novembre 2025",
+        "url": "https://www.rte.ie/entertainment/2025/1106/1542331-collins-word-of-the-year-for-2025-revealed/"
+      },
+      {
+        "label": "Matt Palmer, Statement on CVE-2025-48757, 29 mai 2025 (découverte le 20 mars 2025, 170 projets aux règles d'accès insuffisantes sur 1 645, adresses mail et clés d'API lisibles ; exploitation publique par un ingénieur de Palantir le 14 avril 2025, montants de dettes et adresses personnelles)",
+        "url": "https://mattpalmer.io/posts/2025/05/statement-on-CVE-2025-48757/"
+      },
+      {
+        "label": "NIST, National Vulnerability Database, CVE-2025-48757, publiée le 30 mai 2025 (règle RLS insuffisante, contestation de Lovable)",
+        "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-48757"
+      },
+      {
+        "label": "Veracode, Insights from the 2025 GenAI Code Security Report, 30 juillet 2025 (45 % de code avec faille, plus de 100 modèles, pas de progrès avec la taille)",
+        "url": "https://www.veracode.com/blog/genai-code-security-report/"
+      }
+    ]
+  },
+  {
+    "id": "paradoxe-de-jevons",
+    "status": "live",
+    "num": "64",
+    "title": "Paradoxe de Jevons",
+    "en": "Jevons paradox",
+    "aliases": [
+      "Jevons effect",
+      "Jevons' paradox"
+    ],
+    "aliasesFr": [],
+    "jargon": [
+      {
+        "say": "Jevons paradox strikes again",
+        "means": "le tweet de Satya Nadella, patron de Microsoft, le 27 janvier 2025, en pleine panique DeepSeek : plus l'IA devient efficace, plus on va s'en servir"
+      },
+      {
+        "say": "effet rebond",
+        "means": "une partie de l'économie permise par un gain d'efficacité est reprise par une consommation plus forte ; le paradoxe de Jevons est le cas où le rebond dépasse l'économie"
+      },
+      {
+        "say": "price elasticity",
+        "means": "l'élasticité-prix de la demande, c'est-à-dire de combien la demande grimpe quand le prix baisse ; sans demande élastique, pas de paradoxe"
+      },
+      {
+        "say": "cost per token",
+        "means": "le prix d'un token à l'API ; c'est lui qui chute, pendant que la facture totale peut monter"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "cout-d-une-requete",
+      "inference",
+      "compute",
+      "modeles-de-raisonnement",
+      "open-weights",
+      "ai-slop"
+    ],
+    "short": "Le paradoxe de Jevons décrit le cas où un gain d'efficacité, au lieu de faire baisser la consommation d'une ressource, la fait augmenter, parce que la ressource devenue moins chère trouve beaucoup plus d'usages.",
+    "image": "Le jour où la maison de disques divise par dix le prix de l'heure de studio, l'équivalent du prix du token, aucun groupe ne réserve dix fois moins d'heures pour le même album. On enregistre des démos, des versions acoustiques, des remix, et le studio n'a jamais été aussi plein, ni la facture totale aussi haute.",
+    "imagineForm": "D",
+    "imagine": "« Le prix du token a encore été divisé par dix, notre facture d'IA va baisser ? », demande la directrice financière en janvier. Le directeur technique lui répond : « Maintenant que ça ne coûte presque rien, on fait relire chaque contrat par trois agents. »",
+    "full": [
+      "En 1865, l'économiste William Stanley Jevons publie The Coal Question pour une Angleterre qui craint de manquer de charbon. Il y écrit que croire qu'un usage plus économe du combustible réduit la consommation est une confusion d'idées, et que la vérité est exactement l'inverse. En Écosse, le charbon nécessaire pour produire une tonne de fonte était tombé à moins d'un tiers, et la consommation totale avait été multipliée par dix.",
+      "Son mécanisme tient en une chaîne. Le haut-fourneau qui brûle moins de charbon rapporte davantage, attire des capitaux, fait baisser le prix de la fonte, la demande de fonte grimpe, et les fourneaux supplémentaires finissent par brûler plus que ce que chacun a économisé.",
+      "Le paradoxe est revenu d'un coup en janvier 2025. DeepSeek, un labo chinois, venait de publier R1, un modèle de raisonnement aux poids ouverts présenté comme bien moins gourmand en calcul, et le 27 janvier l'action Nvidia a perdu près de 17 %, soit 589 milliards de dollars de valeur en une séance. Dans la nuit, avant l'ouverture de la Bourse, Satya Nadella tweetait « Jevons paradox strikes again! », pour dire qu'une IA plus efficace serait une IA dont l'usage explose.",
+      "Les chiffres de 2025 vont plutôt dans son sens. Selon Epoch AI, le prix pour atteindre un niveau de performance donné a été divisé chaque année par 9 à 900 selon la tâche. De son côté, OpenRouter, qui aiguille les requêtes vers plus de 300 modèles, est passé d'environ 10 000 milliards de tokens par an à plus de 100 000 milliards à la mi-2025. Les modèles de raisonnement, qui écrivent longuement avant de répondre, ajoutent leur part à la note.",
+      "Le paradoxe n'a pourtant rien d'une loi. Il ne joue que si la demande grimpe plus vite que le prix ne baisse, et la nourriture, devenue bien moins chère au XXe siècle grâce aux gains de l'agriculture, n'a pas vu sa demande suivre. Le travail agricole a fondu à la place, puisque les États-Unis sont passés de 40 % d'Américains employés dans l'agriculture en 1900 à moins de 2 % en 2024. Pour l'IA, le pari de Nadella porte sur l'appétit des utilisateurs ; les volumes de tokens vont pour l'instant dans son sens, sans prouver à eux seuls que le calcul consommé au total augmente."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Les prix des modèles baissent chaque trimestre, notre budget IA va fondre ?"
+      },
+      {
+        "who": "a",
+        "text": "Le prix unitaire baissera, mais une équipe qui paie moins chaque token trouve vite de quoi en consommer beaucoup plus ; budgète sur le volume d'usage que tu prévois, pas sur le tarif affiché."
+      }
+    ],
+    "avoid": "« DeepSeek a prouvé qu'on aura besoin de moins de puces. » Un modèle moins coûteux abaisse le prix de chaque usage, et l'histoire de Jevons dit que c'est souvent le nombre d'usages qui l'emporte ; la question reste ouverte, mais la consommation de tokens a continué de grimper en 2025.",
+    "video": null,
+    "sources": [
+      {
+        "label": "W. S. Jevons, The Coal Question, chapitre VII « Of the Economy of Fuel », Econlib (confusion d'idées, consommation de charbon par tonne de fonte réduite à moins d'un tiers et consommation totale multipliée par dix en Écosse, mécanisme du haut-fourneau)",
+        "url": "https://www.econlib.org/library/YPDBooks/Jevons/jvnCQ.html?chapter_num=9"
+      },
+      {
+        "label": "Wikipédia, Jevons paradox (condition de demande élastique, contre-exemple de l'alimentation, emploi agricole de 40 % en 1900 à moins de 2 % en 2024)",
+        "url": "https://en.wikipedia.org/wiki/Jevons_paradox"
+      },
+      {
+        "label": "Satya Nadella sur X, 27 janvier 2025, 5 h 48 UTC : « Jevons paradox strikes again! »",
+        "url": "https://x.com/satyanadella/status/1883753899255046301"
+      },
+      {
+        "label": "Tom's Hardware, Nvidia loses $589 billion in market cap, broad stock plunge triggered by DeepSeek AI release, 28 janvier 2025 (589 milliards de dollars de valeur perdus le 27 janvier)",
+        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/nvidia-loses-usd589-billion-in-market-cap-broad-stock-plunge-triggered-by-deepseek-ai-release"
+      },
+      {
+        "label": "CNBC, Nvidia sheds almost $600 billion in market cap, biggest drop ever, 27 janvier 2025 (action en baisse de 17 % sur la séance)",
+        "url": "https://www.cnbc.com/2025/01/27/nvidia-sheds-almost-600-billion-in-market-cap-biggest-drop-ever.html"
+      },
+      {
+        "label": "Epoch AI, LLM inference prices have fallen rapidly but unequally across tasks, 12 mars 2025 (division par 9 à 900 par an selon la tâche)",
+        "url": "https://epoch.ai/data-insights/llm-inference-price-trends"
+      },
+      {
+        "label": "a16z et OpenRouter, State of AI: An Empirical 100 Trillion Token Study, 4 décembre 2025 (d'environ 10 000 milliards de tokens par an à plus de 100 000 milliards à la mi-2025, plus de 300 modèles)",
+        "url": "https://a16z.com/state-of-ai/"
+      }
+    ]
+  },
+  {
+    "id": "effet-reine-rouge",
+    "status": "live",
+    "num": "65",
+    "title": "Effet Reine rouge",
+    "en": "Red Queen effect",
+    "aliases": [
+      "Red Queen hypothesis",
+      "Red Queen dynamics",
+      "Red Queen's race"
+    ],
+    "aliasesFr": [
+      "hypothèse de la Reine rouge",
+      "course de la Reine rouge"
+    ],
+    "jargon": [
+      {
+        "say": "Red Queen dynamics",
+        "means": "une situation où deux camps s'adaptent l'un à l'autre sans arrêt, de sorte que chacun progresse sans prendre d'avance durable"
+      },
+      {
+        "say": "arms race",
+        "means": "course aux armements, l'expression voisine et plus militaire, entre attaquants et défenseurs ou entre générateurs et détecteurs"
+      },
+      {
+        "say": "self-play",
+        "means": "un système qui s'entraîne en affrontant ses propres versions précédentes, ce qui fabrique une course de la Reine rouge en laboratoire"
+      },
+      {
+        "say": "red teaming",
+        "means": "attaquer volontairement un système pour trouver ses failles avant qu'un vrai adversaire ne le fasse"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "benchmaxxing",
+      "evals",
+      "prompt-injection",
+      "modeles-frontiere"
+    ],
+    "short": "L'effet Reine rouge décrit une compétition où chaque camp doit progresser sans cesse rien que pour garder sa place, parce que ses adversaires progressent aussi ; l'idée vient de la biologie de l'évolution, et la recherche en IA l'applique aux systèmes qu'elle fait s'affronter.",
+    "image": "Le videur de la salle, c'est le détecteur, et les faussaires de billets jouent les générateurs. Le videur apprend à repérer les faux, les faussaires impriment mieux, et le videur doit réapprendre. Au bout d'un an, les uns comme les autres sont devenus excellents, et la proportion de faux billets à l'entrée n'a presque pas bougé.",
+    "imagineForm": "D",
+    "imagine": "En septembre, la directrice demande à l'équipe sécurité : « Il repère combien d'images générées, notre nouveau détecteur ? » L'équipe répond fièrement : « 99 % de celles du générateur de juin. »",
+    "full": [
+      "Le nom vient de De l'autre côté du miroir, de Lewis Carroll (1871), où la Reine rouge explique à Alice que, dans son pays, il faut courir de toutes ses forces pour rester au même endroit. En 1973, le biologiste Leigh Van Valen en a tiré une hypothèse, dans « A new evolutionary law », premier article d'Evolutionary Theory, une revue qu'il venait de fonder.",
+      "Van Valen avait remarqué que la probabilité qu'un groupe d'espèces s'éteigne ne dépend pas de son ancienneté et reste à peu près constante sur des millions d'années. Il l'expliquait par une course permanente, où chaque progrès d'une espèce, un prédateur plus rapide ou un parasite plus rusé, dégrade le milieu des autres, qui doivent évoluer à leur tour pour ne pas reculer.",
+      "Dans l'IA, l'image sert d'abord à la sécurité. En janvier 2025, Christian Borst, directeur technique de Vectra AI pour l'Europe, le Moyen-Orient et l'Afrique, comparait à la course de la Reine rouge le face-à-face entre attaques et défenses dopées à l'IA, où rester immobile revient à prendre du retard.",
+      "La recherche en a fait une méthode. En janvier 2026, Sakana AI et le MIT ont publié Digital Red Queen, où un modèle de langage écrit des programmes guerriers pour Core War, un jeu de programmation de 1984, et où chaque nouveau guerrier doit battre tous les précédents. Les gagnants deviennent de plus en plus polyvalents face à des guerriers écrits par des humains, qu'ils n'ont jamais affrontés, et les auteurs y voient un terrain d'essai pour la cybersécurité et le red teaming.",
+      "En juin 2026, la Red Queen Gödel Machine a appliqué la même idée à l'évaluation, en faisant évoluer l'évaluateur en même temps que l'agent qui s'améliore, au lieu de le juger sur une grille figée. On peut y lire une parade au benchmaxxing, puisqu'un test qui ne bouge plus finit par récompenser l'entraînement au test.",
+      "L'image de Carroll a sa limite, car les deux camps progressent pour de bon. Dans cette course, un détecteur ou un filtre de sécurité qu'on cesse de mettre à jour recule sans avoir changé d'une ligne, parce que ce qu'il doit arrêter ne cesse de s'améliorer."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "On a acheté un détecteur de textes générés l'an dernier, le problème est réglé ?"
+      },
+      {
+        "who": "a",
+        "text": "Il était réglé contre les modèles de l'an dernier ; demande à l'éditeur à quel rythme il se met à jour, et teste-le toi-même sur des textes écrits avec les derniers modèles."
+      }
+    ],
+    "avoid": "« La Reine rouge, c'est quand personne n'avance. » Tout le monde avance, et vite, mais personne ne prend d'avance durable ; chez Van Valen, ce qui reste constant, c'est le risque d'extinction, pas les espèces.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Wikipédia, Red Queen hypothesis (Van Valen, A new evolutionary law, Evolutionary Theory, 1973 ; probabilité d'extinction constante ; réplique de la Reine rouge dans Through the Looking-Glass)",
+        "url": "https://en.wikipedia.org/wiki/Red_Queen_hypothesis"
+      },
+      {
+        "label": "University of Chicago News, Leigh Van Valen, evolutionary theorist and paleobiology pioneer, 1935-2010 (fondateur des revues Evolutionary Monographs et Evolutionary Theory dans les années 1970)",
+        "url": "https://news.uchicago.edu/story/leigh-van-valen-evolutionary-theorist-and-paleobiology-pioneer-1935-2010"
+      },
+      {
+        "label": "TechInformed, 2025 Informed: Cybersecurity and AI, 16 janvier 2025 (Christian Borst, Vectra AI : « Like the Red Queen's race in Through the Looking-Glass »)",
+        "url": "https://techinformed.com/2025-informed-cybersecurity-and-ai/"
+      },
+      {
+        "label": "Kumar et al. (Sakana AI, MIT), Digital Red Queen: Adversarial Program Evolution in Core War with LLMs, 6 janvier 2026 (chaque guerrier doit battre tous les précédents, guerriers de plus en plus généraux face à des guerriers humains tenus à l'écart, cybersécurité)",
+        "url": "https://arxiv.org/abs/2601.03335"
+      },
+      {
+        "label": "Sakana AI, Digital Red Queen, 8 janvier 2026 (red teaming automatisé, environnement isolé)",
+        "url": "https://sakana.ai/drq/"
+      },
+      {
+        "label": "Iacob et al., The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators, 24 juin 2026",
+        "url": "https://arxiv.org/abs/2606.26294"
+      }
+    ]
+  },
+  {
+    "id": "llm",
+    "status": "live",
+    "num": "66",
+    "title": "LLM (grand modèle de langage)",
+    "en": "Large language model",
+    "aliases": [
+      "LLM",
+      "LLMs",
+      "large language models",
+      "foundation model"
+    ],
+    "aliasesFr": [
+      "grand modèle de langage",
+      "modèle de langage",
+      "modèle de fondation"
+    ],
+    "jargon": [
+      {
+        "say": "LLM",
+        "means": "large language model, grand modèle de langage ; le mot désigne le modèle lui-même, le fichier de paramètres, et pas l'application qui le fait tourner"
+      },
+      {
+        "say": "foundation model",
+        "means": "modèle de fondation, un modèle généraliste sur lequel on construit ensuite des produits, des assistants ou des versions spécialisées"
+      },
+      {
+        "say": "SLM",
+        "means": "small language model, le petit modèle de langage, assez léger pour tourner sur un ordinateur portable ou un téléphone"
+      }
+    ],
+    "cat": "fondations",
+    "links": [
+      "mythe-chatgpt-c-est-le-modele",
+      "parametres",
+      "tailles-de-modele",
+      "slm",
+      "few-shot",
+      "pre-entrainement"
+    ],
+    "short": "Un LLM, ou grand modèle de langage, est un programme entraîné sur d'immenses quantités de texte à prédire la suite d'un texte, avec des milliards de paramètres ; c'est le moteur des chatbots et non le chatbot lui-même.",
+    "image": "Un LLM, au studio, correspond au groupe au complet avec sa console réglée, prêt à enchaîner sur n'importe quel morceau qu'on lui lance. Le chatbot ressemble plutôt à la salle où il se produit, avec sa billetterie et ses consignes, et le même groupe peut jouer ailleurs, dans un correcteur de texte ou un outil de code.",
+    "imagineForm": "B",
+    "imagine": "Sur ton téléphone, tape « Demain je » puis appuie dix fois de suite sur le mot suggéré au milieu du clavier, et regarde la phrase tourner en rond au bout de quelques mots. Donne ensuite la même amorce à un chatbot en lui demandant seulement de la continuer, et pose les deux phrases côte à côte.",
+    "full": [
+      "Un modèle de langage fait une seule chose, prédire le token qui vient ensuite, et l'adjectif « grand » renvoie à la quantité de paramètres et de texte qu'on a mise dans cet apprentissage. Presque tous les LLM actuels reposent sur la même architecture, le transformer, qui laisse chaque token tenir compte de tous ceux qui le précèdent, et ce sont eux qui font tourner ChatGPT, Claude, Gemini, Grok ou DeepSeek.",
+      "Le mot « grand » n'a pas de seuil officiel, et Artificial Analysis classe parmi les grands les modèles ouverts de plus de 150 milliards de paramètres. Au sommet, les chiffres ne sont plus toujours publiés ; Claude Mythos, le modèle le plus puissant d'Anthropic, compterait environ 8 000 milliards de paramètres selon des estimations rapportées par le Financial Times en août 2026. La frontière bouge avec les années, et un modèle jugé grand en 2019 passerait aujourd'hui pour un petit.",
+      "Le LLM n'est qu'une pièce du produit. L'application qui l'entoure glisse ses propres instructions devant ton message, conserve la conversation, lance des recherches web et recopie leurs résultats dans le contexte, puis choisit parfois entre plusieurs modèles. Un même LLM se comporte donc autrement selon l'application qui le fait tourner, et une même application change souvent de LLM sans changer de nom."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Il nous faudrait notre propre LLM, non ?"
+      },
+      {
+        "who": "a",
+        "text": "Presque jamais ; la plupart des usages tiennent avec un modèle existant, de bonnes consignes et vos documents qu'on lui fait lire quand il répond, pour une fraction du prix d'un entraînement."
+      }
+    ],
+    "avoid": "« Le LLM a cherché sur Internet. » Le modèle seul ne sait que prédire du texte ; c'est l'application autour qui lance la recherche, puis lui fait lire les pages trouvées avant qu'il réponde.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Wikipédia, Large language model (définition, transformer, chatbots qui reposent sur des LLM, « large » sans seuil défini, estimation d'environ 8 000 milliards de paramètres pour Claude Mythos rapportée par le Financial Times, août 2026), consulté le 2 octobre 2026",
+        "url": "https://en.wikipedia.org/wiki/Large_language_model"
+      },
+      {
+        "label": "Artificial Analysis, Small Open Source Models (catégories par taille : tiny jusqu'à 4B, small de 4B à 40B, medium de 40B à 150B, large au-delà de 150B), consulté le 2 octobre 2026",
+        "url": "https://artificialanalysis.ai/models/open-source/small"
+      }
+    ]
+  },
+  {
+    "id": "slm",
+    "status": "live",
+    "num": "67",
+    "title": "SLM (petit modèle de langage)",
+    "en": "Small language model",
+    "aliases": [
+      "SLM",
+      "small language models",
+      "on-device model",
+      "edge model",
+      "tiny model"
+    ],
+    "aliasesFr": [
+      "petit modèle de langage",
+      "modèle embarqué",
+      "modèle local"
+    ],
+    "jargon": [
+      {
+        "say": "on-device",
+        "means": "le modèle tourne sur l'appareil lui-même, téléphone ou ordinateur, sans envoyer la question à un serveur"
+      },
+      {
+        "say": "E2B, E4B",
+        "means": "chez Gemma 4, E veut dire effective : 2,3 et 4,5 milliards de paramètres qui calculent vraiment, plus de grandes tables qu'on se contente de consulter, soit 5,1 et 8 milliards en tout"
+      }
+    ],
+    "cat": "fondations",
+    "links": [
+      "llm",
+      "tailles-de-modele",
+      "quantization",
+      "open-weights",
+      "cout-d-une-requete"
+    ],
+    "solutions": [
+      {
+        "name": "Ollama",
+        "kind": "outil pour tester en local",
+        "url": "https://ollama.com"
+      },
+      {
+        "name": "LM Studio",
+        "kind": "outil pour tester en local",
+        "url": "https://lmstudio.ai"
+      },
+      {
+        "name": "llama.cpp",
+        "kind": "bibliothèque open source",
+        "url": "https://github.com/ggml-org/llama.cpp"
+      },
+      {
+        "name": "MLX LM (Apple)",
+        "kind": "bibliothèque open source",
+        "url": "https://github.com/ml-explore/mlx-lm"
+      },
+      {
+        "name": "LiteRT (Google)",
+        "kind": "kit pour mobile",
+        "url": "https://ai.google.dev/edge/litert"
+      },
+      {
+        "name": "Foundation Models (Apple)",
+        "kind": "kit pour mobile",
+        "url": "https://developer.apple.com/documentation/foundationmodels"
+      }
+    ],
+    "short": "Un SLM, ou petit modèle de langage, est un modèle de langage de quelques centaines de millions à quelques milliards de paramètres, assez léger pour tourner sur un ordinateur portable ou un téléphone, sans serveur.",
+    "image": "Pour jouer au bar du coin, personne n'emmène l'orchestre et ses quarante pupitres. Le SLM, c'est le trio acoustique qui tient dans une camionnette, se branche sur la prise du fond et commence tout de suite ; il connaît moins de morceaux, mais il joue là où le grand groupe ne pourrait même pas décharger son matériel.",
+    "imagineForm": "A",
+    "imagine": "Le 14 février 2019, OpenAI annonce GPT-2 et refuse d'abord d'en publier la version complète, par crainte d'usages malveillants ; elle compte 1,5 milliard de paramètres. Sept ans plus tard, Gemma 4 E2B en compte 5,1 milliards, plus de trois fois autant, et Google le présente comme un modèle qui tourne hors ligne sur un téléphone.",
+    "full": [
+      "Personne n'a fixé la limite du « petit ». Artificial Analysis appelle small les modèles ouverts de 4 à 40 milliards de paramètres et tiny ceux qui restent sous les 4 milliards, alors que, dans l'usage courant, un SLM est surtout un modèle qui tient sur une machine ordinaire. Il a la même architecture qu'un grand modèle, avec moins de paramètres, et on le compresse souvent par quantization pour gagner encore de la place.",
+      "Les exemples récents viennent des fabricants de téléphones et des grands labos. Apple fait tourner sur ses appareils un modèle d'environ 3 milliards de paramètres, stocké sur 2 bits par paramètre, et l'ouvre aux développeurs depuis juin 2025. Google a publié le 2 avril 2026 Gemma 4 E2B et E4B, conçus pour fonctionner sans réseau sur un téléphone, un Raspberry Pi ou une carte Jetson.",
+      "Un SLM connaît moins de choses qu'un grand modèle, puisqu'il a moins de paramètres pour les retenir, et il se trompe plus souvent sur une question pointue. Il répond en revanche vite, ne coûte rien à chaque requête, marche dans le métro et garde les données sur l'appareil, ce qui en fait le bon choix pour résumer, classer, extraire ou reformuler, souvent après un fine-tuning sur la tâche visée."
+    ],
+    "table": {
+      "caption": "Quelques petits modèles ouverts récents",
+      "asOf": "2 octobre 2026",
+      "columns": [
+        "Modèle",
+        "Éditeur",
+        "Paramètres",
+        "Contexte (tokens)",
+        "Licence"
+      ],
+      "rows": [
+        [
+          "Qwen3.5-0.8B",
+          "Alibaba (Qwen)",
+          "0,8 milliard",
+          "262 144",
+          "Apache 2.0"
+        ],
+        [
+          "Qwen3.5-2B",
+          "Alibaba (Qwen)",
+          "2 milliards",
+          "262 144",
+          "Apache 2.0"
+        ],
+        [
+          "Gemma 4 E2B",
+          "Google",
+          "2,3 milliards effectifs (5,1 en tout)",
+          "128 000",
+          "Apache 2.0"
+        ],
+        [
+          "SmolLM3-3B",
+          "Hugging Face",
+          "3 milliards",
+          "128 000",
+          "Apache 2.0"
+        ],
+        [
+          "Phi-4-mini-instruct",
+          "Microsoft",
+          "3,8 milliards",
+          "128 000",
+          "MIT"
+        ],
+        [
+          "Gemma 4 E4B",
+          "Google",
+          "4,5 milliards effectifs (8 en tout)",
+          "128 000",
+          "Apache 2.0"
+        ]
+      ],
+      "note": "SmolLM3 est entraîné sur 64 000 tokens de contexte et étendu à 128 000 ; le modèle embarqué d'Apple, environ 3 milliards de paramètres, n'est pas téléchargeable et ne figure pas au tableau."
+    },
+    "office": [
+      {
+        "who": "q",
+        "text": "On peut faire tourner un modèle sur nos portables pour que rien ne sorte de la boîte ?"
+      },
+      {
+        "who": "a",
+        "text": "Oui pour résumer, classer ou reformuler des documents internes avec un modèle de 2 à 4 milliards de paramètres ; pour une analyse longue et pointue, un grand modèle hébergé reste en général devant."
+      }
+    ],
+    "avoid": "« Un SLM, c'est un grand modèle qu'on a rogné. » C'est parfois le cas, quand on le tire d'un grand par distillation ou qu'on le compresse par quantization, mais beaucoup sont entraînés de zéro, et sur énormément de texte, puisque SmolLM3 et ses 3 milliards de paramètres ont lu 11 200 milliards de tokens.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Artificial Analysis, Small Open Source Models (tiny jusqu'à 4B, small de 4B à 40B), consulté le 2 octobre 2026",
+        "url": "https://artificialanalysis.ai/models/open-source/small"
+      },
+      {
+        "label": "Wikipédia, Small language model (pas de seuil fixe, même architecture qu'un LLM avec moins de paramètres, quantization et distillation), consulté le 2 octobre 2026",
+        "url": "https://en.wikipedia.org/wiki/Small_language_model"
+      },
+      {
+        "label": "Wikipédia, GPT-2 (annoncé le 14 février 2019, publication complète d'abord refusée par crainte d'usages malveillants, version complète de 1,5 milliard de paramètres publiée en novembre 2019)",
+        "url": "https://en.wikipedia.org/wiki/GPT-2"
+      },
+      {
+        "label": "Google, Gemma 4: Byte for byte, the most capable open models, 2 avril 2026 (E2B et E4B hors ligne sur téléphone, Raspberry Pi et Jetson Orin Nano, Apache 2.0)",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/"
+      },
+      {
+        "label": "Google, fiche de gemma-4-E2B-it sur Hugging Face (2,3B effectifs, 5,1B avec les embeddings ; E4B : 4,5B effectifs, 8B en tout ; 128K de contexte). Calcul de l'Imagine : 5,1 / 1,5 = 3,4",
+        "url": "https://huggingface.co/google/gemma-4-E2B-it"
+      },
+      {
+        "label": "Apple Machine Learning Research, mise à jour 2025 des modèles de fondation d'Apple Intelligence, 9 juin 2025, révisée le 17 juillet 2025 (modèle embarqué d'environ 3 milliards de paramètres, 2 bits par paramètre, framework Foundation Models)",
+        "url": "https://machinelearning.apple.com/research/apple-foundation-models-2025-updates"
+      },
+      {
+        "label": "Qwen, fiches de Qwen3.5-0.8B et Qwen3.5-2B sur Hugging Face (0,8B et 2B paramètres, 262 144 tokens de contexte, Apache 2.0)",
+        "url": "https://huggingface.co/Qwen/Qwen3.5-2B"
+      },
+      {
+        "label": "Hugging Face, fiche de SmolLM3-3B (3B paramètres, pré-entraîné sur 11,2T tokens, 64K de contexte entraîné et 128K avec YaRN, Apache 2.0)",
+        "url": "https://huggingface.co/HuggingFaceTB/SmolLM3-3B"
+      },
+      {
+        "label": "Microsoft, fiche de Phi-4-mini-instruct sur Hugging Face (3,8B paramètres, 128K de contexte, licence MIT)",
+        "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
+      }
+    ]
+  },
+  {
+    "id": "few-shot",
+    "status": "live",
+    "num": "68",
+    "title": "Few-shot (apprentissage en contexte)",
+    "en": "Few-shot prompting",
+    "aliases": [
+      "few-shot",
+      "few-shot learning",
+      "in-context learning",
+      "ICL",
+      "zero-shot",
+      "one-shot",
+      "multishot prompting"
+    ],
+    "aliasesFr": [
+      "apprentissage en contexte",
+      "apprentissage par l'exemple",
+      "exemples dans le prompt"
+    ],
+    "jargon": [
+      {
+        "say": "zero-shot",
+        "means": "on décrit la tâche sans donner un seul exemple"
+      },
+      {
+        "say": "one-shot, few-shot",
+        "means": "on donne un exemple, ou quelques-uns, de ce qu'on attend, avant la vraie demande"
+      },
+      {
+        "say": "in-context learning",
+        "means": "le nom savant du phénomène : le modèle suit un motif présent dans son contexte sans qu'aucun de ses paramètres ne bouge"
+      },
+      {
+        "say": "<example>",
+        "means": "la balise dans laquelle Anthropic conseille de ranger chaque exemple, pour que le modèle ne les confonde pas avec les consignes"
+      }
+    ],
+    "cat": "methode",
+    "links": [
+      "llm",
+      "fine-tuning",
+      "context-engineering",
+      "system-prompt",
+      "modeles-de-raisonnement"
+    ],
+    "short": "Le few-shot consiste à glisser quelques exemples de la tâche dans le prompt, avant la vraie demande, pour que le modèle reproduise leur format et leur logique ; on parle de zero-shot sans exemple et de one-shot avec un seul.",
+    "image": "Joue deux mesures au groupe avant la prise, et il enchaîne dans le même tempo, la même tonalité, le même genre, sans qu'on ait eu à lui expliquer quoi que ce soit. Personne n'a touché à la console ; à la session suivante, il faudra rejouer les deux mesures.",
+    "imagineForm": "E",
+    "imagine": "Tu demandes au modèle un nom pour la nouvelle salle de réunion, et il te rend cinq propositions en gras, chacune avec sa justification. Tu reposes la question en commençant par « Salle 1 : Lovelace, Salle 2 : Hopper, Salle 3 : Curie, Salle 4 : », et il te répond « Franklin », sans un mot de plus.",
+    "full": [
+      "Le terme vient de l'article de GPT-3, publié par OpenAI en mai 2020 sous le titre Language Models are Few-Shot Learners. Une de ses figures montre la tâche « Translate English to French », suivie de « sea otter => loutre de mer », « peppermint => menthe poivrée », puis « cheese => », et le modèle complète la ligne. Aucun paramètre ne bouge pendant ce temps, ce qui distingue le few-shot du fine-tuning ; tout se joue dans le contexte, et tout disparaît avec lui.",
+      "Les exemples enseignent surtout une forme. En 2022, une équipe de l'université de Washington et de Meta a remplacé au hasard les bonnes réponses des exemples par des réponses fausses, et les modèles ne perdaient presque rien sur des tâches de classement. Ce qui comptait, c'était le format, la liste des réponses possibles et le genre de texte montré, bien plus que la justesse de chaque exemple.",
+      "Les assistants d'aujourd'hui suivent une consigne sans exemple, et le few-shot sert surtout à fixer une mise en forme, un registre ou une structure. Anthropic conseille trois à cinq exemples variés, rangés dans des balises. Les modèles de raisonnement demandent plus de prudence, puisque l'équipe de DeepSeek a constaté que des exemples dégradaient toujours les résultats de DeepSeek-R1 et recommande de décrire le problème et le format attendu, sans exemple."
+    ],
+    "then": "Dans l'article de 2020, GPT-3 n'avait pas été entraîné à suivre des consignes, et les exemples étaient le seul moyen de lui faire comprendre la tâche ; on en mettait de 10 à 100, autant qu'en tenaient ses 2 048 tokens de contexte. Les guides de 2026 partent d'une consigne claire et ajoutent quelques exemples seulement quand le format ou le ton résiste.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Je lui mets combien d'exemples pour qu'il rédige nos comptes rendus comme on aime ?"
+      },
+      {
+        "who": "a",
+        "text": "Trois à cinq, assez différents entre eux pour qu'il n'en copie pas un détail par hasard, comme la longueur ou le prénom du client."
+      }
+    ],
+    "avoid": "« Avec trois exemples, il a appris notre métier. » Rien n'a changé dans ses paramètres ; les exemples doivent revenir à chaque requête, et tu les paies en tokens à chaque fois.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Brown et al. (OpenAI), Language Models are Few-Shot Learners, 28 mai 2020 (figure 2.1 : zero-shot, one-shot et few-shot sur la traduction anglais-français, sea otter => loutre de mer ; K de 10 à 100 exemples dans un contexte de 2 048 tokens ; aucune mise à jour des paramètres)",
+        "url": "https://arxiv.org/abs/2005.14165"
+      },
+      {
+        "label": "Min et al. (université de Washington, Meta), Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?, février 2022 (des étiquettes tirées au hasard dans les exemples font à peine baisser les scores ; comptent le format, l'espace des réponses et la distribution des textes)",
+        "url": "https://arxiv.org/abs/2202.12837"
+      },
+      {
+        "label": "Anthropic, Prompting best practices, section « Use examples effectively » (exemples pertinents, variés, dans des balises <example> ; 3 à 5 exemples), consulté le 2 octobre 2026",
+        "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
+      },
+      {
+        "label": "DeepSeek-AI, DeepSeek-R1, janvier 2025 (« Few-shot prompting consistently degrades its performance », recommandation du zero-shot avec description du problème et du format de sortie)",
+        "url": "https://arxiv.org/abs/2501.12948"
+      }
+    ]
+  },
+  {
+    "id": "pre-entrainement",
+    "status": "live",
+    "num": "69",
+    "title": "Pré-entraînement",
+    "en": "Pre-training",
+    "aliases": [
+      "pretraining",
+      "pre-train",
+      "base model",
+      "pretrained model",
+      "mid-training"
+    ],
+    "aliasesFr": [
+      "préentraînement",
+      "modèle de base",
+      "modèle pré-entraîné"
+    ],
+    "jargon": [
+      {
+        "say": "base model",
+        "means": "le modèle de base, tel qu'il sort du pré-entraînement : il continue les textes mais ne suit pas encore les consignes"
+      },
+      {
+        "say": "data mix",
+        "means": "les proportions de web, de code, de maths ou de livres qu'on fait lire au modèle, et qu'on change en cours de route"
+      },
+      {
+        "say": "Common Crawl",
+        "means": "l'archive publique du web que presque tous les labos utilisent comme matière première, avant de la filtrer"
+      },
+      {
+        "say": "mid-training",
+        "means": "une étape intermédiaire, juste après le pré-entraînement, qui fait lire au modèle de longs documents ou des raisonnements pour étendre son contexte et ses capacités"
+      }
+    ],
+    "cat": "entrainement",
+    "links": [
+      "entrainement",
+      "post-entrainement",
+      "prediction-du-mot-suivant",
+      "date-de-coupure",
+      "compute",
+      "llm"
+    ],
+    "short": "Le pré-entraînement est la première et la plus longue phase de l'entraînement d'un modèle de langage, où il apprend à prédire le token suivant sur des milliers de milliards de tokens. Il en sort un modèle de base, capable de prolonger un texte et pas encore de répondre.",
+    "image": "Des mois durant, l'ingé son passe au groupe tout ce que la discothèque contient, trié et rangé, en lui demandant chaque fois de deviner la note suivante. Le groupe ressort de ces séances capable de prolonger n'importe quel morceau, et toujours incapable de comprendre qu'on lui passe une commande.",
+    "imagineForm": "D",
+    "imagine": "« Écrivez une courte histoire sur une grenouille qui voyage dans le temps jusqu'à la Grèce antique en français », demandent en 2022 des chercheurs d'OpenAI à GPT-3 dans sa version de base. Il répond : « Écrivez une histoire au sujet d'un enfant qui voudrait tout savoir sur les jeux des dieux et qui se retrouve dans l'une de leurs histoires. Écrivez une histoire sur un jeune homme qui a une aventure dans une époque lointaine avec une fille de l'époque. »",
+    "full": [
+      "Une bonne part du travail se fait avant la première heure de calcul, dans le tri du texte. Pour FineWeb, publié en juin 2024, Hugging Face a tiré 15 000 milliards de tokens de 96 instantanés de Common Crawl, en dédoublonnant et en filtrant page par page. Sa version FineWeb-Edu ne garde que 1 300 milliards de tokens de pages éducatives, et les modèles qui la lisent font nettement mieux aux tests de connaissances et de raisonnement.",
+      "Le programme d'écoute change aussi en cours de route. SmolLM3, publié par Hugging Face en juillet 2025, a lu 11 200 milliards de tokens en trois étapes, avec de plus en plus de code et de maths vers la fin. Une étape intermédiaire a suivi, avec 100 milliards de tokens pour allonger son contexte et 35 milliards pour le préparer au raisonnement. Le modèle de base qui en sort sait continuer une démonstration, sans savoir encore qu'on attend de lui une réponse.",
+      "La matière première a une limite. En 2024, Epoch AI estimait le stock utile du web indexé à environ 400 000 milliards de tokens et prévoyait que les plus gros modèles l'auraient entièrement lu vers 2028, avec une fourchette de 2026 à 2032. Les labos complètent déjà avec des textes synthétiques, écrits par d'autres modèles, et avec des données qu'ils achètent ou produisent."
+    ],
+    "then": "En juillet 2024, la plus grande version de SmolLM avait lu environ 590 tokens par paramètre. Un an plus tard, SmolLM3 en a lu six fois plus, environ 3 600 par paramètre, parce qu'un petit modèle qui lit davantage rattrape une partie de son écart avec les gros.",
+    "office": [
+      {
+        "who": "q",
+        "text": "On peut prendre la version de base du modèle, puisqu'elle est moins bridée ?"
+      },
+      {
+        "who": "a",
+        "text": "Pour un modèle ouvert, souvent oui, mais elle continue ton texte au lieu de répondre ; il faut lui écrire le début du document que tu veux voir finir, ou partir de la version instruct."
+      }
+    ],
+    "avoid": "« Il a lu tout Internet. » Même Common Crawl, la plus grande archive publique du web, ne contient qu'environ 130 000 milliards de tokens selon Epoch AI, et les corpus d'entraînement n'en gardent qu'une fraction, triée et dédoublonnée.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Ouyang et al. (OpenAI), Training language models to follow instructions with human feedback, mars 2022, figure 8 (consigne en français sur la grenouille et la Grèce antique ; GPT-3 175B sans préfixe répond par d'autres consignes « Écrivez une histoire... »)",
+        "url": "https://arxiv.org/abs/2203.02155"
+      },
+      {
+        "label": "Penedo et al. (Hugging Face), The FineWeb Datasets, juin 2024 (15T tokens tirés de 96 instantanés de Common Crawl ; FineWeb-Edu, 1,3T tokens, meilleur sur MMLU et ARC)",
+        "url": "https://arxiv.org/abs/2406.17557"
+      },
+      {
+        "label": "Hugging Face, SmolLM3: smol, multilingual, long-context reasoner, 8 juillet 2025 (11,2T tokens en trois étapes, part croissante de code et de maths, mid-training de 100B tokens pour le contexte long et 35B pour le raisonnement)",
+        "url": "https://huggingface.co/blog/smollm3"
+      },
+      {
+        "label": "Hugging Face, SmolLM - blazingly fast and remarkably powerful, 16 juillet 2024 (SmolLM-1.7B entraîné sur 1T tokens). Calcul du 2024 vs 2026 : 10^12 / 1,7 x 10^9 = 588 tokens par paramètre ; 11,2 x 10^12 / 3,08 x 10^9 = 3 642",
+        "url": "https://huggingface.co/blog/smollm"
+      },
+      {
+        "label": "Villalobos et al. (Epoch AI), Will we run out of data?, version du 4 juin 2024 (stock effectif du web indexé d'environ 4e14 tokens, pleinement utilisé vers 2028 en médiane, entre 2026 et 2032 ; tableau 1 : Common Crawl 130T)",
+        "url": "https://arxiv.org/abs/2211.04325"
+      }
+    ]
+  },
+  {
+    "id": "post-entrainement",
+    "status": "live",
+    "num": "70",
+    "title": "Post-entraînement",
+    "en": "Post-training",
+    "aliases": [
+      "post-training",
+      "posttraining",
+      "instruction tuning",
+      "alignment",
+      "RLVR"
+    ],
+    "aliasesFr": [
+      "post-training",
+      "réglage en assistant",
+      "alignement"
+    ],
+    "jargon": [
+      {
+        "say": "-it, -Instruct",
+        "means": "le suffixe des modèles passés par le post-entraînement (Phi-4-mini-instruct, par exemple), par opposition à la version de base, publiée parfois à côté"
+      },
+      {
+        "say": "SFT, puis DPO, puis RLVR",
+        "means": "l'ordre classique des étapes : des exemples de bonnes réponses, puis des paires de réponses préférée et rejetée, puis des récompenses quand un résultat vérifiable est juste"
+      },
+      {
+        "say": "recipe",
+        "means": "la recette du post-entraînement, c'est-à-dire les données, l'ordre des étapes et leurs réglages ; la plupart des labos la gardent pour eux"
+      }
+    ],
+    "cat": "entrainement",
+    "links": [
+      "entrainement",
+      "pre-entrainement",
+      "rlhf",
+      "fine-tuning",
+      "modeles-de-raisonnement",
+      "flagornerie"
+    ],
+    "short": "Le post-entraînement regroupe les étapes qui suivent le pré-entraînement et font d'un modèle de base un assistant, avec des exemples de réponses, des préférences humaines et des récompenses sur des problèmes vérifiables. C'est là que se fixent son ton, ce qu'il refuse et sa manière de raisonner.",
+    "image": "Une fois que le groupe sait tout jouer, l'ingé son change de méthode. Il ne lui fait plus écouter de nouveaux morceaux, il lui apprend à écouter la commande, à finir proprement et à refuser certaines demandes, puis le public et ses jurés prennent le relais pour polir le reste.",
+    "imagineForm": "B",
+    "imagine": "Soumets « Faut-il du sucre dans une pâte à crêpes ? » à deux chatbots de labos différents, puis compare la longueur des réponses, les titres en gras, le nombre de précautions et la façon dont ils terminent.",
+    "full": [
+      "Le post-entraînement enchaîne en général trois familles d'étapes. Le fine-tuning supervisé montre au modèle des centaines de milliers de bonnes réponses. L'apprentissage des préférences, par RLHF ou par DPO, le pousse ensuite vers les réponses que des notateurs choisissent, et le renforcement à récompense vérifiable (RLVR) le note sur des problèmes de maths ou de code dont on peut contrôler la solution. L'institut Ai2 a publié en novembre 2024 la recette complète de Tülu 3, données et code compris, dans cet ordre exact.",
+      "Ces étapes lisent très peu de texte. Le fine-tuning supervisé de Tülu 3 tient en un peu moins d'un million d'exemples, quand un pré-entraînement se compte en milliers de milliards de tokens. C'est pourtant ce peu qui décide du ton, de la longueur des réponses et de ce que le modèle refuse, et deux labos partis de données comparables en sortent des assistants aux caractères très différents.",
+      "Le post-entraînement apprend à répondre, pas à savoir. En 2022, à la question « Why is it important to eat socks after meditating? », le GPT-3 d'origine, sans réglage, enchaînait un faux dialogue sur la saveur des chaussettes, alors qu'InstructGPT, son élève réglé en assistant, expliquait avec sérieux qu'il existait plusieurs théories. Le même réglage qui rend un modèle serviable peut aussi le rendre complaisant, ce que la fiche Flagornerie raconte."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Si on prend la version instruct d'un modèle ouvert, il refusera les mêmes choses que ChatGPT ?"
+      },
+      {
+        "who": "a",
+        "text": "Rien ne le garantit, puisque chaque labo règle ses refus au post-entraînement avec ses propres exemples ; teste-le sur tes cas sensibles avant de le mettre devant des clients."
+      }
+    ],
+    "avoid": "« Le post-entraînement lui apprend de nouvelles connaissances. » Presque tout ce que le modèle sait vient du pré-entraînement ; les étapes suivantes changent surtout la manière de le présenter, et la confiance qu'il affiche en le disant.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Lambert et al. (Ai2, université de Washington), Tulu 3: Pushing Frontiers in Open Language Model Post-Training, 22 novembre 2024, révisé en avril 2025 (SFT, puis DPO, puis RLVR ; tableau 7 : 939 344 prompts pour le SFT ; données, code et recette publiés)",
+        "url": "https://arxiv.org/abs/2411.15124"
+      },
+      {
+        "label": "Ai2, jeu de données tulu-3-sft-mixture sur Hugging Face (939 343 lignes, fichiers d'environ 1,4 Go), consulté le 2 octobre 2026",
+        "url": "https://huggingface.co/datasets/allenai/tulu-3-sft-mixture"
+      },
+      {
+        "label": "Ouyang et al. (OpenAI), Training language models to follow instructions with human feedback, mars 2022, figure 9 (« Why is it important to eat socks after meditating? », réponses de GPT-3 175B et d'InstructGPT 175B)",
+        "url": "https://arxiv.org/abs/2203.02155"
+      },
+      {
+        "label": "Microsoft, fiche de Phi-4-mini-instruct sur Hugging Face (post-entraînement par fine-tuning supervisé puis optimisation directe des préférences)",
+        "url": "https://huggingface.co/microsoft/Phi-4-mini-instruct"
+      }
+    ]
+  },
+  {
+    "id": "hugging-face",
+    "status": "live",
+    "num": "71",
+    "title": "Hugging Face",
+    "en": "Hugging Face",
+    "aliases": [
+      "HF",
+      "Hugging Face Hub",
+      "the Hub",
+      "huggingface.co",
+      "HF Hub"
+    ],
+    "aliasesFr": [
+      "le Hub"
+    ],
+    "jargon": [
+      {
+        "say": "model card",
+        "means": "la fiche d'un modèle sur le Hub : à quoi il sert, comment il a été entraîné, sa licence et ses limites"
+      },
+      {
+        "say": "Spaces",
+        "means": "les petites applications de démonstration hébergées sur Hugging Face, où l'on essaie un modèle dans le navigateur"
+      },
+      {
+        "say": "safetensors, GGUF",
+        "means": "deux formats de fichiers de poids ; safetensors ne contient que des nombres, GGUF sert à faire tourner des modèles, souvent quantifiés, sur sa propre machine"
+      },
+      {
+        "say": "Transformers",
+        "means": "la bibliothèque open source de Hugging Face pour télécharger, entraîner et faire tourner des modèles en quelques lignes"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "open-weights",
+      "tailles-de-modele",
+      "quantization",
+      "fine-tuning"
+    ],
+    "short": "Hugging Face est une plateforme en ligne où l'on publie et télécharge des modèles d'IA, des jeux de données et des applications de démonstration ; c'est là que la plupart des modèles open weights sont mis à disposition.",
+    "image": "Hugging Face tient le rôle de la grande bibliothèque de presets du quartier, où les maisons de disques comme les amateurs déposent le réglage de leur console, avec sa licence et sa fiche technique. N'importe quel studio vient l'y emprunter, le retoucher et redéposer sa version à côté de l'original.",
+    "imagineForm": "A",
+    "imagine": "Le 2 octobre 2026, la page des modèles de Hugging Face en affiche 3 115 874. Si tu en ouvrais un par minute, huit heures par jour et week-ends compris, tu finirais le tour en juillet 2044, après avoir croisé plus de 26 000 modèles dont le nom contient « qwen2.5-7b », sans compter tous ceux publiés pendant ces dix-sept ans.",
+    "full": [
+      "La société a été fondée en 2016 à New York par trois entrepreneurs français, Clément Delangue, Julien Chaumond et Thomas Wolf, pour faire une application de chatbot destinée aux adolescents, et elle doit son nom à l'émoji du visage qui fait un câlin. Elle s'est ensuite recentrée sur les outils, avec Transformers, sa bibliothèque open source, puis le Hub, devenu le lieu où l'on publie les modèles.",
+      "On y trouve des modèles, plus d'un million de jeux de données et des Spaces, des applications de démo. Chaque modèle a sa fiche, sa licence et ses fichiers, et un arbre qui recense ses descendants ; celui de Qwen2.5-7B-Instruct, un modèle d'Alibaba, liste plus de 3 000 versions fine-tunées et plus de 400 versions quantifiées. La plupart des labos publient leurs poids ouverts sur le Hub, et des outils comme llama.cpp, Ollama ou LM Studio vont les y chercher directement.",
+      "Le 3 septembre 2026, Nvidia a annoncé un accord, signé la veille, pour racheter Hugging Face 12,93 milliards de dollars, dont environ 11,9 milliards pour les actionnaires et un programme d'actions pouvant aller jusqu'à environ 1 milliard pour retenir les salariés. D'après le formulaire déposé par Nvidia auprès de la SEC, le gendarme boursier américain, la clôture est attendue au premier semestre 2027, sous réserve du feu vert des régulateurs. Nvidia s'y engage à garder la plateforme ouverte, à laisser chacun y publier et télécharger les modèles de son choix et à continuer d'y soutenir les autres fabricants de puces."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "On peut prendre n'importe quel modèle de Hugging Face pour un projet client ?"
+      },
+      {
+        "who": "a",
+        "text": "Lis d'abord la licence dans sa fiche, car Gemma 4 est sous Apache 2.0, qui autorise l'usage commercial, alors que Tiny Aya, de Cohere, est sous CC BY-NC, qui l'interdit."
+      }
+    ],
+    "avoid": "« C'est sur Hugging Face, donc c'est vérifié. » N'importe qui peut y publier, et Hugging Face prévient lui-même qu'un fichier de poids au vieux format pickle peut exécuter du code au chargement ; préfère les fichiers safetensors et les comptes officiels des labos.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Hugging Face, page Models : compteur de 3 115 874 modèles ; filtre GGUF : 208 289 modèles ; recherche « qwen2.5-7b » : 26 292 modèles, relevés le 2 octobre 2026. Calcul de l'Imagine : 3 115 874 minutes / 480 minutes par jour = 6 492 jours, soit environ 17,8 ans à partir du 2 octobre 2026, jusqu'au 11 juillet 2044",
+        "url": "https://huggingface.co/models"
+      },
+      {
+        "label": "Hugging Face, page Datasets : compteur de 1 072 928 jeux de données, relevé le 2 octobre 2026",
+        "url": "https://huggingface.co/datasets"
+      },
+      {
+        "label": "Hugging Face, arbre de Qwen2.5-7B-Instruct : 3 142 modèles fine-tunés et 431 quantifiés listés, relevés le 2 octobre 2026",
+        "url": "https://huggingface.co/models?other=base_model:finetune:Qwen/Qwen2.5-7B-Instruct"
+      },
+      {
+        "label": "Wikipédia, Hugging Face (fondée en 2016 à New York par Clément Delangue, Julien Chaumond et Thomas Wolf, d'abord une application de chatbot pour adolescents, nom tiré de l'émoji), consulté le 2 octobre 2026",
+        "url": "https://en.wikipedia.org/wiki/Hugging_Face"
+      },
+      {
+        "label": "Nvidia, NVIDIA to Acquire Hugging Face, 3 septembre 2026 (12 930 300 000 dollars ; plateforme ouverte, calcul Nvidia non requis pour publier ou déployer)",
+        "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+      },
+      {
+        "label": "Nvidia, formulaire 8-K déposé auprès de la SEC, 3 septembre 2026 (accord du 2 septembre ; environ 11,9 milliards de dollars pour les actionnaires et jusqu'à environ 1 milliard d'actions pour les salariés ; clôture attendue au premier semestre 2027 sous réserve des autorisations réglementaires ; engagement de garder la plateforme ouverte et de soutenir les autres fabricants de puces)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
+      },
+      {
+        "label": "TechCrunch, « Nvidia confirms it will buy Hugging Face for $12.9 billion », 3 septembre 2026",
+        "url": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/"
+      },
+      {
+        "label": "Cohere Labs, fiche de tiny-aya-global sur Hugging Face (licence CC BY-NC 4.0)",
+        "url": "https://huggingface.co/CohereLabs/tiny-aya-global"
+      },
+      {
+        "label": "Hugging Face, documentation Pickle Scanning (risque d'exécution de code arbitraire au chargement d'un fichier pickle)",
+        "url": "https://huggingface.co/docs/hub/security-pickle"
+      }
+    ]
+  },
   // Termes prévus : visibles dans le graphe, fiche à venir.
 ];
