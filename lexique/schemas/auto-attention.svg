@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 334" role="img" aria-labelledby="auto-attention-t">
+<title id="auto-attention-t">La phrase « Le trophée ne rentre pas dans le sac parce qu'il est trop » écrite en colonne : le dernier mot « grand » envoie l'essentiel de son attention vers « trophée », le dernier mot « petit » vers « sac », et des traits fins vers les autres mots.</title>
+<text class="m mu" x="40" y="16" text-anchor="middle">dernier mot</text>
+<text class="m mu" x="320" y="16" text-anchor="middle">dernier mot</text>
+<text class="big ac" x="40" y="162.5" text-anchor="middle">grand</text>
+<text class="big ac" x="320" y="162.5" text-anchor="middle">petit</text>
+<text class="m" x="180" y="44" text-anchor="middle">Le</text>
+<path class="lm" opacity="0.4" d="M74 155.5 L142 40"/>
+<path class="lm" opacity="0.4" d="M286 155.5 L218 40"/>
+<text class="m b" x="180" y="65" text-anchor="middle">trophée</text>
+<path class="la" style="stroke-width:5" d="M74 155.5 L142 61"/>
+<path class="lm" opacity="0.4" d="M286 155.5 L218 61"/>
+<text class="m" x="180" y="86" text-anchor="middle">ne</text>
+<path class="lm" opacity="0.4" d="M74 155.5 L142 82"/>
+<path class="lm" opacity="0.4" d="M286 155.5 L218 82"/>
+<text class="m" x="180" y="107" text-anchor="middle">rentre</text>
+<path class="lm" opacity="0.4" d="M74 155.5 L142 103"/>
+<path class="lm" opacity="0.4" d="M286 155.5 L218 103"/>
+<text class="m" x="180" y="128" text-anchor="middle">pas</text>
+<path class="lm" opacity="0.4" d="M74 155.5 L142 124"/>
+<path class="lm" opacity="0.4" d="M286 155.5 L218 124"/>
+<text class="m" x="180" y="149" text-anchor="middle">dans</text>
+<path class="lm" opacity="0.4" d="M74 155.5 L142 145"/>
+<path class="lm" opacity="0.4" d="M286 155.5 L218 145"/>
+<text class="m" x="180" y="170" text-anchor="middle">le</text>
+<path class="lm" opacity="0.4" d="M74 155.5 L142 166"/>
+<path class="lm" opacity="0.4" d="M286 155.5 L218 166"/>
+<text class="m b" x="180" y="191" text-anchor="middle">sac</text>
+<path class="lm" opacity="0.4" d="M74 155.5 L142 187"/>
+<path class="la" style="stroke-width:5" d="M286 155.5 L218 187"/>
+<text class="m" x="180" y="212" text-anchor="middle">parce</text>
+<path class="lm" opacity="0.4" d="M74 155.5 L142 208"/>
+<path class="lm" opacity="0.4" d="M286 155.5 L218 208"/>
+<text class="m" x="180" y="233" text-anchor="middle">qu'il</text>
+<path class="lm" opacity="0.4" d="M74 155.5 L142 229"/>
+<path class="lm" opacity="0.4" d="M286 155.5 L218 229"/>
+<text class="m" x="180" y="254" text-anchor="middle">est</text>
+<path class="lm" opacity="0.4" d="M74 155.5 L142 250"/>
+<path class="lm" opacity="0.4" d="M286 155.5 L218 250"/>
+<text class="m" x="180" y="275" text-anchor="middle">trop</text>
+<path class="lm" opacity="0.4" d="M74 155.5 L142 271"/>
+<path class="lm" opacity="0.4" d="M286 155.5 L218 271"/>
+<text class="i mu" x="0" y="309">Un seul mot changé envoie l'essentiel de</text>
+<text class="i mu" x="0" y="329">l'attention vers le trophée ou vers le sac.</text>
+</svg>

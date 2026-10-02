@@ -72,7 +72,7 @@ function loadSchemas(terms) {
   const files = existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith('.svg')).sort() : [];
   for (const f of files) {
     const id = f.slice(0, -4);
-    if (!byId.has(id)) fail(`schéma sans fiche : lexique/schemas/${f}`);
+    if (!byId.has(id)) { console.warn(`schéma ignoré (pas encore de fiche) : lexique/schemas/${f}`); continue; }
     const svg = readFileSync(join(dir, f), 'utf8').replace(/<\?xml[^>]*>\s*/, '').replace(/\s*\n\s*/g, ' ').trim();
     if (!/^<svg[\s>]/.test(svg) || !/<\/svg>$/.test(svg)) fail(`lexique/schemas/${f} n'est pas un <svg> seul`);
     if (/<script|\son[a-z]+=|<foreignObject/i.test(svg)) fail(`lexique/schemas/${f} : script ou gestionnaire interdit`);

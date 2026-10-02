@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="transformer-t">
+<title id="transformer-t">La même phrase de six tokens traitée par un réseau récurrent, qui passe sa mémoire d'un mot au suivant en six étapes, puis par un transformer, où l'attention relie tous les tokens dans la même étape.</title>
+<text class="m mu" x="0" y="16">réseau récurrent, un mot par étape</text>
+<rect class="bx" x="9" y="26" width="52" height="26" rx="4"/>
+<text class="m" x="35.0" y="44" text-anchor="middle">Le</text>
+<path class="ln" d="M35.0 52 V68"/>
+<circle class="fd" cx="35.0" cy="78" r="10"/>
+<circle class="lm" cx="35.0" cy="78" r="10"/>
+<path class="la" d="M46.0 78 H81.0"/><path class="la" d="M76.0 74 l5 4 l-5 4"/>
+<text class="m ac" x="35.0" y="108" text-anchor="middle">1</text>
+<rect class="bx" x="67" y="26" width="52" height="26" rx="4"/>
+<text class="m" x="93.0" y="44" text-anchor="middle">chat</text>
+<path class="ln" d="M93.0 52 V68"/>
+<circle class="fd" cx="93.0" cy="78" r="10"/>
+<circle class="lm" cx="93.0" cy="78" r="10"/>
+<path class="la" d="M104.0 78 H139.0"/><path class="la" d="M134.0 74 l5 4 l-5 4"/>
+<text class="m ac" x="93.0" y="108" text-anchor="middle">2</text>
+<rect class="bx" x="125" y="26" width="52" height="26" rx="4"/>
+<text class="m" x="151.0" y="44" text-anchor="middle">du</text>
+<path class="ln" d="M151.0 52 V68"/>
+<circle class="fd" cx="151.0" cy="78" r="10"/>
+<circle class="lm" cx="151.0" cy="78" r="10"/>
+<path class="la" d="M162.0 78 H197.0"/><path class="la" d="M192.0 74 l5 4 l-5 4"/>
+<text class="m ac" x="151.0" y="108" text-anchor="middle">3</text>
+<rect class="bx" x="183" y="26" width="52" height="26" rx="4"/>
+<text class="m" x="209.0" y="44" text-anchor="middle">voisin</text>
+<path class="ln" d="M209.0 52 V68"/>
+<circle class="fd" cx="209.0" cy="78" r="10"/>
+<circle class="lm" cx="209.0" cy="78" r="10"/>
+<path class="la" d="M220.0 78 H255.0"/><path class="la" d="M250.0 74 l5 4 l-5 4"/>
+<text class="m ac" x="209.0" y="108" text-anchor="middle">4</text>
+<rect class="bx" x="241" y="26" width="52" height="26" rx="4"/>
+<text class="m" x="267.0" y="44" text-anchor="middle">dort</text>
+<path class="ln" d="M267.0 52 V68"/>
+<circle class="fd" cx="267.0" cy="78" r="10"/>
+<circle class="lm" cx="267.0" cy="78" r="10"/>
+<path class="la" d="M278.0 78 H313.0"/><path class="la" d="M308.0 74 l5 4 l-5 4"/>
+<text class="m ac" x="267.0" y="108" text-anchor="middle">5</text>
+<rect class="bx" x="299" y="26" width="52" height="26" rx="4"/>
+<text class="m" x="325.0" y="44" text-anchor="middle">.</text>
+<path class="ln" d="M325.0 52 V68"/>
+<circle class="fd" cx="325.0" cy="78" r="10"/>
+<circle class="lm" cx="325.0" cy="78" r="10"/>
+<text class="m ac" x="325.0" y="108" text-anchor="middle">6</text>
+<text class="m mu" x="0" y="130">mémoire passée au mot suivant, étapes 1 à 6</text>
+<path class="ln" d="M0 146 H360"/>
+<text class="m mu" x="0" y="170">transformer, toutes les positions à la fois</text>
+<rect class="bxa" x="9" y="180" width="342" height="26" rx="4"/>
+<text class="m" x="180" y="198" text-anchor="middle">l'attention relie tous les tokens</text>
+<path class="la" d="M35.0 222 V208"/>
+<rect class="bx" x="9" y="222" width="52" height="26" rx="4"/>
+<text class="m" x="35.0" y="240" text-anchor="middle">Le</text>
+<text class="m ac" x="35.0" y="268" text-anchor="middle">1</text>
+<path class="la" d="M93.0 222 V208"/>
+<rect class="bx" x="67" y="222" width="52" height="26" rx="4"/>
+<text class="m" x="93.0" y="240" text-anchor="middle">chat</text>
+<text class="m ac" x="93.0" y="268" text-anchor="middle">1</text>
+<path class="la" d="M151.0 222 V208"/>
+<rect class="bx" x="125" y="222" width="52" height="26" rx="4"/>
+<text class="m" x="151.0" y="240" text-anchor="middle">du</text>
+<text class="m ac" x="151.0" y="268" text-anchor="middle">1</text>
+<path class="la" d="M209.0 222 V208"/>
+<rect class="bx" x="183" y="222" width="52" height="26" rx="4"/>
+<text class="m" x="209.0" y="240" text-anchor="middle">voisin</text>
+<text class="m ac" x="209.0" y="268" text-anchor="middle">1</text>
+<path class="la" d="M267.0 222 V208"/>
+<rect class="bx" x="241" y="222" width="52" height="26" rx="4"/>
+<text class="m" x="267.0" y="240" text-anchor="middle">dort</text>
+<text class="m ac" x="267.0" y="268" text-anchor="middle">1</text>
+<path class="la" d="M325.0 222 V208"/>
+<rect class="bx" x="299" y="222" width="52" height="26" rx="4"/>
+<text class="m" x="325.0" y="240" text-anchor="middle">.</text>
+<text class="m ac" x="325.0" y="268" text-anchor="middle">1</text>
+<text class="i mu" x="0" y="292">Les six positions avancent dans la même étape.</text>
+</svg>

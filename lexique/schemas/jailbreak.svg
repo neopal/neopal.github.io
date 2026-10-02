@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 270" role="img" aria-labelledby="jailbreak-t">
+<title id="jailbreak-t">La même demande interdite sous quatre formes : posée directement, elle bute sur le refus appris au post-entraînement ; en jeu de rôle, en vers ou avec des majuscules au hasard, elle passe une partie du temps.</title>
+<text class="m d" x="0" y="14">même demande</text>
+<text class="m d" x="146" y="14">refus appris</text>
+<rect class="bx" x="0" y="26" width="128" height="36" rx="5"/>
+<text class="m" x="10" y="49">directe</text>
+<rect class="bx" x="0" y="78" width="128" height="36" rx="5"/>
+<text class="m" x="10" y="101">jeu de rôle</text>
+<rect class="bx" x="0" y="130" width="128" height="36" rx="5"/>
+<text class="m" x="10" y="153">en vers</text>
+<rect class="bx" x="0" y="182" width="128" height="36" rx="5"/>
+<text class="m" x="10" y="205">mAjUsCuLeS</text>
+<rect class="fl" x="168" y="22" width="8" height="200" rx="2"/>
+<path class="lm" d="M132 44 h30"/>
+<path class="lr" d="M152 38 l10 12 M162 38 l-10 12"/>
+<text class="m mu" x="192" y="49">refus</text>
+<path class="lr dash" d="M132 96 h70"/><path class="lr" d="M196 91 l6 5 l-6 5"/>
+<text class="m red" x="210" y="93">réponse</text>
+<text class="m mu" x="210" y="109">Clyde, 2023</text>
+<path class="lr dash" d="M132 148 h70"/><path class="lr" d="M196 143 l6 5 l-6 5"/>
+<text class="m red" x="210" y="145">réponse</text>
+<text class="m mu" x="210" y="161">62 % des poèmes</text>
+<path class="lr dash" d="M132 200 h70"/><path class="lr" d="M196 195 l6 5 l-6 5"/>
+<text class="m red" x="210" y="197">réponse</text>
+<text class="m mu" x="210" y="213">89 % sur GPT-4o</text>
+<text class="i mu" x="0" y="246">Le refus reconnaît la forme d'une demande,</text>
+<text class="i mu" x="0" y="265">et une forme nouvelle peut passer à côté.</text>
+</svg>

@@ -185,7 +185,10 @@ window.DICO_TERMS = [
     ],
     avoid:
       "« Il a compris la question, puis il a rédigé la réponse. » Aucune réponse n'est prête quelque part : elle se construit token par token, et sa fin n'existe pas avant d'être écrite.",
-    video: null,
+    video: {
+      "src": "videos/prediction-du-mot-suivant.mp4",
+      "poster": "videos/prediction-du-mot-suivant.jpg"
+    },
     sources: [
       {label: 'Wikipédia, OpenAI o1 (premier modèle de raisonnement, 12 septembre 2024)', url: 'https://en.wikipedia.org/wiki/OpenAI_o1'},
       {label: 'OpenAI, guide Reasoning models (paramètre reasoning.effort)', url: 'https://developers.openai.com/api/docs/guides/reasoning'},
@@ -369,7 +372,10 @@ window.DICO_TERMS = [
       {name: 'Qwen3-Embedding', kind: 'modèle ouvert', url: 'https://huggingface.co/Qwen/Qwen3-Embedding-8B'},
       {name: 'BGE-M3', kind: 'modèle ouvert', url: 'https://huggingface.co/BAAI/bge-m3'},
     ],
-    video: null,
+    video: {
+      "src": "videos/embedding.mp4",
+      "poster": "videos/embedding.jpg"
+    },
     sources: [
       {label: 'Mikolov, Chen, Corrado et Dean (Google), Efficient Estimation of Word Representations in Vector Space, janvier 2013 (exemple King - Man + Woman = Queen)', url: 'https://arxiv.org/abs/1301.3781'},
       {label: 'OpenAI, guide Vector embeddings (1 536 dimensions pour text-embedding-3-small, 3 072 pour text-embedding-3-large)', url: 'https://developers.openai.com/api/docs/guides/embeddings'},
@@ -408,7 +414,10 @@ window.DICO_TERMS = [
     ],
     avoid:
       "« Température basse, réponses plus justes. » Une température basse rend le modèle plus prévisible, pas plus exact : s'il se trompe, il se trompe de la même façon à chaque fois.",
-    video: null,
+    video: {
+      "src": "videos/temperature.mp4",
+      "poster": "videos/temperature.jpg"
+    },
     sources: [
       {label: 'Thinking Machines Lab (Horace He), Defeating Nondeterminism in LLM Inference, 10 septembre 2025 (1 000 réponses, 80 différentes)', url: 'https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/'},
       {label: "Anthropic, référence de l'API Messages (temperature dépréciée pour les modèles sortis après Claude Opus 4.6, seule la valeur 1.0 acceptée)", url: 'https://platform.claude.com/docs/en/api/messages'},
@@ -457,7 +466,10 @@ window.DICO_TERMS = [
     ],
     avoid:
       "« On a mis nos documents dans l'IA. » Les documents ne sont pas entrés dans le modèle ; ils sont rangés à côté, et le système en recopie des morceaux dans la conversation à chaque question.",
-    video: null,
+    video: {
+      "src": "videos/rag.mp4",
+      "poster": "videos/rag.jpg"
+    },
     sources: [
       {label: 'Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, 22 mai 2020', url: 'https://arxiv.org/abs/2005.11401'},
       {label: 'Magesh et al., Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools, 30 mai 2024 (17 % à 33 %)', url: 'https://arxiv.org/abs/2405.20362'},
@@ -1958,7 +1970,10 @@ window.DICO_TERMS = [
       }
     ],
     "avoid": "« L'agent a cliqué sur le bouton. » Le modèle a écrit une demande d'action, et c'est le programme autour de lui qui a cliqué, avec les droits qu'on lui a donnés. C'est donc à cet endroit que se règle ce qu'un agent a le droit de faire.",
-    "video": null,
+    "video": {
+      "src": "videos/agent.mp4",
+      "poster": "videos/agent.jpg"
+    },
     "sources": [
       {
         "label": "Anthropic, Building effective agents, 19 décembre 2024 (workflows contre agents)",

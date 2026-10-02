@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="prompt-engineering-t">
+<title id="prompt-engineering-t">Les blocs d'un prompt complet : la consigne, qu'on écrit presque toujours, puis le rôle, le contexte, la raison de la demande, le format attendu et des exemples, que le modèle ne peut pas deviner.</title>
+<rect class="bx" x="0" y="8" width="250" height="34" rx="5"/>
+<text class="b" x="12" y="30">consigne</text>
+<text class="m mu" x="100" y="30">résume ce rapport</text>
+<text class="m d" x="262" y="22">souvent le</text>
+<text class="m d" x="262" y="38">seul écrit</text>
+<path class="lm" d="M0 52 h250" opacity="0.5"/>
+<rect class="bxa" x="0" y="62" width="250" height="34" rx="5"/>
+<text class="b" x="12" y="84">rôle</text>
+<text class="m mu" x="100" y="84">tu es analyste</text>
+<rect class="bxa" x="0" y="102" width="250" height="34" rx="5"/>
+<text class="b" x="12" y="124">contexte</text>
+<text class="m mu" x="100" y="124">pour le comité</text>
+<rect class="bxa" x="0" y="142" width="250" height="34" rx="5"/>
+<text class="b" x="12" y="164">pourquoi</text>
+<text class="m mu" x="100" y="164">lu sur téléphone</text>
+<rect class="bxa" x="0" y="182" width="250" height="34" rx="5"/>
+<text class="b" x="12" y="204">format</text>
+<text class="m mu" x="100" y="204">5 puces maximum</text>
+<rect class="bxa" x="0" y="222" width="250" height="34" rx="5"/>
+<text class="b" x="12" y="244">exemples</text>
+<text class="m mu" x="100" y="244">&lt;example&gt;</text>
+<path class="la" d="M258 64 h6 v190 h-6"/>
+<text class="m ac" x="272" y="146">ce que le</text>
+<text class="m ac" x="272" y="162">modèle ne</text>
+<text class="m ac" x="272" y="178">devine pas</text>
+<text class="i mu" x="0" y="282">Sans eux, il comble les trous au plus probable.</text>
+</svg>

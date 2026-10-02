@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" role="img" aria-labelledby="guardrails-t">
+<title id="guardrails-t">Une demande traverse un filtre d'entrée, le modèle, puis un filtre de sortie avant de devenir une réponse ; chaque filtre peut bloquer. Sur 10 000 attaques contre Claude 3.5 Sonnet, 86 % des jailbreaks passaient sans filtres et 4,4 % avec.</title>
+<text class="m mu" x="130" y="16" text-anchor="middle">demande</text>
+<path class="lm" d="M130 24 v12"/><path class="lm" d="M125 31 l5 5 l5 -5"/>
+<rect class="bxa" x="40" y="40" width="180" height="34" rx="5"/>
+<text class="b ac" x="130" y="62" text-anchor="middle">filtre d'entrée</text>
+<path class="lr dash" d="M220 57 h46"/><path class="lr" d="M260 52 l6 5 l-6 5"/>
+<text class="m red" x="274" y="61">bloquée</text>
+<path class="lm" d="M130 74 v12"/><path class="lm" d="M125 81 l5 5 l5 -5"/>
+<rect class="bx" x="40" y="90" width="180" height="34" rx="5"/>
+<text class="b" x="130" y="112" text-anchor="middle">modèle</text>
+<path class="lm" d="M130 124 v12"/><path class="lm" d="M125 131 l5 5 l5 -5"/>
+<rect class="bxa" x="40" y="140" width="180" height="34" rx="5"/>
+<text class="b ac" x="130" y="162" text-anchor="middle">filtre de sortie</text>
+<path class="lr dash" d="M220 157 h46"/><path class="lr" d="M260 152 l6 5 l-6 5"/>
+<text class="m red" x="274" y="161">bloquée</text>
+<path class="lm" d="M130 174 v12"/><path class="lm" d="M125 181 l5 5 l5 -5"/>
+<text class="m mu" x="130" y="202" text-anchor="middle">réponse</text>
+<path class="ln" d="M0 222 h360"/>
+<text class="m d" x="0" y="244">jailbreaks réussis, 10 000 attaques</text>
+<text class="m" x="0" y="272">sans filtres</text>
+<rect class="bx" x="120" y="261" width="172" height="14" rx="2"/>
+<text class="m" x="300" y="273">86 %</text>
+<text class="m" x="0" y="302">avec filtres</text>
+<rect class="fa" x="120" y="291" width="9" height="14" rx="2"/>
+<text class="m ac" x="137" y="303">4,4 %</text>
+<text class="i mu" x="0" y="332">Une attaque doit tromper le modèle et chaque filtre.</text>
+</svg>
