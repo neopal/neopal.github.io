@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" role="img" aria-labelledby="responsabilite-t">
+<title id="responsabilite-t">La chaîne des responsabilités autour d'une IA : le fournisseur du modèle, tenu par l'AI Act depuis le 2 août 2025, signe un contrat qui plafonne sa responsabilité avec l'entreprise qui déploie, tenue par les règles du haut risque à partir du 2 décembre 2027 ; la personne lésée peut invoquer la directive sur les produits défectueux à partir du 9 décembre 2026. Le modèle n'apparaît dans aucune case.</title>
+<rect class="bxa" x="0" y="0" width="360" height="62" rx="6"/>
+<text class="b" x="14" y="26">fournisseur du modèle</text>
+<text class="m mu" x="14" y="48">AI Act, modèles généralistes, 2 août 2025</text>
+<path class="lm" d="M40 62 V104"/><path class="lm" d="M34 97 l6 7 l6 -7"/>
+<text class="m ac" x="56" y="88">contrat, responsabilité plafonnée</text>
+<rect class="bxa" x="0" y="106" width="360" height="62" rx="6"/>
+<text class="b" x="14" y="132">entreprise qui déploie</text>
+<text class="m mu" x="14" y="154">AI Act, haut risque, 2 décembre 2027</text>
+<path class="lm" d="M40 168 V210"/><path class="lm" d="M34 203 l6 7 l6 -7"/>
+<text class="m ac" x="56" y="194">service, chatbot, tri de CV</text>
+<rect class="bxa" x="0" y="212" width="360" height="62" rx="6"/>
+<text class="b" x="14" y="238">client, candidat, utilisateur</text>
+<text class="m mu" x="14" y="260">produits défectueux, 9 décembre 2026</text>
+<text class="i mu" x="3" y="310">Le modèle n'apparaît dans aucune case,</text>
+<text class="i mu" x="3" y="330">faute de personnalité juridique.</text>
+</svg>
