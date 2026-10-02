@@ -1,4 +1,5 @@
 <!doctype html>
+<!-- généré par scripts/build-lexique.mjs, ne pas éditer : modifier lexique/terms.js puis relancer -->
 <html lang="fr" data-term="modeles-frontiere">
 <head>
 <meta charset="utf-8">
@@ -19,8 +20,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Modèles frontière | Lexique IA">
 <meta name="twitter:description" content="Un modèle frontière est l&#39;un des quelques modèles les plus capables à une date donnée ; la loi californienne SB 53 reprend le mot et le définit par le…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/modeles-frontiere.jpg">
-<meta name="theme-color" content="#0b0b0b">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/modeles-frontiere.jpg"><meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,6 +89,7 @@ h1[tabindex]:focus{outline:none}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
 .mapclose{display:none}
+.ego{display:none}
 
 .panel{padding:40px 40px 80px;background:var(--panel);min-width:0}
 .kicker{font-size:16px;font-weight:600;color:var(--cat,var(--accent));margin-bottom:10px}
@@ -186,11 +187,54 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
-  .viewtoggle,.az{display:none!important}
-  .graph-wrap.open #graph{display:block!important}
-  .graph-wrap.open .legend{display:flex!important}
-  .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
-  .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
+  .viewtoggle,.az,#graph,.legend{display:none!important}
+
+  /* Carte mobile : vue centrée sur un terme, ses liens autour. */
+  .graph-wrap.open .ego{display:flex;flex-direction:column;height:100%}
+  .egobar{flex:none;display:flex;align-items:center;gap:8px;height:var(--top);padding:0 12px;border-bottom:1px solid var(--line)}
+  .egobar button{font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;min-height:44px;padding:0 14px;cursor:pointer}
+  .egobar .egoback{display:flex;align-items:center;gap:6px;padding:0 12px 0 10px}
+  .egobar .egoback[hidden]{display:none}
+  .mapclose{display:block;margin-left:auto}
+  .egostage{position:relative;flex:1 1 auto;min-height:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain}
+  .egonodes{position:relative;width:100%}
+  .egoedges{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+  .eg{position:absolute;left:0;top:0;will-change:transform,opacity}
+  .eg button{font:inherit;color:var(--text);background:transparent;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .eg .dot{flex:none;display:block;width:var(--d,14px);height:var(--d,14px);border-radius:50%;background:var(--c)}
+  .eg .lab{display:block;font-size:17px;line-height:1.2;font-weight:600;background:var(--bg);padding:2px 4px;border-radius:6px}
+  .eg .n{font-family:var(--mono);font-size:14px;font-weight:400;color:var(--muted);margin-left:6px;white-space:nowrap}
+  .eg .nb{display:flex;align-items:center;gap:8px;min-height:44px;padding:6px 4px;border-radius:10px}
+  .eg.l .nb{flex-direction:row-reverse;text-align:right}
+  .eg.r .nb{text-align:left}
+  .eg.tip .nb{flex-direction:column;gap:6px;text-align:center}
+  .eg.tip.up .nb{flex-direction:column-reverse}
+  .eg .nb:active .lab,.eg .nb:hover .lab{color:var(--c)}
+  .eg .nb:focus-visible{outline-offset:0}
+  .eg .nb:focus-visible .dot{box-shadow:0 0 0 3px var(--bg),0 0 0 5px #fff}
+  .eg.card{display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px 16px 10px;border:1.5px solid var(--c);border-radius:16px;background:var(--bg)}
+  .eg.card .ct{display:block;min-height:44px;font-size:28px;line-height:1.08;font-weight:800;font-variation-settings:'opsz' 72;letter-spacing:-.01em;padding:4px 2px;border-radius:8px}
+  .eg.card .cc{display:block;font-size:15px;font-weight:600;color:var(--c);min-height:44px;padding:0 10px;border-radius:8px}
+  .eg.card.root{border-color:var(--line);padding:14px 22px}
+  .eg.card.root .cn{font-family:var(--mono);font-size:15px;color:var(--muted)}
+  .eg.card.pop>*{animation:egpop .42s cubic-bezier(.2,.8,.2,1)}
+  @keyframes egpop{from{opacity:.3;transform:scale(.82)}}
+  .egolist{padding:18px 16px 32px}
+  .egolist .crumb{font:inherit;font-size:16px;color:var(--muted);background:transparent;border:0;min-height:44px;padding:0;cursor:pointer;display:flex;align-items:center;gap:6px}
+  .egolist h2:focus{outline:none}
+  .egolist h2{margin:2px 0 10px;font-size:30px;line-height:1.1;font-style:italic;color:var(--c)}
+  .egolist ul{list-style:none}
+  .egolist li{border-top:1px solid var(--line)}
+  .egolist li button{width:100%;display:flex;align-items:baseline;column-gap:10px;min-height:52px;padding:13px 0;font:inherit;font-size:18px;text-align:left;color:var(--text);background:transparent;border:0;cursor:pointer}
+  .egolist li i{flex:none;width:10px;height:10px;border-radius:50%;background:var(--c);transform:translateY(-1px)}
+  .egolist li .t{margin-right:4px}
+  .egolist li .e{white-space:nowrap;font-family:var(--mono);font-size:14px;color:var(--muted)}
+  .egolist.in{animation:egfade .22s ease-out}
+  @keyframes egfade{from{opacity:0;transform:translateY(8px)}}
+  .egofoot{flex:none;padding:10px 16px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+  .egofoot[hidden]{display:none}
+  .egoread{display:block;width:100%;min-height:48px;font:inherit;font-size:17px;font-weight:600;color:#0b0b0b;background:var(--c,var(--accent));border:0;border-radius:10px;cursor:pointer}
+  .egoread:focus-visible{outline-color:#fff}
 
   .panel{padding:24px 16px calc(96px + env(safe-area-inset-bottom))}
   h1{font-size:38px;margin-bottom:14px}
@@ -222,9 +266,8 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   body.has-pager .panel{padding-bottom:24px}
   .toast{bottom:calc(72px + env(safe-area-inset-bottom))}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
-
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/modeles-frontiere/#term","name":"Modèles frontière","description":"Un modèle frontière est l'un des quelques modèles les plus capables à une date donnée ; la loi californienne SB 53 reprend le mot et le définit par le calcul dépensé pour l'entraîner, plus de 10^26 opérations.","url":"https://neopal.github.io/lexique/modeles-frontiere/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Frontier models","frontier model","frontier AI","frontier lab","state of the art","SOTA","modèle de pointe","IA de frontière"]}</script>
@@ -245,7 +288,17 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 
 <div class="layout">
   <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
-    <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="ego" id="ego">
+      <div class="egobar">
+        <button class="egoback" id="egoBack" type="button" hidden><span aria-hidden="true">←</span>Retour</button>
+        <button class="mapclose" id="mapClose" type="button">Fermer</button>
+      </div>
+      <div class="egostage" id="egoStage">
+        <div class="egonodes" id="egoNodes"><svg class="egoedges" id="egoEdges" aria-hidden="true"></svg></div>
+        <div class="egolist" id="egoList" hidden></div>
+      </div>
+      <div class="egofoot" id="egoFoot" hidden><button class="egoread" id="egoRead" type="button">Lire la fiche</button></div>
+    </div>
     <div class="viewtoggle" role="group" aria-label="Affichage des termes">
       <button type="button" data-view="list" aria-pressed="true">Liste</button>
       <button type="button" data-view="map" aria-pressed="false">Carte</button>
@@ -632,7 +685,8 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
+    // Sur mobile, le graphe complet n'est jamais affiché : la carte passe par la vue centrée.
+    return !mqMobile.matches && map.dataset.view === 'map';
   }
 
   // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
@@ -740,12 +794,12 @@ window.__lexBoot = function () {
     map.setAttribute('aria-modal', 'true');
     openBtn.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
-    fit();
-    startLoop();
-    document.getElementById('mapClose').focus();
+    egoStack.length = 0;
+    egoShow(current ? {kind: 'term', id: current.id} : {kind: 'root'}, {instant: true});
   }
   function closeMap(restore) {
     if (!map.classList.contains('open')) return;
+    cancelAnimationFrame(egoRaf);
     map.classList.remove('open');
     map.removeAttribute('role');
     map.removeAttribute('aria-modal');
@@ -756,12 +810,336 @@ window.__lexBoot = function () {
   openBtn.addEventListener('click', openMap);
   document.getElementById('mapClose').addEventListener('click', () => closeMap(true));
 
+  // ---------- Carte mobile : vue centrée ----------
+  // Un terme au centre, ses liens (t.links, ordre éditorial) au-dessus et au-dessous, en deux colonnes
+  // qui s'écartent près du centre. Sans terme ouvert : les catégories autour, puis la liste de leurs termes.
+  const egoStage = document.getElementById('egoStage');
+  const egoNodes = document.getElementById('egoNodes');
+  const egoEdges = document.getElementById('egoEdges');
+  const egoList = document.getElementById('egoList');
+  const egoBack = document.getElementById('egoBack');
+  const egoFoot = document.getElementById('egoFoot');
+  const egoRead = document.getElementById('egoRead');
+  const esc = R.escapeHtml;
+  const catCount = {};
+  TERMS.forEach((t) => { catCount[t.cat] = (catCount[t.cat] || 0) + 1; });
+  const egoEls = new Map(); // clé -> {key, el, x, y, o, ax, ay, side}
+  const egoStack = [];
+  let egoState = null;
+  let egoRing = null; // {center, nbs: [{key, side}]}
+  let egoRaf = 0;
+  const DUR = 440;
+  const ease = (k) => (k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2);
+
+  function egoNode(key) {
+    let n = egoEls.get(key);
+    if (!n) {
+      const el = document.createElement('div');
+      n = {key, el, x: 0, y: 0, o: 0, ax: 0, ay: 0, fresh: true};
+      egoEls.set(key, n);
+    }
+    return n;
+  }
+
+  // Contenu d'un nœud selon son rôle : carte centrale, voisin en colonne (l / r) ou en pointe (tip up / down).
+  function fillNode(n, role, side, c) {
+    n.el.className = `eg ${role === 'card' ? 'card' : side}`;
+    n.el.style.setProperty('--c', c.color);
+    n.el.innerHTML = c.html;
+  }
+
+  function termCard(t) {
+    const cat = CATS[t.cat] || {};
+    return {color: color(t), html: `<button type="button" class="ct" data-read="${t.id}">${esc(t.title)}</button><button type="button" class="cc" data-ego-cat="${t.cat}">${esc(cat.label || '')}</button>`};
+  }
+  function termNb(t) {
+    return {color: color(t), html: `<button type="button" class="nb" data-ego="${t.id}"><i class="dot" aria-hidden="true"></i><span class="lab">${esc(t.graphLabel || t.title)}</span></button>`};
+  }
+  function catNb(k) {
+    const d = Math.round(12 + Math.min(catCount[k] || 0, 15) * 0.7);
+    return {color: CATS[k].color, html: `<button type="button" class="nb" data-ego-cat="${k}" style="--d:${d}px"><i class="dot" aria-hidden="true"></i><span class="lab">${esc(CATS[k].label)}<span class="n">${catCount[k] || 0}</span></span></button>`};
+  }
+
+  // Répartition : moitié au-dessus, moitié au-dessous ; un nombre impair donne une pointe seule à l'extrémité.
+  function rowsFor(k) {
+    const r = [];
+    let left = k;
+    if (left % 2) { r.push(1); left--; }
+    while (left > 0) { r.push(2); left -= 2; }
+    return r; // de l'extrémité vers le centre
+  }
+
+  function egoLayout() {
+    if (!egoRing) return;
+    const W = egoStage.clientWidth;
+    const H = egoStage.clientHeight;
+    const cx = W / 2;
+    const nbs = egoRing.nbs;
+    const N = nbs.length;
+    const up = rowsFor(Math.ceil(N / 2));
+    const down = rowsFor(N - Math.ceil(N / 2)).reverse();
+    // Écart entre les deux colonnes : large près du centre, resserré aux extrémités.
+    const gNear = Math.min(64, W * 0.13);
+    const gFar = 14;
+    const depth = Math.max(up.length, down.length, 1);
+    const gap = (d) => gFar + (gNear - gFar) * (1 - (d - 1) / Math.max(depth, 1));
+    // Rangées : [{items: [nb], d (distance au centre), half: 'up'|'down'}]
+    const rows = [];
+    let i = 0;
+    up.forEach((cnt, ri) => { rows.push({items: nbs.slice(i, i + cnt), d: up.length - ri, half: 'up'}); i += cnt; });
+    const centerIndex = rows.length;
+    rows.push({center: true});
+    down.forEach((cnt, ri) => { rows.push({items: nbs.slice(i, i + cnt), d: ri + 1, half: 'down'}); i += cnt; });
+
+    // Rôles et largeurs maximales, puis mesure.
+    const center = egoEls.get(egoRing.center);
+    center.el.style.maxWidth = Math.min(W - 40, 440) + 'px';
+    rows.forEach((row) => {
+      if (row.center) return;
+      row.items.forEach((nb, j) => {
+        const n = egoEls.get(nb.key);
+        const tip = row.items.length === 1;
+        nb.side = tip ? `tip ${row.half}` : (j === 0 ? 'l' : 'r');
+        n.el.classList.remove('l', 'r', 'tip', 'up', 'down');
+        nb.side.split(' ').forEach((s) => n.el.classList.add(s));
+        n.el.style.maxWidth = (tip ? Math.min(W - 40, 300) : Math.max(110, cx - gap(row.d) + 12 - 14)) + 'px';
+      });
+    });
+    const sizes = new Map();
+    egoEls.forEach((n) => {
+      const dot = n.el.querySelector('.dot');
+      const w = n.el.offsetWidth, h = n.el.offsetHeight;
+      let ax = w / 2, ay = h / 2;
+      if (dot && !n.el.classList.contains('card')) {
+        // offsetLeft/Top sont relatifs au nœud (positionné) : centre de la pastille.
+        ax = dot.offsetLeft + dot.offsetWidth / 2;
+        ay = dot.offsetTop + dot.offsetHeight / 2;
+      }
+      sizes.set(n.key, {w, h, ax, ay});
+    });
+    rows.forEach((row) => {
+      row.h = row.center ? sizes.get(egoRing.center).h : Math.max(...row.items.map((nb) => sizes.get(nb.key).h));
+    });
+    const sum = rows.reduce((s, r) => s + r.h, 0);
+    const gaps = rows.length - 1;
+    const pad = 16;
+    const free = H - pad * 2 - sum;
+    const g = Math.max(12, Math.min(60, gaps ? free / (gaps + 2) : 0));
+    const used = sum + g * gaps;
+    const innerH = Math.max(H, used + pad * 2);
+    let y = Math.max(pad, (innerH - used) / 2);
+    const targets = new Map();
+    rows.forEach((row) => {
+      if (row.center) {
+        const s = sizes.get(egoRing.center);
+        targets.set(egoRing.center, {x: cx, y: y + s.h / 2, s});
+        row.top = y; row.bottom = y + s.h;
+      } else {
+        row.items.forEach((nb, j) => {
+          const s = sizes.get(nb.key);
+          const tip = row.items.length === 1;
+          let dx = 0;
+          if (!tip) dx = (j === 0 ? -1 : 1) * gap(row.d);
+          // Pastille sur la colonne ; le libellé part vers l'extérieur. On garde 12 px de marge à l'écran.
+          let x = cx + dx;
+          const left = x - s.ax, right = left + s.w;
+          if (left < 12) x += 12 - left;
+          if (right > W - 12) x -= right - (W - 12);
+          const top = row.half === 'up' ? y + row.h - s.h : y;
+          targets.set(nb.key, {x, y: top + s.ay, s});
+        });
+      }
+      y += row.h + g;
+    });
+    egoNodes.style.height = innerH + 'px';
+    egoEdges.setAttribute('width', W);
+    egoEdges.setAttribute('height', innerH);
+    egoEdges.setAttribute('viewBox', `0 0 ${W} ${innerH}`);
+    return targets;
+  }
+
+  function applyNode(n) {
+    n.el.style.transform = `translate(${Math.round(n.x - n.ax)}px,${Math.round(n.y - n.ay)}px)`;
+    n.el.style.opacity = n.o.toFixed(3);
+    n.el.style.visibility = n.o < 0.01 ? 'hidden' : '';
+  }
+
+  // Liens : courbes du bord de la carte centrale vers chaque pastille.
+  function drawEdges() {
+    if (!egoRing) { egoEdges.innerHTML = ''; return; }
+    const c = egoEls.get(egoRing.center);
+    const ch = c.el.offsetHeight;
+    const stroke = egoState.kind === 'term' ? color(byId[egoState.id]) : null;
+    egoEdges.innerHTML = egoRing.nbs.map((nb) => {
+      const n = egoEls.get(nb.key);
+      if (!n) return '';
+      const upward = n.y < c.y;
+      const sx = c.x, sy = c.y + (upward ? -ch / 2 : ch / 2);
+      const my = (sy + n.y) / 2;
+      const col = stroke || n.el.style.getPropertyValue('--c');
+      return `<path d="M${sx.toFixed(1)} ${sy.toFixed(1)}C${sx.toFixed(1)} ${my.toFixed(1)} ${n.x.toFixed(1)} ${my.toFixed(1)} ${n.x.toFixed(1)} ${n.y.toFixed(1)}" fill="none" stroke="${col}" stroke-width="1.5" stroke-opacity="${(0.55 * Math.min(n.o, c.o)).toFixed(3)}"/>`;
+    }).join('');
+  }
+
+  // Affiche un état de la carte. opts : {push, origin (clé du nœud touché), instant, focusKey}.
+  function egoShow(state, opts = {}) {
+    if (opts.push && egoState) egoStack.push(egoState);
+    egoState = state;
+    egoBack.hidden = !egoStack.length;
+    cancelAnimationFrame(egoRaf);
+    const animate = !opts.instant && !mqReduced.matches;
+    // Les nœuds qui disparaissaient encore sont retirés tout de suite.
+    egoEls.forEach((n) => { if (n.leaving) { n.el.remove(); egoEls.delete(n.key); } });
+    const term = state.kind === 'term' ? byId[state.id] : null;
+    egoFoot.hidden = !term;
+    if (term) egoFoot.style.setProperty('--c', color(term));
+
+    if (state.kind === 'cat') {
+      // Liste des termes de la catégorie.
+      egoRing = null;
+      egoEls.forEach((n) => { n.el.remove(); });
+      egoEls.clear();
+      egoEdges.innerHTML = '';
+      egoNodes.hidden = true;
+      const cat = CATS[state.cat];
+      egoList.style.setProperty('--c', cat.color);
+      egoList.innerHTML = `<button type="button" class="crumb" data-ego-root><span aria-hidden="true">←</span>Catégories</button><h2 tabindex="-1">${esc(cat.label)}</h2><ul>${TERMS.filter((t) => t.cat === state.cat).map((t) => {
+        const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${esc(t.en)}</span>` : '';
+        return `<li><button type="button" data-ego="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="tx"><span class="t">${esc(t.title)}</span>${en ? ' ' + en : ''}</span></button></li>`;
+      }).join('')}</ul>`;
+      egoList.hidden = false;
+      egoList.classList.remove('in');
+      if (animate) { void egoList.offsetWidth; egoList.classList.add('in'); }
+      egoStage.scrollTop = 0;
+      const f = opts.focusKey && egoList.querySelector(`[data-ego="${opts.focusKey}"]`);
+      (f || egoList.querySelector('h2')).focus({preventScroll: !f});
+      return;
+    }
+
+    egoList.hidden = true;
+    egoList.innerHTML = '';
+    egoNodes.hidden = false;
+    const prev = egoRing;
+    const keep = new Set();
+    let centerKey, nbItems;
+    if (term) {
+      centerKey = 't:' + term.id;
+      fillNode(egoNode(centerKey), 'card', '', termCard(term));
+      nbItems = (term.links || []).map((id) => byId[id]).filter(Boolean).map((t) => ({key: 't:' + t.id, c: termNb(t)}));
+    } else {
+      centerKey = 'root';
+      const n = egoNode('root');
+      n.el.className = 'eg card root';
+      n.el.style.setProperty('--c', 'var(--line)');
+      n.el.innerHTML = `<span class="cn">${TERMS.length} termes</span>`;
+      nbItems = Object.keys(CATS).map((k) => ({key: 'c:' + k, c: catNb(k)}));
+    }
+    keep.add(centerKey);
+    nbItems.forEach((it) => { keep.add(it.key); fillNode(egoNode(it.key), 'nb', 'r', it.c); });
+    egoRing = {center: centerKey, nbs: nbItems.map((it) => ({key: it.key}))};
+
+    // Ordre du DOM = ordre de lecture : la carte, puis les liens dans l'ordre éditorial.
+    egoNodes.append(egoEls.get(centerKey).el, ...nbItems.map((it) => egoEls.get(it.key).el));
+    const targets = egoLayout();
+    const centerT = targets.get(centerKey);
+    const originN = opts.origin && egoEls.get(opts.origin);
+    const wasCenter = prev && prev.center === centerKey;
+    const cEl = egoEls.get(centerKey).el;
+    cEl.classList.toggle('pop', animate && !wasCenter && !!originN);
+
+    const from = new Map();
+    egoEls.forEach((n) => {
+      const t = targets.get(n.key);
+      if (t) { n.ax = t.s.ax; n.ay = t.s.ay; }
+      if (n.fresh) {
+        // Les nouveaux liens partent du centre, à l'endroit où arrive la carte.
+        n.x = centerT.x; n.y = centerT.y; n.o = 0; n.fresh = false;
+      }
+      from.set(n.key, {x: n.x, y: n.y, o: n.o});
+      if (!keep.has(n.key)) n.leaving = true;
+      applyNode(n);
+    });
+
+    const finish = () => {
+      egoEls.forEach((n) => { if (n.leaving) { n.el.remove(); egoEls.delete(n.key); } });
+    };
+    const step = (now, t0) => {
+      const k = animate ? Math.min(1, (now - t0) / DUR) : 1;
+      const e = ease(k);
+      egoEls.forEach((n) => {
+        const f = from.get(n.key);
+        const t = targets.get(n.key);
+        if (t) { n.x = f.x + (t.x - f.x) * e; n.y = f.y + (t.y - f.y) * e; n.o = f.o + (1 - f.o) * Math.min(1, e * 1.4); }
+        else { n.o = f.o * (1 - Math.min(1, k * 2.2)); }
+        applyNode(n);
+      });
+      drawEdges();
+      if (k < 1) egoRaf = requestAnimationFrame((t) => step(t, t0));
+      else finish();
+    };
+    if (animate) { const t0 = performance.now(); egoRaf = requestAnimationFrame((t) => step(t, t0)); }
+    else step(0, 0);
+
+    if (!opts.keepScroll) egoStage.scrollTop = 0;
+    const fk = opts.focusKey && egoEls.get(opts.focusKey) && targets.has(opts.focusKey) ? opts.focusKey : centerKey;
+    const fEl = egoEls.get(fk).el.querySelector('button') || egoEls.get(fk).el;
+    if (fEl.tagName !== 'BUTTON') { egoEls.get(fk).el.tabIndex = -1; }
+    fEl.focus({preventScroll: true});
+  }
+
+  // Relayout sans animation (rotation, clavier virtuel, redimensionnement).
+  function egoRelayout() {
+    if (!map.classList.contains('open') || !egoRing) return;
+    cancelAnimationFrame(egoRaf);
+    egoEls.forEach((n) => { if (n.leaving) { n.el.remove(); egoEls.delete(n.key); } });
+    const targets = egoLayout();
+    egoEls.forEach((n) => { const t = targets.get(n.key); if (t) { n.ax = t.s.ax; n.ay = t.s.ay; n.x = t.x; n.y = t.y; n.o = 1; applyNode(n); } });
+    drawEdges();
+  }
+
+  function egoReadTerm(id) { if (go(id)) closeMap(false); }
+
+  egoStage.addEventListener('click', (e) => {
+    const b = e.target.closest('button');
+    if (!b) return;
+    const node = b.closest('.eg');
+    const originKey = node && [...egoEls.values()].find((n) => n.el === node);
+    if (b.dataset.read) egoReadTerm(b.dataset.read);
+    else if (b.dataset.ego) {
+      if (egoState.kind === 'term' && egoState.id === b.dataset.ego) return;
+      egoShow({kind: 'term', id: b.dataset.ego}, {push: true, origin: originKey && originKey.key});
+    } else if (b.dataset.egoCat) egoShow({kind: 'cat', cat: b.dataset.egoCat}, {push: true});
+    else if ('egoRoot' in b.dataset) egoShow({kind: 'root'}, {push: true});
+  });
+  egoBack.addEventListener('click', () => {
+    const was = egoState;
+    const prevState = egoStack.pop();
+    if (!prevState) return;
+    const focusKey = was.kind === 'term' ? (prevState.kind === 'cat' ? was.id : 't:' + was.id) : was.kind === 'cat' ? 'c:' + was.cat : null;
+    egoShow(prevState, {focusKey});
+  });
+  egoRead.addEventListener('click', () => { if (egoState && egoState.kind === 'term') egoReadTerm(egoState.id); });
+
+  // Le focus reste dans la carte tant qu'elle est ouverte.
+  map.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab' || !map.classList.contains('open')) return;
+    const f = [...map.querySelectorAll('.ego button')].filter((b) => {
+      if (b.closest('[hidden]')) return false;
+      const node = b.closest('.eg');
+      return !node || node.style.visibility !== 'hidden';
+    });
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
   document.getElementById('legend').innerHTML = Object.values(CATS)
     .map((c) => `<span><i style="background:${c.color}"></i>${R.escapeHtml(c.label)}</span>`)
     .join('') + '<span><i style="background:#1a1a1a;border:1.5px solid #555"></i>à venir</span>';
 
   mqMobile.addEventListener('change', () => { if (!mqMobile.matches) closeMap(false); fit(); startLoop(); });
-  window.addEventListener('resize', () => { fit(); startLoop(); });
+  window.addEventListener('resize', () => { fit(); startLoop(); egoRelayout(); });
   document.addEventListener('visibilitychange', startLoop);
 
   let savedView = 'list';
