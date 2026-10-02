@@ -40,7 +40,53 @@ Toutes les fiches et tous les shorts se passent dans le même studio, avec les m
 ## Règles d'usage
 
 1. Une image par fiche, tirée de ce casting. Pas de métaphore filée sur trois paragraphes.
-2. Chaque fiche a son « Imagine » : une situation impossible et ironique dans le studio, qui montre la limite du modèle sans l'expliquer (« Imagine un producteur qui... »). C'est la signature du dico : on simplifie sans mentir, et on fait sourire.
+2. Chaque fiche a son « Imagine » : un moment qui fait sentir le concept ou sa limite sans l'expliquer. C'est la signature du lexique, on simplifie sans mentir et on fait sourire, mais la forme change d'une fiche à l'autre (voir « Les formes de l'Imagine ») pour que la formule ne se voie pas.
+
+## Les formes de l'Imagine
+
+Cinq formes, une par fiche. Deux fiches reliées dans le graphe (dans un sens ou dans l'autre) n'utilisent jamais la même forme ; on le vérifie au script, pas à l'œil.
+
+| Forme | Ce que c'est | Règle |
+|---|---|---|
+| **A. L'ordre de grandeur rendu physique** | Un chiffre réel traduit en durée, en distance ou en livre (« si tu lisais les paramètres un par seconde... ») | Chiffres vérifiés ou calculés, le calcul est donné en source |
+| **B. L'expérience à faire soi-même** | Un essai de 30 secondes que le lecteur peut faire tout de suite, avec un voisin ou un chatbot | On ne promet que ce qui se reproduit à coup sûr |
+| **C. La scène absurde du studio** | Une situation impossible avec les personnages du casting, qui finit sur une chute | Deux fiches au maximum dans tout le lexique |
+| **D. Le dialogue à deux répliques** | Une question, une réponse, entre guillemets « » avec leur attribution (pas de tiret de dialogue) | La réponse montre la limite sans la commenter |
+| **E. L'avant / après** | La même situation vue deux fois, une seule chose a changé | La chose qui change, c'est le concept de la fiche |
+
+Attribution actuelle :
+
+| Fiche | Forme |
+|---|---|
+| Token | D (« la troisième lettre de bonjour ») |
+| Mythe : la base de données | C (« la page 112 ») |
+| Paramètres | A (21 000 ans pour lire DeepSeek-V3) |
+| Prédiction du mot suivant | B (« Il était une » avec ton voisin) |
+| Hallucination | D (le résumé d'une thèse de 1962 sur les pigeons voyageurs) |
+| Fenêtre de contexte | A (Proust sur la bande) |
+| Tokenizer | C (trois « bonjour », trois découpages) |
+| Embedding | E (« congé maternité » contre « Politique parentalité ») |
+| Température | E (le nom du bar, curseur à gauche puis à fond) |
+| RAG | B (le menu de la cantine collé dans la conversation) |
+
+Quand on ajoute une fiche, on regarde les formes de ses voisines et on prend une forme libre ; si les cinq sont prises, on retire un lien faible plutôt que de répéter une forme.
+
+## Correspondance anglaise
+
+Chaque fiche porte, juste après son titre :
+- `en` : le terme anglais principal, celui qu'on lit dans la doc et les articles ;
+- `aliases` : les variantes et abréviations courantes ;
+- `jargon` : 0 à 4 formules qu'on entend vraiment (« un modèle 7B », « 1M context », « temp 0 ») avec leur traduction claire. Pas de jargon inventé pour remplir ; un chiffre dans une traduction est sourcé comme le reste.
+- `aliases` ne contient que de l'anglais ; les variantes françaises (« jeton », « poids ») vont dans `aliasesFr`, affiché sous « Aussi appelé ». Les deux sont cherchables ; un alias qui n'est que le pluriel du titre reste cherchable mais ne s'affiche pas.
+
+## Solutions populaires
+
+Champ optionnel `solutions: [{name, kind, url}]`, rendu après « Dans le jargon » et cherchable par nom (taper « Pinecone » mène au RAG).
+- Seulement quand le lecteur repart avec un outil à essayer : RAG, Embedding, Tokenizer, Token, Paramètres. Pas ailleurs sans évidence.
+- 6 entrées au plus, groupées par `kind`, un type court en français (« base vectorielle », « modèle d'embedding », « plateforme cloud », « bibliothèque open source », « outil pour tester »).
+- Mélanger commercial, cloud et open source.
+- URL = site ou doc officielle, vérifiée avant publication (une URL qui ne répond pas se corrige ou l'entrée sort).
+- Aucun adjectif commercial, aucune affirmation de part de marché.
 
 ## Le studio dans les shorts
 
@@ -82,7 +128,7 @@ Règles de rythme et de visuel (retour PA sur la v3, 2026-10-02) :
 
 ## Gabarit d'une fiche
 
-En une phrase (ELI5) > L'image (studio) > Imagine (situation impossible) > Définition complète (le sérieux) > 2024 vs 2026 (si une vraie évolution existe) > Entendu au bureau > À éviter > Script du short.
+En une phrase (ELI5, littérale : le studio n'y entre pas) > Correspondance anglaise (en, aliases anglais, aliasesFr, jargon) > L'image (studio, en disant qui est qui, avec une ouverture différente d'une fiche à l'autre : « vois le tokenizer comme... », « dans le studio, c'est... », « si le modèle est un groupe... », « le chanteur, c'est... » ; deux fiches n'ouvrent jamais leur image par la même tournure) > Imagine (une des cinq formes) > Définition complète (le sérieux) > 2024 vs 2026 (si une vraie évolution existe) > Entendu au bureau > À éviter > Script du short.
 3. Le studio sert l'explication ; si un concept s'explique mieux sans lui, on s'en passe et on le dit.
 4. Les exemples sont récents (2025-2026) dès qu'ils existent ; la rubrique « 2024 vs 2026 » apparaît seulement quand il y a une vraie évolution à raconter.
 
@@ -91,3 +137,7 @@ En une phrase (ELI5) > L'image (studio) > Imagine (situation impossible) > Défi
 - Nom de la section : **Lexique IA**. Wordmark en texte simple, une seule couleur (pas de « IA » en couleur d'accent).
 - Aucun micro-texte décoratif : pas de surtitre qui répète le titre, pas de légende qui décrit l'évidence (« La version courte en 30 secondes, à partager »), pas d'indication d'usage quand l'interface parle d'elle-même.
 - Test avant mise en ligne : lister chaque texte qui n'est pas du contenu (surtitres, légendes, aides, libellés) et supprimer ceux qu'un lecteur ne regretterait pas.
+
+## Gestes de prose
+
+Les gestes tirés des livres d'inspiration de PA (verbes anthropomorphes marqués, exemple fil rouge, terme pivot FR avec l'anglais une fois, histoire vraie qui installe l'idée, carte qu'on zoome...) sont dans `gestes-prose.md`, chacun avec son application et sa dérive. Les lire avant d'écrire une fiche ou un script. Le plan de tous les termes à écrire est dans `plan-termes.md`.

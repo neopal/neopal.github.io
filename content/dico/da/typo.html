@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Choix typo</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&family=Schibsted+Grotesk:wght@400;600;800&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0b;--panel:#111;--text:#f2f2f2;--muted:#a8a8a8;--line:#262626;--acc:#7CFFB2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);padding:32px 16px;font-family:Inter,sans-serif}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px;max-width:1500px;margin:0 auto}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:28px 26px 30px}
+.name{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted);margin-bottom:22px}
+.k{font-size:14px;color:var(--acc);margin-bottom:6px}
+h1{font-size:46px;line-height:1.02;margin-bottom:6px}
+.en{font-size:15px;color:var(--muted);margin-bottom:16px}
+.lead{font-size:20px;line-height:1.45;margin-bottom:20px}
+h2{font-size:18px;margin:18px 0 6px}
+p{font-size:17px;line-height:1.6;color:#dcdcdc}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}
+.chip{font-family:'IBM Plex Mono',monospace;font-size:15px;padding:2px 10px;border:1.5px solid var(--acc);border-radius:6px}
+.jar{font-family:'IBM Plex Mono',monospace;font-size:15px;color:var(--acc)}
+.short{margin-top:22px;background:#000;border-radius:12px;aspect-ratio:9/10;display:flex;flex-direction:column;justify-content:center;padding:26px;gap:10px}
+.short .q{font-size:30px;line-height:1.05}
+.short .big{font-size:76px;line-height:.9;color:var(--acc)}
+/* A */
+.a h1,.a .lead,.a h2,.a .short{font-family:Newsreader,serif}
+.a h1{font-weight:800;font-variation-settings:'opsz' 72}
+.a .lead{font-weight:400}
+.a p{font-family:Newsreader,serif;font-size:18px}
+.a h2{font-weight:600;font-style:italic}
+.a .short .big{font-weight:800;font-style:italic}
+/* B */
+.b h1,.b h2,.b .short{font-family:'Schibsted Grotesk',sans-serif}
+.b h1{font-weight:800}
+.b .lead,.b p{font-family:Literata,serif}
+.b .lead{font-weight:400}
+.b h2{font-weight:600}
+.b .short .big{font-weight:800}
+/* C */
+.c h1,.c .lead,.c h2,.c p,.c .short{font-family:Inter,sans-serif}
+.c h1,.c .short{font-weight:800}
+</style>
+</head>
+<body>
+<div class="row">
+
+<div class="card a">
+  <div class="name">A. Newsreader + IBM Plex Mono (ma reco)</div>
+  <div class="k">Fondations</div>
+  <h1>Paramètres</h1>
+  <div class="en">En anglais : parameters, aussi weights, params</div>
+  <p class="lead">Les paramètres sont les milliards de réglages internes d'un modèle : tout ce qu'il a appris pendant l'entraînement est stocké là, sous forme de nombres, et nulle part ailleurs.</p>
+  <h2>Dans le jargon</h2>
+  <p><span class="jar">un modèle 7B</span> : un modèle à 7 milliards de paramètres (B pour billion, milliard en anglais).</p>
+  <div class="chips"><span class="chip">st</span><span class="chip">raw</span><span class="chip">berry</span></div>
+  <div class="short"><div class="q">Que sont les paramètres d'un</div><div class="big">modèle ?</div></div>
+</div>
+
+<div class="card b">
+  <div class="name">B. Schibsted Grotesk + Literata + IBM Plex Mono</div>
+  <div class="k">Fondations</div>
+  <h1>Paramètres</h1>
+  <div class="en">En anglais : parameters, aussi weights, params</div>
+  <p class="lead">Les paramètres sont les milliards de réglages internes d'un modèle : tout ce qu'il a appris pendant l'entraînement est stocké là, sous forme de nombres, et nulle part ailleurs.</p>
+  <h2>Dans le jargon</h2>
+  <p><span class="jar">un modèle 7B</span> : un modèle à 7 milliards de paramètres (B pour billion, milliard en anglais).</p>
+  <div class="chips"><span class="chip">st</span><span class="chip">raw</span><span class="chip">berry</span></div>
+  <div class="short"><div class="q">Que sont les paramètres d'un</div><div class="big">MODÈLE ?</div></div>
+</div>
+
+<div class="card c">
+  <div class="name">C. Inter + IBM Plex Mono (actuel)</div>
+  <div class="k">Fondations</div>
+  <h1>Paramètres</h1>
+  <div class="en">En anglais : parameters, aussi weights, params</div>
+  <p class="lead">Les paramètres sont les milliards de réglages internes d'un modèle : tout ce qu'il a appris pendant l'entraînement est stocké là, sous forme de nombres, et nulle part ailleurs.</p>
+  <h2>Dans le jargon</h2>
+  <p><span class="jar">un modèle 7B</span> : un modèle à 7 milliards de paramètres (B pour billion, milliard en anglais).</p>
+  <div class="chips"><span class="chip">st</span><span class="chip">raw</span><span class="chip">berry</span></div>
+  <div class="short"><div class="q">Que sont les paramètres d'un</div><div class="big">MODÈLE ?</div></div>
+</div>
+
+</div>
+</body>
+</html>

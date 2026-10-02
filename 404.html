@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Page introuvable | Pierre-Adrien Lair</title>
+<script>
+// /lexique/<id>/ sans page statique (terme à venir ou pas encore généré) : l'app du lexique sait l'afficher.
+(function () {
+  var m = location.pathname.match(/^(.*\/lexique\/)([a-z0-9-]+)\/?$/);
+  if (m && m[2] !== 'videos' && m[2] !== 'og') location.replace(m[1] + '?term=' + encodeURIComponent(m[2]) + location.hash);
+})();
+</script>
+<style>
+:root{--bg:#0b0b0b;--text:#f2f2f2;--muted:#a8a8a8}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;box-sizing:border-box;background:var(--bg);color:var(--text);font-family:Georgia,'Times New Roman',serif;font-size:18px;line-height:1.6}
+main{max-width:560px}
+h1{font-size:40px;line-height:1.05;margin:0 0 16px}
+p{margin:0 0 12px;color:var(--muted)}
+a{color:var(--text)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Page introuvable</h1>
+  <p>Cette adresse ne correspond à aucune page.</p>
+  <p><a href="/">Accueil</a> · <a href="/lexique/">Lexique IA</a></p>
+</main>
+</body>
+</html>

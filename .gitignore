@@ -13,3 +13,7 @@ Thumbs.db
 # Pilote video
 video/node_modules/
 video/out/
+
+# Livres d'inspiration de PA : jamais commités ni publiés (droits d'auteur)
+sources inspiration/
+sources*/

@@ -1,0 +1,12 @@
+{
+  "embedding": "ed08b8af1e3c5b380100e23d64b6255f30ac5b74e808082f33f3a207d9123c87",
+  "fenetre-de-contexte": "53340571fbbd66b106925a734d5dbf01ed8a9d8a4f0038475206f0fb253fd87d",
+  "hallucination": "eb34407e1bcd9b048e05f19ffe2018548c0adac0ba60b856e7ed575b56941af9",
+  "mythe-base-de-donnees": "100e4eb8f97c9e4ae38fbc8e256ae88c6b4b7c814a20a4f74bb1752634c209ed",
+  "parametres": "c4d55d094b3b2c901fb6d7deb7ba00b938eeccac26425a9d2252b701723ad11a",
+  "prediction-du-mot-suivant": "6663e1429ee3c3e1dc856b3d343ce90bb31cf11e675cd3aadafb1f1532254a22",
+  "rag": "0f6ea41cf174e01a249bdabc8159151d4f8ced1e6bce083e06befe5e8371dc5c",
+  "temperature": "fc34ce01eb6dc2029dc278ef28a493ae2c1e92a7781e7f594f986dca18917660",
+  "token": "e7c01bad3b75f294895ebed64debd2864ff6edc0514430d008cdf35d4808379d",
+  "tokenizer": "415f3512e052e0ad477ec09ec08127db9e254364aacfafa072c0bbf413e46a61"
+}
