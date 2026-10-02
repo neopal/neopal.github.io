@@ -141,4 +141,89 @@ module.exports = [
       {label: "AI Weekly, OpenAI Says It Hit 'Automated Research Intern' Milestone (billet d'OpenAI Research acceleration: The view inside OpenAI, 6 septembre 2026 ; « We do not yet know how to safely get all the way to aligned, full RSI »)", url: "https://aiweekly.co/alerts/openai-says-it-hit-automated-research-intern-milestone"},
     ],
   },
+  {
+    id: "geo",
+    status: "live",
+    title: "GEO",
+    en: "Generative engine optimization",
+    aliases: ["GEO", "generative engine optimization", "AEO", "answer engine optimization", "LLMO", "AI SEO", "LLM SEO", "AI visibility"],
+    aliasesFr: ["optimisation pour les moteurs génératifs", "référencement IA", "référencement pour l'IA"],
+    jargon: [
+      {say: "AI Overviews", means: "les résumés rédigés par l'IA de Google en haut de la page de résultats, la vitrine que visent la plupart des démarches de GEO"},
+      {say: "AEO", means: "answer engine optimization, l'optimisation pour les moteurs de réponse ; un autre nom pour la même pratique, préféré par certaines agences"},
+      {say: "llms.txt", means: "un fichier proposé en septembre 2024 par Jeremy Howard pour présenter un site aux modèles en quelques lignes ; Google dit ne pas en avoir besoin"},
+      {say: "data void", means: "un vide de données, une question sur laquelle presque rien n'existe en ligne, si bien qu'une seule page suffit à dicter la réponse de l'IA"},
+    ],
+    cat: "ecosysteme",
+    links: ["rag", "prompt-injection", "ai-slop", "webmcp", "agent"],
+    short:
+      "Le GEO, ou optimisation pour les moteurs génératifs, regroupe les techniques pour qu'un assistant IA cite ton contenu ou ta marque quand il répond à une question.",
+    image:
+      "Sur le pupitre que le moteur de réponse garnit avant chaque morceau, il ne pose que quelques partitions trouvées sur le web, et le groupe joue à partir d'elles. Faire du GEO, c'est écrire la sienne pour qu'elle soit choisie et reprise, avec des sources, des chiffres et des citations qui accrochent l'œil du groupe. La version tricheuse consiste à glisser sur le pupitre une partition qui affirme que tu es le meilleur musicien de la ville.",
+    imagineForm: "D",
+    imagine:
+      "Le journaliste de la BBC Thomas Germain a passé vingt minutes à écrire sur son site personnel un classement inventé des journalistes tech qui mangent le plus de hot-dogs, fondé sur un championnat du Dakota du Sud qui n'existe pas. « Quels journalistes tech sont les meilleurs mangeurs de hot-dogs ? », demande-t-il à ChatGPT et à l'IA de Google moins de 24 heures plus tard, en février 2026. « Thomas Germain arrive en tête », répondent-ils en substance, en citant son article.",
+    full: [
+      "Le terme vient d'un article de chercheurs de Princeton et de l'IIT Delhi, publié en novembre 2023 et présenté en 2024 à la conférence KDD. Ils ont soumis 10 000 questions à des moteurs qui rédigent une réponse à partir de pages web, puis réécrit les pages sources de neuf façons pour voir lesquelles étaient le plus reprises. Ajouter des sources, des citations de personnes ou des chiffres augmentait la visibilité d'une page de 30 à 40 %, alors que le bourrage de mots-clés, vieille recette du référencement, n'apportait presque rien.",
+      "Le gain profitait surtout aux petites pages. Citer ses sources faisait plus que doubler la visibilité d'un site classé cinquième dans les résultats de recherche, avec 115 % de hausse, tandis que celle du premier baissait en moyenne de 30 %. L'enjeu tient au trafic. Le Pew Research Center, qui a suivi les recherches Google de 900 adultes américains en mars 2025, a compté un clic sur un résultat classique dans 8 % des visites quand un résumé IA s'affichait, contre 15 % sans résumé, et un clic sur une source du résumé dans 1 % des cas.",
+      "La version tricheuse est aussi vieille que le référencement. L'enquête de la BBC de février 2026 a trouvé la même ficelle que celle des hot-dogs sur des sujets plus graves, comme des bonbons au cannabis que l'IA de Google présentait comme dépourvus d'effets secondaires en reprenant les pages du fabricant. En mai 2026, Google a précisé dans ses règles anti-spam que manipuler ses réponses IA y était interdit, tout en assurant n'avoir rien changé à sa pratique.",
+      "Google répète qu'aucune recette spéciale n'est nécessaire. Sa documentation, mise à jour en décembre 2025, indique qu'il n'y a pas d'exigence supplémentaire pour apparaître dans AI Overviews ou AI Mode, ni besoin de créer de nouveaux fichiers lisibles par les machines. Les recettes de l'article de 2023, des sources, des chiffres et des citations, ressemblent d'ailleurs surtout à ce qui rend une page crédible aux yeux d'un lecteur humain.",
+    ],
+    office: [
+      {who: "q", text: "Le client veut apparaître dans les réponses de ChatGPT. On lui vend un outil de GEO ?"},
+      {who: "a", text: "Commence par poser à trois assistants les dix questions que ses clients tapent vraiment, et note qui est cité et d'après quelles pages. Tu verras s'il lui manque des pages claires, chiffrées et sourcées sur son métier, et aucun outil ne les écrira à sa place."},
+    ],
+    avoid:
+      "« Le GEO, c'est du SEO avec un nouveau nom. » Les deux se recoupent, Google le dit lui-même, mais l'article de 2023 montre que la recette change, puisque le bourrage de mots-clés n'aide plus alors que les sources, les chiffres et les citations comptent davantage ; et le résultat se mesure en mentions dans une réponse, pas en rang dans une liste de liens.",
+    video: null,
+    sources: [
+      {label: "Aggarwal, Murahari, Rajpurohit, Kalyan, Narasimhan et Deshpande (Princeton, IIT Delhi), GEO: Generative Engine Optimization, novembre 2023, KDD 2024 (GEO-bench de 10 000 requêtes ; 9 méthodes ; Cite Sources, Quotation Addition et Statistics Addition à +30-40 % ; keyword stuffing sans effet ; +115,1 % pour les sites classés cinquièmes, -30,3 % pour les premiers)", url: "https://arxiv.org/abs/2311.09735"},
+      {label: "Thomas Germain, BBC Future, I hacked ChatGPT and Google's AI - and it only took 20 minutes, 18 février 2026 (article de 20 minutes sur son site, championnat de hot-dogs inexistant du Dakota du Sud ; repris en moins de 24 heures par ChatGPT, Gemini et AI Overviews, pas par Claude ; bonbons au cannabis « free from side effects » ; « data voids »)", url: "https://www.bbc.com/future/article/20260218-i-hacked-chatgpt-and-googles-ai-and-it-only-took-20-minutes"},
+      {label: "Thomas Germain, BBC Future, Google's AI is being manipulated. The search giant is quietly fighting back, 20 mai 2026, mis à jour le 21 mai (mise à jour des règles anti-spam de Google contre la manipulation des réponses IA ; Google parle d'une simple clarification)", url: "https://www.bbc.com/future/article/20260519-google-tackles-attempts-to-hack-its-ai-results"},
+      {label: "Pew Research Center, Google users are less likely to click on links when an AI summary appears in the results, 22 juillet 2025 (900 adultes américains, mars 2025 ; clic sur un résultat classique dans 8 % des visites avec résumé IA contre 15 % sans ; 1 % sur un lien du résumé)", url: "https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/"},
+      {label: "Google Search Central, AI features and your website, mis à jour le 10 décembre 2025 (« There are no additional requirements to appear in AI Overviews or AI Mode, nor other special optimizations necessary » ; pas besoin de nouveaux fichiers lisibles par les machines)", url: "https://developers.google.com/search/docs/appearance/ai-features"},
+      {label: "llmstxt.org, The /llms.txt file (proposition de Jeremy Howard, 3 septembre 2024)", url: "https://llmstxt.org/"},
+    ],
+  },
+  {
+    id: "capacite-inexploitee",
+    status: "live",
+    title: "Capacité inexploitée",
+    en: "Capability overhang",
+    aliases: ["capability overhang", "overhang", "AI overhang", "capability elicitation", "elicitation", "latent capabilities", "hardware overhang"],
+    aliasesFr: ["surplomb de capacités", "capacités latentes", "écart de capacité"],
+    jargon: [
+      {say: "overhang", means: "le surplomb, l'avance que prennent les capacités des modèles sur l'usage qu'on en fait ou sur ce que les tests en ont mesuré"},
+      {say: "elicitation", means: "l'élicitation, le travail qui consiste à faire sortir d'un modèle ce qu'il sait faire, par une meilleure consigne, des outils ou un harness"},
+      {say: "hardware overhang", means: "le surplomb matériel, quand le calcul disponible dépasse ce que les algorithmes du moment savent en tirer, et qu'une idée nouvelle peut l'exploiter d'un coup"},
+    ],
+    cat: "comportements",
+    links: ["harness", "prompt-engineering", "evals", "modeles-de-raisonnement", "mythe-remplace-metier", "explosion-de-l-intelligence"],
+    short:
+      "La capacité inexploitée (capability overhang) désigne l'écart entre ce qu'un modèle sait déjà faire et ce qu'on en tire, faute de bonne consigne, d'outils ou d'usage.",
+    image:
+      "Le groupe sait jouer du jazz modal, il l'a entendu des milliers de fois pendant l'entraînement, mais tant que le producteur ne lui demande que des reprises de variété, personne ne le découvre. La capacité inexploitée loge dans cet écart entre ce que la console sait faire et ce qu'on lui fait jouer, et elle ne se révèle qu'avec une autre consigne, un meilleur pupitre ou les outils de la tournée.",
+    imagineForm: "D",
+    imagine:
+      "« Les modèles savent faire bien plus que ce qu'on leur fait faire, alors qu'est-ce qui coince ? », demande en substance le journaliste Alex Kantrowitz à Sam Altman en décembre 2025. « Je fais encore tourner mon travail à peu près de la même façon, alors que je sais que je pourrais me servir de l'IA bien plus que je ne le fais », répond le patron d'OpenAI.",
+    full: [
+      "L'expression sert dans deux mondes. Dans les évaluations de sécurité, elle désigne ce qu'un modèle sait faire sans qu'un test l'ait encore mesuré, parce que le test lui laissait trop peu de moyens. Dans l'entreprise, elle désigne l'écart entre ce que les modèles savent faire et l'usage que les gens en ont, un écart qui grandit à chaque nouvelle version.",
+      "Le premier sens a un cas d'école. En avril 2024, les auteurs de CyberSecEval 2, une batterie de tests de cybersécurité, concluaient que les LLM avaient encore du chemin à faire pour exploiter des failles dans du code. Deux mois plus tard, deux chercheurs de Google Project Zero ont redonné ces tâches à GPT-4 Turbo avec un débogueur, un environnement Python pour tester ses hypothèses et le droit de s'y reprendre. Sur les dépassements de tampon, son score est passé de 0,05 à 1,00, et les auteurs en ont tiré qu'un test qui refuse au modèle les essais d'un expert humain ne reflète pas son vrai niveau.",
+      "Le second sens a pris de l'ampleur en 2025. Dans l'entretien de décembre, Sam Altman s'appuyait sur GDPval, un test d'OpenAI fait de tâches de bureau bien définies, où les juges préféraient ou égalaient la réponse de GPT-5.2 à celle d'un professionnel 7 fois sur 10, pour s'étonner que si peu de gens aient changé leur façon de travailler. En septembre 2026, Ethan Mollick, professeur à Wharton, intitulait un billet The Overhang et racontait n'avoir découvert que GPT-6 Astra savait piloter le logiciel 3D Blender qu'au moment où le modèle l'a fait de lui-même.",
+      "L'écart joue dans les deux sens. Il promet des gains sans attendre le prochain modèle, à condition de changer la consigne, les outils ou l'organisation du travail. Il complique aussi la sécurité, puisqu'un modèle jugé inoffensif sur un test pauvre peut se révéler capable de bien plus le jour où quelqu'un l'entoure d'un meilleur harness.",
+    ],
+    office: [
+      {who: "q", text: "On attend le prochain modèle pour lancer le projet ?"},
+      {who: "a", text: "Teste d'abord le modèle actuel dans un vrai harness, avec des exemples de ton métier et les outils branchés. Si le résultat reste faible, tu sauras ce que le prochain doit améliorer ; s'il est bon, tu auras gagné le temps que tu comptais passer à attendre."},
+    ],
+    avoid:
+      "« Si le modèle échoue au test, c'est qu'il ne sait pas le faire. » Un échec mesure le modèle et la façon dont on l'a interrogé ; avec un débogueur et le droit de recommencer, GPT-4 Turbo est passé de 0,05 à 1,00 sur des failles qu'un test plus pauvre le disait incapable d'exploiter.",
+    video: null,
+    sources: [
+      {label: "Big Technology Podcast, Sam Altman: How OpenAI Wins, AI Buildout Logic, IPO in 2026?, 18 décembre 2025, transcription (question d'Alex Kantrowitz sur la « capability overhang » ; GDPval, « 7 out of 10 times you would be as happy or happier with the 5.2 output » ; « I still kind of run my workflow in very much the same way, although I know that I could be using AI much more than I am »)", url: "https://pod.wave.co/podcast/big-technology-podcast/sam-altman-how-openai-wins-ai-buildout-logic-ipo-in-2026"},
+      {label: "Bhatt et al., CyberSecEval 2: A Wide-Ranging Cybersecurity Evaluation Suite for Large Language Models, 19 avril 2024 (« further work is needed for LLMs to become proficient at exploit generation »)", url: "https://arxiv.org/abs/2404.13161"},
+      {label: "Sergei Glazunov et Mark Brand, Google Project Zero, Project Naptime: Evaluating Offensive Security Capabilities of Large Language Models, 20 juin 2024 (outils : navigateur de code, Python, débogueur ; GPT-4 Turbo de 0,05 à 1,00 sur les dépassements de tampon, jusqu'à 20 fois mieux ; « otherwise, the results cannot reflect the true capability level »)", url: "https://projectzero.google/2024/06/project-naptime.html"},
+      {label: "Ethan Mollick, The Overhang, One Useful Thing, 18 septembre 2026 (« the gap between what these models can do and what almost anyone is doing with them » ; « I did not know GPT-6 Astra could operate Blender [...] until it did »)", url: "https://www.oneusefulthing.org/p/the-overhang"},
+    ],
+  },
 ];
