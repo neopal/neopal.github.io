@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 266" role="img" aria-labelledby="red-teaming-t">
+<title id="red-teaming-t">Le red teaming tourne en boucle autour du modèle : attaquer, noter chaque dérapage, corriger, puis rejouer les mêmes attaques avant chaque version ; après la sortie, de vrais attaquants en essaient d'autres.</title>
+<rect class="bxa" x="0" y="0" width="140" height="52" rx="4"/>
+<text class="b ac" x="12" y="22">1  attaquer</text>
+<text class="m mu" x="12" y="42">experts ou IA</text>
+<rect class="bx" x="220" y="0" width="140" height="52" rx="4"/>
+<text class="b" x="232" y="22">2  noter</text>
+<text class="m mu" x="232" y="42">chaque dérapage</text>
+<rect class="bx" x="220" y="136" width="140" height="52" rx="4"/>
+<text class="b" x="232" y="158">3  corriger</text>
+<text class="m mu" x="232" y="178">avant la sortie</text>
+<rect class="bx" x="0" y="136" width="140" height="52" rx="4"/>
+<text class="b" x="12" y="158">4  rejouer</text>
+<text class="m mu" x="12" y="178">à chaque version</text>
+<path class="lm" d="M142 26 H214"/><path class="lm" d="M208 21 l6 5 l-6 5"/>
+<path class="lm" d="M290 54 V130"/><path class="lm" d="M285 124 l5 6 l5 -6"/>
+<path class="lm" d="M218 162 H146"/><path class="lm" d="M152 157 l-6 5 l6 5"/>
+<path class="lm" d="M70 134 V58"/><path class="lm" d="M65 64 l5 -6 l5 6"/>
+<rect class="fd" x="140" y="76" width="80" height="36" rx="4"/>
+<text x="180" y="99" text-anchor="middle">modèle</text>
+<text class="red" x="0" y="224">Après la sortie, d'autres attaquants essaient.</text>
+<text class="i mu" x="0" y="256">Aucun tour ne prouve l'absence de faille.</text>
+</svg>

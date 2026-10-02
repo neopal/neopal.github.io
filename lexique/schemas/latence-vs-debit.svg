@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="latence-vs-debit-t">
+<title id="latence-vs-debit-t">Deux courbes en fonction du nombre de requêtes traitées en même temps : le débit total du serveur monte puis plafonne, la vitesse vue par chaque personne baisse ; le fournisseur s'arrête au nombre de requêtes où cette vitesse atteint le minimum qu'il vise.</title>
+<path class="lm" d="M20 24 V210 H340"/>
+<path class="lm" d="M334 205 l6 5 l-6 5"/>
+<text class="m mu" x="340" y="230" text-anchor="end">requêtes en même temps</text>
+<path class="la" d="M20.0 210.0 L28.0 196.9 L36.0 184.7 L44.0 173.5 L52.0 163.2 L60.0 153.6 L68.0 144.8 L76.0 136.7 L84.0 129.2 L92.0 122.2 L100.0 115.8 L108.0 109.9 L116.0 104.5 L124.0 99.4 L132.0 94.8 L140.0 90.5 L148.0 86.5 L156.0 82.9 L164.0 79.5 L172.0 76.4 L180.0 73.5 L188.0 70.9 L196.0 68.4 L204.0 66.2 L212.0 64.1 L220.0 62.1 L228.0 60.4 L236.0 58.7 L244.0 57.2 L252.0 55.8 L260.0 54.5 L268.0 53.3 L276.0 52.2 L284.0 51.2 L292.0 50.3 L300.0 49.4 L308.0 48.6 L316.0 47.9 L324.0 47.2 L332.0 46.6 L340.0 46.0"/>
+<path class="lm" d="M20.0 48.0 L28.0 62.7 L36.0 75.0 L44.0 85.4 L52.0 94.3 L60.0 102.0 L68.0 108.8 L76.0 114.7 L84.0 120.0 L92.0 124.7 L100.0 129.0 L108.0 132.9 L116.0 136.4 L124.0 139.6 L132.0 142.5 L140.0 145.2 L148.0 147.7 L156.0 150.0 L164.0 152.1 L172.0 154.1 L180.0 156.0 L188.0 157.7 L196.0 159.4 L204.0 160.9 L212.0 162.4 L220.0 163.7 L228.0 165.0 L236.0 166.2 L244.0 167.4 L252.0 168.5 L260.0 169.5 L268.0 170.5 L276.0 171.4 L284.0 172.3 L292.0 173.2 L300.0 174.0 L308.0 174.8 L316.0 175.5 L324.0 176.2 L332.0 176.9 L340.0 177.6"/>
+<text class="m ac" x="340" y="36" text-anchor="end">débit total du serveur</text>
+<text class="m mu" x="340" y="198" text-anchor="end">vitesse par personne</text>
+<path class="lr dash" d="M20 142.0 H340"/>
+<path class="ln dash" d="M130.5 50 V210"/>
+<text class="m red" x="340" y="134" text-anchor="end">vitesse minimale visée</text>
+<circle class="fa" cx="130.5" cy="95.7" r="4"/>
+<text class="i mu" x="2" y="262">Le fournisseur charge chaque GPU tant que</text>
+<text class="i mu" x="2" y="280">la vitesse par personne reste au-dessus du seuil.</text>
+</svg>

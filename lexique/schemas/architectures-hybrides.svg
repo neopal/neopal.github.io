@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 318" role="img" aria-labelledby="architectures-hybrides-t">
+<title id="architectures-hybrides-t">Deux blocs de Qwen3.5, trois couches Gated DeltaNet pour une couche d'attention : la mémoire des couches récurrentes garde la même taille après une phrase et à fenêtre pleine, le cache des couches d'attention s'allonge avec le texte.</title>
+<text class="m d" x="150" y="18" text-anchor="middle">1 phrase</text>
+<text class="m d" x="270" y="18" text-anchor="middle">262 144 tokens</text>
+<path class="ln" d="M196 28 V224"/>
+<text class="m mu" x="0" y="49">Gated DeltaNet</text>
+<rect class="fl" x="136" y="38" width="18" height="14" rx="2"/>
+<rect class="fl" x="206" y="38" width="18" height="14" rx="2"/>
+<text class="m mu" x="0" y="73">Gated DeltaNet</text>
+<rect class="fl" x="136" y="62" width="18" height="14" rx="2"/>
+<rect class="fl" x="206" y="62" width="18" height="14" rx="2"/>
+<text class="m mu" x="0" y="97">Gated DeltaNet</text>
+<rect class="fl" x="136" y="86" width="18" height="14" rx="2"/>
+<rect class="fl" x="206" y="86" width="18" height="14" rx="2"/>
+<text class="m ac" x="0" y="121">attention</text>
+<rect class="fa" x="136" y="110" width="6" height="14" rx="2"/>
+<rect class="fa" x="206" y="110" width="150" height="14" rx="2"/>
+<text class="m mu" x="0" y="145">Gated DeltaNet</text>
+<rect class="fl" x="136" y="134" width="18" height="14" rx="2"/>
+<rect class="fl" x="206" y="134" width="18" height="14" rx="2"/>
+<text class="m mu" x="0" y="169">Gated DeltaNet</text>
+<rect class="fl" x="136" y="158" width="18" height="14" rx="2"/>
+<rect class="fl" x="206" y="158" width="18" height="14" rx="2"/>
+<text class="m mu" x="0" y="193">Gated DeltaNet</text>
+<rect class="fl" x="136" y="182" width="18" height="14" rx="2"/>
+<rect class="fl" x="206" y="182" width="18" height="14" rx="2"/>
+<text class="m ac" x="0" y="217">attention</text>
+<rect class="fa" x="136" y="206" width="6" height="14" rx="2"/>
+<rect class="fa" x="206" y="206" width="150" height="14" rx="2"/>
+<rect class="fl" x="0" y="244" width="14" height="14" rx="2"/>
+<text class="m mu" x="20" y="256">état fixe des 45 couches, environ 190 Mo</text>
+<rect class="fa" x="0" y="268" width="14" height="14" rx="2"/>
+<text class="m mu" x="20" y="280">cache des 15 couches, 8 Go à fenêtre pleine</text>
+<text class="i mu" x="0" y="310">Qwen3.5 répète ce motif 15 fois.</text>
+</svg>
