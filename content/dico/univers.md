@@ -1,0 +1,87 @@
+# Bible de l'univers : le studio
+
+Toutes les fiches et tous les shorts se passent dans le même studio, avec les mêmes personnages. Une fiche n'invente pas un nouveau décor ; elle prend un objet ou un personnage d'ici.
+
+## Le casting
+
+| Personnage ou objet | Ce que c'est dans l'IA |
+|---|---|
+| **Le groupe** | Le modèle. Il ne fait qu'une chose : jouer la note suivante. |
+| **Le chanteur** | La voix qui sort, un morceau à la fois : la génération, token par token. |
+| **La console** | Les paramètres : des milliards de potards, réglés pendant l'entraînement, puis figés. |
+| **La sampleuse** | Le tokenizer : elle découpe ce qui entre en samples numérotés. |
+| **La banque de samples** | Le vocabulaire : environ 200 000 bouts de son préenregistrés. |
+| **La bande** | La fenêtre de contexte : tout ce que le groupe entend encore. Au-delà, le début du morceau est effacé. |
+| **L'ingé son** | L'entraînement : il fait écouter des millions de morceaux et tourne les potards jusqu'à ce que ça sonne juste. |
+| **Le public** | Les humains qui notent les réponses (RLHF) : applaudissements ou sifflets. |
+| **Le producteur** | Celui qui donne la consigne avant la session : le system prompt, le harness. |
+| **Le pupitre** | Ce qu'on pose devant le groupe pendant qu'il joue : documents, résultats de recherche (RAG). |
+| **La tournée** | Les agents : le groupe sort du studio avec ses roadies et ses outils. |
+| **Les maisons de disques** | Les labs : Anthropic, OpenAI, Google, Mistral, DeepSeek. |
+
+## Correspondances prévues
+
+| Concept | Image |
+|---|---|
+| Prédiction du token suivant | Jouer la note qui sonne juste après les précédentes |
+| Température | Le curseur d'impro, du métronome au free jazz |
+| Attention | L'oreille qui monte certaines pistes et baisse les autres |
+| Quantization | Passer du WAV au MP3 |
+| Distillation | Un groupe de reprise qui apprend en écoutant le grand groupe |
+| MoE | Un orchestre de solistes, un chef qui en fait jouer 2 ou 3 à la fois |
+| Fine-tuning | Régler la console pour un genre |
+| Reward hacking | Jouer de plus en plus fort parce que l'applaudimètre ne mesure que le volume |
+| Flagornerie | Ne jouer que ce que le public veut entendre |
+| Hallucination | Un morceau joué avec aplomb qui n'a jamais existé |
+| Open weights | Le preset complet de la console, donné à tout le monde |
+| KV cache | Les pistes déjà enregistrées qu'on ne rejoue pas |
+| Embeddings | Décor annexe : la carte du son, où les sons proches sont voisins |
+
+## Règles d'usage
+
+1. Une image par fiche, tirée de ce casting. Pas de métaphore filée sur trois paragraphes.
+2. Chaque fiche a son « Imagine » : une situation impossible et ironique dans le studio, qui montre la limite du modèle sans l'expliquer (« Imagine un producteur qui... »). C'est la signature du dico : on simplifie sans mentir, et on fait sourire.
+
+## Le studio dans les shorts
+
+Dans les shorts, le studio est un habillage, pas une métaphore filée : rythme des coupes sur le beat, sound design, palette, transitions. L'explication montre le vrai mécanisme (les vrais tokens, les vrais numéros, les vraies probabilités). On n'utilise une image du studio que si elle explique mieux que le mécanisme lui-même.
+
+Gabarit d'un short (35 s) :
+
+| Temps | Bloc | Rôle |
+|---|---|---|
+| 0-3 s | Hook | Un fait surprenant, une phrase |
+| 3-10 s | Anecdote | Une histoire vraie, datée, avec un nom |
+| 10-25 s | Visualisation | Le mécanisme montré tel quel : le moment « ah ouais, je visualise » |
+| 25-32 s | Et donc | Ce que ça change pour le spectateur |
+| 32-35 s | Chute | Une phrase qui reste |
+
+Test de sortie : le spectateur peut-il redessiner le mécanisme sur une serviette ? Sinon, la visualisation est à refaire.
+
+Règles apprises sur le pilote Token (2026-10-02) :
+- Ouvrir par la question du terme (« Qu'est-ce qu'un token ? ») : on est sur un site éducatif, le spectateur doit savoir ce qu'il va apprendre.
+- Le lien de cause se montre, il ne se dit pas. Une anecdote (le bug strawberry) n'explique rien tant qu'on n'a pas vu POURQUOI le mécanisme la produit (les r enfermés dans les blocs).
+- Un seul fil par short : couper ce qui ne sert pas ce fil (la rafale bonjour / fraise a sauté).
+- Rythme : une nouvelle info toutes les 2 à 4 secondes, pas d'écran d'attente.
+
+Règles d'écriture des textes à l'écran (retour PA, 2026-10-02) :
+- Un texte à l'écran reste une phrase, avec sujet, verbe et connecteurs. Pas de réponse-fragment (« Un bloc de texte. »), pas de verdict d'un mot (« Faux. »), pas de paire de phrases courtes qui se répondent (« Il ne lit pas X. Il lit Y. »).
+- Pas de deux-points de révélation : le contexte d'abord (« Quand tu interagis avec un LLM, tout se compte en tokens »).
+- Le terme technique juste est montré (input tokens, output tokens) : le spectateur doit repartir avec le vocabulaire.
+- Les phrases longues s'écrivent en casse normale ; les capitales sont réservées aux mots géants (le terme, le chiffre).
+- Pas de surtitre mono espacé en haut de l'écran (« FONDATIONS / TOKEN 01 ») : ça fait template généré.
+- Passe humanizer §R (staccato explicatif) sur chaque script avant rendu.
+
+Règles de rythme et de visuel (retour PA sur la v3, 2026-10-02) :
+- Une phrase seule à l'écran ennuie : chaque scène a un visuel qui bouge (interface de chat, schéma, frise, barres qui montent, icône qui se dessine).
+- Chaque élément tombe sur un temps ; transitions sèches entre scènes, légère poussée de caméra en continu.
+- Les données se montrent en graphique qui se construit (barres, frise, flux de tokens), jamais en chiffre posé seul.
+- Un liseré en fond pulse sur le beat (plus fort au premier temps de la mesure) : c'est le seul habillage permanent avec la barre de progression.
+- Icônes dessinées en SVG maison (croix, coche, cadenas, œil, ciseaux), pas de pack d'icônes générique.
+- Durée cible : 30 à 32 s.
+
+## Gabarit d'une fiche
+
+En une phrase (ELI5) > L'image (studio) > Imagine (situation impossible) > Définition complète (le sérieux) > 2024 vs 2026 (si une vraie évolution existe) > Entendu au bureau > À éviter > Script du short.
+3. Le studio sert l'explication ; si un concept s'explique mieux sans lui, on s'en passe et on le dit.
+4. Les exemples sont récents (2025-2026) dès qu'ils existent ; la rubrique « 2024 vs 2026 » apparaît seulement quand il y a une vraie évolution à raconter.

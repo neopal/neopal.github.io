@@ -75,3 +75,6 @@ Pierre-Adrien believes in "work proof" (proving through results), a "hacking" mi
 - Responsible AI deployment
 - Knowledge sharing and mentorship
 - Pragmatic innovation - turning technological advances into concrete business value
+
+## Dico IA
+- https://neopal.github.io/dico/ : a French glossary of AI engineering terms written by Pierre-Adrien, each with a plain-language definition, an image, the full definition with sources, and a short explainer video. Terms: Token, myth "AI looks up answers in a database" (more coming).

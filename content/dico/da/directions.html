@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Directions DA</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;600;800&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<style>
+:root{--parch:#F5F2ED;--char:#1A1A1A;--orange:#D97706;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#d9d5ce;font-family:Inter,sans-serif;color:var(--char);padding:32px 16px}
+h1{font-family:'Space Grotesk';text-transform:uppercase;letter-spacing:.12em;font-size:18px;text-align:center;margin-bottom:6px}
+.sub{text-align:center;font-size:13px;margin-bottom:28px;color:#3a3732}
+.row{display:flex;flex-wrap:wrap;gap:28px;justify-content:center}
+.col{width:300px}
+.col h2{font-family:'Space Grotesk';font-size:15px;text-transform:uppercase;letter-spacing:.08em;margin:12px 0 4px}
+.col p{font-size:12.5px;line-height:1.45;color:#2b2925}
+.frame{width:300px;height:533px;border-radius:14px;overflow:hidden;position:relative;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.kick{position:absolute;top:22px;left:20px;right:20px;display:flex;justify-content:space-between;font-size:10px;letter-spacing:.18em;text-transform:uppercase}
+.q{position:absolute;top:96px;left:20px;right:20px;font-size:13px}
+.stage{position:absolute;top:170px;left:0;right:0;display:flex;justify-content:center;gap:6px}
+.blk{display:flex;flex-direction:column;align-items:center;animation:split 4s infinite}
+.blk:nth-child(1){--dx:-14px}.blk:nth-child(2){--dx:0px}.blk:nth-child(3){--dx:14px}
+.txt{font-size:34px;font-weight:700;padding:6px 4px}
+.id{margin-top:10px;font-size:15px;opacity:0;animation:show 4s infinite}
+@keyframes split{0%,20%{transform:translateX(calc(var(--dx)*-0.43))}35%,100%{transform:translateX(var(--dx))}}
+@keyframes show{0%,40%{opacity:0;transform:translateY(-6px)}55%,92%{opacity:1;transform:none}100%{opacity:0}}
+.cap{position:absolute;bottom:70px;left:18px;right:18px;text-align:center;font-size:15px;font-weight:600;line-height:1.3}
+.meter{position:absolute;bottom:26px;left:20px;right:20px;height:18px;display:flex;gap:3px;align-items:flex-end}
+.meter i{flex:1;animation:vu 1s infinite alternate}
+@keyframes vu{from{height:20%}to{height:100%}}
+
+/* A. Console */
+.a{background:#121212;color:#EDE7DD}
+.a .kick{color:var(--orange);font-family:'IBM Plex Mono'}
+.a .q{font-family:'IBM Plex Mono';color:#9c968c}
+.a .txt{font-family:'Space Grotesk';background:#1e1e1e;border:1px solid #333;border-radius:6px;padding:8px 8px;box-shadow:inset 0 0 0 1px #000}
+.a .id{font-family:'IBM Plex Mono';color:var(--orange)}
+.a .cap{font-family:'Space Grotesk'}
+.a .cap b{color:var(--orange)}
+.a .meter i{background:linear-gradient(to top,#3a7d44 0 60%,#d9a406 60% 85%,#c0392b 85%)}
+.a .knobs{position:absolute;top:330px;left:0;right:0;display:flex;justify-content:center;gap:18px}
+.a .knob{width:30px;height:30px;border-radius:50%;background:radial-gradient(#3a3a3a,#191919);border:1px solid #444;position:relative}
+.a .knob:after{content:"";position:absolute;width:2px;height:11px;background:var(--orange);left:14px;top:3px;transform-origin:1px 12px;animation:turn 3s infinite alternate}
+.a .knob:nth-child(2):after{animation-delay:-1s}.a .knob:nth-child(3):after{animation-delay:-2s}
+@keyframes turn{from{transform:rotate(-120deg)}to{transform:rotate(120deg)}}
+
+/* B. Papier */
+.b{background:var(--parch);background-image:radial-gradient(rgba(0,0,0,.06) 1px,transparent 1px);background-size:4px 4px}
+.b .kick{font-family:'Space Grotesk';font-weight:600}
+.b .q{font-family:'Fraunces',serif;font-size:16px}
+.b .txt{font-family:'Space Grotesk';border-bottom:3px solid var(--char)}
+.b .blk:nth-child(3) .txt{border-color:var(--orange)}
+.b .id{font-family:'IBM Plex Mono';color:var(--char)}
+.b .cap{font-family:Inter}
+.b .cap b{background:var(--orange);color:#fff;padding:0 4px}
+.b svg{position:absolute;left:20px;right:20px;top:330px;width:260px}
+.b .meter{display:none}
+
+/* C. Kinetic */
+.c{background:#000;color:#fff}
+.c .kick{font-family:'IBM Plex Mono';color:#7CFFB2}
+.c .q{font-family:Inter;font-weight:800;font-size:22px;line-height:1.05;text-transform:uppercase}
+.c .stage{top:210px;flex-direction:column;align-items:center;gap:0}
+.c .blk{flex-direction:row;gap:12px;animation:pop 4s infinite}
+.c .blk:nth-child(2){animation-delay:.15s}.c .blk:nth-child(3){animation-delay:.3s}
+@keyframes pop{0%,25%{opacity:0;transform:scale(.6)}35%,92%{opacity:1;transform:none}100%{opacity:0}}
+.c .txt{font-family:Inter;font-weight:800;font-size:52px;line-height:.95;padding:0}
+.c .id{font-family:'IBM Plex Mono';color:#7CFFB2;margin:0;font-size:14px}
+.c .cap{font-family:Inter;font-weight:800;text-transform:uppercase;font-size:17px}
+.c .cap b{color:#7CFFB2}
+.c .meter i{background:#fff}
+</style>
+</head>
+<body>
+<h1>Dico IA : trois directions</h1>
+<p class="sub">Même moment clé du short Token, en 9:16 avec sous-titres. Animé en boucle.</p>
+<div class="row">
+
+<div class="col">
+<div class="frame a">
+  <div class="kick"><span>Fondations</span><span>Token 01</span></div>
+  <div class="q">&gt; combien de r dans strawberry ?</div>
+  <div class="stage">
+    <div class="blk"><span class="txt">st</span><span class="id">302</span></div>
+    <div class="blk"><span class="txt">raw</span><span class="id">1618</span></div>
+    <div class="blk"><span class="txt">berry</span><span class="id">19772</span></div>
+  </div>
+  <div class="knobs"><span class="knob"></span><span class="knob"></span><span class="knob"></span></div>
+  <div class="cap">Voilà ce qu'il voit. <b>Trois numéros.</b> Aucun r.</div>
+  <div class="meter"><i></i><i style="animation-delay:-.3s"></i><i style="animation-delay:-.6s"></i><i style="animation-delay:-.2s"></i><i style="animation-delay:-.8s"></i><i style="animation-delay:-.5s"></i><i style="animation-delay:-.1s"></i><i style="animation-delay:-.7s"></i></div>
+</div>
+<h2>A. La console</h2>
+<p>Studio la nuit : fond noir, orange du site en LED, chiffres en mono qui brillent, potards et VU-mètre en habillage. Le plus « musical », reste sobre. Risque : le côté gadget si on abuse des potards.</p>
+</div>
+
+<div class="col">
+<div class="frame b">
+  <div class="kick"><span>Fondations</span><span>Token 01</span></div>
+  <div class="q">Combien de r dans strawberry ?</div>
+  <div class="stage">
+    <div class="blk"><span class="txt">st</span><span class="id">302</span></div>
+    <div class="blk"><span class="txt">raw</span><span class="id">1618</span></div>
+    <div class="blk"><span class="txt">berry</span><span class="id">19772</span></div>
+  </div>
+  <svg viewBox="0 0 260 60"><path d="M0 30 Q10 5 20 30 T40 30 T60 30 Q70 10 80 30 T100 30 Q110 50 120 30 T140 30 Q150 2 160 30 T180 30 T200 30 Q210 45 220 30 T260 30" fill="none" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+  <div class="cap">Voilà ce qu'il voit. <b>Trois numéros.</b> Aucun r.</div>
+</div>
+<h2>B. Le papier</h2>
+<p>Dans la continuité du site : fond parchemin avec grain, encre noire, un seul orange, typo éditoriale. La musique passe par une forme d'onde dessinée et le montage sur le beat. Le plus sérieux et le plus « dico ».</p>
+</div>
+
+<div class="col">
+<div class="frame c">
+  <div class="kick"><span>Fondations</span><span>Token 01</span></div>
+  <div class="q">Combien de r<br>dans strawberry ?</div>
+  <div class="stage">
+    <div class="blk"><span class="txt">ST</span><span class="id">302</span></div>
+    <div class="blk"><span class="txt">RAW</span><span class="id">1618</span></div>
+    <div class="blk"><span class="txt">BERRY</span><span class="id">19772</span></div>
+  </div>
+  <div class="cap">Voilà ce qu'il voit. <b>Trois numéros.</b> Aucun r.</div>
+  <div class="meter"><i></i><i style="animation-delay:-.3s"></i><i style="animation-delay:-.6s"></i><i style="animation-delay:-.2s"></i><i style="animation-delay:-.8s"></i><i style="animation-delay:-.5s"></i><i style="animation-delay:-.1s"></i><i style="animation-delay:-.7s"></i></div>
+</div>
+<h2>C. Typo sur le beat</h2>
+<p>Noir et blanc, typo énorme qui tombe en rythme, une couleur d'accent par catégorie (vert ici pour Fondations). Le plus natif TikTok, le plus rapide à produire. Risque : déjà très vu.</p>
+</div>
+
+</div>
+</body>
+</html>

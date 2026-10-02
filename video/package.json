@@ -1,0 +1,16 @@
+{
+  "name": "dico-ia-video-pilot",
+  "private": true,
+  "description": "PILOTE JETABLE : short Token en direction C",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Token out/token.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.532",
+    "@remotion/google-fonts": "^4.0.532",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "remotion": "^4.0.532"
+  }
+}

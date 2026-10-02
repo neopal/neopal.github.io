@@ -9,3 +9,7 @@ Thumbs.db
 # Editor files
 .vscode/
 .idea/
+
+# Pilote video
+video/node_modules/
+video/out/
