@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 270" role="img" aria-labelledby="red-teaming-t">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 266" role="img" aria-labelledby="red-teaming-t">
 <title id="red-teaming-t">Le red teaming tourne en boucle autour du modèle : attaquer, noter chaque dérapage, corriger, puis rejouer les mêmes attaques avant chaque version ; après la sortie, de vrais attaquants en essaient d'autres.</title>
 <rect class="bxa" x="0" y="0" width="140" height="52" rx="4"/>
 <text class="b ac" x="12" y="22">1  attaquer</text>
-<text class="m mu" x="12" y="42">humains ou modèle</text>
+<text class="m mu" x="12" y="42">experts ou IA</text>
 <rect class="bx" x="220" y="0" width="140" height="52" rx="4"/>
 <text class="b" x="232" y="22">2  noter</text>
 <text class="m mu" x="232" y="42">chaque dérapage</text>
@@ -18,7 +18,6 @@
 <path class="lm" d="M70 134 V58"/><path class="lm" d="M65 64 l5 -6 l5 6"/>
 <rect class="fd" x="140" y="76" width="80" height="36" rx="4"/>
 <text x="180" y="99" text-anchor="middle">modèle</text>
-<path class="lr dash" d="M180 230 V116"/><path class="lr" d="M175 122 l5 -6 l5 6"/>
-<text class="red" x="180" y="248" text-anchor="middle">après la sortie, d'autres attaques</text>
-<text class="i mu" x="0" y="214">Aucun tour ne prouve qu'il ne reste rien.</text>
+<text class="red" x="0" y="224">Après la sortie, d'autres attaquants essaient.</text>
+<text class="i mu" x="0" y="256">Aucun tour ne prouve l'absence de faille.</text>
 </svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 318" role="img" aria-labelledby="mythe-ia-a-des-valeurs-t">
+<title id="mythe-ia-a-des-valeurs-t">Les valeurs qu'exprime un modèle, comme le professionnalisme, la clarté et la transparence, sont réglées au post-entraînement, puis déplacées par la formulation, le sujet, un jailbreak ou un nouvel entraînement. Sur 308 210 conversations, Claude soutenait fermement les valeurs de son interlocuteur dans 28,2 % des cas et s'y opposait fermement dans 3 %.</title>
+<text class="m mu" x="180" y="14" text-anchor="middle">réglées au post-entraînement</text>
+<path class="lm" d="M180 22 V40"/><path class="lm" d="M175 34 l5 6 l5 -6"/>
+<rect class="bxa" x="40" y="42" width="280" height="56" rx="4"/>
+<text class="b ac" x="180" y="64" text-anchor="middle">valeurs exprimées</text>
+<text class="m" x="180" y="86" text-anchor="middle">professionnalisme, clarté</text>
+<path class="lm" d="M50 120 V102"/><path class="lm" d="M45 108 l5 -6 l5 6"/>
+<path class="lm" d="M125 120 V102"/><path class="lm" d="M120 108 l5 -6 l5 6"/>
+<path class="lm" d="M205 120 V102"/><path class="lm" d="M200 108 l5 -6 l5 6"/>
+<path class="lm" d="M300 120 V102"/><path class="lm" d="M295 108 l5 -6 l5 6"/>
+<text class="m mu" x="50" y="138" text-anchor="middle">tournure</text>
+<text class="m mu" x="125" y="138" text-anchor="middle">sujet</text>
+<text class="m mu" x="205" y="138" text-anchor="middle">jailbreak</text>
+<text class="m mu" x="300" y="138" text-anchor="middle">entraînement</text>
+<text class="m mu" x="300" y="156" text-anchor="middle">étroit</text>
+<path class="ln" d="M0 178 H360"/>
+<text class="mu" x="0" y="204">Claude, face aux valeurs de son interlocuteur</text>
+<rect class="fd" x="0" y="216" width="360" height="22" rx="2"/>
+<rect class="fa" x="0" y="216" width="102" height="22" rx="2"/>
+<rect class="fa" x="349" y="216" width="11" height="22" rx="2" opacity="0.5"/>
+<text class="m ac" x="0" y="258">28,2 % soutient fermement</text>
+<text class="m mu" x="360" y="278" text-anchor="end">3 % s'oppose fermement</text>
+<text class="i mu" x="0" y="310">Ces valeurs tiennent moins bien qu'une conviction.</text>
+</svg>

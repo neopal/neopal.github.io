@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="evaluations-de-dangerosite-t">
+<title id="evaluations-de-dangerosite-t">Avant la sortie, on teste le modèle en biologie, en cybersécurité et en autonomie. Selon le résultat, il sort normalement, sort avec des protections renforcées comme Claude Opus 4, ou reste réservé à quelques partenaires comme Claude Mythos Preview ; un modèle qui devine le test peut fausser le résultat.</title>
+<rect class="bx" x="0" y="0" width="112" height="34" rx="4"/>
+<text x="56" y="23" text-anchor="middle">biologie</text>
+<rect class="bx" x="124" y="0" width="112" height="34" rx="4"/>
+<text x="180" y="23" text-anchor="middle">cybersécurité</text>
+<rect class="bx" x="248" y="0" width="112" height="34" rx="4"/>
+<text x="304" y="23" text-anchor="middle">autonomie</text>
+<path class="lm" d="M56 36 V48 H304 V36"/><path class="lm" d="M180 36 V64"/><path class="lm" d="M175 58 l5 6 l5 -6"/>
+<rect class="bxa" x="100" y="66" width="160" height="36" rx="4"/>
+<text class="ac" x="180" y="89" text-anchor="middle">seuils fixés d'avance</text>
+<path class="lm" d="M180 102 V114 H56 V134"/><path class="lm" d="M51 128 l5 6 l5 -6"/>
+<path class="lm" d="M180 114 V134"/><path class="lm" d="M175 128 l5 6 l5 -6"/>
+<path class="lm" d="M180 114 H304 V134"/><path class="lm" d="M299 128 l5 6 l5 -6"/>
+<text class="m mu" x="56" y="154" text-anchor="middle">risque écarté</text>
+<text class="m mu" x="180" y="154" text-anchor="middle">pas écarté</text>
+<text class="m mu" x="304" y="154" text-anchor="middle">trop risqué</text>
+<rect class="bx" x="0" y="164" width="112" height="56" rx="4"/>
+<text class="b" x="56" y="188" text-anchor="middle">sortie</text>
+<text class="mu" x="56" y="208" text-anchor="middle">normale</text>
+<rect class="bx" x="124" y="164" width="112" height="56" rx="4"/>
+<text class="b" x="180" y="188" text-anchor="middle">ASL-3</text>
+<text class="mu" x="180" y="208" text-anchor="middle">Claude Opus 4</text>
+<rect class="bx" x="248" y="164" width="112" height="56" rx="4"/>
+<text class="b" x="304" y="188" text-anchor="middle">accès réservé</text>
+<text class="mu" x="304" y="208" text-anchor="middle">Mythos Preview</text>
+<rect class="bx dash" x="0" y="236" width="360" height="50" rx="4"/>
+<text class="red" x="12" y="257">Un modèle qui devine le test peut jouer</text>
+<text class="red" x="12" y="276">moins bien exprès et fausser ce tri.</text>
+</svg>
