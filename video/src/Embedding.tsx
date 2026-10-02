@@ -136,7 +136,7 @@ const Reponse: React.FC = () => {
 
 // Les voisins : facture près de devis, caisse claire près de clap, violoncelle à l'écart.
 const P2: Record<string, Pt> = {
-  facture: {label: 'facture', x: 200, y: 430, at: BEAT * 0.8},
+  facture: {label: 'facture', x: 200, y: 430, at: BEAT * 0.8, anchor: 'end'},
   devis: {label: 'devis', x: 320, y: 360, at: BEAT * 1.8, anchor: 'start'},
   caisse: {label: 'caisse claire', x: 600, y: 140, at: BEAT * 3.4},
   clap: {label: 'clap', x: 700, y: 230, at: BEAT * 4.2, anchor: 'start'},
@@ -241,8 +241,9 @@ const Direction: React.FC = () => {
       caps={[[0, 'Les directions de la carte ont pris un sens que personne ne leur a donné.']]}
       bottom={
         <Pop at={BEAT * 7.4} style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 20}}>
-          <Mono size={44} color={GREY}>même flèche</Mono>
-          <Mono size={44}>même écart de sens</Mono>
+          <Mono size={48} color="#fff">Woman − Man</Mono>
+          <Mono size={48} color={GREY}>≈</Mono>
+          <Mono size={48}>Queen − King</Mono>
         </Pop>
       }
     >
@@ -266,9 +267,9 @@ const Direction: React.FC = () => {
 // Et donc : la question et la note tombent au même endroit, sans un mot commun.
 const QUERY = 'congé maternité';
 const P5: Record<string, Pt> = {
-  frais: {label: 'Note de frais', x: 640, y: 120, at: BEAT * 0.6, anchor: 'end', dy: 13},
-  tele: {label: 'Télétravail', x: 680, y: 330, at: BEAT * 0.9, anchor: 'end', dy: 13},
-  paren: {label: 'Politique parentalité', x: 260, y: 300, at: BEAT * 1.2, anchor: 'start', dy: -26},
+  frais: {label: 'Note de frais', x: 760, y: 380, at: BEAT * 0.6, anchor: 'end', dy: 13},
+  tele: {label: 'Télétravail', x: 760, y: 190, at: BEAT * 0.9, anchor: 'end', dy: 13},
+  paren: {label: 'Politique parentalité', x: 140, y: 100, at: BEAT * 1.2, anchor: 'start', dy: 13},
 };
 
 const EtDonc: React.FC = () => {
@@ -279,8 +280,8 @@ const EtDonc: React.FC = () => {
   const okP = useProg(BEAT * 6.4, BEAT * 7);
   const lit = frame >= BEAT * 5.8;
   const MH5 = 440;
-  const qx = 210;
-  const qy = 410;
+  const qx = 200;
+  const qy = 280;
   return (
     <Scene
       caps={[[0, 'Un moteur qui compare des embeddings trouve la note sans *aucun mot* en commun.']]}
@@ -301,13 +302,13 @@ const EtDonc: React.FC = () => {
       <Pop at={BEAT * 0.4}>
         <svg width={MW} height={MH5} viewBox={`0 0 ${MW} ${MH5}`} style={{display: 'block', overflow: 'visible'}}>
           <rect x={3} y={3} width={MW - 6} height={MH5 - 6} rx={24} fill="#070707" stroke="#2a2a2a" strokeWidth={4} />
-          {lit ? <circle cx={P5.paren.x} cy={P5.paren.y} r={34} fill={acA(0.25)} stroke={AC} strokeWidth={4} /> : null}
-          {link > 0 ? <line x1={qx} y1={qy - 260 * (1 - drop)} x2={qx + (P5.paren.x - qx) * link} y2={qy + (P5.paren.y - qy) * link} stroke={AC} strokeWidth={6} strokeLinecap="round" /> : null}
+          {lit ? <circle cx={P5.paren.x} cy={P5.paren.y} r={22} fill={acA(0.25)} stroke={AC} strokeWidth={4} /> : null}
+          {link > 0 ? <line x1={qx} y1={qy + 80 * (1 - drop)} x2={qx + (P5.paren.x - qx) * link} y2={qy + (P5.paren.y - qy) * link} stroke={AC} strokeWidth={6} strokeLinecap="round" /> : null}
           <Dot p={P5.frais} />
           <Dot p={P5.tele} />
           <Dot p={{...P5.paren, color: lit ? AC : '#fff'}} />
           {drop > 0 ? (
-            <g transform={`translate(${qx} ${qy - 260 * (1 - drop)})`} opacity={drop}>
+            <g transform={`translate(${qx} ${qy + 80 * (1 - drop)})`} opacity={drop}>
               <rect x={-14} y={-14} width={28} height={28} fill={AC} transform="rotate(45)" />
               <text x={30} y={13} fontFamily={mono} fontWeight={600} fontSize={svgPx(38)} fill={AC}>{QUERY}</text>
             </g>
