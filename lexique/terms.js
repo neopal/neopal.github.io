@@ -2046,7 +2046,7 @@ window.DICO_TERMS = [
       }
     ],
     "avoid": "« Claude Code est un modèle. » Claude Code est un harness qui fait tourner les modèles Claude ; quand son comportement change du jour au lendemain, vérifie lequel des deux, du modèle ou de l'outil, a été mis à jour.",
-    "video": null,
+    "video": {"src": "videos/harness.mp4", "poster": "videos/harness.jpg"},
     "sources": [
       {
         "label": "Claude Code, documentation How Claude Code works (couche autour du modèle appelée agentic harness, modes de permission, hooks)",
@@ -2306,7 +2306,7 @@ window.DICO_TERMS = [
       }
     ],
     "avoid": "« MCP, c'est une IA. » MCP est une norme de branchement ; elle ne contient aucun modèle et ne rend aucun assistant plus malin, elle lui donne accès à plus d'outils.",
-    "video": null,
+    "video": {"src": "videos/mcp.mp4", "poster": "videos/mcp.jpg"},
     "sources": [
       {
         "label": "Anthropic, Introducing the Model Context Protocol, 25 novembre 2024 (standard ouvert, six serveurs d'exemple)",
