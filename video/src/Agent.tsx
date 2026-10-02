@@ -350,7 +350,7 @@ const Copie: React.FC = () => {
         </Pop>
         <Pop at={BEAT * 8} style={{display: 'flex', alignItems: 'center', gap: 14}}>
           <svg width={110} height={60} viewBox="0 0 110 60" style={{overflow: 'visible'}}>
-            <Draw d="M100 30 L10 30 M30 12 L10 30 L30 48" p={hand} color={AC} width={6} len={170} />
+            <Draw d="M10 30 L100 30 M80 12 L100 30 L80 48" p={hand} color={AC} width={6} len={170} />
           </svg>
           <Folder label="copie" color={AC} />
         </Pop>
