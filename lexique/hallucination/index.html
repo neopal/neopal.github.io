@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- généré par scripts/build-lexique.mjs, ne pas éditer : modifier lexique/terms.js puis relancer -->
 <html lang="fr" data-term="hallucination">
 <head>
 <meta charset="utf-8">
@@ -20,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hallucination | Lexique IA">
 <meta name="twitter:description" content="Une hallucination, c&#39;est quand un modèle affirme avec assurance quelque chose de faux : une date, une citation, une loi ou une source qui n&#39;existe pas.">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/hallucination.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/hallucination.jpg">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,6 +37,8 @@ a{color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .sr{position:absolute;left:0;top:0;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 #graph g{outline:none}
+#graph g.far text{opacity:0;transition:opacity .15s}
+#graph g.far:hover text,#graph g.far:focus-visible text{opacity:1}
 h1[tabindex]:focus{outline:none}
 #graph g:focus-visible circle{stroke:#fff;stroke-width:6}
 
@@ -191,6 +192,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/hallucination/#term","name":"Hallucination","description":"Une hallucination, c'est quand un modèle affirme avec assurance quelque chose de faux : une date, une citation, une loi ou une source qui n'existe pas.","url":"https://neopal.github.io/lexique/hallucination/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["confabulation","hallucinations"]}</script>
 <!-- /lex:jsonld -->
@@ -444,9 +446,18 @@ window.__lexBoot = function () {
     if (!seen.has(k)) { seen.add(k); edges.push([t.id, l]); }
   }));
 
-  const nodes = TERMS.map((t, i) => {
-    const a = (i / TERMS.length) * Math.PI * 2;
-    return {t, x: Math.cos(a) * 160, y: Math.sin(a) * 160, vx: 0, vy: 0, r: t.status === 'live' ? 22 : 11};
+  // Chaque catégorie a sa zone, réparties sur une ellipse large ; les termes partent groupés dans leur zone.
+  const catKeys = Object.keys(CATS);
+  const catCenter = Object.fromEntries(catKeys.map((c, i) => {
+    const a = (i / catKeys.length) * Math.PI * 2 - Math.PI / 2;
+    return [c, {x: Math.cos(a) * 520, y: Math.sin(a) * 300}];
+  }));
+  const perCat = {};
+  const nodes = TERMS.map((t) => {
+    const c = catCenter[t.cat] || {x: 0, y: 0};
+    const k = (perCat[t.cat] = (perCat[t.cat] || 0) + 1);
+    const a = k * 2.4;
+    return {t, cx: c.x, cy: c.y, x: c.x + Math.cos(a) * 30 * Math.sqrt(k), y: c.y + Math.sin(a) * 30 * Math.sqrt(k), vx: 0, vy: 0, r: t.status === 'live' ? 22 : 11};
   });
   const nodeOf = Object.fromEntries(nodes.map((n) => [n.t.id, n]));
 
@@ -461,21 +472,59 @@ window.__lexBoot = function () {
         a.vx += (dx / Math.sqrt(d2)) * f;
         a.vy += (dy / Math.sqrt(d2)) * f;
       }
-      a.vx -= a.x * 0.004;
-      a.vy -= a.y * 0.004;
+      a.vx += (a.cx - a.x) * 0.008;
+      a.vy += (a.cy - a.y) * 0.008;
     }
     for (const [s, d] of edges) {
       const a = nodeOf[s], b = nodeOf[d];
       const dx = b.x - a.x, dy = b.y - a.y;
       const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-      const f = (dist - 150) * 0.012;
+      const f = (dist - 150) * 0.004;
       a.vx += (dx / dist) * f; a.vy += (dy / dist) * f;
       b.vx -= (dx / dist) * f; b.vy -= (dy / dist) * f;
     }
     for (const n of nodes) { n.x += n.vx; n.y += n.vy; n.vx *= 0.6; n.vy *= 0.6; }
   }
-  const spanX = Math.max(...nodes.map((n) => n.x)) - Math.min(...nodes.map((n) => n.x));
-  const spanY = Math.max(...nodes.map((n) => n.y)) - Math.min(...nodes.map((n) => n.y));
+  // Anti-collision : chaque nœud occupe une boîte (cercle + libellé dessous) ; on écarte les boîtes qui se chevauchent.
+  for (const n of nodes) {
+    const label = n.t.graphLabel || n.t.title;
+    const live = n.t.status === 'live';
+    // Libellés en mono (~0,6 em par caractère), taille agrandie par fit() quand on dézoome : on prend le pire cas.
+    const size = live ? 20 : 15;
+    n.hw = Math.max(n.r, label.length * size * 0.3) + 6;
+    n.top = n.r + 4;
+    n.bottom = n.r + size * 1.7;
+  }
+  function collide() {
+  for (let step = 0; step < 1500; step++) {
+    let moved = false;
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const ox = a.hw + b.hw - Math.abs(a.x - b.x);
+        const up = a.y <= b.y ? a : b, down = up === a ? b : a;
+        const oy = up.bottom + down.top - (down.y - up.y);
+        if (ox <= 0 || oy <= 0) continue;
+        moved = true;
+        // Libellés larges : on préfère écarter à l'horizontale, sinon le graphe s'empile en colonne.
+        if (ox < oy * 3) {
+          const s = (a.x <= b.x ? -1 : 1) * ox / 2 + (a.x === b.x ? 0.5 : 0);
+          a.x += s; b.x -= s;
+        } else {
+          up.y -= oy / 2; down.y += oy / 2;
+        }
+      }
+    }
+    if (!moved) break;
+  }
+  }
+  collide();
+  let spanX, spanY;
+  function spans() {
+    spanX = Math.max(...nodes.map((n) => n.x)) - Math.min(...nodes.map((n) => n.x));
+    spanY = Math.max(...nodes.map((n) => n.y)) - Math.min(...nodes.map((n) => n.y));
+  }
+  spans();
 
   const gEdges = document.createElementNS(NS, 'g');
   const gNodes = document.createElementNS(NS, 'g');
@@ -526,7 +575,10 @@ window.__lexBoot = function () {
       e.el.setAttribute('stroke-opacity', on ? '0.8' : '1');
     });
     nodeEls.forEach(({n, g, c}) => {
-      g.style.opacity = !id || near.has(n.t.id) ? '1' : '0.35';
+      const far = id && !near.has(n.t.id);
+      g.style.opacity = far ? '0.35' : '1';
+      // Fiche ouverte : seuls le terme et ses voisins gardent leur libellé, les autres le montrent au survol.
+      g.classList.toggle('far', !!far);
       c.setAttribute('stroke-width', n.t.id === id ? '6' : n.t.status === 'live' ? '0' : '1.5');
       if (n.t.id === id) c.setAttribute('stroke', 'rgba(255,255,255,.85)');
       else c.setAttribute('stroke', n.t.status === 'live' ? color(n.t) : '#3a3a3a');
@@ -562,11 +614,15 @@ window.__lexBoot = function () {
         txt.setAttribute('font-size', size.toFixed(1));
         txt.setAttribute('y', (n.r + size * 1.3).toFixed(1));
         const half = Math.max(n.r, (txt.getComputedTextLength() || 0) / 2) + 8;
+        // Boîte réelle du libellé, pour la passe anti-collision ci-dessous.
+        n.hw = half + 10; n.bottom = n.r + size * 2;
         b.minX = Math.min(b.minX, lx(n) - half);
         b.maxX = Math.max(b.maxX, lx(n) + half);
         b.minY = Math.min(b.minY, ly(n) - n.r - 10);
         b.maxY = Math.max(b.maxY, ly(n) + n.r + size * 1.7);
       });
+      // Les libellés ont maintenant leur vraie taille : on écarte ceux qui se touchent, puis on remesure.
+      if (pass < 2) { collide(); spans(); }
       k = Math.min(usableW / (b.maxX - b.minX), usableH / (b.maxY - b.minY));
       // En portrait, la largeur limite le zoom : on étire encore pour occuper la hauteur libre.
       const room = usableH / k - (b.maxY - b.minY);

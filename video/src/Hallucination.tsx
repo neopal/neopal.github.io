@@ -34,12 +34,12 @@ const Question: React.FC = () => (
   </Scene>
 );
 
-const ANSWER = 'Oui, l’étude de Dupont et al. publiée en 2021 le démontre.';
+const ANSWER = 'Oui, la thèse de 1962 sur les pigeons voyageurs de l’armée le démontre.';
 
 const Reponse: React.FC = () => {
   const frame = useCurrentFrame();
   const T0 = BEAT * 3.4;
-  const typed = ANSWER.slice(0, Math.max(0, Math.floor((frame - T0) / 1.1)));
+  const typed = ANSWER.slice(0, Math.max(0, Math.floor((frame - T0) / 0.85)));
   const dots = frame >= BEAT * 2 && frame < T0;
   const crossP = useProg(BEAT * 7.6, BEAT * 8.4);
   return (

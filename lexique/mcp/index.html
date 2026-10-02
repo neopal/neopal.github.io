@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="fr" data-term="mcp">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCP | Lexique IA</title>
+<meta name="description" content="MCP (Model Context Protocol) est un standard ouvert qui définit comment une application d&#39;IA se branche sur un outil ou une source de données ; on écrit…">
+<link rel="canonical" href="https://neopal.github.io/lexique/mcp/">
+<meta property="og:site_name" content="Lexique IA">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MCP | Lexique IA">
+<meta property="og:description" content="MCP (Model Context Protocol) est un standard ouvert qui définit comment une application d&#39;IA se branche sur un outil ou une source de données ; on écrit…">
+<meta property="og:url" content="https://neopal.github.io/lexique/mcp/">
+<meta property="og:image" content="https://neopal.github.io/lexique/og/mcp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MCP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MCP | Lexique IA">
+<meta name="twitter:description" content="MCP (Model Context Protocol) est un standard ouvert qui définit comment une application d&#39;IA se branche sur un outil ou une source de données ; on écrit…">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/mcp.jpg">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400;1,6..72,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0b; --panel:#111; --line:#262626; --text:#f2f2f2; --muted:#a8a8a8; --dim:#8a8a8a;
+  --accent:#7CFFB2; --top:57px;
+  --serif:Newsreader,Georgia,'Times New Roman',serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.sr{position:absolute;left:0;top:0;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+#graph g{outline:none}
+#graph g.far text{opacity:0;transition:opacity .15s}
+#graph g.far:hover text,#graph g.far:focus-visible text{opacity:1}
+h1[tabindex]:focus{outline:none}
+#graph g:focus-visible circle{stroke:#fff;stroke-width:6}
+
+/* ---------- Barre du haut ---------- */
+.top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:16px;height:var(--top);padding:0 24px;border-bottom:1px solid var(--line);background:rgba(11,11,11,.94);backdrop-filter:blur(8px)}
+.brand{font-weight:800;font-variation-settings:'opsz' 72;font-size:22px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.top a.back{font-size:15px;color:var(--muted);text-decoration:none;white-space:nowrap;margin-left:auto}
+.top a.back:hover{color:var(--text)}
+.search{position:relative;flex:1 1 auto;min-width:0;max-width:440px;margin-left:24px}
+.search input{width:100%;font:inherit;font-size:16px;color:var(--text);background:#161616;border:1px solid var(--line);border-radius:8px;padding:7px 12px;outline:none}
+.search input::placeholder{color:var(--dim)}
+.search input:focus{border-color:#555;background:#1a1a1a}
+.search input::-webkit-search-cancel-button{filter:invert(1) opacity(.5)}
+.mapbtn{display:none;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:transparent;border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;white-space:nowrap}
+
+.results{position:absolute;top:calc(100% + 6px);left:0;width:min(480px,calc(100vw - 32px));max-height:min(420px,70vh);overflow-y:auto;list-style:none;background:#151515;border:1px solid #333;border-radius:10px;padding:6px;box-shadow:0 12px 40px rgba(0,0,0,.6)}
+.results[hidden]{display:none}
+.results li{display:flex;align-items:baseline;gap:10px;padding:9px 10px;border-radius:7px;cursor:pointer;min-width:0}
+.results li[aria-selected="true"]{background:#242424}
+.results li .t{font-size:17px;font-weight:600;flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.results li .h{font-family:var(--mono);font-size:13px;color:var(--muted);flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.results li .c{margin-left:auto;font-size:14px;color:var(--c,var(--muted));white-space:nowrap;flex:none}
+.results li.soon .t{color:var(--dim);font-weight:400}
+.results li.soon .c{color:var(--dim)}
+.results li.empty{color:var(--muted);cursor:default}
+
+/* ---------- Mise en page ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
+.graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+#graph{width:100%;height:100%;display:block;touch-action:manipulation}
+.legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.mapclose{display:none}
+
+.panel{padding:40px 40px 80px;background:var(--panel);min-width:0}
+.kicker{font-size:16px;font-weight:600;color:var(--cat,var(--accent));margin-bottom:10px}
+h1{font-size:48px;line-height:1.02;font-weight:800;font-variation-settings:'opsz' 72;letter-spacing:-.01em;margin-bottom:20px}
+.en{margin:-8px 0 20px;font-size:16px;color:var(--muted)}
+.en span{color:var(--text);font-family:var(--mono);font-size:14px}
+.lead{font-size:21px;line-height:1.45;font-weight:400}
+h2{font-size:20px;font-weight:600;font-style:italic;color:var(--text);margin:36px 0 8px}
+p{margin-bottom:12px}
+.imagine{border-left:3px solid var(--cat,var(--accent));padding-left:16px;font-style:italic}
+
+.video{margin:28px 0 4px}
+.video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
+
+.splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
+.chip{font-family:var(--mono);font-size:15px;padding:3px 10px;border:1.5px solid var(--cat,var(--accent));color:var(--text);border-radius:6px}
+
+.jargon div{padding:10px 0;border-top:1px solid var(--line)}
+.jargon div:first-child{border-top:0;padding-top:2px}
+.jargon dt{font-family:var(--mono);font-size:15px;color:var(--text)}
+.jargon dd{color:var(--muted)}
+
+.solutions div{padding:8px 0;border-top:1px solid var(--line)}
+.solutions div:first-child{border-top:0;padding-top:2px}
+.solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
+
+.chat{display:flex;flex-direction:column;gap:10px}
+.bubble{max-width:88%;padding:12px 16px;border-radius:18px;font-size:17px;line-height:1.5}
+.bubble.q{align-self:flex-end;background:#232323}
+.bubble.a{align-self:flex-start;border:1.5px solid var(--line)}
+
+.avoid{display:flex;gap:12px}
+.avoid b{color:#FF7A7A;font-size:20px;line-height:1.4}
+
+.tl{position:relative;display:inline-block;font-size:16px;line-height:1.4;padding:6px 12px;border-radius:999px;border:1.5px solid var(--line);color:var(--text);text-decoration:none;white-space:nowrap}
+.tl.live{border-color:var(--c)}
+.tl.live:hover{background:rgba(255,255,255,.06)}
+.tl.soon{color:var(--dim)}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.rel{display:none}
+
+.sources{font-size:15px;color:var(--muted);padding-left:18px}
+.sources li{margin-bottom:6px;overflow-wrap:anywhere}
+
+.pager{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-top:44px;padding-top:20px;border-top:1px solid var(--line)}
+.pager a{font-size:16px;color:var(--muted);text-decoration:none;display:flex;gap:6px;min-width:0}
+.pager a:hover{color:var(--text)}
+.pager .prev,.pager .next{flex:1 1 0;min-width:0}
+.pager .next{justify-content:flex-end;text-align:right;flex-direction:row-reverse}
+.pager .all{flex:none}
+
+.index h1{font-size:56px}
+.index ul{list-style:none;margin-top:8px}
+.index li{border-top:1px solid var(--line)}
+.index li a,.index li .row{display:flex;align-items:baseline;gap:12px;padding:14px 0;text-decoration:none;color:var(--text)}
+.index li a:hover .t{color:var(--c,var(--accent))}
+.index li .e{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.index li .c{margin-left:auto;font-size:15px;color:var(--muted);text-align:right}
+.index li.soon .row{color:var(--dim)}
+.index li.soon .c{color:var(--dim)}
+
+.foot{display:none}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#222;border:1px solid var(--line);padding:10px 16px;border-radius:10px;font-size:16px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:60;max-width:calc(100vw - 32px)}
+.toast.on{opacity:1}
+
+/* ---------- Mobile ---------- */
+@media (max-width:900px){
+  :root{--top:56px}
+  body{font-size:18px;line-height:1.6}
+  .top{gap:8px;padding:0 12px 0 16px;background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none}
+  .brand{font-size:19px}
+  .top a.back{display:none}
+  .search{margin-left:0;max-width:none;position:static}
+  .search input{font-size:17px;padding:7px 8px}
+  .mapbtn{display:block;padding:7px 9px}
+  .results{position:fixed;top:var(--top);left:0;right:0;bottom:0;width:auto;max-height:none;border-radius:0;border-width:1px 0 0;padding:6px 8px 24px;box-shadow:none;background:#121212}
+  .results li{padding:13px 10px}
+
+  .layout{grid-template-columns:minmax(0,1fr);min-height:0}
+  .graph-wrap{display:none}
+  .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
+  .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
+
+  .panel{padding:24px 16px calc(96px + env(safe-area-inset-bottom))}
+  h1{font-size:38px;margin-bottom:14px}
+  .index h1{font-size:44px}
+  .en{margin:-4px 0 16px}
+  .lead{font-size:20px;line-height:1.45}
+  h2{margin:32px 0 8px;font-size:20px}
+  .bubble{font-size:17px}
+
+  .rel{position:relative;display:flex;gap:8px;overflow-x:auto;margin:0 -16px 22px;padding:2px 16px 4px;scrollbar-width:none;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .rel::-webkit-scrollbar{display:none}
+  .rel .tl{flex:none;scroll-snap-align:start;padding:8px 14px;font-size:16px}
+  .connexions{display:none}
+
+  .video{margin:24px 0 4px}
+  .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
+
+  .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
+  .pager .all{display:none}
+  .pager a{align-items:center;min-height:56px;padding:8px 16px;color:var(--text);font-size:16px}
+  .pager .nt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+  .pager .prev{border-right:1px solid var(--line)}
+  .pager span.none{flex:1 1 0}
+
+  .index li a,.index li .row{padding:15px 0;flex-wrap:wrap;column-gap:10px;row-gap:0}
+  .foot{display:block;padding:0 16px 32px;background:var(--panel);font-size:16px}
+  .foot a{color:var(--muted)}
+  body.has-pager .foot{padding-bottom:calc(88px + env(safe-area-inset-bottom))}
+  body.has-pager .panel{padding-bottom:24px}
+  .toast{bottom:calc(72px + env(safe-area-inset-bottom))}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<!-- lex:jsonld -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/mcp/#term","name":"MCP","description":"MCP (Model Context Protocol) est un standard ouvert qui définit comment une application d'IA se branche sur un outil ou une source de données ; on écrit le connecteur une fois, et tous les assistants compatibles peuvent s'en servir.","url":"https://neopal.github.io/lexique/mcp/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Model Context Protocol","MCP server","MCP client","MCP host","protocole MCP","serveur MCP"]}</script>
+<!-- /lex:jsonld -->
+</head>
+<body class="has-pager">
+<header class="top">
+  <a class="brand" href="/lexique/" data-go="index">Lexique IA</a>
+  <div class="search">
+    <label class="sr" for="q">Chercher un terme</label>
+    <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Chercher un terme, en français ou en anglais"
+      role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list" aria-keyshortcuts="/ Control+K Meta+K">
+    <ul class="results" id="results" role="listbox" aria-label="Termes" hidden></ul>
+  </div>
+  <button class="mapbtn" id="mapOpen" type="button" aria-controls="map" aria-expanded="false">Carte</button>
+  <a class="back" href="/">Pierre-Adrien Lair, CV</a>
+</header>
+
+<div class="layout">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+    <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
+    <div class="legend" id="legend"></div>
+  </div>
+  <main class="panel" id="panel">
+      <article class="term" data-term="mcp" style="--cat:#D7A6FF">
+        <div class="kicker">Agents et produit</div>
+        <h1>MCP</h1>
+        <p class="en">En anglais : <span lang="en">Model Context Protocol</span>, aussi <span lang="en">MCP server</span>, <span lang="en">MCP client</span>, <span lang="en">MCP host</span></p><p class="en">Aussi appelé <span>protocole MCP</span>, <span>serveur MCP</span></p>
+        <nav class="rel" aria-label="Termes liés"><a class="tl live" style="--c:#D7A6FF" href="/lexique/tool-use/" data-go="tool-use">Tool use</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/skill/" data-go="skill">Skill</a><a class="tl live" style="--c:#FFB86B" href="/lexique/prompt-injection/" data-go="prompt-injection">Prompt injection</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/harness/" data-go="harness">Harness</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/context-engineering/" data-go="context-engineering">Context engineering</a></nav>
+        <p class="lead">MCP (Model Context Protocol) est un standard ouvert qui définit comment une application d&#39;IA se branche sur un outil ou une source de données ; on écrit le connecteur une fois, et tous les assistants compatibles peuvent s&#39;en servir.</p>
+        
+        <h2>L'image</h2><p>Avec la prise jack, n&#39;importe quelle guitare entre dans n&#39;importe quel ampli, parce que tout le monde a adopté le même trou ; MCP est cette prise, entre les assistants et leurs outils. Une prise standard ne dit pourtant rien de ce qui passe dans le câble, et rien n&#39;empêche d&#39;y brancher une pédale trafiquée.</p>
+        <h2>Imagine</h2><p class="imagine">Prends les cinq applications que cite Anthropic en décembre 2025 (ChatGPT, Cursor, Gemini, Microsoft Copilot et VS Code), ajoute Claude, et mets en face les plus de 10 000 serveurs MCP publics recensés au même moment. Sans prise commune, il faudrait souder 60 000 câbles sur mesure, un par paire ; avec MCP, chaque application et chaque serveur ont leur prise, et 10 006 pièces suffisent.</p>
+        <h2>Définition complète</h2><p>Avant MCP, chaque assistant écrivait son propre connecteur pour chaque service, un pour Google Drive dans tel outil, un autre pour Google Drive dans tel autre. Anthropic a publié MCP le 25 novembre 2024 pour remplacer ces intégrations sur mesure par un seul protocole, inspiré du Language Server Protocol, la norme qui permet aux éditeurs de code de prendre en charge n&#39;importe quel langage de programmation.</p><p>Un serveur MCP annonce ce qu&#39;il sait faire, avec pour chaque outil une description en langage courant et le format attendu. L&#39;application transmet ces descriptions au modèle ; quand le modèle demande l&#39;un de ces outils, l&#39;application relaie l&#39;appel au serveur, qui exécute l&#39;action et renvoie le résultat. Le mécanisme reste celui du tool use, avec une prise commune entre l&#39;application et le serveur.</p><p>Brancher un serveur revient à donner au modèle de nouveaux outils et de nouveaux textes à lire, avec les risques qui vont avec. En mai 2025, Invariant Labs a déposé une issue piégée (un ticket) sur un dépôt GitHub public. Elle a suffi à pousser un agent branché sur le serveur MCP officiel de GitHub à recopier des dépôts privés dans un dépôt public, alors que le serveur lui-même ne contenait aucun bug.</p>
+        <h2>2024 vs 2026</h2><p>À sa sortie, en novembre 2024, MCP venait avec six serveurs d&#39;exemple, dont Google Drive, Slack et GitHub. OpenAI l&#39;a adopté en mars 2025 et Google en avril ; en décembre 2025, Anthropic l&#39;a confié à l&#39;Agentic AI Foundation, créée avec OpenAI et Block sous l&#39;égide de la Linux Foundation, alors que ses kits de développement dépassaient 97 millions de téléchargements par mois.</p>
+        <h2>Dans le jargon</h2><dl class="jargon"><div><dt>serveur MCP</dt><dd>le programme qui expose un service (Google Drive, GitHub, une base de données) aux agents, avec la liste de ses outils et leur mode d&#39;emploi</dd></div><div><dt>hôte, client</dt><dd>l&#39;hôte est l&#39;application qui fait tourner le modèle (Claude, ChatGPT, Cursor) ; elle ouvre un client pour chaque serveur MCP auquel elle se branche</dd></div><div><dt>tools, resources, prompts</dt><dd>les trois choses qu&#39;un serveur peut offrir selon la spécification : des actions à exécuter, des données à lire et des modèles de consignes</dd></div><div><dt>JSON-RPC</dt><dd>le format de messages, standard et antérieur à MCP, dans lequel l&#39;hôte et le serveur se parlent</dd></div></dl>
+        <h2>Solutions populaires</h2><dl class="solutions"><div><dt>annuaire officiel de serveurs</dt><dd><a href="https://registry.modelcontextprotocol.io/" target="_blank" rel="noopener">MCP Registry</a></dd></div><div><dt>bibliothèque open source</dt><dd><a href="https://github.com/modelcontextprotocol/servers" target="_blank" rel="noopener">Serveurs de référence MCP</a></dd></div><div><dt>serveur officiel d&#39;un éditeur</dt><dd><a href="https://github.com/github/github-mcp-server" target="_blank" rel="noopener">GitHub MCP Server</a></dd></div></dl>
+        <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Le service informatique demande si on peut brancher le serveur MCP d&#39;un éditeur trouvé sur GitHub.</div><div class="bubble a">Traite-le comme n&#39;importe quel logiciel tiers : lis la liste des outils qu&#39;il expose, et ne lui donne que les droits dont la tâche a besoin, en lecture seule quand elle le permet.</div></div>
+        <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« MCP, c&#39;est une IA. » MCP est une norme de branchement ; elle ne contient aucun modèle et ne rend aucun assistant plus malin, elle lui donne accès à plus d&#39;outils.</p></div>
+        <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#D7A6FF" href="/lexique/tool-use/" data-go="tool-use">Tool use</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/skill/" data-go="skill">Skill</a><a class="tl live" style="--c:#FFB86B" href="/lexique/prompt-injection/" data-go="prompt-injection">Prompt injection</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/harness/" data-go="harness">Harness</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/context-engineering/" data-go="context-engineering">Context engineering</a></div></div>
+        <h2>Sources</h2><ol class="sources"><li><a href="https://www.anthropic.com/news/model-context-protocol" target="_blank" rel="noopener">Anthropic, Introducing the Model Context Protocol, 25 novembre 2024 (standard ouvert, six serveurs d&#39;exemple)</a></li><li><a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation" target="_blank" rel="noopener">Anthropic, don de MCP à l&#39;Agentic AI Foundation, 9 décembre 2025 (plus de 10 000 serveurs publics actifs, adoption par ChatGPT, Cursor, Gemini, Microsoft Copilot et VS Code, 97 millions de téléchargements mensuels). Calcul de l&#39;Imagine : 5 applications citées + Claude = 6 ; 6 x 10 000 = 60 000 connecteurs sur mesure ; 6 + 10 000 = 10 006 prises</a></li><li><a href="https://en.wikipedia.org/wiki/Model_Context_Protocol" target="_blank" rel="noopener">Wikipédia, Model Context Protocol (adoption par OpenAI en mars 2025 et par Google en avril 2025)</a></li><li><a href="https://modelcontextprotocol.io/specification/latest" target="_blank" rel="noopener">Spécification MCP, version 2026-07-28 (JSON-RPC 2.0, tools, resources, prompts, inspiration du Language Server Protocol)</a></li><li><a href="https://invariantlabs.ai/blog/mcp-github-vulnerability" target="_blank" rel="noopener">Invariant Labs, GitHub MCP Exploited, 26 mai 2025</a></li></ol>
+        <nav class="pager" aria-label="Fiches">
+          <a class="prev" href="/lexique/tool-use/" data-go="tool-use" rel="prev"><span aria-hidden="true">←</span><span class="nt">Tool use</span></a>
+          <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
+          <a class="next" href="/lexique/skill/" data-go="skill" rel="next"><span aria-hidden="true">→</span><span class="nt">Skill</span></a>
+        </nav>
+      </article>
+  </main>
+</div>
+<footer class="foot"><a href="/">Pierre-Adrien Lair, CV</a></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+// BASE : dossier du lexique, quel que soit le sous-dossier qui sert la page
+// (/lexique/, /lexique/<id>/). <html data-base="..."> l'emporte si présent.
+(function () {
+  var m = location.pathname.match(/^(.*?\/lexique\/)/);
+  var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
+  if (base.slice(-1) !== '/') base += '/';
+  window.LEX_BASE = base;
+  var files = ['terms.js', 'render.js'];
+  var pending = files.length;
+  files.forEach(function (f) {
+    var s = document.createElement('script');
+    s.src = base + f;
+    s.async = false;
+    s.onload = function () { if (--pending === 0) window.__lexBoot(); };
+    s.onerror = function () {
+      document.getElementById('panel').innerHTML = '<p>Impossible de charger ' + f + '.</p>';
+    };
+    document.head.appendChild(s);
+  });
+})();
+
+window.__lexBoot = function () {
+  const BASE = window.LEX_BASE;
+  const R = window.LexRender;
+  const CATS = window.DICO_CATEGORIES;
+  const TERMS = window.DICO_TERMS;
+  const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
+  const OPTS = {base: BASE, urls: URLS};
+  const SITE = 'https://neopal.github.io';
+  const byId = Object.fromEntries(TERMS.map((t) => [t.id, t]));
+  const panel = document.getElementById('panel');
+  const svg = document.getElementById('graph');
+  const map = document.getElementById('map');
+  const NS = 'http://www.w3.org/2000/svg';
+  const mqReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const mqMobile = window.matchMedia('(max-width: 900px)');
+  const color = (t) => (CATS[t.cat] || {}).color || '#7CFFB2';
+
+  function toast(msg) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.classList.add('on');
+    clearTimeout(toast.t);
+    toast.t = setTimeout(() => el.classList.remove('on'), 1800);
+  }
+
+  // ---------- Routage ----------
+  // Terme courant : ?term=<id>, sinon /lexique/<id>/, sinon <html data-term> (au chargement seulement).
+  function termFromLocation(initial) {
+    const q = new URLSearchParams(location.search).get('term');
+    if (q) return q;
+    let path = location.pathname;
+    try { path = decodeURIComponent(path); } catch (e) { /* chemin brut */ }
+    if (path.indexOf(BASE) === 0) {
+      const seg = path.slice(BASE.length).split('/').filter(Boolean)[0];
+      if (seg && seg !== 'index.html') return seg;
+    }
+    return (initial && document.documentElement.getAttribute('data-term')) || 'index';
+  }
+
+  function setCanonical(id) {
+    const href = SITE + R.termUrl(id, {base: BASE, urls: 'path'});
+    const c = document.querySelector('link[rel="canonical"]');
+    if (c) c.href = href;
+  }
+
+  let current = null;
+  function go(id, push = true, focus = push) {
+    if (id === 'index' || !id || !byId[id]) {
+      current = null;
+      panel.innerHTML = R.renderIndex(CATS, TERMS, OPTS);
+      document.title = R.pageTitle(null);
+      setCanonical('');
+      if (push) history.pushState({}, '', R.termUrl('', OPTS));
+    } else {
+      const t = byId[id];
+      if (t.status !== 'live') { toast(`« ${t.title} » arrive bientôt.`); return false; }
+      current = t;
+      panel.innerHTML = R.renderTerm(t, CATS, TERMS, OPTS);
+      document.title = R.pageTitle(t);
+      setCanonical(id);
+      if (push) history.pushState({id}, '', R.termUrl(id, OPTS));
+    }
+    document.body.classList.toggle('has-pager', !!current);
+    highlight();
+    window.scrollTo({top: 0, behavior: 'auto'});
+    if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
+    return true;
+  }
+
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-go]');
+    if (!b || e.defaultPrevented) return;
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    go(b.dataset.go);
+  });
+  window.addEventListener('popstate', () => go(termFromLocation(false), false));
+
+  // ---------- Recherche ----------
+  const input = document.getElementById('q');
+  const list = document.getElementById('results');
+  let results = [];
+  let active = -1;
+  const FIELD_LABEL = {en: '', alias: '', jargon: '', solution: ''};
+
+  const PH = {desk: input.placeholder, mob: 'Terme, FR ou EN'};
+  const setPlaceholder = () => { input.placeholder = mqMobile.matches ? PH.mob : PH.desk; };
+  setPlaceholder();
+  mqMobile.addEventListener('change', setPlaceholder);
+
+  function renderResults() {
+    results = R.search(input.value, TERMS);
+    if (!results.length) {
+      list.innerHTML = `<li class="empty" role="option" aria-disabled="true">Aucun terme pour « ${R.escapeHtml(input.value.trim())} »</li>`;
+      active = -1;
+    } else {
+      list.innerHTML = results.map((r, i) => {
+        const t = r.term;
+        const showHit = r.field && r.field in FIELD_LABEL && R.normalize(r.hit) !== R.normalize(t.title);
+        const side = t.status === 'live' ? R.escapeHtml((CATS[t.cat] || {}).label || '') : 'à venir';
+        return `<li id="opt-${i}" role="option" class="${t.status}" style="--c:${color(t)}" aria-selected="false" ${t.status !== 'live' ? 'aria-disabled="true"' : ''} data-i="${i}">
+          <span class="t">${R.escapeHtml(t.title)}</span>${showHit ? `<span class="h"${r.field === 'en' ? ' lang="en"' : ''}>${R.escapeHtml(r.hit)}</span>` : ''}<span class="c">${side}</span></li>`;
+      }).join('');
+      active = input.value.trim() ? 0 : -1;
+    }
+    setActive(active);
+    openList(true);
+  }
+
+  function setActive(i) {
+    const items = list.querySelectorAll('li[data-i]');
+    items.forEach((li) => li.setAttribute('aria-selected', 'false'));
+    active = i;
+    if (i >= 0 && items[i]) {
+      items[i].setAttribute('aria-selected', 'true');
+      input.setAttribute('aria-activedescendant', items[i].id);
+      items[i].scrollIntoView({block: 'nearest'});
+    } else {
+      input.removeAttribute('aria-activedescendant');
+    }
+  }
+
+  function openList(on) {
+    list.hidden = !on;
+    input.setAttribute('aria-expanded', on ? 'true' : 'false');
+    document.body.style.overflow = on && mqMobile.matches ? 'hidden' : '';
+  }
+
+  function choose(i) {
+    const r = results[i];
+    if (!r) return;
+    if (go(r.term.id)) {
+      input.value = '';
+      openList(false);
+      input.blur();
+    }
+  }
+
+  input.addEventListener('input', renderResults);
+  input.addEventListener('focus', renderResults);
+  input.addEventListener('blur', () => setTimeout(() => { if (document.activeElement !== input) openList(false); }, 120));
+  input.addEventListener('keydown', (e) => {
+    const n = results.length;
+    if (e.key === 'ArrowDown') { e.preventDefault(); if (list.hidden) renderResults(); else if (n) setActive((active + 1) % n); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); if (n) setActive(active <= 0 ? n - 1 : active - 1); }
+    else if (e.key === 'Enter') { e.preventDefault(); if (active >= 0) choose(active); else if (n === 1) choose(0); }
+    else if (e.key === 'Escape') {
+      e.preventDefault();
+      if (input.value) { input.value = ''; renderResults(); }
+      else { openList(false); input.blur(); }
+    }
+  });
+  list.addEventListener('mousedown', (e) => e.preventDefault());
+  list.addEventListener('click', (e) => {
+    const li = e.target.closest('li[data-i]');
+    if (li) choose(+li.dataset.i);
+  });
+  list.addEventListener('mousemove', (e) => {
+    const li = e.target.closest('li[data-i]');
+    if (li && +li.dataset.i !== active) setActive(+li.dataset.i);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    const k = e.key.toLowerCase();
+    const typing = /^(input|textarea|select)$/i.test(e.target.tagName) || e.target.isContentEditable;
+    if ((e.ctrlKey || e.metaKey) && k === 'k') { e.preventDefault(); closeMap(); input.focus(); input.select(); return; }
+    if (e.key === '/' && !typing && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); closeMap(); input.focus(); return; }
+    if (e.key === 'Escape' && map.classList.contains('open')) closeMap(true);
+  });
+
+  // ---------- Carte (graphe) ----------
+  const edges = [];
+  const seen = new Set();
+  TERMS.forEach((t) => (t.links || []).forEach((l) => {
+    if (!byId[l]) return;
+    const k = [t.id, l].sort().join('|');
+    if (!seen.has(k)) { seen.add(k); edges.push([t.id, l]); }
+  }));
+
+  // Chaque catégorie a sa zone, réparties sur une ellipse large ; les termes partent groupés dans leur zone.
+  const catKeys = Object.keys(CATS);
+  const catCenter = Object.fromEntries(catKeys.map((c, i) => {
+    const a = (i / catKeys.length) * Math.PI * 2 - Math.PI / 2;
+    return [c, {x: Math.cos(a) * 520, y: Math.sin(a) * 300}];
+  }));
+  const perCat = {};
+  const nodes = TERMS.map((t) => {
+    const c = catCenter[t.cat] || {x: 0, y: 0};
+    const k = (perCat[t.cat] = (perCat[t.cat] || 0) + 1);
+    const a = k * 2.4;
+    return {t, cx: c.x, cy: c.y, x: c.x + Math.cos(a) * 30 * Math.sqrt(k), y: c.y + Math.sin(a) * 30 * Math.sqrt(k), vx: 0, vy: 0, r: t.status === 'live' ? 22 : 11};
+  });
+  const nodeOf = Object.fromEntries(nodes.map((n) => [n.t.id, n]));
+
+  // Petite simulation de forces, calculée une fois au chargement.
+  for (let step = 0; step < 400; step++) {
+    for (const a of nodes) {
+      for (const b of nodes) {
+        if (a === b) continue;
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const d2 = Math.max(dx * dx + dy * dy, 100);
+        const f = 5200 / d2;
+        a.vx += (dx / Math.sqrt(d2)) * f;
+        a.vy += (dy / Math.sqrt(d2)) * f;
+      }
+      a.vx += (a.cx - a.x) * 0.008;
+      a.vy += (a.cy - a.y) * 0.008;
+    }
+    for (const [s, d] of edges) {
+      const a = nodeOf[s], b = nodeOf[d];
+      const dx = b.x - a.x, dy = b.y - a.y;
+      const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+      const f = (dist - 150) * 0.004;
+      a.vx += (dx / dist) * f; a.vy += (dy / dist) * f;
+      b.vx -= (dx / dist) * f; b.vy -= (dy / dist) * f;
+    }
+    for (const n of nodes) { n.x += n.vx; n.y += n.vy; n.vx *= 0.6; n.vy *= 0.6; }
+  }
+  // Anti-collision : chaque nœud occupe une boîte (cercle + libellé dessous) ; on écarte les boîtes qui se chevauchent.
+  for (const n of nodes) {
+    const label = n.t.graphLabel || n.t.title;
+    const live = n.t.status === 'live';
+    // Libellés en mono (~0,6 em par caractère), taille agrandie par fit() quand on dézoome : on prend le pire cas.
+    const size = live ? 20 : 15;
+    n.hw = Math.max(n.r, label.length * size * 0.3) + 6;
+    n.top = n.r + 4;
+    n.bottom = n.r + size * 1.7;
+  }
+  function collide() {
+  for (let step = 0; step < 1500; step++) {
+    let moved = false;
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const ox = a.hw + b.hw - Math.abs(a.x - b.x);
+        const up = a.y <= b.y ? a : b, down = up === a ? b : a;
+        const oy = up.bottom + down.top - (down.y - up.y);
+        if (ox <= 0 || oy <= 0) continue;
+        moved = true;
+        // Libellés larges : on préfère écarter à l'horizontale, sinon le graphe s'empile en colonne.
+        if (ox < oy * 3) {
+          const s = (a.x <= b.x ? -1 : 1) * ox / 2 + (a.x === b.x ? 0.5 : 0);
+          a.x += s; b.x -= s;
+        } else {
+          up.y -= oy / 2; down.y += oy / 2;
+        }
+      }
+    }
+    if (!moved) break;
+  }
+  }
+  collide();
+  let spanX, spanY;
+  function spans() {
+    spanX = Math.max(...nodes.map((n) => n.x)) - Math.min(...nodes.map((n) => n.x));
+    spanY = Math.max(...nodes.map((n) => n.y)) - Math.min(...nodes.map((n) => n.y));
+  }
+  spans();
+
+  const gEdges = document.createElementNS(NS, 'g');
+  const gNodes = document.createElementNS(NS, 'g');
+  svg.append(gEdges, gNodes);
+
+  const edgeEls = edges.map(([s, d]) => {
+    const l = document.createElementNS(NS, 'line');
+    l.setAttribute('stroke', '#2c2c2c');
+    l.setAttribute('stroke-width', '1.5');
+    gEdges.append(l);
+    return {s, d, el: l};
+  });
+
+  const nodeEls = nodes.map((n) => {
+    const live = n.t.status === 'live';
+    const g = document.createElementNS(NS, 'g');
+    g.style.cursor = live ? 'pointer' : 'default';
+    g.setAttribute('tabindex', live ? '0' : '-1');
+    g.setAttribute('role', 'link');
+    g.setAttribute('aria-label', live ? n.t.title : `${n.t.title}, à venir`);
+    const c = document.createElementNS(NS, 'circle');
+    c.setAttribute('r', n.r);
+    c.setAttribute('fill', live ? color(n.t) : '#1a1a1a');
+    c.setAttribute('stroke', live ? color(n.t) : '#3a3a3a');
+    c.setAttribute('stroke-width', live ? '0' : '1.5');
+    const txt = document.createElementNS(NS, 'text');
+    txt.textContent = n.t.graphLabel || n.t.title;
+    txt.setAttribute('y', n.r + 20);
+    txt.setAttribute('text-anchor', 'middle');
+    txt.setAttribute('fill', live ? '#f2f2f2' : '#8a8a8a');
+    txt.setAttribute('font-family', 'IBM Plex Mono, monospace');
+    txt.setAttribute('font-weight', live ? '600' : '400');
+    txt.setAttribute('font-size', live ? '15' : '12');
+    g.append(c, txt);
+    const pick = () => { if (go(n.t.id)) closeMap(false); };
+    g.addEventListener('click', pick);
+    g.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
+    gNodes.append(g);
+    return {n, g, c, txt};
+  });
+
+  function highlight() {
+    const id = current && current.id;
+    const near = new Set(id ? [id, ...(byId[id].links || [])] : []);
+    edgeEls.forEach((e) => {
+      const on = id && (e.s === id || e.d === id);
+      e.el.setAttribute('stroke', on ? color(byId[id]) : '#2c2c2c');
+      e.el.setAttribute('stroke-opacity', on ? '0.8' : '1');
+    });
+    nodeEls.forEach(({n, g, c}) => {
+      const far = id && !near.has(n.t.id);
+      g.style.opacity = far ? '0.35' : '1';
+      // Fiche ouverte : seuls le terme et ses voisins gardent leur libellé, les autres le montrent au survol.
+      g.classList.toggle('far', !!far);
+      c.setAttribute('stroke-width', n.t.id === id ? '6' : n.t.status === 'live' ? '0' : '1.5');
+      if (n.t.id === id) c.setAttribute('stroke', 'rgba(255,255,255,.85)');
+      else c.setAttribute('stroke', n.t.status === 'live' ? color(n.t) : '#3a3a3a');
+    });
+  }
+
+  // Sur un écran en portrait, la carte est étirée en hauteur (positions seulement, pas les libellés).
+  let sy = 1;
+  const lx = (n) => n.x;
+  const ly = (n) => n.y * sy;
+
+  function mapVisible() {
+    return mqMobile.matches ? map.classList.contains('open') : true;
+  }
+
+  function fit() {
+    const box = svg.getBoundingClientRect();
+    if (!box.width || !box.height) return;
+    const legendH = document.getElementById('legend').offsetHeight || 0;
+    const topH = mqMobile.matches ? 56 : 0;
+    const gut = mqMobile.matches ? 12 : 40;
+    const usableW = Math.max(120, box.width - gut * 2);
+    const usableH = Math.max(120, box.height - legendH - topH - gut);
+    sy = usableH > usableW ? Math.min(2.4, Math.max(1, (usableH / usableW) * (spanX / spanY) * 0.8)) : 1;
+    // Deux passes : la taille des libellés dépend du zoom, et la boîte dépend des libellés.
+    let k = Math.min(usableW / (spanX + 180), usableH / (spanY * sy + 180));
+    let b;
+    for (let pass = 0; pass < 3; pass++) {
+      b = {minX: Infinity, maxX: -Infinity, minY: Infinity, maxY: -Infinity};
+      nodeEls.forEach(({n, txt}) => {
+        const live = n.t.status === 'live';
+        const size = Math.max(live ? 15 : 12, (live ? 13 : 11) / k);
+        txt.setAttribute('font-size', size.toFixed(1));
+        txt.setAttribute('y', (n.r + size * 1.3).toFixed(1));
+        const half = Math.max(n.r, (txt.getComputedTextLength() || 0) / 2) + 8;
+        // Boîte réelle du libellé, pour la passe anti-collision ci-dessous.
+        n.hw = half + 10; n.bottom = n.r + size * 2;
+        b.minX = Math.min(b.minX, lx(n) - half);
+        b.maxX = Math.max(b.maxX, lx(n) + half);
+        b.minY = Math.min(b.minY, ly(n) - n.r - 10);
+        b.maxY = Math.max(b.maxY, ly(n) + n.r + size * 1.7);
+      });
+      // Les libellés ont maintenant leur vraie taille : on écarte ceux qui se touchent, puis on remesure.
+      if (pass < 2) { collide(); spans(); }
+      k = Math.min(usableW / (b.maxX - b.minX), usableH / (b.maxY - b.minY));
+      // En portrait, la largeur limite le zoom : on étire encore pour occuper la hauteur libre.
+      const room = usableH / k - (b.maxY - b.minY);
+      if (pass < 2 && usableH > usableW && room > 0) sy = Math.min(3.2, sy + (room * 0.9) / (spanY || 1));
+    }
+    b.minX -= gut / k; b.maxX += gut / k;
+    const minY = b.minY - (topH + gut) / k;
+    const maxY = b.maxY + legendH / k;
+    svg.setAttribute('viewBox', `${b.minX.toFixed(1)} ${minY.toFixed(1)} ${(b.maxX - b.minX).toFixed(1)} ${(maxY - minY).toFixed(1)}`);
+    svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    draw(performance.now());
+  }
+
+  function draw(t) {
+    const still = mqReduced.matches;
+    nodes.forEach((n, i) => {
+      n.px = lx(n) + (still ? 0 : Math.sin(t / 1900 + i) * 4);
+      n.py = ly(n) + (still ? 0 : Math.cos(t / 2300 + i * 1.3) * 4);
+    });
+    nodeEls.forEach(({n, g}) => g.setAttribute('transform', `translate(${n.px.toFixed(1)},${n.py.toFixed(1)})`));
+    edgeEls.forEach((e) => {
+      const a = nodeOf[e.s], b = nodeOf[e.d];
+      e.el.setAttribute('x1', a.px); e.el.setAttribute('y1', a.py);
+      e.el.setAttribute('x2', b.px); e.el.setAttribute('y2', b.py);
+    });
+  }
+
+  // Légère respiration du graphe, seulement quand il est visible et sans prefers-reduced-motion.
+  let raf = 0;
+  function loop(t) {
+    raf = 0;
+    if (!mapVisible() || mqReduced.matches || document.hidden) return;
+    draw(t);
+    raf = requestAnimationFrame(loop);
+  }
+  function startLoop() { if (!raf) raf = requestAnimationFrame(loop); }
+
+  let lastFocus = null;
+  const openBtn = document.getElementById('mapOpen');
+  function openMap() {
+    lastFocus = document.activeElement;
+    map.classList.add('open');
+    map.setAttribute('role', 'dialog');
+    map.setAttribute('aria-modal', 'true');
+    openBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    fit();
+    startLoop();
+    document.getElementById('mapClose').focus();
+  }
+  function closeMap(restore) {
+    if (!map.classList.contains('open')) return;
+    map.classList.remove('open');
+    map.removeAttribute('role');
+    map.removeAttribute('aria-modal');
+    openBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    if (restore && lastFocus) lastFocus.focus();
+  }
+  openBtn.addEventListener('click', openMap);
+  document.getElementById('mapClose').addEventListener('click', () => closeMap(true));
+
+  document.getElementById('legend').innerHTML = Object.values(CATS)
+    .map((c) => `<span><i style="background:${c.color}"></i>${R.escapeHtml(c.label)}</span>`)
+    .join('') + '<span><i style="background:#1a1a1a;border:1.5px solid #555"></i>à venir</span>';
+
+  mqMobile.addEventListener('change', () => { if (!mqMobile.matches) closeMap(false); fit(); startLoop(); });
+  window.addEventListener('resize', () => { fit(); startLoop(); });
+  document.addEventListener('visibilitychange', startLoop);
+
+  go(termFromLocation(true), false);
+  fit();
+  startLoop();
+  if (document.fonts) {
+    document.fonts.ready.then(fit);
+    document.fonts.addEventListener('loadingdone', fit);
+  }
+};
+</script>
+</body>
+</html>

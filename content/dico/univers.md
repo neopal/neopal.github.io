@@ -141,3 +141,9 @@ En une phrase (ELI5, littérale : le studio n'y entre pas) > Correspondance angl
 ## Gestes de prose
 
 Les gestes tirés des livres d'inspiration de PA (verbes anthropomorphes marqués, exemple fil rouge, terme pivot FR avec l'anglais une fois, histoire vraie qui installe l'idée, carte qu'on zoome...) sont dans `gestes-prose.md`, chacun avec son application et sa dérive. Les lire avant d'écrire une fiche ou un script. Le plan de tous les termes à écrire est dans `plan-termes.md`.
+
+## Sources (règle PA, 2026-10-02)
+
+- Uniquement des sources réelles, ouvertes et vérifiées (la page répond et contient bien le fait cité). Jamais de source reconstituée de mémoire.
+- La plus récente possible quand plusieurs existent (préférer 2025-2026 à 2023).
+- Si aucune source vérifiable n'existe pour un fait, on retire le fait ; si une fiche n'a aucune source vérifiable, pas de bloc Sources plutôt qu'une source douteuse.
