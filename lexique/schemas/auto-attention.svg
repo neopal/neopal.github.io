@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 334" role="img" aria-labelledby="auto-attention-t">
 <title id="auto-attention-t">La phrase « Le trophée ne rentre pas dans le sac parce qu'il est trop » écrite en colonne : le dernier mot « grand » envoie l'essentiel de son attention vers « trophée », le dernier mot « petit » vers « sac », et des traits fins vers les autres mots.</title>
-<text class="m mu" x="40" y="16" text-anchor="middle">dernier mot</text>
-<text class="m mu" x="320" y="16" text-anchor="middle">dernier mot</text>
+<text class="m mu" x="0" y="16">dernier mot</text>
+<text class="m mu" x="360" y="16" text-anchor="end">dernier mot</text>
 <text class="big ac" x="40" y="162.5" text-anchor="middle">grand</text>
 <text class="big ac" x="320" y="162.5" text-anchor="middle">petit</text>
 <text class="m" x="180" y="44" text-anchor="middle">Le</text>

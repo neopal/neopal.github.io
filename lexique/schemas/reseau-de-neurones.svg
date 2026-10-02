@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 318" role="img" aria-labelledby="reseau-de-neurones-t">
+<title id="reseau-de-neurones-t">Un petit réseau de neurones en quatre rangées, des entrées aux sorties, où chaque lien porte un poids ; un neurone agrandi multiplie ses trois entrées par leurs poids, fait la somme, applique un seuil et transmet le résultat.</title>
+<path class="ln" d="M49 50 L121 34"/>
+<path class="ln" d="M49 50 L121 98"/>
+<path class="ln" d="M49 50 L121 130"/>
+<path class="ln" d="M49 82 L121 34"/>
+<path class="ln" d="M49 82 L121 98"/>
+<path class="ln" d="M49 82 L121 130"/>
+<path class="ln" d="M49 114 L121 34"/>
+<path class="ln" d="M49 114 L121 98"/>
+<path class="ln" d="M49 114 L121 130"/>
+<path class="ln" d="M139 34 L211 34"/>
+<path class="ln" d="M139 34 L211 66"/>
+<path class="ln" d="M139 34 L211 98"/>
+<path class="ln" d="M139 34 L211 130"/>
+<path class="ln" d="M139 66 L211 34"/>
+<path class="ln" d="M139 66 L211 66"/>
+<path class="ln" d="M139 66 L211 98"/>
+<path class="ln" d="M139 66 L211 130"/>
+<path class="ln" d="M139 98 L211 34"/>
+<path class="ln" d="M139 98 L211 66"/>
+<path class="ln" d="M139 98 L211 98"/>
+<path class="ln" d="M139 98 L211 130"/>
+<path class="ln" d="M139 130 L211 34"/>
+<path class="ln" d="M139 130 L211 66"/>
+<path class="ln" d="M139 130 L211 98"/>
+<path class="ln" d="M139 130 L211 130"/>
+<path class="ln" d="M229 34 L301 66"/>
+<path class="ln" d="M229 34 L301 98"/>
+<path class="ln" d="M229 66 L301 66"/>
+<path class="ln" d="M229 66 L301 98"/>
+<path class="ln" d="M229 98 L301 66"/>
+<path class="ln" d="M229 98 L301 98"/>
+<path class="ln" d="M229 130 L301 66"/>
+<path class="ln" d="M229 130 L301 98"/>
+<path class="la" d="M49 50 L121 66"/>
+<path class="la" d="M49 82 L121 66"/>
+<path class="la" d="M49 114 L121 66"/>
+<circle class="fd" cx="40" cy="50" r="9"/>
+<circle class="lm" cx="40" cy="50" r="9"/>
+<circle class="fd" cx="40" cy="82" r="9"/>
+<circle class="lm" cx="40" cy="82" r="9"/>
+<circle class="fd" cx="40" cy="114" r="9"/>
+<circle class="lm" cx="40" cy="114" r="9"/>
+<circle class="fd" cx="130" cy="34" r="9"/>
+<circle class="lm" cx="130" cy="34" r="9"/>
+<circle class="fa" cx="130" cy="66" r="9"/>
+<circle class="fd" cx="130" cy="98" r="9"/>
+<circle class="lm" cx="130" cy="98" r="9"/>
+<circle class="fd" cx="130" cy="130" r="9"/>
+<circle class="lm" cx="130" cy="130" r="9"/>
+<circle class="fd" cx="220" cy="34" r="9"/>
+<circle class="lm" cx="220" cy="34" r="9"/>
+<circle class="fd" cx="220" cy="66" r="9"/>
+<circle class="lm" cx="220" cy="66" r="9"/>
+<circle class="fd" cx="220" cy="98" r="9"/>
+<circle class="lm" cx="220" cy="98" r="9"/>
+<circle class="fd" cx="220" cy="130" r="9"/>
+<circle class="lm" cx="220" cy="130" r="9"/>
+<circle class="fd" cx="310" cy="66" r="9"/>
+<circle class="lm" cx="310" cy="66" r="9"/>
+<circle class="fd" cx="310" cy="98" r="9"/>
+<circle class="lm" cx="310" cy="98" r="9"/>
+<text class="m mu" x="40" y="162" text-anchor="middle">entrées</text>
+<text class="m mu" x="130" y="162" text-anchor="middle">couche 1</text>
+<text class="m mu" x="220" y="162" text-anchor="middle">couche 2</text>
+<text class="m mu" x="310" y="162" text-anchor="middle">sorties</text>
+<path class="lm dash" d="M130 75 L40 186"/>
+<path class="lm dash" d="M130 75 L320 186"/>
+<rect class="bxa dash" x="0" y="186" width="360" height="86" rx="6"/>
+<text class="m" x="12" y="210">entrée 1 × poids 1</text>
+<path class="lm" d="M160 206 L196 229"/>
+<text class="m" x="12" y="233">entrée 2 × poids 2</text>
+<path class="lm" d="M160 229 L196 229"/>
+<text class="m" x="12" y="256">entrée 3 × poids 3</text>
+<path class="lm" d="M160 252 L196 229"/>
+<circle class="bxa" cx="210" cy="229" r="14"/>
+<text class="b" x="210" y="234" text-anchor="middle">+</text>
+<path class="lm" d="M224 229 H246"/><path class="lm" d="M241 224 l5 5 l-5 5"/>
+<rect class="bx" x="250" y="216" width="52" height="26" rx="4"/>
+<text class="m" x="276" y="233" text-anchor="middle">seuil</text>
+<path class="la" d="M304 229 H346"/><path class="la" d="M341 224 l5 5 l-5 5"/>
+<text class="i mu" x="0" y="296">Les poids sont les nombres que l'entraînement</text>
+<text class="i mu" x="0" y="314">règle, un par lien du réseau.</text>
+</svg>
