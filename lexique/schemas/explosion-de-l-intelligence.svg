@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 312" role="img" aria-labelledby="explosion-de-l-intelligence-t">
+<title id="explosion-de-l-intelligence-t">La boucle de l'explosion de l'intelligence : le modèle actuel fait la recherche qui conçoit le suivant, plus capable, qui reprend la boucle ; chaque nouveau modèle dépend aussi de puces, d'électricité et de centres de données qui ne s'accélèrent pas avec la recherche.</title>
+<rect class="bx" x="150" y="8" width="186" height="36" rx="4"/>
+<text x="243" y="31" text-anchor="middle">modèle actuel</text>
+<path class="lm" d="M243 46 V68"/><path class="lm" d="M238 62 l5 6 l5 -6"/>
+<rect class="bx" x="150" y="72" width="186" height="56" rx="4"/>
+<text x="243" y="96" text-anchor="middle">conçoit le suivant</text>
+<text class="m mu" x="243" y="116" text-anchor="middle">recherche en IA</text>
+<path class="lm" d="M243 130 V152"/><path class="lm" d="M238 146 l5 6 l5 -6"/>
+<rect class="bxa" x="150" y="156" width="186" height="36" rx="4"/>
+<text class="ac" x="243" y="179" text-anchor="middle">modèle plus capable</text>
+<path class="la" d="M338 174 H352 V26 H340"/><path class="la" d="M346 20 l-6 6 l6 6"/>
+<rect class="bx" x="0" y="130" width="124" height="88" rx="4"/>
+<text x="12" y="152">puces</text>
+<text x="12" y="171">électricité</text>
+<text x="12" y="190">centres de</text>
+<text x="12" y="209">données</text>
+<path class="lm" d="M126 174 H146"/><path class="lm" d="M140 169 l6 5 l-6 5"/>
+<text class="m red" x="0" y="238">ne s'accélèrent pas</text>
+<text class="m ac" x="0" y="30">tour après tour,</text>
+<text class="m ac" x="0" y="48">plus vite ?</text>
+<text class="i mu" x="0" y="264">La recherche peut s'automatiser, mais</text>
+<text class="i mu" x="0" y="284">chaque modèle attend encore des puces et</text>
+<text class="i mu" x="0" y="304">du courant livrés au rythme des chantiers.</text>
+</svg>

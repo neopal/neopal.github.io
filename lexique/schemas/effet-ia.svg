@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="effet-ia-t">
+<title id="effet-ia-t">Les échecs, la lecture de caractères, la dictée vocale et les systèmes experts sont passés de la colonne « appelé IA » à la colonne « technique ordinaire » une fois au point ; le test de Turing est en train de passer, et seul ce qui n'est pas encore fait reste appelé IA.</title>
+<rect class="bx" x="160" y="24" width="94" height="236" rx="4"/>
+<rect class="bx" x="266" y="24" width="94" height="236" rx="4"/>
+<text class="m ac" x="207" y="16" text-anchor="middle">appelé IA</text>
+<text class="m mu" x="313" y="16" text-anchor="middle">ordinaire</text>
+<text x="0" y="61">échecs</text>
+<circle class="lm" cx="207" cy="56" r="7" fill="none"/>
+<path class="lm dash" d="M218 56 H296"/><path class="lm" d="M290 51 l6 5 l-6 5"/>
+<circle class="mu" cx="313" cy="56" r="7"/>
+<text x="0" y="99">lecture de caractères</text>
+<circle class="lm" cx="207" cy="94" r="7" fill="none"/>
+<path class="lm dash" d="M218 94 H296"/><path class="lm" d="M290 89 l6 5 l-6 5"/>
+<circle class="mu" cx="313" cy="94" r="7"/>
+<text x="0" y="137">dictée vocale</text>
+<circle class="lm" cx="207" cy="132" r="7" fill="none"/>
+<path class="lm dash" d="M218 132 H296"/><path class="lm" d="M290 127 l6 5 l-6 5"/>
+<circle class="mu" cx="313" cy="132" r="7"/>
+<text x="0" y="175">systèmes experts</text>
+<circle class="lm" cx="207" cy="170" r="7" fill="none"/>
+<path class="lm dash" d="M218 170 H296"/><path class="lm" d="M290 165 l6 5 l-6 5"/>
+<circle class="mu" cx="313" cy="170" r="7"/>
+<text class="ac" x="0" y="213">test de Turing</text>
+<circle class="fa" cx="236" cy="208" r="7"/>
+<path class="la dash" d="M247 208 H290"/><path class="la" d="M284 203 l6 5 l-6 5"/>
+<text class="ac" x="0" y="251">pas encore fait</text>
+<circle class="fa" cx="207" cy="246" r="7"/>
+<text class="i mu" x="0" y="296">Chaque tâche réussie passe à droite, et le mot</text>
+<text class="i mu" x="0" y="316">IA reste à ce qu'aucune machine ne fait encore.</text>
+</svg>

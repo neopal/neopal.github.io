@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 262" role="img" aria-labelledby="position-t">
+<title id="position-t">Cinq tokens d'une phrase, chacun avec deux aiguilles de RoPE : l'aiguille rapide tourne d'un cran à chaque position, l'aiguille lente ne bouge presque pas ; deux tokens séparés par le même écart ont le même angle entre leurs aiguilles.</title>
+<text class="m ac" x="36" y="18" text-anchor="middle">le</text>
+<text class="m d" x="36" y="36" text-anchor="middle">1</text>
+<text class="m" x="108" y="18" text-anchor="middle">chien</text>
+<text class="m d" x="108" y="36" text-anchor="middle">2</text>
+<text class="m" x="180" y="18" text-anchor="middle">mord</text>
+<text class="m d" x="180" y="36" text-anchor="middle">3</text>
+<text class="m ac" x="252" y="18" text-anchor="middle">le</text>
+<text class="m d" x="252" y="36" text-anchor="middle">4</text>
+<text class="m" x="324" y="18" text-anchor="middle">facteur</text>
+<text class="m d" x="324" y="36" text-anchor="middle">5</text>
+<text class="m mu" x="0" y="64">aiguille la plus rapide</text>
+<text class="m mu" x="0" y="168">aiguille la plus lente</text>
+<circle class="ln" cx="36" cy="96" r="20"/>
+<path class="la" d="M36 96 L36.0 80.0"/>
+<circle class="fa" cx="36" cy="96" r="2.5"/>
+<circle class="ln" cx="36" cy="200" r="20"/>
+<path class="lm" d="M36 200 L36.0 184.0"/>
+<circle class="fa" cx="36" cy="200" r="2.5"/>
+<circle class="ln" cx="108" cy="96" r="20"/>
+<path class="la" d="M108 96 L121.5 87.4"/>
+<circle class="fa" cx="108" cy="96" r="2.5"/>
+<circle class="ln" cx="108" cy="200" r="20"/>
+<path class="lm" d="M108 200 L108.1 184.0"/>
+<circle class="fa" cx="108" cy="200" r="2.5"/>
+<circle class="ln" cx="180" cy="96" r="20"/>
+<path class="la" d="M180 96 L194.5 102.7"/>
+<circle class="fa" cx="180" cy="96" r="2.5"/>
+<circle class="ln" cx="180" cy="200" r="20"/>
+<path class="lm" d="M180 200 L180.2 184.0"/>
+<circle class="fa" cx="180" cy="200" r="2.5"/>
+<circle class="ln" cx="252" cy="96" r="20"/>
+<path class="la" d="M252 96 L254.3 111.8"/>
+<circle class="fa" cx="252" cy="96" r="2.5"/>
+<circle class="ln" cx="252" cy="200" r="20"/>
+<path class="lm" d="M252 200 L252.3 184.0"/>
+<circle class="fa" cx="252" cy="200" r="2.5"/>
+<circle class="ln" cx="324" cy="96" r="20"/>
+<path class="la" d="M324 96 L311.9 106.5"/>
+<circle class="fa" cx="324" cy="96" r="2.5"/>
+<circle class="ln" cx="324" cy="200" r="20"/>
+<path class="lm" d="M324 200 L324.4 184.0"/>
+<circle class="fa" cx="324" cy="200" r="2.5"/>
+<path class="lm" d="M36 122 v6 H180 v-6"/>
+<text class="m mu" x="108.0" y="144" text-anchor="middle">même écart</text>
+<path class="lm" d="M180 122 v6 H324 v-6"/>
+<text class="m mu" x="252.0" y="144" text-anchor="middle">même écart</text>
+<text class="i mu" x="0" y="238">Le mot « le » reçoit deux angles, et le score</text>
+<text class="i mu" x="0" y="256">d'attention ne dépend que de leur écart.</text>
+</svg>
