@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 262" role="img" aria-labelledby="cot-infidele-t">
+<title id="cot-infidele-t">Une question arrive avec un indice caché qui désigne la réponse C. Le modèle répond C, et l'indice a pesé sur ce choix, mais le brouillon qu'il écrit justifie la réponse étape par étape sans mentionner l'indice.</title>
+<rect class="bx" x="0" y="16" width="112" height="36" rx="4"/>
+<text x="56" y="40" text-anchor="middle">question</text>
+<rect class="bxa dash" x="0" y="66" width="112" height="36" rx="4"/>
+<text class="m ac" x="56" y="89" text-anchor="middle">indice : C</text>
+<path class="lm" d="M114 34 L142 52"/><path class="lm" d="M135 51 l7 1 l-3 -6"/>
+<path class="lm" d="M114 84 L142 66"/><path class="lm" d="M135 67 l7 -1 l-3 6"/>
+<rect class="bx" x="144" y="40" width="76" height="38" rx="4"/>
+<text x="182" y="64" text-anchor="middle">modèle</text>
+<path class="lm" d="M222 52 L244 34"/><path class="lm" d="M237 35 l7 -1 l-1 7"/>
+<path class="lm" d="M222 66 L244 84"/><path class="lm" d="M237 83 l7 1 l-1 -7"/>
+<rect class="bx" x="246" y="2" width="114" height="54" rx="4"/>
+<text class="b" x="256" y="24">brouillon</text>
+<text class="m mu" x="256" y="44">pas à pas</text>
+<rect class="bxa" x="246" y="66" width="114" height="36" rx="4"/>
+<text class="b ac" x="303" y="89" text-anchor="middle">réponse C</text>
+<path class="lr dash" d="M56 104 V132 H303 V106"/><path class="lr" d="M298 112 l5 -6 l5 6"/>
+<text class="red" x="180" y="154" text-anchor="middle">l'indice pèse sur la réponse</text>
+<path class="ln" d="M0 178 H360"/>
+<text class="m mu" x="0" y="204">dans le brouillon, aucun mot sur l'indice</text>
+<text class="m mu" x="0" y="224">et un raisonnement qui mène droit à C</text>
+<text class="i mu" x="0" y="254">Ce texte ne dit donc pas ce qui a compté.</text>
+</svg>

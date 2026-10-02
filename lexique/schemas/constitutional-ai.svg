@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 338" role="img" aria-labelledby="constitutional-ai-t">
+<title id="constitutional-ai-t">Les deux temps de la Constitutional AI. D'abord le modèle répond à une demande piège, critique sa réponse d'après un principe écrit et la réécrit, et ces révisions servent à l'affiner. Ensuite il départage deux réponses d'après un principe tiré parmi seize, et ces choix entraînent le modèle de récompense à la place des notes humaines sur la nocivité.</title>
+<text class="b" x="0" y="18">1  critique et révision</text>
+<rect class="bx" x="0" y="30" width="78" height="40" rx="4"/>
+<text class="m" x="39" y="55" text-anchor="middle">demande</text>
+<path class="lm" d="M80 50 h10"/><path class="lm" d="M86 46 l4 4 l-4 4"/>
+<rect class="bx" x="94" y="30" width="78" height="40" rx="4"/>
+<text class="m" x="133" y="55" text-anchor="middle">réponse</text>
+<path class="lm" d="M174 50 h10"/><path class="lm" d="M180 46 l4 4 l-4 4"/>
+<rect class="bxa" x="188" y="30" width="78" height="40" rx="4"/>
+<text class="m ac" x="227" y="55" text-anchor="middle">critique</text>
+<path class="lm" d="M268 50 h10"/><path class="lm" d="M274 46 l4 4 l-4 4"/>
+<rect class="bxa" x="282" y="30" width="78" height="40" rx="4"/>
+<text class="m ac" x="321" y="55" text-anchor="middle">révision</text>
+<text class="m mu" x="196" y="92" text-anchor="middle">d'après un principe écrit</text>
+<path class="lm" d="M321 72 V108"/><path class="lm" d="M317 102 l4 6 l4 -6"/>
+<rect class="bx" x="212" y="110" width="148" height="34" rx="4"/>
+<text x="286" y="132" text-anchor="middle">affiner le modèle</text>
+<text class="b" x="0" y="180">2  RLAIF</text>
+<rect class="bx" x="0" y="194" width="92" height="32" rx="4"/>
+<text class="m" x="46" y="215" text-anchor="middle">réponse A</text>
+<rect class="bx" x="0" y="234" width="92" height="32" rx="4"/>
+<text class="m" x="46" y="255" text-anchor="middle">réponse B</text>
+<path class="lm" d="M94 210 L120 226"/><path class="lm" d="M94 250 L120 234"/>
+<path class="lm" d="M114 225 l6 1 l-2 -6"/><path class="lm" d="M114 235 l6 -1 l-2 6"/>
+<rect class="bxa" x="124" y="204" width="110" height="52" rx="4"/>
+<text class="ac" x="179" y="226" text-anchor="middle">le modèle</text>
+<text class="ac" x="179" y="246" text-anchor="middle">départage</text>
+<path class="lm" d="M236 230 h20"/><path class="lm" d="M250 225 l6 5 l-6 5"/>
+<rect class="bx" x="260" y="204" width="100" height="52" rx="4"/>
+<text x="310" y="226" text-anchor="middle">modèle de</text>
+<text x="310" y="246" text-anchor="middle">récompense</text>
+<text class="m mu" x="179" y="278" text-anchor="middle">principe tiré parmi 16</text>
+<text class="m mu" x="0" y="298">ces choix remplacent les notes humaines</text>
+<text class="i mu" x="0" y="328">Sur la nocivité, aucun humain ne note les réponses.</text>
+</svg>
