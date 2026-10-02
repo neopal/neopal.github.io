@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 350" role="img" aria-labelledby="distillation-t">
+<title id="distillation-t">Le grand modèle professeur reçoit un début de phrase ; l'élève apprend soit à partir de sa réponse écrite, comme les modèles R1-Distill, soit à partir de ses probabilités pour chaque mot possible, comme Gemma 3. Les paramètres du professeur ne sont jamais copiés.</title>
+<text class="m mu" x="180" y="18" text-anchor="middle">« Le chat dort sur le… »</text>
+<path class="lm" d="M180 26 v12"/><path class="lm" d="M175 33 l5 5 l5 -5"/>
+<rect class="bx" x="60" y="44" width="240" height="44" rx="6"/>
+<text class="b" x="180" y="63" text-anchor="middle">professeur</text>
+<text class="m mu" x="180" y="80" text-anchor="middle">grand modèle</text>
+<path class="lm" d="M180 88 v10 M95 98 h170 M95 98 v12 M265 98 v12"/>
+<path class="lm" d="M90 105 l5 5 l5 -5"/><path class="lm" d="M260 105 l5 5 l5 -5"/>
+<rect class="bx" x="15" y="114" width="160" height="108" rx="6"/>
+<text class="m mu" x="95" y="134" text-anchor="middle">réponse écrite</text>
+<text class="big" x="95" y="172" text-anchor="middle">« canapé »</text>
+<text class="m d" x="95" y="210" text-anchor="middle">ex. R1-Distill</text>
+<rect class="bx" x="185" y="114" width="160" height="108" rx="6"/>
+<text class="m mu" x="265" y="134" text-anchor="middle">probabilités</text>
+<text class="m" x="195" y="150">canapé</text>
+<rect class="fa" x="250" y="141" width="86" height="10" rx="2"/>
+<text class="m" x="195" y="165">lit</text>
+<rect class="fa" opacity="0.55" x="250" y="156" width="48" height="10" rx="2"/>
+<text class="m" x="195" y="180">tapis</text>
+<rect class="fa" opacity="0.45" x="250" y="171" width="22" height="10" rx="2"/>
+<text class="m" x="195" y="195">boulon</text>
+<rect class="fa" opacity="0.4" x="250" y="186" width="3" height="10" rx="1"/>
+<text class="m d" x="265" y="213" text-anchor="middle">ex. Gemma 3</text>
+<path class="lm" d="M95 222 v14 M265 222 v14 M95 236 h170 M180 236 v12"/>
+<path class="lm" d="M175 243 l5 5 l5 -5"/>
+<rect class="bxa" x="110" y="252" width="140" height="44" rx="6"/>
+<text class="b ac" x="180" y="271" text-anchor="middle">élève</text>
+<text class="m mu" x="180" y="288" text-anchor="middle">petit modèle</text>
+<text class="i mu" x="0" y="324">L'élève imite ce que produit le professeur,</text>
+<text class="i mu" x="0" y="343">sans jamais recevoir ses paramètres.</text>
+</svg>

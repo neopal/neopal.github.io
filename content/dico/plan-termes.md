@@ -41,7 +41,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | DPO | direct preference optimization | prévu | P3 | LLM, HO | |
 | RL à récompense vérifiable | RLVR | prévu | P2 | AGT, CAR | le juré qui a la partition |
 | Constitutional AI | constitutional AI | prévu | P3 | | le règlement intérieur du studio |
-| Distillation | distillation | prévu | P2 | ENT | le groupe de reprise |
+| Distillation | distillation | publié | | ENT | le groupe de reprise |
 | Fine-tuning | fine-tuning | prévu | P1 | LLM, HO, ULT, ENT, CAR | régler la console pour un genre |
 | MoE | mixture of experts | prévu | P1 | AGT, CAR | l'orchestre de solistes |
 | Architectures hybrides | hybrid architectures (Mamba, Gated DeltaNet) | prévu | P3 | | |
