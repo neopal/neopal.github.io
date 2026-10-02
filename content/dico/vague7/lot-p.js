@@ -147,11 +147,11 @@ module.exports = [
       {say: 'next-token prediction', means: "la prédiction du token suivant, la tâche sur laquelle le modèle est pré-entraîné et la façon dont il écrit"},
       {say: 'stochastic parrot', means: "« perroquet stochastique », l'image lancée en 2021 par un article d'Emily Bender, Timnit Gebru et leurs coautrices pour des modèles qui imitent du texte sans le comprendre"},
       {say: 'base model', means: "le modèle sorti du seul pré-entraînement, qui prolonge n'importe quel texte sans le prendre pour une question"},
-      {say: 'interpretability', means: "l'étude de ce qui se passe dans le modèle entre le texte reçu et le token qu'il écrit"},
+      {say: 'interpretability', means: "l'étude du calcul interne du modèle, entre le texte reçu et le token écrit"},
     ],
     graphLabel: 'Mythe : autocomplétion',
     cat: 'mythes',
-    links: ['prediction-du-mot-suivant', 'llm', 'post-entrainement', 'mythe-base-de-donnees', 'modeles-de-raisonnement', 'pre-entrainement'],
+    links: ['prediction-du-mot-suivant', 'llm', 'post-entrainement', 'mythe-base-de-donnees', 'modeles-de-raisonnement', 'interpretabilite'],
     short:
       "Dire qu'un LLM n'est que de l'autocomplétion décrit sa sortie, token par token, mais oublie le calcul derrière chaque token et le post-entraînement qui le transforme en assistant.",
     image:
@@ -161,7 +161,7 @@ module.exports = [
       "On donne à Claude 3.5 Haiku le vers « He saw a carrot and had to grab it, » et il enchaîne « His hunger was like a starving rabbit ». En mars 2025, des chercheurs d'Anthropic rejouent la scène en effaçant de son calcul interne, juste avant le second vers, l'idée de « rabbit », et le modèle écrit un tout autre vers, qui finit cette fois par « habit ».",
     full: [
       "Le mythe a raison sur la sortie. Un LLM produit bien son texte token après token, en calculant à chaque pas une probabilité pour chaque token possible, comme le clavier d'un téléphone propose le mot suivant. La formule a un cousin savant, le « perroquet stochastique », venu d'un article de 2021 d'Emily Bender, Timnit Gebru et leurs coautrices sur les risques des grands modèles, et elle sert depuis à dire que ces modèles imitent du texte sans le comprendre.",
-      "Le mot cache d'abord le calcul qui précède chaque token. En mars 2025, une équipe d'Anthropic a suivi ce calcul à l'intérieur de Claude 3.5 Haiku. Avant d'écrire le second vers d'un distique, le modèle avait déjà retenu le mot de la rime, puis construisait le vers pour y arriver. Pour donner la capitale de l'État où se trouve Dallas, il passait par une étape intermédiaire, « Dallas est au Texas », avant d'en tirer « Austin ».",
+      "Le mot cache d'abord le calcul qui précède chaque token. En mars 2025, une équipe d'Anthropic a suivi ce calcul pas à pas dans Claude 3.5 Haiku. Avant d'écrire le second vers d'un distique, le modèle avait déjà retenu le mot de la rime, puis construisait le vers pour y arriver. Pour donner la capitale de l'État où se trouve Dallas, il passait par une étape intermédiaire, « Dallas est au Texas », avant d'en tirer « Austin ».",
       "Il cache aussi le post-entraînement. Un modèle de base, sorti du seul pré-entraînement, prolonge le texte qu'on lui donne et peut répondre à une consigne par d'autres consignes. Le ChatGPT ou le Claude que tu utilises a ensuite appris à répondre, à refuser et souvent à raisonner avant d'écrire, toujours par la même prédiction. La question utile devient alors ce que cette prédiction réussit sur ta tâche, mesuré sur tes propres cas.",
     ],
     office: [
@@ -193,7 +193,7 @@ module.exports = [
     ],
     graphLabel: 'Mythe : a lu tout Internet',
     cat: 'mythes',
-    links: ['donnees-d-entrainement', 'date-de-coupure', 'hallucination', 'rag', 'pre-entrainement', 'mythe-base-de-donnees'],
+    links: ['donnees-d-entrainement', 'date-de-coupure', 'rag', 'pre-entrainement', 'memorisation-vs-generalisation', 'mythe-base-de-donnees'],
     short:
       "Un modèle a lu une partie triée du web public, arrêtée à une date ; il retrouve mal les faits rares et ignore lesquels de ses textes disaient vrai.",
     image:

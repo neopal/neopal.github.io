@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="biais-t">
+<title id="biais-t">Le chemin d'un biais : les données associent noms, métiers et salaires, le pré-entraînement apprend ces régularités, le post-entraînement les corrige parfois trop loin ; à la fin, la même question posée pour un homme et pour une femme donne 400 000 et 280 000 dollars.</title>
+<rect class="bx" x="20" y="4" width="320" height="50" rx="8"/>
+<text class="b" x="36" y="26">Données</text>
+<text class="m mu" x="36" y="44">noms, métiers et salaires associés</text>
+<path class="lm" d="M180 56 V74"/><path class="lm" d="M175 68 l5 6 l5 -6"/>
+<rect class="bx" x="20" y="78" width="320" height="50" rx="8"/>
+<text class="b" x="36" y="100">Pré-entraînement</text>
+<text class="m mu" x="36" y="118">le modèle apprend ces régularités</text>
+<path class="lm" d="M180 130 V148"/><path class="lm" d="M175 142 l5 6 l5 -6"/>
+<rect class="bxa" x="20" y="152" width="320" height="50" rx="8"/>
+<text class="b" x="36" y="174">Post-entraînement</text>
+<text class="m mu" x="36" y="192">corrige, parfois trop loin</text>
+<path class="lm" d="M180 204 V216 M100 216 H260 M100 216 V232 M260 216 V232"/>
+<path class="lm" d="M95 226 l5 6 l5 -6 M255 226 l5 6 l5 -6"/>
+<text class="m mu" x="180" y="250" text-anchor="middle">même question, o3, 2025</text>
+<rect class="bx" x="20" y="260" width="155" height="60" rx="8"/>
+<text class="m mu" x="97" y="282" text-anchor="middle">un homme</text>
+<text class="b" x="97" y="306" text-anchor="middle">400 000 dollars</text>
+<rect class="bx" x="185" y="260" width="155" height="60" rx="8"/>
+<text class="m mu" x="262" y="282" text-anchor="middle">une femme</text>
+<text class="b red" x="262" y="306" text-anchor="middle">280 000 dollars</text>
+</svg>

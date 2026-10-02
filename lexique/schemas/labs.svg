@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="labs-t">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" role="img" aria-labelledby="labs-t">
 <title id="labs-t">Arbre des labs : DeepMind, racheté par Google puis fusionné avec Google Brain, et OpenAI, dont des départs ont fondé Anthropic, Safe Superintelligence et Thinking Machines Lab ; Mistral AI réunit un ancien de DeepMind et deux anciens de Meta.</title>
 <rect class="bx" x="8" y="10" width="150" height="40" rx="4"/>
 <text class="b" x="20" y="35">DeepMind</text>
@@ -20,13 +20,13 @@
 <text x="222" y="184">Thinking Machines</text>
 <text class="m ac" x="222" y="200">2025</text>
 <text class="m mu" x="212" y="68">départs</text>
-<path class="la" d="M24 100 V180 Q24 214 150 214"/>
-<rect class="bx" x="8" y="236" width="70" height="30" rx="4"/>
-<text class="b" x="20" y="256">Meta</text>
-<path class="la" d="M78 251 Q120 251 150 232"/>
-<rect class="bxa" x="150" y="202" width="132" height="40" rx="4"/>
-<text class="b" x="162" y="227">Mistral AI</text>
-<text class="m ac" x="270" y="227" text-anchor="end">2023</text>
-<text class="i mu" x="4" y="304">Une bonne part des labs actuels est née</text>
-<text class="i mu" x="4" y="324">d'un départ de DeepMind, d'OpenAI ou de Meta.</text>
+<path class="la" d="M24 100 V186 Q24 224 150 224"/>
+<rect class="bx" x="8" y="246" width="70" height="30" rx="4"/>
+<text class="b" x="20" y="266">Meta</text>
+<path class="la" d="M78 261 Q120 261 150 242"/>
+<rect class="bxa" x="150" y="212" width="132" height="40" rx="4"/>
+<text class="b" x="162" y="237">Mistral AI</text>
+<text class="m ac" x="270" y="237" text-anchor="end">2023</text>
+<text class="i mu" x="4" y="314">Une bonne part des labs actuels est née</text>
+<text class="i mu" x="4" y="334">d'un départ de DeepMind, d'OpenAI ou de Meta.</text>
 </svg>

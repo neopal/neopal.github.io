@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -14 360 304" role="img" aria-labelledby="interpretabilite-t">
+<title id="interpretabilite-t">Pour 36 + 59, Claude raconte la méthode de l'école avec une retenue ; le microscope d'Anthropic montre deux chemins en parallèle, l'un pour l'ordre de grandeur, l'autre pour le dernier chiffre, qui se rejoignent sur 95.</title>
+<text class="m mu" x="0" y="0">ce que Claude</text>
+<text class="m mu" x="0" y="16">raconte</text>
+<text class="m ac" x="200" y="0">ce que montre</text>
+<text class="m ac" x="200" y="16">le microscope</text>
+<rect class="bx" x="0" y="30" width="160" height="34" rx="6"/>
+<text class="m" x="80" y="52" text-anchor="middle">36 + 59</text>
+<path class="lm" d="M80 66 V80"/><path class="lm" d="M75 74 l5 6 l5 -6"/>
+<rect class="bx" x="0" y="84" width="160" height="34" rx="6"/>
+<text class="m" x="80" y="106" text-anchor="middle">6 + 9 = 15</text>
+<path class="lm" d="M80 120 V134"/><path class="lm" d="M75 128 l5 6 l5 -6"/>
+<rect class="bx" x="0" y="138" width="160" height="34" rx="6"/>
+<text class="m" x="80" y="160" text-anchor="middle">pose 5, retiens 1</text>
+<path class="lm" d="M80 174 V188"/><path class="lm" d="M75 182 l5 6 l5 -6"/>
+<rect class="bx" x="0" y="192" width="160" height="34" rx="6"/>
+<text class="m" x="80" y="214" text-anchor="middle">3 + 5 + 1 = 9</text>
+<path class="lm" d="M80 228 V242"/><path class="lm" d="M75 236 l5 6 l5 -6"/>
+<text class="big" x="80" y="268" text-anchor="middle">95</text>
+<path class="ln" d="M180 30 V280"/>
+<rect class="bxa" x="200" y="30" width="160" height="34" rx="6"/>
+<text class="m" x="280" y="52" text-anchor="middle">36 + 59</text>
+<path class="la" d="M240 66 V120 M320 66 V120"/>
+<rect class="bx" x="200" y="124" width="76" height="60" rx="6"/>
+<text class="m" x="238" y="148" text-anchor="middle">ordre de</text>
+<text class="m" x="238" y="166" text-anchor="middle">grandeur</text>
+<rect class="bx" x="284" y="124" width="76" height="60" rx="6"/>
+<text class="m" x="322" y="148" text-anchor="middle">dernier</text>
+<text class="m" x="322" y="166" text-anchor="middle">chiffre</text>
+<path class="la" d="M238 186 V214 H322 V186 M280 214 V242"/>
+<path class="la" d="M275 236 l5 6 l5 -6"/>
+<text class="big ac" x="280" y="268" text-anchor="middle">95</text>
+</svg>
