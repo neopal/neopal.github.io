@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="mythe-ia-neutre-t">
+<title id="mythe-ia-neutre-t">Trois couches décident de ce qu'un assistant répond. Les données d'entraînement, avec ce que les textes lus disent le plus, le post-entraînement, qui fait souligner à DeepSeek-R1 le rôle du PCC, puis les consignes et filtres de l'application, comme chez Grok et DeepSeek.</title>
+<rect class="bx" x="8" y="8" width="344" height="72" rx="4"/>
+<text class="b" x="20" y="32">consignes et filtres de l'application</text>
+<text class="m mu" x="20" y="52">Grok : « politiquement incorrect »</text>
+<text class="m mu" x="20" y="70">DeepSeek : refus sur Tiananmen</text>
+<rect class="bxa" x="8" y="88" width="344" height="72" rx="4"/>
+<text class="b" x="20" y="112">post-entraînement</text>
+<text class="m mu" x="20" y="132">DeepSeek-R1, même hors de Chine :</text>
+<text class="m mu" x="20" y="150">« souligner le rôle dirigeant du PCC »</text>
+<rect class="bx" x="8" y="168" width="344" height="72" rx="4"/>
+<text class="b" x="20" y="192">données d'entraînement</text>
+<text class="m mu" x="20" y="212">ce que les textes lus disent le plus,</text>
+<text class="m mu" x="20" y="230">et ce qui n'y figure pas</text>
+<path class="lm" d="M180 240 V262"/>
+<path class="lm" d="M175 256 l5 6 l5 -6"/>
+<rect class="bxa" x="120" y="266" width="120" height="32" rx="4"/>
+<text class="b ac" x="180" y="288" text-anchor="middle">réponse</text>
+<text class="i mu" x="4" y="322">Chaque couche est un choix de quelqu'un.</text>
+</svg>

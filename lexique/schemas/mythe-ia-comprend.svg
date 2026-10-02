@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 334" role="img" aria-labelledby="mythe-ia-comprend-t">
+<title id="mythe-ia-comprend-t">Deux mesures de 2024 et 2025. Les modèles définissent correctement une notion dans 94,2 % des cas, mais en produisent ensuite un exemple faux dans 40 % des cas. Un modèle de trajets de taxi propose un trajet valide dans 99 % des cas sans détour, 69 % avec un détour sur cent et 8 % avec un détour sur dix.</title>
+<text class="m mu" x="8" y="18">7 modèles, 32 notions (2025)</text>
+<text x="8" y="44">définit la notion</text>
+<rect class="fd" x="150" y="31" width="140" height="18" rx="2"/>
+<rect class="fa" x="150" y="31" width="132" height="18" rx="2"/>
+<text class="m b" x="352" y="45" text-anchor="end">94,2 %</text>
+<text x="8" y="76">puis l'applique</text>
+<text class="m mu" x="8" y="94">exemple faux</text>
+<rect class="fd" x="150" y="68" width="140" height="18" rx="2"/>
+<rect class="fa" x="150" y="68" width="56" height="18" rx="2" opacity="0.55"/>
+<text class="m b red" x="352" y="82" text-anchor="end">40 %</text>
+<path class="ln" d="M8 120 H352"/>
+<text class="m mu" x="8" y="146">taxi à Manhattan, trajets valides (2024)</text>
+<path class="ln" d="M40 290 H340"/>
+<rect class="fa" x="58" y="186" width="56" height="104" rx="2"/>
+<rect class="fa" x="152" y="218" width="56" height="72" rx="2" opacity="0.75"/>
+<rect class="fa" x="246" y="282" width="56" height="8" rx="2" opacity="0.5"/>
+<text class="m b" x="86" y="180" text-anchor="middle">99 %</text>
+<text class="m b" x="180" y="212" text-anchor="middle">69 %</text>
+<text class="m b red" x="274" y="276" text-anchor="middle">8 %</text>
+<text class="m mu" x="86" y="310" text-anchor="middle">sans détour</text>
+<text class="m mu" x="180" y="310" text-anchor="middle">1 sur 100</text>
+<text class="m mu" x="274" y="310" text-anchor="middle">1 sur 10</text>
+<text class="m d" x="180" y="328" text-anchor="middle">détours imposés au carrefour</text>
+</svg>
