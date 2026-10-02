@@ -2358,6 +2358,22 @@ window.DICO_TERMS = [
         "means": "dans Claude Code et d'autres agents, la commande qui lance un skill à la main au lieu d'attendre que l'agent le choisisse"
       }
     ],
+    "solutions": [
+      {"name": "Anthropic Skills", "kind": "collection officielle", "url": "https://github.com/anthropics/skills"},
+      {"name": "Vercel Agent Skills", "kind": "collection officielle", "url": "https://github.com/vercel-labs/agent-skills"},
+      {"name": "Superpowers (Jesse Vincent)", "kind": "méthode de travail complète", "url": "https://github.com/obra/superpowers"},
+      {"name": "ECC (Everything Claude Code)", "kind": "méthode de travail complète", "url": "https://github.com/affaan-m/ECC"},
+      {"name": "gstack (Garry Tan)", "kind": "méthode de travail complète", "url": "https://github.com/garrytan/gstack"},
+      {"name": "Agent Skills (Addy Osmani)", "kind": "méthode de travail complète", "url": "https://github.com/addyosmani/agent-skills"},
+      {"name": "Skills de Matt Pocock", "kind": "petits skills à piocher", "url": "https://github.com/mattpocock/skills"},
+      {"name": "Ponytail", "kind": "petits skills à piocher", "url": "https://github.com/DietrichGebert/ponytail"},
+      {"name": "how (poteto)", "kind": "petits skills à piocher", "url": "https://github.com/poteto/how"},
+      {"name": "Impeccable", "kind": "design et visuel", "url": "https://github.com/pbakaus/impeccable"},
+      {"name": "Visual Explainer", "kind": "design et visuel", "url": "https://github.com/nicobailon/visual-explainer"},
+      {"name": "Remotion Skills", "kind": "design et visuel", "url": "https://github.com/remotion-dev/skills"},
+      {"name": "Awesome Agent Skills", "kind": "annuaire", "url": "https://github.com/VoltAgent/awesome-agent-skills"},
+      {"name": "Awesome Claude Code", "kind": "annuaire", "url": "https://github.com/hesreallyhim/awesome-claude-code"}
+    ],
     "cat": "agents",
     "links": [
       "mcp",

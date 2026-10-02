@@ -15,6 +15,6 @@
 <text class="m" x="0" y="189">Qwen3.8-27B</text>
 <rect class="bx dash" x="128" y="175" width="167" height="20" rx="3"/>
 <text class="m mu" x="138" y="190">absent</text>
-<text class="i mu" x="0" y="222">Sur sa fiche, Qwen a fait passer le test</text>
-<text class="i mu" x="0" y="242">dans une version dont il avait corrigé les tâches.</text>
+<text class="i mu" x="0" y="222">Les deux sources n'ont pas fait passer le test</text>
+<text class="i mu" x="0" y="242">dans les mêmes conditions.</text>
 </svg>

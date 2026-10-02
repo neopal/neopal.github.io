@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 292" role="img" aria-labelledby="knowledge-graph-t">
+<title id="knowledge-graph-t">Deux triplets, Pierre Curie époux de Marie Curie et Marie Curie a reçu le prix Nobel de chimie, s'enchaînent pour relier Pierre Curie au prix ; dans la carte du lexique, le lien entre RAG et embedding ne porte aucun nom.</title>
+<rect class="bxa" x="0" y="20" width="112" height="30" rx="5"/>
+<text x="56" y="40" text-anchor="middle">Pierre Curie</text>
+<path class="la" d="M112 35 H226"/><path class="la" d="M221 30 l5 5 l-5 5"/>
+<text class="m ac" x="170" y="26" text-anchor="middle">époux de</text>
+<rect class="bxa" x="232" y="20" width="108" height="30" rx="5"/>
+<text x="286" y="40" text-anchor="middle">Marie Curie</text>
+<path class="la" d="M286 50 V90"/><path class="la" d="M281 84 l5 6 l5 -6"/>
+<text class="m ac" x="276" y="76" text-anchor="end">a reçu</text>
+<rect class="bxa" x="196" y="96" width="164" height="30" rx="5"/>
+<text x="278" y="116" text-anchor="middle">prix Nobel de chimie</text>
+<path class="lm dash" d="M56 50 C56 111, 120 111, 190 111"/><path class="lm" d="M185 106 l5 5 l-5 5"/>
+<text class="m mu" x="20" y="140">déduit en deux sauts</text>
+<path class="ln" d="M0 162 H360"/>
+<text class="m mu" x="0" y="188">dans la carte de ce lexique</text>
+<rect class="bx" x="0" y="202" width="60" height="30" rx="5"/>
+<text class="mu" x="30" y="222" text-anchor="middle">RAG</text>
+<path class="lm" d="M60 217 H240"/>
+<text class="m d" x="150" y="210" text-anchor="middle">?</text>
+<rect class="bx" x="240" y="202" width="100" height="30" rx="5"/>
+<text class="mu" x="290" y="222" text-anchor="middle">embedding</text>
+<text class="i mu" x="0" y="264">Un programme peut enchaîner des triplets</text>
+<text class="i mu" x="0" y="284">parce que chaque lien porte un nom.</text>
+</svg>

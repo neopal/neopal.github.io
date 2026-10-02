@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 262" role="img" aria-labelledby="post-entrainement-t">
+<title id="post-entrainement-t">Le pré-entraînement occupe presque toute la barre, avec des milliers de milliards de tokens ; le post-entraînement en est un mince bout final, qui se déplie en trois étapes : SFT sur des bonnes réponses, DPO sur des paires préférée et rejetée, RLVR sur des résultats vérifiables.</title>
+<text class="m" x="0" y="14">pré-entraînement</text>
+<text class="m ac" x="360" y="14" text-anchor="end">post-entraînement</text>
+<rect class="fd" x="0" y="24" width="348" height="24" rx="3"/>
+<text class="m mu" x="10" y="41">des milliers de milliards de tokens</text>
+<rect class="fa" x="351" y="24" width="5" height="24" rx="1"/>
+<path class="lm dash" d="M351 50 L1 84"/>
+<path class="lm dash" d="M356 50 L359 84"/>
+<rect class="bxa" x="1" y="84" width="358" height="118" rx="6"/>
+<text class="m ac b" x="60" y="108" text-anchor="middle">SFT</text>
+<rect class="fd" x="22" y="120" width="56" height="12" rx="3"/>
+<rect class="fa" x="42" y="138" width="56" height="12" rx="3"/>
+<text x="60" y="172" text-anchor="middle">exemples de</text>
+<text x="60" y="190" text-anchor="middle">bonnes réponses</text>
+<path class="lm" d="M116 135 l6 5 l-6 5"/>
+<text class="m ac b" x="180" y="108" text-anchor="middle">DPO</text>
+<rect class="fa" x="142" y="120" width="56" height="12" rx="3"/>
+<path class="la" d="M206 126 l4 4 l8 -9"/>
+<rect class="fl" x="142" y="138" width="56" height="12" rx="3"/>
+<path class="lr" d="M207 139 l9 9 M216 139 l-9 9"/>
+<text x="180" y="172" text-anchor="middle">paire préférée</text>
+<text x="180" y="190" text-anchor="middle">et rejetée</text>
+<path class="lm" d="M236 135 l6 5 l-6 5"/>
+<text class="m ac b" x="300" y="108" text-anchor="middle">RLVR</text>
+<text class="m" x="292" y="146" text-anchor="middle">2 + 2 = 4</text>
+<path class="la" d="M332 140 l4 4 l8 -9"/>
+<text x="300" y="172" text-anchor="middle">résultat juste,</text>
+<text x="300" y="190" text-anchor="middle">vérifié</text>
+<text class="i mu" x="0" y="232">Ce mince bout décide pourtant du ton, de la</text>
+<text class="i mu" x="0" y="252">longueur des réponses et des refus.</text>
+</svg>

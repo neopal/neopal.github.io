@@ -3,7 +3,7 @@
 <text class="m mu" x="358" y="16" text-anchor="end">un quart transmis à chaque couche</text>
 <path class="lm" d="M352 26 H10"/><path class="lm" d="M16 21 l-6 5 l6 5"/>
 <rect class="fa" x="320" y="60.0" width="20" height="130.0" rx="1"/>
-<text class="m" x="332" y="210" text-anchor="middle">sortie</text>
+<text class="m" x="330" y="210" text-anchor="middle">0</text>
 <rect class="fa" x="290" y="157.5" width="20" height="32.5" rx="1"/>
 <text class="m mu" x="300" y="210" text-anchor="middle">1</text>
 <rect class="fa" x="260" y="181.9" width="20" height="8.1" rx="1"/>

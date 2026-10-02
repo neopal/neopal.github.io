@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 350" role="img" aria-labelledby="system-prompt-t">
+<title id="system-prompt-t">Ce que reçoit le modèle au premier puis au troisième message : chaque requête commence par le même system prompt de l'éditeur, suivi de l'historique et du dernier message, avec les rôles system, user et assistant.</title>
+<text class="m d" x="0" y="14">1er message</text>
+<text class="m d" x="188" y="14">3e message</text>
+<rect class="bxa" x="0" y="24" width="172" height="72" rx="6"/>
+<text class="m ac" x="10" y="44">system</text>
+<text x="10" y="66">identité, date du jour,</text>
+<text x="10" y="86">ton, refus</text>
+<rect class="bxa" x="188" y="24" width="172" height="72" rx="6"/>
+<text class="m ac" x="198" y="44">system</text>
+<text x="198" y="66">identité, date du jour,</text>
+<text x="198" y="86">ton, refus</text>
+<rect class="bx" x="0" y="104" width="172" height="30" rx="6"/>
+<text class="m d" x="10" y="124">user</text>
+<text x="92" y="124">message 1</text>
+<rect class="bx" x="188" y="104" width="172" height="30" rx="6"/>
+<text class="m d" x="198" y="124">user</text>
+<text x="280" y="124">message 1</text>
+<rect class="bx" x="188" y="140" width="172" height="30" rx="6"/>
+<text class="m d" x="198" y="160">assistant</text>
+<text x="280" y="160">réponse 1</text>
+<rect class="bx" x="188" y="176" width="172" height="30" rx="6"/>
+<text class="m d" x="198" y="196">user</text>
+<text x="280" y="196">message 2</text>
+<rect class="bx" x="188" y="212" width="172" height="30" rx="6"/>
+<text class="m d" x="198" y="232">assistant</text>
+<text x="280" y="232">réponse 2</text>
+<rect class="bx" x="188" y="248" width="172" height="30" rx="6"/>
+<text class="m d" x="198" y="268">user</text>
+<text x="280" y="268">message 3</text>
+<text class="m ac" x="0" y="176">system</text>
+<text class="mu" x="0" y="196">écrit par l'éditeur</text>
+<text class="m d" x="0" y="224">user</text>
+<text class="mu" x="0" y="244">écrit par toi</text>
+<text class="m d" x="0" y="272">assistant</text>
+<text class="mu" x="0" y="292">écrit par le modèle</text>
+<text class="i mu" x="0" y="322">Le system prompt revient en tête de chaque</text>
+<text class="i mu" x="0" y="342">requête, comme un texte parmi les autres.</text>
+</svg>
