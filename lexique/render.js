@@ -116,6 +116,16 @@
     const solutions = sols.length
       ? `<h2>Solutions populaires</h2><dl class="solutions">${kinds.map((k) => `<div><dt>${esc(k)}</dt><dd>${sols.filter((s) => (s.kind || '') === k).map((s) => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(', ')}</dd></div>`).join('')}</dl>`
       : '';
+    // Tableau comparatif daté : {caption, asOf, columns: [..], rows: [[..]], note?, source?}.
+    const tb = t.table && arr(t.table.columns).length && arr(t.table.rows).length ? t.table : null;
+    const table = tb
+      ? `<h2>${esc(tb.caption || 'Comparatif')}</h2><div class="tablewrap"><table class="cmp"><thead><tr>${tb.columns.map((c) => `<th scope="col">${esc(c)}</th>`).join('')}</tr></thead><tbody>${tb.rows.map((r) => `<tr>${arr(r).map((c, i) => (i === 0 ? `<th scope="row">${esc(c)}</th>` : `<td>${esc(c)}</td>`)).join('')}</tr>`).join('')}</tbody></table></div>${tb.asOf || tb.note ? `<p class="tnote">${tb.asOf ? `Relevé du ${esc(tb.asOf)}.` : ''}${tb.note ? ` ${esc(tb.note)}` : ''}</p>` : ''}`
+      : '';
+    // Fiabilité (benchmarks) : {level: 'solide' | 'à nuancer' | 'fragile', why}.
+    const rel = t.reliability && t.reliability.level ? t.reliability : null;
+    const reliability = rel
+      ? `<h2>Fiable ?</h2><div class="rely rely-${esc(String(rel.level).normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z]+/gi, '-').toLowerCase())}"><b>${esc(rel.level)}</b><p>${esc(rel.why || '')}</p></div>`
+      : '';
     const section = (title, body) => (body ? `<h2>${title}</h2>${body}` : '');
     const navLink = (x, dir) => (x
       ? `<a class="${dir}" href="${termUrl(x.id, o)}" data-go="${esc(x.id)}" rel="${dir}"><span aria-hidden="true">${dir === 'prev' ? '←' : '→'}</span><span class="nt">${esc(x.title)}</span></a>`
@@ -132,6 +142,8 @@
         ${t.image || splits ? `<h2>L'image</h2>${t.image ? `<p>${esc(t.image)}</p>` : ''}${splits}` : ''}
         ${section('Imagine', t.imagine ? `<p class="imagine">${esc(t.imagine)}</p>` : '')}
         ${section('Définition complète', arr(t.full).map((p) => `<p>${esc(p)}</p>`).join(''))}
+        ${reliability}
+        ${table}
         ${section('2024 vs 2026', t.then ? `<p>${esc(t.then)}</p>` : '')}
         ${jargon}
         ${solutions}

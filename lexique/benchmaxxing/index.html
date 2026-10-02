@@ -68,6 +68,23 @@ h1[tabindex]:focus{outline:none}
 /* ---------- Mise en page ---------- */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
 .graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
@@ -99,6 +116,18 @@ p{margin-bottom:12px}
 .solutions div{padding:8px 0;border-top:1px solid var(--line)}
 .solutions div:first-child{border-top:0;padding-top:2px}
 .solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
 .solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 
 .chat{display:flex;flex-direction:column;gap:10px}
@@ -157,6 +186,9 @@ p{margin-bottom:12px}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az{display:none!important}
+  .graph-wrap.open #graph{display:block!important}
+  .graph-wrap.open .legend{display:flex!important}
   .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
   .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 
@@ -192,6 +224,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/benchmaxxing/#term","name":"Benchmaxxing","description":"Le benchmaxxing consiste à optimiser un modèle, ou la façon de présenter ses scores, pour grimper dans les classements plutôt que pour mieux servir ceux qui l'utilisent.","url":"https://neopal.github.io/lexique/benchmaxxing/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["benchmark gaming","benchmark hacking"]}</script>
@@ -211,8 +244,13 @@ p{margin-bottom:12px}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
     <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
     <div class="legend" id="legend"></div>
   </div>
@@ -227,6 +265,8 @@ p{margin-bottom:12px}
         <h2>L'image</h2><p>Les semaines avant le concours, un groupe peut ne plus répéter que le morceau imposé, jusqu&#39;à le jouer sans une fausse note. Il gagne le concours, puis déçoit au premier concert, parce que la salle lui demande autre chose.</p>
         <h2>Imagine</h2><p class="imagine">Avant, début avril 2025, la version de Llama 4 Maverick que Meta a inscrite sur LMArena est une variante expérimentale réglée pour plaire aux votants, avec de longues réponses semées d&#39;émojis, et elle se classe deuxième. Après, le 11 avril, LMArena classe la version que tout le monde peut télécharger, et elle tombe à la 32e place.</p>
         <h2>Définition complète</h2><p>Le benchmaxxing prend plusieurs formes, de la plus banale à la plus discutable. Un labo peut entraîner son modèle sur des exercices qui ressemblent beaucoup au test, retenir la meilleure de plusieurs variantes pour chaque benchmark, ou tester en privé des dizaines de versions sur un classement public avant d&#39;en montrer une seule. Dans les trois cas, le score grimpe plus vite que la qualité, comme le prévoit la loi de Goodhart.</p><p>Llama 4 en est devenu le cas d&#39;école. Fin avril 2025, l&#39;étude The Leaderboard Illusion a compté 27 variantes privées testées par Meta sur LMArena avant la sortie du modèle, et LMArena a changé ses règles après l&#39;épisode Maverick. En janvier 2026, Yann LeCun, sur le départ de Meta, a reconnu dans le Financial Times que l&#39;équipe avait « fudged a little bit » en prenant des versions différentes du modèle selon les benchmarks.</p>
+        
+        
         
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>benchmaxxé</dt><dd>se dit d&#39;un modèle dont les scores annoncés promettent plus que ce qu&#39;on obtient en l&#39;utilisant</dd></div><div><dt>loi de Goodhart</dt><dd>quand une mesure devient un objectif, elle cesse d&#39;être une bonne mesure ; l&#39;économiste Charles Goodhart en a formulé l&#39;idée en 1975</dd></div><div><dt>cherry-picking</dt><dd>ne montrer que les scores flatteurs, ou la meilleure variante du modèle pour chaque test</dd></div><div><dt>private testing</dt><dd>tester en secret plusieurs variantes d&#39;un modèle sur un classement public et ne rendre visible que la meilleure</dd></div></dl>
         
@@ -331,6 +371,7 @@ window.__lexBoot = function () {
     }
     document.body.classList.toggle('has-pager', !!current);
     highlight();
+    if (typeof markAz === 'function') markAz();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -591,8 +632,38 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : true;
+    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
   }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
 
   function fit() {
     const box = svg.getBoundingClientRect();
@@ -693,6 +764,9 @@ window.__lexBoot = function () {
   window.addEventListener('resize', () => { fit(); startLoop(); });
   document.addEventListener('visibilitychange', startLoop);
 
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
   startLoop();

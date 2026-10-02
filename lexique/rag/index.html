@@ -68,6 +68,23 @@ h1[tabindex]:focus{outline:none}
 /* ---------- Mise en page ---------- */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
 .graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
@@ -99,6 +116,18 @@ p{margin-bottom:12px}
 .solutions div{padding:8px 0;border-top:1px solid var(--line)}
 .solutions div:first-child{border-top:0;padding-top:2px}
 .solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
 .solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 
 .chat{display:flex;flex-direction:column;gap:10px}
@@ -157,6 +186,9 @@ p{margin-bottom:12px}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az{display:none!important}
+  .graph-wrap.open #graph{display:block!important}
+  .graph-wrap.open .legend{display:flex!important}
   .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
   .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 
@@ -192,6 +224,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/rag/#term","name":"RAG","description":"Le RAG consiste à aller chercher les bons documents avant que le modèle réponde, puis à les lui mettre sous les yeux avec ta question, pour qu'il réponde à partir de ces documents plutôt que de mémoire.","url":"https://neopal.github.io/lexique/rag/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Retrieval-Augmented Generation","retrieval","génération augmentée par la recherche"]}</script>
@@ -211,8 +244,13 @@ p{margin-bottom:12px}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
     <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
     <div class="legend" id="legend"></div>
   </div>
@@ -227,6 +265,8 @@ p{margin-bottom:12px}
         <h2>L'image</h2><p>Le RAG tient dans la partition qu&#39;on pose sur le pupitre juste avant la prise. Le groupe ne connaît pas mieux le morceau qu&#39;avant, mais il le joue en lisant la partition, et quelqu&#39;un de l&#39;équipe est allé chercher la bonne dans les archives.</p>
         <h2>Imagine</h2><p class="imagine">Demande à ton assistant quel est le menu de la cantine de ton bureau cette semaine : il te dit qu&#39;il ne sait pas, ou il t&#39;en invente un. Colle ensuite le menu dans la conversation et repose la question, et la réponse devient juste. Tu viens de faire du RAG à la main.</p>
         <h2>Définition complète</h2><p>RAG veut dire Retrieval-Augmented Generation, génération augmentée par la recherche. Avant que le modèle réponde, un programme cherche les passages utiles dans une collection de documents, puis les colle dans la fenêtre de contexte avec la question. Les paramètres du modèle ne changent pas ; il lit, au moment de répondre, des pages qu&#39;il n&#39;a jamais vues pendant son entraînement. Le terme vient d&#39;un article de mai 2020 (Lewis et al.), qui branchait un modèle sur un index de Wikipédia.</p><p>Le cas le plus courant est le chatbot d&#39;entreprise branché sur ses documents. Les documents sont découpés en morceaux, chaque morceau reçoit son embedding, et à chaque question le système ramène les morceaux les plus proches. Le RAG réduit les hallucinations sans les supprimer : en mai 2024, une étude a mesuré que des outils de recherche juridique vendus comme fiables grâce au RAG (Lexis+ AI, l&#39;assistant de Westlaw) hallucinaient encore sur 17 à 33 % des questions.</p>
+        
+        
         <h2>2024 vs 2026</h2><p>En 2024, faire du RAG voulait presque toujours dire découper les documents, calculer leurs embeddings et les ranger dans une base vectorielle. En 2026, de plus en plus d&#39;outils laissent le modèle chercher lui-même, en lançant plusieurs recherches et en ouvrant les fichiers un par un (l&#39;agentic search). En février 2026, Boris Cherny, le créateur de Claude Code chez Anthropic, a expliqué que les premières versions de l&#39;outil utilisaient un RAG avec base vectorielle, abandonné parce que la recherche agentique marchait mieux.</p>
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>chunks</dt><dd>les morceaux de quelques paragraphes en lesquels on découpe les documents avant de les indexer</dd></div><div><dt>vector store</dt><dd>la base vectorielle qui range l&#39;embedding de chaque chunk pour retrouver les plus proches d&#39;une question</dd></div><div><dt>reranker</dt><dd>un second modèle qui reclasse les morceaux trouvés pour ne garder que les plus utiles avant de les donner au LLM</dd></div><div><dt>agentic search</dt><dd>le modèle mène lui-même la recherche, en lançant plusieurs requêtes et en ouvrant les fichiers un par un, au lieu de recevoir des morceaux tout prêts</dd></div></dl>
         <h2>Solutions populaires</h2><dl class="solutions"><div><dt>base vectorielle</dt><dd><a href="https://www.pinecone.io/" target="_blank" rel="noopener">Pinecone</a>, <a href="https://qdrant.tech/" target="_blank" rel="noopener">Qdrant</a>, <a href="https://github.com/pgvector/pgvector" target="_blank" rel="noopener">pgvector</a></dd></div><div><dt>embeddings et reranking</dt><dd><a href="https://www.voyageai.com/" target="_blank" rel="noopener">Voyage AI</a></dd></div><div><dt>plateforme cloud</dt><dd><a href="https://cloud.google.com/products/gemini-enterprise-agent-platform/agent-search" target="_blank" rel="noopener">Vertex AI Search (devenu Agent Search, Google Cloud)</a>, <a href="https://aws.amazon.com/bedrock/knowledge-bases/" target="_blank" rel="noopener">Amazon Bedrock Knowledge Bases</a></dd></div></dl>
@@ -331,6 +371,7 @@ window.__lexBoot = function () {
     }
     document.body.classList.toggle('has-pager', !!current);
     highlight();
+    if (typeof markAz === 'function') markAz();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -591,8 +632,38 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : true;
+    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
   }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
 
   function fit() {
     const box = svg.getBoundingClientRect();
@@ -693,6 +764,9 @@ window.__lexBoot = function () {
   window.addEventListener('resize', () => { fit(); startLoop(); });
   document.addEventListener('visibilitychange', startLoop);
 
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
   startLoop();

@@ -68,6 +68,23 @@ h1[tabindex]:focus{outline:none}
 /* ---------- Mise en page ---------- */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
 .graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
@@ -99,6 +116,18 @@ p{margin-bottom:12px}
 .solutions div{padding:8px 0;border-top:1px solid var(--line)}
 .solutions div:first-child{border-top:0;padding-top:2px}
 .solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
 .solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 
 .chat{display:flex;flex-direction:column;gap:10px}
@@ -157,6 +186,9 @@ p{margin-bottom:12px}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az{display:none!important}
+  .graph-wrap.open #graph{display:block!important}
+  .graph-wrap.open .legend{display:flex!important}
   .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
   .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 
@@ -192,6 +224,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/mythe-base-de-donnees/#term","name":"L'IA cherche la réponse dans une base","description":"Un modèle ne va pas chercher sa réponse dans une base de textes ; il la réécrit de mémoire à chaque fois, token après token, comme un groupe sans discothèque qui rejoue le morceau note après note.","url":"https://neopal.github.io/lexique/mythe-base-de-donnees/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Myth: AI looks answers up in a database","the model searched for it","AI as a search engine"]}</script>
@@ -211,8 +244,13 @@ p{margin-bottom:12px}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
     <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
     <div class="legend" id="legend"></div>
   </div>
@@ -225,8 +263,10 @@ p{margin-bottom:12px}
         <p class="lead">Un modèle ne va pas chercher sa réponse dans une base de textes ; il la réécrit de mémoire à chaque fois, token après token, comme un groupe sans discothèque qui rejoue le morceau note après note.</p>
         
         <h2>L'image</h2><p>Ce que le groupe sait jouer tient dans le réglage de sa console, et aucun morceau n&#39;est rangé dedans : seulement des réglages qui font que telle note sonne juste après telle autre.</p>
-        <h2>Imagine</h2><p class="imagine">Tu demandes au groupe de te rejouer mot pour mot la page 112 d&#39;un roman qu&#39;il a entendu une fois ; il te sert, sûr de lui, une page superbe que personne n&#39;a jamais écrite, et salue sous les applaudissements.</p>
-        <h2>Définition complète</h2><p>Un modèle de langage ne stocke pas de textes qu&#39;il irait consulter. Il stocke des paramètres, des nombres ajustés pendant l&#39;entraînement pour prédire le token suivant. Quand il répond, il écrit un token à la fois en tirant à chaque pas un token parmi les plus probables, si bien que la réponse n&#39;existe nulle part avant qu&#39;il l&#39;écrive.</p><p>Deux tests le montrent. Pose deux fois la même question dans deux conversations et la réponse change, alors qu&#39;une base rendrait la même fiche. Demande ensuite une citation exacte et tu obtiens souvent une phrase plausible et fausse, ce qu&#39;on appelle une hallucination.</p><p>Certains produits cherchent vraiment : ChatGPT avec la recherche web, Perplexity, ou le chatbot d&#39;une entreprise branché sur ses documents (le RAG). Dans ce cas, c&#39;est l&#39;outil autour du modèle qui fait la recherche et lui colle les pages trouvées dans la conversation ; le modèle, lui, écrit toujours sa réponse token par token.</p>
+        <h2>Imagine</h2><p class="imagine">Le groupe a entendu une fois un roman, et tu lui réclames mot pour mot la page 112 ; il te sert, sûr de lui, une page superbe que personne n&#39;a jamais écrite, et salue sous les applaudissements.</p>
+        <h2>Définition complète</h2><p>Un modèle de langage ne stocke pas de textes qu&#39;il irait consulter. Il stocke des paramètres, des nombres ajustés pendant l&#39;entraînement pour prédire le token suivant. Quand il répond, il écrit un token à la fois en tirant à chaque pas l&#39;un des candidats en tête, et la réponse n&#39;existe nulle part avant qu&#39;il l&#39;écrive.</p><p>Deux tests le montrent. Pose deux fois la même question dans deux conversations et la réponse change, alors qu&#39;une base rendrait la même fiche. Demande ensuite une citation exacte et tu obtiens souvent une phrase plausible et fausse, ce qu&#39;on appelle une hallucination.</p><p>Certains produits cherchent vraiment : ChatGPT avec la recherche web, Perplexity, ou l&#39;assistant interne relié aux documents de ta boîte (le RAG). Dans ce cas, c&#39;est l&#39;outil autour du modèle qui fait la recherche et lui colle les pages trouvées dans la conversation, et le modèle écrit quand même sa réponse token par token.</p>
+        
+        
         <h2>2024 vs 2026</h2><p>Jusqu&#39;à l&#39;automne 2024, ChatGPT répondait surtout de mémoire ; la recherche web intégrée, ChatGPT Search, a été déployée entre octobre et décembre 2024. En 2026, les assistants grand public cherchent souvent d&#39;eux-mêmes dès qu&#39;une question porte sur l&#39;actualité, et citent leurs sources, ce qui donne l&#39;impression d&#39;une base alors que l&#39;outil leur fait simplement lire plus de pages.</p>
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>knowledge cutoff</dt><dd>la date où s&#39;arrêtent les textes d&#39;entraînement : le modèle ne sait rien de ce qui s&#39;est passé après, sauf si on le lui donne à lire</dd></div><div><dt>web search, browsing</dt><dd>l&#39;outil qui lance une vraie recherche sur Internet et colle les pages trouvées sous les yeux du modèle</dd></div><div><dt>grounding</dt><dd>ancrer la réponse dans des documents fournis ou trouvés, plutôt que dans la seule mémoire du modèle</dd></div></dl>
         
@@ -331,6 +371,7 @@ window.__lexBoot = function () {
     }
     document.body.classList.toggle('has-pager', !!current);
     highlight();
+    if (typeof markAz === 'function') markAz();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -591,8 +632,38 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : true;
+    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
   }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
 
   function fit() {
     const box = svg.getBoundingClientRect();
@@ -693,6 +764,9 @@ window.__lexBoot = function () {
   window.addEventListener('resize', () => { fit(); startLoop(); });
   document.addEventListener('visibilitychange', startLoop);
 
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
   startLoop();

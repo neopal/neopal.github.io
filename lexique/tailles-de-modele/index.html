@@ -68,6 +68,23 @@ h1[tabindex]:focus{outline:none}
 /* ---------- Mise en page ---------- */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
 .graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
@@ -99,6 +116,18 @@ p{margin-bottom:12px}
 .solutions div{padding:8px 0;border-top:1px solid var(--line)}
 .solutions div:first-child{border-top:0;padding-top:2px}
 .solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
 .solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 
 .chat{display:flex;flex-direction:column;gap:10px}
@@ -157,6 +186,9 @@ p{margin-bottom:12px}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az{display:none!important}
+  .graph-wrap.open #graph{display:block!important}
+  .graph-wrap.open .legend{display:flex!important}
   .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
   .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 
@@ -192,6 +224,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/tailles-de-modele/#term","name":"Tailles de modèle","description":"La taille d'un modèle, c'est son nombre de paramètres, compté en milliards (B) ou en milliers de milliards (T) ; pour un modèle MoE, on donne deux chiffres, le total et la part qui travaille pour chaque token.","url":"https://neopal.github.io/lexique/tailles-de-modele/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Model size","parameter count","model scale","nombre de paramètres"]}</script>
@@ -211,8 +244,13 @@ p{margin-bottom:12px}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
     <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
     <div class="legend" id="legend"></div>
   </div>
@@ -227,6 +265,8 @@ p{margin-bottom:12px}
         <h2>L'image</h2><p>La taille du groupe se compte en potards sur la console. Sur une console dense, chaque note fait bouger tous les potards ; sur celle d&#39;un MoE, deux ou trois rangées jouent pendant que les autres restent immobiles, et il faut pourtant de la place dans le studio pour la console entière.</p>
         <h2>Imagine</h2><p class="imagine">Tu demandes à l&#39;équipe qui gère les serveurs : « Entre DeepSeek-V4-Flash et Qwen3.8-27B, lequel est le plus gros ? » On te répond : « Le premier a dix fois plus de paramètres, et le second en fait travailler deux fois plus pour chaque token. »</p>
         <h2>Définition complète</h2><p>La taille se compte en paramètres, les nombres réglés pendant l&#39;entraînement, et le jargon l&#39;abrège avec des lettres anglaises : B pour billion (milliard), T pour trillion (millier de milliards). Ce chiffre dit d&#39;abord combien de mémoire il faut pour faire tourner le modèle. En 16 bits, chaque paramètre occupe 2 octets, et les fichiers de Llama 3.1 405B pèsent ainsi 812 Go sur Hugging Face.</p><p>Avec les MoE, le chiffre se dédouble. Un modèle dense fait travailler tous ses paramètres pour chaque token, alors qu&#39;un MoE n&#39;en active qu&#39;une fraction : DeepSeek-V4-Pro, présenté en avril 2026, compte 1 600 milliards de paramètres et n&#39;en active que 49 milliards par token. Le total dit combien de serveurs il faut ; la part active dit combien coûte chaque token et à quelle vitesse il sort.</p><p>C&#39;est pour ça que Qwen écrit les deux nombres dans le nom de ses modèles, comme Qwen3-235B-A22B ou Qwen3.8-2.4T-A95B. Face à un modèle dense, on compare le nombre qui suit le A quand on parle de vitesse, et le premier quand on parle de matériel.</p>
+        
+        
         <h2>2024 vs 2026</h2><p>En juillet 2024, Meta publiait Llama 3.1 405B, un modèle dense dont un seul chiffre suffisait à décrire la taille. En juillet 2026, Moonshot AI a publié Kimi K3, qui compte 2 800 milliards de paramètres dont 104 milliards actifs par token. Il est sept fois plus gros que Llama 3.1 405B au total, et chaque token y fait pourtant travailler quatre fois moins de paramètres.</p>
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>7B, 70B, 405B</dt><dd>7, 70 et 405 milliards de paramètres (B pour billion, milliard en anglais) ; en 16 bits, compte 2 Go de mémoire par milliard, soit environ 141 Go pour un 70B</dd></div><div><dt>235B-A22B</dt><dd>la façon dont Qwen nomme ses modèles : 235 milliards de paramètres en tout, dont 22 milliards activés (A pour active) pour chaque token</dd></div><div><dt>dense</dt><dd>un modèle où tous les paramètres travaillent pour chaque token, comme Qwen3.8-27B ; c&#39;est l&#39;inverse d&#39;un MoE</dd></div><div><dt>8x7B</dt><dd>le nom suggère huit fois 7 milliards, mais Mixtral 8x7B ne compte que 46,7 milliards de paramètres, parce que seule une partie du réseau est dupliquée, et il en fait travailler 12,9 milliards par token</dd></div></dl>
         
@@ -331,6 +371,7 @@ window.__lexBoot = function () {
     }
     document.body.classList.toggle('has-pager', !!current);
     highlight();
+    if (typeof markAz === 'function') markAz();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -591,8 +632,38 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : true;
+    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
   }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
 
   function fit() {
     const box = svg.getBoundingClientRect();
@@ -693,6 +764,9 @@ window.__lexBoot = function () {
   window.addEventListener('resize', () => { fit(); startLoop(); });
   document.addEventListener('visibilitychange', startLoop);
 
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
   startLoop();

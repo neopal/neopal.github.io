@@ -68,6 +68,23 @@ h1[tabindex]:focus{outline:none}
 /* ---------- Mise en page ---------- */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
 .graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
@@ -99,6 +116,18 @@ p{margin-bottom:12px}
 .solutions div{padding:8px 0;border-top:1px solid var(--line)}
 .solutions div:first-child{border-top:0;padding-top:2px}
 .solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
 .solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 
 .chat{display:flex;flex-direction:column;gap:10px}
@@ -157,6 +186,9 @@ p{margin-bottom:12px}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az{display:none!important}
+  .graph-wrap.open #graph{display:block!important}
+  .graph-wrap.open .legend{display:flex!important}
   .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
   .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 
@@ -192,6 +224,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/mythe-chatgpt-c-est-le-modele/#term","name":"ChatGPT, c'est le modèle","description":"ChatGPT est une application et non un modèle : elle fait tourner des modèles d'OpenAI qui changent régulièrement (GPT-3.5 en 2022, GPT-6 en 2026), et ajoute autour d'eux des consignes, une mémoire, la recherche web et d'autres outils.","url":"https://neopal.github.io/lexique/mythe-chatgpt-c-est-le-modele/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Myth: ChatGPT is the model","model vs product","model router","ChatGPT vs GPT","modèle et produit"]}</script>
@@ -211,8 +244,13 @@ p{margin-bottom:12px}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
     <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
     <div class="legend" id="legend"></div>
   </div>
@@ -227,6 +265,8 @@ p{margin-bottom:12px}
         <h2>L'image</h2><p>Une salle de concert garde son enseigne quand l&#39;affiche change. ChatGPT est la salle, avec son entrée, son vestiaire, son ingé lumière et ses consignes de sécurité, et le groupe sur scène, le modèle, a été remplacé bien des fois depuis l&#39;ouverture.</p>
         <h2>Imagine</h2><p class="imagine">Le 30 novembre 2022, tu ouvres ChatGPT, tu tapes ta question, et c&#39;est GPT-3.5 qui te répond. En septembre 2026, tu retrouves la même adresse, le même logo et le même champ de saisie, et derrière répond GPT-6, une famille de modèles sortie le même mois en trois versions.</p>
         <h2>Définition complète</h2><p>Un modèle est un fichier de paramètres qui prend du texte et prédit la suite. ChatGPT est le produit construit autour, une application qui ajoute des consignes avant ta question, garde l&#39;historique, branche la recherche web, la mémoire et d&#39;autres outils, puis choisit quel modèle répond. Le même modèle peut donc se comporter autrement dans ChatGPT et par l&#39;API, parce que tout ce qui l&#39;entoure est différent.</p><p>Depuis son lancement le 30 novembre 2022, ChatGPT a fait tourner plus d&#39;une quinzaine de modèles successifs, de GPT-3.5 à GPT-6 en septembre 2026, en passant par GPT-4, GPT-4o, o1, o3 et GPT-5. Avec GPT-5, en août 2025, l&#39;application a même cessé de faire répondre un seul modèle à la fois, puisqu&#39;un router choisit entre des modèles plus ou moins puissants selon la complexité de la question.</p><p>Quand on dit « ChatGPT a changé », c&#39;est souvent le modèle qui a été remplacé sous l&#39;application. Le retrait de GPT-4o, dont beaucoup d&#39;utilisateurs aimaient le ton, a provoqué une vague de protestations, sans que l&#39;application change d&#39;adresse ni de logo.</p>
+        
+        
         
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>GPT-5, GPT-5.5, GPT-6</dt><dd>des modèles d&#39;OpenAI ; ChatGPT est l&#39;application qui les fait tourner, et elle en a changé plus d&#39;une quinzaine de fois depuis 2022</dd></div><div><dt>router</dt><dd>le programme qui choisit quel modèle répond selon la complexité de la question ; ChatGPT en utilise un depuis GPT-5, en août 2025</dd></div><div><dt>API</dt><dd>l&#39;accès direct au modèle par programme, sans l&#39;application, donc sans la mémoire, la recherche web ni les consignes ajoutées par ChatGPT</dd></div></dl>
         
@@ -331,6 +371,7 @@ window.__lexBoot = function () {
     }
     document.body.classList.toggle('has-pager', !!current);
     highlight();
+    if (typeof markAz === 'function') markAz();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -591,8 +632,38 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : true;
+    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
   }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
 
   function fit() {
     const box = svg.getBoundingClientRect();
@@ -693,6 +764,9 @@ window.__lexBoot = function () {
   window.addEventListener('resize', () => { fit(); startLoop(); });
   document.addEventListener('visibilitychange', startLoop);
 
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
   startLoop();

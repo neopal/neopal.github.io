@@ -68,6 +68,23 @@ h1[tabindex]:focus{outline:none}
 /* ---------- Mise en page ---------- */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
 .graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
@@ -99,6 +116,18 @@ p{margin-bottom:12px}
 .solutions div{padding:8px 0;border-top:1px solid var(--line)}
 .solutions div:first-child{border-top:0;padding-top:2px}
 .solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
 .solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 
 .chat{display:flex;flex-direction:column;gap:10px}
@@ -157,6 +186,9 @@ p{margin-bottom:12px}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az{display:none!important}
+  .graph-wrap.open #graph{display:block!important}
+  .graph-wrap.open .legend{display:flex!important}
   .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
   .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 
@@ -192,6 +224,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/agent/#term","name":"Agent","description":"Un agent est un modèle de langage qu'on laisse agir : on lui donne un objectif et des outils, et il enchaîne lui-même les actions, en regardant le résultat de chacune pour choisir la suivante, jusqu'à ce que la tâche soit finie.","url":"https://neopal.github.io/lexique/agent/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["AI agent","agents","agentic","agentic AI","coding agent","agent IA"]}</script>
@@ -211,8 +244,13 @@ p{margin-bottom:12px}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
     <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
     <div class="legend" id="legend"></div>
   </div>
@@ -225,15 +263,17 @@ p{margin-bottom:12px}
         <p class="lead">Un agent est un modèle de langage qu&#39;on laisse agir : on lui donne un objectif et des outils, et il enchaîne lui-même les actions, en regardant le résultat de chacune pour choisir la suivante, jusqu&#39;à ce que la tâche soit finie.</p>
         
         <h2>L'image</h2><p>Envoie le groupe en tournée avec ses roadies et leurs caisses à outils, et tu as un agent. En studio, il jouait le morceau qu&#39;on lui demandait ; sur la route, il décide de l&#39;étape suivante, demande aux roadies de monter la scène ou d&#39;appeler la salle, écoute ce que ça donne et choisit la suite, sans jamais porter une caisse lui-même.</p>
-        <h2>Imagine</h2><p class="imagine">Le 22 mai 2025, Anthropic a raconté que Rakuten avait confié à Claude Opus 4 la refonte d&#39;un projet open source, et que le modèle y avait travaillé seul pendant 7 heures d&#39;affilée. Sept heures, c&#39;est la journée moyenne d&#39;un temps plein en France, 35 heures par semaine réparties sur cinq jours ; arrivé à 9 heures, il aurait rendu sa copie à 16 heures, sans pause café ni déjeuner.</p>
-        <h2>Définition complète</h2><p>Un agent est un modèle de langage placé dans une boucle, avec des outils. On lui donne un objectif, par exemple « trouve-moi un train pour Lyon jeudi et mets-le dans mon agenda ». Il choisit une action, comme chercher les horaires, lit le résultat, puis choisit la suivante, jusqu&#39;à ce qu&#39;il juge la tâche finie ou qu&#39;une limite l&#39;arrête. Ces actions, ce sont les programmes autour de lui qui les exécutent, à partir des demandes qu&#39;il écrit.</p><p>Pour reconnaître un agent, la question est de savoir qui choisit l&#39;étape suivante. Anthropic a posé la distinction en décembre 2024 : dans un workflow, un développeur écrit les étapes à l&#39;avance, même si un modèle intervient à chacune ; dans un agent, le modèle décide en cours de route de ses actions et de ses outils. Le chatbot d&#39;entreprise qui cherche toujours dans la même base avant de répondre reste donc un workflow, alors que l&#39;assistant qui relance de lui-même une recherche quand la première ne donne rien penche du côté de l&#39;agent.</p><p>Les agents les plus utilisés en 2026 travaillent dans le code. Claude Code est sorti chez Anthropic en février 2025, Codex chez OpenAI en avril 2025, et Codex comptait plus de 2 millions d&#39;utilisateurs par semaine en mars 2026 ; Cursor joue dans la même catégorie. Tous lisent les fichiers d&#39;un projet, les modifient, lancent les tests et recommencent tant que les tests échouent.</p>
+        <h2>Imagine</h2><p class="imagine">Le 22 septembre 2026, dans l&#39;annonce de Claude Opus 5.5, un développeur de Clio raconte avoir confié au modèle une tâche répartie sur six dépôts de code et l&#39;avoir laissé tourner seul toute la nuit. Le modèle est resté sur la tâche plus de 18 heures ; lancé à 18 heures en quittant le bureau, il travaillait encore à midi le lendemain, l&#39;équivalent de deux journées et demie d&#39;un temps plein à 35 heures par semaine.</p>
+        <h2>Définition complète</h2><p>Un agent est un modèle de langage placé dans une boucle, avec des outils. On lui donne un objectif, par exemple « trouve-moi un train pour Lyon jeudi et mets-le dans mon agenda ». Il choisit une action, comme chercher les horaires, lit le résultat, puis choisit la suivante, jusqu&#39;à ce qu&#39;il juge la tâche finie ou qu&#39;une limite l&#39;arrête. Ces actions, ce sont les programmes autour de lui qui les exécutent, à partir des demandes qu&#39;il écrit.</p><p>Pour reconnaître un agent, la question est de savoir qui choisit l&#39;étape suivante. Anthropic a posé la distinction en décembre 2024 : dans un workflow, un développeur écrit les étapes à l&#39;avance, même si un modèle intervient à chacune ; dans un agent, le modèle décide en cours de route de ses actions et de ses outils. Le bot qui résume chaque ticket entrant puis le range dans une file reste donc un workflow, alors que l&#39;assistant qui relance de lui-même une recherche quand la première ne donne rien penche du côté de l&#39;agent.</p><p>Les agents les plus utilisés en 2026 travaillent dans le code. Claude Code est sorti chez Anthropic en février 2025, Codex chez OpenAI en avril 2025, et Codex comptait plus de 2 millions d&#39;utilisateurs par semaine en mars 2026 ; Cursor joue dans la même catégorie. Tous lisent les fichiers d&#39;un projet, les modifient, lancent les tests et recommencent tant que les tests échouent.</p>
+        
+        
         <h2>2024 vs 2026</h2><p>En décembre 2024, Anthropic publiait encore un guide pour expliquer ce qui distingue un agent d&#39;un workflow. En 2025, les agents sont entrés dans le travail quotidien des développeurs avec Claude Code et Codex. En janvier 2026, Anthropic a lancé Claude Cowork, le même principe pour les non-développeurs, qui range des dossiers ou produit des documents à partir des fichiers de ton ordinateur.</p>
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>agentique</dt><dd>se dit d&#39;un outil où le modèle enchaîne lui-même plusieurs actions (lire, chercher, modifier, lancer) au lieu de répondre en un seul message</dd></div><div><dt>coding agent</dt><dd>un agent qui travaille dans ton code : il lit les fichiers, les modifie, lance les tests et recommence ; Claude Code, Codex et Cursor en sont des exemples</dd></div><div><dt>workflow</dt><dd>un enchaînement d&#39;étapes écrit à l&#39;avance par un développeur, même s&#39;il appelle un modèle à plusieurs endroits ; le chemin ne change pas en cours de route</dd></div><div><dt>human-in-the-loop</dt><dd>un humain valide certaines actions avant qu&#39;elles partent, par exemple chaque commande lancée ou chaque e-mail envoyé</dd></div></dl>
         <h2>Solutions populaires</h2><dl class="solutions"><div><dt>agent de code</dt><dd><a href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">Claude Code</a>, <a href="https://developers.openai.com/codex" target="_blank" rel="noopener">Codex</a></dd></div><div><dt>éditeur de code avec agent</dt><dd><a href="https://cursor.com/" target="_blank" rel="noopener">Cursor</a></dd></div><div><dt>agent open source</dt><dd><a href="https://geminicli.com" target="_blank" rel="noopener">Gemini CLI</a>, <a href="https://github.com/OpenHands/OpenHands" target="_blank" rel="noopener">OpenHands</a>, <a href="https://block.github.io/goose/" target="_blank" rel="noopener">Goose</a></dd></div></dl>
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">On peut le laisser trier le drive partagé tout seul ?</div><div class="bubble a">Donne-lui une copie du drive plutôt que l&#39;original. En février 2026, un utilisateur a demandé à Claude Cowork de ranger un ordinateur, et l&#39;agent a effacé près de quinze ans de photos de famille, récupérées grâce à une restauration iCloud.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« L&#39;agent a cliqué sur le bouton. » Le modèle a écrit une demande d&#39;action, et c&#39;est le programme autour de lui qui a cliqué, avec les droits qu&#39;on lui a donnés. C&#39;est donc à cet endroit que se règle ce qu&#39;un agent a le droit de faire.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#D7A6FF" href="/lexique/harness/" data-go="harness">Harness</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/boucle-agent/" data-go="boucle-agent">Boucle agent</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/tool-use/" data-go="tool-use">Tool use</a><a class="tl live" style="--c:#FFB86B" href="/lexique/prompt-injection/" data-go="prompt-injection">Prompt injection</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/rag/" data-go="rag">RAG</a><a class="tl live" style="--c:#FF7A7A" href="/lexique/mythe-agent-autonome/" data-go="mythe-agent-autonome">« Un agent est autonome »</a></div></div>
-        <h2>Sources</h2><ol class="sources"><li><a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener">Anthropic, Building effective agents, 19 décembre 2024 (workflows contre agents)</a></li><li><a href="https://www.anthropic.com/news/claude-4" target="_blank" rel="noopener">Anthropic, Introducing Claude 4, 22 mai 2025 (Rakuten, refonte open source menée seule pendant 7 heures ; Claude Code disponible pour tous). Calcul de l&#39;Imagine : 35 heures / 5 jours = 7 heures ; 9 h + 7 h = 16 h</a></li><li><a href="https://www.service-public.fr/particuliers/vosdroits/F1911" target="_blank" rel="noopener">Service-public.fr, durée légale du travail : 35 heures par semaine</a></li><li><a href="https://en.wikipedia.org/wiki/Claude_(AI)" target="_blank" rel="noopener">Wikipédia, Claude (Claude Code sorti en février 2025, Claude Cowork en janvier 2026)</a></li><li><a href="https://en.wikipedia.org/wiki/OpenAI_Codex" target="_blank" rel="noopener">Wikipédia, OpenAI Codex (Codex CLI le 16 avril 2025, plus de 2 millions d&#39;utilisateurs hebdomadaires en mars 2026)</a></li><li><a href="https://futurism.com/artificial-intelligence/claude-wife-photos" target="_blank" rel="noopener">Futurism, 13 février 2026 : Claude Cowork efface le dossier de photos de famille, restauré depuis iCloud</a></li></ol>
+        <h2>Sources</h2><ol class="sources"><li><a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener">Anthropic, Building effective agents, 19 décembre 2024 (workflows contre agents)</a></li><li><a href="https://www.anthropic.com/news/claude-opus-5-5" target="_blank" rel="noopener">Anthropic, Introducing Claude Opus 5.5, 22 septembre 2026 (témoignage de Sean Heintz, Clio : tâche sur six dépôts lancée la nuit sans surveillance, plus de 18 heures sur la tâche). Calcul de l&#39;Imagine : 18 h + 18 h = midi le lendemain ; 35 heures / 5 jours = 7 heures par jour ; 18 / 7 = 2,6 journées</a></li><li><a href="https://www.service-public.fr/particuliers/vosdroits/F1911" target="_blank" rel="noopener">Service-public.fr, durée légale du travail : 35 heures par semaine</a></li><li><a href="https://en.wikipedia.org/wiki/Claude_(AI)" target="_blank" rel="noopener">Wikipédia, Claude (Claude Code sorti en février 2025, Claude Cowork en janvier 2026)</a></li><li><a href="https://en.wikipedia.org/wiki/OpenAI_Codex" target="_blank" rel="noopener">Wikipédia, OpenAI Codex (Codex CLI le 16 avril 2025, plus de 2 millions d&#39;utilisateurs hebdomadaires en mars 2026)</a></li><li><a href="https://futurism.com/artificial-intelligence/claude-wife-photos" target="_blank" rel="noopener">Futurism, 13 février 2026 : Claude Cowork efface le dossier de photos de famille, restauré depuis iCloud</a></li></ol>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/reward-hacking/" data-go="reward-hacking" rel="prev"><span aria-hidden="true">←</span><span class="nt">Reward hacking</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -331,6 +371,7 @@ window.__lexBoot = function () {
     }
     document.body.classList.toggle('has-pager', !!current);
     highlight();
+    if (typeof markAz === 'function') markAz();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -591,8 +632,38 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : true;
+    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
   }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
 
   function fit() {
     const box = svg.getBoundingClientRect();
@@ -693,6 +764,9 @@ window.__lexBoot = function () {
   window.addEventListener('resize', () => { fit(); startLoop(); });
   document.addEventListener('visibilitychange', startLoop);
 
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
   startLoop();

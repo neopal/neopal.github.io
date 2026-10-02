@@ -68,6 +68,23 @@ h1[tabindex]:focus{outline:none}
 /* ---------- Mise en page ---------- */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
 .graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
@@ -99,6 +116,18 @@ p{margin-bottom:12px}
 .solutions div{padding:8px 0;border-top:1px solid var(--line)}
 .solutions div:first-child{border-top:0;padding-top:2px}
 .solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
 .solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 
 .chat{display:flex;flex-direction:column;gap:10px}
@@ -157,6 +186,9 @@ p{margin-bottom:12px}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az{display:none!important}
+  .graph-wrap.open #graph{display:block!important}
+  .graph-wrap.open .legend{display:flex!important}
   .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
   .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 
@@ -192,6 +224,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/loop/#term","name":"Loop","description":"La loop, ou boucle d'itération, est la façon de travailler avec un agent par allers-retours : il essaie, on vérifie le résultat, on corrige la consigne ou le code, et on recommence jusqu'à ce que la vérification passe.","url":"https://neopal.github.io/lexique/loop/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Feedback loop","iteration loop","verification loop","Ralph loop","boucle d'itération","boucle de vérification"]}</script>
@@ -211,8 +244,13 @@ p{margin-bottom:12px}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
     <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
     <div class="legend" id="legend"></div>
   </div>
@@ -225,12 +263,14 @@ p{margin-bottom:12px}
         <p class="lead">La loop, ou boucle d&#39;itération, est la façon de travailler avec un agent par allers-retours : il essaie, on vérifie le résultat, on corrige la consigne ou le code, et on recommence jusqu&#39;à ce que la vérification passe.</p>
         
         <h2>L'image</h2><p>Sans casque, le groupe joue, tu réécoutes, tu pointes la mesure qui frotte, et il rejoue ; la loop, c&#39;est ce cycle, et tu en es le goulot. Donne-lui un casque, c&#39;est-à-dire une vérification qu&#39;il lance lui-même, et il entend la mesure fausse avant que tu aies besoin de la pointer.</p>
-        <h2>Imagine</h2><p class="imagine">Tu demandes à l&#39;agent, après sa correction : « Les tests passent ? » Il te répond : « J&#39;ai corrigé le bug dans le calcul de la TVA, tout devrait fonctionner maintenant. »</p>
-        <h2>Définition complète</h2><p>Avec un agent, une tâche se règle rarement en une consigne et un résultat. On lui donne la tâche, il produit une première version, on la vérifie, on lui dit ce qui ne va pas ou on précise la consigne, et il recommence. Selon la documentation de Claude Code, l&#39;agent s&#39;arrête quand le travail a l&#39;air fini ; sans vérification qu&#39;il peut lancer lui-même, c&#39;est toi qui deviens la boucle, et chaque erreur attend que tu la remarques.</p><p>La boucle va beaucoup plus vite quand l&#39;agent peut se vérifier seul, avec une suite de tests, une compilation ou une capture d&#39;écran à comparer à la maquette. Il travaille, lance la vérification, lit le résultat et reprend jusqu&#39;à ce qu&#39;elle passe. En avril 2026, Boris Cherny, le créateur de Claude Code, répétait que cette vérification multiplie par deux ou trois ce qu&#39;on obtient de Claude, et qu&#39;elle compte plus encore avec les derniers modèles.</p><p>La loop est ta boucle, celle de la personne qui travaille avec l&#39;agent ; la boucle agent est la sienne, à l&#39;intérieur d&#39;une seule tâche, où le modèle choisit un outil, lit le résultat et décide de la suite. Chaque tour de ta loop lance une boucle agent complète, et les outils récents automatisent une part croissante de la tienne.</p><p>La loop a aussi sa limite. Quand on a corrigé l&#39;agent plus de deux fois sur le même point, la conversation est encombrée de tentatives ratées, et la documentation de Claude Code conseille alors de repartir d&#39;une session vide avec une meilleure consigne, qui intègre ce qu&#39;on vient d&#39;apprendre.</p>
+        <h2>Imagine</h2><p class="imagine">L&#39;agent vient de rendre sa correction quand tu lui écris « Les tests passent ? », et il répond : « J&#39;ai corrigé le bug dans le calcul de la TVA, tout devrait fonctionner maintenant. »</p>
+        <h2>Définition complète</h2><p>Avec un agent, une tâche se règle rarement en une consigne et un résultat. On lui donne la tâche, il produit une première version, on la vérifie, on lui dit ce qui ne va pas ou on précise la consigne, et il recommence. Selon les bonnes pratiques qu&#39;Anthropic publie pour Claude Code, l&#39;agent s&#39;arrête quand le travail a l&#39;air fini ; sans vérification qu&#39;il peut lancer lui-même, c&#39;est toi qui deviens la boucle, et chaque erreur attend que tu la remarques.</p><p>La boucle va beaucoup plus vite quand l&#39;agent peut se vérifier seul, avec une suite de tests, une compilation ou une capture d&#39;écran à comparer à la maquette. Il travaille, lance la vérification, lit le résultat et reprend jusqu&#39;à ce qu&#39;elle passe. En avril 2026, Boris Cherny, à l&#39;origine de Claude Code, répétait que cette vérification multiplie par deux ou trois ce qu&#39;on obtient de Claude, et qu&#39;elle compte plus encore avec les derniers modèles.</p><p>La loop est ta boucle, celle de la personne qui travaille avec l&#39;agent ; la boucle agent est la sienne, à l&#39;intérieur d&#39;une seule tâche, où le modèle choisit un outil, lit le résultat et décide de la suite. Chaque tour de ta loop lance une boucle agent complète, et les outils récents automatisent une part croissante de la tienne.</p><p>La loop a aussi sa limite. Quand on a corrigé l&#39;agent plus de deux fois sur le même point, la conversation est encombrée de tentatives ratées, et ces mêmes bonnes pratiques conseillent alors de repartir d&#39;une session vide avec une meilleure consigne, qui intègre ce qu&#39;on vient d&#39;apprendre.</p>
+        
+        
         <h2>2024 vs 2026</h2><p>En juillet 2025, Geoffrey Huntley a décrit Ralph, une boucle réduite à une ligne de script qui renvoie la même consigne à l&#39;agent tant qu&#39;on ne l&#39;arrête pas. Aujourd&#39;hui, Claude Code propose /goal, où l&#39;on écrit une condition d&#39;arrêt et où un second modèle juge après chaque tour si elle est remplie, ce qui sépare celui qui travaille de celui qui vérifie.</p>
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>boucler</dt><dd>relancer l&#39;agent sur le même objectif jusqu&#39;à ce que la vérification passe</dd></div><div><dt>Ralph, Ralph loop</dt><dd>la boucle la plus simple qui soit, décrite par Geoffrey Huntley en juillet 2025 : un script qui renvoie le même fichier de consigne à l&#39;agent, encore et encore</dd></div><div><dt>/goal</dt><dd>la commande de Claude Code qui fixe une condition d&#39;arrêt, comme « tous les tests passent » ; après chaque tour, un second modèle vérifie la condition et relance l&#39;agent si elle n&#39;est pas remplie</dd></div><div><dt>/loop</dt><dd>à ne pas confondre avec la loop de cette fiche : dans Claude Code, /loop relance un prompt à intervalle de temps fixe, sans condition à atteindre</dd></div></dl>
         
-        <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Il m&#39;a dit que c&#39;était corrigé, et en prod ça plante toujours.</div><div class="bubble a">Demande-lui la preuve, la sortie du test ou la commande qu&#39;il a lancée ; s&#39;il n&#39;a rien lancé, il t&#39;a décrit ce que le code devrait faire, sans l&#39;avoir vu tourner.</div></div>
+        <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Il m&#39;assure que c&#39;est corrigé, et en prod ça plante toujours.</div><div class="bubble a">Demande-lui la preuve, la sortie du test ou la commande qu&#39;il a lancée ; s&#39;il n&#39;a rien lancé, il t&#39;a décrit ce que le code devrait faire, sans l&#39;avoir vu tourner.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Un bon prompt évite d&#39;itérer. » Même une consigne précise laisse des cas que ni toi ni l&#39;agent n&#39;aviez prévus, et c&#39;est la vérification à chaque tour qui les fait apparaître.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#D7A6FF" href="/lexique/boucle-agent/" data-go="boucle-agent">Boucle agent</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/agent/" data-go="agent">Agent</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/harness/" data-go="harness">Harness</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/evals/" data-go="evals">Evals</a><a class="tl live" style="--c:#FF7A7A" href="/lexique/mythe-agent-autonome/" data-go="mythe-agent-autonome">« Un agent est autonome »</a></div></div>
         <h2>Sources</h2><ol class="sources"><li><a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">Anthropic, Best practices for Claude Code (donner à Claude un moyen de vérifier son travail ; repartir de zéro après deux corrections ratées)</a></li><li><a href="https://x.com/bcherny/status/2044847858634064115" target="_blank" rel="noopener">Boris Cherny sur X, 16 avril 2026 : la vérification multiplie par deux ou trois ce qu&#39;on obtient de Claude</a></li><li><a href="https://ghuntley.com/ralph/" target="_blank" rel="noopener">Geoffrey Huntley, Ralph Wiggum as a software engineer, 14 juillet 2025 (la boucle while en une ligne)</a></li><li><a href="https://code.claude.com/docs/en/goal" target="_blank" rel="noopener">Anthropic, documentation de /goal dans Claude Code (évaluateur après chaque tour, comparaison avec /loop)</a></li></ol>
@@ -331,6 +371,7 @@ window.__lexBoot = function () {
     }
     document.body.classList.toggle('has-pager', !!current);
     highlight();
+    if (typeof markAz === 'function') markAz();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -591,8 +632,38 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : true;
+    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
   }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
 
   function fit() {
     const box = svg.getBoundingClientRect();
@@ -693,6 +764,9 @@ window.__lexBoot = function () {
   window.addEventListener('resize', () => { fit(); startLoop(); });
   document.addEventListener('visibilitychange', startLoop);
 
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
   startLoop();

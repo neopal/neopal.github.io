@@ -68,6 +68,23 @@ h1[tabindex]:focus{outline:none}
 /* ---------- Mise en page ---------- */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
 .graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
@@ -99,6 +116,18 @@ p{margin-bottom:12px}
 .solutions div{padding:8px 0;border-top:1px solid var(--line)}
 .solutions div:first-child{border-top:0;padding-top:2px}
 .solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
 .solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 
 .chat{display:flex;flex-direction:column;gap:10px}
@@ -157,6 +186,9 @@ p{margin-bottom:12px}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az{display:none!important}
+  .graph-wrap.open #graph{display:block!important}
+  .graph-wrap.open .legend{display:flex!important}
   .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
   .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 
@@ -192,6 +224,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/evals/#term","name":"Evals","description":"Les evals sont les tests que tu écris pour ton propre usage : des tâches tirées de ton métier, une façon de noter chaque réponse, et un score que tu relances à chaque changement de modèle ou de prompt.","url":"https://neopal.github.io/lexique/evals/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["evaluations","eval","eval suite","évaluations","éval"]}</script>
@@ -211,8 +244,13 @@ p{margin-bottom:12px}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
     <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
     <div class="legend" id="legend"></div>
   </div>
@@ -226,7 +264,9 @@ p{margin-bottom:12px}
         
         <h2>L'image</h2><p>Les evals sont les auditions que tu organises toi-même avant d&#39;engager un groupe. Tu choisis les morceaux de ton répertoire, tu fais jouer chaque candidat plusieurs fois et tu notes avec ta propre grille, ce qu&#39;aucun concours public ne fera à ta place.</p>
         <h2>Imagine</h2><p class="imagine">Colle le même long mail dans trois conversations neuves avec ton assistant, avec la même consigne : « Résume en trois points. » Les trois résumés ne seront pas formulés pareil, et il arrive qu&#39;ils ne retiennent pas les mêmes points ; c&#39;est pour ça qu&#39;une éval fait passer chaque tâche plusieurs fois.</p>
-        <h2>Définition complète</h2><p>Une éval associe une tâche, une façon de la noter et plusieurs essais. Le correcteur peut être un test automatique, un autre modèle qui applique une grille, ou un humain, et il doit regarder le résultat plutôt que le discours. Dans son guide de janvier 2026, Anthropic prend l&#39;exemple d&#39;un agent qui écrit « votre vol est réservé » ; ce qui compte, c&#39;est qu&#39;une réservation existe dans la base.</p><p>On répète chaque tâche parce qu&#39;un modèle ne répond pas deux fois de la même façon. En juin 2024, le benchmark τ-bench a montré que GPT-4o réussissait moins de la moitié de ses tâches face à un client simulé, et qu&#39;en vente au détail il réussissait la même tâche huit fois de suite dans moins d&#39;un quart des cas.</p><p>Pour démarrer, Anthropic conseille 20 à 50 tâches tirées de vrais échecs, puis de lire les transcriptions, parce qu&#39;un échec révèle aussi bien une erreur de l&#39;agent qu&#39;un correcteur mal écrit. Sur une tâche de réservation de vol de τ2-bench, Claude Opus 4.5 a trouvé dans le règlement une faille qui servait mieux le client, et l&#39;éval l&#39;a compté en échec.</p>
+        <h2>Définition complète</h2><p>Une éval associe une tâche, une façon de la noter et plusieurs essais. Le correcteur peut être un test automatique, un autre modèle qui applique une grille, ou un humain, et il doit regarder le résultat plutôt que le discours. Dans son guide de janvier 2026, Anthropic prend l&#39;exemple d&#39;un agent qui écrit « votre vol est réservé » ; ce qui compte, c&#39;est qu&#39;une réservation existe dans la base.</p><p>On répète chaque tâche parce qu&#39;un modèle ne répond pas deux fois pareil. En juin 2024, le benchmark τ-bench a montré que GPT-4o réussissait moins de la moitié de ses tâches face à un client simulé, et qu&#39;en vente au détail il réussissait la même tâche huit fois de suite dans moins d&#39;un quart des cas.</p><p>Pour démarrer, Anthropic conseille 20 à 50 tâches tirées de vrais échecs, puis de lire les transcriptions, parce qu&#39;un échec révèle aussi bien une erreur de l&#39;agent qu&#39;un correcteur mal écrit. Sur une tâche de réservation de vol de τ2-bench, Claude Opus 4.5 a trouvé dans le règlement une faille qui servait mieux le client, et l&#39;éval l&#39;a compté en échec.</p>
+        
+        
         
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>pass@k</dt><dd>la part des tâches réussies au moins une fois en k essais</dd></div><div><dt>pass^k</dt><dd>la part des tâches réussies à chacun des k essais ; avec 75 % de réussite par essai, trois réussites d&#39;affilée n&#39;arrivent que 42 % du temps</dd></div><div><dt>LLM-as-a-judge</dt><dd>un modèle qui note les réponses d&#39;un autre selon une grille écrite, à recaler de temps en temps sur des notes humaines</dd></div><div><dt>eval de régression</dt><dd>les tâches que l&#39;agent réussissait déjà, relancées à chaque changement pour vérifier que rien n&#39;a cassé</dd></div></dl>
         <h2>Solutions populaires</h2><dl class="solutions"><div><dt>outil open source</dt><dd><a href="https://www.promptfoo.dev/" target="_blank" rel="noopener">promptfoo</a>, <a href="https://inspect.aisi.org.uk/" target="_blank" rel="noopener">Inspect</a></dd></div><div><dt>plateforme</dt><dd><a href="https://www.braintrust.dev/" target="_blank" rel="noopener">Braintrust</a>, <a href="https://www.langchain.com/langsmith" target="_blank" rel="noopener">LangSmith</a></dd></div></dl>
@@ -331,6 +371,7 @@ window.__lexBoot = function () {
     }
     document.body.classList.toggle('has-pager', !!current);
     highlight();
+    if (typeof markAz === 'function') markAz();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -591,8 +632,38 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : true;
+    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
   }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
 
   function fit() {
     const box = svg.getBoundingClientRect();
@@ -693,6 +764,9 @@ window.__lexBoot = function () {
   window.addEventListener('resize', () => { fit(); startLoop(); });
   document.addEventListener('visibilitychange', startLoop);
 
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
   startLoop();

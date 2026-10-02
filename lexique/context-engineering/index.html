@@ -68,6 +68,23 @@ h1[tabindex]:focus{outline:none}
 /* ---------- Mise en page ---------- */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
 .graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
@@ -99,6 +116,18 @@ p{margin-bottom:12px}
 .solutions div{padding:8px 0;border-top:1px solid var(--line)}
 .solutions div:first-child{border-top:0;padding-top:2px}
 .solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
 .solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 
 .chat{display:flex;flex-direction:column;gap:10px}
@@ -157,6 +186,9 @@ p{margin-bottom:12px}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az{display:none!important}
+  .graph-wrap.open #graph{display:block!important}
+  .graph-wrap.open .legend{display:flex!important}
   .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
   .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 
@@ -192,6 +224,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/context-engineering/#term","name":"Context engineering","description":"Le context engineering consiste à choisir ce qu'un modèle a sous les yeux à chaque étape (consignes, documents, historique, résultats d'outils) pour qu'il dispose de ce qui sert à la tâche, et de rien de plus.","url":"https://neopal.github.io/lexique/context-engineering/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["context management","context window management","ingénierie du contexte"]}</script>
@@ -211,8 +244,13 @@ p{margin-bottom:12px}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
     <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
     <div class="legend" id="legend"></div>
   </div>
@@ -227,7 +265,9 @@ p{margin-bottom:12px}
         <h2>L'image</h2><p>La bande a beau être longue, on ne la remplit pas au hasard. Avant chaque prise, la régie choisit ce qui monte dessus (la consigne du producteur, les deux mesures utiles de la répétition d&#39;hier, la partition du jour) et coupe le bavardage d&#39;avant session. Plus la bande est chargée, moins le groupe entend ce qui compte.</p>
         <h2>Imagine</h2><p class="imagine">Tu as donné à ton agent un budget de 15 000 euros à 9 heures, puis tu as travaillé avec lui toute la journée. À 18 heures, tu lui demandes : « Quel budget je t&#39;ai donné ce matin ? » Il te répond : « Tu ne m&#39;as donné aucun budget dans cette session. »</p>
         <h2>Définition complète</h2><p>Le terme s&#39;est répandu en juin 2025 : Tobi Lütke l&#39;a défendu le 19 juin, puis Andrej Karpathy l&#39;a repris le 25 en le préférant à « prompt engineering ». Un prompt évoque une consigne courte, alors qu&#39;une application sérieuse assemble à chaque appel des consignes, des exemples, des documents, des outils et un historique. Karpathy y voit un art et une science, celle de remplir la fenêtre avec exactement ce qui sert à l&#39;étape suivante.</p><p>C&#39;est la fenêtre elle-même qui oblige à trier. Plus elle se remplit, moins le modèle exploite bien chaque information, et Anthropic parle d&#39;un budget d&#39;attention que chaque token supplémentaire entame. Un agent qui tourne longtemps accumule pourtant des résultats d&#39;outils, des fichiers lus et des essais ratés, qui finissent par noyer la consigne du départ.</p><p>En septembre 2025, Anthropic a décrit les parades courantes. On résume l&#39;historique quand il devient trop long, on fait prendre des notes à l&#39;agent dans un fichier qu&#39;il relit plus tard, on va chercher l&#39;information au moment où elle sert, et on confie les recherches à des sous-agents qui ne rapportent qu&#39;un résumé. Les skills relèvent de la même idée, puisque leurs instructions n&#39;entrent dans la fenêtre que lorsqu&#39;elles servent.</p>
-        <h2>2024 vs 2026</h2><p>Jusqu&#39;en 2024, on parlait surtout de prompt engineering, l&#39;art de bien formuler sa demande. En 2026, avec des agents qui enchaînent des dizaines d&#39;actions, le travail consiste surtout à choisir ce qui reste dans la fenêtre au fil des tours. Claude Code, par exemple, efface d&#39;abord les anciens résultats d&#39;outils, puis résume la conversation quand la fenêtre approche de sa limite.</p>
+        
+        
+        <h2>2024 vs 2026</h2><p>Le mot à la mode, avant 2025, était prompt engineering, l&#39;art de bien formuler sa demande. En 2026, avec des agents qui enchaînent des dizaines d&#39;actions, le travail consiste surtout à choisir ce qui reste dans la fenêtre au fil des tours. Claude Code, par exemple, efface d&#39;abord les anciens résultats d&#39;outils, puis résume la conversation quand la place vient à manquer.</p>
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>compaction</dt><dd>résumer le début d&#39;une conversation trop longue pour libérer de la place dans la fenêtre, en gardant les décisions prises et les problèmes en cours</dd></div><div><dt>just-in-time</dt><dd>ne pas tout charger d&#39;avance ; l&#39;agent garde des références (noms de fichiers, liens) et va chercher le contenu au moment où il en a besoin</dd></div><div><dt>sub-agent</dt><dd>un agent secondaire qui mène une recherche dans sa propre fenêtre et ne rapporte qu&#39;un résumé à l&#39;agent principal</dd></div><div><dt>attention budget</dt><dd>l&#39;image d&#39;Anthropic pour dire que chaque token ajouté à la fenêtre entame une attention limitée</dd></div></dl>
         
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Je lui donne toute la doc du projet à chaque fois, comme ça il a tout. Pourquoi il répond moins bien ?</div><div class="bubble a">Il répond moins bien parce qu&#39;il a tout, et que la page utile est noyée dans le reste. Donne-lui les trois pages qui servent, avec un index pour aller chercher le reste s&#39;il en a besoin.</div></div>
@@ -331,6 +371,7 @@ window.__lexBoot = function () {
     }
     document.body.classList.toggle('has-pager', !!current);
     highlight();
+    if (typeof markAz === 'function') markAz();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -591,8 +632,38 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : true;
+    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
   }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
 
   function fit() {
     const box = svg.getBoundingClientRect();
@@ -693,6 +764,9 @@ window.__lexBoot = function () {
   window.addEventListener('resize', () => { fit(); startLoop(); });
   document.addEventListener('visibilitychange', startLoop);
 
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
   startLoop();

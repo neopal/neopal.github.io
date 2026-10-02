@@ -68,6 +68,23 @@ h1[tabindex]:focus{outline:none}
 /* ---------- Mise en page ---------- */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
 .graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
@@ -99,6 +116,18 @@ p{margin-bottom:12px}
 .solutions div{padding:8px 0;border-top:1px solid var(--line)}
 .solutions div:first-child{border-top:0;padding-top:2px}
 .solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
 .solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 
 .chat{display:flex;flex-direction:column;gap:10px}
@@ -157,6 +186,9 @@ p{margin-bottom:12px}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az{display:none!important}
+  .graph-wrap.open #graph{display:block!important}
+  .graph-wrap.open .legend{display:flex!important}
   .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
   .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 
@@ -192,6 +224,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/modeles-de-raisonnement/#term","name":"Modèles de raisonnement","description":"Un modèle de raisonnement écrit d'abord un long brouillon, token par token, où il décompose le problème et vérifie ses étapes, puis donne sa réponse ; il a été entraîné pour que ce brouillon mène plus souvent à la bonne réponse.","url":"https://neopal.github.io/lexique/modeles-de-raisonnement/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Reasoning models","reasoning model","thinking model","chain-of-thought","CoT","test-time compute","chaîne de pensée","modèle qui réfléchit"]}</script>
@@ -211,8 +244,13 @@ p{margin-bottom:12px}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
     <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
     <div class="legend" id="legend"></div>
   </div>
@@ -225,15 +263,17 @@ p{margin-bottom:12px}
         <p class="lead">Un modèle de raisonnement écrit d&#39;abord un long brouillon, token par token, où il décompose le problème et vérifie ses étapes, puis donne sa réponse ; il a été entraîné pour que ce brouillon mène plus souvent à la bonne réponse.</p>
         
         <h2>L'image</h2><p>Le groupe a désormais droit à une maquette avant la vraie prise. Il essaie l&#39;intro, la jette, reprend le pont, et c&#39;est seulement après ce brouillon, dont le public n&#39;entend souvent qu&#39;un résumé, qu&#39;il enregistre la version finale. Plus on lui laisse de temps en cabine, meilleure est la prise en moyenne, et plus la facture du studio grimpe.</p>
-        <h2>Imagine</h2><p class="imagine">En décembre 2024, sur l&#39;ARC-AGI, un test de grilles de pixels colorés dont il faut deviner la règle, o3 a produit dans sa version la plus gourmande environ 57 millions de tokens par grille, toutes tentatives comprises. Ça fait à peu près 214 fois Du côté de chez Swann pour une seule grille, et 4 560 dollars par problème, contre 26 dollars dans sa version sobre, qui réussissait 75,7 % des grilles au lieu de 87,5 %.</p>
+        <h2>Imagine</h2><p class="imagine">En décembre 2024, sur l&#39;ARC-AGI, un test de grilles de pixels colorés dont il faut deviner la règle, o3 a produit dans sa version la plus gourmande environ 57 millions de tokens par grille, toutes tentatives comprises. Ça fait à peu près 73 fois Le Comte de Monte-Cristo en entier, ses quatre tomes, pour une seule grille, et 4 560 dollars par problème, contre 26 dollars dans sa version sobre, qui réussissait 75,7 % des grilles au lieu de 87,5 %.</p>
         <h2>Définition complète</h2><p>Un modèle de raisonnement prédit toujours le token suivant, comme les autres. Il a seulement été entraîné, par renforcement, à écrire avant sa réponse une chaîne de réflexion (chain-of-thought) où il pose le problème, essaie une piste, repère une erreur et revient en arrière. Sur les maths, le code et les problèmes à étapes, ce brouillon fait gagner beaucoup de justesse ; sur une question simple, il ajoute surtout du temps et des tokens facturés.</p><p>Le brouillon ne raconte pas toujours comment la réponse a été trouvée. En mai 2025, des chercheurs d&#39;Anthropic ont glissé des indices dans des questions, et les modèles qui s&#39;en servaient ne le mentionnaient dans leur brouillon que rarement, souvent moins d&#39;une fois sur cinq. Lire le raisonnement aide à comprendre une réponse, sans prouver que c&#39;est le chemin réellement suivi.</p>
+        
+        
         <h2>2024 vs 2026</h2><p>Le 12 septembre 2024, o1 ouvrait le genre chez OpenAI, comme un modèle à part qu&#39;on choisissait pour les tâches difficiles. En 2026, la réflexion est souvent intégrée d&#39;office : chez Anthropic, Claude Opus 5.5 et Claude Fable 5.1 écrivent un brouillon à chaque requête, et c&#39;est le modèle qui en dose la longueur, selon le réglage d&#39;effort.</p>
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>CoT</dt><dd>chain-of-thought, la chaîne de réflexion que le modèle écrit avant sa réponse</dd></div><div><dt>test-time compute</dt><dd>dépenser plus de calcul au moment de répondre, en laissant le modèle réfléchir plus longtemps, plutôt qu&#39;au moment de l&#39;entraîner</dd></div><div><dt>adaptive thinking</dt><dd>le mode où le modèle décide lui-même combien réfléchir selon la question, guidé par un réglage d&#39;effort</dd></div></dl>
         
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Pourquoi la même question me coûte beaucoup plus cher avec le modèle de raisonnement ?</div><div class="bubble a">Parce qu&#39;il écrit un brouillon avant de répondre, et que ces tokens sont facturés comme de la sortie ; baisse l&#39;effort pour les tâches simples.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Il réfléchit comme nous, la preuve, il écrit son raisonnement. » Le brouillon est du texte produit token par token, renforcé parce qu&#39;il mène à de bonnes réponses, et il ne reflète pas toujours le calcul qui a décidé de la réponse.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#7CFFB2" href="/lexique/prediction-du-mot-suivant/" data-go="prediction-du-mot-suivant">Prédiction du mot suivant</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/token/" data-go="token">Token</a><a class="tl live" style="--c:#F5D76E" href="/lexique/entrainement/" data-go="entrainement">Entraînement</a><a class="tl live" style="--c:#FFB86B" href="/lexique/reward-hacking/" data-go="reward-hacking">Reward hacking</a><span class="tl soon" style="--c:#8FB8FF" data-go="cout-d-une-requete">Coût d&#39;une requête<span class="sr"> (à venir)</span></span></div></div>
-        <h2>Sources</h2><ol class="sources"><li><a href="https://arcprize.org/blog/oai-o3-pub-breakthrough" target="_blank" rel="noopener">ARC Prize, OpenAI o3 Breakthrough High Score on ARC-AGI-Pub, 20 décembre 2024 (évaluation semi-privée, 100 tâches : 33,5M tokens et 26 $ par tâche à 75,7 % ; 5,7 milliards de tokens et 4 560 $ par tâche à 87,5 %). Calcul de l&#39;Imagine : 5,7 x 10^9 / 100 = 57 millions de tokens par grille, divisés par les 265 851 tokens de Du côté de chez Swann (o200k_base, mesuré pour la fiche Fenêtre de contexte) = 214</a></li><li><a href="https://arxiv.org/abs/2505.05410" target="_blank" rel="noopener">Chen et al. (Anthropic), Reasoning Models Don&#39;t Always Say What They Think, mai 2025 (indices révélés souvent moins de 20 % du temps)</a></li><li><a href="https://en.wikipedia.org/wiki/OpenAI_o1" target="_blank" rel="noopener">Wikipédia, OpenAI o1 (sortie le 12 septembre 2024, chaîne de réflexion avant la réponse)</a></li><li><a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener">Anthropic, Models overview (adaptive thinking toujours actif sur Claude Fable 5.1 et Claude Opus 5.5), consulté le 2 octobre 2026</a></li></ol>
+        <h2>Sources</h2><ol class="sources"><li><a href="https://arcprize.org/blog/oai-o3-pub-breakthrough" target="_blank" rel="noopener">ARC Prize, OpenAI o3 Breakthrough High Score on ARC-AGI-Pub, 20 décembre 2024 (évaluation semi-privée, 100 tâches : 33,5M tokens et 26 $ par tâche à 75,7 % ; 5,7 milliards de tokens et 4 560 $ par tâche à 87,5 %). Calcul de l&#39;Imagine : 5,7 x 10^9 / 100 = 57 millions de tokens par grille, divisés par les 777 358 tokens du Comte de Monte-Cristo (voir la source suivante) = 73</a></li><li><a href="https://www.gutenberg.org/ebooks/17989" target="_blank" rel="noopener">Alexandre Dumas, Le Comte de Monte-Cristo, Projet Gutenberg, tomes I à IV (ebooks 17989, 17990, 17991 et 17992) : 200 363, 192 644, 184 982 et 199 369 tokens en o200k_base, soit 777 358, comptés avec tiktoken le 2 octobre 2026 sur le texte compris entre les marqueurs START et END de Gutenberg</a></li><li><a href="https://arxiv.org/abs/2505.05410" target="_blank" rel="noopener">Chen et al. (Anthropic), Reasoning Models Don&#39;t Always Say What They Think, mai 2025 (indices révélés souvent moins de 20 % du temps)</a></li><li><a href="https://en.wikipedia.org/wiki/OpenAI_o1" target="_blank" rel="noopener">Wikipédia, OpenAI o1 (sortie le 12 septembre 2024, chaîne de réflexion avant la réponse)</a></li><li><a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener">Anthropic, Models overview (adaptive thinking toujours actif sur Claude Fable 5.1 et Claude Opus 5.5), consulté le 2 octobre 2026</a></li></ol>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/date-de-coupure/" data-go="date-de-coupure" rel="prev"><span aria-hidden="true">←</span><span class="nt">Date de coupure</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -331,6 +371,7 @@ window.__lexBoot = function () {
     }
     document.body.classList.toggle('has-pager', !!current);
     highlight();
+    if (typeof markAz === 'function') markAz();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -591,8 +632,38 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : true;
+    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
   }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
 
   function fit() {
     const box = svg.getBoundingClientRect();
@@ -693,6 +764,9 @@ window.__lexBoot = function () {
   window.addEventListener('resize', () => { fit(); startLoop(); });
   document.addEventListener('visibilitychange', startLoop);
 
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
   startLoop();

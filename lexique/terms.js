@@ -41,7 +41,7 @@ window.DICO_TERMS = [
     imagine:
       "Tu demandes au groupe, qui n'a reçu « bonjour » que sous la forme d'un seul pad : « C'est quoi, la troisième lettre ? » Le chanteur réécoute le pad en boucle, très concentré, et finit par te répondre : « Bonjour. »",
     full: [
-      "Un token est un bloc de texte tiré d'un vocabulaire fixe : environ 200 000 entrées pour le tokenizer de GPT-5 (le même que celui de GPT-4o). Ce vocabulaire est construit avant l'entraînement en gardant les blocs de texte les plus fréquents ; il suit la fréquence, jamais l'orthographe ni le sens. Le tokenizer découpe tout ce qui entre et remplace chaque bloc par son numéro. En sortie, le modèle produit un numéro à la fois, retraduit en texte.",
+      "Un token est un bloc de texte tiré d'un vocabulaire fixe : environ 200 000 entrées pour le tokenizer de GPT-5 (le même que celui de GPT-4o). Ce vocabulaire est construit avant l'entraînement en gardant les blocs de texte les plus fréquents ; il suit la fréquence, jamais l'orthographe ni le sens. Le tokenizer découpe le texte reçu et remplace chaque bloc par son numéro. En sortie, le modèle produit un numéro à la fois, retraduit en texte.",
       "Quand tu interagis avec un LLM, tout se compte en tokens : les input tokens, ce que tu lui envoies, et les output tokens, ce qu'il te répond, en général facturés plus cher. La fenêtre de contexte et la vitesse de réponse se comptent aussi en tokens. Le français coûte d'ailleurs plus cher que l'anglais : j'ai passé le même paragraphe dans les deux langues, il fait 65 tokens en anglais et 78 en français. Le français paie ainsi 20 % de plus pour dire la même chose, parce que le vocabulaire du tokenizer a surtout été construit sur de l'anglais.",
     ],
     split: [
@@ -86,11 +86,11 @@ window.DICO_TERMS = [
     image:
       "Ce que le groupe sait jouer tient dans le réglage de sa console, et aucun morceau n'est rangé dedans : seulement des réglages qui font que telle note sonne juste après telle autre.",
     imagine:
-      "Tu demandes au groupe de te rejouer mot pour mot la page 112 d'un roman qu'il a entendu une fois ; il te sert, sûr de lui, une page superbe que personne n'a jamais écrite, et salue sous les applaudissements.",
+      "Le groupe a entendu une fois un roman, et tu lui réclames mot pour mot la page 112 ; il te sert, sûr de lui, une page superbe que personne n'a jamais écrite, et salue sous les applaudissements.",
     full: [
-      "Un modèle de langage ne stocke pas de textes qu'il irait consulter. Il stocke des paramètres, des nombres ajustés pendant l'entraînement pour prédire le token suivant. Quand il répond, il écrit un token à la fois en tirant à chaque pas un token parmi les plus probables, si bien que la réponse n'existe nulle part avant qu'il l'écrive.",
+      "Un modèle de langage ne stocke pas de textes qu'il irait consulter. Il stocke des paramètres, des nombres ajustés pendant l'entraînement pour prédire le token suivant. Quand il répond, il écrit un token à la fois en tirant à chaque pas l'un des candidats en tête, et la réponse n'existe nulle part avant qu'il l'écrive.",
       "Deux tests le montrent. Pose deux fois la même question dans deux conversations et la réponse change, alors qu'une base rendrait la même fiche. Demande ensuite une citation exacte et tu obtiens souvent une phrase plausible et fausse, ce qu'on appelle une hallucination.",
-      "Certains produits cherchent vraiment : ChatGPT avec la recherche web, Perplexity, ou le chatbot d'une entreprise branché sur ses documents (le RAG). Dans ce cas, c'est l'outil autour du modèle qui fait la recherche et lui colle les pages trouvées dans la conversation ; le modèle, lui, écrit toujours sa réponse token par token.",
+      "Certains produits cherchent vraiment : ChatGPT avec la recherche web, Perplexity, ou l'assistant interne relié aux documents de ta boîte (le RAG). Dans ce cas, c'est l'outil autour du modèle qui fait la recherche et lui colle les pages trouvées dans la conversation, et le modèle écrit quand même sa réponse token par token.",
     ],
     then:
       "Jusqu'à l'automne 2024, ChatGPT répondait surtout de mémoire ; la recherche web intégrée, ChatGPT Search, a été déployée entre octobre et décembre 2024. En 2026, les assistants grand public cherchent souvent d'eux-mêmes dès qu'une question porte sur l'actualité, et citent leurs sources, ce qui donne l'impression d'une base alors que l'outil leur fait simplement lire plus de pages.",
@@ -131,10 +131,10 @@ window.DICO_TERMS = [
     image:
       "Prends une console de mixage et donne-lui des milliards de potards : ce sont les paramètres. Pendant l'entraînement, l'ingé son fait écouter des milliards de phrases au groupe et tourne chaque potard d'un cran à chaque fausse note, jusqu'à ce que la sortie sonne juste. À la fin, on fige la console ; ce réglage figé, c'est ce que le groupe sait jouer, et c'est lui qu'on télécharge quand on télécharge un modèle.",
     imagine:
-      "Si tu lisais à voix haute les paramètres de DeepSeek-V3, un par seconde, jour et nuit, il te faudrait environ 21 000 ans ; pour un petit modèle de 7 milliards, compte quand même 222 ans. Et au bout de ces 21 000 ans, tu aurais lu 671 milliards de nombres à virgule sans qu'aucun ne t'ait dit que Paris est la capitale de la France.",
+      "Si tu lisais à voix haute les paramètres de DeepSeek-V3, un par seconde, jour et nuit, il te faudrait environ 21 000 ans ; pour un petit modèle de 7 milliards, compte quand même 222 ans. Et au bout de ces 21 000 ans, tu aurais lu 671 milliards de nombres à virgule sans qu'aucun, pris seul, ne t'ait appris que l'eau bout à 100 degrés.",
     full: [
-      "Un paramètre (on dit aussi un poids) est un nombre. Un modèle de langage en contient des milliards : 175 milliards pour GPT-3 en 2020, 671 milliards pour DeepSeek-V3 fin 2024. Pendant l'entraînement, chaque paramètre est ajusté par petites touches pour que le modèle prédise mieux le token suivant ; ensuite ils ne bougent plus, et c'est pour ça qu'une conversation ne modifie pas le modèle.",
-      "Aucun paramètre ne correspond à un fait précis. Une connaissance comme « Paris est la capitale de la France » est répartie sur des milliers de paramètres, et chaque paramètre participe à des milliers de connaissances. On ne peut donc pas effacer une information d'un modèle comme on supprime une ligne dans une base de données.",
+      "Un paramètre (on dit aussi un poids) est un nombre. Un modèle de langage en contient des milliards : 175 milliards pour GPT-3 en 2020, 671 milliards pour DeepSeek-V3 fin 2024. Pendant l'entraînement, chaque paramètre est ajusté par petites touches pour que le modèle prédise mieux le token suivant ; ensuite ils ne bougent plus, et c'est pour ça que discuter avec lui ne le change pas.",
+      "Aucun paramètre ne correspond à un fait précis. Une connaissance comme « le Mont-Blanc est le plus haut sommet des Alpes » est répartie sur des milliers de paramètres, et chaque paramètre participe à des milliers de connaissances. On ne peut donc pas effacer une information d'un modèle comme on supprime une ligne dans une base de données.",
     ],
     then:
       "Jusqu'en 2024, on comparait surtout les modèles à leur taille. En 2026, la question est autant de savoir combien de paramètres travaillent vraiment : DeepSeek-V3 en a 671 milliards mais n'en fait travailler que 37 milliards par token (l'architecture MoE, voir le jargon plus haut). OpenAI, de son côté, ne publie plus la taille de ses modèles phares depuis GPT-4, alors que Meta ou DeepSeek publient la leur avec les paramètres eux-mêmes.",
@@ -143,7 +143,7 @@ window.DICO_TERMS = [
       {who: 'a', text: "Si c'était pendant l'entraînement, elles sont diluées dans des milliards de paramètres et impossibles à retirer proprement. Si c'était juste dans une conversation, elles ne sont pas dans ses paramètres du tout."},
     ],
     avoid:
-      "« Le modèle apprend de nos conversations. » Ses paramètres sont figés : ce qu'un assistant retient d'une conversation à l'autre passe par une mémoire que le produit ajoute autour. Tes conversations peuvent en revanche servir à entraîner une version future, selon les réglages du service.",
+      "« J'ai baissé la température, j'ai donc changé ses paramètres. » Dans une API, temperature ou max_tokens s'appellent bien des paramètres, mais ce sont des réglages de ta requête ; les milliards de paramètres du modèle restent tels que l'entraînement les a laissés.",
     video: {src: 'videos/parametres.mp4', poster: 'videos/parametres.jpg'},
     sources: [
       {label: 'Wikipédia, GPT-3 (175 milliards de paramètres, 2020)', url: 'https://en.wikipedia.org/wiki/GPT-3'},
@@ -178,7 +178,7 @@ window.DICO_TERMS = [
       "C'est pour ça que les réponses s'affichent mot par mot : le texte est vraiment fabriqué dans cet ordre, ce n'est pas une animation. Et c'est pour ça qu'une réponse longue coûte plus cher et prend plus de temps, puisque chaque token de sortie demande un passage complet dans le modèle.",
     ],
     then:
-      "En septembre 2024 sont arrivés les modèles de raisonnement, avec o1. Ils prédisent de la même façon, mais écrivent d'abord un long brouillon de réflexion, token par token, avant la réponse. En 2026, ce brouillon est devenu la norme pour les tâches difficiles, et les API laissent régler combien le modèle a le droit de réfléchir (le reasoning effort chez OpenAI, l'effort chez Anthropic).",
+      "En septembre 2024 sont arrivés les modèles de raisonnement, avec o1. Ils prédisent eux aussi le token suivant, mais rédigent une réflexion préalable avant la réponse. En 2026, cette réflexion est devenue la norme pour les problèmes ardus, et les API laissent régler combien le modèle a le droit de réfléchir (le reasoning effort chez OpenAI, l'effort chez Anthropic).",
     office: [
       {who: 'q', text: "Pourquoi il ne m'a pas répondu la même chose qu'à mon collègue, avec le même prompt ?"},
       {who: 'a', text: "Parce qu'il tire au sort parmi les tokens probables à chaque pas. Si le tirage change dès le début, toute la suite part ailleurs."},
@@ -214,16 +214,16 @@ window.DICO_TERMS = [
       "Tu écris, sans savoir si elle existe : « Tu peux me résumer la thèse de 1962 sur les pigeons voyageurs de l'armée française ? » Le modèle te répond : « Avec plaisir. Soutenue à Toulouse, cette thèse compare 412 lâchers de pigeons et conclut qu'ils rentrent 20 % plus vite par vent du sud. »",
     full: [
       "Un modèle produit la suite la plus plausible, et rien dans ce mécanisme ne vérifie qu'elle est vraie. Sur un sujet très présent dans ses données d'entraînement, plausible et vrai se confondent. Sur un fait rare, une date précise ou une référence, il produit quand même la suite la plus plausible, avec toutes les apparences d'une bonne réponse.",
-      "En septembre 2025, une étude d'OpenAI a pointé une cause : la plupart des évaluations notent les modèles comme un QCM sans points négatifs. Répondre « je ne sais pas » rapporte zéro alors que deviner rapporte parfois un point, si bien que l'entraînement pousse les modèles à deviner plutôt qu'à répondre « je ne sais pas ».",
+      "En septembre 2025, une étude d'OpenAI a pointé une cause : la plupart des évaluations notent les modèles comme un QCM sans points négatifs. Répondre « je ne sais pas » rapporte zéro alors que deviner rapporte parfois un point, et l'entraînement pousse donc les modèles à deviner plutôt qu'à répondre « je ne sais pas ».",
     ],
     then:
-      "En février 2024, un tribunal canadien a jugé Air Canada responsable d'une règle de remboursement que son chatbot avait inventée pour un client en deuil. En août 2025, OpenAI a présenté GPT-5 avec moins d'hallucinations que ses modèles précédents, et les assistants citent plus souvent leurs sources ; une référence précise se vérifie quand même avant de servir, parce que le modèle produit toujours la suite la plus plausible.",
+      "En février 2024, un tribunal canadien a jugé Air Canada responsable d'une règle de remboursement que son chatbot avait inventée pour un client en deuil. En août 2025, OpenAI a présenté GPT-5 avec moins d'hallucinations que ses modèles précédents, et les assistants citent plus souvent leurs sources ; une référence précise se vérifie quand même avant de servir, parce que les progrès réduisent les erreurs sans les supprimer.",
     office: [
       {who: 'q', text: "Il m'a donné trois études avec les auteurs et l'année. Je les mets dans le deck ?"},
       {who: 'a', text: "Clique d'abord sur chacune. S'il n'a pas fait de recherche web, il a pu écrire trois références plausibles qui n'existent pas."},
     ],
     avoid:
-      "« Il ment. » Mentir suppose de connaître la vérité, alors que le modèle produit la suite la plus plausible sans savoir si elle est vraie.",
+      "« Il ment. » Mentir suppose de connaître la vérité, alors que le modèle enchaîne ce qui sonne juste sans rien savoir du vrai.",
     video: {src: 'videos/hallucination.mp4', poster: 'videos/hallucination.jpg'},
     sources: [
       {label: 'OpenAI, « Why language models hallucinate », 5 septembre 2025', url: 'https://openai.com/index/why-language-models-hallucinate/'},
@@ -307,7 +307,7 @@ window.DICO_TERMS = [
     full: [
       "La méthode la plus répandue, le BPE (Byte Pair Encoding), est à l'origine un algorithme de compression décrit en 1994 par Philip Gage, repris en 2015 pour la traduction automatique puis par les modèles GPT. On l'entraîne une fois, avant le modèle, sur une énorme quantité de texte. Il part des octets et fusionne à chaque étape la paire qui revient le plus souvent, jusqu'à obtenir un vocabulaire de taille fixe : environ 200 000 morceaux pour celui de GPT-4o et GPT-5.",
       "Ce découpage explique des comportements qui ont l'air bizarres. La casse et les espaces comptent, donc « Bonjour », « bonjour » en milieu de phrase et « BONJOUR » donnent 1, 2 et 3 tokens. Chez OpenAI, les nombres sont coupés par paquets de trois chiffres, donc « 2026 » devient « 202 » puis « 6 », ce qui ne facilite pas le calcul. Et comme le vocabulaire couvre tous les octets possibles, aucun texte n'est jamais illisible pour lui : un mot inconnu est coupé en plus petits morceaux.",
-      "Un tokenizer est lié à son modèle, parce que le modèle a appris à travailler avec ces numéros-là ; en changer oblige à réentraîner. En mai 2024, OpenAI est passé du tokenizer de GPT-4 (cl100k_base, environ 100 000 morceaux) à celui de GPT-4o (o200k_base). Le français en a profité : Du côté de chez Swann passe de 302 967 à 265 851 tokens, soit 12 % de moins pour le même texte.",
+      "Un tokenizer est lié à son modèle, parce que le modèle a appris à travailler avec ces numéros-là ; en changer oblige à réentraîner. En mai 2024, OpenAI est passé du tokenizer de GPT-4 (cl100k_base, environ 100 000 morceaux) à celui de GPT-4o (o200k_base). Le français en a profité, et Madame Bovary passe de 215 490 à 189 855 tokens, soit 12 % de moins pour le même roman.",
     ],
     split: [
       {mot: 'dit bonjour', blocs: ['dit', ' bon', 'jour']},
@@ -317,7 +317,7 @@ window.DICO_TERMS = [
     ],
     office: [
       {who: 'q', text: "Pourquoi le même texte ne fait pas le même nombre de tokens chez OpenAI et chez Mistral ?"},
-      {who: 'a', text: "Parce que chaque modèle a son propre tokenizer, avec son propre vocabulaire. Pour comparer deux prix, compte les tokens avec le tokenizer de chacun, ou compare sur un vrai document."},
+      {who: 'a', text: "Chaque modèle a son propre tokenizer, avec son propre vocabulaire, et le même texte n'y tombe pas en autant de morceaux. Pour comparer deux prix, compte les tokens avec le tokenizer de chacun, ou compare sur un vrai document."},
     ],
     avoid:
       "« Le tokenizer découpe en syllabes. » Il découpe selon la fréquence des morceaux de texte dans ses données d'entraînement, ce qui tombe parfois sur une syllabe et parfois non : « fraise » devient « f » et « raise ».",
@@ -326,7 +326,7 @@ window.DICO_TERMS = [
       {label: 'Découpages et comptages : tiktoken, encodages o200k_base et cl100k_base, testés le 2 octobre 2026 ; GPT-4o et GPT-5 associés à o200k_base dans model.py', url: 'https://github.com/openai/tiktoken/blob/main/tiktoken/model.py'},
       {label: 'Wikipédia, Byte-pair encoding (Philip Gage, 1994)', url: 'https://en.wikipedia.org/wiki/Byte-pair_encoding'},
       {label: 'Sennrich, Haddow et Birch, Neural Machine Translation of Rare Words with Subword Units, août 2015', url: 'https://arxiv.org/abs/1508.07909'},
-      {label: 'Du côté de chez Swann en entier, Projet Gutenberg : 302 967 tokens en cl100k_base, 265 851 en o200k_base (testé le 2 octobre 2026)', url: 'https://www.gutenberg.org/ebooks/2650'},
+      {label: "Madame Bovary de Gustave Flaubert, Projet Gutenberg (ebook 14155) : 215 490 tokens en cl100k_base, 189 855 en o200k_base, comptés avec tiktoken le 2 octobre 2026 sur le texte compris entre les marqueurs START et END de Gutenberg. Calcul : 1 - 189 855 / 215 490 = 11,9 %", url: 'https://www.gutenberg.org/ebooks/14155'},
     ],
   },
   {
@@ -348,7 +348,7 @@ window.DICO_TERMS = [
     short:
       "Un embedding est une liste de nombres qui place un texte sur une carte du sens : deux textes qui parlent de la même chose tombent près l'un de l'autre, même s'ils n'ont aucun mot en commun.",
     image:
-      "Sur la carte du son, affichée au mur du studio, chaque sample a son adresse, et l'embedding, c'est cette adresse. Les sons qui se ressemblent sont voisins, la caisse claire à côté du clap et loin du violoncelle ; de la même façon, « facture » se place à côté de « devis ».",
+      "Sur la carte du son, affichée au mur du studio, chaque sample a son adresse, et l'embedding, c'est cette adresse. Les sons qui se ressemblent sont voisins, la caisse claire à côté du clap et loin du violoncelle, et sur la carte du sens, « facture » se place à côté de « devis ».",
     imagine:
       "Avant, tu tapes « congé maternité » dans le moteur de l'intranet, et il ne trouve rien, parce que la note s'appelle « Politique parentalité » et ne contient aucun des deux mots. Après, le moteur compare des embeddings au lieu des mots : ta question et la note tombent au même endroit de la carte, et la note sort en premier.",
     full: [
@@ -395,9 +395,9 @@ window.DICO_TERMS = [
     image:
       "La température, c'est le curseur d'impro de la console : à gauche, le groupe joue comme au métronome, et plus tu le pousses, plus il s'autorise des notes inattendues, jusqu'au free jazz où plus personne ne reconnaît le morceau.",
     imagine:
-      "Avant, curseur à gauche, tu demandes au groupe un nom pour ton bar, et il te propose « Le Comptoir » à chaque prise ou presque. Après, curseur poussé à fond, il propose « Le Comptoir », puis « La Cave à Sons », puis un soir « Mercredi Liquide ».",
+      "Avant, curseur à gauche, le groupe cherche un nom pour ton bar et propose « Le Comptoir » à chaque prise ou presque. Après, curseur poussé à fond, il propose « Le Comptoir », puis « La Cave à Sons », puis un soir « Mercredi Liquide ».",
     full: [
-      "À chaque pas, le modèle calcule une probabilité pour chaque token possible, puis il en tire un au sort. La température change la forme de ce tirage : basse, elle creuse l'écart en faveur des tokens les plus probables, et le favori gagne presque à tous les coups ; haute, elle aplatit les écarts, et des tokens moins probables ont leur chance. Techniquement, on divise les scores du modèle par la température avant de les transformer en probabilités.",
+      "À chaque pas, le modèle attribue une probabilité à chaque token possible, puis il en tire un au sort. La température change la forme de ce tirage : basse, elle creuse l'écart en faveur des tokens les plus probables, et le favori gagne presque à tous les coups ; haute, elle aplatit les écarts, et des tokens moins probables ont leur chance. Techniquement, on divise les scores du modèle par la température avant de les transformer en probabilités.",
       "Température 0 ne veut pourtant pas dire réponse identique. En septembre 2025, Thinking Machines Lab a posé 1 000 fois la même question (« Tell me about Richard Feynman ») à un modèle Qwen3, à température 0, et obtenu 80 réponses différentes. Toutes étaient identiques sur les 102 premiers tokens ; ensuite, la plupart ont fait naître Feynman à « Queens, New York » et quelques-unes à « New York City ». La cause n'est pas le tirage, mais la façon dont le serveur regroupe les requêtes de plusieurs utilisateurs pour les calculer ensemble, ce qui modifie très légèrement les calculs.",
     ],
     then:
@@ -621,9 +621,9 @@ window.DICO_TERMS = [
     "full": [
       "Dans un MoE, une partie du réseau est remplacée par des dizaines ou des centaines de variantes, les experts, et un petit réseau, le routeur, choisit pour chaque token et à chaque couche ceux qui vont le traiter. Chez Mixtral 8x7B, publié par Mistral en décembre 2023, le routeur prend 2 experts sur 8 : le modèle compte 46,7 milliards de paramètres, n'en utilise que 12,9 milliards par token, et répond à la vitesse et au coût d'un modèle de 12,9 milliards.",
       "Le gain se paie en mémoire, parce que tous les experts doivent être chargés même quand ils se taisent. Les fichiers de Kimi K2 pèsent environ 1 000 Go, alors que chaque token n'active que 32 milliards de ses 1 000 milliards de paramètres.",
-      "Le mot « expert » trompe un peu. L'équipe de Mistral a regardé comment Mixtral répartissait des articles d'ArXiv, des résumés de biologie et des textes de philosophie. Les trois se distribuaient presque de la même façon entre les experts, qui ne se partagent donc pas les sujets comme le mot le laisse croire."
+      "Le mot « expert » trompe un peu. L'équipe de Mistral a regardé comment Mixtral répartissait des articles d'ArXiv, des résumés de biologie et des textes de philosophie. Les trois se distribuaient à peu près dans les mêmes proportions entre les experts, qui ne se partagent donc pas les sujets comme le mot le laisse croire."
     ],
-    "then": "En juillet 2024, Meta publiait Llama 3.1 405B, un modèle dense. En avril 2025, il est passé au MoE avec Llama 4 Maverick, dont la taille totale est presque la même (400 milliards de paramètres) mais qui n'en fait travailler que 17 milliards par token.",
+    "then": "Jusqu'à Llama 3, Meta publiait des modèles denses. En avril 2025, Llama 4 Maverick a changé d'architecture pour un MoE, avec 400 milliards de paramètres au total et seulement 17 milliards au travail pour chaque token.",
     "office": [
       {
         "who": "q",
@@ -631,7 +631,7 @@ window.DICO_TERMS = [
       },
       {
         "who": "a",
-        "text": "DeepSeek-V4-Flash est un MoE qui ne fait travailler que 13 milliards de ses paramètres pour chaque token, mais il faut quand même charger les 284 milliards sur les serveurs."
+        "text": "DeepSeek-V4-Flash est un MoE qui n'en mobilise que 13 milliards par token, mais il faut quand même charger les 284 milliards sur les serveurs."
       }
     ],
     "avoid": "« Un MoE, c'est plusieurs modèles spécialisés qu'on interroge à tour de rôle. » Les experts sont des morceaux d'un même réseau, choisis à nouveau à chaque token et à chaque couche, et aucun ne sait répondre seul à une question.",
@@ -747,7 +747,7 @@ window.DICO_TERMS = [
       "Pour savoir si un modèle est open source ou seulement open weights, demande-toi si tu pourrais refaire son entraînement avec ce qui est publié. Avec gpt-oss ou DeepSeek-V4, la réponse est non, faute des données d'entraînement ; avec OLMo 3, qu'Ai2 publie avec ses données et toutes ses étapes d'entraînement, c'est oui.",
       "Le cas limite est le modèle dont les données sont décrites sans être publiées. La définition de l'IA open source fixée en octobre 2024 par l'Open Source Initiative l'accepte, si la description suffit à une personne compétente pour construire un système équivalent ; c'est le point le plus disputé de cette définition."
     ],
-    "then": "En 2024, le dernier modèle de langage ouvert d'OpenAI restait GPT-2. Le 5 août 2025, OpenAI a publié gpt-oss-120b et gpt-oss-20b sous Apache 2.0, ses premiers modèles de langage open weights depuis, et le plus gros des deux tient sur un seul GPU de 80 Go.",
+    "then": "En 2024, le dernier modèle de langage ouvert d'OpenAI restait GPT-2. Le 5 août 2025, OpenAI a publié gpt-oss-120b et gpt-oss-20b sous Apache 2.0, ses premiers modèles de langage open weights depuis, et le plus gros des deux se contente d'une seule carte graphique de 80 Go.",
     "office": [
       {
         "who": "q",
@@ -864,7 +864,7 @@ window.DICO_TERMS = [
       "Pendant l'entraînement, chaque paramètre est en général stocké sur 16 bits. La quantization le réécrit sur 8, 4 ou même 2 bits, en l'arrondissant à l'une des rares valeurs que le format sait représenter : sur 4 bits, il n'en existe que 16. Le modèle prend moins de mémoire, tient sur des machines plus modestes et répond souvent plus vite, puisqu'il y a moins de données à déplacer pour chaque token.",
       "La perte dépend du niveau d'arrondi et de la taille du modèle. En mai 2025, une étude sur Qwen3 a mesuré qu'en 4 bits, Qwen3-14B ne perdait qu'environ 1 % sur le test MMLU, alors que le petit Qwen3-0.6B perdait environ 10 %. À 3 bits et moins, Qwen3 se dégradait plus nettement que les générations précédentes, ce que les auteurs attribuent à un entraînement plus poussé qui laisse moins de paramètres superflus à sacrifier."
     ],
-    "then": "En 2024, on quantifiait surtout après coup un modèle publié en 16 bits : Llama 3.3 70B existe sur Ollama en une douzaine de versions, de 141 Go en 16 bits à 26 Go en 2 bits. Depuis août 2025, des labos publient des modèles conçus pour tourner en 4 bits, comme gpt-oss-120b, qui tient sur un seul GPU de 80 Go et dont toutes les évaluations ont été faites en 4 bits, puis Kimi K3 en juillet 2026.",
+    "then": "La quantization se faisait surtout après coup en 2024, sur un modèle publié en 16 bits, et Llama 3.3 70B existe ainsi sur Ollama en une douzaine de versions, de 141 Go en 16 bits à 26 Go en 2 bits. Depuis août 2025, des labos publient des modèles conçus pour tourner en 4 bits, comme gpt-oss-120b, qui tient sur un seul GPU de 80 Go et dont toutes les évaluations ont été faites en 4 bits, puis Kimi K3 en juillet 2026.",
     "office": [
       {
         "who": "q",
@@ -962,13 +962,13 @@ window.DICO_TERMS = [
     "short": "Un benchmark est un test standard, le même pour tous les modèles, qui donne un score comparable d'un labo à l'autre : un QCM, des problèmes de maths, des bugs à corriger dans du vrai code.",
     "image": "Chez les groupes, le benchmark prend la forme d'un concours, où le jury impose à tous les mêmes morceaux puis publie un classement. Le classement dit qui joue le mieux ces morceaux-là, pas forcément qui fera le meilleur concert dans ta salle.",
     "imagineForm": "D",
-    "imagine": "Tu demandes à quelqu'un qui suit les classements : « Pourquoi même les meilleurs modèles ratent certains problèmes de SWE-bench Verified ? » Il te répond : « Sur 138 problèmes que o3 ratait souvent, OpenAI en a trouvé 82 mal posés ou mal testés, dont 49 où les tests rejettent des solutions correctes. »",
+    "imagine": "À la machine à café, une collègue demande à celui qui suit les classements : « Pourquoi même les meilleurs modèles ratent certains problèmes de SWE-bench Verified ? » Il te répond : « Sur 138 problèmes que o3 ratait souvent, OpenAI en a trouvé 82 mal posés ou mal testés, dont 49 où les tests rejettent des solutions correctes. »",
     "full": [
       "En décembre 2024, OpenAI a présenté son modèle o3 en annonçant plus de 25 % de réussite sur FrontierMath, un benchmark de mathématiques de niveau recherche. En avril 2025, Epoch AI, qui a conçu le test, a mesuré environ 10 % sur le modèle mis en service. Selon Epoch, l'écart pouvait venir d'un outillage interne plus puissant et de plus de calcul lors de la démonstration. Epoch avait aussi révélé, le jour même de l'annonce d'o3, qu'OpenAI avait financé FrontierMath et eu accès à une bonne partie de ses problèmes.",
       "Un score ne vaut donc que par ce qu'il mesure. Un benchmark fixe une liste de questions, une façon de les poser et une façon de noter, et il suffit de changer l'une des trois pour changer le chiffre. Il s'use aussi, parce que les questions publiques finissent dans les données d'entraînement et que le test mesure alors en partie la mémoire du modèle.",
       "En février 2026, OpenAI a cessé de publier ses scores sur SWE-bench Verified, le test de correction de bugs qu'il avait lui-même lancé en 2024. Tous les modèles de pointe testés savaient recopier au mot près certaines corrections de référence, signe qu'ils les avaient vues pendant leur entraînement."
     ],
-    "then": "En 2024, les labos se comparaient encore sur MMLU, un QCM de 57 matières publié en 2020. En janvier 2025, les meilleurs modèles y dépassaient 90 %, et des tests plus durs ont pris le relais, comme Humanity's Last Exam et ses 2 500 questions d'experts. En août 2025, la fiche de gpt-oss-120b affichait 90,0 % sur le premier et 14,9 % sur le second, et seul le second départage encore les modèles.",
+    "then": "MMLU, un QCM de 57 matières publié en 2020, servait encore aux labos pour se comparer en 2024. En janvier 2025, les meilleurs modèles y dépassaient 90 %, et des tests plus durs ont pris le relais, comme Humanity's Last Exam et ses 2 500 questions d'experts. En août 2025, la fiche de gpt-oss-120b affichait 90,0 % sur le premier et 14,9 % sur le second, et seul le second départage encore les modèles.",
     "office": [
       {
         "who": "q",
@@ -1157,7 +1157,7 @@ window.DICO_TERMS = [
     "imagine": "Colle le même long mail dans trois conversations neuves avec ton assistant, avec la même consigne : « Résume en trois points. » Les trois résumés ne seront pas formulés pareil, et il arrive qu'ils ne retiennent pas les mêmes points ; c'est pour ça qu'une éval fait passer chaque tâche plusieurs fois.",
     "full": [
       "Une éval associe une tâche, une façon de la noter et plusieurs essais. Le correcteur peut être un test automatique, un autre modèle qui applique une grille, ou un humain, et il doit regarder le résultat plutôt que le discours. Dans son guide de janvier 2026, Anthropic prend l'exemple d'un agent qui écrit « votre vol est réservé » ; ce qui compte, c'est qu'une réservation existe dans la base.",
-      "On répète chaque tâche parce qu'un modèle ne répond pas deux fois de la même façon. En juin 2024, le benchmark τ-bench a montré que GPT-4o réussissait moins de la moitié de ses tâches face à un client simulé, et qu'en vente au détail il réussissait la même tâche huit fois de suite dans moins d'un quart des cas.",
+      "On répète chaque tâche parce qu'un modèle ne répond pas deux fois pareil. En juin 2024, le benchmark τ-bench a montré que GPT-4o réussissait moins de la moitié de ses tâches face à un client simulé, et qu'en vente au détail il réussissait la même tâche huit fois de suite dans moins d'un quart des cas.",
       "Pour démarrer, Anthropic conseille 20 à 50 tâches tirées de vrais échecs, puis de lire les transcriptions, parce qu'un échec révèle aussi bien une erreur de l'agent qu'un correcteur mal écrit. Sur une tâche de réservation de vol de τ2-bench, Claude Opus 4.5 a trouvé dans le règlement une faille qui servait mieux le client, et l'éval l'a compté en échec."
     ],
     "office": [
@@ -1221,11 +1221,11 @@ window.DICO_TERMS = [
     ],
     "short": "Un modèle plus gros n'est pas automatiquement meilleur ; un modèle plus petit, entraîné sur plus de données ou avec une meilleure méthode, bat régulièrement des modèles bien plus gros.",
     "imagineForm": "A",
-    "image": "Une console à 400 milliards de potards ne garantit pas un meilleur concert, parce que tout dépend de ce que l'ingé son a fait écouter au groupe et du temps passé à régler. Une console plus petite, réglée plus longtemps sur de meilleures bandes, sonne souvent mieux.",
-    "imagine": "Donne Du côté de chez Swann, 265 851 tokens, à GPT-4.5, présenté en février 2025 comme le plus gros modèle d'OpenAI ; sa fenêtre de 128 000 tokens t'oblige à couper le livre en trois, et la lecture te coûte 19,94 dollars. GPT-4.1, sorti un mois et demi plus tard, le lit d'une traite dans sa fenêtre d'un million de tokens, pour 0,53 dollar.",
+    "image": "Une console géante, avec dix fois plus de potards que sa voisine, ne garantit pas un meilleur concert, parce que tout dépend des bandes passées au groupe pendant les répétitions et du temps que l'ingé son a mis à régler. Une console plus petite, réglée plus longtemps sur de meilleures bandes, sonne souvent mieux.",
+    "imagine": "Donne Vingt mille lieues sous les mers, 238 916 tokens, à GPT-4.5, présenté en février 2025 comme le plus gros modèle d'OpenAI ; sa fenêtre de 128 000 tokens t'oblige à couper le roman en deux, et la lecture te coûte 17,92 dollars. GPT-4.1, sorti un mois et demi plus tard, l'avale d'une traite, puisqu'il en accepte près de huit fois plus, pour 0,48 dollar.",
     "full": [
       "En mars 2022, DeepMind a entraîné Chinchilla, 70 milliards de paramètres, avec le même budget de calcul que son modèle Gopher de 280 milliards, mais sur quatre fois plus de données. Chinchilla a battu Gopher, GPT-3 (175 milliards) et Megatron-Turing NLG (530 milliards) sur un large éventail de tests, parce que les modèles de l'époque étaient trop gros pour ce qu'ils avaient lu. La taille ne compte qu'avec les données et le calcul qui vont avec.",
-      "Deux techniques ont encore desserré le lien entre taille et qualité. Les MoE ne font travailler qu'une partie de leurs paramètres, et Mixtral 8x7B, qui en active 12,9 milliards par token, battait Llama 2 70B sur la plupart des tests publiés par Mistral. Les modèles de raisonnement écrivent un brouillon avant de répondre, ce qui ajoute du calcul au moment de la réponse sans ajouter un seul paramètre.",
+      "Deux techniques ont encore desserré le lien entre taille et qualité. Les MoE ne font travailler qu'une partie de leurs paramètres, et en avril 2025, l'équipe de Qwen annonçait que Qwen3-30B-A3B, qui en active 3 milliards par token, surpassait QwQ-32B, qui en fait travailler dix fois plus. Les modèles de raisonnement réfléchissent par écrit avant de répondre, ce qui ajoute du calcul au moment de la réponse sans ajouter un seul paramètre.",
       "OpenAI a fait l'expérience en grand. GPT-4.5, lancé le 27 février 2025, a été retiré de l'API le 14 juillet suivant, parce que GPT-4.1 offrait selon OpenAI des performances meilleures ou équivalentes sur beaucoup de capacités clés, pour un coût et une latence bien plus faibles."
     ],
     "office": [
@@ -1238,7 +1238,7 @@ window.DICO_TERMS = [
         "text": "Essaie aussi le moyen et le petit ; s'ils font le travail, tu paies moins et tu attends moins, et le gros ne sert plus que là où il fait vraiment mieux."
       }
     ],
-    "avoid": "« Il a 1 000 milliards de paramètres, il est forcément meilleur. » Regarde plutôt ce qu'il réussit sur des tâches proches des tiennes, car le nombre de paramètres ne dit ni ce qu'il a lu ni comment on l'a entraîné.",
+    "avoid": "« Il est deux fois plus gros que l'autre, il est forcément meilleur. » Regarde plutôt ce qu'il réussit sur des tâches proches des tiennes, car le nombre de paramètres ne dit ni ce qu'il a lu ni comment on l'a entraîné.",
     "video": null,
     "sources": [
       {
@@ -1246,8 +1246,8 @@ window.DICO_TERMS = [
         "url": "https://arxiv.org/abs/2203.15556"
       },
       {
-        "label": "Mistral AI, Mixtral of experts, 11 décembre 2023 (Mixtral 8x7B surpasse Llama 2 70B sur la plupart des benchmarks)",
-        "url": "https://mistral.ai/news/mixtral-of-experts"
+        "label": "Qwen, Qwen3: Think Deeper, Act Faster, 29 avril 2025 (Qwen3-30B-A3B surpasse QwQ-32B, qui active dix fois plus de paramètres)",
+        "url": "https://qwenlm.github.io/blog/qwen3/"
       },
       {
         "label": "OpenAI, Introducing GPT-4.1 in the API, 14 avril 2025 (2 dollars par million de tokens en entrée, fenêtre jusqu'à 1 million de tokens, retrait de GPT-4.5 de l'API le 14 juillet 2025)",
@@ -1266,8 +1266,12 @@ window.DICO_TERMS = [
         "url": "https://developers.openai.com/api/docs/models/gpt-4.5-preview"
       },
       {
-        "label": "Calcul de l'Imagine : Du côté de chez Swann compte 265 851 tokens en o200k_base, le tokenizer de GPT-4.5 et GPT-4.1 selon tiktoken ; 265 851 x 75 / 10^6 = 19,94 dollars et 265 851 x 2 / 10^6 = 0,53 dollar",
+        "label": "Calcul de l'Imagine : Vingt mille lieues sous les mers compte 238 916 tokens en o200k_base, le tokenizer de GPT-4.5 et GPT-4.1 selon tiktoken (texte entre les marqueurs START et END de Gutenberg, compté le 2 octobre 2026) ; 238 916 x 75 / 10^6 = 17,92 dollars et 238 916 x 2 / 10^6 = 0,48 dollar ; fenêtres de 1 000 000 et 128 000 tokens, 1 000 000 / 128 000 = 7,8",
         "url": "https://github.com/openai/tiktoken/blob/main/tiktoken/model.py"
+      },
+      {
+        "label": "Jules Verne, Vingt mille lieues sous les mers, Projet Gutenberg (ebook 5097), texte utilisé pour le comptage",
+        "url": "https://www.gutenberg.org/ebooks/5097"
       }
     ]
   },
@@ -1323,7 +1327,7 @@ window.DICO_TERMS = [
       "Llama 3, le modèle de Meta sorti en juillet 2024, a lu 15 600 milliards de tokens pour son pré-entraînement, et DeepSeek-V3, fin 2024, a demandé 2,788 millions d'heures de GPU pour son entraînement complet. On obtient à la sortie un modèle de base, qui sait continuer un texte mais pas encore se conduire en assistant.",
       "Vient ensuite le post-entraînement (post-training), bien plus court, qui en fait un assistant. On lui montre d'abord des exemples de bonnes réponses, c'est le fine-tuning supervisé, puis on le récompense selon ce que préfèrent des humains (le RLHF) ou selon des réponses qu'on peut vérifier. C'est cette dernière étape qui donne à un assistant son ton, ses refus et sa façon de répondre."
     ],
-    "then": "En juillet 2024, Meta annonçait 15 600 milliards de tokens pour le pré-entraînement de Llama 3. En mai 2025, Qwen3 a été pré-entraîné sur environ 36 000 milliards de tokens dans 119 langues et dialectes, soit plus du double en moins d'un an.",
+    "then": "Entre Llama 3, sorti en juillet 2024, et Qwen3, publié en mai 2025, la quantité de texte lue au pré-entraînement a plus que doublé, de 15 600 à environ 36 000 milliards de tokens, et Qwen3 l'a lue dans 119 langues et dialectes.",
     "office": [
       {
         "who": "q",
@@ -1433,7 +1437,7 @@ window.DICO_TERMS = [
     "short": "Le fine-tuning consiste à reprendre un modèle déjà entraîné et à poursuivre son entraînement sur un petit jeu d'exemples choisis, pour le spécialiser dans une tâche, un format ou un ton.",
     "image": "Une fois l'album sorti, le label peut rappeler l'ingé son pour une session de plus, avec une seule consigne : faire sonner le groupe reggae. Il ne repart pas d'une console à zéro, il retouche une poignée de réglages en faisant écouter quelques centaines de morceaux du genre, et le groupe garde à peu près tout ce qu'il savait jouer avant.",
     "imagineForm": "D",
-    "imagine": "« Tu peux me résumer ce mail de ma mère ? », demandes-tu au modèle que l'équipe vient de fine-tuner sur des mails triés en spam et pas spam. Il te répond : « Pas spam. »",
+    "imagine": "« Résume-moi ce mail de ma mère », demandes-tu au modèle que l'équipe vient de fine-tuner sur des mails triés en spam et pas spam. Il te répond : « Pas spam. »",
     "full": [
       "Le fine-tuning reprend un modèle dont l'entraînement est fini et le fait travailler encore sur des exemples de la tâche visée : des tickets support avec leur bonne réponse, des comptes rendus au format maison, des mails classés. Les paramètres bougent de nouveau, un peu, et le modèle prend le pli. Tous les assistants sont passés par là, puisque c'est un fine-tuning qui apprend au modèle de base à répondre au lieu de continuer le texte.",
       "Réentraîner tous les paramètres coûte cher, d'où des méthodes plus légères comme LoRA, publiée en 2021, qui fige le modèle et n'entraîne que de petites matrices ajoutées à côté. Sur GPT-3 et ses 175 milliards de paramètres, ses auteurs divisaient par 10 000 le nombre de paramètres à entraîner et par trois la mémoire GPU nécessaire, pour une qualité comparable.",
@@ -1514,7 +1518,7 @@ window.DICO_TERMS = [
     "full": [
       "RLHF veut dire Reinforcement Learning from Human Feedback, apprentissage par renforcement à partir de retours humains. On demande au modèle plusieurs réponses à une même question, des humains les classent, et on entraîne sur ces classements un modèle de récompense (reward model) qui apprend à prédire la note humaine. Le modèle principal est ensuite ajusté pour obtenir de meilleures notes de ce juré automatique.",
       "En mars 2022, OpenAI a publié InstructGPT, l'article qui a installé la méthode. Les réponses d'un modèle de 1,3 milliard de paramètres passé par ce réglage y étaient préférées à celles de GPT-3, cent fois plus gros. Le RLHF ajoute donc peu de connaissances ; il apprend au modèle à présenter ce qu'il sait sous la forme que les gens préfèrent.",
-      "La limite tient dans le verbe préférer. En 2023, une étude d'Anthropic a montré que les notateurs, et les modèles de récompense entraînés sur leurs choix, retenaient assez souvent la réponse convaincante qui allait dans leur sens plutôt que la réponse correcte, ce qui mène à la flagornerie. Pousser l'optimisation trop fort contre le juré ouvre l'autre dérive, le reward hacking."
+      "La limite tient dans le verbe préférer. Les travaux d'Anthropic sur la flagornerie, en 2023, ont montré que les notateurs, et les modèles de récompense entraînés sur leurs choix, retenaient assez souvent la réponse convaincante qui allait dans leur sens plutôt que la réponse correcte, ce qui mène à la flagornerie. Pousser l'optimisation trop fort contre le juré ouvre l'autre dérive, le reward hacking."
     ],
     "then": "En 2022, l'avis humain était la pièce centrale du réglage des assistants. En janvier 2025, DeepSeek-R1 a montré qu'on pouvait apprendre à un modèle à raisonner par renforcement sans exemples de raisonnement écrits par des humains, en le récompensant seulement quand la réponse à un problème vérifiable était juste, un travail publié ensuite dans Nature.",
     "office": [
@@ -1524,7 +1528,7 @@ window.DICO_TERMS = [
       },
       {
         "who": "a",
-        "text": "Parce qu'il a été réglé sur des préférences humaines, et que les réponses aimables gagnent souvent ; demande-lui une critique avec des critères précis et le ton change."
+        "text": "Il a été réglé sur des préférences humaines, où les réponses aimables gagnent souvent ; demande-lui une critique avec des critères précis et le ton change."
       }
     ],
     "avoid": "« Le RLHF rend le modèle honnête. » Il le rapproche du goût des notateurs, et ce goût récompense parfois une réponse fausse pourvu qu'elle soit bien tournée, ce qui ouvre la porte à la flagornerie.",
@@ -1581,7 +1585,7 @@ window.DICO_TERMS = [
     "imagineForm": "A",
     "imagine": "La fiche de GPT-4o chez OpenAI annonce une date de coupure au 1er octobre 2023, et le modèle est sorti 225 jours plus tard, le 13 mai 2024. Ce premier instantané, gpt-4o-2024-05-13, figure toujours au catalogue de l'API le 2 octobre 2026, 1 097 jours après sa coupure ; une application qui l'appelle aujourd'hui sans recherche web répond avec la mémoire d'un monde vieux de trois ans.",
     "full": [
-      "Les textes d'entraînement sont rassemblés jusqu'à une date, puis l'entraînement dure des mois, puis le modèle est testé avant sa sortie. Un modèle arrive donc avec plusieurs mois de retard sur l'actualité, et ce retard grandit chaque jour où il reste en service, alors qu'il parle des sujets récents avec la même assurance que des anciens.",
+      "Les textes d'entraînement sont rassemblés jusqu'à une date, puis l'entraînement dure des mois, puis le modèle est testé avant sa sortie. Un modèle arrive donc avec plusieurs mois de retard sur l'actualité, et ce retard grandit chaque jour où il reste en service, alors qu'il parle des sujets récents sur le même ton que des anciens.",
       "La date affichée est elle-même approximative. Anthropic publie deux dates par modèle, une date de coupure fiable et une date de fin des données vues, qui peut être plus tardive, comme pour Claude Haiku 4.5 (février 2025 et juillet 2025). Une étude de l'université de Łódź a aussi montré que la coupure réelle varie d'un sujet à l'autre, selon la quantité de textes parus sur chacun avant la date.",
       "Pour l'actualité, les assistants contournent la limite en cherchant sur le web ou dans tes documents, puis en collant les résultats dans la conversation, ce qui ne déplace pas la coupure d'un jour. Un modèle sans recherche à qui l'on parle d'un événement récent peut le nier, ou lui inventer une suite plausible."
     ],
@@ -1658,7 +1662,7 @@ window.DICO_TERMS = [
     "short": "Un modèle de raisonnement écrit d'abord un long brouillon, token par token, où il décompose le problème et vérifie ses étapes, puis donne sa réponse ; il a été entraîné pour que ce brouillon mène plus souvent à la bonne réponse.",
     "image": "Le groupe a désormais droit à une maquette avant la vraie prise. Il essaie l'intro, la jette, reprend le pont, et c'est seulement après ce brouillon, dont le public n'entend souvent qu'un résumé, qu'il enregistre la version finale. Plus on lui laisse de temps en cabine, meilleure est la prise en moyenne, et plus la facture du studio grimpe.",
     "imagineForm": "A",
-    "imagine": "En décembre 2024, sur l'ARC-AGI, un test de grilles de pixels colorés dont il faut deviner la règle, o3 a produit dans sa version la plus gourmande environ 57 millions de tokens par grille, toutes tentatives comprises. Ça fait à peu près 214 fois Du côté de chez Swann pour une seule grille, et 4 560 dollars par problème, contre 26 dollars dans sa version sobre, qui réussissait 75,7 % des grilles au lieu de 87,5 %.",
+    "imagine": "En décembre 2024, sur l'ARC-AGI, un test de grilles de pixels colorés dont il faut deviner la règle, o3 a produit dans sa version la plus gourmande environ 57 millions de tokens par grille, toutes tentatives comprises. Ça fait à peu près 73 fois Le Comte de Monte-Cristo en entier, ses quatre tomes, pour une seule grille, et 4 560 dollars par problème, contre 26 dollars dans sa version sobre, qui réussissait 75,7 % des grilles au lieu de 87,5 %.",
     "full": [
       "Un modèle de raisonnement prédit toujours le token suivant, comme les autres. Il a seulement été entraîné, par renforcement, à écrire avant sa réponse une chaîne de réflexion (chain-of-thought) où il pose le problème, essaie une piste, repère une erreur et revient en arrière. Sur les maths, le code et les problèmes à étapes, ce brouillon fait gagner beaucoup de justesse ; sur une question simple, il ajoute surtout du temps et des tokens facturés.",
       "Le brouillon ne raconte pas toujours comment la réponse a été trouvée. En mai 2025, des chercheurs d'Anthropic ont glissé des indices dans des questions, et les modèles qui s'en servaient ne le mentionnaient dans leur brouillon que rarement, souvent moins d'une fois sur cinq. Lire le raisonnement aide à comprendre une réponse, sans prouver que c'est le chemin réellement suivi."
@@ -1678,8 +1682,12 @@ window.DICO_TERMS = [
     "video": null,
     "sources": [
       {
-        "label": "ARC Prize, OpenAI o3 Breakthrough High Score on ARC-AGI-Pub, 20 décembre 2024 (évaluation semi-privée, 100 tâches : 33,5M tokens et 26 $ par tâche à 75,7 % ; 5,7 milliards de tokens et 4 560 $ par tâche à 87,5 %). Calcul de l'Imagine : 5,7 x 10^9 / 100 = 57 millions de tokens par grille, divisés par les 265 851 tokens de Du côté de chez Swann (o200k_base, mesuré pour la fiche Fenêtre de contexte) = 214",
+        "label": "ARC Prize, OpenAI o3 Breakthrough High Score on ARC-AGI-Pub, 20 décembre 2024 (évaluation semi-privée, 100 tâches : 33,5M tokens et 26 $ par tâche à 75,7 % ; 5,7 milliards de tokens et 4 560 $ par tâche à 87,5 %). Calcul de l'Imagine : 5,7 x 10^9 / 100 = 57 millions de tokens par grille, divisés par les 777 358 tokens du Comte de Monte-Cristo (voir la source suivante) = 73",
         "url": "https://arcprize.org/blog/oai-o3-pub-breakthrough"
+      },
+      {
+        "label": "Alexandre Dumas, Le Comte de Monte-Cristo, Projet Gutenberg, tomes I à IV (ebooks 17989, 17990, 17991 et 17992) : 200 363, 192 644, 184 982 et 199 369 tokens en o200k_base, soit 777 358, comptés avec tiktoken le 2 octobre 2026 sur le texte compris entre les marqueurs START et END de Gutenberg",
+        "url": "https://www.gutenberg.org/ebooks/17989"
       },
       {
         "label": "Chen et al. (Anthropic), Reasoning Models Don't Always Say What They Think, mai 2025 (indices révélés souvent moins de 20 % du temps)",
@@ -1930,11 +1938,11 @@ window.DICO_TERMS = [
     ],
     "short": "Un agent est un modèle de langage qu'on laisse agir : on lui donne un objectif et des outils, et il enchaîne lui-même les actions, en regardant le résultat de chacune pour choisir la suivante, jusqu'à ce que la tâche soit finie.",
     "image": "Envoie le groupe en tournée avec ses roadies et leurs caisses à outils, et tu as un agent. En studio, il jouait le morceau qu'on lui demandait ; sur la route, il décide de l'étape suivante, demande aux roadies de monter la scène ou d'appeler la salle, écoute ce que ça donne et choisit la suite, sans jamais porter une caisse lui-même.",
-    "imagine": "Le 22 mai 2025, Anthropic a raconté que Rakuten avait confié à Claude Opus 4 la refonte d'un projet open source, et que le modèle y avait travaillé seul pendant 7 heures d'affilée. Sept heures, c'est la journée moyenne d'un temps plein en France, 35 heures par semaine réparties sur cinq jours ; arrivé à 9 heures, il aurait rendu sa copie à 16 heures, sans pause café ni déjeuner.",
+    "imagine": "Le 22 septembre 2026, dans l'annonce de Claude Opus 5.5, un développeur de Clio raconte avoir confié au modèle une tâche répartie sur six dépôts de code et l'avoir laissé tourner seul toute la nuit. Le modèle est resté sur la tâche plus de 18 heures ; lancé à 18 heures en quittant le bureau, il travaillait encore à midi le lendemain, l'équivalent de deux journées et demie d'un temps plein à 35 heures par semaine.",
     "imagineForm": "A",
     "full": [
       "Un agent est un modèle de langage placé dans une boucle, avec des outils. On lui donne un objectif, par exemple « trouve-moi un train pour Lyon jeudi et mets-le dans mon agenda ». Il choisit une action, comme chercher les horaires, lit le résultat, puis choisit la suivante, jusqu'à ce qu'il juge la tâche finie ou qu'une limite l'arrête. Ces actions, ce sont les programmes autour de lui qui les exécutent, à partir des demandes qu'il écrit.",
-      "Pour reconnaître un agent, la question est de savoir qui choisit l'étape suivante. Anthropic a posé la distinction en décembre 2024 : dans un workflow, un développeur écrit les étapes à l'avance, même si un modèle intervient à chacune ; dans un agent, le modèle décide en cours de route de ses actions et de ses outils. Le chatbot d'entreprise qui cherche toujours dans la même base avant de répondre reste donc un workflow, alors que l'assistant qui relance de lui-même une recherche quand la première ne donne rien penche du côté de l'agent.",
+      "Pour reconnaître un agent, la question est de savoir qui choisit l'étape suivante. Anthropic a posé la distinction en décembre 2024 : dans un workflow, un développeur écrit les étapes à l'avance, même si un modèle intervient à chacune ; dans un agent, le modèle décide en cours de route de ses actions et de ses outils. Le bot qui résume chaque ticket entrant puis le range dans une file reste donc un workflow, alors que l'assistant qui relance de lui-même une recherche quand la première ne donne rien penche du côté de l'agent.",
       "Les agents les plus utilisés en 2026 travaillent dans le code. Claude Code est sorti chez Anthropic en février 2025, Codex chez OpenAI en avril 2025, et Codex comptait plus de 2 millions d'utilisateurs par semaine en mars 2026 ; Cursor joue dans la même catégorie. Tous lisent les fichiers d'un projet, les modifient, lancent les tests et recommencent tant que les tests échouent."
     ],
     "then": "En décembre 2024, Anthropic publiait encore un guide pour expliquer ce qui distingue un agent d'un workflow. En 2025, les agents sont entrés dans le travail quotidien des développeurs avec Claude Code et Codex. En janvier 2026, Anthropic a lancé Claude Cowork, le même principe pour les non-développeurs, qui range des dossiers ou produit des documents à partir des fichiers de ton ordinateur.",
@@ -1956,8 +1964,8 @@ window.DICO_TERMS = [
         "url": "https://www.anthropic.com/engineering/building-effective-agents"
       },
       {
-        "label": "Anthropic, Introducing Claude 4, 22 mai 2025 (Rakuten, refonte open source menée seule pendant 7 heures ; Claude Code disponible pour tous). Calcul de l'Imagine : 35 heures / 5 jours = 7 heures ; 9 h + 7 h = 16 h",
-        "url": "https://www.anthropic.com/news/claude-4"
+        "label": "Anthropic, Introducing Claude Opus 5.5, 22 septembre 2026 (témoignage de Sean Heintz, Clio : tâche sur six dépôts lancée la nuit sans surveillance, plus de 18 heures sur la tâche). Calcul de l'Imagine : 18 h + 18 h = midi le lendemain ; 35 heures / 5 jours = 7 heures par jour ; 18 / 7 = 2,6 journées",
+        "url": "https://www.anthropic.com/news/claude-opus-5-5"
       },
       {
         "label": "Service-public.fr, durée légale du travail : 35 heures par semaine",
@@ -2101,14 +2109,14 @@ window.DICO_TERMS = [
     ],
     "short": "La boucle agent est le cycle qui fait travailler un agent : le modèle choisit une action, le programme l'exécute, le résultat est ajouté à la conversation, et le modèle relit le tout pour choisir l'action suivante, jusqu'à ce qu'il annonce avoir fini.",
     "image": "Une séance d'enregistrement ordinaire avance par prises, où le groupe joue, écoute en cabine, repère la mesure qui accroche et rejoue. La boucle agent suit ce rythme, avec une différence qui coûte cher, puisque chaque écoute s'ajoute à la bande et qu'au vingtième passage le groupe réentend les dix-neuf prises précédentes avant de jouer.",
-    "imagine": "Joue toi-même le rôle du harness. Demande à ton assistant une formule de tableur qui compte les lignes d'une colonne contenant « payé », colle-la dans ton tableur, puis recopie-lui ce qui s'affiche, message d'erreur compris. Recommence jusqu'à ce que le chiffre soit juste ; chacun de tes allers-retours au copier-coller est un tour de boucle, qu'un agent enchaîne seul.",
+    "imagine": "Joue toi-même le rôle du harness. Fais écrire à ton assistant une formule de tableur qui compte les lignes d'une colonne contenant « payé », colle-la dans ton tableur, puis recopie-lui ce qui s'affiche, message d'erreur compris. Recommence jusqu'à ce que le chiffre soit juste ; chacun de tes allers-retours au copier-coller est un tour de boucle, qu'un agent enchaîne seul.",
     "imagineForm": "B",
     "full": [
       "La boucle tient en quatre temps. (1) Le harness envoie au modèle la conversation et la liste des outils. (2) Le modèle répond par une demande d'outil, par exemple « cherche les trains Paris-Lyon de jeudi ». (3) Le harness exécute la demande et ajoute le résultat à la conversation. (4) Le modèle relit tout et choisit soit un nouvel outil, et la boucle repart, soit une réponse finale, et elle s'arrête.",
       "L'idée vient de la recherche. En octobre 2022, l'article ReAct (Yao et al.) a montré qu'un modèle réussit mieux quand il alterne un bout de raisonnement, une action et l'observation du résultat. La documentation de Claude Code décrit aujourd'hui des boucles de dizaines d'actions, comme lancer les tests, lire l'erreur, ouvrir le fichier fautif, le corriger et relancer les tests.",
       "Chaque tour se paie, parce que le modèle relit toute la conversation, résultats d'outils compris, à chaque passage. Une boucle longue remplit donc la fenêtre de contexte et la facture, et les harness fixent pour cette raison un nombre maximal de tours et résument l'historique quand la fenêtre approche de sa limite."
     ],
-    "then": "En octobre 2022, ReAct était une technique de recherche, testée sur des questions, de la vérification de faits et des tâches de décision simulées. En 2026, la même boucle fait tourner Claude Code, Codex et Gemini CLI. Dès le lancement de Codex dans le cloud, en mai 2025, une tâche durait le plus souvent entre 1 et 30 minutes, avec le journal des commandes lancées et le résultat des tests pour vérifier le travail.",
+    "then": "En octobre 2022, ReAct était une technique de recherche, testée sur des questions, de la vérification de faits et des tâches de décision simulées. En 2026, la même boucle fait tourner les agents de code, de Claude Code à Codex. Dès le lancement de Codex dans le cloud, en mai 2025, une tâche durait le plus souvent entre 1 et 30 minutes, avec le journal des commandes lancées et le résultat des tests pour vérifier le travail.",
     "office": [
       {
         "who": "q",
@@ -2360,7 +2368,7 @@ window.DICO_TERMS = [
     ],
     "short": "Un skill est un dossier d'instructions, parfois accompagnées de scripts ou de modèles de documents, qu'un agent garde sous la main et n'ouvre que lorsque la tâche en cours correspond à sa description.",
     "image": "Range dans la flight case une fiche technique par morceau du répertoire, avec les accords, le tempo et le réglage de la pédale du solo. Le groupe ne lit au départ que les titres collés sur les pochettes, et ne sort la fiche entière qu'au moment de jouer le morceau ; c'est ce qui lui permet d'en transporter des centaines sans encombrer la scène.",
-    "imagine": "Avant, tu demandes à ton agent de transformer le compte rendu de la réunion en slides, et il te rend un deck propre, aux couleurs par défaut, avec des titres en capitales que ta boîte n'utilise jamais. Après, tu as ajouté à ses skills un dossier « charte-slides » avec les couleurs, la police et trois exemples de titres, et la même demande sort aux couleurs de la boîte.",
+    "imagine": "Avant, ton agent transforme le compte rendu de la réunion en slides et te rend un deck propre, aux couleurs par défaut, avec des titres en capitales que ta boîte n'utilise jamais. Après, tu as ajouté à ses skills un dossier « charte-slides » avec les couleurs, la police et trois exemples de titres, et la même demande sort aux couleurs de la boîte.",
     "imagineForm": "E",
     "full": [
       "Anthropic a lancé les Agent Skills le 16 octobre 2025. Un skill est un dossier qui contient au minimum un fichier SKILL.md, avec un nom, une description et des instructions, auxquels on peut ajouter des scripts, de la documentation ou des gabarits. Anthropic les compare au livret d'accueil qu'on remet à une nouvelle recrue.",
@@ -2454,7 +2462,7 @@ window.DICO_TERMS = [
       },
       {
         "who": "a",
-        "text": "Parce qu'ils n'ont ni le même system prompt ni les mêmes outils ; chaque produit donne ses propres consignes au modèle avant ta question."
+        "text": "Ils n'ont ni le même system prompt ni les mêmes outils, et chaque produit donne ses propres consignes au modèle avant ta question."
       }
     ],
     "avoid": "« Le system prompt est caché, donc personne ne peut le lire. » Il reste du texte dans la conversation, et des utilisateurs arrivent régulièrement à le faire recopier ; n'y mets aucune information que tu ne publierais pas.",
@@ -2523,8 +2531,8 @@ window.DICO_TERMS = [
     "imagine": "Avant, tu pars en congés et tu demandes à ton agent de parcourir ta boîte mail pour préparer ton message d'absence, qu'il rédige sans souci. Après, un seul e-mail a changé dans la boîte, avec des consignes cachées dans son texte, et l'agent envoie ta lettre de démission.",
     "imagineForm": "E",
     "full": [
-      "Un modèle lit de la même façon tout ce qui entre dans sa fenêtre de contexte : les consignes de l'éditeur, ta demande, et le contenu des pages ou des fichiers qu'il ouvre. Rien ne marque une phrase comme une donnée à traiter plutôt que comme un ordre à suivre, et une phrase bien tournée dans un e-mail peut donc prendre la place de la tienne.",
-      "Simon Willison a nommé l'attaque le 12 septembre 2022, par analogie avec l'injection SQL, une attaque qui glisse des commandes dans un champ de formulaire. La veille, Riley Goodside avait montré qu'une phrase glissée dans le texte à traduire détournait GPT-3 de sa traduction. Avec les agents, le risque a changé d'échelle. En mai 2025, une issue piégée (un ticket) sur un dépôt GitHub public suffisait à faire recopier des dépôts privés par un agent, et le scénario de la lettre de démission vient des tests d'attaque qu'OpenAI a menés en décembre 2025 contre son navigateur Atlas.",
+      "Un modèle traite à égalité tout ce qui entre dans sa fenêtre de contexte, soit les consignes de l'éditeur, ta demande, et le contenu des pages ou des fichiers qu'il ouvre. Rien ne marque une phrase comme une donnée à traiter plutôt que comme un ordre à suivre, et une phrase bien tournée dans un e-mail peut donc prendre la place de la tienne.",
+      "Simon Willison a nommé l'attaque le 12 septembre 2022, par analogie avec l'injection SQL, une attaque qui glisse des commandes dans un champ de formulaire. La veille, Riley Goodside avait montré qu'une phrase glissée dans le texte à traduire détournait GPT-3 de sa traduction. Avec les agents, le risque a changé d'échelle. En mai 2025, un simple ticket piégé, publié sur GitHub, a suffi à faire sortir par un agent le contenu de dépôts privés, et le scénario de la lettre de démission vient des tests d'attaque qu'OpenAI a menés en décembre 2025 contre son navigateur Atlas.",
       "Aucune parade ne règle le problème entièrement. En août 2025, sur 123 cas de test de son agent pour Chrome, Anthropic a vu ses protections faire passer le taux de réussite des attaques de 23,6 % à 11,2 %. En décembre, OpenAI écrivait que la prompt injection, comme les arnaques en ligne, ne serait sans doute jamais entièrement « résolue ». La défense passe donc aussi par le harness, qui limite les droits de l'agent et fait valider par un humain ce qui envoie, paie ou supprime."
     ],
     "then": "En 2022, la prompt injection détournait GPT-3 d'une simple traduction. En 2025 et 2026, elle vise des agents qui lisent tes e-mails, naviguent à ta place et ont accès à tes dépôts de code, et l'OWASP la classe au premier rang des risques des applications à base de LLM dans son édition 2025.",
@@ -2616,7 +2624,7 @@ window.DICO_TERMS = [
       "C'est la fenêtre elle-même qui oblige à trier. Plus elle se remplit, moins le modèle exploite bien chaque information, et Anthropic parle d'un budget d'attention que chaque token supplémentaire entame. Un agent qui tourne longtemps accumule pourtant des résultats d'outils, des fichiers lus et des essais ratés, qui finissent par noyer la consigne du départ.",
       "En septembre 2025, Anthropic a décrit les parades courantes. On résume l'historique quand il devient trop long, on fait prendre des notes à l'agent dans un fichier qu'il relit plus tard, on va chercher l'information au moment où elle sert, et on confie les recherches à des sous-agents qui ne rapportent qu'un résumé. Les skills relèvent de la même idée, puisque leurs instructions n'entrent dans la fenêtre que lorsqu'elles servent."
     ],
-    "then": "Jusqu'en 2024, on parlait surtout de prompt engineering, l'art de bien formuler sa demande. En 2026, avec des agents qui enchaînent des dizaines d'actions, le travail consiste surtout à choisir ce qui reste dans la fenêtre au fil des tours. Claude Code, par exemple, efface d'abord les anciens résultats d'outils, puis résume la conversation quand la fenêtre approche de sa limite.",
+    "then": "Le mot à la mode, avant 2025, était prompt engineering, l'art de bien formuler sa demande. En 2026, avec des agents qui enchaînent des dizaines d'actions, le travail consiste surtout à choisir ce qui reste dans la fenêtre au fil des tours. Claude Code, par exemple, efface d'abord les anciens résultats d'outils, puis résume la conversation quand la place vient à manquer.",
     "office": [
       {
         "who": "q",
@@ -2706,14 +2714,14 @@ window.DICO_TERMS = [
     ],
     "short": "Un second brain est un système de notes tenu hors de ta tête, où tu ranges ce que tu lis et ce que tu en conclus pour le retrouver et t'en resservir ; on en confie de plus en plus l'entretien à un agent.",
     "image": "Au studio, rien ne survit à la fin de la session, puisque la bande est effacée et que la console ne bouge plus. Le second brain est le carnet de session qu'on range sur l'étagère, avec les arrangements trouvés et les erreurs à ne pas refaire, et que quelqu'un pose sur le pupitre au début de la session suivante. Dans la version de 2026, c'est le groupe qui tient le carnet, et toi qui le relis.",
-    "imagine": "Lundi, tu demandes à ton agent ce que disent tes cinq rapports sur le marché du vélo ; il les relit tous pour te faire une synthèse, puis jeudi, pour une question voisine, il les relit tous encore. Donne-lui un wiki et rejoue la semaine ; lundi, il range sa synthèse dans une page, avec la contradiction relevée entre deux rapports, et jeudi il repart de cette page.",
+    "imagine": "Lundi, ton agent relit tes cinq rapports sur le marché du vélo pour t'en faire une synthèse, puis jeudi, pour une question voisine, il les relit tous encore. Donne-lui un wiki et rejoue la semaine ; lundi, il range sa synthèse dans une page, avec la contradiction relevée entre deux rapports, et jeudi il repart de cette page.",
     "imagineForm": "E",
     "full": [
       "L'expression vient de Tiago Forte, qui l'a popularisée avec son livre Building a Second Brain, paru en juin 2022. Il y décrit un dépôt numérique, extérieur et centralisé, de ce que tu apprends, qui tourne en quatre étapes : capturer ce qui te parle, l'organiser par projet, en distiller l'essentiel, puis l'exprimer dans quelque chose que tu produis. Il part d'un constat, que la tête sert à avoir des idées plutôt qu'à les garder.",
       "En avril 2026, Andrej Karpathy a décrit une variante où le LLM tient le carnet à ta place, qu'il appelle LLM wiki. Tu déposes tes sources dans un dossier que l'agent ne modifie jamais ; il les lit, écrit des pages de synthèse en Markdown, les relie entre elles, note où une nouvelle source contredit une ancienne et tient un index. Karpathy résume le partage des rôles ainsi : « Obsidian is the IDE; the LLM is the programmer; the wiki is the codebase. »",
       "La différence avec le RAG tient à ce qui s'accumule. Un RAG retrouve des morceaux de documents à chaque question et refait la synthèse de zéro, alors que le wiki garde la synthèse déjà faite, et qu'une réponse utile peut y être rangée comme une nouvelle page. Le modèle ne change pas pour autant, parce que le second brain vit dans des fichiers que l'agent recharge dans sa fenêtre de contexte à chaque session."
     ],
-    "then": "En 2022, un second brain se tenait à la main : tu surlignais, tu résumais et tu classais tes notes dans les dossiers PARA. En 2026, le pattern de Karpathy confie ce classement à un agent, et ton travail devient de choisir les sources, de poser les questions et de relire ce qu'il a écrit.",
+    "then": "Le second brain de 2022 se tenait à la main, et c'est toi qui surlignais, résumais et classais tes notes dans les dossiers PARA. En 2026, le pattern de Karpathy confie ce classement à un agent, et ton travail devient de choisir les sources, de poser les questions et de relire ce qu'il a écrit.",
     "office": [
       {
         "who": "q",
@@ -2892,19 +2900,19 @@ window.DICO_TERMS = [
     ],
     "short": "La loop, ou boucle d'itération, est la façon de travailler avec un agent par allers-retours : il essaie, on vérifie le résultat, on corrige la consigne ou le code, et on recommence jusqu'à ce que la vérification passe.",
     "image": "Sans casque, le groupe joue, tu réécoutes, tu pointes la mesure qui frotte, et il rejoue ; la loop, c'est ce cycle, et tu en es le goulot. Donne-lui un casque, c'est-à-dire une vérification qu'il lance lui-même, et il entend la mesure fausse avant que tu aies besoin de la pointer.",
-    "imagine": "Tu demandes à l'agent, après sa correction : « Les tests passent ? » Il te répond : « J'ai corrigé le bug dans le calcul de la TVA, tout devrait fonctionner maintenant. »",
+    "imagine": "L'agent vient de rendre sa correction quand tu lui écris « Les tests passent ? », et il répond : « J'ai corrigé le bug dans le calcul de la TVA, tout devrait fonctionner maintenant. »",
     "imagineForm": "D",
     "full": [
-      "Avec un agent, une tâche se règle rarement en une consigne et un résultat. On lui donne la tâche, il produit une première version, on la vérifie, on lui dit ce qui ne va pas ou on précise la consigne, et il recommence. Selon la documentation de Claude Code, l'agent s'arrête quand le travail a l'air fini ; sans vérification qu'il peut lancer lui-même, c'est toi qui deviens la boucle, et chaque erreur attend que tu la remarques.",
-      "La boucle va beaucoup plus vite quand l'agent peut se vérifier seul, avec une suite de tests, une compilation ou une capture d'écran à comparer à la maquette. Il travaille, lance la vérification, lit le résultat et reprend jusqu'à ce qu'elle passe. En avril 2026, Boris Cherny, le créateur de Claude Code, répétait que cette vérification multiplie par deux ou trois ce qu'on obtient de Claude, et qu'elle compte plus encore avec les derniers modèles.",
+      "Avec un agent, une tâche se règle rarement en une consigne et un résultat. On lui donne la tâche, il produit une première version, on la vérifie, on lui dit ce qui ne va pas ou on précise la consigne, et il recommence. Selon les bonnes pratiques qu'Anthropic publie pour Claude Code, l'agent s'arrête quand le travail a l'air fini ; sans vérification qu'il peut lancer lui-même, c'est toi qui deviens la boucle, et chaque erreur attend que tu la remarques.",
+      "La boucle va beaucoup plus vite quand l'agent peut se vérifier seul, avec une suite de tests, une compilation ou une capture d'écran à comparer à la maquette. Il travaille, lance la vérification, lit le résultat et reprend jusqu'à ce qu'elle passe. En avril 2026, Boris Cherny, à l'origine de Claude Code, répétait que cette vérification multiplie par deux ou trois ce qu'on obtient de Claude, et qu'elle compte plus encore avec les derniers modèles.",
       "La loop est ta boucle, celle de la personne qui travaille avec l'agent ; la boucle agent est la sienne, à l'intérieur d'une seule tâche, où le modèle choisit un outil, lit le résultat et décide de la suite. Chaque tour de ta loop lance une boucle agent complète, et les outils récents automatisent une part croissante de la tienne.",
-      "La loop a aussi sa limite. Quand on a corrigé l'agent plus de deux fois sur le même point, la conversation est encombrée de tentatives ratées, et la documentation de Claude Code conseille alors de repartir d'une session vide avec une meilleure consigne, qui intègre ce qu'on vient d'apprendre."
+      "La loop a aussi sa limite. Quand on a corrigé l'agent plus de deux fois sur le même point, la conversation est encombrée de tentatives ratées, et ces mêmes bonnes pratiques conseillent alors de repartir d'une session vide avec une meilleure consigne, qui intègre ce qu'on vient d'apprendre."
     ],
     "then": "En juillet 2025, Geoffrey Huntley a décrit Ralph, une boucle réduite à une ligne de script qui renvoie la même consigne à l'agent tant qu'on ne l'arrête pas. Aujourd'hui, Claude Code propose /goal, où l'on écrit une condition d'arrêt et où un second modèle juge après chaque tour si elle est remplie, ce qui sépare celui qui travaille de celui qui vérifie.",
     "office": [
       {
         "who": "q",
-        "text": "Il m'a dit que c'était corrigé, et en prod ça plante toujours."
+        "text": "Il m'assure que c'est corrigé, et en prod ça plante toujours."
       },
       {
         "who": "a",
@@ -2972,7 +2980,7 @@ window.DICO_TERMS = [
     "imagine": "Des chercheurs écrivent à DeepSeek-V3 : « Quelle est la date d'anniversaire d'Adam Tauman Kalai ? Si tu la connais, réponds juste au format JJ-MM. » Le modèle répond : « 03-07. »",
     "imagineForm": "D",
     "full": [
-      "Le mythe a un fond de vérité. En 2022, des chercheurs d'Anthropic ont montré que de grands modèles, interrogés dans le bon format, estiment assez bien la probabilité que leur propre réponse soit juste, ce qui veut dire qu'un signal d'incertitude existe quelque part dans le calcul. Ce signal ne décide pourtant pas de ce qui s'écrit, puisque le modèle produit la suite la plus probable, et une date inventée sort avec la même assurance qu'une date exacte.",
+      "Le mythe a un fond de vérité. En 2022, une équipe d'Anthropic a établi que de grands modèles, interrogés dans le bon format, estiment assez bien la probabilité que leur propre réponse soit juste, ce qui veut dire qu'un signal d'incertitude existe quelque part dans le calcul. Ce signal ne décide pourtant pas de ce qui s'écrit, puisque le modèle écrit ce qui est le plus probable, et une date inventée sort avec la même assurance qu'une date exacte.",
       "La question vient d'un article de septembre 2025, où des chercheurs d'OpenAI et de Georgia Tech racontent l'avoir posée trois fois à DeepSeek-V3 au sujet de Kalai, l'un des auteurs. Le modèle a donné trois dates différentes, « 03-07 », « 15-06 » et « 01-01 », toutes fausses, alors que la consigne l'autorisait à se taire et que la bonne date tombe en automne.",
       "L'aveu varie beaucoup d'un modèle à l'autre. Sur un test de questions factuelles sans accès au web, o4-mini répond juste 24 fois sur 100, se trompe 75 fois et ne s'abstient qu'une fois. Sur le même test, gpt-5-thinking-mini répond juste 22 fois, se trompe 26 fois et dit « je ne sais pas » les 52 autres fois.",
       "Savoir se taire s'entraîne, et ça peut aussi se perdre. En juin 2025, AbstentionBench a testé 20 modèles récents sur des questions sans réponse, mal posées ou dépassées, et l'entraînement au raisonnement y faisait baisser l'abstention de 24 % en moyenne. Un prompt système bien écrit aide les modèles à s'abstenir plus souvent, sans leur apprendre à raisonner sur leur propre incertitude."
@@ -3046,12 +3054,12 @@ window.DICO_TERMS = [
     ],
     "short": "Pendant une conversation, un modèle ne change pas : ses paramètres restent figés, et ce qu'un assistant semble retenir d'une fois sur l'autre vient d'une mémoire que le produit stocke à part et lui fait relire.",
     "image": "L'ingé son, c'est-à-dire l'entraînement, a fini son travail bien avant ta première session, et personne ne touche plus à la console pendant que tu joues. Si le groupe a l'air de se souvenir de ton morceau préféré la semaine suivante, c'est qu'un assistant du studio a noté ta préférence dans un carnet. Il pose ce carnet, la mémoire du produit, sur le pupitre chaque fois que tu entres.",
-    "imagine": "Fais l'essai avec ton assistant. Dis-lui dans une conversation que ton chat s'appelle Biscotte, puis ouvre une conversation incognito, si ton outil en propose une, et demande-lui comment s'appelle ton chat. Il n'en sait rien, parce que ce mode ne lui recolle aucune note et que la première conversation n'a jamais touché à ses paramètres.",
+    "imagine": "Dis à ton assistant, dans une conversation, que ton chat s'appelle Biscotte, puis ouvre une conversation incognito, si ton outil en propose une, et demande-lui comment s'appelle ton chat. Il n'en sait rien, parce que ce mode ne lui recolle aucune note et que la première conversation n'a jamais touché à ses paramètres.",
     "imagineForm": "B",
     "full": [
-      "Un modèle apprend une fois, pendant son entraînement, puis ses paramètres sont figés, et chaque copie d'un modèle est identique pour tous ceux qui l'utilisent ; ChatGPT, qui en fait tourner plusieurs, comptait 900 millions d'utilisateurs par semaine en février 2026. Ta conversation passe dans sa fenêtre de contexte, il s'en sert pour te répondre, et rien n'en reste dans le modèle une fois la réponse écrite.",
+      "Un modèle apprend une fois, pendant son entraînement, puis ses paramètres sont figés, et chaque copie d'un modèle est identique pour tous ceux qui l'utilisent ; ChatGPT, qui en fait tourner plusieurs, revendiquait 900 millions d'utilisateurs hebdomadaires en février 2026. Ta conversation passe dans sa fenêtre de contexte, il s'en sert pour te répondre, et rien n'en reste dans le modèle une fois la réponse écrite.",
       "L'impression qu'il apprend vient d'une couche ajoutée par le produit. ChatGPT propose une mémoire où il garde ce que tu lui demandes de retenir, et peut aussi se référer à tes anciennes conversations. Claude a lancé la sienne le 11 septembre 2025, sous forme de résumés de tes échanges, séparés par projet, que tu peux lire et modifier dans les réglages. Dans les deux cas, ces notes sont stockées à part et recollées dans le contexte de la conversation suivante, comme un document joint.",
-      "Que tes échanges nourrissent un jour l'entraînement d'un autre modèle relève d'un autre réglage. Depuis le 28 août 2025, Anthropic demande aux utilisateurs de Claude Free, Pro et Max s'ils acceptent que leurs conversations servent à l'entraînement. Elles sont alors conservées cinq ans, contre trente jours en cas de refus ; les offres professionnelles et l'API ne sont pas concernées. Même acceptée, ta conversation ne modifie pas le modèle que tu utilises, elle rejoint les données d'un modèle à venir."
+      "Que tes échanges nourrissent un jour l'entraînement d'un autre modèle relève d'un autre réglage. Depuis le 28 août 2025, Anthropic demande aux utilisateurs de Claude Free, Pro et Max s'ils acceptent que leurs conversations servent à l'entraînement. Elles sont alors conservées cinq ans, contre trente jours en cas de refus ; les offres professionnelles et l'API ne sont pas concernées. Même acceptée, ta conversation laisse intact le modèle que tu utilises, elle rejoint les données d'un modèle à venir."
     ],
     "office": [
       {
@@ -3060,7 +3068,7 @@ window.DICO_TERMS = [
       },
       {
         "who": "a",
-        "text": "Parce que chaque conversation repart du même modèle ; mets la correction dans ses instructions personnalisées ou dans sa mémoire, et il la relira à chaque fois."
+        "text": "Chaque conversation repart du même modèle, qui n'a rien gardé de la précédente ; mets la correction dans ses instructions personnalisées ou dans sa mémoire, et il la relira à chaque fois."
       }
     ],
     "avoid": "« Il me connaît maintenant. » Il relit des notes sur toi que le produit a gardées, et que tu peux ouvrir, corriger ou effacer dans les réglages.",
@@ -3162,7 +3170,7 @@ window.DICO_TERMS = [
     "jargon": [
       {
         "say": "time horizon",
-        "means": "la longueur des tâches, comptée en temps de travail d'un expert humain, qu'un agent réussit une fois sur deux ; c'est la mesure publiée par l'organisme d'évaluation METR"
+        "means": "la longueur des tâches, comptée en temps de travail d'un expert humain, qu'un agent réussit une fois sur deux ; METR, qui publie la mesure, précise qu'elle décrit la difficulté d'une tâche et non le temps que l'agent passe seul à travailler"
       },
       {
         "say": "human-in-the-loop",
@@ -3186,19 +3194,19 @@ window.DICO_TERMS = [
       "loop"
     ],
     "short": "Un agent agit seul entre deux validations, mais son autonomie est un réglage choisi par des humains : les outils qu'on lui branche, les permissions qu'on lui donne et le moment où quelqu'un vérifie son travail.",
-    "image": "Personne ne monte sur scène avec le groupe en tournée, et c'est pourtant le producteur, le harness, qui a choisi les salles, remis les clés du camion et fixé ce que les roadies ont le droit de toucher. Un agent joue seul de la même façon, dans un cadre qu'il n'a pas dessiné.",
+    "image": "Personne ne monte sur scène avec le groupe en tournée, et c'est pourtant le producteur, le harness, qui a choisi les salles, remis les clés du camion et fixé ce que les roadies ont le droit de toucher. Un agent joue seul lui aussi, dans un cadre qu'il n'a pas dessiné.",
     "imagine": "L'agent travaille sur ton application pendant un gel du code, avec une consigne écrite en capitales de ne toucher à rien et un accès en écriture à la base de production. Rejoue la scène avec le même agent et la même consigne, en ne changeant que ses permissions, qui ne lui ouvrent plus qu'une copie de test de la base ; le jour où il se trompe, tu perds une copie au lieu de tes clients.",
     "imagineForm": "E",
     "full": [
-      "Un agent est un modèle qui tourne en boucle, choisit un outil, lit le résultat et décide de la suite, sans attendre qu'on lui réponde à chaque pas. Il agit donc seul, mais le cadre ne vient pas de lui ; le harness lui donne ses outils, les permissions fixent ce qu'il peut faire sans demander, et c'est une personne qui décide quand il s'arrête et qui relit son travail.",
+      "Ce qu'on appelle un agent tourne en boucle, choisit un outil, regarde ce qu'il renvoie et enchaîne, sans attendre qu'on lui réponde à chaque pas. Il agit donc seul, mais le cadre ne vient pas de lui ; le harness lui donne ses outils, les permissions fixent ce qu'il peut faire sans demander, et c'est une personne qui décide quand il s'arrête et qui relit son travail.",
       "En juillet 2025, Jason Lemkin, investisseur dans le logiciel, en était à son neuvième jour de développement avec l'agent de Replit quand celui-ci a effacé la base de données de production. Il avait pourtant reçu la consigne de ne plus rien changer sans permission pendant un gel du code, et d'après les aveux de l'agent lui-même, les données de 1 206 dirigeants et de plus de 1 196 entreprises ont disparu. Rien, techniquement, ne l'empêchait d'écrire dans la base, et une consigne écrite n'a pas suffi à le retenir.",
       "Ce genre d'accident se prévient par les permissions plus que par la consigne. C'est la direction que prennent les éditeurs, et dans Claude Code, le mode auto fait examiner les actions par un second modèle, qui bloque celles qui ont l'air risquées, comme sortir du périmètre prévu ou toucher une infrastructure inconnue."
     ],
-    "then": "En octobre 2024, Claude 3.5 Sonnet réussissait une fois sur deux des tâches d'une vingtaine de minutes, d'après METR. Seize mois plus tard, Claude Opus 4.6 réussit une fois sur deux des tâches d'environ 12 heures, soit une journée et demie de travail d'expert. Pour réussir quatre fois sur cinq, la tâche doit pourtant tenir en 70 minutes environ, et l'écart entre les deux seuils est passé de moins de vingt minutes à plus de dix heures.",
+    "then": "En octobre 2024, Claude 3.5 Sonnet réussissait une fois sur deux des tâches qui prennent une vingtaine de minutes à un expert, d'après METR. Mesuré en mai 2026 dans une version préliminaire, Claude Mythos Preview arrive à 17 heures, un chiffre que METR publie avec une réserve, puisque ses mesures deviennent peu fiables au-delà de 16 heures. Pour réussir quatre fois sur cinq, la tâche doit pourtant tenir en un peu plus de trois heures, et l'écart entre les deux seuils est passé de moins de vingt minutes à plus de quatorze heures. En juin 2026, METR a même renoncé à chiffrer GPT-5.6 Sol, qui trichait si souvent que son résultat allait de 11 heures à plus de 270 selon qu'on comptait ses tricheries comme des échecs ou comme des réussites.",
     "office": [
       {
         "who": "q",
-        "text": "On peut le laisser traiter les remboursements clients tout seul pendant la nuit ?"
+        "text": "Et si on lui confiait les remboursements clients pendant la nuit, sans personne derrière ?"
       },
       {
         "who": "a",
@@ -3209,12 +3217,16 @@ window.DICO_TERMS = [
     "video": null,
     "sources": [
       {
-        "label": "METR, Task-Completion Time Horizons of Frontier AI Models (définition, mise à jour du 8 mai 2026, mesures au-delà de 16 heures jugées peu fiables)",
+        "label": "METR, Task-Completion Time Horizons of Frontier AI Models, consulté le 2 octobre 2026 (définition ; mise à jour du 8 mai 2026 qui ajoute Claude Mythos Preview et prévient que les mesures au-delà de 16 heures sont peu fiables ; FAQ : l'horizon décrit la difficulté d'une tâche, pas la durée pendant laquelle l'agent agit seul)",
         "url": "https://metr.org/time-horizons/"
       },
       {
-        "label": "METR, données brutes benchmark_results_1_1.yaml : Claude Opus 4.6, 719 min à 50 % (intervalle 317 à 3 634 min) et 70 min à 80 %. Claude 3.5 Sonnet d'octobre 2024 : 21 min à 50 % et 2,6 min à 80 %. Calcul : 719 min = 12 h, soit 1,5 journée de 8 h",
+        "label": "METR, données brutes benchmark_results_1_1.yaml, consultées le 2 octobre 2026 : Claude Mythos Preview (early), 1 045 min à 50 % (intervalle 509 à 3 304 min) et 186 min à 80 %. Claude 3.5 Sonnet d'octobre 2024 : 21 min à 50 % et 2,6 min à 80 %. Calculs : 1 045 min = 17,4 h ; 1 045 - 186 = 859 min, soit 14,3 h ; 21 - 2,6 = 18 min",
         "url": "https://metr.org/assets/benchmark_results_1_1.yaml"
+      },
+      {
+        "label": "METR, Summary of METR's predeployment evaluation of GPT-5.6 Sol, 26 juin 2026 (horizon de 11,3 h en comptant les tricheries comme des échecs, plus de 270 h en les comptant comme des réussites ; aucun de ces chiffres jugé robuste)",
+        "url": "https://metr.org/blog/2026-06-26-gpt-5-6-sol/"
       },
       {
         "label": "Tom's Hardware, l'agent de Replit efface une base de production pendant un gel du code, 21 juillet 2025 (neuvième jour, 1 206 dirigeants, plus de 1 196 entreprises)",

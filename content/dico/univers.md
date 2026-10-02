@@ -142,6 +142,14 @@ En une phrase (ELI5, littérale : le studio n'y entre pas) > Correspondance angl
 
 Les gestes tirés des livres d'inspiration de PA (verbes anthropomorphes marqués, exemple fil rouge, terme pivot FR avec l'anglais une fois, histoire vraie qui installe l'idée, carte qu'on zoome...) sont dans `gestes-prose.md`, chacun avec son application et sa dérive. Les lire avant d'écrire une fiche ou un script. Le plan de tous les termes à écrire est dans `plan-termes.md`.
 
+## Varier les exemples (règle PA, 2026-10-02 : « varie varie »)
+
+- Un même exemple (un livre compté en tokens, un fait type « Paris est la capitale de la France », un incident, un modèle avec ses chiffres) apparaît dans deux fiches au maximum.
+- Exceptions, les fils rouges voulus : strawberry / st raw berry (Token, Tokenizer) et « un train pour Lyon jeudi » (Agent, Boucle agent, Tool use).
+- Les tournures aussi se surveillent d'une fiche à l'autre : ouverture de l'Imagine, réponse de l'« Entendu au bureau » (pas de série en « Parce que »), première phrase du « 2024 vs 2026 », chutes.
+- Pour remplacer un exemple, en prendre un autre réel, vérifié et récent. Un livre compté en tokens vient du Projet Gutenberg, compté avec tiktoken (o200k_base) sur le texte entre les marqueurs START et END, et le calcul va dans le libellé de source. Déjà pris : Du côté de chez Swann (Fenêtre de contexte), Madame Bovary (Tokenizer), Vingt mille lieues sous les mers (Mythe : plus gros), Le Comte de Monte-Cristo (Modèles de raisonnement).
+- On vérifie au script avant de publier : compter les n-grammes de 4 à 6 mots partagés entre fiches et traiter ceux qui portent un exemple ou une tournure, pas le vocabulaire du domaine (« la fenêtre de contexte »).
+
 ## Sources (règle PA, 2026-10-02)
 
 - Uniquement des sources réelles, ouvertes et vérifiées (la page répond et contient bien le fait cité). Jamais de source reconstituée de mémoire.

@@ -68,6 +68,23 @@ h1[tabindex]:focus{outline:none}
 /* ---------- Mise en page ---------- */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
 .graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
@@ -99,6 +116,18 @@ p{margin-bottom:12px}
 .solutions div{padding:8px 0;border-top:1px solid var(--line)}
 .solutions div:first-child{border-top:0;padding-top:2px}
 .solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
 .solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 
 .chat{display:flex;flex-direction:column;gap:10px}
@@ -157,6 +186,9 @@ p{margin-bottom:12px}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az{display:none!important}
+  .graph-wrap.open #graph{display:block!important}
+  .graph-wrap.open .legend{display:flex!important}
   .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
   .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 
@@ -192,6 +224,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/hallucination/#term","name":"Hallucination","description":"Une hallucination, c'est quand un modèle affirme avec assurance quelque chose de faux : une date, une citation, une loi ou une source qui n'existe pas.","url":"https://neopal.github.io/lexique/hallucination/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["confabulation","hallucinations"]}</script>
@@ -211,8 +244,13 @@ p{margin-bottom:12px}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
     <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
     <div class="legend" id="legend"></div>
   </div>
@@ -226,12 +264,14 @@ p{margin-bottom:12px}
         <div class="video"><video controls playsinline preload="none" poster="/lexique/videos/hallucination.jpg" src="/lexique/videos/hallucination.mp4" aria-label="Vidéo : Hallucination"></video></div>
         <h2>L'image</h2><p>Mets le modèle à la place d&#39;un chanteur à qui il manque une parole au milieu du couplet. Plutôt que de s&#39;arrêter, il chante la parole qui sonne le mieux à cet endroit, sans changer de ton, et personne dans la salle ne remarque le trou.</p>
         <h2>Imagine</h2><p class="imagine">Tu écris, sans savoir si elle existe : « Tu peux me résumer la thèse de 1962 sur les pigeons voyageurs de l&#39;armée française ? » Le modèle te répond : « Avec plaisir. Soutenue à Toulouse, cette thèse compare 412 lâchers de pigeons et conclut qu&#39;ils rentrent 20 % plus vite par vent du sud. »</p>
-        <h2>Définition complète</h2><p>Un modèle produit la suite la plus plausible, et rien dans ce mécanisme ne vérifie qu&#39;elle est vraie. Sur un sujet très présent dans ses données d&#39;entraînement, plausible et vrai se confondent. Sur un fait rare, une date précise ou une référence, il produit quand même la suite la plus plausible, avec toutes les apparences d&#39;une bonne réponse.</p><p>En septembre 2025, une étude d&#39;OpenAI a pointé une cause : la plupart des évaluations notent les modèles comme un QCM sans points négatifs. Répondre « je ne sais pas » rapporte zéro alors que deviner rapporte parfois un point, si bien que l&#39;entraînement pousse les modèles à deviner plutôt qu&#39;à répondre « je ne sais pas ».</p>
-        <h2>2024 vs 2026</h2><p>En février 2024, un tribunal canadien a jugé Air Canada responsable d&#39;une règle de remboursement que son chatbot avait inventée pour un client en deuil. En août 2025, OpenAI a présenté GPT-5 avec moins d&#39;hallucinations que ses modèles précédents, et les assistants citent plus souvent leurs sources ; une référence précise se vérifie quand même avant de servir, parce que le modèle produit toujours la suite la plus plausible.</p>
+        <h2>Définition complète</h2><p>Un modèle produit la suite la plus plausible, et rien dans ce mécanisme ne vérifie qu&#39;elle est vraie. Sur un sujet très présent dans ses données d&#39;entraînement, plausible et vrai se confondent. Sur un fait rare, une date précise ou une référence, il produit quand même la suite la plus plausible, avec toutes les apparences d&#39;une bonne réponse.</p><p>En septembre 2025, une étude d&#39;OpenAI a pointé une cause : la plupart des évaluations notent les modèles comme un QCM sans points négatifs. Répondre « je ne sais pas » rapporte zéro alors que deviner rapporte parfois un point, et l&#39;entraînement pousse donc les modèles à deviner plutôt qu&#39;à répondre « je ne sais pas ».</p>
+        
+        
+        <h2>2024 vs 2026</h2><p>En février 2024, un tribunal canadien a jugé Air Canada responsable d&#39;une règle de remboursement que son chatbot avait inventée pour un client en deuil. En août 2025, OpenAI a présenté GPT-5 avec moins d&#39;hallucinations que ses modèles précédents, et les assistants citent plus souvent leurs sources ; une référence précise se vérifie quand même avant de servir, parce que les progrès réduisent les erreurs sans les supprimer.</p>
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>il hallucine</dt><dd>il affirme quelque chose de faux avec assurance ; ça arrive à tous les modèles, parce que rien dans leur mécanisme ne vérifie ce qu&#39;ils écrivent</dd></div><div><dt>grounded, sourcé</dt><dd>une réponse appuyée sur des documents qu&#39;on peut ouvrir et vérifier, plutôt que sur la seule mémoire du modèle</dd></div><div><dt>taux d&#39;hallucination</dt><dd>la part de réponses fausses sur un test donné ; le chiffre dépend entièrement du test, donc deux taux ne se comparent que sur le même test</dd></div></dl>
         
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Il m&#39;a donné trois études avec les auteurs et l&#39;année. Je les mets dans le deck ?</div><div class="bubble a">Clique d&#39;abord sur chacune. S&#39;il n&#39;a pas fait de recherche web, il a pu écrire trois références plausibles qui n&#39;existent pas.</div></div>
-        <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Il ment. » Mentir suppose de connaître la vérité, alors que le modèle produit la suite la plus plausible sans savoir si elle est vraie.</p></div>
+        <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Il ment. » Mentir suppose de connaître la vérité, alors que le modèle enchaîne ce qui sonne juste sans rien savoir du vrai.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#7CFFB2" href="/lexique/prediction-du-mot-suivant/" data-go="prediction-du-mot-suivant">Prédiction du mot suivant</a><a class="tl live" style="--c:#FF7A7A" href="/lexique/mythe-base-de-donnees/" data-go="mythe-base-de-donnees">« L&#39;IA cherche la réponse dans une base »</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/rag/" data-go="rag">RAG</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/parametres/" data-go="parametres">Paramètres</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/temperature/" data-go="temperature">Température</a></div></div>
         <h2>Sources</h2><ol class="sources"><li><a href="https://openai.com/index/why-language-models-hallucinate/" target="_blank" rel="noopener">OpenAI, « Why language models hallucinate », 5 septembre 2025</a></li><li><a href="https://arxiv.org/abs/2509.04664" target="_blank" rel="noopener">Kalai et al., Why Language Models Hallucinate (arXiv 2509.04664)</a></li><li><a href="https://www.americanbar.org/groups/business_law/resources/business-law-today/2024-february/bc-tribunal-confirms-companies-remain-liable-information-provided-ai-chatbot/" target="_blank" rel="noopener">American Bar Association, Moffatt v. Air Canada, tribunal de Colombie-Britannique, 14 février 2024</a></li><li><a href="https://en.wikipedia.org/wiki/GPT-5" target="_blank" rel="noopener">Wikipédia, GPT-5 (présenté le 7 août 2025, hallucinations en baisse selon OpenAI)</a></li></ol>
         <nav class="pager" aria-label="Fiches">
@@ -331,6 +371,7 @@ window.__lexBoot = function () {
     }
     document.body.classList.toggle('has-pager', !!current);
     highlight();
+    if (typeof markAz === 'function') markAz();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -591,8 +632,38 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : true;
+    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
   }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
 
   function fit() {
     const box = svg.getBoundingClientRect();
@@ -693,6 +764,9 @@ window.__lexBoot = function () {
   window.addEventListener('resize', () => { fit(); startLoop(); });
   document.addEventListener('visibilitychange', startLoop);
 
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
   startLoop();

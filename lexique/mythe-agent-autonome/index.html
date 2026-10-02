@@ -68,6 +68,23 @@ h1[tabindex]:focus{outline:none}
 /* ---------- Mise en page ---------- */
 .layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
 .graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
@@ -99,6 +116,18 @@ p{margin-bottom:12px}
 .solutions div{padding:8px 0;border-top:1px solid var(--line)}
 .solutions div:first-child{border-top:0;padding-top:2px}
 .solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
 .solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 
 .chat{display:flex;flex-direction:column;gap:10px}
@@ -157,6 +186,9 @@ p{margin-bottom:12px}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az{display:none!important}
+  .graph-wrap.open #graph{display:block!important}
+  .graph-wrap.open .legend{display:flex!important}
   .mapclose{display:block;position:absolute;top:10px;right:12px;z-index:2;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:8px 14px;cursor:pointer}
   .legend{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
 
@@ -192,6 +224,7 @@ p{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 </style>
+
 
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/mythe-agent-autonome/#term","name":"Un agent est autonome","description":"Un agent agit seul entre deux validations, mais son autonomie est un réglage choisi par des humains : les outils qu'on lui branche, les permissions qu'on lui donne et le moment où quelqu'un vérifie son travail.","url":"https://neopal.github.io/lexique/mythe-agent-autonome/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Myth: an AI agent is autonomous","autonomous agent","fully autonomous","set and forget","agent autonome"]}</script>
@@ -211,8 +244,13 @@ p{margin-bottom:12px}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
     <button class="mapclose" id="mapClose" type="button">Fermer</button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
     <div class="legend" id="legend"></div>
   </div>
@@ -224,16 +262,18 @@ p{margin-bottom:12px}
         <nav class="rel" aria-label="Termes liés"><a class="tl live" style="--c:#D7A6FF" href="/lexique/agent/" data-go="agent">Agent</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/boucle-agent/" data-go="boucle-agent">Boucle agent</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/tool-use/" data-go="tool-use">Tool use</a><a class="tl live" style="--c:#5FD3C6" href="/lexique/loop/" data-go="loop">Loop</a></nav>
         <p class="lead">Un agent agit seul entre deux validations, mais son autonomie est un réglage choisi par des humains : les outils qu&#39;on lui branche, les permissions qu&#39;on lui donne et le moment où quelqu&#39;un vérifie son travail.</p>
         
-        <h2>L'image</h2><p>Personne ne monte sur scène avec le groupe en tournée, et c&#39;est pourtant le producteur, le harness, qui a choisi les salles, remis les clés du camion et fixé ce que les roadies ont le droit de toucher. Un agent joue seul de la même façon, dans un cadre qu&#39;il n&#39;a pas dessiné.</p>
+        <h2>L'image</h2><p>Personne ne monte sur scène avec le groupe en tournée, et c&#39;est pourtant le producteur, le harness, qui a choisi les salles, remis les clés du camion et fixé ce que les roadies ont le droit de toucher. Un agent joue seul lui aussi, dans un cadre qu&#39;il n&#39;a pas dessiné.</p>
         <h2>Imagine</h2><p class="imagine">L&#39;agent travaille sur ton application pendant un gel du code, avec une consigne écrite en capitales de ne toucher à rien et un accès en écriture à la base de production. Rejoue la scène avec le même agent et la même consigne, en ne changeant que ses permissions, qui ne lui ouvrent plus qu&#39;une copie de test de la base ; le jour où il se trompe, tu perds une copie au lieu de tes clients.</p>
-        <h2>Définition complète</h2><p>Un agent est un modèle qui tourne en boucle, choisit un outil, lit le résultat et décide de la suite, sans attendre qu&#39;on lui réponde à chaque pas. Il agit donc seul, mais le cadre ne vient pas de lui ; le harness lui donne ses outils, les permissions fixent ce qu&#39;il peut faire sans demander, et c&#39;est une personne qui décide quand il s&#39;arrête et qui relit son travail.</p><p>En juillet 2025, Jason Lemkin, investisseur dans le logiciel, en était à son neuvième jour de développement avec l&#39;agent de Replit quand celui-ci a effacé la base de données de production. Il avait pourtant reçu la consigne de ne plus rien changer sans permission pendant un gel du code, et d&#39;après les aveux de l&#39;agent lui-même, les données de 1 206 dirigeants et de plus de 1 196 entreprises ont disparu. Rien, techniquement, ne l&#39;empêchait d&#39;écrire dans la base, et une consigne écrite n&#39;a pas suffi à le retenir.</p><p>Ce genre d&#39;accident se prévient par les permissions plus que par la consigne. C&#39;est la direction que prennent les éditeurs, et dans Claude Code, le mode auto fait examiner les actions par un second modèle, qui bloque celles qui ont l&#39;air risquées, comme sortir du périmètre prévu ou toucher une infrastructure inconnue.</p>
-        <h2>2024 vs 2026</h2><p>En octobre 2024, Claude 3.5 Sonnet réussissait une fois sur deux des tâches d&#39;une vingtaine de minutes, d&#39;après METR. Seize mois plus tard, Claude Opus 4.6 réussit une fois sur deux des tâches d&#39;environ 12 heures, soit une journée et demie de travail d&#39;expert. Pour réussir quatre fois sur cinq, la tâche doit pourtant tenir en 70 minutes environ, et l&#39;écart entre les deux seuils est passé de moins de vingt minutes à plus de dix heures.</p>
-        <h2>Dans le jargon</h2><dl class="jargon"><div><dt>time horizon</dt><dd>la longueur des tâches, comptée en temps de travail d&#39;un expert humain, qu&#39;un agent réussit une fois sur deux ; c&#39;est la mesure publiée par l&#39;organisme d&#39;évaluation METR</dd></div><div><dt>human-in-the-loop</dt><dd>un humain valide certaines actions avant qu&#39;elles partent, comme une suppression ou un paiement</dd></div><div><dt>permissions</dt><dd>la liste de ce que l&#39;agent a le droit de faire sans demander, comme lire des fichiers, lancer des commandes ou écrire dans une base</dd></div><div><dt>auto mode</dt><dd>dans Claude Code, un mode où un second modèle examine les actions à ta place et ne bloque que celles qui ont l&#39;air risquées</dd></div></dl>
+        <h2>Définition complète</h2><p>Ce qu&#39;on appelle un agent tourne en boucle, choisit un outil, regarde ce qu&#39;il renvoie et enchaîne, sans attendre qu&#39;on lui réponde à chaque pas. Il agit donc seul, mais le cadre ne vient pas de lui ; le harness lui donne ses outils, les permissions fixent ce qu&#39;il peut faire sans demander, et c&#39;est une personne qui décide quand il s&#39;arrête et qui relit son travail.</p><p>En juillet 2025, Jason Lemkin, investisseur dans le logiciel, en était à son neuvième jour de développement avec l&#39;agent de Replit quand celui-ci a effacé la base de données de production. Il avait pourtant reçu la consigne de ne plus rien changer sans permission pendant un gel du code, et d&#39;après les aveux de l&#39;agent lui-même, les données de 1 206 dirigeants et de plus de 1 196 entreprises ont disparu. Rien, techniquement, ne l&#39;empêchait d&#39;écrire dans la base, et une consigne écrite n&#39;a pas suffi à le retenir.</p><p>Ce genre d&#39;accident se prévient par les permissions plus que par la consigne. C&#39;est la direction que prennent les éditeurs, et dans Claude Code, le mode auto fait examiner les actions par un second modèle, qui bloque celles qui ont l&#39;air risquées, comme sortir du périmètre prévu ou toucher une infrastructure inconnue.</p>
         
-        <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">On peut le laisser traiter les remboursements clients tout seul pendant la nuit ?</div><div class="bubble a">Laisse-le préparer les remboursements et garde la validation pour quelqu&#39;un le matin ; plus la tâche est longue, plus il risque de dérailler en route, et un remboursement envoyé ne se rattrape pas.</div></div>
+        
+        <h2>2024 vs 2026</h2><p>En octobre 2024, Claude 3.5 Sonnet réussissait une fois sur deux des tâches qui prennent une vingtaine de minutes à un expert, d&#39;après METR. Mesuré en mai 2026 dans une version préliminaire, Claude Mythos Preview arrive à 17 heures, un chiffre que METR publie avec une réserve, puisque ses mesures deviennent peu fiables au-delà de 16 heures. Pour réussir quatre fois sur cinq, la tâche doit pourtant tenir en un peu plus de trois heures, et l&#39;écart entre les deux seuils est passé de moins de vingt minutes à plus de quatorze heures. En juin 2026, METR a même renoncé à chiffrer GPT-5.6 Sol, qui trichait si souvent que son résultat allait de 11 heures à plus de 270 selon qu&#39;on comptait ses tricheries comme des échecs ou comme des réussites.</p>
+        <h2>Dans le jargon</h2><dl class="jargon"><div><dt>time horizon</dt><dd>la longueur des tâches, comptée en temps de travail d&#39;un expert humain, qu&#39;un agent réussit une fois sur deux ; METR, qui publie la mesure, précise qu&#39;elle décrit la difficulté d&#39;une tâche et non le temps que l&#39;agent passe seul à travailler</dd></div><div><dt>human-in-the-loop</dt><dd>un humain valide certaines actions avant qu&#39;elles partent, comme une suppression ou un paiement</dd></div><div><dt>permissions</dt><dd>la liste de ce que l&#39;agent a le droit de faire sans demander, comme lire des fichiers, lancer des commandes ou écrire dans une base</dd></div><div><dt>auto mode</dt><dd>dans Claude Code, un mode où un second modèle examine les actions à ta place et ne bloque que celles qui ont l&#39;air risquées</dd></div></dl>
+        
+        <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Et si on lui confiait les remboursements clients pendant la nuit, sans personne derrière ?</div><div class="bubble a">Laisse-le préparer les remboursements et garde la validation pour quelqu&#39;un le matin ; plus la tâche est longue, plus il risque de dérailler en route, et un remboursement envoyé ne se rattrape pas.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Il est autonome, donc il sait ce qu&#39;il fait. » Il sait enchaîner des actions sans toi, ce qui ne dit rien de la justesse de chacune ; ce sont ta vérification et ce que tu lui as interdit qui en décident.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#D7A6FF" href="/lexique/agent/" data-go="agent">Agent</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/boucle-agent/" data-go="boucle-agent">Boucle agent</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/tool-use/" data-go="tool-use">Tool use</a><a class="tl live" style="--c:#5FD3C6" href="/lexique/loop/" data-go="loop">Loop</a></div></div>
-        <h2>Sources</h2><ol class="sources"><li><a href="https://metr.org/time-horizons/" target="_blank" rel="noopener">METR, Task-Completion Time Horizons of Frontier AI Models (définition, mise à jour du 8 mai 2026, mesures au-delà de 16 heures jugées peu fiables)</a></li><li><a href="https://metr.org/assets/benchmark_results_1_1.yaml" target="_blank" rel="noopener">METR, données brutes benchmark_results_1_1.yaml : Claude Opus 4.6, 719 min à 50 % (intervalle 317 à 3 634 min) et 70 min à 80 %. Claude 3.5 Sonnet d&#39;octobre 2024 : 21 min à 50 % et 2,6 min à 80 %. Calcul : 719 min = 12 h, soit 1,5 journée de 8 h</a></li><li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-coding-platform-goes-rogue-during-code-freeze-and-deletes-entire-company-database-replit-ceo-apologizes-after-ai-engine-says-it-made-a-catastrophic-error-in-judgment-and-destroyed-all-production-data" target="_blank" rel="noopener">Tom&#39;s Hardware, l&#39;agent de Replit efface une base de production pendant un gel du code, 21 juillet 2025 (neuvième jour, 1 206 dirigeants, plus de 1 196 entreprises)</a></li><li><a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">Anthropic, Best practices for Claude Code (auto mode : un modèle classificateur examine les actions et bloque les plus risquées)</a></li></ol>
+        <h2>Sources</h2><ol class="sources"><li><a href="https://metr.org/time-horizons/" target="_blank" rel="noopener">METR, Task-Completion Time Horizons of Frontier AI Models, consulté le 2 octobre 2026 (définition ; mise à jour du 8 mai 2026 qui ajoute Claude Mythos Preview et prévient que les mesures au-delà de 16 heures sont peu fiables ; FAQ : l&#39;horizon décrit la difficulté d&#39;une tâche, pas la durée pendant laquelle l&#39;agent agit seul)</a></li><li><a href="https://metr.org/assets/benchmark_results_1_1.yaml" target="_blank" rel="noopener">METR, données brutes benchmark_results_1_1.yaml, consultées le 2 octobre 2026 : Claude Mythos Preview (early), 1 045 min à 50 % (intervalle 509 à 3 304 min) et 186 min à 80 %. Claude 3.5 Sonnet d&#39;octobre 2024 : 21 min à 50 % et 2,6 min à 80 %. Calculs : 1 045 min = 17,4 h ; 1 045 - 186 = 859 min, soit 14,3 h ; 21 - 2,6 = 18 min</a></li><li><a href="https://metr.org/blog/2026-06-26-gpt-5-6-sol/" target="_blank" rel="noopener">METR, Summary of METR&#39;s predeployment evaluation of GPT-5.6 Sol, 26 juin 2026 (horizon de 11,3 h en comptant les tricheries comme des échecs, plus de 270 h en les comptant comme des réussites ; aucun de ces chiffres jugé robuste)</a></li><li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/ai-coding-platform-goes-rogue-during-code-freeze-and-deletes-entire-company-database-replit-ceo-apologizes-after-ai-engine-says-it-made-a-catastrophic-error-in-judgment-and-destroyed-all-production-data" target="_blank" rel="noopener">Tom&#39;s Hardware, l&#39;agent de Replit efface une base de production pendant un gel du code, 21 juillet 2025 (neuvième jour, 1 206 dirigeants, plus de 1 196 entreprises)</a></li><li><a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">Anthropic, Best practices for Claude Code (auto mode : un modèle classificateur examine les actions et bloque les plus risquées)</a></li></ol>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/mythe-chatgpt-c-est-le-modele/" data-go="mythe-chatgpt-c-est-le-modele" rel="prev"><span aria-hidden="true">←</span><span class="nt">« ChatGPT, c&#39;est le modèle »</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -331,6 +371,7 @@ window.__lexBoot = function () {
     }
     document.body.classList.toggle('has-pager', !!current);
     highlight();
+    if (typeof markAz === 'function') markAz();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -591,8 +632,38 @@ window.__lexBoot = function () {
   const ly = (n) => n.y * sy;
 
   function mapVisible() {
-    return mqMobile.matches ? map.classList.contains('open') : true;
+    return mqMobile.matches ? map.classList.contains('open') : map.dataset.view === 'map';
   }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
 
   function fit() {
     const box = svg.getBoundingClientRect();
@@ -693,6 +764,9 @@ window.__lexBoot = function () {
   window.addEventListener('resize', () => { fit(); startLoop(); });
   document.addEventListener('visibilitychange', startLoop);
 
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
   startLoop();
