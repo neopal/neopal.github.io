@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Un studio qui ne coûte presque plus rien à louer, comme un modèle qui génère pour quelques centimes, finit par presser des disques à la chaîne. Personne ne les a commandés ni écoutés en entier, mais ils remplissent les bacs du disquaire au point que tu ne trouves plus l&#39;album que tu étais venu chercher.</p>
         <h2>Imagine</h2><p class="imagine">Au plus haut de juin 2026, Deezer recevait environ 90 000 morceaux entièrement générés par l&#39;IA en une seule journée. À trois minutes le morceau, écouter cette livraison te prendrait 4 500 heures, plus de six mois sans dormir, et le jour où tu aurais fini, près de dix-sept millions de nouveaux morceaux t&#39;attendraient.</p>
+        
         <h2>Définition complète</h2><p>Le mot vient de l&#39;anglais slop, la pâtée des cochons. Il circulait vers 2022 sur 4chan, Hacker News et YouTube, après la sortie des premiers générateurs d&#39;images, et le 8 mai 2024 le programmeur Simon Willison l&#39;a popularisé en reprenant un tweet de @deepfates. Le slop serait au contenu généré ce que le spam est au courrier, puisque dans les deux cas personne ne l&#39;a demandé et personne ne l&#39;a relu.</p><p>En mai 2025, le Chicago Sun-Times et une édition du Philadelphia Inquirer ont publié une liste de lectures pour l&#39;été dont dix titres sur quinze n&#39;existaient pas, comme un roman climatique d&#39;Isabel Allende intitulé Tidewater Dreams. Son auteur, Marco Buscaglia, a reconnu l&#39;avoir produite en partie avec l&#39;IA sans vérifier. En octobre 2025, Kapwing a ouvert un compte YouTube neuf et compté 104 vidéos de slop parmi les 500 premiers Shorts qu&#39;on lui proposait, soit 21 %.</p><p>Le slop ne coûte presque rien à produire, et c&#39;est l&#39;attention de chacun qui paie la différence. Chez Deezer, les morceaux générés sont passés de 10 % des nouveaux envois en janvier 2025 à plus de la moitié certains jours de juin 2026. Ils ne font pourtant que 1 à 3 % des écoutes, et jusqu&#39;à 85 % de ces écoutes étaient frauduleuses en 2025, faites par des robots pour toucher des droits.</p><p>La recherche en ligne en porte le poids. En mars 2024, Google a étendu sa règle contre le spam à toute page produite en masse pour se classer, quel que soit l&#39;outil, et annonçait ensuite 45 % de contenu peu original en moins dans ses résultats. Un moteur doit désormais trier ce qui a été écrit pour toi de ce qui a été écrit pour lui.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

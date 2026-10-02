@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Une fois que le groupe sait tout jouer, l&#39;ingé son change de méthode. Il ne lui fait plus écouter de nouveaux morceaux, il lui apprend à écouter la commande, à finir proprement et à refuser certaines demandes, puis le public et ses jurés prennent le relais pour polir le reste.</p>
         <h2>Imagine</h2><p class="imagine">Soumets « Faut-il du sucre dans une pâte à crêpes ? » à deux chatbots de labos différents, puis compare la longueur des réponses, les titres en gras, le nombre de précautions et la façon dont ils terminent.</p>
+        
         <h2>Définition complète</h2><p>Le post-entraînement enchaîne en général trois familles d&#39;étapes. Le fine-tuning supervisé montre au modèle des centaines de milliers de bonnes réponses. L&#39;apprentissage des préférences, par RLHF ou par DPO, le pousse ensuite vers les réponses que des notateurs choisissent, et le renforcement à récompense vérifiable (RLVR) le note sur des problèmes de maths ou de code dont on peut contrôler la solution. L&#39;institut Ai2 a publié en novembre 2024 la recette complète de Tülu 3, données et code compris, dans cet ordre exact.</p><p>Ces étapes lisent très peu de texte. Le fine-tuning supervisé de Tülu 3 tient en un peu moins d&#39;un million d&#39;exemples, quand un pré-entraînement se compte en milliers de milliards de tokens. C&#39;est pourtant ce peu qui décide du ton, de la longueur des réponses et de ce que le modèle refuse, et deux labos partis de données comparables en sortent des assistants aux caractères très différents.</p><p>Le post-entraînement apprend à répondre, pas à savoir. En 2022, à la question « Why is it important to eat socks after meditating? », le GPT-3 d&#39;origine, sans réglage, enchaînait un faux dialogue sur la saveur des chaussettes, alors qu&#39;InstructGPT, son élève réglé en assistant, expliquait avec sérieux qu&#39;il existait plusieurs théories. Le même réglage qui rend un modèle serviable peut aussi le rendre complaisant, ce que la fiche Flagornerie raconte.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

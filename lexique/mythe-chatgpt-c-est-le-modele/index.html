@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Une salle de concert garde son enseigne quand l&#39;affiche change. ChatGPT est la salle, avec son entrée, son vestiaire, son ingé lumière et ses consignes de sécurité, et le groupe sur scène, le modèle, a été remplacé bien des fois depuis l&#39;ouverture.</p>
         <h2>Imagine</h2><p class="imagine">Le 30 novembre 2022, tu ouvres ChatGPT, tu tapes ta question, et c&#39;est GPT-3.5 qui te répond. En septembre 2026, tu retrouves la même adresse, le même logo et le même champ de saisie, et derrière répond GPT-6, une famille de modèles sortie le même mois en trois versions.</p>
+        
         <h2>Définition complète</h2><p>Un modèle est un fichier de paramètres qui prend du texte et prédit la suite. ChatGPT est le produit construit autour, une application qui ajoute des consignes avant ta question, garde l&#39;historique, branche la recherche web, la mémoire et d&#39;autres outils, puis choisit quel modèle répond. Le même modèle peut donc se comporter autrement dans ChatGPT et par l&#39;API, parce que tout ce qui l&#39;entoure est différent.</p><p>Depuis son lancement le 30 novembre 2022, ChatGPT a fait tourner plus d&#39;une quinzaine de modèles successifs, de GPT-3.5 à GPT-6 en septembre 2026, en passant par GPT-4, GPT-4o, o1, o3 et GPT-5. Avec GPT-5, en août 2025, l&#39;application a même cessé de faire répondre un seul modèle à la fois, puisqu&#39;un router choisit entre des modèles plus ou moins puissants selon la complexité de la question.</p><p>Quand on dit « ChatGPT a changé », c&#39;est souvent le modèle qui a été remplacé sous l&#39;application. Le retrait de GPT-4o, dont beaucoup d&#39;utilisateurs aimaient le ton, a provoqué une vague de protestations, sans que l&#39;application change d&#39;adresse ni de logo.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

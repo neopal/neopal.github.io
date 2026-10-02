@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Le producteur passe la tête dans la cabine avant la première note et donne sa consigne pour la session : jouer sobre, pas de solo de plus de huit mesures, aucune reprise de chanson protégée. Le groupe ne la voit écrite nulle part, il l&#39;a dans l&#39;oreille au début de chaque prise, et le public n&#39;en sait rien.</p>
         <h2>Imagine</h2><p class="imagine">Demande à Claude, sans activer la recherche web : « On est quel jour aujourd&#39;hui ? » Il te répond juste, alors que son entraînement s&#39;est arrêté des mois plus tôt. Personne ne lui a appris la date ; elle est écrite dans le system prompt que l&#39;application remplit avant chacune de tes conversations, et qu&#39;Anthropic publie.</p>
+        
         <h2>Définition complète</h2><p>Quand tu écris à un assistant, ton message n&#39;arrive jamais seul. L&#39;application le fait précéder d&#39;un system prompt, un texte rédigé par l&#39;éditeur qui fixe l&#39;identité de l&#39;assistant, ses règles et des informations du moment comme la date. Le modèle le reçoit à chaque requête, avant l&#39;historique de la conversation, et c&#39;est en grande partie lui qui explique qu&#39;un même modèle ne se comporte pas pareil d&#39;une application à l&#39;autre.</p><p>Anthropic publie depuis août 2024 les system prompts de ses applications, que les éditeurs gardaient jusque-là pour eux. Celui de Claude Opus 5.5, daté du 22 septembre 2026, fait environ 4 100 mots. Il donne la date du jour et la date de coupure des connaissances, présente les produits de la marque, et va jusqu&#39;à demander d&#39;éviter les listes à puces dans une conversation ordinaire.</p><p>Le system prompt reste du texte, posé au même endroit que le reste de la conversation, et rien dans le mécanisme ne l&#39;empêche d&#39;être contredit par une consigne glissée plus loin, dans un message ou dans un document. C&#39;est la porte d&#39;entrée des injections de prompt.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

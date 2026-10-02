@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Tu fredonnes un air au groupe, il le joue, tu dis « plus de basse » et il remonte la basse, sans que tu aies jamais regardé la partition ni la console. Le groupe joue le rôle de l&#39;agent, la partition celui du code. Pour une maquette du dimanche, c&#39;est un bonheur ; pour sortir l&#39;album, quelqu&#39;un devra relire la partition mesure par mesure.</p>
         <h2>Imagine</h2><p class="imagine">Commande à un chatbot un minuteur pomodoro en un seul fichier HTML, colle sa réponse dans un fichier minuteur.html et ouvre-le dans ton navigateur ; il y a de bonnes chances qu&#39;il marche du premier coup. Cherche maintenant, dans le fichier, la ligne qui déclenche la sonnerie, et lance ton nouveau minuteur pour savoir combien de temps tu y passes.</p>
+        
         <h2>Définition complète</h2><p>Le mot vient d&#39;un tweet d&#39;Andrej Karpathy, membre fondateur d&#39;OpenAI et ancien responsable de l&#39;IA chez Tesla, publié le 2 février 2025. Il y décrit une façon de coder où l&#39;on se laisse porter et où l&#39;on oublie que le code existe. Il parle à son outil au lieu de taper, clique toujours sur « Accept All », ne lit plus les modifications et recolle les messages d&#39;erreur sans un mot. Il ajoutait que ce n&#39;était « pas si mal » pour des projets jetables du week-end.</p><p>Le mot a vite dépassé son auteur. En mars 2025, Jared Friedman, associé de Y Combinator, annonçait que pour un quart des start-up de la promotion d&#39;hiver, 95 % du code avait été écrit par l&#39;IA, et le dictionnaire Collins l&#39;a élu mot de l&#39;année 2025. Des outils comme Lovable, Replit ou v0 fabriquent désormais une application entière à partir d&#39;une simple description.</p><p>Le risque se loge dans ce que personne ne lit. En mars 2025, le développeur Matt Palmer a découvert que des applications générées par Lovable laissaient leur base de données ouverte, faute d&#39;une règle d&#39;accès que personne n&#39;avait vérifiée. Sur 1 645 projets analysés, 170 laissaient lire des données à n&#39;importe qui, des adresses mail aux clés d&#39;API. En avril, un ingénieur de Palantir a montré qu&#39;on pouvait en tirer des montants de dettes et des adresses personnelles. Lovable conteste en partie, en estimant que la protection des données revient à chaque client.</p><p>Le problème dépasse un outil. En juillet 2025, Veracode a fait écrire du code à plus de 100 modèles sur des tâches de test et trouvé une faille de sécurité dans 45 % des cas, sans que les modèles récents ou plus gros fassent mieux.</p><p>Le vibe coding est une loop sans vérification, où la seule question posée à chaque tour est « ça a l&#39;air de marcher ? ». La version professionnelle garde la même boucle et ajoute ce qui vérifie ce que l&#39;agent a écrit, un harness, des tests et des relectures.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

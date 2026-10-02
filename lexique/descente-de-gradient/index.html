@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Retourne dans la régie, où l&#39;ingé son n&#39;a pas d&#39;oreille mais un vumètre dont l&#39;aiguille dit à quel point la dernière note sonnait faux. Pour chaque potard, un calcul lui indique de quel côté tourner pour faire baisser l&#39;aiguille et à quel point elle y réagit ; il tourne alors tous les potards ensemble, chacun selon sa sensibilité, d&#39;un geste volontairement petit, et refait une mesure.</p>
         <h2>Imagine</h2><p class="imagine">Cache un objet dans la pièce, ferme les yeux et demande à ton voisin de te guider en ne disant que « plus chaud » ou « plus froid » après chaque pas. Avance à pas de géant, et tu dépasses l&#39;objet, reviens, le dépasses encore ; avance à pas de fourmi, et tu y es encore dans dix minutes. Entre les deux se trouve le bon taux d&#39;apprentissage.</p>
+        
         <h2>Définition complète</h2><p>L&#39;entraînement mesure à chaque pas l&#39;erreur du modèle, la loss, sur un paquet de textes. Le gradient dit, pour chaque paramètre, si l&#39;augmenter un peu ferait monter ou baisser cette erreur, et avec quelle force. La descente consiste à déplacer tous les paramètres à la fois dans le sens qui la fait baisser, d&#39;une quantité réglée par le taux d&#39;apprentissage, puis à recommencer sur un autre paquet, jusqu&#39;à la fin de l&#39;entraînement.</p><p>L&#39;image classique est celle d&#39;un randonneur pris dans le brouillard, qui sent la pente sous ses pieds et descend du côté où elle plonge. Elle triche à trois endroits. Le terrain a autant de directions que le modèle a de paramètres, des milliards et pas deux. La pente n&#39;est pas sentie mais calculée, sur un paquet de textes différent à chaque pas, comme si le sol bougeait sous le randonneur. Et le but n&#39;est pas le fond de la vallée, qu&#39;on n&#39;atteint jamais, mais un replat assez bas pour que les prédictions soient bonnes.</p><p>La méthode est ancienne, puisqu&#39;on l&#39;attribue à Augustin-Louis Cauchy en 1847. Elle ne trouve qu&#39;un bon réglage, sans aucune garantie que ce soit le meilleur possible, et elle a besoin d&#39;un autre calcul pour connaître la pente de chaque paramètre, la rétropropagation.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

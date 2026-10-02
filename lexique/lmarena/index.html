@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -318,7 +341,8 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <p class="lead">LMArena, rebaptisé Arena en 2026, est un classement fondé sur des votes humains, où l&#39;on pose une question à deux modèles anonymes, choisit la meilleure réponse, puis découvre leurs noms.</p>
         
         <h2>L'image</h2><p>Deux groupes jouent derrière un rideau le morceau demandé par quelqu&#39;un du public, qui vote pour celui qu&#39;il préfère avant de voir qui jouait. Le public, dans ce cas, ne note pas la justesse mais son plaisir, et c&#39;est exactement ce que mesure le classement.</p>
-        <h2>Imagine</h2><p class="imagine">Pose sur arena.ai une question dont tu connais bien la réponse, puis lis les deux réponses anonymes avant de voter. Regarde si ta main penche vers la plus longue ou la mieux présentée avant que tu aies vérifié laquelle est juste ; des millions de votants ont le même réflexe, et Arena corrige son classement pour en tenir compte.</p>
+        <h2>Imagine</h2><p class="imagine">Pose sur <a href="https://arena.ai" target="_blank" rel="noopener">arena.ai</a> une question dont tu connais bien la réponse, puis lis les deux réponses anonymes avant de voter. Regarde si ta main penche vers la plus longue ou la mieux présentée avant que tu aies vérifié laquelle est juste ; des millions de votants ont le même réflexe, et Arena corrige son classement pour en tenir compte.</p>
+        
         <h2>Définition complète</h2><p>Arena est né en 2023 comme un projet de recherche de l&#39;université de Berkeley, sous le nom de Chatbot Arena. Au 2 octobre 2026, son classement texte repose sur plus de 8,6 millions de votes et 412 modèles. Le classement reflète ce que des utilisateurs préfèrent sur leurs propres questions, et il ne vérifie pas qu&#39;une réponse est exacte, ni qu&#39;un modèle tient une tâche longue.</p><p>Les mêmes votes peuvent donner deux classements. Avec la correction de style, Claude Fable 5 est 3e du classement texte ; sans elle, il tombe 9e, parce que la longueur et la mise en forme pèsent dans les votes, un effet qu&#39;Arena mesure depuis 2024. Le premier, Gemini 4 Argon, de Google, est noté « préliminaire », avec moins de 5 000 votes et 9 points de marge d&#39;erreur.</p><p>Arena est devenu une entreprise en avril 2025, a levé 150 millions de dollars en janvier 2026 pour une valorisation de 1,7 milliard, et vend depuis septembre 2025 un service d&#39;évaluation que les labos eux-mêmes peuvent acheter. Fin avril 2025, les auteurs de The Leaderboard Illusion estimaient que Google et OpenAI avaient reçu chacun environ 20 % des données de l&#39;arène, contre 29,7 % pour 83 modèles open weights réunis.</p>
         <h2>Fiable ?</h2><div class="rely rely-a-nuancer"><b>à nuancer</b><p>Les votes sont nombreux, réels et faits à l&#39;aveugle, mais ils mesurent une préférence que la longueur et la présentation influencent. The Leaderboard Illusion a montré en 2025 un accès inégal aux données en faveur des grands labos, et l&#39;entreprise vend ses évaluations à ces mêmes labos.</p></div>
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

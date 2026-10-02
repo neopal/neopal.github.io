@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Le dernier disque que l&#39;ingé son a fait écouter au groupe porte une date, et le groupe ne connaît aucun morceau sorti après. Il continue pourtant de jouer pendant des mois, parfois des années, et quand le public réclame le tube de l&#39;été, il improvise quelque chose dans le style des tubes qu&#39;il connaît.</p>
         <h2>Imagine</h2><p class="imagine">La fiche de GPT-4o arrête sa mémoire au 1er octobre 2023, et le modèle est sorti 225 jours plus tard, le 13 mai 2024. Ce premier instantané, gpt-4o-2024-05-13, figure toujours au catalogue de l&#39;API le 2 octobre 2026. Une application qui l&#39;appelle sans recherche web lui parle donc avec 1 097 jours de retard, soit trois années d&#39;actualité dont il n&#39;a jamais lu une ligne.</p>
+        
         <h2>Définition complète</h2><p>Les textes d&#39;entraînement sont rassemblés jusqu&#39;à une date, puis l&#39;entraînement dure des mois, puis le modèle est testé avant sa sortie. Un modèle arrive donc avec plusieurs mois de retard sur l&#39;actualité, et ce retard grandit chaque jour où il reste en service, alors qu&#39;il parle des sujets récents sur le même ton que des anciens.</p><p>La date affichée est elle-même approximative. Anthropic publie deux dates par modèle, une date de coupure fiable et une date de fin des données vues, qui peut être plus tardive, comme pour Claude Haiku 4.5 (février 2025 et juillet 2025). Une étude de l&#39;université de Łódź a aussi montré que la coupure réelle varie d&#39;un sujet à l&#39;autre, selon la quantité de textes parus sur chacun avant la date.</p><p>Pour l&#39;actualité, les assistants contournent la limite en cherchant sur le web ou dans tes documents, puis en collant les résultats dans la conversation, ce qui ne déplace pas la coupure d&#39;un jour. Un modèle sans recherche à qui l&#39;on parle d&#39;un événement récent peut le nier, ou lui inventer une suite plausible.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

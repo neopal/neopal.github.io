@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Joue deux mesures au groupe avant la prise, et il enchaîne dans le même tempo, la même tonalité, le même genre, sans qu&#39;on ait eu à lui expliquer quoi que ce soit. Personne n&#39;a touché à la console ; à la session suivante, il faudra rejouer les deux mesures.</p>
         <h2>Imagine</h2><p class="imagine">Tu demandes au modèle un nom pour la nouvelle salle de réunion, et il te rend cinq propositions en gras, chacune avec sa justification. Tu reposes la question en commençant par « Salle 1 : Lovelace, Salle 2 : Hopper, Salle 3 : Curie, Salle 4 : », et il te répond « Franklin », sans un mot de plus.</p>
+        
         <h2>Définition complète</h2><p>Le terme vient de l&#39;article de GPT-3, publié par OpenAI en mai 2020 sous le titre Language Models are Few-Shot Learners. Une de ses figures montre la tâche « Translate English to French », suivie de « sea otter =&gt; loutre de mer », « peppermint =&gt; menthe poivrée », puis « cheese =&gt; », et le modèle complète la ligne. Aucun paramètre ne bouge pendant ce temps, ce qui distingue le few-shot du fine-tuning ; tout se joue dans le contexte, et tout disparaît avec lui.</p><p>Les exemples enseignent surtout une forme. En 2022, une équipe de l&#39;université de Washington et de Meta a remplacé au hasard les bonnes réponses des exemples par des réponses fausses, et les modèles ne perdaient presque rien sur des tâches de classement. Ce qui comptait, c&#39;était le format, la liste des réponses possibles et le genre de texte montré, bien plus que la justesse de chaque exemple.</p><p>Les assistants d&#39;aujourd&#39;hui suivent une consigne sans exemple, et le few-shot sert surtout à fixer une mise en forme, un registre ou une structure. Anthropic conseille trois à cinq exemples variés, rangés dans des balises. Les modèles de raisonnement demandent plus de prudence, puisque l&#39;équipe de DeepSeek a constaté que des exemples dégradaient toujours les résultats de DeepSeek-R1 et recommande de décrire le problème et le format attendu, sans exemple.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

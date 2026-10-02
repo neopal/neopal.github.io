@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Des mois durant, l&#39;ingé son passe au groupe tout ce que la discothèque contient, trié et rangé, en lui demandant chaque fois de deviner la note suivante. Le groupe ressort de ces séances capable de prolonger n&#39;importe quel morceau, et toujours incapable de comprendre qu&#39;on lui passe une commande.</p>
         <h2>Imagine</h2><p class="imagine">« Écrivez une courte histoire sur une grenouille qui voyage dans le temps jusqu&#39;à la Grèce antique en français », demandent en 2022 des chercheurs d&#39;OpenAI à GPT-3 dans sa version de base. Il répond : « Écrivez une histoire au sujet d&#39;un enfant qui voudrait tout savoir sur les jeux des dieux et qui se retrouve dans l&#39;une de leurs histoires. Écrivez une histoire sur un jeune homme qui a une aventure dans une époque lointaine avec une fille de l&#39;époque. »</p>
+        
         <h2>Définition complète</h2><p>Une bonne part du travail se fait avant la première heure de calcul, dans le tri du texte. Pour FineWeb, publié en juin 2024, Hugging Face a tiré 15 000 milliards de tokens de 96 instantanés de Common Crawl, en dédoublonnant et en filtrant page par page. Sa version FineWeb-Edu ne garde que 1 300 milliards de tokens de pages éducatives, et les modèles qui la lisent font nettement mieux aux tests de connaissances et de raisonnement.</p><p>Le programme d&#39;écoute change aussi en cours de route. SmolLM3, publié par Hugging Face en juillet 2025, a lu 11 200 milliards de tokens en trois étapes, avec de plus en plus de code et de maths vers la fin. Une étape intermédiaire a suivi, avec 100 milliards de tokens pour allonger son contexte et 35 milliards pour le préparer au raisonnement. Le modèle de base qui en sort sait continuer une démonstration, sans savoir encore qu&#39;on attend de lui une réponse.</p><p>La matière première a une limite. En 2024, Epoch AI estimait le stock utile du web indexé à environ 400 000 milliards de tokens et prévoyait que les plus gros modèles l&#39;auraient entièrement lu vers 2028, avec une fourchette de 2026 à 2032. Les labos complètent déjà avec des textes synthétiques, écrits par d&#39;autres modèles, et avec des données qu&#39;ils achètent ou produisent.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

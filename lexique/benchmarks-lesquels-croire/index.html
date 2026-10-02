@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>La maison de disques, c&#39;est-à-dire le labo, imprime sur l&#39;affiche de la tournée les trophées que son groupe a gagnés, rarement le nom du concours, l&#39;année ou le nombre de concurrents. Lire un benchmark, c&#39;est retourner l&#39;affiche pour chercher ces trois mentions.</p>
         <h2>Imagine</h2><p class="imagine">GPQA Diamond compte 198 questions, et chacune y pèse donc à peu près un demi-point. En septembre 2026, Epoch AI classe GPT-6 Astra premier, devant Claude Sonnet 5.5, avec moins d&#39;une demi-question d&#39;avance, alors que l&#39;erreur type qu&#39;il publie à côté de chaque score, c&#39;est-à-dire sa marge d&#39;incertitude, couvre près de trois questions.</p>
+        
         <h2>Définition complète</h2><p>Sur sa fiche Hugging Face, Qwen3.8-27B, un modèle d&#39;Alibaba de 27 milliards de paramètres, bat Claude Opus 4.6 sur SWE-bench Pro, 61,7 % contre 53,4 %. Les notes sous le tableau précisent que le score d&#39;Opus est celui qu&#39;Anthropic a publié, alors que Qwen a fait passer les autres modèles dans Claude Code, sur une version du test dont il avait lui-même corrigé les tâches défectueuses. Sur le classement officiel de Scale AI, qui a créé SWE-bench Pro, Opus 4.6 est à 51,9 % et Qwen3.8-27B n&#39;apparaît pas.</p><p>Devant un score annoncé, cinq questions suffisent à le situer. Quel benchmark, et dans quelle version, puisque Terminal-Bench 2.1 est presque saturé, tous les modèles récents y dépassant 82 %, quand la version 4.0 sépare encore les modèles ? Qui a fait passer le test, l&#39;organisateur ou le labo ? Avec quel harness, c&#39;est-à-dire quel programme autour du modèle pour lui donner ses outils et le relancer, avec quel niveau d&#39;effort et combien d&#39;essais ? L&#39;écart dépasse-t-il la marge d&#39;erreur ? Et le test départage-t-il encore quelqu&#39;un, ou les meilleurs se tassent-ils sous le plafond ?</p><p>Même un bon benchmark mesure une tâche et non ton travail. En 2023, une expérience menée avec GitHub Copilot trouvait des développeurs 55,8 % plus rapides sur une tâche unique, coder un serveur HTTP en JavaScript. En 2025, l&#39;essai randomisé de METR, mené avec 16 développeurs open source expérimentés dans leurs propres projets, les trouvait 19 % plus lents avec l&#39;IA, alors qu&#39;ils se croyaient 20 % plus rapides.</p><p>En février 2026, METR a dû revoir son protocole, parce que trop de développeurs refusaient désormais de travailler sans IA pour que la mesure reste fiable, et il pense que le gain a grandi depuis 2025 sans pouvoir le chiffrer. La dernière question se pose donc chez toi, avec tes evals, sur tes propres tâches.</p>
         
         <h2>Les principaux benchmarks, ce qu&#39;ils mesurent et ce qu&#39;ils valent</h2><div class="tablewrap"><table class="cmp"><thead><tr><th scope="col">Benchmark</th><th scope="col">Ce qu&#39;il mesure</th><th scope="col">Meilleur score connu</th><th scope="col">Saturé ?</th><th scope="col">Fiabilité</th></tr></thead><tbody><tr><th scope="row">MMLU</th><td>QCM de connaissances, 57 matières</td><td>Plus de 90 % ; les labos ne le publient plus</td><td>Oui</td><td>Fragile</td></tr><tr><th scope="row">GPQA Diamond</th><td>198 questions de sciences introuvables sur Google</td><td>95,8 %, GPT-6 Astra, mesuré par Epoch AI (sept. 2026)</td><td>Oui</td><td>Fragile</td></tr><tr><th scope="row">SWE-bench Verified</th><td>500 vrais bugs Python à corriger</td><td>79,2 %, Sonar avec Claude Opus 4.5 (déc. 2025), non vérifié</td><td>Oui, et contaminé</td><td>Fragile</td></tr><tr><th scope="row">SWE-bench Pro</th><td>731 tâches de code sur des dépôts sous licence copyleft</td><td>61,5 %, Muse Spark 1.1 de Meta, classement de Scale AI</td><td>Non</td><td>À nuancer</td></tr><tr><th scope="row">HLE-Diamond</th><td>1 000 questions d&#39;experts, sans outils</td><td>59,9 %, GPT-6 Astra (22 sept. 2026)</td><td>Non</td><td>À nuancer</td></tr><tr><th scope="row">Arena (texte)</th><td>Préférence de votants entre deux réponses anonymes</td><td>1 525 points, Gemini 4 Argon, préliminaire (2 oct. 2026)</td><td>Non</td><td>À nuancer</td></tr><tr><th scope="row">Terminal-Bench 4.0</th><td>Tâches longues menées seul dans un terminal</td><td>58,2 % ± 2,8, GPT-6 Astra dans Codex (3 sept. 2026)</td><td>Non</td><td>Solide</td></tr><tr><th scope="row">ARC-AGI-3</th><td>Jeux inconnus dont il faut découvrir le but</td><td>62,7 %, GPT-6 Astra, harness standard (sept. 2026)</td><td>Presque, avec un autre harness</td><td>Solide</td></tr></tbody></table></div><p class="tnote">Relevé du 2 octobre 2026. Scores relevés le 2 octobre 2026 sur les classements officiels, sauf GPQA, qui n&#39;en a pas ; un score ne se compare qu&#39;à un autre score du même classement.</p>
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

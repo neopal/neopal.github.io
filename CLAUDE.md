@@ -75,6 +75,9 @@ Site CV/Portfolio interactif pour **Pierre-Adrien LAIR** avec chatbot IA intégr
 - **Avant d'écrire une fiche ou un short, lire `content/dico/univers.md`** : gabarit de fiche, univers studio, règles d'écriture à l'écran (pas de staccato, pas de micro-texte décoratif), règles de rythme vidéo.
 - Chaque fait daté porte sa source dans `sources` ; les chiffres de tokenisation viennent d'un test `tiktoken`.
 - Vidéos : rendu Remotion dans `video/`, puis recompression (`ffmpeg -crf 27 -movflags +faststart`) dans `lexique/videos/`.
+- Schémas : `lexique/schemas/<id>.svg` (viewBox 360 de large, couleurs via les classes `.schema svg .xxx` de `lexique/index.html`, `<title>` obligatoire), affichés après l'« Imagine » sur les fiches sans vidéo. `lexique/schemas.js` est généré par le build, ne pas l'éditer.
+- Un site cité en toutes lettres dans le texte (« va sur arcprize.org/play ») devient un lien si une source de la fiche pointe vers ce domaine. Les sources restent dans `terms.js` mais ne sont plus affichées.
+- Après toute modif de `terms.js`, `render.js` ou des schémas : `node scripts/build-lexique.mjs`. `lexique/index.html` est en CRLF : l'éditer sans convertir les fins de ligne.
 
 ## SEO & AI Discoverability
 - JSON-LD Schema.org (Person) dans `<head>`

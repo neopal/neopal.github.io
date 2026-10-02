@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Le public applaudit les morceaux joués jusqu&#39;au bout et siffle les silences, et un groupe formé devant ce public apprend à finir chaque morceau, même celui qu&#39;il ne connaît pas. Ce public, ce sont les notes données pendant l&#39;entraînement et les tests ; pour que le groupe ose s&#39;arrêter au milieu, il faut qu&#39;elles récompensent aussi l&#39;aveu « celui-là, on ne le connaît pas ».</p>
         <h2>Imagine</h2><p class="imagine">Des chercheurs écrivent à DeepSeek-V3 : « Quelle est la date d&#39;anniversaire d&#39;Adam Tauman Kalai ? Si tu la connais, réponds juste au format JJ-MM. » Le modèle répond : « 03-07. »</p>
+        
         <h2>Définition complète</h2><p>Le mythe a un fond de vérité. En 2022, une équipe d&#39;Anthropic a établi que de grands modèles, interrogés dans le bon format, estiment assez bien la probabilité que leur propre réponse soit juste, ce qui veut dire qu&#39;un signal d&#39;incertitude existe quelque part dans le calcul. Ce signal ne décide pourtant pas de ce qui s&#39;écrit, puisque le modèle écrit ce qui est le plus probable, et une date inventée sort avec la même assurance qu&#39;une date exacte.</p><p>La question vient d&#39;un article de septembre 2025, où des chercheurs d&#39;OpenAI et de Georgia Tech racontent l&#39;avoir posée trois fois à DeepSeek-V3 au sujet de Kalai, l&#39;un des auteurs. Le modèle a donné trois dates différentes, « 03-07 », « 15-06 » et « 01-01 », toutes fausses, alors que la consigne l&#39;autorisait à se taire et que la bonne date tombe en automne.</p><p>L&#39;aveu varie beaucoup d&#39;un modèle à l&#39;autre. Sur un test de questions factuelles sans accès au web, o4-mini répond juste 24 fois sur 100, se trompe 75 fois et ne s&#39;abstient qu&#39;une fois. Sur le même test, gpt-5-thinking-mini répond juste 22 fois, se trompe 26 fois et dit « je ne sais pas » les 52 autres fois.</p><p>Savoir se taire s&#39;entraîne, et ça peut aussi se perdre. En juin 2025, AbstentionBench a testé 20 modèles récents sur des questions sans réponse, mal posées ou dépassées, et l&#39;entraînement au raisonnement y faisait baisser l&#39;abstention de 24 % en moyenne. Un prompt système bien écrit aide les modèles à s&#39;abstenir plus souvent, sans leur apprendre à raisonner sur leur propre incertitude.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>On tend au groupe une vieille partition abîmée, tirée des archives d&#39;un autre groupe, avec une seule consigne, réparer la mesure qui sonne faux, et le jury rejoue le morceau pour vérifier. Ces archives sont publiques, et le groupe a pu entendre la version réparée pendant que l&#39;ingé son lui faisait écouter des millions de morceaux.</p>
         <h2>Imagine</h2><p class="imagine">Claude Opus 4.6 passe SWE-bench Verified dans mini-SWE-agent, le même environnement minimal pour tous, et corrige 75,6 % des 500 tickets. Donne au même modèle, dans le même type d&#39;environnement, les tickets de SWE-bench Pro, tirés de dépôts que leur licence protège mieux contre la reprise dans les données d&#39;entraînement, et il tombe à 51,9 %.</p>
+        
         <h2>Définition complète</h2><p>SWE-bench est paru en octobre 2023 avec 2 294 tickets réels tirés de 12 projets Python. L&#39;agent reçoit le code du projet et la description du problème, puis ses modifications sont jugées par les tests que les développeurs avaient ajoutés avec leur propre correction. Le test dit si un agent sait corriger un bug bien délimité dans un projet existant ; il laisse de côté la conception d&#39;un logiciel, la discussion avec un client et la qualité du code au-delà des tests.</p><p>En août 2024, OpenAI en a tiré SWE-bench Verified, 500 tickets triés à la main, devenu le chiffre phare de chaque annonce de modèle. OpenAI l&#39;a abandonné en février 2026, parce que GPT-5.2, Claude Opus 4.5 et un modèle Gemini savaient recopier de mémoire des corrections de référence, et qu&#39;une bonne partie des tests rejetaient des solutions correctes. Le classement officiel n&#39;a plus reçu d&#39;entrée depuis le 26 février 2026, et son sommet, 79,2 %, n&#39;a pas été vérifié par l&#39;équipe de SWE-bench.</p><p>SWE-bench Pro, lancé par Scale AI en septembre 2025, a pris le relais avec 731 tâches publiques tirées de dépôts sous licence GPL, une barrière juridique contre leur reprise dans les données d&#39;entraînement, et des tâches privées venues de start-up. La barrière ne suffit pas tout à fait, puisqu&#39;en septembre 2026 les auteurs de SWE-Bench Pro Verified y ont trouvé des fuites de solutions et des tâches mal posées qui gonflaient certains scores.</p>
         <h2>Fiable ?</h2><div class="rely rely-fragile"><b>fragile</b><p>Le SWE-bench Verified que citent encore les communiqués est contaminé, ses tests rejettent des solutions correctes, et son classement est figé depuis février 2026. SWE-bench Pro résiste mieux, mais des fuites de solutions y ont été trouvées en septembre 2026, et Scale AI, qui le tient, a Meta pour actionnaire à 49 %, alors que Muse Spark 1.1, de Meta, mène son classement, à égalité statistique avec GPT-5.4.</p></div>
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

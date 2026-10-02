@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <div class="video"><video controls playsinline preload="none" poster="/lexique/videos/harness.jpg" src="/lexique/videos/harness.mp4" aria-label="Vidéo : Harness"></video></div>
         <h2>L'image</h2><p>Derrière la vitre de la régie, le producteur donne la consigne, branche les câbles et les micros, rembobine la bande et tient le badge sans lequel la porte de la cabine ne s&#39;ouvre pas. Le harness correspond à tout ce poste, consigne comprise, et deux producteurs ne tirent jamais le même son du même groupe.</p>
         <h2>Imagine</h2><p class="imagine">GPT-5.5 passe deux fois les tâches de Terminal-Bench 2.1, qu&#39;un agent doit mener seul dans un terminal, la fenêtre où l&#39;on tape des commandes. Dans Terminus 2, le harness des auteurs du benchmark, il en réussit 78 % ; dans Codex CLI, celui d&#39;OpenAI, il monte à 83,1 %, avec exactement les mêmes paramètres.</p>
+        
         <h2>Définition complète</h2><p>Pour faire d&#39;un modèle un agent, il faut un programme autour de lui, qu&#39;on appelle le harness. Celui-ci envoie au modèle ses consignes et la liste des outils disponibles, exécute les actions demandées, renvoie les résultats, décide de ce qui reste dans la fenêtre de contexte quand elle se remplit, et bloque ce que l&#39;utilisateur n&#39;a pas autorisé.</p><p>Claude Code, Codex et Gemini CLI sont des harness, et la documentation de Claude Code le dit en toutes lettres en le présentant comme la couche qui fournit les outils et gère le contexte du modèle. Sur le classement de Terminal-Bench 2.1, chaque ligne nomme deux choses, le modèle et l&#39;agent qui l&#39;entoure. Le harness maison ne gagne pas toujours, puisque Gemini 3 Pro réussit 65,8 % des tâches dans Gemini CLI, celui de Google, et 73,9 % dans Terminus 2.</p><p>Le harness compte d&#39;autant plus que la tâche est longue. En novembre 2025, Anthropic a décrit comment faire avancer un agent sur plusieurs sessions qui repartent chacune sans mémoire. Le harness lui fait tenir un fichier de progression, une liste de plus de 200 fonctionnalités à cocher et un historique git (le journal des versions du code), qu&#39;il relit à chaque reprise.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>C&#39;était l&#39;examen d&#39;entrée au conservatoire, un QCM de culture musicale que chaque groupe passait avant d&#39;être pris au sérieux. Aujourd&#39;hui, tous les groupes de premier plan y frôlent la note maximale, et le corrigé lui-même contient des erreurs.</p>
         <h2>Imagine</h2><p class="imagine">En entretien, un candidat data scientist te demande : « Un modèle qui fait 100 % au MMLU, il est parfait ? » Tu lui réponds : « Il a coché la réponse attendue à un millier de questions dont l&#39;énoncé ou le corrigé est erroné. »</p>
+        
         <h2>Définition complète</h2><p>Publié en septembre 2020 par Dan Hendrycks et son équipe, MMLU pose 15 908 questions à quatre choix dans 57 matières. À sa sortie, GPT-3 obtenait 43,9 % et les auteurs estimaient le niveau d&#39;experts humains à environ 89,8 %. MMLU couvre l&#39;étendue des connaissances scolaires et universitaires, mais pas le raisonnement long, l&#39;usage d&#39;outils ou la capacité à dire qu&#39;on ne sait pas.</p><p>En juin 2024, une équipe de chercheurs a relu à la main 5 700 questions et estimé que 6,5 % de MMLU contient une erreur ; dans la partie virologie, 57 % des questions examinées en avaient une. Le plafond réel est donc nettement sous 100 %, autour de 93,5 % si l&#39;estimation est juste, et un score au-delà veut dire que le modèle suit le corrigé jusque dans ses erreurs.</p><p>Ses questions circulent en ligne depuis 2020, et le risque qu&#39;elles se retrouvent dans les données d&#39;entraînement est connu depuis longtemps. Les labos l&#39;ont laissé de côté, et les fiches de quatre modèles à poids ouverts publiés entre mars et août 2026 par Mistral AI, MiniMax, Moonshot AI et Z.ai ne le mentionnent plus du tout.</p>
         <h2>Fiable ?</h2><div class="rely rely-fragile"><b>fragile</b><p>Le test est saturé depuis 2024, environ 6,5 % de ses questions ont un énoncé ou un corrigé erroné, et ses questions, publiques depuis 2020, ont eu tout le temps de passer dans les données d&#39;entraînement. Il ne sert plus qu&#39;à vérifier qu&#39;un petit modèle ou un modèle compressé n&#39;a pas perdu ses connaissances.</p></div>
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

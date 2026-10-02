@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>L&#39;ingé son, c&#39;est-à-dire l&#39;entraînement, a fini son travail bien avant ta première session, et personne ne touche plus à la console pendant que tu joues. Si le groupe a l&#39;air de se souvenir de ton morceau préféré la semaine suivante, c&#39;est qu&#39;un assistant du studio a noté ta préférence dans un carnet. Il pose ce carnet, la mémoire du produit, sur le pupitre chaque fois que tu entres.</p>
         <h2>Imagine</h2><p class="imagine">Dis à ton assistant, dans une conversation, que ton chat s&#39;appelle Biscotte, puis ouvre une conversation incognito, si ton outil en propose une, et demande-lui comment s&#39;appelle ton chat. Il n&#39;en sait rien, parce que ce mode ne lui recolle aucune note et que la première conversation n&#39;a jamais touché à ses paramètres.</p>
+        
         <h2>Définition complète</h2><p>Un modèle apprend une fois, pendant son entraînement, puis ses paramètres sont figés, et chaque copie d&#39;un modèle est identique pour tous ceux qui l&#39;utilisent ; ChatGPT, qui en fait tourner plusieurs, revendiquait 900 millions d&#39;utilisateurs hebdomadaires en février 2026. Ta conversation passe dans sa fenêtre de contexte, il s&#39;en sert pour te répondre, et rien n&#39;en reste dans le modèle une fois la réponse écrite.</p><p>L&#39;impression qu&#39;il apprend vient d&#39;une couche ajoutée par le produit. ChatGPT propose une mémoire où il garde ce que tu lui demandes de retenir, et peut aussi se référer à tes anciennes conversations. Claude a lancé la sienne le 11 septembre 2025, sous forme de résumés de tes échanges, séparés par projet, que tu peux lire et modifier dans les réglages. Dans les deux cas, ces notes sont stockées à part et recollées dans le contexte de la conversation suivante, comme un document joint.</p><p>Que tes échanges nourrissent un jour l&#39;entraînement d&#39;un autre modèle relève d&#39;un autre réglage. Depuis le 28 août 2025, Anthropic demande aux utilisateurs de Claude Free, Pro et Max s&#39;ils acceptent que leurs conversations servent à l&#39;entraînement. Elles sont alors conservées cinq ans, contre trente jours en cas de refus ; les offres professionnelles et l&#39;API ne sont pas concernées. Même acceptée, ta conversation laisse intact le modèle que tu utilises, elle rejoint les données d&#39;un modèle à venir.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

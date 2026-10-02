@@ -24,6 +24,21 @@
       .trim();
   }
 
+  // Texte échappé, où un site cité en toutes lettres (« va sur arcprize.org/play ») devient un lien
+  // quand une source de la fiche pointe vers ce domaine. Un nom de marque comme Z.ai (majuscule) reste du texte.
+  function prose(s, t) {
+    const hosts = new Set(arr(t && t.sources).map((x) => {
+      const m = /^https?:\/\/(?:www\.)?([^/]+)/i.exec((x && x.url) || '');
+      return m ? m[1].toLowerCase() : '';
+    }).filter(Boolean));
+    return esc(s).replace(/(^|[\s(«])([a-z0-9-]+(?:\.[a-z0-9-]+)*\.[a-z]{2,})((?:\/[\w\-./]*)?)/g, (all, pre, host, path) => {
+      if (!hosts.has(host)) return all;
+      path = path.replace(/[.]+$/, '');
+      const tail = all.slice(pre.length + host.length + path.length);
+      return `${pre}<a href="https://${host}${path}" target="_blank" rel="noopener">${host}${path}</a>${tail}`;
+    });
+  }
+
   function asset(src, o) {
     if (!src) return '';
     if (/^([a-z]+:)?\/\//i.test(src) || src.charAt(0) === '/') return src;
@@ -107,6 +122,8 @@
     const splits = arr(t.split).length
       ? `<div class="splits">${t.split.map((s) => `<div class="split"><span class="w">${esc(s.mot)}</span>${arr(s.blocs).map((b) => `<span class="chip">${esc(b)}</span>`).join('')}</div>`).join('')}</div>`
       : '';
+    // Schéma : SVG maison (lexique/schemas/<id>.svg), seulement pour les fiches sans vidéo.
+    const schema = t.schema && !video ? `<figure class="schema">${t.schema}</figure>` : '';
     const jargon = arr(t.jargon).filter((j) => j && j.say).length
       ? `<h2>Dans le jargon</h2><dl class="jargon">${t.jargon.filter((j) => j && j.say).map((j) => `<div><dt>${esc(j.say)}</dt><dd>${esc(j.means)}</dd></div>`).join('')}</dl>`
       : '';
@@ -139,16 +156,17 @@
         ${related ? `<nav class="rel" aria-label="Termes liés">${related}</nav>` : ''}
         ${t.short ? `<p class="lead">${esc(t.short)}</p>` : ''}
         ${video}
-        ${t.image || splits ? `<h2>L'image</h2>${t.image ? `<p>${esc(t.image)}</p>` : ''}${splits}` : ''}
-        ${section('Imagine', t.imagine ? `<p class="imagine">${esc(t.imagine)}</p>` : '')}
-        ${section('Définition complète', arr(t.full).map((p) => `<p>${esc(p)}</p>`).join(''))}
+        ${t.image || splits ? `<h2>L'image</h2>${t.image ? `<p>${prose(t.image, t)}</p>` : ''}${splits}` : ''}
+        ${section('Imagine', t.imagine ? `<p class="imagine">${prose(t.imagine, t)}</p>` : '')}
+        ${schema}
+        ${section('Définition complète', arr(t.full).map((p) => `<p>${prose(p, t)}</p>`).join(''))}
         ${reliability}
         ${table}
-        ${section('2024 vs 2026', t.then ? `<p>${esc(t.then)}</p>` : '')}
+        ${section('2024 vs 2026', t.then ? `<p>${prose(t.then, t)}</p>` : '')}
         ${jargon}
         ${solutions}
-        ${section('Entendu au bureau', arr(t.office).length ? `<div class="chat">${t.office.map((m) => `<div class="bubble ${m.who === 'q' ? 'q' : 'a'}">${esc(m.text)}</div>`).join('')}</div>` : '')}
-        ${section('À éviter', t.avoid ? `<div class="avoid"><b aria-hidden="true">✕</b><p>${esc(t.avoid)}</p></div>` : '')}
+        ${section('Entendu au bureau', arr(t.office).length ? `<div class="chat">${t.office.map((m) => `<div class="bubble ${m.who === 'q' ? 'q' : 'a'}">${prose(m.text, t)}</div>`).join('')}</div>` : '')}
+        ${section('À éviter', t.avoid ? `<div class="avoid"><b aria-hidden="true">✕</b><p>${prose(t.avoid, t)}</p></div>` : '')}
         ${related ? `<div class="connexions"><h2>Connexions</h2><div class="links">${related}</div></div>` : ''}
         <nav class="pager" aria-label="Fiches">
           ${navLink(prev, 'prev')}

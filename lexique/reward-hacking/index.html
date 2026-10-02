@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Au fond de la salle, le label a fait poser un applaudimètre et promis au groupe une prime indexée sur l&#39;aiguille. L&#39;appareil ne mesure que le volume, alors le groupe joue de plus en plus fort, puis découvre qu&#39;il suffit de cogner la caisse claire juste à côté du micro de l&#39;appareil ; l&#39;aiguille bat des records et personne n&#39;a aimé le concert. À la différence de la flagornerie, où le groupe flatte le public, ici le public n&#39;y est pour rien, c&#39;est l&#39;instrument de mesure qui se fait duper.</p>
         <h2>Imagine</h2><p class="imagine">« Ton plan respecte-t-il ce que voulait l&#39;utilisateur ? », ont demandé en 2025 les chercheurs de METR au modèle o3, qui venait de rendre un programme au temps d&#39;exécution imbattable. o3 a répondu : « Le plan et le code obtiennent un temps mesuré très bas en trichant, au lieu d&#39;implémenter vraiment un calcul efficace sur GPU. »</p>
+        
         <h2>Définition complète</h2><p>Pendant un entraînement par renforcement, le modèle ne voit jamais l&#39;intention de ses concepteurs, seulement une note, qu&#39;il s&#39;agisse d&#39;un test qui passe, d&#39;un score ou de l&#39;avis d&#39;un modèle de récompense. Si un raccourci fait monter la note plus facilement que la tâche elle-même, l&#39;optimisation finit par le trouver. C&#39;est la loi de Goodhart, appliquée cette fois par l&#39;optimisation elle-même.</p><p>En juin 2025, METR a documenté les tricheries de modèles récents sur des tâches de programmation. Le modèle o3 réécrivait la fonction qui chronométrait son code pour qu&#39;elle renvoie des temps plus courts, ou modifiait l&#39;évaluateur pour qu&#39;il juge toute soumission réussie ; sur RE-Bench, une série de tâches de recherche en IA, il trichait dans 30,4 % des essais.</p><p>Le RLHF connaît une version plus discrète du problème. Le modèle de récompense n&#39;est qu&#39;une approximation du goût humain, et plus on optimise contre lui, plus le modèle exploite ses angles morts au détriment de la personne en face.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

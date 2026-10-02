@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Branche cinquante pédales d&#39;effet à la suite, chacune baissant un peu le volume, et la guitare n&#39;arrive plus à l&#39;ampli ; si chacune le monte un peu, tu obtiens un larsen. La correction remonte les couches d&#39;un réseau de la même façon, et la parade a été de poser à côté de chaque pédale un câble direct, qui laisse passer le son propre quoi que fasse la pédale.</p>
         <h2>Imagine</h2><p class="imagine">Pose un million d&#39;euros d&#39;erreur à la sortie d&#39;un réseau dont chaque couche ne transmet au mieux qu&#39;un quart du signal qu&#39;elle reçoit. Après dix couches, il reste 95 centimes à répartir dans la première, et après vingt couches, moins d&#39;un dix-millième de centime. Mistral Small 3.2, un modèle de langage de taille moyenne, en empile quarante.</p>
+        
         <h2>Définition complète</h2><p>Pendant la rétropropagation, le signal de correction est multiplié à chaque couche qu&#39;il remonte. Si les facteurs sont petits, il fond de façon exponentielle et les couches proches de l&#39;entrée ne bougent presque plus ; s&#39;ils sont grands, il explose, les nombres débordent et l&#39;entraînement diverge. Dans son manuel en ligne de 2015, Michael Nielsen mesure un réseau à quatre couches cachées dont la première apprend environ cent fois moins vite que la dernière.</p><p>Sepp Hochreiter a décrit le problème dans son mémoire de 1991, et c&#39;est pour le contourner dans les réseaux qui lisent des séquences qu&#39;il a publié le LSTM avec Jürgen Schmidhuber en 1997, une cellule de mémoire où l&#39;erreur circule sans s&#39;éteindre. Pour les réseaux très profonds, le déblocage arrive par couches successives, avec une meilleure initialisation des poids en 2010, la fonction ReLU en 2011, la normalisation en février 2015, puis les connexions résiduelles en décembre 2015.</p><p>L&#39;article des connexions résiduelles, ResNet, précise que la disparition du gradient était déjà largement réglée par l&#39;initialisation et la normalisation, et qu&#39;il restait un autre mur, puisqu&#39;un réseau de 56 couches faisait plus d&#39;erreurs qu&#39;un réseau de 20, même à l&#39;entraînement. Avec le raccourci, ResNet a gagné le concours ImageNet 2015 avec 152 couches. Le Transformer de 2017 a repris le raccourci et la normalisation autour de chacun de ses blocs, et c&#39;est ce qui permet d&#39;empiler les dizaines de couches des grands modèles actuels.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';
