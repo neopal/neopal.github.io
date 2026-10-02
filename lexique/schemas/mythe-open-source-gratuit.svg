@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="mythe-open-source-gratuit-t">
+<title id="mythe-open-source-gratuit-t">Coût mensuel de Mistral Large 3 selon le volume de tokens écrits : par l'API, la facture monte avec le volume, à 1,50 dollar le million ; sur huit H100 loués, elle reste à environ 23 000 dollars par mois ; les deux se croisent vers 15 milliards de tokens par mois.</title>
+<text class="m mu" x="0" y="14">dollars par mois</text>
+<path class="ln" d="M40 30 V210 H340"/>
+<text class="m d" x="34" y="65" text-anchor="end">45 k</text>
+<path class="ln dash" d="M40 60 H340"/>
+<text class="m d" x="34" y="129" text-anchor="end">23 k</text>
+<path class="la" d="M40 210 L340 60"/>
+<text class="m ac" x="236" y="88" text-anchor="end">API, 1,50 $ le million</text>
+<path class="lm" d="M40 125 H340"/>
+<text class="m" x="340" y="146" text-anchor="end">8 H100 loués, jour et nuit</text>
+<circle class="fa" cx="210" cy="125" r="5"/>
+<path class="lm dash" d="M210 130 V210"/>
+<text class="m d" x="40" y="230">0</text>
+<text class="m ac" x="210" y="230" text-anchor="middle">15 Md</text>
+<text class="m d" x="340" y="230" text-anchor="end">30 Md</text>
+<text class="m mu" x="340" y="248" text-anchor="end">tokens écrits par mois</text>
+<text class="i mu" x="0" y="276">Sous le seuil, le serveur loué coûte plus cher</text>
+<text class="i mu" x="0" y="296">que l'API, avant même de payer les ingénieurs.</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 328" role="img" aria-labelledby="encodeur-decodeur-t">
+<title id="encodeur-decodeur-t">Les trois familles issues du transformer : l'encodeur seul, comme BERT, lit tout le texte d'un coup et rend des nombres ; le décodeur seul, comme GPT, écrit un token à la fois et le remet à la suite du texte ; l'encodeur-décodeur, comme T5 ou Whisper, lit l'entrée puis écrit la sortie en consultant l'encodeur.</title>
+<text class="m d" x="0" y="18">encodeur seul, comme BERT</text>
+<text class="m" x="0" y="57">texte</text>
+<path class="lm" d="M46 52 h18"/><path class="lm" d="M59 47 l5 5 l-5 5"/>
+<rect class="bx" x="70" y="30" width="150" height="44" rx="6"/>
+<text class="b" x="145" y="49" text-anchor="middle">encodeur</text>
+<text class="m mu" x="145" y="66" text-anchor="middle">lit tout d'un coup</text>
+<path class="lm" d="M220 52 h18"/><path class="lm" d="M233 47 l5 5 l-5 5"/>
+<text class="m" x="244" y="57">des nombres</text>
+<text class="m d" x="0" y="112">décodeur seul, comme GPT et les LLM</text>
+<text class="m" x="0" y="151">texte</text>
+<path class="lm" d="M46 146 h18"/><path class="lm" d="M59 141 l5 5 l-5 5"/>
+<rect class="bxa" x="70" y="124" width="150" height="44" rx="6"/>
+<text class="b ac" x="145" y="143" text-anchor="middle">décodeur</text>
+<text class="m mu" x="145" y="160" text-anchor="middle">un token à la fois</text>
+<path class="lm" d="M220 146 h18"/><path class="lm" d="M233 141 l5 5 l-5 5"/>
+<text class="m" x="244" y="151">token suivant</text>
+<path class="la dash" d="M292 158 v26 H20 v-24"/><path class="la" d="M14 166 l6 -6 l6 6"/>
+<text class="m ac" x="156" y="200" text-anchor="middle">ajouté à la suite, puis on recommence</text>
+<text class="m d" x="0" y="244">encodeur-décodeur, comme T5 ou Whisper</text>
+<text class="m" x="0" y="281">entrée</text>
+<path class="lm" d="M52 276 h12"/><path class="lm" d="M59 271 l5 5 l-5 5"/>
+<rect class="bx" x="70" y="254" width="96" height="44" rx="6"/>
+<text class="b" x="118" y="281" text-anchor="middle">encodeur</text>
+<path class="lm" d="M166 276 h28"/><path class="lm" d="M189 271 l5 5 l-5 5"/>
+<rect class="bx" x="198" y="254" width="96" height="44" rx="6"/>
+<text class="b" x="246" y="281" text-anchor="middle">décodeur</text>
+<path class="lm" d="M294 276 h10"/><path class="lm" d="M299 271 l5 5 l-5 5"/>
+<text class="m" x="308" y="281">texte</text>
+<text class="m mu" x="182" y="318" text-anchor="middle">reliés par l'attention croisée</text>
+</svg>
