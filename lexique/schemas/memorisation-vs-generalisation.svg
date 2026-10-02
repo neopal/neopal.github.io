@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="memorisation-vs-generalisation-t">
+<title id="memorisation-vs-generalisation-t">Une échelle qui va du par cœur à la généralisation : un texte lu des milliers de fois est récité, un problème connu avec d'autres prénoms garde son score, avec d'autres nombres le score baisse, avec une phrase inutile il baisse jusqu'à 65 %.</title>
+<text class="b" x="0" y="18">par cœur</text>
+<path class="lm" d="M14 30 V246"/>
+<circle class="fa" cx="14" cy="50" r="6"/>
+<text class="m" x="34" y="46">texte lu des milliers de fois</text>
+<text class="m mu" x="34" y="62">Harry Potter retrouvé à 95,8 %</text>
+<circle class="fa" cx="14" cy="102" r="6"/>
+<text class="m" x="34" y="98">problème connu, autres prénoms</text>
+<text class="m mu" x="34" y="114">le score bouge peu</text>
+<circle class="bxa" cx="14" cy="154" r="6"/>
+<text class="m" x="34" y="150">même problème, autres nombres</text>
+<text class="m mu" x="34" y="166">le score baisse davantage</text>
+<circle class="fd" cx="14" cy="206" r="7"/><circle class="lr" cx="14" cy="206" r="6"/>
+<text class="m" x="34" y="202">plus une phrase inutile</text>
+<text class="m red" x="34" y="218">jusqu'à 65 % de baisse</text>
+<path class="lm" d="M9 240 l5 6 l5 -6"/>
+<text class="b ac" x="0" y="270">généralisation</text>
+<text class="i mu" x="4" y="292">Plus l'énoncé s'éloigne du connu, moins le par cœur aide.</text>
+</svg>

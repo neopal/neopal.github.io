@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="mythe-autocompletion-t">
+<title id="mythe-autocompletion-t">Entre la question sur la capitale de l'État où se trouve Dallas et le token Austin, le modèle passe par une étape interne invisible dans la réponse, Dallas est au Texas, puis la capitale du Texas.</title>
+<rect class="bx" x="8" y="8" width="344" height="52" rx="4"/>
+<text class="m mu" x="20" y="28">prompt</text>
+<text x="20" y="49">Capitale de l'État où se trouve Dallas ?</text>
+<path class="lm" d="M180 60 V82"/>
+<path class="lm" d="M175 76 l5 6 l5 -6"/>
+<rect class="bxa dash" x="8" y="86" width="344" height="122" rx="4"/>
+<text class="m ac" x="20" y="106">calcul interne, invisible à l'écran</text>
+<rect class="bx" x="16" y="120" width="152" height="40" rx="4"/>
+<text x="26" y="145">Dallas est au Texas</text>
+<path class="la" d="M168 140 H186"/>
+<path class="la" d="M181 135 l6 5 l-6 5"/>
+<rect class="bx" x="192" y="120" width="152" height="40" rx="4"/>
+<text x="204" y="145">capitale du Texas</text>
+<text class="m mu" x="20" y="190">étape intermédiaire repérée par Anthropic</text>
+<path class="lm" d="M180 208 V230"/>
+<path class="lm" d="M175 224 l5 6 l5 -6"/>
+<rect class="bxa" x="130" y="234" width="100" height="32" rx="4"/>
+<text class="b ac" x="180" y="256" text-anchor="middle">Austin</text>
+<text class="i mu" x="4" y="292">Seul le dernier token apparaît à l'écran.</text>
+</svg>

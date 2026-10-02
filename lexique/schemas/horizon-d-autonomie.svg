@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380" role="img" aria-labelledby="horizon-d-autonomie-t">
+<title id="horizon-d-autonomie-t">Échelle logarithmique des durées de tâche, d'une seconde à plus d'un jour : GPT-2 en 2019 à 3 secondes, Claude Opus 4.6 en 2026 à 12 heures une fois sur deux avec un intervalle de 5 à 60 heures, et 70 minutes quand on exige quatre réussites sur cinq ; au-delà de 16 heures, la mesure n'est plus fiable.</title>
+<rect class="fd" x="70" y="18" width="286" height="47" rx="3"/>
+<text class="m mu" x="350" y="36" text-anchor="end">passé 16 h, mesure</text>
+<text class="m mu" x="350" y="54" text-anchor="end">peu fiable</text>
+<path class="ln" d="M70 18 V334"/>
+<path class="ln" d="M64 330 H76 M64 231 H76 M64 132 H76 M64 55 H76"/>
+<text class="m mu" x="58" y="335" text-anchor="end">1 s</text>
+<text class="m mu" x="58" y="236" text-anchor="end">1 min</text>
+<text class="m mu" x="58" y="137" text-anchor="end">1 h</text>
+<text class="m mu" x="58" y="60" text-anchor="end">1 jour</text>
+<path class="la" d="M100 33 V92"/>
+<path class="la" d="M94 33 H106 M94 92 H106"/>
+<circle class="fa" cx="100" cy="73" r="6"/>
+<text class="b" x="118" y="86">Claude Opus 4.6, 2026</text>
+<text class="m ac" x="118" y="104">12 h, une fois sur deux</text>
+<path class="lm dash" d="M100 79 V123"/>
+<circle class="bxa" cx="100" cy="129" r="6"/>
+<text class="m" x="118" y="134">70 min, quatre fois sur cinq</text>
+<circle class="fa" cx="100" cy="302" r="6"/>
+<text class="b" x="118" y="300">GPT-2, 2019</text>
+<text class="m ac" x="118" y="318">3 s, une fois sur deux</text>
+<text class="i mu" x="4" y="360">Exiger plus de réussites raccourcit</text>
+<text class="i mu" x="4" y="378">l'horizon du même modèle de 12 h à 70 min.</text>
+</svg>

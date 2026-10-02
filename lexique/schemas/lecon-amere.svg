@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="lecon-amere-t">
+<title id="lecon-amere-t">Deux courbes de performance en fonction du calcul disponible : la méthode qui code la connaissance humaine monte vite puis plafonne, la méthode générale part plus bas, continue de monter et finit par la dépasser.</title>
+<text class="m mu" x="24" y="16">performance</text>
+<path class="ln" d="M20 26 V214 H352"/>
+<path class="lm" d="M24 196 C50 150 90 122 150 120 S280 120 344 120"/>
+<path class="la" d="M24 206 C120 200 200 170 250 120 S320 46 344 36"/>
+<text class="m ac" x="28" y="46">méthode générale</text>
+<text class="m ac" x="28" y="62">recherche, apprentissage</text>
+<text class="m" x="106" y="96">connaissance codée</text>
+<text class="m" x="106" y="112">à la main</text>
+<text class="m mu" x="344" y="142" text-anchor="end">plafonne</text>
+<text class="m mu" x="352" y="234" text-anchor="end">calcul disponible</text>
+<text class="i mu" x="4" y="264">La méthode qui part de plus bas finit devant</text>
+<text class="i mu" x="4" y="284">quand le calcul disponible grandit assez.</text>
+</svg>

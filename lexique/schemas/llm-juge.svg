@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 308" role="img" aria-labelledby="llm-juge-t">
+<title id="llm-juge-t">Le fonctionnement d'un LLM juge : il reçoit la question, la réponse à noter et une grille ou une réponse de référence, puis rend une note. En 2023, avec une réponse de référence, GPT-4 jugeant des problèmes de maths passait de 14 erreurs sur 20 à 3 sur 20.</title>
+<rect class="bx" x="0" y="8" width="150" height="30" rx="5"/>
+<text class="m" x="12" y="28">question</text>
+<rect class="bx" x="0" y="46" width="150" height="30" rx="5"/>
+<text class="m" x="12" y="66">réponse à noter</text>
+<rect class="bxa" x="0" y="84" width="150" height="30" rx="5"/>
+<text class="m ac" x="12" y="104">grille, référence</text>
+<path class="lm" d="M150 23 h16 v38 M150 61 h16 M150 99 h16 v-38 M166 61 h14"/>
+<path class="lm" d="M174 56 l6 5 l-6 5"/>
+<rect class="bxa" x="184" y="40" width="80" height="42" rx="6"/>
+<text class="b" x="224" y="66" text-anchor="middle">juge</text>
+<path class="lm" d="M264 61 h22"/>
+<path class="lm" d="M280 56 l6 5 l-6 5"/>
+<text class="big ac" x="292" y="68">7/10</text>
+<path class="ln" d="M0 140 h360"/>
+<text class="m d" x="0" y="168">erreurs du juge sur 20 notes de maths</text>
+<text class="m mu" x="0" y="200">sans référence</text>
+<rect class="lr" x="130" y="187" width="160" height="18" rx="3" fill="none"/>
+<rect class="fl" x="130" y="187" width="160" height="18" rx="3" opacity="0.35"/>
+<text class="m red" x="300" y="200">14</text>
+<text class="m mu" x="0" y="234">avec référence</text>
+<rect class="fa" x="130" y="221" width="34" height="18" rx="3"/>
+<text class="m ac" x="174" y="234">3</text>
+<path class="ln" d="M130 182 v62"/>
+<text class="i mu" x="3" y="278">Avec une réponse de référence, le juge</text>
+<text class="i mu" x="3" y="296">fait plus de quatre fois moins d'erreurs.</text>
+</svg>

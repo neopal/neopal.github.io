@@ -72,14 +72,14 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Hallucination | hallucination | publié | | AGT, ULT, ENT, HO, CAR | le morceau qui n'existe pas |
 | Flagornerie | sycophancy | publié | | ULT, CAR | jouer ce que le public veut entendre |
 | CoT infidèle | unfaithful chain-of-thought | prévu | P3 | CAR | |
-| Biais | bias | prévu | P2 | CAR, HO | |
+| Biais | bias | publié | | CAR, HO | |
 | Jailbreak | jailbreak | publié | | | |
 | Prompt injection | prompt injection | publié | | AGT, ENT, CAR | la fausse partition glissée sur le pupitre |
-| Mémorisation vs généralisation | memorization vs generalization | prévu | P2 | LLM, ULT, HAM | |
+| Mémorisation vs généralisation | memorization vs generalization | publié | | LLM, ULT, HAM | |
 | L'IA comprend-elle ? | understanding | prévu | P3 | LLM, HAM, ULT, HO | |
-| Mémoire | memory | prévu | P2 | AGT, HO, ENT, CAR | |
-| Intelligence en dents de scie | jagged intelligence | prévu | P1 | ULT | le virtuose qui joue un concerto et rate une comptine |
-| Capacités émergentes | emergent abilities | prévu | P2 | LLM, HAM, ULT | le groupe qui se met à harmoniser sans qu'on le lui ait appris |
+| Mémoire | memory | publié | | AGT, HO, ENT, CAR | |
+| Intelligence en dents de scie | jagged intelligence | publié | | ULT | le virtuose qui joue un concerto et rate une comptine |
+| Capacités émergentes | emergent abilities | publié | | LLM, HAM, ULT | le groupe qui se met à harmoniser sans qu'on le lui ait appris |
 
 ## 5. Alignement et sécurité
 
@@ -91,7 +91,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Guardrails | guardrails | publié | | AGT, ENT | |
 | Red teaming | red teaming | prévu | P3 | ENT | |
 | Évaluations de dangerosité | dangerous capability evals | prévu | P3 | | |
-| Interprétabilité | interpretability | prévu | P2 | ULT | ouvrir la console |
+| Interprétabilité | interpretability | publié | | ULT | ouvrir la console |
 | Responsabilité | liability, accountability | prévu | P2 | HAM, ENT | qui paie quand la sono grille la salle ? |
 | Explosion de l'intelligence | intelligence explosion | prévu | P3 | ULT | |
 
@@ -108,17 +108,17 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | System prompt | system prompt | publié | | AGT, ENT | la consigne du producteur |
 | RAG | retrieval-augmented generation | publié | | AGT, ULT, ENT, HO, CAR | la partition sur le pupitre |
 | Context engineering | context engineering | publié | | AGT, ENT, CAR | bien remplir la bande |
-| Mémoire externe | external memory | prévu | P2 | AGT, ENT, CAR | le carnet du groupe |
+| Mémoire externe | external memory | publié (dans memoire) | | AGT, ENT, CAR | le carnet du groupe |
 | Multi-agents | multi-agent | publié | | AGT, ENT, CAR | plusieurs groupes sur la même tournée |
 | Evals | evals | publié | | AGT, CAR | les auditions |
 | Benchmarks | benchmarks | publié | | AGT, ULT, HO | le classement des ventes |
-| Sandbox et permissions | sandbox, permissions | prévu | P2 | AGT, ENT, CAR | la cabine insonorisée |
+| Sandbox et permissions | sandbox, permissions | publié | | AGT, ENT, CAR | la cabine insonorisée |
 | Human-in-the-loop | human-in-the-loop | publié | | AGT, ENT, CAR, HAM | le producteur qui valide chaque prise |
 | Agent vs workflow | agent vs workflow | publié | | CAR, AGT, ENT | la setlist figée contre le groupe qui choisit le morceau suivant |
-| Planification | planning | prévu | P2 | AGT, ENT | la setlist réécrite entre deux morceaux |
-| Compaction du contexte | context compaction | prévu | P2 | AGT, CAR | résumer le début de la bande avant qu'il s'efface |
-| LLM juge | LLM-as-a-judge | prévu | P2 | AGT, LLM, HO, CAR | un musicien qui note les prises d'un autre |
-| Horizon d'autonomie | autonomy horizon | prévu | P2 | ULT | la longueur du set qu'il tient sans le producteur |
+| Planification | planning | publié | | AGT, ENT | la setlist réécrite entre deux morceaux |
+| Compaction du contexte | context compaction | publié | | AGT, CAR | résumer le début de la bande avant qu'il s'efface |
+| LLM juge | LLM-as-a-judge | publié | | AGT, LLM, HO, CAR | un musicien qui note les prises d'un autre |
+| Horizon d'autonomie | autonomy horizon | publié | | ULT | la longueur du set qu'il tient sans le producteur |
 | Sortie structurée | structured output | prévu | P3 | HO, CAR | la grille d'accords imposée |
 
 ## 7. Écosystème et industrie
@@ -126,11 +126,11 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Terme | EN | Statut | Prio | Livres | Image |
 |---|---|---|---|---|---|
 | Benchmaxxing | benchmaxxing | publié | | HAM, HO, ULT | le groupe qui ne répète que le morceau du concours |
-| Labs | AI labs | prévu | P2 | | les maisons de disques |
+| Labs | AI labs | publié | | | les maisons de disques |
 | Modèle vs produit (« ChatGPT c'est le modèle ») | model vs product | publié | | ULT | le groupe vs la salle de concert |
 | Open weights, souveraineté | open weights, sovereignty | publié | | ULT, HO, ENT | |
 | GPU et puissance de calcul | GPU, compute | publié | | ULT, HO | les amplis et le groupe électrogène |
-| La leçon amère | bitter lesson | prévu | P2 | ULT, HAM | des millions d'heures d'écoute battent les cours de solfège |
+| La leçon amère | bitter lesson | publié | | ULT, HAM | des millions d'heures d'écoute battent les cours de solfège |
 | IA générale (AGI) | AGI | publié | | ULT, HAM | |
 | Systèmes experts et IA symbolique | expert systems, symbolic AI | prévu | P3 | HAM, ULT | jouer en suivant un manuel de règles |
 | Effet IA | AI effect | prévu | P3 | HAM | « ce n'est que de la technique », dit-on dès que le groupe réussit le morceau |
@@ -161,12 +161,12 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | ChatGPT, c'est le modèle | publié | | ULT |
 | L'IA est neutre | prévu | P2 | CAR, HO |
 | Un agent est autonome | publié | | AGT, CAR, ENT |
-| L'IA a lu tout Internet donc sait tout | prévu | P2 | LLM, ULT, ENT |
+| L'IA a lu tout Internet donc sait tout | publié | | LLM, ULT, ENT |
 | Le modèle raisonne comme nous | prévu | P2 | AGT, HO, CAR |
 | L'IA a des valeurs | prévu | P3 | ULT |
 | L'IA va remplacer tel métier demain | prévu | P3 | HAM, ULT |
 | L'IA open source est gratuite | prévu | P2 | ULT, HO |
-| Ce n'est que de l'autocomplétion | prévu | P2 | HAM, ULT, LLM |
+| Ce n'est que de l'autocomplétion | publié | | HAM, ULT, LLM |
 | Un bon score au benchmark fait un bon modèle | prévu | P2 | HAM, HO, ULT, AGT |
 | Le modèle agit lui-même | prévu | P2 | AGT, CAR |
 

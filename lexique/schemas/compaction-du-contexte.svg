@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" role="img" aria-labelledby="compaction-du-contexte-t">
+<title id="compaction-du-contexte-t">La fenêtre de contexte avant et après une compaction dans Claude Code : avant, l'historique remplit la fenêtre jusqu'à la limite ; après, le system prompt et CLAUDE.md sont rechargés, quelques fichiers récents sont relus, et tout l'historique tient dans un court résumé, où une consigne donnée en conversation peut disparaître.</title>
+<text class="m mu" x="0" y="30">limite de la fenêtre</text>
+<path class="lm dash" d="M0 40 h232"/>
+<rect class="fd" x="0" y="240" width="100" height="20"/>
+<rect class="fl" x="0" y="216" width="100" height="22" opacity="0.6"/>
+<rect class="bx" x="0" y="40" width="100" height="174"/>
+<text class="m" x="50" y="120" text-anchor="middle">historique</text>
+<text class="m red" x="50" y="176" text-anchor="middle">consigne</text>
+<path class="lr" d="M8 188 h84"/>
+<rect class="fd" x="130" y="240" width="100" height="20"/>
+<rect class="fl" x="130" y="216" width="100" height="22" opacity="0.6"/>
+<rect class="bx" x="130" y="180" width="100" height="34"/>
+<rect class="fa" x="130" y="158" width="100" height="20"/>
+<path class="ln dash" d="M130 158 v-118 M230 158 v-118"/>
+<path class="la" d="M104 130 C 118 130, 112 168, 124 168"/>
+<path class="la" d="M118 163 l6 5 l-6 5"/>
+<text class="m" x="242" y="255">system prompt</text>
+<text class="m" x="242" y="232">CLAUDE.md</text>
+<text class="m" x="242" y="202">fichiers relus</text>
+<text class="m ac" x="242" y="173">résumé</text>
+<text class="m mu" x="180" y="104" text-anchor="middle">libre</text>
+<text class="m d" x="50" y="282" text-anchor="middle">avant</text>
+<text class="m d" x="180" y="282" text-anchor="middle">après /compact</text>
+<text class="i mu" x="0" y="314">Une consigne donnée en conversation ne</text>
+<text class="i mu" x="0" y="334">survit que si le résumé la garde.</text>
+</svg>

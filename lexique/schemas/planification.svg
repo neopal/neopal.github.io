@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 350" role="img" aria-labelledby="planification-t">
+<title id="planification-t">Un plan d'agent en deux versions : une liste de trois étapes pour organiser un séminaire, où la deuxième échoue parce que la salle est complète, puis la liste réécrite avec une étape ajoutée et l'étape suivante modifiée.</title>
+<text class="m d" x="0" y="14">todo.md, version 1</text>
+<rect class="bx" x="0" y="24" width="360" height="98" rx="6"/>
+<rect class="fa" x="14" y="38" width="14" height="14" rx="3"/>
+<text class="m" x="40" y="50">1 fixer le budget et les dates</text>
+<rect class="lr" x="14" y="66" width="14" height="14" rx="3" fill="none"/>
+<path class="lr" d="M17 69 l8 8 M25 69 l-8 8"/>
+<text class="m" x="40" y="78">2 réserver la salle</text>
+<text class="m red" x="346" y="78" text-anchor="end">complet</text>
+<rect class="bx" x="14" y="94" width="14" height="14" rx="3"/>
+<text class="m mu" x="40" y="106">3 réserver l'hôtel</text>
+<path class="la" d="M180 126 v34"/>
+<path class="la" d="M174 154 l6 6 l6 -6"/>
+<text class="m ac" x="196" y="148">l'agent réécrit</text>
+<text class="m d" x="0" y="182">todo.md, version 2</text>
+<rect class="bxa" x="0" y="192" width="360" height="126" rx="6"/>
+<rect class="fa" x="14" y="206" width="14" height="14" rx="3"/>
+<text class="m" x="40" y="218">1 fixer le budget et les dates</text>
+<rect class="bx" x="14" y="234" width="14" height="14" rx="3"/>
+<text class="m ac" x="40" y="246">2 chercher une autre salle</text>
+<rect class="bx" x="14" y="262" width="14" height="14" rx="3"/>
+<text class="m" x="40" y="274">3 réserver la nouvelle salle</text>
+<rect class="bx" x="14" y="290" width="14" height="14" rx="3"/>
+<text class="m ac" x="40" y="302">4 réserver un hôtel près d'elle</text>
+<text class="i mu" x="0" y="344">Une étape qui échoue change aussi la suite.</text>
+</svg>

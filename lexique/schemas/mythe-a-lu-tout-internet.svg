@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="mythe-a-lu-tout-internet-t">
+<title id="mythe-a-lu-tout-internet-t">Dans tout Internet, seul le web public parcouru par les robots entre dans l'archive Common Crawl ; en septembre 2026, 41,9 % de ses pages sont en anglais, 4,7 % en français et 0,002 % en breton, tandis que les messages, les intranets et les pages derrière un mot de passe restent dehors.</title>
+<rect class="bx dash" x="4" y="8" width="352" height="262" rx="6"/>
+<text class="m mu" x="16" y="28">tout Internet</text>
+<text class="m red" x="16" y="232">hors de portée : messages,</text>
+<text class="m red" x="16" y="250">intranets, pages sous mot de passe</text>
+<rect class="bxa" x="16" y="40" width="328" height="166" rx="4"/>
+<text class="m ac" x="28" y="60">web public, Common Crawl 2026</text>
+<text x="28" y="90">anglais</text>
+<rect class="fa" x="100" y="78" width="196" height="16" rx="2"/>
+<text class="m" x="302" y="91">41,9 %</text>
+<text x="28" y="130">français</text>
+<rect class="fa" x="100" y="118" width="22" height="16" rx="2"/>
+<text class="m" x="128" y="131">4,7 %</text>
+<text x="28" y="170">breton</text>
+<rect class="fa" x="100" y="158" width="1.5" height="16"/>
+<text class="m" x="108" y="171">0,002 %</text>
+<text class="m mu" x="28" y="194">part des pages, septembre 2026</text>
+<text class="i mu" x="4" y="300">Le corpus d'entraînement sort de cette archive,</text>
+<text class="i mu" x="4" y="320">après un tri qui en écarte une partie.</text>
+</svg>

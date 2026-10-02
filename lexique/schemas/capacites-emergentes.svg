@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 266" role="img" aria-labelledby="capacites-emergentes-t">
+<title id="capacites-emergentes-t">Les mêmes réponses de cinq modèles de tailles croissantes, notées de deux façons : en tout ou rien, le score reste à zéro puis saute ; avec des points pour les chiffres justes, il monte en pente douce.</title>
+<text class="m" x="10" y="16">réponse exacte</text>
+<text class="m" x="10" y="32">ou rien</text>
+<text class="m ac" x="190" y="16">points pour les</text>
+<text class="m ac" x="190" y="32">chiffres justes</text>
+<path class="ln" d="M14 50 V180 H170"/>
+<path class="ln" d="M194 50 V180 H350"/>
+<path class="lm" d="M30 172 L60 172 L90 170 L120 128 L150 62"/>
+<circle class="bxa" cx="30" cy="172" r="5"/>
+<circle class="bxa" cx="60" cy="172" r="5"/>
+<circle class="bxa" cx="90" cy="170" r="5"/>
+<circle class="bxa" cx="120" cy="128" r="5"/>
+<circle class="bxa" cx="150" cy="62" r="5"/>
+<path class="la" d="M210 158 L240 136 L270 113 L300 90 L330 68"/>
+<circle class="fa" cx="210" cy="158" r="5"/>
+<circle class="fa" cx="240" cy="136" r="5"/>
+<circle class="fa" cx="270" cy="113" r="5"/>
+<circle class="fa" cx="300" cy="90" r="5"/>
+<circle class="fa" cx="330" cy="68" r="5"/>
+<text class="m mu" x="18" y="198">taille du modèle</text>
+<path class="lm" d="M150 194 h14 M159 189 l5 5 l-5 5"/>
+<text class="m mu" x="198" y="198">taille du modèle</text>
+<path class="lm" d="M330 194 h14 M339 189 l5 5 l-5 5"/>
+<text class="i mu" x="4" y="232">Les mêmes réponses montrent un saut ou une</text>
+<text class="i mu" x="4" y="252">pente, selon la façon de les noter.</text>
+</svg>
