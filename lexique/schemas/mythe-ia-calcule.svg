@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 304" role="img" aria-labelledby="mythe-ia-calcule-t">
+<title id="mythe-ia-calcule-t">La même opération, 4 827 fois 3 916, suit deux chemins. De tête, le modèle prédit les chiffres un token après l'autre et tombe souvent juste sur le premier et le dernier, sans garantie au milieu. Avec un outil, il écrit un programme qui est exécuté et renvoie 18 902 532.</title>
+<rect class="bx" x="90" y="8" width="180" height="40" rx="4"/>
+<text class="big" x="180" y="35" text-anchor="middle">4 827 × 3 916 ?</text>
+<path class="lm" d="M150 48 L90 76"/>
+<path class="lm" d="M83 71 l7 5 l-1 -8"/>
+<path class="lm" d="M210 48 L270 76"/>
+<path class="lm" d="M277 71 l-7 5 l1 -8"/>
+<text class="m mu" x="90" y="98" text-anchor="middle">de tête</text>
+<text class="m ac" x="270" y="98" text-anchor="middle">avec un outil</text>
+<rect class="bx" x="8" y="108" width="164" height="64" rx="4"/>
+<text x="20" y="133">prédit les chiffres</text>
+<text x="20" y="156">token par token</text>
+<rect class="bxa" x="188" y="108" width="164" height="64" rx="4"/>
+<text x="200" y="133">écrit un programme</text>
+<text class="m" x="200" y="157">print(4827 * 3916)</text>
+<path class="lm" d="M90 172 V194"/>
+<path class="lm" d="M85 188 l5 6 l5 -6"/>
+<path class="la" d="M270 172 V194"/>
+<path class="la" d="M265 188 l5 6 l5 -6"/>
+<rect class="bx" x="8" y="198" width="164" height="52" rx="4"/>
+<text class="big" x="90" y="231" text-anchor="middle">18 <tspan class="mu">??? ??</tspan>2</text>
+<rect class="bxa" x="188" y="198" width="164" height="52" rx="4"/>
+<text class="m mu" x="200" y="216">exécuté</text>
+<text class="big ac" x="270" y="240" text-anchor="middle">18 902 532</text>
+<text class="i mu" x="4" y="276">De tête, le début et la fin tombent souvent</text>
+<text class="i mu" x="4" y="296">juste, les retenues du milieu beaucoup moins.</text>
+</svg>

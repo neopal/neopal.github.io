@@ -243,11 +243,11 @@ const Nuit: React.FC = () => {
   const plusPop = usePop(NIGHT_TO);
   return (
     <Scene
-      caps={[[0, 'Lancé un soir par un développeur, un agent codait encore seul le lendemain à midi.']]}
+      caps={[[0, 'Comme il enchaîne seul ses actions, un agent peut tenir une tâche plus de 18 heures.']]}
       gap={26}
       bottom={
         <Pop at={BEAT * 1} style={{display: 'flex', justifyContent: 'center'}}>
-          <Mono size={40} color={DIM}>annonce Claude Opus 5.5, 22 sept. 2026</Mono>
+          <Mono size={40} color={DIM}>témoignage, annonce Claude Opus 5.5</Mono>
         </Pop>
       }
     >

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 306" role="img" aria-labelledby="mythe-raisonne-comme-nous-t">
+<title id="mythe-raisonne-comme-nous-t">Allure des courbes de l'étude d'Apple de juin 2025. Quand la difficulté du casse-tête augmente, la réussite baisse jusqu'à zéro au-delà d'un seuil, et la longueur du brouillon monte d'abord puis redescend près de ce seuil, alors qu'il reste de la place pour écrire.</title>
+<rect class="fa" x="40" y="10" width="14" height="4" rx="1"/>
+<text class="m" x="60" y="16">réussite</text>
+<path class="lm dash" d="M170 12 H186"/>
+<text class="m mu" x="192" y="16">longueur du brouillon</text>
+<path class="ln" d="M30 40 V220 H350"/>
+<path class="ln dash" d="M232 44 V220"/>
+<text class="m d" x="236" y="56">seuil</text>
+<path class="la" d="M34 60 C90 62 140 80 180 130 S220 216 236 218 H346"/>
+<path class="lm dash" d="M34 200 C90 190 150 140 200 92 S228 70 240 84 C262 110 300 150 346 168"/>
+<circle class="fa" cx="236" cy="218" r="4"/>
+<text class="m red" x="248" y="210">réussite nulle</text>
+<text class="m mu" x="262" y="84">le brouillon</text>
+<text class="m mu" x="262" y="100">raccourcit</text>
+<text class="m mu" x="190" y="242" text-anchor="middle">difficulté du casse-tête →</text>
+<text class="m mu" x="190" y="258" text-anchor="middle">(disques de la tour de Hanoï)</text>
+<text class="i mu" x="4" y="284">Près du seuil, il écrit moins de brouillon,</text>
+<text class="i mu" x="4" y="302">alors qu'il lui reste de la place.</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 312" role="img" aria-labelledby="mythe-lit-mot-par-mot-t">
+<title id="mythe-lit-mot-par-mot-t">Les tokens de la question entrent tous ensemble dans le modèle en un seul passage, le prefill. La réponse sort ensuite un token à la fois, le decode, chaque nouveau token relu avec tout ce qui précède.</title>
+<text class="m mu" x="8" y="18">prefill : tout le message, un seul passage</text>
+<rect class="bx" x="8" y="30" width="34" height="28" rx="3"/><text class="m" x="25" y="49" text-anchor="middle">Ce</text>
+<rect class="bx" x="46" y="30" width="56" height="28" rx="3"/><text class="m" x="74" y="49" text-anchor="middle">texte</text>
+<rect class="bx" x="106" y="30" width="24" height="28" rx="3"/><text class="m" x="118" y="49" text-anchor="middle">a</text>
+<rect class="bx" x="134" y="30" width="40" height="28" rx="3"/><text class="m" x="154" y="49" text-anchor="middle">les</text>
+<rect class="bx" x="178" y="30" width="74" height="28" rx="3"/><text class="m" x="215" y="49" text-anchor="middle">lettres</text>
+<rect class="bx" x="256" y="30" width="38" height="28" rx="3"/><text class="m" x="275" y="49" text-anchor="middle">mél</text>
+<rect class="bx" x="298" y="30" width="54" height="28" rx="3"/><text class="m" x="325" y="49" text-anchor="middle">ang…</text>
+<path class="la" d="M25 58 L150 104"/>
+<path class="la" d="M74 58 L160 104"/>
+<path class="la" d="M118 58 L170 104"/>
+<path class="la" d="M154 58 L178 104"/>
+<path class="la" d="M215 58 L186 104"/>
+<path class="la" d="M275 58 L196 104"/>
+<path class="la" d="M325 58 L206 104"/>
+<rect class="bxa" x="110" y="106" width="140" height="40" rx="4"/>
+<text class="b" x="180" y="131" text-anchor="middle">modèle</text>
+<path class="ln" d="M8 166 H352"/>
+<text class="m mu" x="8" y="190">decode : la réponse, un token à la fois</text>
+<rect class="bxa" x="8" y="204" width="50" height="28" rx="3"/><text class="m" x="33" y="223" text-anchor="middle">Oui</text>
+<path class="lm" d="M62 218 H76"/><path class="lm" d="M71 213 l6 5 l-6 5"/>
+<rect class="bxa" x="82" y="204" width="28" height="28" rx="3"/><text class="m" x="96" y="223" text-anchor="middle">,</text>
+<path class="lm" d="M114 218 H128"/><path class="lm" d="M123 213 l6 5 l-6 5"/>
+<rect class="bxa" x="134" y="204" width="40" height="28" rx="3"/><text class="m" x="154" y="223" text-anchor="middle">je</text>
+<path class="lm" d="M178 218 H192"/><path class="lm" d="M187 213 l6 5 l-6 5"/>
+<rect class="bxa" x="198" y="204" width="56" height="28" rx="3"/><text class="m" x="226" y="223" text-anchor="middle">peux</text>
+<path class="lm" d="M258 218 H272"/><path class="lm" d="M267 213 l6 5 l-6 5"/>
+<rect class="bx dash" x="278" y="204" width="74" height="28" rx="3"/><text class="m mu" x="315" y="223" text-anchor="middle">suivant</text>
+<text class="m d" x="33" y="250" text-anchor="middle">1</text>
+<text class="m d" x="96" y="250" text-anchor="middle">2</text>
+<text class="m d" x="154" y="250" text-anchor="middle">3</text>
+<text class="m d" x="226" y="250" text-anchor="middle">4</text>
+<text class="i mu" x="4" y="282">Chaque token écrit tient compte du message</text>
+<text class="i mu" x="4" y="302">entier et de toute la réponse déjà écrite.</text>
+</svg>
