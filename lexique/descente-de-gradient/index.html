@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Descente de gradient | Lexique IA</title>
-<meta name="description" content="La descente de gradient est la méthode qui ajuste les paramètres d&#39;un modèle pendant l&#39;entraînement, en calculant à chaque pas dans quel sens chaque…">
+<meta name="description" content="La descente de gradient ajuste les paramètres pendant l&#39;entraînement : à chaque pas, elle calcule dans quel sens chacun doit bouger pour réduire…">
 <link rel="canonical" href="https://neopal.github.io/lexique/descente-de-gradient/">
 <meta property="og:site_name" content="Lexique IA">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Descente de gradient | Lexique IA">
-<meta property="og:description" content="La descente de gradient est la méthode qui ajuste les paramètres d&#39;un modèle pendant l&#39;entraînement, en calculant à chaque pas dans quel sens chaque…">
+<meta property="og:description" content="La descente de gradient ajuste les paramètres pendant l&#39;entraînement : à chaque pas, elle calcule dans quel sens chacun doit bouger pour réduire…">
 <meta property="og:url" content="https://neopal.github.io/lexique/descente-de-gradient/">
 <meta property="og:image" content="https://neopal.github.io/lexique/og/descente-de-gradient.jpg">
 <meta property="og:image:width" content="1200">
@@ -18,7 +18,7 @@
 <meta property="og:image:alt" content="Descente de gradient">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Descente de gradient | Lexique IA">
-<meta name="twitter:description" content="La descente de gradient est la méthode qui ajuste les paramètres d&#39;un modèle pendant l&#39;entraînement, en calculant à chaque pas dans quel sens chaque…">
+<meta name="twitter:description" content="La descente de gradient ajuste les paramètres pendant l&#39;entraînement : à chaque pas, elle calcule dans quel sens chacun doit bouger pour réduire…">
 <meta name="twitter:image" content="https://neopal.github.io/lexique/og/descente-de-gradient.jpg">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -295,7 +295,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/descente-de-gradient/#term","name":"Descente de gradient","description":"La descente de gradient est la méthode qui ajuste les paramètres d'un modèle pendant l'entraînement, en calculant à chaque pas dans quel sens chaque paramètre doit bouger pour que l'erreur baisse, puis en le déplaçant un peu dans ce sens.","url":"https://neopal.github.io/lexique/descente-de-gradient/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Gradient descent","SGD","stochastic gradient descent","optimizer","learning rate","descente du gradient","optimiseur","taux d'apprentissage"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/descente-de-gradient/#term","name":"Descente de gradient","description":"La descente de gradient ajuste les paramètres pendant l'entraînement : à chaque pas, elle calcule dans quel sens chacun doit bouger pour réduire l'erreur, puis le déplace un peu.","url":"https://neopal.github.io/lexique/descente-de-gradient/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Gradient descent","SGD","stochastic gradient descent","optimizer","learning rate","descente du gradient","optimiseur","taux d'apprentissage"]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -338,7 +338,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h1>Descente de gradient</h1>
         <p class="en">En anglais : <span lang="en">Gradient descent</span>, aussi <span lang="en">SGD</span>, <span lang="en">stochastic gradient descent</span>, <span lang="en">optimizer</span>, <span lang="en">learning rate</span></p><p class="en">Aussi appelé <span>descente du gradient</span>, <span>optimiseur</span>, <span>taux d&#39;apprentissage</span></p>
         <nav class="rel" aria-label="Termes liés"><a class="tl live" style="--c:#F5D76E" href="/lexique/entrainement/" data-go="entrainement">Entraînement</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/parametres/" data-go="parametres">Paramètres</a><a class="tl live" style="--c:#F5D76E" href="/lexique/retropropagation/" data-go="retropropagation">Rétropropagation</a><a class="tl live" style="--c:#F5D76E" href="/lexique/gradient-qui-disparait/" data-go="gradient-qui-disparait">Gradient qui disparaît</a></nav>
-        <p class="lead">La descente de gradient est la méthode qui ajuste les paramètres d&#39;un modèle pendant l&#39;entraînement, en calculant à chaque pas dans quel sens chaque paramètre doit bouger pour que l&#39;erreur baisse, puis en le déplaçant un peu dans ce sens.</p>
+        <p class="lead">La descente de gradient ajuste les paramètres pendant l&#39;entraînement : à chaque pas, elle calcule dans quel sens chacun doit bouger pour réduire l&#39;erreur, puis le déplace un peu.</p>
         
         <h2>L'image</h2><p>Retourne dans la régie, où l&#39;ingé son n&#39;a pas d&#39;oreille mais un vumètre dont l&#39;aiguille dit à quel point la dernière note sonnait faux. Pour chaque potard, un calcul lui indique de quel côté tourner pour faire baisser l&#39;aiguille et à quel point elle y réagit ; il tourne alors tous les potards ensemble, chacun selon sa sensibilité, d&#39;un geste volontairement petit, et refait une mesure.</p>
         <h2>Imagine</h2><p class="imagine">Cache un objet dans la pièce, ferme les yeux et demande à ton voisin de te guider en ne disant que « plus chaud » ou « plus froid » après chaque pas. Avance à pas de géant, et tu dépasses l&#39;objet, reviens, le dépasses encore ; avance à pas de fourmi, et tu y es encore dans dix minutes. Entre les deux se trouve le bon taux d&#39;apprentissage.</p>

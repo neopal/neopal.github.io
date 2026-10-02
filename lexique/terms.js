@@ -299,7 +299,7 @@ window.DICO_TERMS = [
       {name: 'SentencePiece', kind: 'bibliothèque open source', url: 'https://github.com/google/sentencepiece'},
     ],
     short:
-      "Le tokenizer est le programme qui découpe ton texte en tokens avant que le modèle le lise, puis recolle les tokens en texte à la sortie ; il suit des règles apprises une fois pour toutes, sans rien comprendre à ce qu'il découpe.",
+      "Le tokenizer est le programme qui découpe ton texte en tokens avant que le modèle le lise, selon des règles apprises une fois pour toutes, sans rien comprendre au texte.",
     image:
       "Vois le tokenizer comme la sampleuse du studio : tout ce qui entre passe par elle, et elle le découpe en samples de sa banque avant que le groupe entende quoi que ce soit. Elle ne connaît ni la grammaire ni le sens, seulement les bouts de son qu'elle a déjà en stock.",
     imagine:
@@ -505,16 +505,16 @@ window.DICO_TERMS = [
       "mythe-plus-gros-plus-intelligent",
       "cout-d-une-requete"
     ],
-    "short": "La taille d'un modèle, c'est son nombre de paramètres, compté en milliards (B) ou en milliers de milliards (T) ; pour un modèle MoE, on donne deux chiffres, le total et la part qui travaille pour chaque token.",
+    "short": "La taille d'un modèle est son nombre de paramètres, compté en milliards ; pour un MoE, on donne aussi la part qui travaille pour chaque token.",
     "image": "La taille du groupe se compte en potards sur la console. Sur une console dense, chaque note fait bouger tous les potards ; sur celle d'un MoE, deux ou trois rangées jouent pendant que les autres restent immobiles, et il faut pourtant de la place dans le studio pour la console entière.",
     "imagineForm": "D",
     "imagine": "Tu demandes à l'admin qui gère les serveurs : « Entre DeepSeek-V4-Flash et Qwen3.8-27B, lequel est le plus gros ? » Il réfléchit une seconde, puis te répond : « Les deux, puisque le premier a dix fois plus de paramètres et que le second en fait travailler deux fois plus pour chaque token. »",
     "full": [
-      "La taille se compte en paramètres, les nombres réglés pendant l'entraînement, et le jargon l'abrège avec des lettres anglaises : B pour billion (milliard), T pour trillion (millier de milliards). Ce chiffre dit d'abord combien de mémoire il faut pour faire tourner le modèle. En 16 bits, chaque paramètre occupe 2 octets, soit 2 Go par milliard de paramètres, un calcul qu'on refait de tête ; les fichiers de Llama 3.1 405B pèsent ainsi 812 Go sur Hugging Face.",
-      "Avec les MoE, le chiffre se dédouble. Un modèle dense fait travailler tous ses paramètres pour chaque token, alors qu'un MoE n'en active qu'une fraction : DeepSeek-V4-Pro, présenté en avril 2026, compte 1 600 milliards de paramètres et n'en active que 49 milliards par token. Le total dit combien de serveurs il faut ; la part active dit combien coûte chaque token et à quelle vitesse il sort.",
-      "C'est pour ça que Qwen écrit les deux nombres dans le nom de ses modèles, comme Qwen3-235B-A22B, qui se lit « 235 milliards en tout, dont 22 milliards actifs », ou Qwen3.8-2.4T-A95B. Face à un modèle dense, on compare le nombre qui suit le A quand on parle de vitesse, et le premier quand on parle de matériel."
+      "La taille se compte en paramètres, les nombres réglés pendant l'entraînement. Le jargon l'abrège avec des lettres anglaises, B pour billion (milliard) et T pour trillion (millier de milliards). Ce chiffre dit d'abord combien de mémoire il faut pour faire tourner le modèle. En 16 bits, compte 2 Go par milliard de paramètres, un calcul qu'on refait de tête. Les fichiers de Llama 3.1 405B pèsent ainsi 812 Go sur Hugging Face.",
+      "Avec les MoE, le chiffre se dédouble. Un modèle dense fait travailler tous ses paramètres pour chaque token, alors qu'un MoE n'en active qu'une fraction. DeepSeek-V4-Pro compte 1 600 milliards de paramètres, mais n'en active que 49 milliards par token. Le total dit combien de serveurs il faut ; la part active dit combien coûte chaque token et à quelle vitesse il sort.",
+      "C'est pour ça que Qwen écrit les deux nombres dans le nom de ses modèles. Qwen3-235B-A22B se lit par exemple « 235 milliards en tout, dont 22 milliards actifs ». Face à un modèle dense, on compare le nombre qui suit le A quand on parle de vitesse, et le premier quand on parle de matériel."
     ],
-    "then": "En juillet 2024, Meta publiait Llama 3.1 405B, un modèle dense dont un seul chiffre suffisait à décrire la taille. En juillet 2026, Moonshot AI a publié Kimi K3, qui compte 2 800 milliards de paramètres dont 104 milliards actifs par token. Il est sept fois plus gros que Llama 3.1 405B au total, et chaque token y fait pourtant travailler quatre fois moins de paramètres.",
+    "then": "En 2024, Meta publiait Llama 3.1 405B, un modèle dense dont un seul chiffre suffisait à décrire la taille. Deux ans plus tard, Moonshot AI a publié Kimi K3, sept fois plus gros au total. Chaque token y fait pourtant travailler quatre fois moins de paramètres.",
     "office": [
       {
         "who": "q",
@@ -522,10 +522,10 @@ window.DICO_TERMS = [
       },
       {
         "who": "a",
-        "text": "Commence par la mémoire : en 16 bits, le 70B demande environ 141 Go, donc plusieurs GPU, alors que le 8B tient sur une seule carte de 24 Go ; si tu n'as pas plusieurs GPU sous la main, la question est déjà réglée."
+        "text": "Commence par la mémoire. Sans compression, le 70B demande plusieurs GPU, alors que le 8B tient sur une seule carte. Si tu n'as pas plusieurs GPU sous la main, la question est déjà réglée."
       }
     ],
-    "avoid": "« Un 1T, c'est forcément plus lent qu'un 70B. » Kimi K2 compte 1 000 milliards de paramètres mais n'en active que 32 milliards par token, donc il calcule chaque token avec moins de paramètres qu'un modèle dense de 70 milliards. Il lui faut en revanche beaucoup plus de mémoire.",
+    "avoid": "« Un 1T, c'est forcément plus lent qu'un 70B. » Kimi K2 compte 1 000 milliards de paramètres mais n'en active que 32 milliards par token, moins qu'un modèle dense de 70 milliards. Il lui faut en revanche beaucoup plus de mémoire.",
     "video": null,
     "sources": [
       {
@@ -856,15 +856,15 @@ window.DICO_TERMS = [
         "url": "https://lmstudio.ai/"
       }
     ],
-    "short": "La quantization consiste à stocker les paramètres d'un modèle avec moins de précision, par exemple sur 4 bits au lieu de 16, pour qu'il prenne trois à quatre fois moins de mémoire au prix d'un peu de qualité.",
+    "short": "La quantization stocke les paramètres d'un modèle avec moins de précision, pour qu'il prenne bien moins de mémoire au prix d'un peu de qualité.",
     "image": "Passe la bande du WAV au MP3 et le morceau tient dans un fichier bien plus léger, au prix de détails que peu d'oreilles entendent ; la quantization fait la même chose avec le réglage de la console. La comparaison s'arrête là, car le MP3 jette les sons qu'on n'entend pas alors que la quantization arrondit tous les potards sans exception, ce qui finit par s'entendre quand on arrondit trop.",
     "imagineForm": "E",
-    "imagine": "Avant, tu télécharges Llama 3.3 70B dans sa version 16 bits, 141 Go, et il faut deux GPU de serveur à 80 Go pour l'ouvrir. Après, tu prends la version 4 bits du même modèle, 43 Go, et il tient dans une machine de 64 Go de mémoire ; ce sont les mêmes 70 milliards de potards, arrondis chacun au cran le plus proche.",
+    "imagine": "Tu télécharges Llama 3.3 70B dans sa version 16 bits, un fichier de 141 Go qu'il faut répartir sur deux GPU de serveur. Tu prends ensuite la version 4 bits du même modèle, 43 Go, et elle tient dans une seule machine bien dotée en mémoire. Ce sont exactement les mêmes potards, arrondis chacun au cran le plus proche.",
     "full": [
-      "Pendant l'entraînement, chaque paramètre est en général stocké sur 16 bits. La quantization le réécrit sur 8, 4 ou même 2 bits, en l'arrondissant à l'une des rares valeurs que le format sait représenter : sur 4 bits, il n'en existe que 16. Le modèle prend moins de mémoire, tient sur des machines plus modestes et répond souvent plus vite, puisqu'il y a moins de données à déplacer pour chaque token.",
-      "La perte dépend du niveau d'arrondi et de la taille du modèle. En mai 2025, une étude sur Qwen3 a mesuré qu'en 4 bits, Qwen3-14B ne perdait qu'environ 1 % sur le test MMLU, alors que le petit Qwen3-0.6B perdait environ 10 %. À 3 bits et moins, Qwen3 se dégradait plus nettement que les générations précédentes, ce que les auteurs attribuent à un entraînement plus poussé qui laisse moins de paramètres superflus à sacrifier."
+      "Pendant l'entraînement, chaque paramètre est en général stocké sur 16 bits. La quantization le réécrit avec moins de bits, en l'arrondissant à l'une des rares valeurs que le format sait représenter. Sur 4 bits, il n'en existe que 16. Le modèle prend moins de mémoire et tient sur des machines plus modestes. Il répond aussi souvent plus vite, puisqu'il y a moins de données à déplacer pour chaque token.",
+      "La perte dépend du niveau d'arrondi et de la taille du modèle. En 2025, une étude sur la famille Qwen3 a mesuré qu'en 4 bits, un modèle de taille moyenne ne perdait qu'environ 1 % sur le test MMLU. Le plus petit de la famille perdait, lui, environ 10 %. Avec un arrondi plus fort encore, Qwen3 se dégradait plus nettement que les générations précédentes. Les auteurs l'attribuent à un entraînement plus poussé, qui laisse moins de paramètres superflus à sacrifier."
     ],
-    "then": "La quantization se faisait surtout après coup en 2024, sur un modèle publié en 16 bits, et Llama 3.3 70B existe ainsi sur Ollama en une douzaine de versions, de 141 Go en 16 bits à 26 Go en 2 bits. Depuis août 2025, des labos publient des modèles conçus pour tourner en 4 bits, comme gpt-oss-120b, qui tient sur un seul GPU de 80 Go et dont toutes les évaluations ont été faites en 4 bits, puis Kimi K3 en juillet 2026.",
+    "then": "En 2024, la quantization se faisait surtout après coup, sur un modèle publié en pleine précision. Llama 3.3 70B existe ainsi sur Ollama en une douzaine de versions, de la plus complète à la plus compressée. Depuis 2025, des labos publient des modèles conçus pour tourner en 4 bits. C'est le cas de gpt-oss-120b, qui tient sur un seul GPU et dont toutes les évaluations ont été faites sous cette forme, et plus récemment de Kimi K3.",
     "office": [
       {
         "who": "q",
@@ -872,10 +872,10 @@ window.DICO_TERMS = [
       },
       {
         "who": "a",
-        "text": "C'est probablement l'arrondi, parce qu'en dessous de 4 bits les modèles se dégradent nettement ; remonte en 4 bits, quitte à payer un GPU de plus."
+        "text": "C'est probablement l'arrondi, parce qu'en dessous de 4 bits les modèles se dégradent nettement. Remonte en 4 bits, quitte à payer un GPU de plus."
       }
     ],
-    "avoid": "« Un modèle quantifié est un modèle plus petit. » Il garde exactement le même nombre de paramètres et chacun est stocké avec moins de précision, donc un 70B en 4 bits reste un 70B.",
+    "avoid": "« Un modèle quantifié est un modèle plus petit. » Il garde exactement le même nombre de paramètres et chacun est stocké avec moins de précision, donc un 70B quantifié reste un 70B.",
     "video": null,
     "sources": [
       {
@@ -1318,7 +1318,7 @@ window.DICO_TERMS = [
       "date-de-coupure",
       "mythe-apprend-de-nos-conversations"
     ],
-    "short": "L'entraînement est la phase, avant toute utilisation, où l'on ajuste les milliards de paramètres d'un modèle en lui faisant lire d'immenses quantités de texte, jusqu'à ce qu'il prédise bien le token suivant ; une fois l'entraînement fini, ces paramètres ne bougent plus.",
+    "short": "L'entraînement est la phase où l'on ajuste les paramètres d'un modèle en lui faisant lire d'immenses quantités de texte ; une fois fini, ces paramètres ne bougent plus.",
     "image": "Au début, l'ingé son a devant lui une console dont tous les potards sont tournés au hasard. Il fait entendre au groupe une phrase coupée avant la fin, écoute la note que le groupe propose, et tourne des milliards de potards d'un cran dans le sens qui aurait donné la bonne ; puis il recommence, des milliers de milliards de fois. Dans la réalité, personne n'écoute ; c'est un calcul qui déduit le sens de chaque cran de l'écart entre la note jouée et la note attendue.",
     "imagineForm": "E",
     "imagine": "Avant, un petit modèle tout neuf, tiré d'un manuel, reçoit « Every effort moves you » et continue par « rentingetic wasnم refres RexMeCHicular stren ». Après dix passages sur une seule nouvelle de 3 600 mots, la même phrase de départ donne « Yes--quite insensible to the irony », une réplique recopiée mot pour mot de la nouvelle. À cette échelle minuscule, apprendre et retenir par cœur se confondent encore.",
@@ -1400,7 +1400,8 @@ window.DICO_TERMS = [
       "parametres",
       "rlhf",
       "rag",
-      "system-prompt"
+      "system-prompt",
+      "distillation"
     ],
     "solutions": [
       {
@@ -1580,7 +1581,7 @@ window.DICO_TERMS = [
       "hallucination",
       "mythe-apprend-de-nos-conversations"
     ],
-    "short": "La date de coupure est la date où s'arrêtent les textes lus par un modèle pendant son entraînement ; il ignore tout de ce qui s'est passé après, sauf si on le lui met sous les yeux pendant la conversation.",
+    "short": "La date de coupure est la date où s'arrêtent les textes lus par un modèle à l'entraînement ; il ignore la suite, sauf si on la lui donne dans la conversation.",
     "image": "Le dernier disque que l'ingé son a fait écouter au groupe porte une date, et le groupe ne connaît aucun morceau sorti après. Il continue pourtant de jouer pendant des mois, parfois des années, et quand le public réclame le tube de l'été, il improvise quelque chose dans le style des tubes qu'il connaît.",
     "imagineForm": "A",
     "imagine": "La fiche de GPT-4o arrête sa mémoire au 1er octobre 2023, et le modèle est sorti 225 jours plus tard, le 13 mai 2024. Ce premier instantané, gpt-4o-2024-05-13, figure toujours au catalogue de l'API le 2 octobre 2026. Une application qui l'appelle sans recherche web lui parle donc avec 1 097 jours de retard, soit trois années d'actualité dont il n'a jamais lu une ligne.",
@@ -1659,7 +1660,7 @@ window.DICO_TERMS = [
       "reward-hacking",
       "cout-d-une-requete"
     ],
-    "short": "Un modèle de raisonnement écrit d'abord un long brouillon, token par token, où il décompose le problème et vérifie ses étapes, puis donne sa réponse ; il a été entraîné pour que ce brouillon mène plus souvent à la bonne réponse.",
+    "short": "Un modèle de raisonnement écrit d'abord un long brouillon où il décompose le problème et vérifie ses étapes, puis donne sa réponse.",
     "image": "Le groupe a désormais droit à une maquette avant la vraie prise. Il essaie l'intro, la jette, reprend le pont, et c'est seulement après ce brouillon, dont le public n'entend souvent qu'un résumé, qu'il enregistre la version finale. Plus on lui laisse de temps en cabine, meilleure est la prise en moyenne, et plus la facture du studio grimpe.",
     "imagineForm": "A",
     "imagine": "Chaque grille de l'ARC-AGI est un petit puzzle de pixels colorés dont il faut deviner la règle. En décembre 2024, pour une seule de ces grilles, o3 a écrit dans sa version la plus gourmande environ 57 millions de tokens, toutes tentatives comprises, soit 73 fois Le Comte de Monte-Cristo avec ses quatre tomes. La facture montait à 4 560 dollars par grille pour 87,5 % de réussite, alors que sa version sobre, qui réfléchissait bien moins, en réussissait déjà 75,7 % pour 26 dollars.",
@@ -1936,7 +1937,7 @@ window.DICO_TERMS = [
         "url": "https://block.github.io/goose/"
       }
     ],
-    "short": "Un agent est un modèle de langage qu'on laisse agir : on lui donne un objectif et des outils, et il enchaîne lui-même les actions, en regardant le résultat de chacune pour choisir la suivante, jusqu'à ce que la tâche soit finie.",
+    "short": "Un agent est un modèle de langage qu'on laisse agir : avec un objectif et des outils, il enchaîne les actions, chacune choisie d'après le résultat de la précédente.",
     "image": "Envoie le groupe en tournée avec ses roadies et leurs caisses à outils, et tu as un agent. En studio, il jouait le morceau qu'on lui demandait ; sur la route, il décide de l'étape suivante, demande aux roadies de monter la scène ou d'appeler la salle, écoute ce que ça donne et choisit la suite, sans jamais porter une caisse lui-même.",
     "imagine": "Le 22 septembre 2026, dans l'annonce de Claude Opus 5.5, un développeur de Clio raconte avoir confié au modèle une tâche répartie sur six dépôts de code et l'avoir laissé tourner seul toute la nuit. Le modèle est resté sur la tâche plus de 18 heures ; lancé à 18 heures en quittant le bureau, il travaillait encore à midi le lendemain, l'équivalent de deux journées et demie d'un temps plein à 35 heures par semaine.",
     "imagineForm": "A",
@@ -2026,7 +2027,7 @@ window.DICO_TERMS = [
       "context-engineering",
       "mcp"
     ],
-    "short": "Le harness est tout le logiciel qui entoure un modèle pour en faire un agent : les outils qu'il peut appeler, les consignes qu'il reçoit, la gestion de ce qu'il a sous les yeux et les règles sur ce qu'il a le droit de faire.",
+    "short": "Le harness est tout le logiciel qui entoure un modèle pour en faire un agent : ses outils, ses consignes, ce qu'il voit et ce qu'il a le droit de faire.",
     "image": "Derrière la vitre de la régie, le producteur donne la consigne, branche les câbles et les micros, rembobine la bande et tient le badge sans lequel la porte de la cabine ne s'ouvre pas. Le harness correspond à tout ce poste, consigne comprise, et deux producteurs ne tirent jamais le même son du même groupe.",
     "imagine": "GPT-5.5 passe deux fois les tâches de Terminal-Bench 2.1, qu'un agent doit mener seul dans un terminal, la fenêtre où l'on tape des commandes. Dans Terminus 2, le harness des auteurs du benchmark, il en réussit 78 % ; dans Codex CLI, celui d'OpenAI, il monte à 83,1 %, avec exactement les mêmes paramètres.",
     "imagineForm": "E",
@@ -2107,7 +2108,7 @@ window.DICO_TERMS = [
       "fenetre-de-contexte",
       "cout-d-une-requete"
     ],
-    "short": "La boucle agent est le cycle qui fait travailler un agent : le modèle choisit une action, le programme l'exécute, le résultat est ajouté à la conversation, et le modèle relit le tout pour choisir l'action suivante, jusqu'à ce qu'il annonce avoir fini.",
+    "short": "La boucle agent est le cycle d'un agent : le modèle choisit une action, le programme l'exécute, le résultat revient dans la conversation, et ainsi de suite jusqu'à la fin.",
     "image": "Une séance d'enregistrement ordinaire avance par prises, où le groupe joue, écoute en cabine, repère la mesure qui accroche et rejoue. La boucle agent suit ce rythme, avec une différence qui coûte cher, puisque chaque écoute s'ajoute à la bande et qu'au vingtième passage le groupe réentend les dix-neuf prises précédentes avant de jouer.",
     "imagine": "Joue toi-même le rôle du harness. Fais écrire à ton assistant une formule de tableur qui compte les lignes d'une colonne contenant « payé », colle-la dans ton tableur, puis recopie-lui ce qui s'affiche, message d'erreur compris. Recommence jusqu'à ce que le chiffre soit juste ; chacun de tes allers-retours au copier-coller est un tour de boucle, qu'un agent enchaîne seul.",
     "imagineForm": "B",
@@ -2194,7 +2195,7 @@ window.DICO_TERMS = [
       "harness",
       "skill"
     ],
-    "short": "Le tool use permet à un modèle de demander l'exécution d'un outil (chercher sur le web, lire un fichier, envoyer un e-mail) : il écrit un appel structuré avec le nom de l'outil et ses paramètres, puis un programme l'exécute et lui renvoie le résultat.",
+    "short": "Le tool use permet à un modèle de demander l'exécution d'un outil, comme une recherche web, en écrivant un appel qu'un programme exécute avant de lui renvoyer le résultat.",
     "image": "Le chanteur qui veut plus de retour dans son casque ne quitte pas le micro pour aller tourner le bouton ; il le demande, et un roadie s'en charge. Le tool use correspond à cette demande, et tant qu'aucun roadie ne l'entend, rien ne bouge sur scène.",
     "imagine": "Dans une démo où l'outil de réservation est décrit au modèle sans être branché, tu écris : « Réserve-moi le train de 8 h 04 pour Lyon jeudi. » Le modèle te répond, très sûr de lui : « Voici ma demande : reserver_train(destination: Lyon, jour: jeudi, heure: 8 h 04). »",
     "imagineForm": "D",
@@ -2461,7 +2462,7 @@ window.DICO_TERMS = [
       "fenetre-de-contexte",
       "cout-d-une-requete"
     ],
-    "short": "Le system prompt est le texte de consignes que l'éditeur d'un assistant place avant ta conversation et que le modèle relit à chaque message : qui il est, la date du jour, le ton à prendre, ce qu'il doit refuser.",
+    "short": "Le system prompt est le texte de consignes que l'éditeur d'un assistant place avant ta conversation, et que le modèle relit à chaque message.",
     "image": "Le producteur passe la tête dans la cabine avant la première note et donne sa consigne pour la session : jouer sobre, pas de solo de plus de huit mesures, aucune reprise de chanson protégée. Le groupe ne la voit écrite nulle part, il l'a dans l'oreille au début de chaque prise, et le public n'en sait rien.",
     "imagine": "Demande à Claude, sans activer la recherche web : « On est quel jour aujourd'hui ? » Il te répond juste, alors que son entraînement s'est arrêté des mois plus tôt. Personne ne lui a appris la date ; elle est écrite dans le system prompt que l'application remplit avant chacune de tes conversations, et qu'Anthropic publie.",
     "imagineForm": "B",
@@ -2728,7 +2729,7 @@ window.DICO_TERMS = [
         "url": "https://logseq.com/"
       }
     ],
-    "short": "Un second brain est un système de notes tenu hors de ta tête, où tu ranges ce que tu lis et ce que tu en conclus pour le retrouver et t'en resservir ; on en confie de plus en plus l'entretien à un agent.",
+    "short": "Un second brain est un système de notes tenu hors de ta tête pour retrouver ce que tu lis, et on en confie de plus en plus l'entretien à un agent.",
     "image": "Au studio, rien ne survit à la fin de la session, puisque la bande est effacée et que la console ne bouge plus. Le second brain est le carnet de session qu'on range sur l'étagère, avec les arrangements trouvés et les erreurs à ne pas refaire, et que quelqu'un pose sur le pupitre au début de la session suivante. Dans la version de 2026, c'est le groupe qui tient le carnet, et toi qui le relis.",
     "imagine": "Lundi, ton agent lit tes cinq rapports sur le marché du vélo et te rend une synthèse, où il relève que deux d'entre eux ne donnent pas le même chiffre de ventes. Jeudi, pour une question voisine, il relit les cinq rapports depuis la première page, sans le moindre souvenir de cette contradiction. Rejoue la semaine avec un wiki ; lundi, il range sa synthèse et la contradiction dans une page, et jeudi il ouvre cette page avant tout le reste.",
     "imagineForm": "E",
@@ -2832,7 +2833,7 @@ window.DICO_TERMS = [
         "url": "https://www.wikidata.org/"
       }
     ],
-    "short": "Un knowledge graph range des connaissances sous forme de nœuds (des personnes, des lieux, des concepts) reliés par des relations nommées, comme « est née à » ou « travaille pour », qu'un programme peut parcourir de proche en proche.",
+    "short": "Un knowledge graph range des connaissances en nœuds, des personnes, des lieux ou des concepts, reliés par des relations nommées qu'un programme peut parcourir.",
     "image": "Ici, le studio n'aide pas, parce que le meilleur exemple est la carte des termes de ce lexique. Elle forme un graphe, où chaque fiche est un nœud et chaque lien un fil vers une fiche voisine. Il lui manque pourtant ce qui fait un vrai knowledge graph, car ses fils ne disent pas quelle relation unit deux fiches, là où un knowledge graph écrirait « le RAG utilise les embeddings ».",
     "imagine": "À son lancement en mai 2012, le Knowledge Graph de Google comptait 3,5 milliards de faits ; en 2020, il en dépassait 500 milliards, sur cinq milliards d'entités. Imprime ces 500 milliards de faits à raison d'un par ligne, 40 lignes par page et 500 pages par volume, et tu obtiens 25 millions de livres, soit 750 kilomètres d'étagères, où chaque ligne peut pourtant se corriger ou se rayer sans toucher aux autres.",
     "imagineForm": "A",
@@ -2991,7 +2992,7 @@ window.DICO_TERMS = [
       "modeles-de-raisonnement",
       "flagornerie"
     ],
-    "short": "Un modèle ne sait pas de lui-même s'il connaît la réponse : il écrit la suite la plus probable avec le même aplomb, juste ou inventée, et ne dit « je ne sais pas » que si son entraînement ou ses consignes l'y poussent.",
+    "short": "Un modèle ne sait pas s'il connaît la réponse : il écrit la suite la plus probable avec le même aplomb, et ne dit « je ne sais pas » que si son entraînement ou ses consignes l'y poussent.",
     "image": "Le public applaudit les morceaux joués jusqu'au bout et siffle les silences, et un groupe formé devant ce public apprend à finir chaque morceau, même celui qu'il ne connaît pas. Ce public, ce sont les notes données pendant l'entraînement et les tests ; pour que le groupe ose s'arrêter au milieu, il faut qu'elles récompensent aussi l'aveu « celui-là, on ne le connaît pas ».",
     "imagine": "Des chercheurs écrivent à DeepSeek-V3 : « Quelle est la date d'anniversaire d'Adam Tauman Kalai ? Si tu la connais, réponds juste au format JJ-MM. » Le modèle répond : « 03-07. »",
     "imagineForm": "D",
@@ -3674,7 +3675,7 @@ window.DICO_TERMS = [
       "benchmaxxing",
       "harness"
     ],
-    "short": "ARC-AGI est une série de benchmarks d'énigmes visuelles, d'abord des grilles de couleurs puis de petits jeux, où il faut trouver une règle jamais vue à partir de quelques exemples, ce qui teste l'adaptation à la nouveauté plutôt que les connaissances.",
+    "short": "ARC-AGI est une série de benchmarks d'énigmes visuelles où il faut trouver une règle jamais vue à partir de quelques exemples, pour tester l'adaptation plutôt que les connaissances.",
     "image": "Invente une gamme qui n'existe pas, joue au groupe trois mesures d'exemple, et demande-lui la quatrième. Les millions de morceaux que l'ingé son lui a fait écouter ne servent plus à rien, et c'est ce qu'ARC-AGI cherche à isoler, trouver une règle neuve plutôt que se souvenir d'une ancienne.",
     "imagineForm": "B",
     "imagine": "Va sur arcprize.org/play, la page où ARC Prize met en ligne une grille par jour, et cherche la règle qui fait passer des grilles d'exemple à leur solution, sans aucune consigne écrite. Tu la trouveras sans doute avec ce que tout le monde sait déjà des formes, des couleurs et des symétries, sans rien avoir appris par cœur pour l'occasion.",
@@ -4130,16 +4131,16 @@ window.DICO_TERMS = [
       "benchmarks",
       "open-weights"
     ],
-    "short": "Un modèle frontière est l'un des quelques modèles les plus capables à une date donnée ; la loi californienne SB 53 reprend le mot et le définit par le calcul dépensé pour l'entraîner, plus de 10^26 opérations.",
+    "short": "Un modèle frontière est l'un des modèles les plus capables du moment ; la Californie le définit dans la loi par le calcul dépensé pour l'entraîner.",
     "image": "Parmi les maisons de disques, quelques-unes seulement peuvent louer le plus grand studio de la ville pendant des mois, et leurs albums fixent le niveau que les autres essaient d'atteindre. Le régulateur, qui ne peut pas écouter un album avant sa sortie, a choisi de compter les heures de studio, en sachant qu'elles ne disent pas qui joue le mieux.",
     "imagineForm": "E",
     "imagine": "En mars 2023, GPT-4 sort, et c'est le modèle frontière par excellence. En septembre 2026, le même GPT-4, sans un paramètre changé, est sorti de la frontière, dépassé par toute une génération de modèles dont GPT-6 Astra, qu'Epoch AI estime entraîné avec environ cinquante fois plus de calcul.",
     "full": [
-      "La définition la plus utile vient du Frontier Model Forum, l'association créée en 2023 qui réunit Amazon, Anthropic, Google, Meta, Microsoft et OpenAI. Un modèle frontière y est un modèle généraliste qui dépasse, sur un ensemble de benchmarks ou d'évaluations de capacités à risque, tous les modèles largement déployés depuis au moins douze mois. La frontière est une date autant qu'un niveau, et elle avance à chaque sortie. En octobre 2026, chaque labo place son modèle de tête de ce côté. OpenAI présente GPT-6 Astra comme son modèle le plus capable, SpaceXAI (ex-xAI) appelle Grok 4.7 son « frontier model », et Mistral AI décrit Mistral Medium 3.5 comme un modèle « frontier-class ».",
-      "Le mot compte aussi parce que la régulation s'appuie sur la même idée. L'AI Act européen ne parle pas de frontière mais de « modèle à risque systémique », et il présume qu'un modèle généraliste a des capacités à fort impact quand son entraînement dépasse 10^25 opérations. GPT-4 lui-même tombe sur la ligne, puisque l'estimation d'Epoch AI pour son entraînement, entre 8 × 10^24 et 4 × 10^25 opérations, encadre le seuil. Les fournisseurs de ces modèles doivent alors évaluer le modèle avec des tests adverses, mesurer les risques, signaler les incidents graves et protéger le modèle contre les attaques. Ces obligations s'appliquent depuis le 2 août 2025, et la Commission peut infliger des amendes depuis le 2 août 2026. En Californie, la loi SB 53, signée le 29 septembre 2025, appelle « frontier model » tout modèle entraîné avec plus de 10^26 opérations, fine-tuning et apprentissage par renforcement compris, et vise surtout les développeurs qui dépassent 500 millions de dollars de chiffre d'affaires annuel.",
-      "Le seuil de calcul a l'avantage d'être un chiffre, et l'inconvénient que le public ne peut presque jamais le vérifier. Dans la base d'Epoch AI mise à jour le 1er octobre 2026, 1 410 des 3 626 modèles recensés ont une estimation de calcul d'entraînement. Elle manque justement pour Claude Fable 5.1, Gemini 3.1 Pro ou Muse Spark 1.3, dont les labos ne publient rien. Pour ces modèles, c'est au fournisseur de faire le calcul et de se déclarer auprès du Bureau de l'IA de la Commission."
+      "La définition la plus utile vient du Frontier Model Forum, une association qui réunit Amazon, Anthropic, Google, Meta, Microsoft et OpenAI. Pour elle, un modèle frontière est un modèle généraliste qui dépasse tous les modèles largement déployés depuis au moins un an. La comparaison se fait sur des benchmarks ou sur des évaluations de capacités à risque. La frontière est donc une date autant qu'un niveau, et elle avance à chaque sortie. En octobre 2026, chaque labo place son modèle de tête de ce côté. OpenAI présente GPT-6 Astra comme son modèle le plus capable, et SpaceXAI (ex-xAI) appelle Grok 4.7 son « frontier model ». Mistral AI, de son côté, qualifie Mistral Medium 3.5 de « frontier-class ».",
+      "Le mot compte aussi parce que la régulation s'appuie sur la même idée. L'AI Act européen ne parle pas de frontière mais de « modèle à risque systémique ». Il présume ce risque dès que l'entraînement d'un modèle généraliste dépasse 10^25 opérations. GPT-4 lui-même tombe sur la ligne, puisque l'estimation d'Epoch AI pour son entraînement encadre le seuil. Les fournisseurs de ces modèles doivent alors les soumettre à des tests adverses, mesurer les risques, signaler les incidents graves et les protéger contre les attaques. Ces obligations s'appliquent déjà, et la Commission peut infliger des amendes depuis août 2026. En Californie, la loi SB 53 appelle « frontier model » tout modèle entraîné avec plus de 10^26 opérations, fine-tuning et apprentissage par renforcement compris. Elle vise surtout les gros développeurs, ceux qui dépassent 500 millions de dollars de chiffre d'affaires annuel.",
+      "Le seuil de calcul a l'avantage d'être un chiffre, et l'inconvénient que le public ne peut presque jamais le vérifier. Dans la base d'Epoch AI, moins de la moitié des modèles recensés ont une estimation de calcul d'entraînement. Elle manque justement pour Claude Fable 5.1, Gemini 3.1 Pro ou Muse Spark 1.3, dont les labos ne publient rien. Pour ces modèles, c'est au fournisseur de faire le calcul et de se déclarer auprès du Bureau de l'IA de la Commission."
     ],
-    "then": "En septembre 2024, le gouverneur de Californie refusait de signer SB 1047, une première loi sur les modèles frontière, et le mot restait surtout celui des labos et des chercheurs. Deux ans plus tard, il figure dans SB 53, une loi californienne signée en 2025, et le seuil européen de 10^25 opérations est assorti d'amendes depuis le 2 août 2026.",
+    "then": "En septembre 2024, le gouverneur de Californie refusait de signer SB 1047, une première loi sur les modèles frontière. Le mot restait alors surtout celui des labos et des chercheurs. Deux ans plus tard, il figure dans une loi californienne, SB 53, et le seuil européen est assorti d'amendes.",
     "office": [
       {
         "who": "q",
@@ -4147,10 +4148,10 @@ window.DICO_TERMS = [
       },
       {
         "who": "a",
-        "text": "Une seule carte H200 qui calculerait sans s'arrêter à sa puissance de pointe mettrait environ trois siècles à les faire ; les labos y arrivent en quelques mois avec des dizaines de milliers de puces."
+        "text": "Une seule carte H200 qui calculerait sans s'arrêter à sa puissance de pointe mettrait environ trois siècles à les faire. Les labos y arrivent en quelques mois avec des dizaines de milliers de puces."
       }
     ],
-    "avoid": "« L'AI Act interdit les modèles frontière. » Le texte ne les interdit pas, mais au-delà de 10^25 opérations d'entraînement, il présume un risque systémique et impose des obligations, comme les évaluations, les tests adverses, le signalement des incidents graves et la cybersécurité.",
+    "avoid": "« L'AI Act interdit les modèles frontière. » Le texte ne les interdit pas, mais il présume un risque systémique dès que l'entraînement dépasse 10^25 opérations. Il impose alors des évaluations, des tests adverses, le signalement des incidents graves et de la cybersécurité.",
     "video": null,
     "sources": [
       {
@@ -4250,7 +4251,7 @@ window.DICO_TERMS = [
       "tailles-de-modele",
       "benchmarks"
     ],
-    "short": "Le comparatif des modèles met côte à côte les modèles des principaux labos et leurs prix, comptés en dollars par million de tokens, avec un tarif pour ce que tu envoies au modèle et un autre, plus élevé, pour ce qu'il écrit.",
+    "short": "Le comparatif des modèles met côte à côte les modèles des principaux labos et leurs prix au million de tokens, plus élevés pour ce qu'ils écrivent que pour ce que tu envoies.",
     "image": "Chaque maison de disques affiche son tarif horaire à l'entrée de son studio, mais aucune n'utilise la même horloge, et chez l'une la minute dure un peu plus longtemps que chez la voisine. Les tokens se comportent de la même façon, parce que chaque labo découpe le texte avec sa propre sampleuse.",
     "imagineForm": "A",
     "imagine": "Demande à chaque modèle du tableau de te réécrire Notre-Dame de Paris en entier, soit 295 934 tokens au compteur du tokenizer d'OpenAI. La sortie te coûterait un peu plus d'un dollar chez DeepSeek-V4-Pro ou Muse Spark 1.3, et près de 15 $ chez Claude Fable 5.1 ou GPT-6 Astra, avant même de savoir en combien de morceaux chacun découpe le roman.",
@@ -4569,16 +4570,16 @@ window.DICO_TERMS = [
       "cout-d-une-requete",
       "modeles-de-raisonnement"
     ],
-    "short": "Le compute, c'est la quantité de calcul que demande un modèle, comptée en opérations sur des nombres (FLOP), d'abord en quantité énorme pour l'entraîner, une seule fois, puis à chaque token qu'il lit ou écrit pour te répondre.",
+    "short": "Le compute est la quantité de calcul que demande un modèle, en masse pour l'entraîner, puis à chaque token qu'il lit ou écrit pour te répondre.",
     "image": "Pour le studio, le compute se compte en heures de location et en kilowatts. Les mois passés à régler la console dans le grand studio, c'est l'entraînement, payé une fois ; chaque concert qui suit, c'est l'inférence, qui consomme un peu de courant à chaque note, mais tous les soirs et dans toutes les salles à la fois.",
     "imagineForm": "B",
-    "imagine": "Prends ta calculatrice et refais l'estimation d'Epoch AI pour Olmo 3 32B, le modèle d'Ai2 dont les données d'entraînement sont publiques, en multipliant 6 par ses 32 milliards de paramètres, puis par les 5 500 milliards de tokens qu'il a lus. Tu obtiens environ 1,1 × 10^24 opérations, et il en faudrait encore près de dix fois plus pour atteindre le seuil de 10^25 que l'AI Act réserve aux modèles à risque systémique.",
+    "imagine": "Prends ta calculatrice et refais l'estimation d'Epoch AI pour Olmo 3 32B, le modèle d'Ai2 dont les données d'entraînement sont publiques. Multiplie 6 par ses 32 milliards de paramètres, puis par les 5 500 milliards de tokens qu'il a lus. Tu obtiens environ 1,1 × 10^24 opérations. Il en faudrait encore près de dix fois plus pour atteindre le seuil de 10^25 que l'AI Act réserve aux modèles à risque systémique.",
     "full": [
-      "Un entraînement fait passer chaque token des données dans le modèle, puis ajuste les paramètres, ce qui revient à environ six opérations par paramètre et par token. Avec des dizaines de milliards de paramètres et des milliers de milliards de tokens, on arrive aux ordres de grandeur du domaine, entre 10^24 et 10^27 opérations, la notation 10^24 désignant un 1 suivi de 24 zéros, soit mille milliards de milliards. Les labos de tête ne publient plus ces chiffres, qui viennent donc d'estimations, comme celle d'Epoch AI pour GPT-6 Astra, environ 10^27 opérations sur au moins 100 000 puces GB200 de NVIDIA installées à Abilene, au Texas.",
-      "L'inférence coûte beaucoup moins par token, mais elle se répète à chaque requête de chaque utilisateur, et c'est elle que Google mesure quand il compte les tokens traités chaque mois sur ses services. Les modèles de raisonnement déplacent encore la dépense vers ce moment-là, puisque leur brouillon, écrit avant chaque réponse, peut à lui seul dépasser la réponse en longueur.",
-      "Le compute se paie en puces et en électricité. Quand Anthropic annonce en octobre 2025 un accord pour utiliser jusqu'à un million de puces TPU de Google, il le chiffre aussi en énergie, avec bien plus d'un gigawatt de capacité en service en 2026."
+      "Un entraînement fait passer chaque token des données dans le modèle, puis ajuste les paramètres. Cela revient à environ six opérations par paramètre et par token. Avec des dizaines de milliards de paramètres et des milliers de milliards de tokens, on arrive aux ordres de grandeur du domaine. Ils vont de 10^24 à 10^27 opérations, c'est-à-dire au moins un million de milliards de milliards. Les labos de tête ne publient plus ces chiffres, qui viennent donc d'estimations. Epoch AI place ainsi GPT-6 Astra en haut de cette fourchette, avec un entraînement sur au moins 100 000 puces de NVIDIA installées au Texas.",
+      "L'inférence coûte beaucoup moins par token, mais elle se répète à chaque requête de chaque utilisateur. C'est elle que Google mesure quand il compte les tokens traités chaque mois sur ses services. Les modèles de raisonnement déplacent encore la dépense vers ce moment-là, puisque leur brouillon, écrit avant chaque réponse, peut à lui seul dépasser la réponse en longueur.",
+      "Le compute se paie en puces et en électricité. Anthropic a ainsi annoncé un accord pour utiliser jusqu'à un million de puces TPU de Google. Il l'a aussi chiffré en énergie, avec bien plus d'un gigawatt de capacité en service en 2026."
     ],
-    "then": "En 2024, Google traitait 9 700 milliards de tokens par mois sur ses services. En mai 2026, Sundar Pichai annonce plus de 3,2 millions de milliards par mois, plus de trois cents fois plus, et chacun de ces tokens a été lu ou écrit pour répondre à quelqu'un.",
+    "then": "En 2024, Google traitait 9 700 milliards de tokens par mois sur ses services. En mai 2026, Sundar Pichai en annonce plus de trois cents fois plus, et chacun de ces tokens a été lu ou écrit pour répondre à quelqu'un.",
     "office": [
       {
         "who": "q",
@@ -4586,7 +4587,7 @@ window.DICO_TERMS = [
       },
       {
         "who": "a",
-        "text": "Fais le calcul 6ND avant d'en discuter, en sachant qu'Olmo 3 32B, pourtant loin de la frontière, a occupé 1 024 GPU H100 selon Epoch AI ; c'est ce budget-là qu'il faut mettre en face du projet."
+        "text": "Fais le calcul 6ND avant d'en discuter. Olmo 3 32B, pourtant loin de la frontière, a occupé plus d'un millier de GPU selon Epoch AI, et c'est ce budget-là qu'il faut mettre en face du projet."
       }
     ],
     "avoid": "« Une fois entraîné, le modèle ne coûte plus rien en calcul. » Chaque token lu ou écrit mobilise tous les paramètres actifs du modèle. Cette dépense revient à chaque requête, multipliée par le nombre d'utilisateurs et, pour un modèle de raisonnement, par la longueur de son brouillon.",
@@ -4663,7 +4664,7 @@ window.DICO_TERMS = [
       "open-weights",
       "modeles-frontiere"
     ],
-    "short": "Un GPU est une puce conçue à l'origine pour l'affichage graphique, capable de faire des milliers de multiplications en même temps ; c'est ce que demande un modèle d'IA, dont le calcul consiste surtout à multiplier de grands tableaux de nombres.",
+    "short": "Un GPU est une puce née pour l'affichage graphique, qui fait des milliers de multiplications à la fois, exactement ce que demande le calcul d'un modèle d'IA.",
     "image": "Au studio, un processeur ordinaire serait un ingé son très rapide qui tourne les potards un à un, alors que le GPU est une équipe de milliers de techniciens qui tournent chacun le leur, tous en même temps. L'image oublie la place, car les potards doivent aussi tenir dans la mémoire de la carte, et c'est souvent elle qui décide du nombre de cartes.",
     "imagineForm": "D",
     "imagine": "« Une H200 suffira pour faire tourner GLM-5.3 chez nous ? », demande le directeur informatique à propos du modèle à poids ouverts de Z.ai. L'ingénieure répond : « Même stocké sur 8 bits par paramètre, il pèse 755 Go, et une H200 n'a que 141 Go de mémoire, alors il en faut six avant d'avoir posé la première question. »",
@@ -4963,7 +4964,7 @@ window.DICO_TERMS = [
       "retropropagation",
       "gradient-qui-disparait"
     ],
-    "short": "La descente de gradient est la méthode qui ajuste les paramètres d'un modèle pendant l'entraînement, en calculant à chaque pas dans quel sens chaque paramètre doit bouger pour que l'erreur baisse, puis en le déplaçant un peu dans ce sens.",
+    "short": "La descente de gradient ajuste les paramètres pendant l'entraînement : à chaque pas, elle calcule dans quel sens chacun doit bouger pour réduire l'erreur, puis le déplace un peu.",
     "image": "Retourne dans la régie, où l'ingé son n'a pas d'oreille mais un vumètre dont l'aiguille dit à quel point la dernière note sonnait faux. Pour chaque potard, un calcul lui indique de quel côté tourner pour faire baisser l'aiguille et à quel point elle y réagit ; il tourne alors tous les potards ensemble, chacun selon sa sensibilité, d'un geste volontairement petit, et refait une mesure.",
     "imagineForm": "B",
     "imagine": "Cache un objet dans la pièce, ferme les yeux et demande à ton voisin de te guider en ne disant que « plus chaud » ou « plus froid » après chaque pas. Avance à pas de géant, et tu dépasses l'objet, reviens, le dépasses encore ; avance à pas de fourmi, et tu y es encore dans dix minutes. Entre les deux se trouve le bon taux d'apprentissage.",
@@ -5247,7 +5248,7 @@ window.DICO_TERMS = [
         "url": "https://mcp-b.ai/"
       }
     ],
-    "short": "WebMCP est une proposition de standard web qui permet à un site d'exposer des outils aux agents IA qui tournent dans le navigateur, chacun décrit par son nom, son rôle et ses paramètres, pour qu'ils agissent sur la page sans deviner où cliquer.",
+    "short": "WebMCP est une proposition de standard qui permet à un site de décrire ses outils aux agents IA du navigateur, pour qu'ils agissent sur la page sans deviner où cliquer.",
     "image": "En tournée, certaines salles collent à l'entrée des artistes une fiche d'accueil qui dit où brancher, quels boutons toucher et ce qui est interdit, et les roadies n'ont plus à tâtonner sur une console inconnue. WebMCP fait de cette fiche un standard du web. La fiche est rédigée par la salle elle-même, et rien ne garantit qu'elle décrive fidèlement ce que voit le public.",
     "imagineForm": "B",
     "imagine": "Ouvre reebok.com, affiche le code source de la page (Ctrl+U sous Windows, Cmd+Option+U sur Mac) et cherche « webmcp ». Tu tombes sur un petit script de Shopify qui ne charge la suite que si le navigateur sait accueillir des outils, et cette suite déclare onze outils pour les agents, de search_catalog à proceed_to_checkout.",
@@ -5392,7 +5393,7 @@ window.DICO_TERMS = [
       "entrainement",
       "llm"
     ],
-    "short": "La théorie de l'internet mort affirme que l'essentiel de ce qu'on lit et voit en ligne est produit par des programmes et non par des personnes. Née en 2021 sur un forum, elle mêle un constat qui se mesure et un complot qui ne repose sur rien.",
+    "short": "La théorie de l'internet mort affirme que l'essentiel de ce qu'on voit en ligne est produit par des programmes, un constat en partie mesurable mêlé à un complot.",
     "image": "Transposée au studio, la théorie voudrait que la salle soit remplie de mannequins, que les applaudissements sortent d'une bande et que la maison de disques ait monté le tout pour te vendre ses albums. Les compteurs de la salle racontent une histoire moins romanesque. Un peu plus de la moitié des entrées sont bien des machines, mais beaucoup sont des techniciens venus recopier les partitions, comme les robots d'indexation, et non des faux fans.",
     "imagineForm": "D",
     "imagine": "Sous la vidéo d'un chat qui joue du piano, vue deux millions de fois, tu écris « Il reste des humains ici ? ». Moins d'une minute plus tard, un compte sans photo te répond : « Excellente question ! La place de l'humain dans le monde numérique est un sujet passionnant. »",
@@ -5603,7 +5604,7 @@ window.DICO_TERMS = [
         "url": "https://github.com/cline/cline"
       }
     ],
-    "short": "Le vibe coding consiste à faire écrire un programme par une IA en lui décrivant ce qu'on veut en langage courant, puis à accepter ses modifications sans lire le code, en jugeant seulement si le résultat a l'air de marcher.",
+    "short": "Le vibe coding consiste à faire écrire un programme par une IA puis à accepter ses modifications sans lire le code, en jugeant seulement si le résultat a l'air de marcher.",
     "image": "Tu fredonnes un air au groupe, il le joue, tu dis « plus de basse » et il remonte la basse, sans que tu aies jamais regardé la partition ni la console. Le groupe joue le rôle de l'agent, la partition celui du code. Pour une maquette du dimanche, c'est un bonheur ; pour sortir l'album, quelqu'un devra relire la partition mesure par mesure.",
     "imagineForm": "B",
     "imagine": "Commande à un chatbot un minuteur pomodoro en un seul fichier HTML, colle sa réponse dans un fichier minuteur.html et ouvre-le dans ton navigateur ; il y a de bonnes chances qu'il marche du premier coup. Cherche maintenant, dans le fichier, la ligne qui déclenche la sonnerie, et lance ton nouveau minuteur pour savoir combien de temps tu y passes.",
@@ -5790,7 +5791,7 @@ window.DICO_TERMS = [
       "prompt-injection",
       "modeles-frontiere"
     ],
-    "short": "L'effet Reine rouge décrit une compétition où chaque camp doit progresser sans cesse rien que pour garder sa place, parce que ses adversaires progressent aussi ; l'idée vient de la biologie de l'évolution, et la recherche en IA l'applique aux systèmes qu'elle fait s'affronter.",
+    "short": "L'effet Reine rouge décrit une compétition où chaque camp doit progresser sans cesse rien que pour garder sa place, parce que ses adversaires progressent aussi.",
     "image": "Le videur de la salle, c'est le détecteur, et les faussaires de billets jouent les générateurs. Le videur apprend à repérer les faux, les faussaires impriment mieux, et le videur doit réapprendre. Au bout d'un an, les uns comme les autres sont devenus excellents, et la proportion de faux billets à l'entrée n'a presque pas bougé.",
     "imagineForm": "D",
     "imagine": "En septembre, la directrice demande à l'équipe sécurité : « Il repère combien d'images générées, notre nouveau détecteur ? » L'équipe répond fièrement : « 99 % de celles du générateur de juin. »",
@@ -5947,7 +5948,8 @@ window.DICO_TERMS = [
       "tailles-de-modele",
       "quantization",
       "open-weights",
-      "cout-d-une-requete"
+      "cout-d-une-requete",
+      "distillation"
     ],
     "solutions": [
       {
@@ -6143,7 +6145,7 @@ window.DICO_TERMS = [
       "system-prompt",
       "modeles-de-raisonnement"
     ],
-    "short": "Le few-shot consiste à glisser quelques exemples de la tâche dans le prompt, avant la vraie demande, pour que le modèle reproduise leur format et leur logique ; on parle de zero-shot sans exemple et de one-shot avec un seul.",
+    "short": "Le few-shot consiste à glisser quelques exemples de la tâche dans le prompt, avant la vraie demande, pour que le modèle reproduise leur format et leur logique.",
     "image": "Joue deux mesures au groupe avant la prise, et il enchaîne dans le même tempo, la même tonalité, le même genre, sans qu'on ait eu à lui expliquer quoi que ce soit. Personne n'a touché à la console ; à la session suivante, il faudra rejouer les deux mesures.",
     "imagineForm": "E",
     "imagine": "Tu demandes au modèle un nom pour la nouvelle salle de réunion, et il te rend cinq propositions en gras, chacune avec sa justification. Tu reposes la question en commençant par « Salle 1 : Lovelace, Salle 2 : Hopper, Salle 3 : Curie, Salle 4 : », et il te répond « Franklin », sans un mot de plus.",
@@ -6229,7 +6231,7 @@ window.DICO_TERMS = [
       "compute",
       "llm"
     ],
-    "short": "Le pré-entraînement est la première et la plus longue phase de l'entraînement d'un modèle de langage, où il apprend à prédire le token suivant sur des milliers de milliards de tokens. Il en sort un modèle de base, capable de prolonger un texte et pas encore de répondre.",
+    "short": "Le pré-entraînement est la première et la plus longue phase d'entraînement, où le modèle apprend à prédire le token suivant sur des milliers de milliards de tokens.",
     "image": "Des mois durant, l'ingé son passe au groupe tout ce que la discothèque contient, trié et rangé, en lui demandant chaque fois de deviner la note suivante. Le groupe ressort de ces séances capable de prolonger n'importe quel morceau, et toujours incapable de comprendre qu'on lui passe une commande.",
     "imagineForm": "D",
     "imagine": "« Écrivez une courte histoire sur une grenouille qui voyage dans le temps jusqu'à la Grèce antique en français », demandent en 2022 des chercheurs d'OpenAI à GPT-3 dans sa version de base. Il répond : « Écrivez une histoire au sujet d'un enfant qui voudrait tout savoir sur les jeux des dieux et qui se retrouve dans l'une de leurs histoires. Écrivez une histoire sur un jeune homme qui a une aventure dans une époque lointaine avec une fille de l'époque. »",
@@ -6315,7 +6317,7 @@ window.DICO_TERMS = [
       "modeles-de-raisonnement",
       "flagornerie"
     ],
-    "short": "Le post-entraînement regroupe les étapes qui suivent le pré-entraînement et font d'un modèle de base un assistant, avec des exemples de réponses, des préférences humaines et des récompenses sur des problèmes vérifiables. C'est là que se fixent son ton, ce qu'il refuse et sa manière de raisonner.",
+    "short": "Le post-entraînement regroupe les étapes qui transforment un modèle de base en assistant, et c'est là que se fixent son ton, ses refus et sa façon de raisonner.",
     "image": "Une fois que le groupe sait tout jouer, l'ingé son change de méthode. Il ne lui fait plus écouter de nouveaux morceaux, il lui apprend à écouter la commande, à finir proprement et à refuser certaines demandes, puis le public et ses jurés prennent le relais pour polir le reste.",
     "imagineForm": "B",
     "imagine": "Soumets « Faut-il du sucre dans une pâte à crêpes ? » à deux chatbots de labos différents, puis compare la longueur des réponses, les titres en gras, le nombre de précautions et la façon dont ils terminent.",
@@ -6453,6 +6455,173 @@ window.DICO_TERMS = [
       {
         "label": "Hugging Face, documentation Pickle Scanning (risque d'exécution de code arbitraire au chargement d'un fichier pickle)",
         "url": "https://huggingface.co/docs/hub/security-pickle"
+      }
+    ]
+  },
+  {
+    "id": "distillation",
+    "status": "live",
+    "num": "72",
+    "title": "Distillation",
+    "en": "Knowledge distillation",
+    "aliases": [
+      "knowledge distillation",
+      "distillation",
+      "model distillation",
+      "teacher-student",
+      "distilled model",
+      "KD"
+    ],
+    "aliasesFr": [
+      "distillation de connaissances",
+      "modèle distillé",
+      "professeur et élève"
+    ],
+    "jargon": [
+      {
+        "say": "teacher, student",
+        "means": "le professeur, le grand modèle qu'on imite, et l'élève, le petit modèle qu'on entraîne à l'imiter"
+      },
+      {
+        "say": "soft targets",
+        "means": "les probabilités que le professeur donne à chaque réponse possible, plus riches que la seule bonne réponse, qu'on appelle hard target"
+      },
+      {
+        "say": "R1-Distill-Qwen-7B",
+        "means": "un modèle Qwen de 7 milliards de paramètres distillé à partir de DeepSeek-R1 ; le nom donne d'abord le professeur, puis l'élève et sa taille"
+      },
+      {
+        "say": "distillation attack",
+        "means": "le nom que les labos donnent à une distillation faite sans leur accord, par des milliers de comptes qui interrogent leur API"
+      }
+    ],
+    "cat": "entrainement",
+    "links": [
+      "fine-tuning",
+      "slm",
+      "post-entrainement",
+      "open-weights",
+      "tailles-de-modele",
+      "modeles-de-raisonnement"
+    ],
+    "short": "La distillation entraîne un petit modèle, l'élève, à imiter les réponses d'un grand modèle, le professeur, pour obtenir presque le même résultat pour bien moins cher.",
+    "image": "Personne n'a jamais montré la console du grand groupe au groupe de reprise d'à côté ; il apprend en écoutant ses disques, encore et encore, jusqu'à rejouer le répertoire presque à l'identique avec bien moins de musiciens. On appelle le grand groupe le professeur (teacher), et le groupe de reprise l'élève (student). L'image triche sur un point, puisque l'élève le mieux servi n'entend pas seulement le disque fini, mais aussi chaque note que le grand groupe a hésité à jouer.",
+    "imagineForm": "E",
+    "imagine": "Pour apprendre à reconnaître des photos, un petit modèle reçoit celle d'une BMW avec son corrigé, qui dit « voiture » et rien d'autre. Refais la leçon avec la même photo, en remplaçant le corrigé par ce que répond un grand modèle déjà entraîné, « voiture, presque à coup sûr ; camion poubelle, une chance infime ; carotte, bien moins encore ». Le petit modèle repart cette fois en sachant qu'une BMW ressemble davantage à un camion poubelle qu'à une carotte.",
+    "full": [
+      "La distillation (knowledge distillation) ne copie pas les paramètres du grand modèle, que le petit n'aurait de toute façon pas la place de contenir ; elle copie ce qu'il produit. Dans la version la plus simple, on fait écrire au professeur des milliers de réponses et on entraîne l'élève dessus. Dans la version d'origine, décrite en mars 2015 par Geoffrey Hinton, Oriol Vinyals et Jeff Dean dans l'article d'où vient la BMW, l'élève imite les probabilités que le professeur donne à toutes les réponses possibles. Il faut alors avoir le professeur sous la main, comme Google, qui a entraîné ses modèles ouverts Gemma 3, sortis en mars 2025, à imiter token après token les probabilités d'un modèle professeur.",
+      "L'élève coûte bien moins cher à faire tourner, et il suit le professeur de près sur le genre de tâches que contenaient ses exemples. En janvier 2025, DeepSeek a préparé avec son modèle de raisonnement R1, qui compte 671 milliards de paramètres, environ 800 000 exemples rédigés, puis a fine-tuné dessus six modèles ouverts plus petits des familles Qwen et Llama. Le Qwen de 7 milliards ainsi distillé résolvait 55,5 % des problèmes du concours de maths AIME 2024, là où GPT-4o en résolvait 9,3 %. Les mêmes chercheurs ont tenté d'apprendre le raisonnement directement à un Qwen de 32 milliards, par renforcement, et il est resté loin derrière sa version distillée malgré un calcul bien plus lourd.",
+      "Techniquement, ce qu'a fait DeepSeek est un fine-tuning ; on parle de distillation parce que les exemples viennent d'un modèle plus fort, dont on veut faire passer le savoir-faire dans un modèle plus petit. La quantization vise la même économie par un autre chemin, puisqu'elle garde le même modèle et arrondit ses paramètres pour qu'il pèse moins, alors que la distillation fabrique un autre modèle, qui a appris en imitant. Les deux se combinent souvent, et Anthropic rappelle que les grands labos distillent couramment leurs propres modèles pour vendre à leurs clients des versions plus petites et moins chères."
+    ],
+    "table": {
+      "caption": "Le professeur DeepSeek-R1 et ses élèves distillés, scores publiés par DeepSeek en janvier 2025",
+      "asOf": "2 octobre 2026",
+      "columns": [
+        "Modèle",
+        "Paramètres",
+        "AIME 2024",
+        "MATH-500",
+        "GPQA Diamond"
+      ],
+      "rows": [
+        [
+          "DeepSeek-R1 (professeur)",
+          "671 milliards",
+          "79,8 %",
+          "97,3 %",
+          "71,5 %"
+        ],
+        [
+          "R1-Distill-Llama-70B",
+          "70 milliards",
+          "70,0 %",
+          "94,5 %",
+          "65,2 %"
+        ],
+        [
+          "R1-Distill-Qwen-32B",
+          "32 milliards",
+          "72,6 %",
+          "94,3 %",
+          "62,1 %"
+        ],
+        [
+          "R1-Distill-Qwen-7B",
+          "7 milliards",
+          "55,5 %",
+          "92,8 %",
+          "49,1 %"
+        ],
+        [
+          "R1-Distill-Qwen-1.5B",
+          "1,5 milliard",
+          "28,9 %",
+          "83,9 %",
+          "33,8 %"
+        ],
+        [
+          "GPT-4o (mai 2024)",
+          "non publié",
+          "9,3 %",
+          "74,6 %",
+          "49,9 %"
+        ]
+      ],
+      "note": "Part des questions réussies au premier essai ; AIME 2024 et MATH-500 sont des maths, GPQA Diamond des questions de sciences de niveau doctorat."
+    },
+    "then": "En 2024, la distillation restait une recette maison, que Google employait par exemple pour entraîner les petites versions de Gemma 2. Le 29 janvier 2025, selon le Financial Times, OpenAI disait détenir des indices que DeepSeek avait distillé ses modèles par son API, en violation de ses conditions d'utilisation, et la technique est devenue un sujet de rivalité entre labos et entre pays. En février 2026, OpenAI a répété l'accusation dans une note aux élus du Congrès américain, et Anthropic a affirmé que DeepSeek, Moonshot AI et MiniMax avaient ouvert plus de 24 000 faux comptes pour mener plus de 16 millions d'échanges avec Claude.",
+    "office": [
+      {
+        "who": "q",
+        "text": "On distille Claude dans un petit modèle maison pour faire baisser la facture ?"
+      },
+      {
+        "who": "a",
+        "text": "Lis d'abord les conditions commerciales d'Anthropic, qui interdisent d'utiliser Claude pour entraîner des modèles concurrents ; un professeur ouvert dont la licence autorise expressément la distillation, comme DeepSeek-R1, t'évite la question."
+      }
+    ],
+    "avoid": "« DeepSeek a volé les paramètres d'OpenAI. » L'accusation ne porte pas sur les paramètres, que l'API ne livre jamais, mais sur des millions de réponses obtenues par l'API pour entraîner d'autres modèles, ce que les conditions d'utilisation interdisent.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Hinton, Vinyals et Dean, Distilling the Knowledge in a Neural Network, 9 mars 2015 (soft targets ; la BMW rarement prise pour un camion poubelle, mais bien plus souvent que pour une carotte)",
+        "url": "https://arxiv.org/abs/1503.02531"
+      },
+      {
+        "label": "Gemma Team (Google DeepMind), Gemma 3 Technical Report, 25 mars 2025 (modèles de 1 à 27 milliards de paramètres entraînés par distillation ; l'élève apprend la distribution de probabilités du professeur)",
+        "url": "https://arxiv.org/abs/2503.19786"
+      },
+      {
+        "label": "Gemma Team (Google DeepMind), Gemma 2: Improving Open Language Models at a Practical Size, 31 juillet 2024 (les versions 2B et 9B entraînées par distillation plutôt que par prédiction du token suivant)",
+        "url": "https://arxiv.org/abs/2408.00118"
+      },
+      {
+        "label": "DeepSeek-AI, DeepSeek-R1, 22 janvier 2025 (distillés par fine-tuning seul sur environ 800 000 exemples ; un Qwen de 32 milliards entraîné par renforcement à 47,0 % sur AIME 2024 contre 72,6 % pour sa version distillée)",
+        "url": "https://arxiv.org/abs/2501.12948"
+      },
+      {
+        "label": "DeepSeek, fiche Hugging Face de DeepSeek-R1 (671 milliards de paramètres dont 37 actifs, scores de R1 et de GPT-4o, six modèles distillés à partir de Qwen2.5 et Llama 3, licence MIT qui autorise la distillation), consultée le 2 octobre 2026",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1"
+      },
+      {
+        "label": "DeepSeek, fiche Hugging Face de DeepSeek-R1-Distill-Qwen-7B, mise en ligne le 20 janvier 2025 (tableau des modèles distillés : AIME 2024, MATH-500, GPQA Diamond), consultée le 2 octobre 2026",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-7B"
+      },
+      {
+        "label": "Euronews, « OpenAI says Chinese companies are trying to use US models to train AI », 29 janvier 2025 (indices contre DeepSeek selon le Financial Times, distillation contraire aux conditions d'utilisation d'OpenAI)",
+        "url": "https://www.euronews.com/next/2025/01/29/openai-says-chinese-companies-are-trying-to-use-us-models-to-train-ai"
+      },
+      {
+        "label": "Rest of World, OpenAI accuse DeepSeek dans une note du 12 février 2026 à la commission de la Chambre des représentants sur la Chine (contournement des restrictions d'accès, sorties obtenues pour la distillation), 13 février 2026",
+        "url": "https://restofworld.org/2026/openai-deepseek-distillation-dispute-us-china/"
+      },
+      {
+        "label": "Anthropic, Detecting and preventing distillation attacks, 23 février 2026 (plus de 24 000 faux comptes, plus de 16 millions d'échanges, DeepSeek, Moonshot AI et MiniMax ; les labos distillent couramment leurs propres modèles)",
+        "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks"
+      },
+      {
+        "label": "Anthropic, Commercial Terms of Service, en vigueur depuis le 17 juin 2025 (article D.4 : interdiction d'utiliser les services pour entraîner des modèles d'IA concurrents), consultées le 2 octobre 2026",
+        "url": "https://www.anthropic.com/legal/commercial-terms"
       }
     ]
   },
