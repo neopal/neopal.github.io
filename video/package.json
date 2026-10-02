@@ -1,10 +1,11 @@
 {
   "name": "dico-ia-video-pilot",
   "private": true,
-  "description": "PILOTE JETABLE : short Token en direction C",
+  "description": "Shorts du Lexique IA (Remotion) : les sept compositions sont dans src/Root.tsx",
   "scripts": {
     "studio": "remotion studio src/index.ts",
-    "render": "remotion render src/index.ts Token out/token.mp4"
+    "render": "remotion render src/index.ts",
+    "check": "python out/tools/captions.py"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.532",
