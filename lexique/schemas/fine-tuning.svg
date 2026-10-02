@@ -84,7 +84,7 @@
 <rect class="fd" x="75" y="206" width="12" height="12" rx="2"/>
 <rect class="fd" x="90" y="206" width="12" height="12" rx="2"/>
 <rect class="fd" x="105" y="206" width="12" height="12" rx="2"/>
-<text class="m mu" x="58" y="236" text-anchor="middle">paramètres figés</text>
+<text class="m mu" x="0" y="236">paramètres figés</text>
 <text class="big mu" x="128" y="190" text-anchor="middle">+</text>
 <rect class="fa" x="146" y="146" width="12" height="12" rx="2"/>
 <rect class="fa" x="146" y="161" width="12" height="12" rx="2"/>

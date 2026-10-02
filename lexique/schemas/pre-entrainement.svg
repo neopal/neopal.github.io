@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 308" role="img" aria-labelledby="pre-entrainement-t">
+<title id="pre-entrainement-t">En milliards de tokens, du web indexé utile (environ 400 000) à Common Crawl (environ 130 000), puis FineWeb (15 000) et FineWeb-Edu (1 300) : chaque tri ne garde qu'une fraction du texte.</title>
+<text class="m d" x="358" y="14" text-anchor="end">milliards de tokens</text>
+<text class="m" x="0" y="40">web indexé utile</text>
+<text class="m mu" x="358" y="40" text-anchor="end">≈ 400 000</text>
+<rect class="fl" x="2.0" y="48" width="356.0" height="14" rx="2"/>
+<text class="m mu" x="180" y="80" text-anchor="middle">estimation d'Epoch AI, 2024</text>
+<text class="m" x="0" y="104">Common Crawl</text>
+<text class="m mu" x="358" y="104" text-anchor="end">≈ 130 000</text>
+<rect class="fl" x="122.2" y="112" width="115.7" height="14" rx="2"/>
+<text class="m" x="0" y="150">FineWeb</text>
+<text class="m ac" x="358" y="150" text-anchor="end">15 000</text>
+<rect class="fa" x="173.3" y="158" width="13.3" height="14" rx="2"/>
+<text class="m mu" x="180" y="190" text-anchor="middle">96 instantanés, dédoublonnés, filtrés</text>
+<text class="m" x="0" y="214">FineWeb-Edu</text>
+<text class="m ac" x="358" y="214" text-anchor="end">1 300</text>
+<rect class="fa" x="179.0" y="222" width="2.0" height="14" rx="2"/>
+<text class="m mu" x="180" y="254" text-anchor="middle">pages éducatives seulement</text>
+<text class="i mu" x="0" y="282">Les modèles qui lisent FineWeb-Edu font</text>
+<text class="i mu" x="0" y="302">mieux que ceux qui lisent FineWeb entier.</text>
+</svg>
