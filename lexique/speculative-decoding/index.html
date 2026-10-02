@@ -1,0 +1,1187 @@
+<!doctype html>
+<html lang="fr" data-term="speculative-decoding">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Décodage spéculatif | Lexique IA</title>
+<meta name="description" content="Le décodage spéculatif accélère un modèle en laissant un petit modèle deviner les prochains tokens, que le grand vérifie tous d&#39;un seul passage, sans…">
+<link rel="canonical" href="https://neopal.github.io/lexique/speculative-decoding/">
+<meta property="og:site_name" content="Lexique IA">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Décodage spéculatif | Lexique IA">
+<meta property="og:description" content="Le décodage spéculatif accélère un modèle en laissant un petit modèle deviner les prochains tokens, que le grand vérifie tous d&#39;un seul passage, sans…">
+<meta property="og:url" content="https://neopal.github.io/lexique/speculative-decoding/">
+<meta property="og:image" content="https://neopal.github.io/lexique/og/speculative-decoding.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Décodage spéculatif">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Décodage spéculatif | Lexique IA">
+<meta name="twitter:description" content="Le décodage spéculatif accélère un modèle en laissant un petit modèle deviner les prochains tokens, que le grand vérifie tous d&#39;un seul passage, sans…">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/speculative-decoding.jpg">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400;1,6..72,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0b; --panel:#111; --line:#262626; --text:#f2f2f2; --muted:#a8a8a8; --dim:#8a8a8a;
+  --accent:#7CFFB2; --top:57px;
+  --serif:Newsreader,Georgia,'Times New Roman',serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.sr{position:absolute;left:0;top:0;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+#graph g{outline:none}
+#graph g.far text{opacity:0;transition:opacity .15s}
+#graph g.far:hover text,#graph g.far:focus-visible text{opacity:1}
+h1[tabindex]:focus{outline:none}
+#graph g:focus-visible circle{stroke:#fff;stroke-width:6}
+
+/* ---------- Barre du haut ---------- */
+.top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:16px;height:var(--top);padding:0 24px;border-bottom:1px solid var(--line);background:rgba(11,11,11,.94);backdrop-filter:blur(8px)}
+.brand{font-weight:800;font-variation-settings:'opsz' 72;font-size:22px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.top a.back{font-size:15px;color:var(--muted);text-decoration:none;white-space:nowrap;margin-left:auto}
+.top a.back:hover{color:var(--text)}
+.search{position:relative;flex:1 1 auto;min-width:0;max-width:440px;margin-left:24px}
+.search input{width:100%;font:inherit;font-size:16px;color:var(--text);background:#161616;border:1px solid var(--line);border-radius:8px;padding:7px 12px;outline:none}
+.search input::placeholder{color:var(--dim)}
+.search input:focus{border-color:#555;background:#1a1a1a}
+.search input::-webkit-search-cancel-button{filter:invert(1) opacity(.5)}
+.mapbtn{display:none;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:transparent;border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;white-space:nowrap}
+
+.results{position:absolute;top:calc(100% + 6px);left:0;width:min(480px,calc(100vw - 32px));max-height:min(420px,70vh);overflow-y:auto;list-style:none;background:#151515;border:1px solid #333;border-radius:10px;padding:6px;box-shadow:0 12px 40px rgba(0,0,0,.6)}
+.results[hidden]{display:none}
+.results li{display:flex;align-items:baseline;gap:10px;padding:9px 10px;border-radius:7px;cursor:pointer;min-width:0}
+.results li[aria-selected="true"]{background:#242424}
+.results li .t{font-size:17px;font-weight:600;flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.results li .h{font-family:var(--mono);font-size:13px;color:var(--muted);flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.results li .c{margin-left:auto;font-size:14px;color:var(--c,var(--muted));white-space:nowrap;flex:none}
+.results li.soon .t{color:var(--dim);font-weight:400}
+.results li.soon .c{color:var(--dim)}
+.results li.empty{color:var(--muted);cursor:default}
+
+/* ---------- Mise en page ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
+.graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
+#graph{width:100%;height:100%;display:block;touch-action:manipulation}
+.legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.mapclose{display:none}
+.ego{display:none}
+
+.panel{padding:40px 40px 80px;background:var(--panel);min-width:0}
+.kicker{font-size:16px;font-weight:600;color:var(--cat,var(--accent));margin-bottom:10px}
+h1{font-size:48px;line-height:1.02;font-weight:800;font-variation-settings:'opsz' 72;letter-spacing:-.01em;margin-bottom:20px}
+.en{margin:-8px 0 20px;font-size:16px;color:var(--muted)}
+.en span{color:var(--text);font-family:var(--mono);font-size:14px}
+.lead{font-size:21px;line-height:1.45;font-weight:400}
+h2{font-size:20px;font-weight:600;font-style:italic;color:var(--text);margin:36px 0 8px}
+p{margin-bottom:12px}
+.imagine{border-left:3px solid var(--cat,var(--accent));padding-left:16px;font-style:italic}
+
+.video{margin:28px 0 4px}
+.video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
+
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
+.term a.tw{color:inherit;text-decoration:underline dotted;text-decoration-thickness:2px;text-decoration-color:#6a6a6a;text-underline-offset:4px}
+.term a.tw:hover,.term a.tw:focus-visible{text-decoration-style:solid;text-decoration-color:var(--c)}
+.splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
+.chip{font-family:var(--mono);font-size:15px;padding:3px 10px;border:1.5px solid var(--cat,var(--accent));color:var(--text);border-radius:6px}
+
+.jargon div{padding:10px 0;border-top:1px solid var(--line)}
+.jargon div:first-child{border-top:0;padding-top:2px}
+.jargon dt{font-family:var(--mono);font-size:15px;color:var(--text)}
+.jargon dd{color:var(--muted)}
+
+.solutions div{padding:8px 0;border-top:1px solid var(--line)}
+.solutions div:first-child{border-top:0;padding-top:2px}
+.solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
+.solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
+
+.chat{display:flex;flex-direction:column;gap:10px}
+.bubble{max-width:88%;padding:12px 16px;border-radius:18px;font-size:17px;line-height:1.5}
+.bubble.q{align-self:flex-end;background:#232323}
+.bubble.a{align-self:flex-start;border:1.5px solid var(--line)}
+
+.avoid{display:flex;gap:12px}
+.avoid b{color:#FF7A7A;font-size:20px;line-height:1.4}
+
+.tl{position:relative;display:inline-block;font-size:16px;line-height:1.4;padding:6px 12px;border-radius:999px;border:1.5px solid var(--line);color:var(--text);text-decoration:none;white-space:nowrap}
+.tl.live{border-color:var(--c)}
+.tl.live:hover{background:rgba(255,255,255,.06)}
+.tl.soon{color:var(--dim)}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.rel{display:none}
+
+.sources{font-size:15px;color:var(--muted);padding-left:18px}
+.sources li{margin-bottom:6px;overflow-wrap:anywhere}
+
+.pager{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-top:44px;padding-top:20px;border-top:1px solid var(--line)}
+.pager a{font-size:16px;color:var(--muted);text-decoration:none;display:flex;gap:6px;min-width:0}
+.pager a:hover{color:var(--text)}
+.pager .prev,.pager .next{flex:1 1 0;min-width:0}
+.pager .next{justify-content:flex-end;text-align:right;flex-direction:row-reverse}
+.pager .all{flex:none}
+
+.index h1{font-size:56px}
+.index ul{list-style:none;margin-top:8px}
+.index li{border-top:1px solid var(--line)}
+.index li a,.index li .row{display:flex;align-items:baseline;gap:12px;padding:14px 0;text-decoration:none;color:var(--text)}
+.index li a:hover .t{color:var(--c,var(--accent))}
+.index li .e{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.index li .c{margin-left:auto;font-size:15px;color:var(--muted);text-align:right}
+.index li.soon .row{color:var(--dim)}
+.index li.soon .c{color:var(--dim)}
+.index li i{flex:none;align-self:center;width:10px;height:10px;border-radius:50%;background:var(--c)}
+.index li.soon i{background:transparent;border:1.5px solid #555}
+
+.foot{display:none}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#222;border:1px solid var(--line);padding:10px 16px;border-radius:10px;font-size:16px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:60;max-width:calc(100vw - 32px)}
+.toast.on{opacity:1}
+
+/* ---------- Mobile ---------- */
+@media (max-width:900px){
+  :root{--top:56px}
+  body{font-size:18px;line-height:1.6}
+  .top{gap:8px;padding:0 12px 0 16px;background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none}
+  .brand{font-size:19px}
+  .top a.back{display:none}
+  .search{margin-left:0;max-width:none;position:static}
+  .search input{font-size:17px;padding:7px 8px}
+  .mapbtn{display:block;padding:7px 9px}
+  .results{position:fixed;top:var(--top);left:0;right:0;bottom:0;width:auto;max-height:none;border-radius:0;border-width:1px 0 0;padding:6px 8px 24px;box-shadow:none;background:#121212}
+  .results li{padding:13px 10px}
+
+  .layout{grid-template-columns:minmax(0,1fr);min-height:0}
+  .graph-wrap{display:none}
+  .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.az,#graph,.legend{display:none!important}
+
+  /* Carte mobile : vue centrée sur un terme, ses liens autour. */
+  .graph-wrap.open .ego{display:flex;flex-direction:column;height:100%}
+  .egobar{flex:none;display:flex;align-items:center;gap:8px;min-height:var(--top);padding:8px 12px;border-bottom:1px solid var(--line)}
+  .egobar button{font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;min-height:44px;padding:0 14px;cursor:pointer}
+  .egobar .egoback{display:flex;align-items:center;gap:6px;padding:0 12px 0 10px}
+  .egobar .egoback[hidden]{display:none}
+  .mapclose{display:block;margin-left:auto}
+  .egostage{position:relative;flex:1 1 auto;min-height:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain}
+  .egonodes{position:relative;width:100%}
+  .egoedges{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+  .eg{position:absolute;left:0;top:0;will-change:transform,opacity}
+  .eg button{font:inherit;color:var(--text);background:transparent;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .eg .dot{flex:none;display:block;width:var(--d,14px);height:var(--d,14px);border-radius:50%;background:var(--c)}
+  .eg .lab{display:block;font-size:17px;line-height:1.2;font-weight:600;background:var(--bg);padding:2px 4px;border-radius:6px}
+  .eg .n{font-family:var(--mono);font-size:14px;font-weight:400;color:var(--muted);margin-left:6px;white-space:nowrap}
+  .eg .nb{display:flex;align-items:center;gap:8px;min-height:44px;padding:6px 4px;border-radius:10px}
+  .eg.l .nb{flex-direction:row-reverse;text-align:right}
+  .eg.r .nb{text-align:left}
+  .eg.tip .nb{flex-direction:column;gap:6px;text-align:center}
+  .eg.tip.up .nb{flex-direction:column-reverse}
+  .eg .nb:active .lab,.eg .nb:hover .lab{color:var(--c)}
+  .eg .nb:focus-visible{outline-offset:0}
+  .eg .nb:focus-visible .dot{box-shadow:0 0 0 3px var(--bg),0 0 0 5px #fff}
+  .eg.card{display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px 16px 10px;border:1.5px solid var(--c);border-radius:16px;background:var(--bg)}
+  .eg.card .ct{display:block;min-height:44px;font-size:28px;line-height:1.08;font-weight:800;font-variation-settings:'opsz' 72;letter-spacing:-.01em;padding:4px 2px;border-radius:8px}
+  .eg.card .cc{display:block;font-size:15px;font-weight:600;color:var(--c);min-height:44px;padding:0 10px;border-radius:8px}
+  .eg.card.root{border-color:var(--line);padding:14px 22px}
+  .eg.card.root .cn{font-family:var(--mono);font-size:15px;color:var(--muted)}
+  .eg.card.pop>*{animation:egpop .42s cubic-bezier(.2,.8,.2,1)}
+  @keyframes egpop{from{opacity:.3;transform:scale(.82)}}
+  .egolist{padding:18px 16px 32px}
+  .egolist .crumb{font:inherit;font-size:16px;color:var(--muted);background:transparent;border:0;min-height:44px;padding:0;cursor:pointer;display:flex;align-items:center;gap:6px}
+  .egolist h2:focus{outline:none}
+  .egolist h2{margin:2px 0 10px;font-size:30px;line-height:1.1;font-style:italic;color:var(--c)}
+  .egolist ul{list-style:none}
+  .egolist li{border-top:1px solid var(--line)}
+  .egolist li button{width:100%;display:flex;align-items:baseline;column-gap:10px;min-height:52px;padding:13px 0;font:inherit;font-size:18px;text-align:left;color:var(--text);background:transparent;border:0;cursor:pointer}
+  .egolist li i{flex:none;width:10px;height:10px;border-radius:50%;background:var(--c);transform:translateY(-1px)}
+  .egolist li .t{margin-right:4px}
+  .egolist li .e{white-space:nowrap;font-family:var(--mono);font-size:14px;color:var(--muted)}
+  .egolist.in{animation:egfade .22s ease-out}
+  @keyframes egfade{from{opacity:0;transform:translateY(8px)}}
+  .egofoot{flex:none;padding:10px 16px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+  .egofoot[hidden]{display:none}
+  .egoread{display:block;width:100%;min-height:48px;font:inherit;font-size:17px;font-weight:600;color:#0b0b0b;background:var(--c,var(--accent));border:0;border-radius:10px;cursor:pointer}
+  .egoread:focus-visible{outline-color:#fff}
+
+  .panel{padding:24px 16px calc(96px + env(safe-area-inset-bottom))}
+  h1{font-size:38px;margin-bottom:14px}
+  .index h1{font-size:44px}
+  .en{margin:-4px 0 16px}
+  .lead{font-size:20px;line-height:1.45}
+  h2{margin:32px 0 8px;font-size:20px}
+  .bubble{font-size:17px}
+
+  .rel{position:relative;display:flex;gap:8px;overflow-x:auto;margin:0 -16px 22px;padding:2px 16px 4px;scrollbar-width:none;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .rel::-webkit-scrollbar{display:none}
+  .rel .tl{flex:none;scroll-snap-align:start;padding:8px 14px;font-size:16px}
+  .connexions{display:none}
+
+  .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
+  .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
+
+  .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
+  .pager .all{display:none}
+  .pager a{align-items:center;min-height:56px;padding:8px 16px;color:var(--text);font-size:16px}
+  .pager .nt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+  .pager .prev{border-right:1px solid var(--line)}
+  .pager span.none{flex:1 1 0}
+
+  .index li a,.index li .row{padding:15px 0;flex-wrap:wrap;column-gap:10px;row-gap:0}
+  .foot{display:block;padding:0 16px 32px;background:var(--panel);font-size:16px}
+  .foot a{color:var(--muted)}
+  body.has-pager .foot{padding-bottom:calc(88px + env(safe-area-inset-bottom))}
+  body.has-pager .panel{padding-bottom:24px}
+  .toast{bottom:calc(72px + env(safe-area-inset-bottom))}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+
+<!-- lex:jsonld -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/speculative-decoding/#term","name":"Décodage spéculatif","description":"Le décodage spéculatif accélère un modèle en laissant un petit modèle deviner les prochains tokens, que le grand vérifie tous d'un seul passage, sans rien changer à la réponse.","url":"https://neopal.github.io/lexique/speculative-decoding/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Speculative decoding","speculative decoding","speculative sampling","draft model","target model","multi-token prediction","MTP","EAGLE","Medusa","predicted outputs","échantillonnage spéculatif","modèle brouillon"]}</script>
+<!-- /lex:jsonld -->
+</head>
+<body class="has-pager">
+<header class="top">
+  <a class="brand" href="/lexique/" data-go="index">Lexique IA</a>
+  <div class="search">
+    <label class="sr" for="q">Chercher un terme</label>
+    <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Chercher un terme, en français ou en anglais"
+      role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list" aria-keyshortcuts="/ Control+K Meta+K">
+    <ul class="results" id="results" role="listbox" aria-label="Termes" hidden></ul>
+  </div>
+  <button class="mapbtn" id="mapOpen" type="button" aria-controls="map" aria-expanded="false">Carte</button>
+  <a class="back" href="/">Pierre-Adrien Lair, CV</a>
+</header>
+
+<div class="layout">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
+    <div class="ego" id="ego">
+      <div class="egobar">
+        <button class="egoback" id="egoBack" type="button" hidden><span aria-hidden="true">←</span>Retour</button>
+        <button class="mapclose" id="mapClose" type="button">Fermer</button>
+      </div>
+      <div class="egostage" id="egoStage">
+        <div class="egonodes" id="egoNodes"><svg class="egoedges" id="egoEdges" aria-hidden="true"></svg></div>
+        <div class="egolist" id="egoList" hidden></div>
+      </div>
+      <div class="egofoot" id="egoFoot" hidden><button class="egoread" id="egoRead" type="button">Lire la fiche</button></div>
+    </div>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="true">Liste</button>
+      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
+    <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
+    <div class="legend" id="legend"></div>
+  </div>
+  <main class="panel" id="panel">
+      <article class="term" data-term="speculative-decoding" style="--cat:#8FB8FF">
+        <div class="kicker">Inférence</div>
+        <h1>Décodage spéculatif</h1>
+        <p class="en">En anglais : <span lang="en">Speculative decoding</span>, aussi <span lang="en">speculative sampling</span>, <span lang="en">draft model</span>, <span lang="en">target model</span>, <span lang="en">multi-token prediction</span>, <span lang="en">MTP</span>, <span lang="en">EAGLE</span>, <span lang="en">Medusa</span>, <span lang="en">predicted outputs</span></p><p class="en">Aussi appelé <span>échantillonnage spéculatif</span>, <span>modèle brouillon</span></p>
+        <nav class="rel" aria-label="Termes liés"><a class="tl live" style="--c:#8FB8FF" href="/lexique/inference/" data-go="inference">Inférence</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/logits/" data-go="logits">Logits</a><a class="tl live" style="--c:#F5D76E" href="/lexique/distillation/" data-go="distillation">Distillation</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/latence-vs-debit/" data-go="latence-vs-debit">Latence et débit</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/cout-d-une-requete/" data-go="cout-d-une-requete">Coût d&#39;une requête</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/prediction-du-mot-suivant/" data-go="prediction-du-mot-suivant">Prédiction du mot suivant</a></nav>
+        <p class="lead">Le décodage spéculatif accélère un modèle en laissant un petit modèle deviner les prochains tokens, que le grand vérifie tous d&#39;un seul passage, sans rien changer à la réponse.</p>
+        
+        <h2>L'image</h2><p>À côté du chanteur se tient désormais un choriste rapide qui lui souffle les quatre notes suivantes. Le chanteur les vérifie toutes d&#39;un seul regard, garde celles qu&#39;il aurait chantées lui-même et reprend la main à la première qui ne lui convient pas. Le choriste est le modèle brouillon, le chanteur le grand modèle, et l&#39;image triche sur ce regard unique, puisque le modèle vérifie bien quatre <a class="tw" style="--c:#7CFFB2" href="/lexique/token/" data-go="token">tokens</a> en un seul calcul, ce qu&#39;aucun chanteur ne sait faire.</p>
+        <h2>Imagine</h2><p class="imagine">Tu demandes « Quelle est la racine carrée de 7 ? ». « La racine carrée de 7 est 2,5 », souffle en une fraction de seconde le petit modèle, et le grand, qui relit ces mots d&#39;un seul passage, garde « La racine carrée de 7 est » et remplace la fin par « 2,646 ».</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 286" role="img" aria-labelledby="speculative-decoding-t"> <title id="speculative-decoding-t">Trois étapes du décodage spéculatif : le petit modèle propose sept tokens, le grand les vérifie en un seul passage et refuse le dernier, puis il garde les six premiers et écrit lui-même le septième.</title> <circle class="bxa" cx="9" cy="13" r="9"/> <text class="m ac" x="9" y="17.5" text-anchor="middle">1</text> <text class="m mu" x="26" y="18">le petit modèle propose</text> <rect class="bx" x="0.0" y="30" width="25.8" height="24" rx="4"/> <text class="m" x="12.9" y="46" text-anchor="middle">La</text> <rect class="bx" x="30.8" y="30" width="57.4" height="24" rx="4"/> <text class="m" x="59.5" y="46" text-anchor="middle">racine</text> <rect class="bx" x="93.2" y="30" width="57.4" height="24" rx="4"/> <text class="m" x="121.9" y="46" text-anchor="middle">carrée</text> <rect class="bx" x="155.6" y="30" width="25.8" height="24" rx="4"/> <text class="m" x="168.5" y="46" text-anchor="middle">de</text> <rect class="bx" x="186.4" y="30" width="17.9" height="24" rx="4"/> <text class="m" x="195.4" y="46" text-anchor="middle">7</text> <rect class="bx" x="209.3" y="30" width="33.7" height="24" rx="4"/> <text class="m" x="226.2" y="46" text-anchor="middle">est</text> <rect class="bx" x="248.0" y="30" width="33.7" height="24" rx="4"/> <text class="m" x="264.9" y="46" text-anchor="middle">2,5</text> <circle class="bxa" cx="9" cy="89" r="9"/> <text class="m ac" x="9" y="93.5" text-anchor="middle">2</text> <text class="m mu" x="26" y="94">le grand vérifie tout en un passage</text> <rect class="bx" x="0.0" y="106" width="25.8" height="24" rx="4"/> <text class="m" x="12.9" y="122" text-anchor="middle">La</text> <path class="la" d="M7.9 144 l4 4 l7 -8"/> <rect class="bx" x="30.8" y="106" width="57.4" height="24" rx="4"/> <text class="m" x="59.5" y="122" text-anchor="middle">racine</text> <path class="la" d="M54.5 144 l4 4 l7 -8"/> <rect class="bx" x="93.2" y="106" width="57.4" height="24" rx="4"/> <text class="m" x="121.9" y="122" text-anchor="middle">carrée</text> <path class="la" d="M116.9 144 l4 4 l7 -8"/> <rect class="bx" x="155.6" y="106" width="25.8" height="24" rx="4"/> <text class="m" x="168.5" y="122" text-anchor="middle">de</text> <path class="la" d="M163.5 144 l4 4 l7 -8"/> <rect class="bx" x="186.4" y="106" width="17.9" height="24" rx="4"/> <text class="m" x="195.4" y="122" text-anchor="middle">7</text> <path class="la" d="M190.4 144 l4 4 l7 -8"/> <rect class="bx" x="209.3" y="106" width="33.7" height="24" rx="4"/> <text class="m" x="226.2" y="122" text-anchor="middle">est</text> <path class="la" d="M221.2 144 l4 4 l7 -8"/> <rect class="bx" x="248.0" y="106" width="33.7" height="24" rx="4"/> <text class="m red" x="264.9" y="122" text-anchor="middle">2,5</text> <path class="lr" d="M259.9 139 l10 10 M269.9 139 l-10 10"/> <circle class="bxa" cx="9" cy="179" r="9"/> <text class="m ac" x="9" y="183.5" text-anchor="middle">3</text> <text class="m mu" x="26" y="184">il garde six tokens et écrit le dernier</text> <rect class="bx" x="0.0" y="196" width="25.8" height="24" rx="4"/> <text class="m" x="12.9" y="212" text-anchor="middle">La</text> <rect class="bx" x="30.8" y="196" width="57.4" height="24" rx="4"/> <text class="m" x="59.5" y="212" text-anchor="middle">racine</text> <rect class="bx" x="93.2" y="196" width="57.4" height="24" rx="4"/> <text class="m" x="121.9" y="212" text-anchor="middle">carrée</text> <rect class="bx" x="155.6" y="196" width="25.8" height="24" rx="4"/> <text class="m" x="168.5" y="212" text-anchor="middle">de</text> <rect class="bx" x="186.4" y="196" width="17.9" height="24" rx="4"/> <text class="m" x="195.4" y="212" text-anchor="middle">7</text> <rect class="bx" x="209.3" y="196" width="33.7" height="24" rx="4"/> <text class="m" x="226.2" y="212" text-anchor="middle">est</text> <rect class="bxa" x="248.0" y="196" width="49.5" height="24" rx="4"/> <text class="m ac" x="272.8" y="212" text-anchor="middle">2,646</text> <text class="i mu" x="0" y="256">Un seul passage du grand modèle a donné</text> <text class="i mu" x="0" y="274">sept tokens au lieu d'un.</text> </svg></figure>
+        <h2>Définition complète</h2><p>Un modèle écrit sa réponse un token à la fois, et chaque token oblige le serveur à relire tous ses <a class="tw" style="--c:#7CFFB2" href="/lexique/parametres/" data-go="parametres">paramètres</a> en mémoire pour très peu de calcul. Les chercheurs de Google à l&#39;origine de la méthode notent que les puces savent faire des centaines d&#39;opérations par octet lu, alors que le décodage n&#39;en demande que quelques-unes, et que la <a class="tw" style="--c:#F08DC2" href="/lexique/compute/" data-go="compute">puissance de calcul</a> dort donc en bonne partie. Faire vérifier quatre ou cinq tokens d&#39;un coup au grand modèle prend alors à peu près le temps qu&#39;il lui faudrait pour en écrire un seul.</p><p>En novembre 2022, Yaniv Leviathan, Matan Kalman et Yossi Matias décrivent le décodage spéculatif. Le petit modèle propose quelques tokens, le grand calcule d&#39;un passage ses propres probabilités pour chacun, accepte ceux qu&#39;il aurait pu écrire et tire lui-même le premier qu&#39;il refuse, de sorte que la réponse suit exactement la même loi que s&#39;il avait tout écrit seul. Avec T5-XXL, ils obtenaient des réponses identiques deux à trois fois plus vite, et DeepMind publiait la même idée en février 2023. Fin 2024, Google indiquait s&#39;en servir pour les AI Overviews de son moteur de recherche.</p><p>Le brouillon n&#39;a plus besoin d&#39;être un modèle à part. Dans DeepSeek-V3, publié en décembre 2024, un petit module greffé sur le modèle prédit le token d&#39;après, que le modèle accepte dans 85 à 90 % des cas, et la vitesse d&#39;écriture est multipliée par 1,8. Chez OpenAI, l&#39;option Predicted Outputs laisse le développeur fournir lui-même le brouillon, comme un fichier de code dont seule une ligne doit changer, mais chaque token refusé reste facturé comme un token écrit.</p><p>Le gain dépend de ce qui reste à deviner, et de la charge du serveur. Les mots faciles, comme ceux qui reprennent la question, se devinent bien, et un texte recopié avec quelques retouches se devine presque en entier, ce qui fait tout l&#39;intérêt de l&#39;option d&#39;OpenAI. Quand le <a class="tw" style="--c:#F08DC2" href="/lexique/gpu/" data-go="gpu">GPU</a> sert déjà de nombreuses requêtes à la fois, la puissance inemployée qui rendait la vérification presque gratuite se fait rare, et EAGLE-3, une méthode publiée en mars 2025, ne gagnait plus que 38 % de <a class="tw" style="--c:#8FB8FF" href="/lexique/latence-vs-debit/" data-go="latence-vs-debit">débit</a> avec des lots de 64 requêtes.</p>
+        
+        
+        
+        <h2>Dans le jargon</h2><dl class="jargon"><div><dt>draft model</dt><dd>le modèle brouillon, petit et rapide, qui propose les prochains tokens ; le grand modèle qui les vérifie s&#39;appelle le target model</dd></div><div><dt>acceptance rate</dt><dd>la part des tokens proposés que le grand modèle garde ; c&#39;est elle qui fait le gain de vitesse</dd></div><div><dt>MTP</dt><dd>multi-token prediction, un petit module ajouté au modèle lui-même pour deviner le token d&#39;après, ce qui évite d&#39;entretenir un second modèle</dd></div><div><dt>Predicted Outputs</dt><dd>chez OpenAI, une option où c&#39;est le développeur qui fournit le brouillon, par exemple le fichier à modifier, que le modèle valide au lieu de le réécrire</dd></div></dl>
+        
+        <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Le fournisseur active le décodage spéculatif sur notre modèle. On doit refaire toutes nos <a class="tw" style="--c:#D7A6FF" href="/lexique/evals/" data-go="evals">évaluations</a> de qualité ?</div><div class="bubble a">Pas pour la méthode d&#39;origine, qui garantit les mêmes réponses que le grand modèle seul, à condition que la variante choisie ne modifie pas le grand modèle lui-même, comme le fait Medusa-2. Mesure plutôt la vitesse sur tes propres textes, car elle varie avec ce que le brouillon arrive à deviner.</div></div>
+        <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Avec le décodage spéculatif, c&#39;est un petit modèle qui répond à la place du grand. » Chaque token de la réponse est validé par le grand modèle, qui garde le dernier mot ; un mauvais brouillon ralentit la réponse sans jamais changer le texte.</p></div>
+        <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#8FB8FF" href="/lexique/inference/" data-go="inference">Inférence</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/logits/" data-go="logits">Logits</a><a class="tl live" style="--c:#F5D76E" href="/lexique/distillation/" data-go="distillation">Distillation</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/latence-vs-debit/" data-go="latence-vs-debit">Latence et débit</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/cout-d-une-requete/" data-go="cout-d-une-requete">Coût d&#39;une requête</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/prediction-du-mot-suivant/" data-go="prediction-du-mot-suivant">Prédiction du mot suivant</a></div></div>
+        <nav class="pager" aria-label="Fiches">
+          <a class="prev" href="/lexique/architectures-hybrides/" data-go="architectures-hybrides" rel="prev"><span aria-hidden="true">←</span><span class="nt">Architectures hybrides</span></a>
+          <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
+          <a class="next" href="/lexique/latence-vs-debit/" data-go="latence-vs-debit" rel="next"><span aria-hidden="true">→</span><span class="nt">Latence et débit</span></a>
+        </nav>
+      </article>
+  </main>
+</div>
+<footer class="foot"><a href="/">Pierre-Adrien Lair, CV</a></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+// BASE : dossier du lexique, quel que soit le sous-dossier qui sert la page
+// (/lexique/, /lexique/<id>/). <html data-base="..."> l'emporte si présent.
+(function () {
+  var m = location.pathname.match(/^(.*?\/lexique\/)/);
+  var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
+  if (base.slice(-1) !== '/') base += '/';
+  window.LEX_BASE = base;
+  var files = ['terms.js', 'schemas.js', 'render.js'];
+  var pending = files.length;
+  files.forEach(function (f) {
+    var s = document.createElement('script');
+    s.src = base + f;
+    s.async = false;
+    s.onload = function () { if (--pending === 0) window.__lexBoot(); };
+    s.onerror = function () {
+      document.getElementById('panel').innerHTML = '<p>Impossible de charger ' + f + '.</p>';
+    };
+    document.head.appendChild(s);
+  });
+})();
+
+window.__lexBoot = function () {
+  const BASE = window.LEX_BASE;
+  const R = window.LexRender;
+  const CATS = window.DICO_CATEGORIES;
+  const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
+  const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
+  const OPTS = {base: BASE, urls: URLS};
+  const SITE = 'https://neopal.github.io';
+  const byId = Object.fromEntries(TERMS.map((t) => [t.id, t]));
+  const panel = document.getElementById('panel');
+  const svg = document.getElementById('graph');
+  const map = document.getElementById('map');
+  const NS = 'http://www.w3.org/2000/svg';
+  const mqReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const mqMobile = window.matchMedia('(max-width: 900px)');
+  const color = (t) => (CATS[t.cat] || {}).color || '#7CFFB2';
+
+  function toast(msg) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.classList.add('on');
+    clearTimeout(toast.t);
+    toast.t = setTimeout(() => el.classList.remove('on'), 1800);
+  }
+
+  // ---------- Routage ----------
+  // Terme courant : ?term=<id>, sinon /lexique/<id>/, sinon <html data-term> (au chargement seulement).
+  function termFromLocation(initial) {
+    const q = new URLSearchParams(location.search).get('term');
+    if (q) return q;
+    let path = location.pathname;
+    try { path = decodeURIComponent(path); } catch (e) { /* chemin brut */ }
+    if (path.indexOf(BASE) === 0) {
+      const seg = path.slice(BASE.length).split('/').filter(Boolean)[0];
+      if (seg && seg !== 'index.html') return seg;
+    }
+    return (initial && document.documentElement.getAttribute('data-term')) || 'index';
+  }
+
+  function setCanonical(id) {
+    const href = SITE + R.termUrl(id, {base: BASE, urls: 'path'});
+    const c = document.querySelector('link[rel="canonical"]');
+    if (c) c.href = href;
+  }
+
+  let current = null;
+  function go(id, push = true, focus = push) {
+    if (id === 'index' || !id || !byId[id]) {
+      current = null;
+      panel.innerHTML = R.renderIndex(CATS, TERMS, OPTS);
+      document.title = R.pageTitle(null);
+      setCanonical('');
+      if (push) history.pushState({}, '', R.termUrl('', OPTS));
+    } else {
+      const t = byId[id];
+      if (t.status !== 'live') { toast(`« ${t.title} » arrive bientôt.`); return false; }
+      current = t;
+      panel.innerHTML = R.renderTerm(t, CATS, TERMS, OPTS);
+      document.title = R.pageTitle(t);
+      setCanonical(id);
+      if (push) history.pushState({id}, '', R.termUrl(id, OPTS));
+    }
+    document.body.classList.toggle('has-pager', !!current);
+    highlight();
+    if (typeof markAz === 'function') markAz();
+    window.scrollTo({top: 0, behavior: 'auto'});
+    if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
+    return true;
+  }
+
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-go]');
+    if (!b || e.defaultPrevented) return;
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    go(b.dataset.go);
+  });
+  window.addEventListener('popstate', () => go(termFromLocation(false), false));
+
+  // ---------- Recherche ----------
+  const input = document.getElementById('q');
+  const list = document.getElementById('results');
+  let results = [];
+  let active = -1;
+  const FIELD_LABEL = {en: '', alias: '', jargon: '', solution: ''};
+
+  const PH = {desk: input.placeholder, mob: 'Terme, FR ou EN'};
+  const setPlaceholder = () => { input.placeholder = mqMobile.matches ? PH.mob : PH.desk; };
+  setPlaceholder();
+  mqMobile.addEventListener('change', setPlaceholder);
+
+  function renderResults() {
+    results = R.search(input.value, TERMS);
+    if (!results.length) {
+      list.innerHTML = `<li class="empty" role="option" aria-disabled="true">Aucun terme pour « ${R.escapeHtml(input.value.trim())} »</li>`;
+      active = -1;
+    } else {
+      list.innerHTML = results.map((r, i) => {
+        const t = r.term;
+        const showHit = r.field && r.field in FIELD_LABEL && R.normalize(r.hit) !== R.normalize(t.title);
+        const side = t.status === 'live' ? R.escapeHtml((CATS[t.cat] || {}).label || '') : 'à venir';
+        return `<li id="opt-${i}" role="option" class="${t.status}" style="--c:${color(t)}" aria-selected="false" ${t.status !== 'live' ? 'aria-disabled="true"' : ''} data-i="${i}">
+          <span class="t">${R.escapeHtml(t.title)}</span>${showHit ? `<span class="h"${r.field === 'en' ? ' lang="en"' : ''}>${R.escapeHtml(r.hit)}</span>` : ''}<span class="c">${side}</span></li>`;
+      }).join('');
+      active = input.value.trim() ? 0 : -1;
+    }
+    setActive(active);
+    openList(true);
+  }
+
+  function setActive(i) {
+    const items = list.querySelectorAll('li[data-i]');
+    items.forEach((li) => li.setAttribute('aria-selected', 'false'));
+    active = i;
+    if (i >= 0 && items[i]) {
+      items[i].setAttribute('aria-selected', 'true');
+      input.setAttribute('aria-activedescendant', items[i].id);
+      items[i].scrollIntoView({block: 'nearest'});
+    } else {
+      input.removeAttribute('aria-activedescendant');
+    }
+  }
+
+  function openList(on) {
+    list.hidden = !on;
+    input.setAttribute('aria-expanded', on ? 'true' : 'false');
+    document.body.style.overflow = on && mqMobile.matches ? 'hidden' : '';
+  }
+
+  function choose(i) {
+    const r = results[i];
+    if (!r) return;
+    if (go(r.term.id)) {
+      input.value = '';
+      openList(false);
+      input.blur();
+    }
+  }
+
+  input.addEventListener('input', renderResults);
+  input.addEventListener('focus', renderResults);
+  input.addEventListener('blur', () => setTimeout(() => { if (document.activeElement !== input) openList(false); }, 120));
+  input.addEventListener('keydown', (e) => {
+    const n = results.length;
+    if (e.key === 'ArrowDown') { e.preventDefault(); if (list.hidden) renderResults(); else if (n) setActive((active + 1) % n); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); if (n) setActive(active <= 0 ? n - 1 : active - 1); }
+    else if (e.key === 'Enter') { e.preventDefault(); if (active >= 0) choose(active); else if (n === 1) choose(0); }
+    else if (e.key === 'Escape') {
+      e.preventDefault();
+      if (input.value) { input.value = ''; renderResults(); }
+      else { openList(false); input.blur(); }
+    }
+  });
+  list.addEventListener('mousedown', (e) => e.preventDefault());
+  list.addEventListener('click', (e) => {
+    const li = e.target.closest('li[data-i]');
+    if (li) choose(+li.dataset.i);
+  });
+  list.addEventListener('mousemove', (e) => {
+    const li = e.target.closest('li[data-i]');
+    if (li && +li.dataset.i !== active) setActive(+li.dataset.i);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    const k = e.key.toLowerCase();
+    const typing = /^(input|textarea|select)$/i.test(e.target.tagName) || e.target.isContentEditable;
+    if ((e.ctrlKey || e.metaKey) && k === 'k') { e.preventDefault(); closeMap(); input.focus(); input.select(); return; }
+    if (e.key === '/' && !typing && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); closeMap(); input.focus(); return; }
+    if (e.key === 'Escape' && map.classList.contains('open')) closeMap(true);
+  });
+
+  // ---------- Carte (graphe) ----------
+  const edges = [];
+  const seen = new Set();
+  TERMS.forEach((t) => (t.links || []).forEach((l) => {
+    if (!byId[l]) return;
+    const k = [t.id, l].sort().join('|');
+    if (!seen.has(k)) { seen.add(k); edges.push([t.id, l]); }
+  }));
+
+  // Chaque catégorie a sa zone, réparties sur une ellipse large ; les termes partent groupés dans leur zone.
+  const catKeys = Object.keys(CATS);
+  const catCenter = Object.fromEntries(catKeys.map((c, i) => {
+    const a = (i / catKeys.length) * Math.PI * 2 - Math.PI / 2;
+    return [c, {x: Math.cos(a) * 520, y: Math.sin(a) * 300}];
+  }));
+  const perCat = {};
+  const nodes = TERMS.map((t) => {
+    const c = catCenter[t.cat] || {x: 0, y: 0};
+    const k = (perCat[t.cat] = (perCat[t.cat] || 0) + 1);
+    const a = k * 2.4;
+    return {t, cx: c.x, cy: c.y, x: c.x + Math.cos(a) * 30 * Math.sqrt(k), y: c.y + Math.sin(a) * 30 * Math.sqrt(k), vx: 0, vy: 0, r: t.status === 'live' ? 22 : 11};
+  });
+  const nodeOf = Object.fromEntries(nodes.map((n) => [n.t.id, n]));
+
+  // Petite simulation de forces, calculée une fois au chargement.
+  for (let step = 0; step < 400; step++) {
+    for (const a of nodes) {
+      for (const b of nodes) {
+        if (a === b) continue;
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const d2 = Math.max(dx * dx + dy * dy, 100);
+        const f = 5200 / d2;
+        a.vx += (dx / Math.sqrt(d2)) * f;
+        a.vy += (dy / Math.sqrt(d2)) * f;
+      }
+      a.vx += (a.cx - a.x) * 0.008;
+      a.vy += (a.cy - a.y) * 0.008;
+    }
+    for (const [s, d] of edges) {
+      const a = nodeOf[s], b = nodeOf[d];
+      const dx = b.x - a.x, dy = b.y - a.y;
+      const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+      const f = (dist - 150) * 0.004;
+      a.vx += (dx / dist) * f; a.vy += (dy / dist) * f;
+      b.vx -= (dx / dist) * f; b.vy -= (dy / dist) * f;
+    }
+    for (const n of nodes) { n.x += n.vx; n.y += n.vy; n.vx *= 0.6; n.vy *= 0.6; }
+  }
+  // Anti-collision : chaque nœud occupe une boîte (cercle + libellé dessous) ; on écarte les boîtes qui se chevauchent.
+  for (const n of nodes) {
+    const label = n.t.graphLabel || n.t.title;
+    const live = n.t.status === 'live';
+    // Libellés en mono (~0,6 em par caractère), taille agrandie par fit() quand on dézoome : on prend le pire cas.
+    const size = live ? 20 : 15;
+    n.hw = Math.max(n.r, label.length * size * 0.3) + 6;
+    n.top = n.r + 4;
+    n.bottom = n.r + size * 1.7;
+  }
+  function collide() {
+  for (let step = 0; step < 1500; step++) {
+    let moved = false;
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const ox = a.hw + b.hw - Math.abs(a.x - b.x);
+        const up = a.y <= b.y ? a : b, down = up === a ? b : a;
+        const oy = up.bottom + down.top - (down.y - up.y);
+        if (ox <= 0 || oy <= 0) continue;
+        moved = true;
+        // Libellés larges : on préfère écarter à l'horizontale, sinon le graphe s'empile en colonne.
+        if (ox < oy * 3) {
+          const s = (a.x <= b.x ? -1 : 1) * ox / 2 + (a.x === b.x ? 0.5 : 0);
+          a.x += s; b.x -= s;
+        } else {
+          up.y -= oy / 2; down.y += oy / 2;
+        }
+      }
+    }
+    if (!moved) break;
+  }
+  }
+  collide();
+  let spanX, spanY;
+  function spans() {
+    spanX = Math.max(...nodes.map((n) => n.x)) - Math.min(...nodes.map((n) => n.x));
+    spanY = Math.max(...nodes.map((n) => n.y)) - Math.min(...nodes.map((n) => n.y));
+  }
+  spans();
+
+  const gEdges = document.createElementNS(NS, 'g');
+  const gNodes = document.createElementNS(NS, 'g');
+  svg.append(gEdges, gNodes);
+
+  const edgeEls = edges.map(([s, d]) => {
+    const l = document.createElementNS(NS, 'line');
+    l.setAttribute('stroke', '#2c2c2c');
+    l.setAttribute('stroke-width', '1.5');
+    gEdges.append(l);
+    return {s, d, el: l};
+  });
+
+  const nodeEls = nodes.map((n) => {
+    const live = n.t.status === 'live';
+    const g = document.createElementNS(NS, 'g');
+    g.style.cursor = live ? 'pointer' : 'default';
+    g.setAttribute('tabindex', live ? '0' : '-1');
+    g.setAttribute('role', 'link');
+    g.setAttribute('aria-label', live ? n.t.title : `${n.t.title}, à venir`);
+    const c = document.createElementNS(NS, 'circle');
+    c.setAttribute('r', n.r);
+    c.setAttribute('fill', live ? color(n.t) : '#1a1a1a');
+    c.setAttribute('stroke', live ? color(n.t) : '#3a3a3a');
+    c.setAttribute('stroke-width', live ? '0' : '1.5');
+    const txt = document.createElementNS(NS, 'text');
+    txt.textContent = n.t.graphLabel || n.t.title;
+    txt.setAttribute('y', n.r + 20);
+    txt.setAttribute('text-anchor', 'middle');
+    txt.setAttribute('fill', live ? '#f2f2f2' : '#8a8a8a');
+    txt.setAttribute('font-family', 'IBM Plex Mono, monospace');
+    txt.setAttribute('font-weight', live ? '600' : '400');
+    txt.setAttribute('font-size', live ? '15' : '12');
+    g.append(c, txt);
+    const pick = () => { if (go(n.t.id)) closeMap(false); };
+    g.addEventListener('click', pick);
+    g.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
+    gNodes.append(g);
+    return {n, g, c, txt};
+  });
+
+  function highlight() {
+    const id = current && current.id;
+    const near = new Set(id ? [id, ...(byId[id].links || [])] : []);
+    edgeEls.forEach((e) => {
+      const on = id && (e.s === id || e.d === id);
+      e.el.setAttribute('stroke', on ? color(byId[id]) : '#2c2c2c');
+      e.el.setAttribute('stroke-opacity', on ? '0.8' : '1');
+    });
+    nodeEls.forEach(({n, g, c}) => {
+      const far = id && !near.has(n.t.id);
+      g.style.opacity = far ? '0.35' : '1';
+      // Fiche ouverte : seuls le terme et ses voisins gardent leur libellé, les autres le montrent au survol.
+      g.classList.toggle('far', !!far);
+      c.setAttribute('stroke-width', n.t.id === id ? '6' : n.t.status === 'live' ? '0' : '1.5');
+      if (n.t.id === id) c.setAttribute('stroke', 'rgba(255,255,255,.85)');
+      else c.setAttribute('stroke', n.t.status === 'live' ? color(n.t) : '#3a3a3a');
+    });
+  }
+
+  // Sur un écran en portrait, la carte est étirée en hauteur (positions seulement, pas les libellés).
+  let sy = 1;
+  const lx = (n) => n.x;
+  const ly = (n) => n.y * sy;
+
+  function mapVisible() {
+    // Sur mobile, le graphe complet n'est jamais affiché : la carte passe par la vue centrée.
+    return !mqMobile.matches && map.dataset.view === 'map';
+  }
+
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
+
+  function fit() {
+    const box = svg.getBoundingClientRect();
+    if (!box.width || !box.height) return;
+    const legendH = document.getElementById('legend').offsetHeight || 0;
+    const topH = mqMobile.matches ? 56 : 0;
+    const gut = mqMobile.matches ? 12 : 40;
+    const usableW = Math.max(120, box.width - gut * 2);
+    const usableH = Math.max(120, box.height - legendH - topH - gut);
+    sy = usableH > usableW ? Math.min(2.4, Math.max(1, (usableH / usableW) * (spanX / spanY) * 0.8)) : 1;
+    // Deux passes : la taille des libellés dépend du zoom, et la boîte dépend des libellés.
+    let k = Math.min(usableW / (spanX + 180), usableH / (spanY * sy + 180));
+    let b;
+    for (let pass = 0; pass < 3; pass++) {
+      b = {minX: Infinity, maxX: -Infinity, minY: Infinity, maxY: -Infinity};
+      nodeEls.forEach(({n, txt}) => {
+        const live = n.t.status === 'live';
+        const size = Math.max(live ? 15 : 12, (live ? 13 : 11) / k);
+        txt.setAttribute('font-size', size.toFixed(1));
+        txt.setAttribute('y', (n.r + size * 1.3).toFixed(1));
+        const half = Math.max(n.r, (txt.getComputedTextLength() || 0) / 2) + 8;
+        // Boîte réelle du libellé, pour la passe anti-collision ci-dessous.
+        n.hw = half + 10; n.bottom = n.r + size * 2;
+        b.minX = Math.min(b.minX, lx(n) - half);
+        b.maxX = Math.max(b.maxX, lx(n) + half);
+        b.minY = Math.min(b.minY, ly(n) - n.r - 10);
+        b.maxY = Math.max(b.maxY, ly(n) + n.r + size * 1.7);
+      });
+      // Les libellés ont maintenant leur vraie taille : on écarte ceux qui se touchent, puis on remesure.
+      if (pass < 2) { collide(); spans(); }
+      k = Math.min(usableW / (b.maxX - b.minX), usableH / (b.maxY - b.minY));
+      // En portrait, la largeur limite le zoom : on étire encore pour occuper la hauteur libre.
+      const room = usableH / k - (b.maxY - b.minY);
+      if (pass < 2 && usableH > usableW && room > 0) sy = Math.min(3.2, sy + (room * 0.9) / (spanY || 1));
+    }
+    b.minX -= gut / k; b.maxX += gut / k;
+    const minY = b.minY - (topH + gut) / k;
+    const maxY = b.maxY + legendH / k;
+    svg.setAttribute('viewBox', `${b.minX.toFixed(1)} ${minY.toFixed(1)} ${(b.maxX - b.minX).toFixed(1)} ${(maxY - minY).toFixed(1)}`);
+    svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    draw(performance.now());
+  }
+
+  function draw(t) {
+    const still = mqReduced.matches;
+    nodes.forEach((n, i) => {
+      n.px = lx(n) + (still ? 0 : Math.sin(t / 1900 + i) * 4);
+      n.py = ly(n) + (still ? 0 : Math.cos(t / 2300 + i * 1.3) * 4);
+    });
+    nodeEls.forEach(({n, g}) => g.setAttribute('transform', `translate(${n.px.toFixed(1)},${n.py.toFixed(1)})`));
+    edgeEls.forEach((e) => {
+      const a = nodeOf[e.s], b = nodeOf[e.d];
+      e.el.setAttribute('x1', a.px); e.el.setAttribute('y1', a.py);
+      e.el.setAttribute('x2', b.px); e.el.setAttribute('y2', b.py);
+    });
+  }
+
+  // Légère respiration du graphe, seulement quand il est visible et sans prefers-reduced-motion.
+  let raf = 0;
+  function loop(t) {
+    raf = 0;
+    if (!mapVisible() || mqReduced.matches || document.hidden) return;
+    draw(t);
+    raf = requestAnimationFrame(loop);
+  }
+  function startLoop() { if (!raf) raf = requestAnimationFrame(loop); }
+
+  let lastFocus = null;
+  const openBtn = document.getElementById('mapOpen');
+  function openMap() {
+    lastFocus = document.activeElement;
+    map.classList.add('open');
+    map.setAttribute('role', 'dialog');
+    map.setAttribute('aria-modal', 'true');
+    openBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    egoStack.length = 0;
+    egoShow(current ? {kind: 'term', id: current.id} : {kind: 'root'}, {instant: true});
+  }
+  function closeMap(restore) {
+    if (!map.classList.contains('open')) return;
+    cancelAnimationFrame(egoRaf);
+    map.classList.remove('open');
+    map.removeAttribute('role');
+    map.removeAttribute('aria-modal');
+    openBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    if (restore && lastFocus) lastFocus.focus();
+  }
+  openBtn.addEventListener('click', openMap);
+  document.getElementById('mapClose').addEventListener('click', () => closeMap(true));
+
+  // ---------- Carte mobile : vue centrée ----------
+  // Un terme au centre, ses liens (t.links, ordre éditorial) au-dessus et au-dessous, en deux colonnes
+  // qui s'écartent près du centre. Sans terme ouvert : les catégories autour, puis la liste de leurs termes.
+  const egoStage = document.getElementById('egoStage');
+  const egoNodes = document.getElementById('egoNodes');
+  const egoEdges = document.getElementById('egoEdges');
+  const egoList = document.getElementById('egoList');
+  const egoBack = document.getElementById('egoBack');
+  const egoFoot = document.getElementById('egoFoot');
+  const egoRead = document.getElementById('egoRead');
+  const esc = R.escapeHtml;
+  const catCount = {};
+  TERMS.forEach((t) => { catCount[t.cat] = (catCount[t.cat] || 0) + 1; });
+  const egoEls = new Map(); // clé -> {key, el, x, y, o, ax, ay, side}
+  const egoStack = [];
+  let egoState = null;
+  let egoRing = null; // {center, nbs: [{key, side}]}
+  let egoRaf = 0;
+  const DUR = 440;
+  const ease = (k) => (k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2);
+
+  function egoNode(key) {
+    let n = egoEls.get(key);
+    if (!n) {
+      const el = document.createElement('div');
+      n = {key, el, x: 0, y: 0, o: 0, ax: 0, ay: 0, fresh: true};
+      egoEls.set(key, n);
+    }
+    return n;
+  }
+
+  // Contenu d'un nœud selon son rôle : carte centrale, voisin en colonne (l / r) ou en pointe (tip up / down).
+  function fillNode(n, role, side, c) {
+    n.el.className = `eg ${role === 'card' ? 'card' : side}`;
+    n.el.style.setProperty('--c', c.color);
+    n.el.innerHTML = c.html;
+  }
+
+  function termCard(t) {
+    const cat = CATS[t.cat] || {};
+    return {color: color(t), html: `<button type="button" class="ct" data-read="${t.id}">${esc(t.title)}</button><button type="button" class="cc" data-ego-cat="${t.cat}">${esc(cat.label || '')}</button>`};
+  }
+  function termNb(t) {
+    return {color: color(t), html: `<button type="button" class="nb" data-ego="${t.id}"><i class="dot" aria-hidden="true"></i><span class="lab">${esc(t.graphLabel || t.title)}</span></button>`};
+  }
+  function catNb(k) {
+    const d = Math.round(12 + Math.min(catCount[k] || 0, 15) * 0.7);
+    return {color: CATS[k].color, html: `<button type="button" class="nb" data-ego-cat="${k}" style="--d:${d}px"><i class="dot" aria-hidden="true"></i><span class="lab">${esc(CATS[k].label)}<span class="n">${catCount[k] || 0}</span></span></button>`};
+  }
+
+  // Répartition : moitié au-dessus, moitié au-dessous ; un nombre impair donne une pointe seule à l'extrémité.
+  function rowsFor(k) {
+    const r = [];
+    let left = k;
+    if (left % 2) { r.push(1); left--; }
+    while (left > 0) { r.push(2); left -= 2; }
+    return r; // de l'extrémité vers le centre
+  }
+
+  function egoLayout() {
+    if (!egoRing) return;
+    const W = egoStage.clientWidth;
+    const H = egoStage.clientHeight;
+    const cx = W / 2;
+    const nbs = egoRing.nbs;
+    const N = nbs.length;
+    const up = rowsFor(Math.ceil(N / 2));
+    const down = rowsFor(N - Math.ceil(N / 2)).reverse();
+    // Écart entre les deux colonnes : large près du centre, resserré aux extrémités.
+    const gNear = Math.min(64, W * 0.13);
+    const gFar = 14;
+    const depth = Math.max(up.length, down.length, 1);
+    const gap = (d) => gFar + (gNear - gFar) * (1 - (d - 1) / Math.max(depth, 1));
+    // Rangées : [{items: [nb], d (distance au centre), half: 'up'|'down'}]
+    const rows = [];
+    let i = 0;
+    up.forEach((cnt, ri) => { rows.push({items: nbs.slice(i, i + cnt), d: up.length - ri, half: 'up'}); i += cnt; });
+    const centerIndex = rows.length;
+    rows.push({center: true});
+    down.forEach((cnt, ri) => { rows.push({items: nbs.slice(i, i + cnt), d: ri + 1, half: 'down'}); i += cnt; });
+
+    // Rôles et largeurs maximales, puis mesure.
+    const center = egoEls.get(egoRing.center);
+    center.el.style.maxWidth = Math.min(W - 40, 440) + 'px';
+    rows.forEach((row) => {
+      if (row.center) return;
+      row.items.forEach((nb, j) => {
+        const n = egoEls.get(nb.key);
+        const tip = row.items.length === 1;
+        nb.side = tip ? `tip ${row.half}` : (j === 0 ? 'l' : 'r');
+        n.el.classList.remove('l', 'r', 'tip', 'up', 'down');
+        nb.side.split(' ').forEach((s) => n.el.classList.add(s));
+        n.el.style.maxWidth = (tip ? Math.min(W - 40, 300) : Math.max(110, cx - gap(row.d) + 12 - 14)) + 'px';
+      });
+    });
+    const sizes = new Map();
+    egoEls.forEach((n) => {
+      const dot = n.el.querySelector('.dot');
+      const w = n.el.offsetWidth, h = n.el.offsetHeight;
+      let ax = w / 2, ay = h / 2;
+      if (dot && !n.el.classList.contains('card')) {
+        // offsetLeft/Top sont relatifs au nœud (positionné) : centre de la pastille.
+        ax = dot.offsetLeft + dot.offsetWidth / 2;
+        ay = dot.offsetTop + dot.offsetHeight / 2;
+      }
+      sizes.set(n.key, {w, h, ax, ay});
+    });
+    rows.forEach((row) => {
+      row.h = row.center ? sizes.get(egoRing.center).h : Math.max(...row.items.map((nb) => sizes.get(nb.key).h));
+    });
+    const sum = rows.reduce((s, r) => s + r.h, 0);
+    const gaps = rows.length - 1;
+    const pad = 16;
+    const free = H - pad * 2 - sum;
+    const g = Math.max(12, Math.min(60, gaps ? free / (gaps + 2) : 0));
+    const used = sum + g * gaps;
+    const innerH = Math.max(H, used + pad * 2);
+    let y = Math.max(pad, (innerH - used) / 2);
+    const targets = new Map();
+    rows.forEach((row) => {
+      if (row.center) {
+        const s = sizes.get(egoRing.center);
+        targets.set(egoRing.center, {x: cx, y: y + s.h / 2, s});
+        row.top = y; row.bottom = y + s.h;
+      } else {
+        row.items.forEach((nb, j) => {
+          const s = sizes.get(nb.key);
+          const tip = row.items.length === 1;
+          let dx = 0;
+          if (!tip) dx = (j === 0 ? -1 : 1) * gap(row.d);
+          // Pastille sur la colonne ; le libellé part vers l'extérieur. On garde 12 px de marge à l'écran.
+          let x = cx + dx;
+          const left = x - s.ax, right = left + s.w;
+          if (left < 12) x += 12 - left;
+          if (right > W - 12) x -= right - (W - 12);
+          const top = row.half === 'up' ? y + row.h - s.h : y;
+          targets.set(nb.key, {x, y: top + s.ay, s});
+        });
+      }
+      y += row.h + g;
+    });
+    egoNodes.style.height = innerH + 'px';
+    egoEdges.setAttribute('width', W);
+    egoEdges.setAttribute('height', innerH);
+    egoEdges.setAttribute('viewBox', `0 0 ${W} ${innerH}`);
+    return targets;
+  }
+
+  function applyNode(n) {
+    n.el.style.transform = `translate(${Math.round(n.x - n.ax)}px,${Math.round(n.y - n.ay)}px)`;
+    n.el.style.opacity = n.o.toFixed(3);
+    n.el.style.visibility = n.o < 0.01 ? 'hidden' : '';
+  }
+
+  // Liens : courbes du bord de la carte centrale vers chaque pastille.
+  function drawEdges() {
+    if (!egoRing) { egoEdges.innerHTML = ''; return; }
+    const c = egoEls.get(egoRing.center);
+    const ch = c.el.offsetHeight;
+    const stroke = egoState.kind === 'term' ? color(byId[egoState.id]) : null;
+    egoEdges.innerHTML = egoRing.nbs.map((nb) => {
+      const n = egoEls.get(nb.key);
+      if (!n) return '';
+      const upward = n.y < c.y;
+      const sx = c.x, sy = c.y + (upward ? -ch / 2 : ch / 2);
+      const my = (sy + n.y) / 2;
+      const col = stroke || n.el.style.getPropertyValue('--c');
+      return `<path d="M${sx.toFixed(1)} ${sy.toFixed(1)}C${sx.toFixed(1)} ${my.toFixed(1)} ${n.x.toFixed(1)} ${my.toFixed(1)} ${n.x.toFixed(1)} ${n.y.toFixed(1)}" fill="none" stroke="${col}" stroke-width="1.5" stroke-opacity="${(0.55 * Math.min(n.o, c.o)).toFixed(3)}"/>`;
+    }).join('');
+  }
+
+  // Affiche un état de la carte. opts : {push, origin (clé du nœud touché), instant, focusKey}.
+  function egoShow(state, opts = {}) {
+    if (opts.push && egoState) egoStack.push(egoState);
+    egoState = state;
+    egoBack.hidden = !egoStack.length;
+    cancelAnimationFrame(egoRaf);
+    const animate = !opts.instant && !mqReduced.matches;
+    // Les nœuds qui disparaissaient encore sont retirés tout de suite.
+    egoEls.forEach((n) => { if (n.leaving) { n.el.remove(); egoEls.delete(n.key); } });
+    const term = state.kind === 'term' ? byId[state.id] : null;
+    egoFoot.hidden = !term;
+    if (term) egoFoot.style.setProperty('--c', color(term));
+
+    if (state.kind === 'cat') {
+      // Liste des termes de la catégorie.
+      egoRing = null;
+      egoEls.forEach((n) => { n.el.remove(); });
+      egoEls.clear();
+      egoEdges.innerHTML = '';
+      egoNodes.hidden = true;
+      const cat = CATS[state.cat];
+      egoList.style.setProperty('--c', cat.color);
+      egoList.innerHTML = `<button type="button" class="crumb" data-ego-root><span aria-hidden="true">←</span>Catégories</button><h2 tabindex="-1">${esc(cat.label)}</h2><ul>${TERMS.filter((t) => t.cat === state.cat).map((t) => {
+        const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${esc(t.en)}</span>` : '';
+        return `<li><button type="button" data-ego="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="tx"><span class="t">${esc(t.title)}</span>${en ? ' ' + en : ''}</span></button></li>`;
+      }).join('')}</ul>`;
+      egoList.hidden = false;
+      egoList.classList.remove('in');
+      if (animate) { void egoList.offsetWidth; egoList.classList.add('in'); }
+      egoStage.scrollTop = 0;
+      const f = opts.focusKey && egoList.querySelector(`[data-ego="${opts.focusKey}"]`);
+      (f || egoList.querySelector('h2')).focus({preventScroll: !f});
+      return;
+    }
+
+    egoList.hidden = true;
+    egoList.innerHTML = '';
+    egoNodes.hidden = false;
+    const prev = egoRing;
+    const keep = new Set();
+    let centerKey, nbItems;
+    if (term) {
+      centerKey = 't:' + term.id;
+      fillNode(egoNode(centerKey), 'card', '', termCard(term));
+      nbItems = (term.links || []).map((id) => byId[id]).filter(Boolean).map((t) => ({key: 't:' + t.id, c: termNb(t)}));
+    } else {
+      centerKey = 'root';
+      const n = egoNode('root');
+      n.el.className = 'eg card root';
+      n.el.style.setProperty('--c', 'var(--line)');
+      n.el.innerHTML = `<span class="cn">${TERMS.length} termes</span>`;
+      nbItems = Object.keys(CATS).map((k) => ({key: 'c:' + k, c: catNb(k)}));
+    }
+    keep.add(centerKey);
+    nbItems.forEach((it) => { keep.add(it.key); fillNode(egoNode(it.key), 'nb', 'r', it.c); });
+    egoRing = {center: centerKey, nbs: nbItems.map((it) => ({key: it.key}))};
+
+    // Ordre du DOM = ordre de lecture : la carte, puis les liens dans l'ordre éditorial.
+    egoNodes.append(egoEls.get(centerKey).el, ...nbItems.map((it) => egoEls.get(it.key).el));
+    const targets = egoLayout();
+    const centerT = targets.get(centerKey);
+    const originN = opts.origin && egoEls.get(opts.origin);
+    const wasCenter = prev && prev.center === centerKey;
+    const cEl = egoEls.get(centerKey).el;
+    cEl.classList.toggle('pop', animate && !wasCenter && !!originN);
+
+    const from = new Map();
+    egoEls.forEach((n) => {
+      const t = targets.get(n.key);
+      if (t) { n.ax = t.s.ax; n.ay = t.s.ay; }
+      if (n.fresh) {
+        // Les nouveaux liens partent du centre, à l'endroit où arrive la carte.
+        n.x = centerT.x; n.y = centerT.y; n.o = 0; n.fresh = false;
+      }
+      from.set(n.key, {x: n.x, y: n.y, o: n.o});
+      if (!keep.has(n.key)) n.leaving = true;
+      applyNode(n);
+    });
+
+    const finish = () => {
+      egoEls.forEach((n) => { if (n.leaving) { n.el.remove(); egoEls.delete(n.key); } });
+    };
+    const step = (now, t0) => {
+      const k = animate ? Math.min(1, (now - t0) / DUR) : 1;
+      const e = ease(k);
+      egoEls.forEach((n) => {
+        const f = from.get(n.key);
+        const t = targets.get(n.key);
+        if (t) { n.x = f.x + (t.x - f.x) * e; n.y = f.y + (t.y - f.y) * e; n.o = f.o + (1 - f.o) * Math.min(1, e * 1.4); }
+        else { n.o = f.o * (1 - Math.min(1, k * 2.2)); }
+        applyNode(n);
+      });
+      drawEdges();
+      if (k < 1) egoRaf = requestAnimationFrame((t) => step(t, t0));
+      else finish();
+    };
+    if (animate) { const t0 = performance.now(); egoRaf = requestAnimationFrame((t) => step(t, t0)); }
+    else step(0, 0);
+
+    if (!opts.keepScroll) egoStage.scrollTop = 0;
+    const fk = opts.focusKey && egoEls.get(opts.focusKey) && targets.has(opts.focusKey) ? opts.focusKey : centerKey;
+    const fEl = egoEls.get(fk).el.querySelector('button') || egoEls.get(fk).el;
+    if (fEl.tagName !== 'BUTTON') { egoEls.get(fk).el.tabIndex = -1; }
+    fEl.focus({preventScroll: true});
+  }
+
+  // Relayout sans animation (rotation, clavier virtuel, redimensionnement).
+  function egoRelayout() {
+    if (!map.classList.contains('open') || !egoRing) return;
+    cancelAnimationFrame(egoRaf);
+    egoEls.forEach((n) => { if (n.leaving) { n.el.remove(); egoEls.delete(n.key); } });
+    const targets = egoLayout();
+    egoEls.forEach((n) => { const t = targets.get(n.key); if (t) { n.ax = t.s.ax; n.ay = t.s.ay; n.x = t.x; n.y = t.y; n.o = 1; applyNode(n); } });
+    drawEdges();
+  }
+
+  function egoReadTerm(id) { if (go(id)) closeMap(false); }
+
+  egoStage.addEventListener('click', (e) => {
+    const b = e.target.closest('button');
+    if (!b) return;
+    const node = b.closest('.eg');
+    const originKey = node && [...egoEls.values()].find((n) => n.el === node);
+    if (b.dataset.read) egoReadTerm(b.dataset.read);
+    else if (b.dataset.ego) {
+      if (egoState.kind === 'term' && egoState.id === b.dataset.ego) return;
+      egoShow({kind: 'term', id: b.dataset.ego}, {push: true, origin: originKey && originKey.key});
+    } else if (b.dataset.egoCat) egoShow({kind: 'cat', cat: b.dataset.egoCat}, {push: true});
+    else if ('egoRoot' in b.dataset) egoShow({kind: 'root'}, {push: true});
+  });
+  egoBack.addEventListener('click', () => {
+    const was = egoState;
+    const prevState = egoStack.pop();
+    if (!prevState) return;
+    const focusKey = was.kind === 'term' ? (prevState.kind === 'cat' ? was.id : 't:' + was.id) : was.kind === 'cat' ? 'c:' + was.cat : null;
+    egoShow(prevState, {focusKey});
+  });
+  egoRead.addEventListener('click', () => { if (egoState && egoState.kind === 'term') egoReadTerm(egoState.id); });
+
+  // Le focus reste dans la carte tant qu'elle est ouverte.
+  map.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab' || !map.classList.contains('open')) return;
+    const f = [...map.querySelectorAll('.ego button')].filter((b) => {
+      if (b.closest('[hidden]')) return false;
+      const node = b.closest('.eg');
+      return !node || node.style.visibility !== 'hidden';
+    });
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  document.getElementById('legend').innerHTML = Object.values(CATS)
+    .map((c) => `<span><i style="background:${c.color}"></i>${R.escapeHtml(c.label)}</span>`)
+    .join('') + '<span><i style="background:#1a1a1a;border:1.5px solid #555"></i>à venir</span>';
+
+  mqMobile.addEventListener('change', () => { if (!mqMobile.matches) closeMap(false); fit(); startLoop(); });
+  window.addEventListener('resize', () => { fit(); startLoop(); egoRelayout(); });
+  document.addEventListener('visibilitychange', startLoop);
+
+  let savedView = 'list';
+  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  setView(savedView, false);
+  go(termFromLocation(true), false);
+  fit();
+  startLoop();
+  if (document.fonts) {
+    document.fonts.ready.then(fit);
+    document.fonts.addEventListener('loadingdone', fit);
+  }
+};
+</script>
+</body>
+</html>

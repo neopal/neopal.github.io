@@ -30,7 +30,7 @@
   // Un mot présent dans trop de fiches (« modèle ») n'est pas lié : il soulignerait la moitié du lexique.
   const MAX_SHARE = 0.75;
   // Formes trop ambiguës pour être liées automatiquement (sens courant différent du terme technique).
-  const NEVER = new Set(['mémoire', 'memory', 'temp', 'loop', 'corpus', 'test', 'tests', 'score', 'outil', 'outils', 'modèle', 'model', 'calcul', 'agentic', 'lab', 'fournisseur', 'provider', 'deployer', 'tools', 'harnais', 'plan', 'instructions', 'apprentissage', 'gpt', 'vision']);
+  const NEVER = new Set(['mémoire', 'memory', 'temp', 'loop', 'corpus', 'test', 'tests', 'score', 'outil', 'outils', 'modèle', 'model', 'calcul', 'agentic', 'lab', 'fournisseur', 'provider', 'deployer', 'tools', 'harnais', 'plan', 'instructions', 'apprentissage', 'gpt', 'vision', 'constitution', 'position']);
   const reEsc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const isAcronym = (f) => /^[A-Z0-9-]{2,6}$/.test(f) && /[A-Z]/.test(f);
   const proseOf = (x) => [x.image, x.imagine, ...arr(x.full), x.then, x.avoid, ...arr(x.office).map((m) => m && m.text)].filter(Boolean).join(' ');
