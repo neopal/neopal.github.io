@@ -265,7 +265,7 @@ window.DICO_TERMS = [
     ],
     avoid:
       "« Il se souvient de notre conversation d'hier. » Seulement si le produit lui renvoie un résumé dans la fenêtre, parce que le modèle repart de zéro à chaque requête.",
-    video: null,
+    video: {src: 'videos/fenetre-de-contexte.mp4', poster: 'videos/fenetre-de-contexte.jpg'},
     sources: [
       {label: 'Liu et al., Lost in the Middle: How Language Models Use Long Contexts, juillet 2023', url: 'https://arxiv.org/abs/2307.03172'},
       {label: 'Chroma, Context Rot: How Increasing Input Tokens Impacts LLM Performance, juillet 2025 (18 modèles testés)', url: 'https://www.trychroma.com/research/context-rot'},
@@ -1063,7 +1063,7 @@ window.DICO_TERMS = [
       }
     ],
     "avoid": "« Benchmaxxing, ça veut dire que le labo a triché. » Souvent, aucune règle n'est enfreinte, puisque le labo entraîne sur des exercices proches du test ou choisit ce qu'il montre ; le score dit vrai sur le test tout en promettant trop pour le reste.",
-    "video": null,
+    "video": {"src": "videos/benchmaxxing.mp4", "poster": "videos/benchmaxxing.jpg"},
     "sources": [
       {
         "label": "The Register, Meta accused of Llama 4 bait-n-switch to juice LMArena rank, 8 avril 2025 (variante expérimentale 2e, Elo 1417, réponses longues avec émojis)",
