@@ -150,7 +150,6 @@
         ${section('Entendu au bureau', arr(t.office).length ? `<div class="chat">${t.office.map((m) => `<div class="bubble ${m.who === 'q' ? 'q' : 'a'}">${esc(m.text)}</div>`).join('')}</div>` : '')}
         ${section('À éviter', t.avoid ? `<div class="avoid"><b aria-hidden="true">✕</b><p>${esc(t.avoid)}</p></div>` : '')}
         ${related ? `<div class="connexions"><h2>Connexions</h2><div class="links">${related}</div></div>` : ''}
-        ${section('Sources', arr(t.sources).length ? `<ol class="sources">${t.sources.map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ol>` : '')}
         <nav class="pager" aria-label="Fiches">
           ${navLink(prev, 'prev')}
           <a class="all" href="${termUrl('', o)}" data-go="index">Tous les termes</a>
@@ -173,9 +172,7 @@
     }).join('');
     return `
       <div class="index">
-        <h1>Lexique IA</h1>
-        <p class="lead">Les définitions que j'ai écrites pour comprendre comment marchent les LLM, avec leurs sources.</p>
-        <h2 class="sr">Les termes</h2>
+        <h1 class="sr">Lexique IA : les termes</h1>
         <ul>${rows}</ul>
       </div>`;
   }
