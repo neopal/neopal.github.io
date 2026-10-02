@@ -505,16 +505,16 @@ window.DICO_TERMS = [
       "mythe-plus-gros-plus-intelligent",
       "cout-d-une-requete"
     ],
-    "short": "La taille d'un modèle, c'est son nombre de paramètres, compté en milliards (B) ou en milliers de milliards (T) ; pour un modèle MoE, on donne deux chiffres, le total et la part qui travaille pour chaque token.",
+    "short": "La taille d'un modèle est son nombre de paramètres, compté en milliards ; pour un MoE, on donne aussi la part qui travaille pour chaque token.",
     "image": "La taille du groupe se compte en potards sur la console. Sur une console dense, chaque note fait bouger tous les potards ; sur celle d'un MoE, deux ou trois rangées jouent pendant que les autres restent immobiles, et il faut pourtant de la place dans le studio pour la console entière.",
     "imagineForm": "D",
     "imagine": "Tu demandes à l'admin qui gère les serveurs : « Entre DeepSeek-V4-Flash et Qwen3.8-27B, lequel est le plus gros ? » Il réfléchit une seconde, puis te répond : « Les deux, puisque le premier a dix fois plus de paramètres et que le second en fait travailler deux fois plus pour chaque token. »",
     "full": [
-      "La taille se compte en paramètres, les nombres réglés pendant l'entraînement, et le jargon l'abrège avec des lettres anglaises : B pour billion (milliard), T pour trillion (millier de milliards). Ce chiffre dit d'abord combien de mémoire il faut pour faire tourner le modèle. En 16 bits, chaque paramètre occupe 2 octets, soit 2 Go par milliard de paramètres, un calcul qu'on refait de tête ; les fichiers de Llama 3.1 405B pèsent ainsi 812 Go sur Hugging Face.",
-      "Avec les MoE, le chiffre se dédouble. Un modèle dense fait travailler tous ses paramètres pour chaque token, alors qu'un MoE n'en active qu'une fraction : DeepSeek-V4-Pro, présenté en avril 2026, compte 1 600 milliards de paramètres et n'en active que 49 milliards par token. Le total dit combien de serveurs il faut ; la part active dit combien coûte chaque token et à quelle vitesse il sort.",
-      "C'est pour ça que Qwen écrit les deux nombres dans le nom de ses modèles, comme Qwen3-235B-A22B, qui se lit « 235 milliards en tout, dont 22 milliards actifs », ou Qwen3.8-2.4T-A95B. Face à un modèle dense, on compare le nombre qui suit le A quand on parle de vitesse, et le premier quand on parle de matériel."
+      "La taille se compte en paramètres, les nombres réglés pendant l'entraînement. Le jargon l'abrège avec des lettres anglaises, B pour billion (milliard) et T pour trillion (millier de milliards). Ce chiffre dit d'abord combien de mémoire il faut pour faire tourner le modèle. En 16 bits, compte 2 Go par milliard de paramètres, un calcul qu'on refait de tête. Les fichiers de Llama 3.1 405B pèsent ainsi 812 Go sur Hugging Face.",
+      "Avec les MoE, le chiffre se dédouble. Un modèle dense fait travailler tous ses paramètres pour chaque token, alors qu'un MoE n'en active qu'une fraction. DeepSeek-V4-Pro compte 1 600 milliards de paramètres, mais n'en active que 49 milliards par token. Le total dit combien de serveurs il faut ; la part active dit combien coûte chaque token et à quelle vitesse il sort.",
+      "C'est pour ça que Qwen écrit les deux nombres dans le nom de ses modèles. Qwen3-235B-A22B se lit par exemple « 235 milliards en tout, dont 22 milliards actifs ». Face à un modèle dense, on compare le nombre qui suit le A quand on parle de vitesse, et le premier quand on parle de matériel."
     ],
-    "then": "En juillet 2024, Meta publiait Llama 3.1 405B, un modèle dense dont un seul chiffre suffisait à décrire la taille. En juillet 2026, Moonshot AI a publié Kimi K3, qui compte 2 800 milliards de paramètres dont 104 milliards actifs par token. Il est sept fois plus gros que Llama 3.1 405B au total, et chaque token y fait pourtant travailler quatre fois moins de paramètres.",
+    "then": "En 2024, Meta publiait Llama 3.1 405B, un modèle dense dont un seul chiffre suffisait à décrire la taille. Deux ans plus tard, Moonshot AI a publié Kimi K3, sept fois plus gros au total. Chaque token y fait pourtant travailler quatre fois moins de paramètres.",
     "office": [
       {
         "who": "q",
@@ -522,10 +522,10 @@ window.DICO_TERMS = [
       },
       {
         "who": "a",
-        "text": "Commence par la mémoire : en 16 bits, le 70B demande environ 141 Go, donc plusieurs GPU, alors que le 8B tient sur une seule carte de 24 Go ; si tu n'as pas plusieurs GPU sous la main, la question est déjà réglée."
+        "text": "Commence par la mémoire. Sans compression, le 70B demande plusieurs GPU, alors que le 8B tient sur une seule carte. Si tu n'as pas plusieurs GPU sous la main, la question est déjà réglée."
       }
     ],
-    "avoid": "« Un 1T, c'est forcément plus lent qu'un 70B. » Kimi K2 compte 1 000 milliards de paramètres mais n'en active que 32 milliards par token, donc il calcule chaque token avec moins de paramètres qu'un modèle dense de 70 milliards. Il lui faut en revanche beaucoup plus de mémoire.",
+    "avoid": "« Un 1T, c'est forcément plus lent qu'un 70B. » Kimi K2 compte 1 000 milliards de paramètres mais n'en active que 32 milliards par token, moins qu'un modèle dense de 70 milliards. Il lui faut en revanche beaucoup plus de mémoire.",
     "video": null,
     "sources": [
       {
@@ -856,15 +856,15 @@ window.DICO_TERMS = [
         "url": "https://lmstudio.ai/"
       }
     ],
-    "short": "La quantization consiste à stocker les paramètres d'un modèle avec moins de précision, par exemple sur 4 bits au lieu de 16, pour qu'il prenne trois à quatre fois moins de mémoire au prix d'un peu de qualité.",
+    "short": "La quantization stocke les paramètres d'un modèle avec moins de précision, pour qu'il prenne bien moins de mémoire au prix d'un peu de qualité.",
     "image": "Passe la bande du WAV au MP3 et le morceau tient dans un fichier bien plus léger, au prix de détails que peu d'oreilles entendent ; la quantization fait la même chose avec le réglage de la console. La comparaison s'arrête là, car le MP3 jette les sons qu'on n'entend pas alors que la quantization arrondit tous les potards sans exception, ce qui finit par s'entendre quand on arrondit trop.",
     "imagineForm": "E",
-    "imagine": "Avant, tu télécharges Llama 3.3 70B dans sa version 16 bits, 141 Go, et il faut deux GPU de serveur à 80 Go pour l'ouvrir. Après, tu prends la version 4 bits du même modèle, 43 Go, et il tient dans une machine de 64 Go de mémoire ; ce sont les mêmes 70 milliards de potards, arrondis chacun au cran le plus proche.",
+    "imagine": "Tu télécharges Llama 3.3 70B dans sa version 16 bits, un fichier de 141 Go qu'il faut répartir sur deux GPU de serveur. Tu prends ensuite la version 4 bits du même modèle, 43 Go, et elle tient dans une seule machine bien dotée en mémoire. Ce sont exactement les mêmes potards, arrondis chacun au cran le plus proche.",
     "full": [
-      "Pendant l'entraînement, chaque paramètre est en général stocké sur 16 bits. La quantization le réécrit sur 8, 4 ou même 2 bits, en l'arrondissant à l'une des rares valeurs que le format sait représenter : sur 4 bits, il n'en existe que 16. Le modèle prend moins de mémoire, tient sur des machines plus modestes et répond souvent plus vite, puisqu'il y a moins de données à déplacer pour chaque token.",
-      "La perte dépend du niveau d'arrondi et de la taille du modèle. En mai 2025, une étude sur Qwen3 a mesuré qu'en 4 bits, Qwen3-14B ne perdait qu'environ 1 % sur le test MMLU, alors que le petit Qwen3-0.6B perdait environ 10 %. À 3 bits et moins, Qwen3 se dégradait plus nettement que les générations précédentes, ce que les auteurs attribuent à un entraînement plus poussé qui laisse moins de paramètres superflus à sacrifier."
+      "Pendant l'entraînement, chaque paramètre est en général stocké sur 16 bits. La quantization le réécrit avec moins de bits, en l'arrondissant à l'une des rares valeurs que le format sait représenter. Sur 4 bits, il n'en existe que 16. Le modèle prend moins de mémoire et tient sur des machines plus modestes. Il répond aussi souvent plus vite, puisqu'il y a moins de données à déplacer pour chaque token.",
+      "La perte dépend du niveau d'arrondi et de la taille du modèle. En 2025, une étude sur la famille Qwen3 a mesuré qu'en 4 bits, un modèle de taille moyenne ne perdait qu'environ 1 % sur le test MMLU. Le plus petit de la famille perdait, lui, environ 10 %. Avec un arrondi plus fort encore, Qwen3 se dégradait plus nettement que les générations précédentes. Les auteurs l'attribuent à un entraînement plus poussé, qui laisse moins de paramètres superflus à sacrifier."
     ],
-    "then": "La quantization se faisait surtout après coup en 2024, sur un modèle publié en 16 bits, et Llama 3.3 70B existe ainsi sur Ollama en une douzaine de versions, de 141 Go en 16 bits à 26 Go en 2 bits. Depuis août 2025, des labos publient des modèles conçus pour tourner en 4 bits, comme gpt-oss-120b, qui tient sur un seul GPU de 80 Go et dont toutes les évaluations ont été faites en 4 bits, puis Kimi K3 en juillet 2026.",
+    "then": "En 2024, la quantization se faisait surtout après coup, sur un modèle publié en pleine précision. Llama 3.3 70B existe ainsi sur Ollama en une douzaine de versions, de la plus complète à la plus compressée. Depuis 2025, des labos publient des modèles conçus pour tourner en 4 bits. C'est le cas de gpt-oss-120b, qui tient sur un seul GPU et dont toutes les évaluations ont été faites sous cette forme, et plus récemment de Kimi K3.",
     "office": [
       {
         "who": "q",
@@ -872,10 +872,10 @@ window.DICO_TERMS = [
       },
       {
         "who": "a",
-        "text": "C'est probablement l'arrondi, parce qu'en dessous de 4 bits les modèles se dégradent nettement ; remonte en 4 bits, quitte à payer un GPU de plus."
+        "text": "C'est probablement l'arrondi, parce qu'en dessous de 4 bits les modèles se dégradent nettement. Remonte en 4 bits, quitte à payer un GPU de plus."
       }
     ],
-    "avoid": "« Un modèle quantifié est un modèle plus petit. » Il garde exactement le même nombre de paramètres et chacun est stocké avec moins de précision, donc un 70B en 4 bits reste un 70B.",
+    "avoid": "« Un modèle quantifié est un modèle plus petit. » Il garde exactement le même nombre de paramètres et chacun est stocké avec moins de précision, donc un 70B quantifié reste un 70B.",
     "video": null,
     "sources": [
       {
@@ -4130,16 +4130,16 @@ window.DICO_TERMS = [
       "benchmarks",
       "open-weights"
     ],
-    "short": "Un modèle frontière est l'un des quelques modèles les plus capables à une date donnée ; la loi californienne SB 53 reprend le mot et le définit par le calcul dépensé pour l'entraîner, plus de 10^26 opérations.",
+    "short": "Un modèle frontière est l'un des modèles les plus capables du moment ; la Californie le définit dans la loi par le calcul dépensé pour l'entraîner.",
     "image": "Parmi les maisons de disques, quelques-unes seulement peuvent louer le plus grand studio de la ville pendant des mois, et leurs albums fixent le niveau que les autres essaient d'atteindre. Le régulateur, qui ne peut pas écouter un album avant sa sortie, a choisi de compter les heures de studio, en sachant qu'elles ne disent pas qui joue le mieux.",
     "imagineForm": "E",
     "imagine": "En mars 2023, GPT-4 sort, et c'est le modèle frontière par excellence. En septembre 2026, le même GPT-4, sans un paramètre changé, est sorti de la frontière, dépassé par toute une génération de modèles dont GPT-6 Astra, qu'Epoch AI estime entraîné avec environ cinquante fois plus de calcul.",
     "full": [
-      "La définition la plus utile vient du Frontier Model Forum, l'association créée en 2023 qui réunit Amazon, Anthropic, Google, Meta, Microsoft et OpenAI. Un modèle frontière y est un modèle généraliste qui dépasse, sur un ensemble de benchmarks ou d'évaluations de capacités à risque, tous les modèles largement déployés depuis au moins douze mois. La frontière est une date autant qu'un niveau, et elle avance à chaque sortie. En octobre 2026, chaque labo place son modèle de tête de ce côté. OpenAI présente GPT-6 Astra comme son modèle le plus capable, SpaceXAI (ex-xAI) appelle Grok 4.7 son « frontier model », et Mistral AI décrit Mistral Medium 3.5 comme un modèle « frontier-class ».",
-      "Le mot compte aussi parce que la régulation s'appuie sur la même idée. L'AI Act européen ne parle pas de frontière mais de « modèle à risque systémique », et il présume qu'un modèle généraliste a des capacités à fort impact quand son entraînement dépasse 10^25 opérations. GPT-4 lui-même tombe sur la ligne, puisque l'estimation d'Epoch AI pour son entraînement, entre 8 × 10^24 et 4 × 10^25 opérations, encadre le seuil. Les fournisseurs de ces modèles doivent alors évaluer le modèle avec des tests adverses, mesurer les risques, signaler les incidents graves et protéger le modèle contre les attaques. Ces obligations s'appliquent depuis le 2 août 2025, et la Commission peut infliger des amendes depuis le 2 août 2026. En Californie, la loi SB 53, signée le 29 septembre 2025, appelle « frontier model » tout modèle entraîné avec plus de 10^26 opérations, fine-tuning et apprentissage par renforcement compris, et vise surtout les développeurs qui dépassent 500 millions de dollars de chiffre d'affaires annuel.",
-      "Le seuil de calcul a l'avantage d'être un chiffre, et l'inconvénient que le public ne peut presque jamais le vérifier. Dans la base d'Epoch AI mise à jour le 1er octobre 2026, 1 410 des 3 626 modèles recensés ont une estimation de calcul d'entraînement. Elle manque justement pour Claude Fable 5.1, Gemini 3.1 Pro ou Muse Spark 1.3, dont les labos ne publient rien. Pour ces modèles, c'est au fournisseur de faire le calcul et de se déclarer auprès du Bureau de l'IA de la Commission."
+      "La définition la plus utile vient du Frontier Model Forum, une association qui réunit Amazon, Anthropic, Google, Meta, Microsoft et OpenAI. Pour elle, un modèle frontière est un modèle généraliste qui dépasse tous les modèles largement déployés depuis au moins un an. La comparaison se fait sur des benchmarks ou sur des évaluations de capacités à risque. La frontière est donc une date autant qu'un niveau, et elle avance à chaque sortie. En octobre 2026, chaque labo place son modèle de tête de ce côté. OpenAI présente GPT-6 Astra comme son modèle le plus capable, et SpaceXAI (ex-xAI) appelle Grok 4.7 son « frontier model ». Mistral AI, de son côté, qualifie Mistral Medium 3.5 de « frontier-class ».",
+      "Le mot compte aussi parce que la régulation s'appuie sur la même idée. L'AI Act européen ne parle pas de frontière mais de « modèle à risque systémique ». Il présume ce risque dès que l'entraînement d'un modèle généraliste dépasse 10^25 opérations. GPT-4 lui-même tombe sur la ligne, puisque l'estimation d'Epoch AI pour son entraînement encadre le seuil. Les fournisseurs de ces modèles doivent alors les soumettre à des tests adverses, mesurer les risques, signaler les incidents graves et les protéger contre les attaques. Ces obligations s'appliquent déjà, et la Commission peut infliger des amendes depuis août 2026. En Californie, la loi SB 53 appelle « frontier model » tout modèle entraîné avec plus de 10^26 opérations, fine-tuning et apprentissage par renforcement compris. Elle vise surtout les gros développeurs, ceux qui dépassent 500 millions de dollars de chiffre d'affaires annuel.",
+      "Le seuil de calcul a l'avantage d'être un chiffre, et l'inconvénient que le public ne peut presque jamais le vérifier. Dans la base d'Epoch AI, moins de la moitié des modèles recensés ont une estimation de calcul d'entraînement. Elle manque justement pour Claude Fable 5.1, Gemini 3.1 Pro ou Muse Spark 1.3, dont les labos ne publient rien. Pour ces modèles, c'est au fournisseur de faire le calcul et de se déclarer auprès du Bureau de l'IA de la Commission."
     ],
-    "then": "En septembre 2024, le gouverneur de Californie refusait de signer SB 1047, une première loi sur les modèles frontière, et le mot restait surtout celui des labos et des chercheurs. Deux ans plus tard, il figure dans SB 53, une loi californienne signée en 2025, et le seuil européen de 10^25 opérations est assorti d'amendes depuis le 2 août 2026.",
+    "then": "En septembre 2024, le gouverneur de Californie refusait de signer SB 1047, une première loi sur les modèles frontière. Le mot restait alors surtout celui des labos et des chercheurs. Deux ans plus tard, il figure dans une loi californienne, SB 53, et le seuil européen est assorti d'amendes.",
     "office": [
       {
         "who": "q",
@@ -4147,10 +4147,10 @@ window.DICO_TERMS = [
       },
       {
         "who": "a",
-        "text": "Une seule carte H200 qui calculerait sans s'arrêter à sa puissance de pointe mettrait environ trois siècles à les faire ; les labos y arrivent en quelques mois avec des dizaines de milliers de puces."
+        "text": "Une seule carte H200 qui calculerait sans s'arrêter à sa puissance de pointe mettrait environ trois siècles à les faire. Les labos y arrivent en quelques mois avec des dizaines de milliers de puces."
       }
     ],
-    "avoid": "« L'AI Act interdit les modèles frontière. » Le texte ne les interdit pas, mais au-delà de 10^25 opérations d'entraînement, il présume un risque systémique et impose des obligations, comme les évaluations, les tests adverses, le signalement des incidents graves et la cybersécurité.",
+    "avoid": "« L'AI Act interdit les modèles frontière. » Le texte ne les interdit pas, mais il présume un risque systémique dès que l'entraînement dépasse 10^25 opérations. Il impose alors des évaluations, des tests adverses, le signalement des incidents graves et de la cybersécurité.",
     "video": null,
     "sources": [
       {
@@ -4569,16 +4569,16 @@ window.DICO_TERMS = [
       "cout-d-une-requete",
       "modeles-de-raisonnement"
     ],
-    "short": "Le compute, c'est la quantité de calcul que demande un modèle, comptée en opérations sur des nombres (FLOP), d'abord en quantité énorme pour l'entraîner, une seule fois, puis à chaque token qu'il lit ou écrit pour te répondre.",
+    "short": "Le compute est la quantité de calcul que demande un modèle, en masse pour l'entraîner, puis à chaque token qu'il lit ou écrit pour te répondre.",
     "image": "Pour le studio, le compute se compte en heures de location et en kilowatts. Les mois passés à régler la console dans le grand studio, c'est l'entraînement, payé une fois ; chaque concert qui suit, c'est l'inférence, qui consomme un peu de courant à chaque note, mais tous les soirs et dans toutes les salles à la fois.",
     "imagineForm": "B",
-    "imagine": "Prends ta calculatrice et refais l'estimation d'Epoch AI pour Olmo 3 32B, le modèle d'Ai2 dont les données d'entraînement sont publiques, en multipliant 6 par ses 32 milliards de paramètres, puis par les 5 500 milliards de tokens qu'il a lus. Tu obtiens environ 1,1 × 10^24 opérations, et il en faudrait encore près de dix fois plus pour atteindre le seuil de 10^25 que l'AI Act réserve aux modèles à risque systémique.",
+    "imagine": "Prends ta calculatrice et refais l'estimation d'Epoch AI pour Olmo 3 32B, le modèle d'Ai2 dont les données d'entraînement sont publiques. Multiplie 6 par ses 32 milliards de paramètres, puis par les 5 500 milliards de tokens qu'il a lus. Tu obtiens environ 1,1 × 10^24 opérations. Il en faudrait encore près de dix fois plus pour atteindre le seuil de 10^25 que l'AI Act réserve aux modèles à risque systémique.",
     "full": [
-      "Un entraînement fait passer chaque token des données dans le modèle, puis ajuste les paramètres, ce qui revient à environ six opérations par paramètre et par token. Avec des dizaines de milliards de paramètres et des milliers de milliards de tokens, on arrive aux ordres de grandeur du domaine, entre 10^24 et 10^27 opérations, la notation 10^24 désignant un 1 suivi de 24 zéros, soit mille milliards de milliards. Les labos de tête ne publient plus ces chiffres, qui viennent donc d'estimations, comme celle d'Epoch AI pour GPT-6 Astra, environ 10^27 opérations sur au moins 100 000 puces GB200 de NVIDIA installées à Abilene, au Texas.",
-      "L'inférence coûte beaucoup moins par token, mais elle se répète à chaque requête de chaque utilisateur, et c'est elle que Google mesure quand il compte les tokens traités chaque mois sur ses services. Les modèles de raisonnement déplacent encore la dépense vers ce moment-là, puisque leur brouillon, écrit avant chaque réponse, peut à lui seul dépasser la réponse en longueur.",
-      "Le compute se paie en puces et en électricité. Quand Anthropic annonce en octobre 2025 un accord pour utiliser jusqu'à un million de puces TPU de Google, il le chiffre aussi en énergie, avec bien plus d'un gigawatt de capacité en service en 2026."
+      "Un entraînement fait passer chaque token des données dans le modèle, puis ajuste les paramètres. Cela revient à environ six opérations par paramètre et par token. Avec des dizaines de milliards de paramètres et des milliers de milliards de tokens, on arrive aux ordres de grandeur du domaine. Ils vont de 10^24 à 10^27 opérations, c'est-à-dire au moins un million de milliards de milliards. Les labos de tête ne publient plus ces chiffres, qui viennent donc d'estimations. Epoch AI place ainsi GPT-6 Astra en haut de cette fourchette, avec un entraînement sur au moins 100 000 puces de NVIDIA installées au Texas.",
+      "L'inférence coûte beaucoup moins par token, mais elle se répète à chaque requête de chaque utilisateur. C'est elle que Google mesure quand il compte les tokens traités chaque mois sur ses services. Les modèles de raisonnement déplacent encore la dépense vers ce moment-là, puisque leur brouillon, écrit avant chaque réponse, peut à lui seul dépasser la réponse en longueur.",
+      "Le compute se paie en puces et en électricité. Anthropic a ainsi annoncé un accord pour utiliser jusqu'à un million de puces TPU de Google. Il l'a aussi chiffré en énergie, avec bien plus d'un gigawatt de capacité en service en 2026."
     ],
-    "then": "En 2024, Google traitait 9 700 milliards de tokens par mois sur ses services. En mai 2026, Sundar Pichai annonce plus de 3,2 millions de milliards par mois, plus de trois cents fois plus, et chacun de ces tokens a été lu ou écrit pour répondre à quelqu'un.",
+    "then": "En 2024, Google traitait 9 700 milliards de tokens par mois sur ses services. En mai 2026, Sundar Pichai en annonce plus de trois cents fois plus, et chacun de ces tokens a été lu ou écrit pour répondre à quelqu'un.",
     "office": [
       {
         "who": "q",
@@ -4586,7 +4586,7 @@ window.DICO_TERMS = [
       },
       {
         "who": "a",
-        "text": "Fais le calcul 6ND avant d'en discuter, en sachant qu'Olmo 3 32B, pourtant loin de la frontière, a occupé 1 024 GPU H100 selon Epoch AI ; c'est ce budget-là qu'il faut mettre en face du projet."
+        "text": "Fais le calcul 6ND avant d'en discuter. Olmo 3 32B, pourtant loin de la frontière, a occupé plus d'un millier de GPU selon Epoch AI, et c'est ce budget-là qu'il faut mettre en face du projet."
       }
     ],
     "avoid": "« Une fois entraîné, le modèle ne coûte plus rien en calcul. » Chaque token lu ou écrit mobilise tous les paramètres actifs du modèle. Cette dépense revient à chaque requête, multipliée par le nombre d'utilisateurs et, pour un modèle de raisonnement, par la longueur de son brouillon.",
