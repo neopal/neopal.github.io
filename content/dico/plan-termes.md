@@ -19,14 +19,14 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Embedding | embedding | publié | | AGT, LLM, HO, ULT, CAR | la carte du son |
 | Auto-attention | self-attention | publié | | AGT, LLM, HO, ULT, CAR | l'oreille qui monte certaines pistes |
 | Transformer | transformer | publié | | LLM, HO, ULT | la table de mixage complète |
-| Logits | logits | prévu | P3 | LLM | les VU-mètres avant le choix de la note |
+| Logits | logits | publié | | LLM | les VU-mètres avant le choix de la note |
 | Position | positional encoding | prévu | P3 | LLM | le numéro de mesure sur la partition |
 | LLM (grand modèle de langage) | large language model | publié | | LLM, HO, ULT | le groupe tout entier |
 | Réseau de neurones | neural network | publié | | HAM, ULT | le câblage de la console, potard relié à potard |
 | Apprentissage automatique et deep learning | machine learning, deep learning | publié | | LLM, ULT, CAR | régler à l'oreille plutôt qu'écrire la partition |
-| Encodeur et décodeur | encoder, decoder | prévu | P3 | LLM, HO, ULT | l'oreille qui analyse, la voix qui chante |
+| Encodeur et décodeur | encoder, decoder | publié | | LLM, HO, ULT | l'oreille qui analyse, la voix qui chante |
 | Multimodal | multimodal model | publié | | AGT, HO | le groupe qui voit enfin la salle |
-| Modèle de diffusion | diffusion model | prévu | P3 | CAR | la bande pleine de souffle qu'on nettoie passe après passe |
+| Modèle de diffusion | diffusion model | publié | | CAR | la bande pleine de souffle qu'on nettoie passe après passe |
 
 ## 2. Entraînement
 
@@ -38,7 +38,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Lois d'échelle et plateau | scaling laws | publié | | ULT | plus de potards, plus d'écoute |
 | Post-training, SFT | post-training, supervised fine-tuning | publié | | AGT, LLM, HO, ULT, CAR | les cours particuliers |
 | RLHF | reinforcement learning from human feedback | publié | | AGT, HO, CAR, ENT | le public qui applaudit |
-| DPO | direct preference optimization | prévu | P3 | LLM, HO | |
+| DPO | direct preference optimization | publié | | LLM, HO | |
 | RL à récompense vérifiable | RLVR | dans post-entrainement | | AGT, CAR | le juré qui a la partition |
 | Constitutional AI | constitutional AI | prévu | P3 | | le règlement intérieur du studio |
 | Distillation | distillation | publié | | ENT | le groupe de reprise |
@@ -48,7 +48,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Petits modèles embarqués | small / on-device models | prévu | P2 | ENT, LLM | le groupe acoustique |
 | Open weights vs open source | open weights | publié | | LLM, ULT, HO | le preset donné à tout le monde |
 | Données d'entraînement | training data | publié | | LLM, HAM | la discothèque de l'ingé son |
-| Données synthétiques | synthetic data | prévu | P3 | ULT | s'entraîner sur ses propres maquettes |
+| Données synthétiques | synthetic data | publié | | ULT | s'entraîner sur ses propres maquettes |
 
 ## 3. Inférence
 
@@ -92,7 +92,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Red teaming | red teaming | prévu | P3 | ENT | |
 | Évaluations de dangerosité | dangerous capability evals | prévu | P3 | | |
 | Interprétabilité | interpretability | publié | | ULT | ouvrir la console |
-| Responsabilité | liability, accountability | prévu | P2 | HAM, ENT | qui paie quand la sono grille la salle ? |
+| Responsabilité | liability, accountability | publié | | HAM, ENT | qui paie quand la sono grille la salle ? |
 | Explosion de l'intelligence | intelligence explosion | prévu | P3 | ULT | |
 
 ## 6. Agents et produit
@@ -152,23 +152,23 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Mythe | Statut | Prio | Livres |
 |---|---|---|---|
 | L'IA cherche la réponse dans une base | publié | | HO, ULT |
-| L'IA calcule | prévu | P2 | AGT, HO |
+| L'IA calcule | publié | | AGT, HO |
 | L'IA sait quand elle ne sait pas | publié | | ENT |
 | L'IA apprend de nos conversations | publié | | AGT, HO, ENT, CAR |
-| L'IA comprend | prévu | P2 | LLM, HAM, ULT, HO |
-| L'IA lit mot par mot | prévu | P2 | AGT, LLM, HO, ULT |
+| L'IA comprend | publié | | LLM, HAM, ULT, HO |
+| L'IA lit mot par mot | publié | | AGT, LLM, HO, ULT |
 | Plus gros = plus intelligent | publié | | ULT, HO, CAR |
 | ChatGPT, c'est le modèle | publié | | ULT |
-| L'IA est neutre | prévu | P2 | CAR, HO |
+| L'IA est neutre | publié | | CAR, HO |
 | Un agent est autonome | publié | | AGT, CAR, ENT |
 | L'IA a lu tout Internet donc sait tout | publié | | LLM, ULT, ENT |
-| Le modèle raisonne comme nous | prévu | P2 | AGT, HO, CAR |
+| Le modèle raisonne comme nous | publié | | AGT, HO, CAR |
 | L'IA a des valeurs | prévu | P3 | ULT |
-| L'IA va remplacer tel métier demain | prévu | P3 | HAM, ULT |
-| L'IA open source est gratuite | prévu | P2 | ULT, HO |
+| L'IA va remplacer tel métier demain | publié | | HAM, ULT |
+| L'IA open source est gratuite | publié | | ULT, HO |
 | Ce n'est que de l'autocomplétion | publié | | HAM, ULT, LLM |
-| Un bon score au benchmark fait un bon modèle | prévu | P2 | HAM, HO, ULT, AGT |
-| Le modèle agit lui-même | prévu | P2 | AGT, CAR |
+| Un bon score au benchmark fait un bon modèle | publié | | HAM, HO, ULT, AGT |
+| Le modèle agit lui-même | publié | | AGT, CAR |
 
 ## Bilan de la synthèse des livres (2026-10-02)
 

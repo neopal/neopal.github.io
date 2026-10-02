@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="mythe-remplace-metier-t">
+<title id="mythe-remplace-metier-t">En haut, le temps d'un radiologue d'après une étude de 2012 : 36 % pour interpréter des images, le reste pour les patients, les médecins et l'enseignement. En bas, l'emploi dans les métiers les plus exposés à l'IA en août 2026 : environ 19 % sous la trajectoire des métiers moins exposés chez les 22-25 ans, sans écart comparable chez les plus expérimentés.</title>
+<text class="m mu" x="0" y="14">le temps d'un radiologue, étude de 2012</text>
+<rect class="fa" x="0" y="26" width="130" height="26" rx="2"/>
+<rect class="fd" x="131" y="26" width="229" height="26" rx="2"/>
+<text class="m ac" x="0" y="74">36 % images</text>
+<text class="m" x="141" y="74">patients, médecins,</text>
+<text class="m" x="141" y="92">enseignement</text>
+<path class="ln" d="M0 118 H360"/>
+<text class="m mu" x="0" y="146">emploi dans les métiers exposés, août 2026</text>
+<text class="m mu" x="0" y="164">face à la trajectoire des moins exposés</text>
+<text x="0" y="205">22-25 ans</text>
+<rect class="fa" x="110" y="190" width="202" height="20" rx="2"/>
+<rect class="bxa dash" x="313" y="190" width="47" height="20" rx="2"/>
+<text class="m ac" x="336" y="183" text-anchor="middle">-19 %</text>
+<text x="0" y="240">expérimentés</text>
+<rect class="fa" x="110" y="226" width="250" height="20" rx="2" opacity="0.4"/>
+
+<text class="m d" x="360" y="266" text-anchor="end">barre entière, trajectoire attendue</text>
+<text class="i mu" x="0" y="304">L'IA prend des tâches, et l'effet mesuré passe</text>
+<text class="i mu" x="0" y="324">d'abord par les embauches de débutants.</text>
+</svg>

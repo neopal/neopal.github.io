@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" role="img" aria-labelledby="mythe-agit-lui-meme-t">
+<title id="mythe-agit-lui-meme-t">Le chemin d'une action : le modèle écrit une demande tool_use, le programme vérifie les droits et exécute l'action sur les mails, fichiers ou bases, puis renvoie un tool_result au modèle ; sans programme branché, rien ne part.</title>
+<rect class="bxa" x="0" y="0" width="150" height="44" rx="6"/>
+<text class="b" x="75" y="27" text-anchor="middle">modèle</text>
+<text class="m mu" x="75" y="60" text-anchor="middle">écrit du texte</text>
+<rect class="bx" x="0" y="124" width="150" height="44" rx="6"/>
+<text class="b" x="75" y="151" text-anchor="middle">programme</text>
+<rect class="bx" x="0" y="236" width="150" height="44" rx="6"/>
+<text class="b" x="75" y="263" text-anchor="middle">mails, fichiers</text>
+<path class="la" d="M40 68 V118"/><path class="la" d="M34 111 l6 7 l6 -7"/>
+<path class="lm" d="M110 118 V68"/><path class="lm" d="M104 75 l6 -7 l6 7"/>
+<path class="lm" d="M75 168 V230"/><path class="lm" d="M69 223 l6 7 l6 -7"/>
+<text class="m ac" x="166" y="84">1 tool_use</text>
+<text class="m d" x="166" y="102">envoyer_mail, à Paul</text>
+<text class="m ac" x="166" y="136">4 tool_result</text>
+<text class="m d" x="166" y="154">« message envoyé »</text>
+<text class="m ac" x="166" y="196">2 vérifie les droits</text>
+<text class="m ac" x="166" y="216">3 exécute l'action</text>
+<path class="ln dash" d="M160 70 V226"/>
+<text class="i mu" x="0" y="300">Sans programme branché, rien ne part, et le</text>
+<text class="i mu" x="0" y="318">modèle peut quand même écrire qu'il l'a fait.</text>
+</svg>

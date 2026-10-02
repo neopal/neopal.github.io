@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 352" role="img" aria-labelledby="logits-t">
+<title id="logits-t">Après un début de phrase, le modèle donne un score brut, positif ou négatif, à chaque token possible ; la softmax change ces logits en probabilités dont la somme fait 100 %. Exemple réduit à quatre tokens.</title>
+<text class="m mu" x="180" y="16" text-anchor="middle">« J'ai bu un café et mangé un… »</text>
+<text class="m d" x="0" y="46">logits</text>
+<path class="ln" d="M180 54 v86"/>
+<text class="m d" x="180" y="46" text-anchor="middle">0</text>
+<text class="m" x="0" y="72">croissant</text>
+<rect class="fa" x="180" y="62" width="73" height="12" rx="2"/>
+<text class="m" x="259" y="72">6,1</text>
+<text class="m" x="0" y="94">gâteau</text>
+<rect class="fa" opacity="0.7" x="180" y="84" width="65" height="12" rx="2"/>
+<text class="m" x="251" y="94">5,4</text>
+<text class="m" x="0" y="116">fruit</text>
+<rect class="fa" opacity="0.5" x="180" y="106" width="36" height="12" rx="2"/>
+<text class="m" x="222" y="116">3,0</text>
+<text class="m" x="0" y="138">parapluie</text>
+<rect class="bx" x="150" y="128" width="30" height="12" rx="2"/>
+<text class="m mu" x="144" y="138" text-anchor="end">-2,5</text>
+<path class="la" d="M180 152 v22"/><path class="la" d="M174 168 l6 6 l6 -6"/>
+<text class="m ac" x="194" y="168">softmax</text>
+<text class="m d" x="0" y="200">probabilités</text>
+<text class="m" x="0" y="226">croissant</text>
+<rect class="fa" x="96" y="216" width="195" height="12" rx="2"/>
+<text class="m" x="297" y="226">64,9 %</text>
+<text class="m" x="0" y="248">gâteau</text>
+<rect class="fa" opacity="0.7" x="96" y="238" width="97" height="12" rx="2"/>
+<text class="m" x="199" y="248">32,2 %</text>
+<text class="m" x="0" y="270">fruit</text>
+<rect class="fa" opacity="0.5" x="96" y="260" width="9" height="12" rx="2"/>
+<text class="m" x="111" y="270">2,9 %</text>
+<text class="m" x="0" y="292">parapluie</text>
+<rect class="fl" x="96" y="282" width="2" height="12" rx="1"/>
+<text class="m mu" x="104" y="292">moins de 0,1 %</text>
+<text class="i mu" x="0" y="324">Les probabilités font 100 %, alors que les</text>
+<text class="i mu" x="0" y="343">logits n'ont ni plafond ni somme fixe.</text>
+</svg>

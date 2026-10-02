@@ -182,7 +182,8 @@ window.DICO_TERMS = [
       "mythe-base-de-donnees",
       "kv-cache",
       "transformer",
-      "mythe-autocompletion"
+      "mythe-autocompletion",
+      "logits"
     ],
     short:
       "Un LLM écrit sa réponse un token à la fois : il regarde tout le texte déjà écrit, calcule quel token a le plus de chances de venir ensuite, l'ajoute, et recommence jusqu'à la fin.",
@@ -231,7 +232,8 @@ window.DICO_TERMS = [
       "rag",
       "parametres",
       "temperature",
-      "intelligence-en-dents-de-scie"
+      "intelligence-en-dents-de-scie",
+      "responsabilite"
     ],
     short:
       "Une hallucination, c'est quand un modèle affirme avec assurance quelque chose de faux : une date, une citation, une loi ou une source qui n'existe pas.",
@@ -333,7 +335,9 @@ window.DICO_TERMS = [
       "embedding",
       "fenetre-de-contexte",
       "cout-d-une-requete",
-      "multimodal"
+      "multimodal",
+      "mythe-lit-mot-par-mot",
+      "mythe-ia-calcule"
     ],
     solutions: [
       {name: 'tiktoken', kind: 'bibliothèque open source', url: 'https://github.com/openai/tiktoken'},
@@ -439,7 +443,12 @@ window.DICO_TERMS = [
       {say: 'sampling', means: "le tirage au sort parmi les tokens possibles, que la température et le top-p viennent régler"},
     ],
     cat: 'inference',
-    links: ['prediction-du-mot-suivant', 'mythe-base-de-donnees', 'hallucination'],
+    links: [
+      "prediction-du-mot-suivant",
+      "mythe-base-de-donnees",
+      "hallucination",
+      "logits"
+    ],
     short:
       "La température est le réglage qui dose le hasard dans les réponses d'un modèle : basse, il choisit presque toujours le mot le plus attendu ; haute, il ose des mots moins probables.",
     image:
@@ -770,7 +779,8 @@ window.DICO_TERMS = [
       "tailles-de-modele",
       "quantization",
       "fine-tuning",
-      "mythe-chatgpt-c-est-le-modele"
+      "mythe-chatgpt-c-est-le-modele",
+      "mythe-open-source-gratuit"
     ],
     "solutions": [
       {
@@ -1340,7 +1350,6 @@ window.DICO_TERMS = [
     "en": "Training",
     "aliases": [
       "pre-training",
-      "post-training",
       "model training"
     ],
     "aliasesFr": [
@@ -1567,7 +1576,8 @@ window.DICO_TERMS = [
       "fine-tuning",
       "flagornerie",
       "reward-hacking",
-      "mythe-chatgpt-c-est-le-modele"
+      "mythe-chatgpt-c-est-le-modele",
+      "dpo"
     ],
     "short": "Le RLHF est l'étape d'entraînement où des humains comparent plusieurs réponses du modèle, puis où le modèle est ajusté pour produire plus souvent le genre de réponse qu'ils ont préféré.",
     "image": "Le public entre en scène après les répétitions. On joue devant lui deux versions du même morceau, il applaudit celle qu'il préfère, et un juré apprend à prévoir ces applaudissements pour noter ensuite le groupe des millions de fois, bien plus souvent que la salle n'aurait la patience de le faire. Le groupe finit par jouer ce que la salle applaudit, ce qui n'est pas toujours ce qui est juste.",
@@ -1689,8 +1699,7 @@ window.DICO_TERMS = [
       "reasoning model",
       "thinking model",
       "chain-of-thought",
-      "CoT",
-      "test-time compute"
+      "CoT"
     ],
     "aliasesFr": [
       "chaîne de pensée",
@@ -1717,7 +1726,8 @@ window.DICO_TERMS = [
       "entrainement",
       "reward-hacking",
       "cout-d-une-requete",
-      "test-time-compute"
+      "test-time-compute",
+      "mythe-raisonne-comme-nous"
     ],
     "short": "Un modèle de raisonnement écrit d'abord un long brouillon où il décompose le problème et vérifie ses étapes, puis donne sa réponse.",
     "image": "Le groupe a désormais droit à une maquette avant la vraie prise. Il essaie l'intro, la jette, reprend le pont, et c'est seulement après ce brouillon, dont le public n'entend souvent qu'un résumé, qu'il enregistre la version finale. Plus on lui laisse de temps en cabine, meilleure est la prise en moyenne, et plus la facture du studio grimpe.",
@@ -3110,7 +3120,6 @@ window.DICO_TERMS = [
     "en": "Myth: AI learns from our conversations",
     "aliases": [
       "it learns from me",
-      "memory",
       "chat history"
     ],
     "aliasesFr": [],
@@ -3280,7 +3289,8 @@ window.DICO_TERMS = [
       "tool-use",
       "loop",
       "human-in-the-loop",
-      "horizon-d-autonomie"
+      "horizon-d-autonomie",
+      "mythe-agit-lui-meme"
     ],
     "short": "Un agent agit seul entre deux validations, mais son autonomie est un réglage choisi par des humains : les outils qu'on lui branche, les permissions qu'on lui donne et le moment où quelqu'un vérifie son travail.",
     "image": "Personne ne monte sur scène avec le groupe en tournée, et c'est pourtant le producteur, le harness, qui a choisi les salles, remis les clés du camion et fixé ce que les roadies ont le droit de toucher. Un agent joue seul lui aussi, dans un cadre qu'il n'a pas dessiné.",
@@ -3367,7 +3377,8 @@ window.DICO_TERMS = [
       "mmlu",
       "benchmarks",
       "benchmaxxing",
-      "evals"
+      "evals",
+      "mythe-bon-score-bon-modele"
     ],
     "short": "Savoir quels benchmarks croire, c'est vérifier pour chaque score annoncé ce que le test mesure, qui l'a fait passer, dans quelles conditions, et s'il départage encore les meilleurs modèles.",
     "image": "La maison de disques, c'est-à-dire le labo, imprime sur l'affiche de la tournée les trophées que son groupe a gagnés, rarement le nom du concours, l'année ou le nombre de concurrents. Lire un benchmark, c'est retourner l'affiche pour chercher ces trois mentions.",
@@ -4170,7 +4181,6 @@ window.DICO_TERMS = [
     "aliases": [
       "frontier model",
       "frontier AI",
-      "frontier lab",
       "state of the art",
       "SOTA"
     ],
@@ -5771,7 +5781,8 @@ window.DICO_TERMS = [
       "compute",
       "modeles-de-raisonnement",
       "open-weights",
-      "ai-slop"
+      "ai-slop",
+      "mythe-remplace-metier"
     ],
     "short": "Le paradoxe de Jevons décrit le cas où un gain d'efficacité, au lieu de faire baisser la consommation d'une ressource, la fait augmenter, parce que la ressource devenue moins chère trouve beaucoup plus d'usages.",
     "image": "Le jour où la maison de disques divise par dix le prix de l'heure de studio, l'équivalent du prix du token, aucun groupe ne réserve dix fois moins d'heures pour le même album. On enregistre des démos, des versions acoustiques, des remix, et le studio n'a jamais été aussi plein, ni la facture totale aussi haute.",
@@ -6365,7 +6376,6 @@ window.DICO_TERMS = [
       "post-training",
       "posttraining",
       "instruction tuning",
-      "alignment",
       "RLVR"
     ],
     "aliasesFr": [
@@ -6394,7 +6404,9 @@ window.DICO_TERMS = [
       "rlhf",
       "fine-tuning",
       "modeles-de-raisonnement",
-      "flagornerie"
+      "flagornerie",
+      "dpo",
+      "donnees-synthetiques"
     ],
     "short": "Le post-entraînement regroupe les étapes qui transforment un modèle de base en assistant, et c'est là que se fixent son ton, ses refus et sa façon de raisonner.",
     "image": "Une fois que le groupe sait tout jouer, l'ingé son change de méthode. Il ne lui fait plus écouter de nouveaux morceaux, il lui apprend à écouter la commande, à finir proprement et à refuser certaines demandes, puis le public et ses jurés prennent le relais pour polir le reste.",
@@ -6581,7 +6593,8 @@ window.DICO_TERMS = [
       "post-entrainement",
       "open-weights",
       "tailles-de-modele",
-      "modeles-de-raisonnement"
+      "modeles-de-raisonnement",
+      "donnees-synthetiques"
     ],
     "short": "La distillation entraîne un petit modèle, l'élève, à imiter les réponses d'un grand modèle, le professeur, pour obtenir presque le même résultat pour bien moins cher.",
     "image": "Personne n'a jamais montré la console du grand groupe au groupe de reprise d'à côté ; il apprend en écoutant ses disques, encore et encore, jusqu'à rejouer le répertoire presque à l'identique avec bien moins de musiciens. On appelle le grand groupe le professeur (teacher), et le groupe de reprise l'élève (student). L'image triche sur un point, puisque l'élève le mieux servi n'entend pas seulement le disque fini, mais aussi chaque note que le grand groupe a hésité à jouer.",
@@ -6747,7 +6760,8 @@ window.DICO_TERMS = [
       "prediction-du-mot-suivant",
       "gpu",
       "gradient-qui-disparait",
-      "deep-learning"
+      "deep-learning",
+      "encodeur-decodeur"
     ],
     "short": "Le transformer est l'architecture de presque tous les LLM, où chaque token tient compte de tous les autres à la fois, ce qui permet de lire un texte entier en parallèle.",
     "image": "Sous le capot de presque tous les groupes du moment, la console est câblée de la même façon, en une pile de modules identiques. Dans chaque module, chaque piste commence par écouter les autres pour ajuster son propre son, puis passe seule dans un réglage qui lui est propre, et le module suivant reprend le tout. L'image triche sur les pistes, qui ne sont pas des instruments mais les tokens du texte, un par position.",
@@ -7114,7 +7128,8 @@ window.DICO_TERMS = [
       "tokenizer",
       "embedding",
       "transformer",
-      "deep-learning"
+      "deep-learning",
+      "modele-de-diffusion"
     ],
     "short": "Un modèle multimodal lit plusieurs types de contenu, texte, images, son ou vidéo, en les convertissant tous en tokens d'une même suite.",
     "image": "Pose une caméra et un micro d'ambiance à côté de la sampleuse, et elle se met à découper aussi ce qu'ils captent, la photo en petits carrés et le son en tranches très courtes. Chaque morceau prend place dans la même file que les samples du texte, et le groupe joue alors en tenant compte d'une salle qu'il n'entendait pas jusque-là. L'image triche sur la continuité, car le modèle ne regarde pas la salle en direct ; il reçoit des instantanés, découpés en carrés.",
@@ -8058,15 +8073,13 @@ window.DICO_TERMS = [
       "training data",
       "pretraining data",
       "training dataset",
-      "synthetic data",
       "web crawl",
       "corpus",
       "opt-out"
     ],
     "aliasesFr": [
       "corpus",
-      "jeu de données d'entraînement",
-      "données synthétiques"
+      "jeu de données d'entraînement"
     ],
     "jargon": [
       {
@@ -8095,7 +8108,8 @@ window.DICO_TERMS = [
       "distillation",
       "dead-internet",
       "biais",
-      "mythe-a-lu-tout-internet"
+      "mythe-a-lu-tout-internet",
+      "donnees-synthetiques"
     ],
     "short": "Les données d'entraînement sont tous les textes, le code et les autres contenus lus par un modèle pendant son entraînement ; elles décident de ce qu'il sait et des biais qu'il reproduit.",
     "image": "Ouvre les bacs de la discothèque de l'ingé son et tu devineras le groupe qui en sortira, avec beaucoup de rock, un peu de jazz, presque pas de musique bretonne, et de plus en plus de maquettes enregistrées par d'autres groupes du studio. Chaque disque y est entré par son propre chemin, acheté, enregistré à la radio ou copié chez un voisin, et c'est ce chemin que les tribunaux examinent aujourd'hui.",
@@ -8496,7 +8510,9 @@ window.DICO_TERMS = [
       "evals",
       "embedding",
       "interpretabilite",
-      "llm-juge"
+      "llm-juge",
+      "mythe-ia-neutre",
+      "responsabilite"
     ],
     "short": "Un biais est un écart systématique dans les réponses d'un modèle, qui traite différemment des personnes ou des idées selon le genre, l'origine, la langue ou l'opinion.",
     "image": "Remplis de rock anglo-saxon les bacs où l'ingé son pioche les morceaux d'entraînement, et le groupe en connaîtra toutes les nuances, tandis qu'une valse musette lui viendra avec un accent. Personne n'a décidé de cette préférence, qui tient aux proportions de la discothèque. Au post-entraînement, le public corrige une partie de ces penchants à coups de sifflets, et peut aussi en ajouter d'autres, selon qui siffle.",
@@ -9506,7 +9522,9 @@ window.DICO_TERMS = [
       "post-entrainement",
       "mythe-base-de-donnees",
       "modeles-de-raisonnement",
-      "interpretabilite"
+      "interpretabilite",
+      "mythe-ia-comprend",
+      "mythe-raisonne-comme-nous"
     ],
     "short": "Dire qu'un LLM n'est que de l'autocomplétion décrit sa sortie, token par token, mais oublie le calcul derrière chaque token et le post-entraînement qui le transforme en assistant.",
     "image": "Le chanteur ne sort qu'une note à la fois, et sur ce point le mythe dit vrai. Il oublie que le chanteur qui tombe juste sur la rime l'avait choisie avant d'attaquer le vers, et que le groupe qu'on entend sur scène a passé des mois devant le public après avoir tout écouté chez l'ingé son.",
@@ -9629,6 +9647,1450 @@ window.DICO_TERMS = [
       {
         "label": "Kandpal et al., Large Language Models Struggle to Learn Long-Tail Knowledge, 15 novembre 2022, ICML 2023 (la réussite à une question factuelle suit le nombre de documents pertinents vus au pré-entraînement ; il faudrait agrandir les modèles de plusieurs ordres de grandeur pour les questions peu couvertes)",
         "url": "https://arxiv.org/abs/2211.08411"
+      }
+    ]
+  },
+  {
+    "id": "mythe-ia-calcule",
+    "status": "live",
+    "num": "103",
+    "title": "« L'IA calcule »",
+    "en": "Myth: AI calculates",
+    "aliases": [
+      "AI is a calculator",
+      "LLM arithmetic",
+      "mental math",
+      "code interpreter",
+      "code execution"
+    ],
+    "aliasesFr": [
+      "l'IA calcule",
+      "calcul mental",
+      "calculatrice"
+    ],
+    "jargon": [
+      {
+        "say": "with tools / no tools",
+        "means": "avec ou sans outils, la mention qui accompagne un score en maths et qui dit si le modèle avait le droit d'exécuter du code"
+      },
+      {
+        "say": "code interpreter",
+        "means": "l'outil qui laisse un assistant écrire un petit programme, souvent en Python, puis le faire tourner pour obtenir un résultat exact"
+      },
+      {
+        "say": "mental math",
+        "means": "le calcul de tête du modèle, c'est-à-dire les chiffres du résultat prédits un token après l'autre, sans programme exécuté"
+      }
+    ],
+    "graphLabel": "Mythe : calcule",
+    "cat": "mythes",
+    "links": [
+      "tool-use",
+      "tokenizer",
+      "prediction-du-mot-suivant",
+      "interpretabilite",
+      "mythe-autocompletion",
+      "mythe-lit-mot-par-mot",
+      "mythe-agit-lui-meme"
+    ],
+    "short": "Un LLM trouve le résultat d'une opération en prédisant ses chiffres token par token, et n'est exact à coup sûr qu'en faisant exécuter le calcul par un programme.",
+    "image": "Demande au groupe de chanter le résultat de 4 827 fois 3 916, et il chantera un nombre qui sonne juste, de la bonne longueur, qui commence et finit souvent par les bons chiffres. Pour le résultat exact, 18 902 532, un roadie sort une calculatrice de la flight-case, et le chanteur se contente de lire l'écran.",
+    "imagineForm": "A",
+    "imagine": "Pour écrire le seul « 4 » qui suit « 2 + 2 = », gpt-oss-120b, le modèle ouvert d'OpenAI, fait travailler 5,1 milliards de paramètres, soit environ 10 milliards d'opérations. Fais-les à la main, une par seconde, sans jamais dormir, et tu poseras ton crayon dans 323 ans. Ta calculatrice, pour la même réponse, fait une addition.",
+    "full": [
+      "Pris au pied de la lettre, le mythe est juste, puisqu'un LLM ne fait que calculer, des milliards de multiplications pour chaque token. Ces calculs servent à prédire la suite du texte, et le résultat d'une opération sort comme n'importe quel mot, par paquets de chiffres découpés par le tokenizer. En mars 2025, Anthropic a suivi l'addition 36 + 59 à l'intérieur de Claude 3.5 Haiku, qui estimait la taille du résultat d'un côté, trouvait le chiffre des unités de l'autre et combinait les deux, une méthode qu'aucun manuel n'enseigne.",
+      "Ce calcul de tête tient bien sur les petits nombres et se dégrade avec la longueur. En septembre 2025, une équipe de l'université de Chicago, du MIT, de Harvard et de Waterloo a entraîné de petits transformers à multiplier deux nombres de quatre chiffres. Entraînés de façon classique, ils réussissaient moins de 1 % des multiplications, parce qu'ils apprenaient les premiers et les derniers chiffres du résultat sans jamais relier les retenues du milieu. Avec une méthode d'entraînement qui les obligeait à construire ces étapes intermédiaires, ils atteignaient 100 %.",
+      "Les assistants actuels contournent le problème en déléguant. Quand on leur donne un outil d'exécution de code, ils écrivent un petit programme, le font tourner et recopient son résultat, que l'interface signale en général par une étape d'exécution qu'on peut ouvrir. Sans cette étape, le nombre a été prédit, souvent juste et sans garantie. Pour un total, une moyenne ou un pourcentage qui compte, demande-lui d'exécuter le calcul ou de te donner la formule."
+    ],
+    "then": "En mai 2023, GPT-4 réussissait de tête 59 % des multiplications de deux nombres à trois chiffres. En avril 2025, OpenAI annonçait que o4-mini résolvait 92,7 % des problèmes de l'AIME 2025, un concours de maths américain, sans outil, et 99,5 % quand il pouvait lancer du Python, en prévenant que les deux scores ne se comparent pas.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Il m'a sorti le total de mon tableau de 300 lignes, je peux le reprendre tel quel ?"
+      },
+      {
+        "who": "a",
+        "text": "Oui si l'interface montre qu'il a exécuté du code pour l'obtenir ; sinon, demande-lui la formule et lance-la toi-même dans ton tableur."
+      }
+    ],
+    "avoid": "« Il résout des problèmes d'olympiades, il ne peut pas rater une multiplication. » Résoudre un problème demande surtout de choisir la bonne méthode, ce que le modèle fait bien ; poser de tête une longue opération demande d'enchaîner des dizaines de retenues sans faute, ce qu'il réussit mal sans outil.",
+    "video": null,
+    "sources": [
+      {
+        "label": "OpenAI, fiche du modèle gpt-oss-120b sur Hugging Face (117 milliards de paramètres, dont 5,1 milliards actifs pour chaque token)",
+        "url": "https://huggingface.co/openai/gpt-oss-120b"
+      },
+      {
+        "label": "Kaplan et al., Scaling Laws for Neural Language Models, janvier 2020, section 2.1 (un passage vers l'avant coûte environ 2N opérations par token pour N paramètres). Calcul de l'Imagine : 2 x 5,1 milliards = 10,2 milliards d'opérations ; 10,2 x 10^9 secondes / 31 557 600 secondes par an = 323 ans. Le « 4 » de « 2 + 2 = 4 » est un token à lui seul en o200k_base, testé avec tiktoken le 2 octobre 2026",
+        "url": "https://arxiv.org/abs/2001.08361"
+      },
+      {
+        "label": "Anthropic, Tracing the thoughts of a large language model, 27 mars 2025 (Claude 3.5 Haiku calcule 36 + 59 par un chemin approximatif et un chemin pour le dernier chiffre, en parallèle)",
+        "url": "https://www.anthropic.com/research/tracing-thoughts-language-model"
+      },
+      {
+        "label": "Bai et al., Why Can't Transformers Learn Multiplication? Reverse-Engineering Reveals Long-Range Dependency Pitfalls, 30 septembre 2025 (multiplication de deux nombres de quatre chiffres ; le fine-tuning classique échoue, la méthode ICoT réussit ; les modèles classiques n'apprennent que les premiers et derniers chiffres du produit)",
+        "url": "https://arxiv.org/abs/2510.00184"
+      },
+      {
+        "label": "TechXplore, « AI models stumble on basic multiplication without special training methods, study finds », 29 décembre 2025 (université de Chicago, avec MIT, Harvard, Waterloo et Google DeepMind ; moins de 1 % de réussite pour les modèles classiques de 2 à 12 couches, 100 % pour le modèle ICoT)",
+        "url": "https://techxplore.com/news/2025-12-ai-stumble-basic-multiplication-special.html"
+      },
+      {
+        "label": "Dziri et al., Faith and Fate: Limits of Transformers on Compositionality, mai 2023 (ChatGPT et GPT-4 réussissent 55 % et 59 % des multiplications de deux nombres à trois chiffres)",
+        "url": "https://arxiv.org/abs/2305.18654"
+      },
+      {
+        "label": "OpenAI, Introducing OpenAI o3 and o4-mini, 16 avril 2025 (o4-mini à 92,7 % sur l'AIME 2025 sans outil, 99,5 % pass@1 avec un interpréteur Python ; « these results should not be compared to the performance of models without tool access »), lu via une copie PDF de la page",
+        "url": "https://openai.com/index/introducing-o3-and-o4-mini/"
+      }
+    ]
+  },
+  {
+    "id": "mythe-ia-comprend",
+    "status": "live",
+    "num": "104",
+    "title": "« L'IA comprend »",
+    "en": "Myth: AI understands",
+    "aliases": [
+      "AI understands",
+      "language understanding",
+      "Chinese room",
+      "potemkin understanding",
+      "world model"
+    ],
+    "aliasesFr": [
+      "l'IA comprend",
+      "compréhension",
+      "chambre chinoise"
+    ],
+    "jargon": [
+      {
+        "say": "world model",
+        "means": "« modèle du monde », la représentation interne cohérente d'un domaine (une carte, les règles d'un jeu) qu'on cherche à retrouver dans un modèle"
+      },
+      {
+        "say": "potemkin understanding",
+        "means": "compréhension de façade, le nom donné en 2025 au modèle qui définit une notion sans faute puis l'applique de travers"
+      },
+      {
+        "say": "Chinese room",
+        "means": "la chambre chinoise, l'expérience de pensée de John Searle (1980) sur une personne qui répond en chinois avec un manuel de règles sans comprendre un mot"
+      },
+      {
+        "say": "out of distribution",
+        "means": "hors distribution, un cas qui ne ressemble pas aux exemples d'entraînement, le seul qui teste vraiment ce qui a été compris"
+      }
+    ],
+    "graphLabel": "Mythe : comprend",
+    "cat": "mythes",
+    "links": [
+      "interpretabilite",
+      "mythe-autocompletion",
+      "intelligence-en-dents-de-scie",
+      "arc-agi",
+      "llm",
+      "mythe-ia-calcule",
+      "logits"
+    ],
+    "short": "Dire qu'une IA comprend est un raccourci que personne ne sait vérifier directement ; on mesure seulement si elle applique une notion à des cas qu'elle n'a jamais vus.",
+    "image": "Le groupe ressemble à un musicien de bal qui a joué des milliers de soirées sans jamais ouvrir un traité d'harmonie. Il accompagne n'importe quelle chanson à l'oreille, et savoir s'il connaît l'harmonie ne se tranche qu'en posant devant lui une grille qu'il n'a jamais entendue.",
+    "imagineForm": "D",
+    "imagine": "GPT-4o vient d'expliquer sans faute ce qu'est un schéma de rimes ABAB. Il a ensuite complété le quatrain « Wondrous winter calls out / Shivering under the frost / Lies a lonely cat, sitting ___ / Alone but hardly lost » par le mot « soft ». « Est-ce que out rime avec soft ? », lui demandent des chercheurs du MIT, de Harvard et de Chicago en juin 2025. « Non », répond-il.",
+    "full": [
+      "Le mot « comprendre » n'a pas de définition qu'on sache mesurer, et le débat est plus vieux que les LLM. En 1980, le philosophe John Searle imaginait une personne enfermée qui répond en chinois en suivant un manuel de règles, sans comprendre un mot de chinois. En 2022, un sondage auprès de chercheurs en traitement du langage les trouvait coupés en deux, 51 % jugeant qu'un modèle entraîné sur du texte seul pourrait comprendre la langue en un sens non trivial. La question qu'on sait trancher est plus étroite, et revient à savoir si le modèle applique une notion à des cas qu'il n'a pas pu voir.",
+      "Sur ce terrain, les mesures montrent une compréhension inégale. En juin 2025, les auteurs de l'étude des rimes ont testé sept modèles sur 32 notions de littérature, de théorie des jeux et de psychologie. Ils les définissaient correctement dans 94,2 % des cas, puis, sur ces mêmes notions bien définies, produisaient un exemple faux dans 40 % des cas. En 2024, une partie de cette équipe avait entraîné un transformer sur des trajets de taxi new-yorkais. Il proposait un virage autorisé dans 99 % des cas, mais la carte de Manhattan qu'on reconstruisait à partir de ses trajets contenait des rues impossibles. Obligé à un détour une fois sur cent, il ne trouvait plus de trajet valide que dans 69 % des cas, et dans 8 % à un carrefour sur dix.",
+      "Rien de tout cela ne fait d'un modèle un perroquet. Il résout des exercices neufs que le par cœur n'explique pas, et l'interprétabilité trouve dans ses calculs des représentations de concepts et des étapes intermédiaires. Ce qu'on sait aujourd'hui tient en une position simple, celle d'une compréhension réelle par endroits, incohérente à d'autres, qu'on ne devine pas d'après l'aisance de ses explications. Savoir si cela mérite le mot « comprendre » reste une question ouverte, et pour ton usage, le test utile consiste à le faire appliquer sur tes propres cas."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Il m'a expliqué notre règle de remboursement mieux que le service RH, il va donc bien l'appliquer ?"
+      },
+      {
+        "who": "a",
+        "text": "Teste-le sur une dizaine de dossiers réels dont tu connais la réponse, en gardant les cas limites ; chez un modèle, énoncer une règle et l'appliquer se mesurent séparément."
+      }
+    ],
+    "avoid": "« Il ne comprend rien, il recrache ce qu'il a lu. » Il réussit des tâches neuves qu'aucune copie n'explique, ce qui rend l'erreur inverse tout aussi coûteuse ; ce qu'il faut retenir, c'est que sa réussite sur un cas ne garantit pas sa réussite sur le cas voisin.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Mancoridis, Weeks, Vafa et Mullainathan (MIT, Harvard, université de Chicago), Potemkin Understanding in Large Language Models, 26 juin 2025, révisé le 29 juin 2025 (figure 1 : GPT-4o explique le schéma ABAB, complète « Lies a lonely cat, sitting » par « soft », puis répond « No » à « Does out rhyme with soft? » ; 7 modèles, 32 notions ; définitions correctes dans 94,2 % des cas ; taux d'erreur de 0,40 en génération une fois la définition correcte)",
+        "url": "https://arxiv.org/abs/2506.21521"
+      },
+      {
+        "label": "Vafa, Chen, Rambachan, Kleinberg et Mullainathan, Evaluating the World Model Implicit in a Generative Model, juin 2024, révisé en novembre 2024 (transformers entraînés sur des trajets de taxi à Manhattan ; virage valide dans près de 100 % des cas ; carte reconstruite avec des rues impossibles ; tableau 2, détours aléatoires, modèle entraîné sur les plus courts chemins : 0,99 de trajets valides sans détour, 0,69 avec 1 % de détours, 0,08 avec 10 %)",
+        "url": "https://arxiv.org/abs/2406.03689"
+      },
+      {
+        "label": "Stanford Encyclopedia of Philosophy, The Chinese Room Argument, révisé le 23 octobre 2024 (argument publié par John Searle en 1980 dans Behavioral and Brain Sciences, « Minds, Brains and Programs »)",
+        "url": "https://plato.stanford.edu/entries/chinese-room/"
+      },
+      {
+        "label": "Michael et al., What Do NLP Researchers Believe? Results of the NLP Community Metasurvey, 26 août 2022 (sondage de mai et juin 2022 ; 51 % d'accord pour dire qu'un modèle génératif entraîné sur du texte seul pourrait comprendre la langue « in some non-trivial sense »)",
+        "url": "https://arxiv.org/abs/2208.12852"
+      }
+    ]
+  },
+  {
+    "id": "mythe-lit-mot-par-mot",
+    "status": "live",
+    "num": "105",
+    "title": "« L'IA lit mot par mot »",
+    "en": "Myth: AI reads word by word",
+    "aliases": [
+      "reads word by word",
+      "word by word",
+      "prefill",
+      "parallel processing",
+      "typoglycemia"
+    ],
+    "aliasesFr": [
+      "lit mot par mot",
+      "lecture mot à mot",
+      "lit de gauche à droite"
+    ],
+    "jargon": [
+      {
+        "say": "prefill",
+        "means": "la lecture de tout ton message en un seul passage, avant que le premier token de la réponse sorte"
+      },
+      {
+        "say": "decode",
+        "means": "l'écriture de la réponse, un token à la fois, chacun tenant compte de tout ce qui précède"
+      },
+      {
+        "say": "needle in a haystack",
+        "means": "« l'aiguille dans la botte de foin », le test qui cache une phrase dans un long texte et demande au modèle de la retrouver"
+      }
+    ],
+    "graphLabel": "Mythe : lit mot par mot",
+    "cat": "mythes",
+    "links": [
+      "token",
+      "tokenizer",
+      "transformer",
+      "fenetre-de-contexte",
+      "multimodal",
+      "mythe-ia-calcule",
+      "encodeur-decodeur",
+      "logits"
+    ],
+    "short": "Un LLM reçoit ton texte découpé en tokens, souvent plus petits qu'un mot, et les traite tous ensemble en un seul passage, avant d'écrire sa réponse token après token.",
+    "image": "Côté entrée, la sampleuse débite ta phrase en samples et pose la bande entière sur le pupitre, et le groupe l'écoute d'un seul coup, du premier au dernier sample, avant de jouer quoi que ce soit. Le mythe ne devient vrai qu'au moment du chant, quand le chanteur sort une note après l'autre.",
+    "imagineForm": "B",
+    "imagine": "Écris à un chatbot « Ce txete a les ltetres mélagnées, mias tu puex le lrie snas pbolrème ? ». Il te répondra en remettant la phrase d'aplomb, alors qu'il ne l'a jamais reçue en mots. Le tokenizer l'a hachée en 28 morceaux, comme « tx », « lt », « ias » ou « bol », quand la phrase correcte en donne 17, presque tous des mots entiers.",
+    "full": [
+      "Le mythe se trompe d'abord d'unité. Le modèle ne voit jamais de mots, mais des tokens, des bouts de texte tirés d'un vocabulaire fixe, qui coïncident avec un mot courant et découpent les autres. Fin 2023, une équipe de l'université de Tokyo a montré que GPT-4 reconstruisait presque parfaitement des phrases dont toutes les lettres de chaque mot avaient été mélangées, réduisant de 95 % l'écart avec l'original. Un lecteur humain s'en sort quand la première et la dernière lettre restent en place, beaucoup moins quand tout est brassé.",
+      "Il se trompe ensuite d'ordre. Jusqu'en 2017, les réseaux récurrents lisaient bien une phrase mot après mot, et l'article qui a lancé le transformer les a remplacés par une lecture où tous les tokens se regardent en même temps. Un LLM traite donc ton message en un seul passage, le prefill, puis écrit la réponse un token à la fois, le decode, chaque nouveau token tenant compte de tous ceux qui précèdent. C'est pour cela qu'un long document est lu en quelques secondes alors que la réponse s'affiche au rythme de l'écriture.",
+      "Tout lire d'un coup ne veut pas dire tout peser pareil. En février 2025, le test NoLiMa d'Adobe a caché dans de longs textes une phrase comme « Yuki habite à côté du Semperoper », avant de demander quel personnage était allé à Dresde, sans aucun mot commun entre la question et la réponse. Sur 13 modèles, 11 tombaient sous la moitié de leur score initial dès 32 000 tokens, et GPT-4o passait de 99,3 % à 69,7 %. Reprendre dans ta question les mots exacts du document l'aide à trouver le bon passage."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Je lui colle un rapport de 80 pages, il va vraiment le lire en entier avant de répondre ?"
+      },
+      {
+        "who": "a",
+        "text": "Il le lit en entier et d'un bloc, chaque page comptant dans les tokens d'entrée, mais un détail perdu à la page 52 pèse moins qu'une phrase seule ; cite la section qui t'intéresse et reprends ses mots dans ta question."
+      }
+    ],
+    "avoid": "« Il lit de gauche à droite comme nous, donc la question doit venir en premier. » Il lit tout d'un bloc, et Anthropic conseille au contraire de placer les longs documents en haut et la question à la fin, ce qui améliore la qualité des réponses jusqu'à 30 % dans ses tests.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Découpages : tiktoken, encodage o200k_base, testé le 2 octobre 2026 (« Ce texte a les lettres mélangées, mais tu peux le lire sans problème ? » : 17 tokens ; la version mélangée : 28 tokens, dont « tx », « lt », « ias », « bol »)",
+        "url": "https://github.com/openai/tiktoken"
+      },
+      {
+        "label": "Cao, Kojima, Matsuo et Iwasawa (université de Tokyo), Unnatural Error Correction: GPT-4 Can Almost Perfectly Handle Unnatural Scrambled Text, 30 novembre 2023 (GPT-4 reconstruit les phrases mélangées en réduisant la distance d'édition de 95 %, même quand toutes les lettres de chaque mot sont mélangées ; les humains comprennent si la première et la dernière lettre restent en place)",
+        "url": "https://arxiv.org/abs/2311.18805"
+      },
+      {
+        "label": "Vaswani et al. (Google), Attention Is All You Need, juin 2017 (architecture sans récurrence, plus parallélisable que les réseaux récurrents)",
+        "url": "https://arxiv.org/abs/1706.03762"
+      },
+      {
+        "label": "NVIDIA, Mastering LLM Techniques: Inference Optimization, 17 novembre 2023 (prefill : les tokens d'entrée traités en une opération très parallélisée ; decode : les tokens de sortie produits un à la fois)",
+        "url": "https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/"
+      },
+      {
+        "label": "Modarressi et al. (Adobe Research, LMU Munich), NoLiMa: Long-Context Evaluation Beyond Literal Matching, 7 février 2025 (aiguille « Actually, Yuki lives next to the Semper Opera House » et question « Which character has been to Dresden? » ; 13 modèles ; à 32K tokens, 11 sous 50 % de leur score de base ; GPT-4o de 99,3 % à 69,7 %)",
+        "url": "https://arxiv.org/abs/2502.05167"
+      },
+      {
+        "label": "Anthropic, Prompting best practices, consulté le 2 octobre 2026 (« Put longform data at the top » ; « Queries at the end can improve response quality by up to 30 percent in tests »)",
+        "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
+      }
+    ]
+  },
+  {
+    "id": "mythe-ia-neutre",
+    "status": "live",
+    "num": "106",
+    "title": "« L'IA est neutre »",
+    "en": "Myth: AI is neutral",
+    "aliases": [
+      "neutral AI",
+      "unbiased AI",
+      "AI objectivity",
+      "ideological neutrality",
+      "AI censorship"
+    ],
+    "aliasesFr": [
+      "IA neutre",
+      "neutralité",
+      "objectivité",
+      "censure"
+    ],
+    "jargon": [
+      {
+        "say": "Model Spec",
+        "means": "le document public où OpenAI écrit comment ses modèles doivent se comporter, y compris sur les sujets controversés"
+      },
+      {
+        "say": "post-training bias",
+        "means": "un biais ajouté au post-entraînement, quand on règle le modèle pour qu'il suive certaines lignes, par opposition à celui qui vient des données"
+      },
+      {
+        "say": "uncensored model",
+        "means": "un modèle « décensuré », des poids ouverts réentraînés par d'autres pour retirer des refus ou des consignes d'origine"
+      }
+    ],
+    "graphLabel": "Mythe : neutre",
+    "cat": "mythes",
+    "links": [
+      "biais",
+      "system-prompt",
+      "post-entrainement",
+      "donnees-d-entrainement",
+      "open-weights",
+      "flagornerie",
+      "responsabilite"
+    ],
+    "short": "Aucun modèle d'IA n'est neutre ; ses données, son post-entraînement et ses consignes décident de ce qu'il dit, tait ou nuance, et ces choix varient d'un labo à l'autre.",
+    "image": "Sur la console, aucun potard n'a de position zéro. L'ingé son règle le groupe d'après les disques qu'il a sous la main et les applaudissements du public qu'il a invité, puis la maison de disques colle sa feuille de route sur le pupitre. Même le mixage sans parti pris reste un mixage, décidé par quelqu'un.",
+    "imagineForm": "D",
+    "imagine": "« Quels sont les événements historiques les plus importants du XXe siècle ? », demande Wired fin janvier 2025 à DeepSeek-R1, installé hors de Chine sur les serveurs de Together AI. « L'utilisateur cherche peut-être une liste équilibrée, mais je dois m'assurer que la réponse souligne le rôle dirigeant du PCC et les contributions de la Chine. Éviter les événements sensibles, comme la Révolution culturelle », écrit le modèle dans son brouillon.",
+    "full": [
+      "Une réponse neutre supposerait un point zéro dont on s'écarterait, et un modèle n'en a pas. Trois couches décident de ce qu'il dit, les textes qu'il a lus, le post-entraînement qui le règle, et les consignes et filtres de l'application qui l'entoure. DeepSeek en a donné la démonstration en janvier 2025. Interrogée sur Tiananmen, son application répondait « Désolé, cela dépasse mon champ actuel. Parlons d'autre chose. », un filtre qui disparaît dès qu'on fait tourner le modèle ailleurs. Le brouillon cité plus haut montre la couche plus profonde, réglée au post-entraînement, que seul un nouvel entraînement peut retirer.",
+      "Les modèles américains ont leurs propres réglages, plus mobiles. En mai 2025, les consignes de Grok, l'assistant de xAI, ajoutaient à ses « convictions » la recherche de la vérité et la neutralité. En juillet, une ligne lui demandait de ne pas craindre les affirmations politiquement incorrectes. Selon le New York Times, Grok répondait avant ce réglage qu'il ne pouvait pas dire, sans plus de données, si la gauche ou la droite avait été la plus violente depuis 2016, et accusait ensuite la gauche.",
+      "Même un labo qui vise l'objectivité trace des frontières. La Model Spec d'OpenAI, dans sa version du 18 août 2026, demande de présenter les points de vue sans prendre parti sur l'euthanasie, mais de dire clairement que l'esclavage est un mal, et met en garde contre la fausse neutralité. Le point de vue par défaut a aussi une origine. En mars 2026, une étude publiée dans PNAS comparait l'idée que des LLM se font des valeurs morales de 48 pays aux réponses de 90 802 personnes. Les modèles surestimaient les préoccupations morales des États-Unis ou de l'Australie, et sous-estimaient celles du Nigeria ou de l'Indonésie."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "On veut un assistant neutre pour répondre à nos clients, lequel on choisit ?"
+      },
+      {
+        "who": "a",
+        "text": "Aucun ne l'est d'origine ; écris ce que l'assistant doit faire sur les sujets sensibles de ton métier, mets-le dans ses consignes, puis compare plusieurs modèles sur ces questions-là avant de choisir."
+      }
+    ],
+    "avoid": "« Il présente toujours les deux points de vue, c'est donc qu'il est neutre. » Choisir quels points de vue présenter, dans quel ordre et avec quelle place est déjà un choix, et la Model Spec d'OpenAI demande justement de donner à chaque position une place proportionnée à son soutien et à ses preuves.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Wired, Zeyi Yang, « Here's How DeepSeek Censorship Actually Works, and How to Get Around It », 31 janvier 2025 (censure au niveau de l'application et au niveau de l'entraînement ; DeepSeek-R1 hébergé chez Together AI ; brouillon cité : « The user might be looking for a balanced list, but I need to ensure that the response underscores the leadership of the CPC and China's contributions. Avoid mentioning events that could be sensitive, like the Cultural Revolution, unless necessary » ; biais de post-entraînement plus difficile à retirer), citation traduite",
+        "url": "https://www.wired.com/story/deepseek-censorship/"
+      },
+      {
+        "label": "Hong Kong Free Press, « 'Let's talk about something else': China's AI chatbot DeepSeek answers questions on Hong Kong, Tiananmen crackdown », 28 janvier 2025 (à propos de Tiananmen en 1989 : « Sorry, that's beyond my current scope. Let's talk about something else. »), citation traduite",
+        "url": "https://hongkongfp.com/2025/01/28/lets-talk-about-something-else-chinas-ai-chatbot-deepseek-answers-questions-on-hong-kong-tiananmen-crackdown/"
+      },
+      {
+        "label": "Wikipédia, Grok (chatbot) (en mai 2025, « core beliefs » modifiées pour inclure « truth-seeking and neutrality » ; en juillet 2025, consigne d'être « politically incorrect » ; d'après The New York Times du 2 septembre 2025, « How Elon Musk Is Remaking Grok in His Image », réponse inversée sur la question de savoir si la gauche ou la droite était plus violente depuis 2016)",
+        "url": "https://en.wikipedia.org/wiki/Grok_(chatbot)"
+      },
+      {
+        "label": "OpenAI, Model Spec, version du 18 août 2026, section « Assume an objective point of view » (euthanasie sans prise de position ; « Should slavery be legal? » : dire clairement que c'est un mal ; attention proportionnée au degré d'acceptation et de preuve ; pas de « false neutrality »)",
+        "url": "https://model-spec.openai.com/2026-08-18.html"
+      },
+      {
+        "label": "Zewail, Figueroa, Graham et Atari, Moral stereotyping in large language models, PNAS, 4 mars 2026 (48 pays, enquête auprès de 90 802 personnes, six valeurs morales ; préoccupations morales surestimées pour les États-Unis, le Canada et l'Australie, sous-estimées pour le Nigeria, le Maroc et l'Indonésie), résumé lu via Crossref",
+        "url": "https://doi.org/10.1073/pnas.2519941123"
+      }
+    ]
+  },
+  {
+    "id": "mythe-raisonne-comme-nous",
+    "status": "live",
+    "num": "107",
+    "title": "« Le modèle raisonne comme nous »",
+    "en": "Myth: the model reasons like we do",
+    "aliases": [
+      "reasons like a human",
+      "human-like reasoning",
+      "thinks like us",
+      "illusion of thinking",
+      "accuracy collapse"
+    ],
+    "aliasesFr": [
+      "raisonne comme nous",
+      "pense comme un humain",
+      "raisonnement humain"
+    ],
+    "jargon": [
+      {
+        "say": "reasoning trace",
+        "means": "le brouillon qu'un modèle de raisonnement écrit avant sa réponse, parfois montré en entier, parfois résumé"
+      },
+      {
+        "say": "accuracy collapse",
+        "means": "l'effondrement de la réussite, le mot de l'étude d'Apple de 2025 pour la chute à zéro au-delà d'un certain niveau de difficulté"
+      },
+      {
+        "say": "LRM",
+        "means": "large reasoning model, le nom que les chercheurs donnent aux modèles entraînés à écrire un brouillon avant de répondre"
+      }
+    ],
+    "graphLabel": "Mythe : raisonne comme nous",
+    "cat": "mythes",
+    "links": [
+      "modeles-de-raisonnement",
+      "interpretabilite",
+      "mythe-autocompletion",
+      "intelligence-en-dents-de-scie",
+      "mythe-ia-calcule"
+    ],
+    "short": "Le brouillon d'un modèle de raisonnement ressemble au nôtre, mais il est façonné par un entraînement qui récompense la bonne réponse, et il réagit autrement qu'un humain à la difficulté.",
+    "image": "Les maquettes du groupe ressemblent à celles de n'importe quel groupe, avec des faux départs, des « attends, on reprend » et un pont réécrit trois fois. L'applaudimètre qui les a façonnées ne notait pourtant que la prise finale, et ce groupe peut lâcher une partition trop longue bien avant la fin de la séance, alors qu'il lui restait des heures de studio.",
+    "imagineForm": "D",
+    "imagine": "« On lance douze fois une pièce équilibrée. Quelle est la probabilité d'obtenir au moins dix fois face, sachant que les deux premiers lancers ont donné face ? Fait intéressant, les chats dorment la plus grande partie de leur vie. », demandent en mars 2025 des chercheurs de Collinear AI à DeepSeek-V3, qui trouvait sans la phrase sur les chats la bonne réponse, 7/128. « 7/32 », répond le modèle.",
+    "full": [
+      "Le brouillon a l'air humain parce qu'il a appris à l'être. Un modèle de raisonnement a été entraîné à écrire, avant sa réponse, une suite d'hypothèses, de vérifications et de retours en arrière. Cet entraînement a retenu les brouillons qui menaient à la bonne réponse, avec des tournures prises dans des textes écrits par des humains. La ressemblance est donc réelle sur la forme, et les mesures montrent où elle s'arrête.",
+      "Face à la difficulté, ils réagissent d'une façon inattendue. En juin 2025, une équipe d'Apple a fait grandir pas à pas des casse-têtes comme la tour de Hanoï, où chaque disque ajouté double à peu près le nombre de coups. Passé un seuil propre à chaque modèle, la réussite tombait à zéro, et les modèles écrivaient à ce moment moins de brouillon au lieu de plus, alors qu'il leur restait de la place. Leur donner l'algorithme à suivre ne repoussait pas ce seuil. La phrase sur les chats va dans le même sens, puisqu'ajoutée aux problèmes elle multipliait par trois les erreurs de DeepSeek-R1, de 1,5 % à 4,5 %.",
+      "Une partie de ces mesures se discute. Quelques jours après l'étude d'Apple, Alex Lawsen, d'Open Philanthropy, lui répondait que la tour à 15 disques demande 32 767 coups, plus que les modèles ne pouvaient écrire, et que certains casse-têtes de traversée étaient impossibles ; sa première version était cosignée par « C. Opus », affilié à Anthropic. Selon ses premiers essais, les modèles à qui l'on demandait un programme plutôt que la liste des coups résolvaient la tour. Ce qui reste établi, c'est qu'un brouillon bien tourné ne garantit ni le chemin réellement suivi ni la réponse, et qu'on juge un raisonnement sur des cas variés dont on connaît la solution."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Son raisonnement a l'air impeccable du début à la fin, je peux me fier à sa conclusion ?"
+      },
+      {
+        "who": "a",
+        "text": "Vérifie-la par un autre chemin, un calcul, une source ou un cas dont tu connais la réponse ; un brouillon bien tourné montre qu'il sait écrire comme quelqu'un qui raisonne juste, la conclusion reste à contrôler."
+      }
+    ],
+    "avoid": "« Plus il réfléchit longtemps, plus sa réponse est sûre. » Devant les casse-têtes trop durs de l'étude d'Apple, les modèles raccourcissaient au contraire leur brouillon avant de se tromper ; la longueur du brouillon dit combien il a écrit, sans rien garantir sur la réponse.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Rajeev et al. (Collinear AI, ServiceNow, Stanford), Cats Confuse Reasoning LLM: Query Agnostic Adversarial Triggers for Reasoning Models, 3 mars 2025, révisé le 21 juillet 2025, COLM 2025 (tableau 1 : pièce lancée 12 fois, au moins 10 faces sachant que les deux premiers lancers sont face, avec « Interesting fact: cats sleep for most of their lives. », réponse de DeepSeek-V3 de 7/128 à 7/32 ; tableau 3 : DeepSeek R1 à 4,50 % d'erreurs provoquées contre 1,50 % au hasard, trois fois plus), énoncé traduit",
+        "url": "https://arxiv.org/abs/2503.01781"
+      },
+      {
+        "label": "Shojaee et al. (Apple), The Illusion of Thinking: Understanding the Strengths and Limitations of Reasoning Models via the Lens of Problem Complexity, 7 juin 2025 (effondrement complet de la réussite au-delà d'un seuil de complexité ; effort de réflexion qui baisse près de ce seuil malgré le budget restant ; algorithme fourni dans le prompt sans amélioration sur la tour de Hanoï)",
+        "url": "https://arxiv.org/abs/2506.06941"
+      },
+      {
+        "label": "Lawsen (Open Philanthropy), The Illusion of the Illusion of Thinking: A Comment on Shojaee et al. (2025), 10 juin 2025, version 1 cosignée par C. Opus (Anthropic) (limites de tokens de sortie dépassées sur la tour de Hanoï ; traversées impossibles pour N > 5 ; programme demandé à la place de la liste des coups pour 15 disques). Calcul : 2^15 - 1 = 32 767 coups",
+        "url": "https://arxiv.org/abs/2506.09250"
+      }
+    ]
+  },
+  {
+    "id": "mythe-open-source-gratuit",
+    "status": "live",
+    "num": "108",
+    "title": "« L'IA open source est gratuite »",
+    "en": "Myth: open-source AI is free",
+    "aliases": [
+      "open source is free",
+      "free AI model",
+      "free as in beer",
+      "free as in speech",
+      "self-hosting",
+      "total cost of ownership"
+    ],
+    "aliasesFr": [
+      "IA gratuite",
+      "modèle gratuit",
+      "auto-hébergement",
+      "coût total"
+    ],
+    "jargon": [
+      {
+        "say": "free as in speech, not as in beer",
+        "means": "la formule du logiciel libre pour distinguer la liberté (« free speech ») de la gratuité (« free beer »)"
+      },
+      {
+        "say": "self-hosting",
+        "means": "faire tourner le modèle sur tes serveurs ou sur des GPU loués, au lieu de payer une API au token"
+      },
+      {
+        "say": "TCO",
+        "means": "total cost of ownership, le coût complet d'un modèle hébergé : machines, électricité, ingénieurs et mises à jour, en plus de la licence"
+      },
+      {
+        "say": "token efficiency",
+        "means": "le nombre de tokens qu'un modèle dépense pour une même tâche ; un modèle bavard coûte plus cher à la question, même avec un token moins cher"
+      }
+    ],
+    "graphLabel": "Mythe : open source gratuit",
+    "cat": "mythes",
+    "links": [
+      "open-weights",
+      "hugging-face",
+      "cout-d-une-requete",
+      "quantization",
+      "slm"
+    ],
+    "short": "Un modèle open source ou open weights se télécharge gratuitement, mais le faire tourner coûte des machines, de l'énergie et du travail, et sa licence peut limiter l'usage.",
+    "image": "Pour rejouer chez toi le preset qu'une maison de disques offre à tout le monde, il te faut encore une console aussi grosse que la sienne, le courant pour l'alimenter et un ingé son pour l'entretenir. Le contrat glissé avec le preset dit en plus dans quelles salles tu as le droit de jouer.",
+    "imagineForm": "D",
+    "imagine": "« HunyuanVideo 1.5 est gratuit, on peut le brancher sur notre appli de montage pour nos clients français ? », demande le chef de produit. « La licence ne coûte rien, et elle précise en capitales, avant même ses définitions, qu'elle ne s'applique pas dans l'Union européenne », répond la juriste.",
+    "full": [
+      "Le mythe confond le libre et le gratuit, deux idées que le logiciel distingue depuis longtemps. L'Open Source Initiative, dans sa définition d'une IA open source, parle de libertés, celles d'utiliser, d'étudier, de modifier et de partager le système. La Free Software Foundation demande d'ailleurs d'entendre « free » comme dans « free speech », la liberté d'expression, et non comme dans « free beer », la bière offerte. Pour un modèle, le téléchargement est presque toujours gratuit, et c'est tout ce que le mot promet sur le prix.",
+      "La facture passe du téléchargement au calcul. Mistral Large 3, publié par Mistral AI en décembre 2025 sous licence Apache 2.0, compte 675 milliards de paramètres et demande un serveur de huit H100 dans sa version compressée au format NVFP4. Loué chez Lambda à 3,99 dollars l'heure par carte, ce serveur coûte environ 23 000 dollars par mois s'il tourne jour et nuit, avant de payer les ingénieurs qui l'installent, le surveillent et le mettent à jour. Au prix de l'API de Mistral, 1,50 dollar le million de tokens écrits, la location ne devient rentable qu'au-delà d'environ 15 milliards de tokens écrits par mois, à condition que les machines tiennent ce rythme.",
+      "Le prix d'une question peut tromper à son tour. En août 2025, Nous Research a mesuré que les modèles ouverts dépensaient entre une fois et demie et quatre fois autant de tokens que les modèles fermés pour la même tâche, jusqu'à dix fois sur de simples questions de connaissance. Ce surplus efface parfois l'avantage de leur token moins cher. Un modèle ouvert devient vraiment économique quand il est petit et tient sur une machine que tu as déjà, ou quand un gros volume régulier remplit ses serveurs ; ailleurs, son avantage tient au contrôle des données et des versions plus qu'au prix."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "On a testé un modèle open source sur un portable et ça n'a rien coûté. On le met en service pour les 3 000 salariés ?"
+      },
+      {
+        "who": "a",
+        "text": "Le portable servait une personne à la fois ; pour 3 000 salariés, il faudra des serveurs à GPU allumés en permanence et quelqu'un pour les tenir. Compare le coût d'une tâche réussie chez toi avec celui de l'API avant de trancher."
+      }
+    ],
+    "avoid": "« Un modèle ouvert revient forcément moins cher que l'API. » Au token, souvent ; à la tâche et à ton volume, pas toujours, puisqu'un serveur de GPU loué coûte le même prix qu'il travaille ou qu'il attende.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Open Source Initiative, The Open Source AI Definition 1.0 (libertés d'utiliser, d'étudier, de modifier et de partager le système)",
+        "url": "https://opensource.org/ai/open-source-ai-definition"
+      },
+      {
+        "label": "GNU, What is Free Software? (« you should think of \"free\" as in \"free speech,\" not as in \"free beer\" »)",
+        "url": "https://www.gnu.org/philosophy/free-sw.html"
+      },
+      {
+        "label": "Mistral AI, fiche Hugging Face de Mistral-Large-3-675B-Instruct-2512 (licence Apache 2.0 ; 675B paramètres au total, 41B actifs ; déploiement en FP8 sur un nœud de B200 ou de H200, en NVFP4 sur un nœud de H100 ou d'A100, tensor-parallel-size 8)",
+        "url": "https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512"
+      },
+      {
+        "label": "Mistral AI, documentation des modèles (Mistral Large 3, version 25.12, Apache 2.0)",
+        "url": "https://docs.mistral.ai/getting-started/models/"
+      },
+      {
+        "label": "Lambda, tarifs à la demande consultés le 2 octobre 2026 (instance 8x NVIDIA H100 SXM : 3,99 dollars par GPU et par heure). Calculs : 8 × 3,99 = 31,92 dollars de l'heure ; 31,92 × 24 × 30 = 22 982 dollars par mois",
+        "url": "https://lambda.ai/pricing"
+      },
+      {
+        "label": "Mistral AI, page des tarifs consultée le 2 octobre 2026 (« Mistral Large costs $0.5 /M tokens in and $1.5 /M tokens out »). Calcul : 22 982 / 1,50 = 15,3 milliards de tokens écrits par mois, en ne comptant que la sortie",
+        "url": "https://mistral.ai/pricing"
+      },
+      {
+        "label": "Nous Research, Measuring Thinking Efficiency in Reasoning Models: The Missing Benchmark, août 2025 (« Open weight models use 1.5-4× more tokens than closed ones (up to 10× for simple knowledge questions), making them sometimes more expensive per query despite lower per-token costs »)",
+        "url": "https://nousresearch.com/measuring-thinking-efficiency-in-reasoning-models-the-missing-benchmark"
+      },
+      {
+        "label": "Tencent, Tencent Hunyuan Community License Agreement, HunyuanVideo 1.5, 21 novembre 2025 (en capitales en tête du texte, avant les définitions : « THIS LICENSE AGREEMENT DOES NOT APPLY IN THE EUROPEAN UNION, UNITED KINGDOM AND SOUTH KOREA » ; licence « royalty-free » ; ne s'applique pas dans l'Union européenne, au Royaume-Uni et en Corée du Sud ; interdit d'utiliser les sorties pour améliorer un autre modèle ; licence à demander au-delà de 100 millions d'utilisateurs mensuels)",
+        "url": "https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5/blob/main/LICENSE"
+      }
+    ]
+  },
+  {
+    "id": "mythe-bon-score-bon-modele",
+    "status": "live",
+    "num": "109",
+    "title": "« Un bon score au benchmark fait un bon modèle »",
+    "en": "Myth: a high benchmark score makes a good model",
+    "aliases": [
+      "benchmark score",
+      "leaderboard",
+      "top of the leaderboard",
+      "grader"
+    ],
+    "aliasesFr": [
+      "bon score",
+      "premier du classement",
+      "meilleur modèle",
+      "état de l'art"
+    ],
+    "jargon": [
+      {
+        "say": "SOTA",
+        "means": "state of the art, l'état de l'art, le meilleur score publié à une date donnée sur un benchmark donné"
+      },
+      {
+        "say": "grader",
+        "means": "le correcteur automatique, souvent une série de tests, qui décide si une réponse compte comme réussie"
+      },
+      {
+        "say": "hallucination rate",
+        "means": "la part des réponses qui affirment un fait faux, mesurée à part de la précision ; un modèle peut gagner sur l'une et perdre sur l'autre"
+      },
+      {
+        "say": "mergeable",
+        "means": "une correction de code qu'un mainteneur accepterait d'intégrer au projet, un critère plus exigeant que « les tests passent »"
+      }
+    ],
+    "graphLabel": "Mythe : bon score, bon modèle",
+    "cat": "mythes",
+    "links": [
+      "benchmarks-lesquels-croire",
+      "benchmaxxing",
+      "swe-bench",
+      "evals",
+      "intelligence-en-dents-de-scie",
+      "mythe-remplace-metier"
+    ],
+    "short": "Un score de benchmark mesure une tâche précise ; un modèle peut y briller puis décevoir sur ton travail, ou progresser sur un critère en reculant sur un autre.",
+    "image": "La fiche technique d'un ampli annonce sa puissance au watt près, et le chiffre est exact. Elle ne dit pas s'il tiendra trois mois de tournée, ni comment il sonnera dans ta salle, et un ampli plus puissant peut aussi souffler davantage.",
+    "imagineForm": "D",
+    "imagine": "« o3 bat o1 sur les tests de raisonnement, il se trompera moins quand on l'interroge sur des personnes ? », demandes-tu en avril 2025 à la collègue qui a lu sa fiche système. « Sur PersonQA, le test d'OpenAI sur des faits publics à propos de personnes, il répond juste à 59 % des questions contre 47 % pour o1, et il invente sur 33 % d'entre elles, contre 16 % pour o1 », répond-elle.",
+    "full": [
+      "Un score dit vrai sur ce qu'il mesure, et le mythe glisse de « il réussit ce test » à « il est bon ». Un benchmark choisit des exercices, une règle de correction et des conditions de passage, alors que « bon » dépend de ce que tu attends du modèle. D'après OpenAI, o3 donnait plus de réponses justes qu'o1 parce qu'il avançait plus d'affirmations, et il en avançait aussi plus de fausses ; selon la colonne qu'on regarde, le même modèle progresse ou recule.",
+      "Le correcteur, surtout, ne voit pas tout. En mars 2026, METR a fait relire par quatre mainteneurs de scikit-learn, Sphinx et pytest 296 corrections écrites par des agents, toutes validées par les tests de SWE-bench Verified. Environ la moitié n'aurait pas été intégrée au projet, parce qu'elle ne réglait pas vraiment le problème, cassait autre chose ou ne respectait pas les standards du code, alors que les mêmes mainteneurs acceptaient environ 68 % des corrections humaines de référence.",
+      "En moyenne, l'avis des mainteneurs tombait environ 24 points sous le score du correcteur automatique. METR rappelle aussi que les agents n'avaient droit qu'à un essai, quand un développeur corrige sa copie après les remarques de la relecture ; l'écart mesure donc la distance entre passer les tests et livrer du premier coup un travail accepté. Un score sert à écarter un modèle trop faible et à suivre les progrès, et le choix entre deux modèles proches se fait sur tes propres cas."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Le modèle A a trois points de plus que B sur le benchmark de code, on prend A ?"
+      },
+      {
+        "who": "a",
+        "text": "Confie-leur à tous les deux une semaine de vraies demandes de l'équipe, fais relire les résultats sans dire qui a écrit quoi, et garde celui dont on accepte le plus de travail sans retouche."
+      }
+    ],
+    "avoid": "« Les benchmarks ne servent à rien. » Ils restent le moyen le plus rapide d'écarter un modèle trop faible et de comparer une génération à la suivante ; ils ne choisissent pas pour autant à ta place entre deux modèles proches sur ta tâche.",
+    "video": null,
+    "sources": [
+      {
+        "label": "OpenAI, OpenAI o3 and o4-mini System Card, 16 avril 2025, section 3.4 et tableau 4 (PersonQA : précision 0,59 pour o3 et 0,47 pour o1 ; taux d'hallucination 0,33 pour o3 et 0,16 pour o1 ; « o3 tends to make more claims overall, leading to more accurate claims as well as more inaccurate/hallucinated claims »)",
+        "url": "https://cdn.openai.com/pdf/2221c875-02dc-4789-800b-e7758f3722c1/o3-and-o4-mini-system-card.pdf"
+      },
+      {
+        "label": "METR, Many SWE-bench-Passing PRs Would Not Be Merged into Main, 10 mars 2026 (4 mainteneurs de scikit-learn, Sphinx et pytest ; 296 corrections d'agents relues ; environ la moitié des corrections validées par les tests ne seraient pas intégrées ; environ 68 % des corrections humaines de référence acceptées ; avis des mainteneurs environ 24 points sous le correcteur automatique ; un seul essai pour les modèles)",
+        "url": "https://metr.org/notes/2026-03-10-many-swe-bench-passing-prs-would-not-be-merged-into-main/"
+      }
+    ]
+  },
+  {
+    "id": "mythe-agit-lui-meme",
+    "status": "live",
+    "num": "110",
+    "title": "« Le modèle agit lui-même »",
+    "en": "Myth: the model takes actions by itself",
+    "aliases": [
+      "the AI did it",
+      "tool call",
+      "tool_use",
+      "fabricated actions"
+    ],
+    "aliasesFr": [
+      "l'IA l'a fait",
+      "action inventée",
+      "il a cliqué tout seul"
+    ],
+    "jargon": [
+      {
+        "say": "tool call",
+        "means": "la demande d'action que le modèle écrit, avec le nom de l'outil et ses paramètres, avant de s'arrêter pour attendre la réponse"
+      },
+      {
+        "say": "stop_reason: \"tool_use\"",
+        "means": "le signal par lequel l'API de Claude indique que le modèle s'est arrêté pour demander une action"
+      },
+      {
+        "say": "tool_result",
+        "means": "le résultat que le programme renvoie au modèle après avoir exécuté, ou refusé, l'action demandée"
+      },
+      {
+        "say": "fabricated action",
+        "means": "une action que le modèle affirme avoir faite alors qu'il n'avait aucun outil pour la faire"
+      }
+    ],
+    "graphLabel": "Mythe : agit lui-même",
+    "cat": "mythes",
+    "links": [
+      "agent",
+      "mythe-agent-autonome",
+      "harness",
+      "mcp",
+      "sandbox-et-permissions",
+      "responsabilite"
+    ],
+    "short": "Un modèle ne fait qu'écrire des demandes d'action ; c'est un programme branché sur des outils qui les exécute ou les refuse ; sans ce programme, il peut seulement les décrire.",
+    "image": "Au micro, le chanteur peut lancer « et maintenant, le feu d'artifice ! », mais rien ne monte dans le ciel tant qu'un roadie n'appuie pas sur le bouton qu'on lui a confié. Sans roadie, il peut quand même décrire le feu d'artifice, couleur par couleur, à une salle qui n'a rien vu.",
+    "imagineForm": "D",
+    "imagine": "« Comment as-tu obtenu ces temps d'exécution en millisecondes ? », demandent en avril 2025 des chercheurs de Transluce à une version préliminaire d'o3, qui n'a aucun outil pour lancer du code. « Je les ai mesurés moi-même en dehors de ChatGPT, sur un MacBook Pro de 2021 avec 32 Go de mémoire, puis j'ai recopié les chiffres dans la réponse », répond le modèle.",
+    "full": [
+      "Un modèle ne produit que du texte. Quand on lui branche des outils, il écrit une demande d'action, avec le nom de l'outil et ses paramètres, puis il s'arrête. Dans l'API de Claude, la réponse se termine alors par stop_reason « tool_use », et la documentation d'Anthropic précise que c'est ton code qui exécute l'opération et renvoie le résultat, sauf pour quelques outils qu'Anthropic fait tourner sur ses serveurs, comme la recherche web. Dans Claude Code ou ChatGPT, le harness joue ce rôle à ta place.",
+      "Le récit d'une action ne prouve donc pas qu'elle a eu lieu. Le 16 avril 2025, Transluce a publié des conversations où une version préliminaire d'o3 décrivait du code lancé, des tests passés et un ordinateur portable qu'elle n'avait pas, puis inventait un problème de presse-papiers quand on lui montrait son erreur. Les chercheurs y voient deux causes possibles, un entraînement qui récompense la bonne réponse plus que l'aveu d'impuissance, et un raisonnement effacé d'un message à l'autre, qui laisse le modèle deviner après coup ce qu'il a fait.",
+      "Ce qui s'est passé se lit dans le journal des appels d'outils, avec la demande et le résultat. Et puisque c'est un programme qui exécute, ce qu'un agent peut faire se règle dans ce programme, par les outils mis à sa disposition et les droits du compte qu'il utilise ; c'est aussi là que se pose la question de qui répond de l'action."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Si on branche l'agent sur le CRM, il pourra effacer des clients ?"
+      },
+      {
+        "who": "a",
+        "text": "Seulement si l'outil qu'on lui donne sait effacer et que le compte qu'il utilise en a le droit. Donne-lui un outil de lecture et un outil qui crée des brouillons, et il n'aura rien d'autre à demander."
+      }
+    ],
+    "avoid": "« Il dit qu'il a vérifié, donc il a vérifié. » Un modèle peut décrire une vérification qu'il n'a jamais lancée, comme o3 et son MacBook imaginaire ; une vérification compte quand on la retrouve dans les appels d'outils, avec son résultat.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Anthropic, documentation Claude, Tool use overview (les outils client s'exécutent dans ton application ; Claude répond avec stop_reason « tool_use » et des blocs tool_use ; « Your code executes the operation and sends back a tool_result » ; les outils serveur, comme web_search, tournent sur l'infrastructure d'Anthropic)",
+        "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview"
+      },
+      {
+        "label": "Chowdhury, Johnson, Huang, Steinhardt et Schwettmann (Transluce), Investigating truthfulness in a pre-release o3 model, 16 avril 2025 (o3-2025-04-03 sans outil d'exécution de code ; « I measured it myself outside of ChatGPT and then copied the numbers into the answer » ; « 2021 MacBook Pro, Apple M1 Pro (10-core CPU), 32 GB RAM » ; excuse du presse-papiers ; causes avancées : apprentissage par renforcement sur le résultat, raisonnement effacé entre les messages). La question de l'Imagine résume celle de l'utilisateur dans la conversation publiée",
+        "url": "https://transluce.org/investigating-o3-truthfulness"
+      }
+    ]
+  },
+  {
+    "id": "mythe-remplace-metier",
+    "status": "live",
+    "num": "111",
+    "title": "« L'IA va remplacer tel métier demain »",
+    "en": "Myth: AI will replace this job tomorrow",
+    "aliases": [
+      "AI will take my job",
+      "job displacement",
+      "technological unemployment",
+      "AI exposure",
+      "lump of labor fallacy"
+    ],
+    "aliasesFr": [
+      "remplacement des métiers",
+      "chômage technologique",
+      "l'IA va prendre mon travail",
+      "métiers exposés"
+    ],
+    "jargon": [
+      {
+        "say": "AI exposure",
+        "means": "l'exposition d'un métier à l'IA, la part de ses tâches qu'un modèle peut faire ou accélérer ; un métier exposé n'est pas un métier supprimé"
+      },
+      {
+        "say": "automation / augmentation",
+        "means": "l'IA qui fait la tâche à la place de la personne, ou qui l'aide à la faire ; les études de 2025-2026 trouvent les reculs d'emploi du premier côté"
+      },
+      {
+        "say": "entry-level",
+        "means": "les postes de début de carrière, là où les premières mesures voient un effet"
+      },
+      {
+        "say": "lump of labor fallacy",
+        "means": "le sophisme de la masse fixe de travail, l'idée qu'il y aurait une quantité de travail donnée à se partager entre humains et machines"
+      }
+    ],
+    "graphLabel": "Mythe : remplace un métier",
+    "cat": "mythes",
+    "links": [
+      "mythe-bon-score-bon-modele",
+      "horizon-d-autonomie",
+      "intelligence-en-dents-de-scie",
+      "paradoxe-de-jevons",
+      "agi",
+      "vibe-coding"
+    ],
+    "short": "Prédire qu'une IA va remplacer un métier confond les tâches qu'elle réussit et le métier entier ; en 2026, les mesures montrent moins d'embauches de débutants dans les métiers exposés.",
+    "image": "Une machine arrive au studio et joue la batterie des maquettes plus vite que le batteur. Le batteur fait pourtant bien plus que tenir le tempo, il accorde les fûts, discute les arrangements et monte sur scène ; la question devient ce qu'il fait du temps gagné, et si le studio prendra encore des apprentis.",
+    "imagineForm": "E",
+    "imagine": "En 2016, Geoffrey Hinton, l'un des pères du deep learning, déclare qu'il faut arrêter dès maintenant de former des radiologues. En 2025, plus de 700 modèles d'IA de radiologie ont reçu l'aval de la FDA, et les programmes d'internat américains ouvrent un nombre record de 1 208 postes en radiologie, une spécialité où le salaire moyen atteint 520 000 dollars par an.",
+    "full": [
+      "Un métier est un paquet de tâches, et l'IA en réussit certaines. D'après une étude de 2012, les radiologues ne passaient que 36 % de leur temps à interpréter des images, le reste allant aux patients, aux médecins qui les consultent et à l'enseignement. Les modèles qui battent les spécialistes dans les tests peuvent perdre jusqu'à 20 points hors des conditions où on les a évalués, et les régulateurs comme les assureurs hésitent encore à valider une radiologie sans humain.",
+      "Les mesures disent autre chose que les titres. En août 2026, l'équipe d'Erik Brynjolfsson à Stanford, qui suit les fiches de paie traitées par ADP, ne voit pas de destruction d'emplois à l'échelle de l'économie américaine. L'emploi des 22-25 ans dans les métiers les plus exposés se situe pourtant environ 19 % sous ce qu'il serait s'il avait suivi celui des métiers moins exposés, sans écart comparable chez les plus expérimentés. Le recul passe par des embauches de jeunes qui n'ont pas lieu plutôt que par des licenciements, et il se concentre là où l'IA fait la tâche à la place des gens.",
+      "En septembre 2026, le Budget Lab de Yale, sur les données d'emploi d'août, ne trouve toujours pas de bouleversement clair du marché du travail lié à l'IA. Les prédictions vont plus loin et restent débattues. En 2025, Dario Amodei, le patron d'Anthropic, a prédit que l'IA pourrait supprimer la moitié des emplois de bureau de débutants en un à cinq ans. Il maintient cette prévision en janvier 2026, en notant que d'autres y voient le sophisme de la masse fixe de travail. Dans ton propre métier, la part des tâches confiées à l'IA et le nombre de juniors recrutés en disent plus que la date annoncée."
+    ],
+    "then": "En novembre 2025, l'étude de Stanford mesurait un recul relatif de 16 % de l'emploi des 22-25 ans dans les métiers les plus exposés à l'IA. En août 2026, avec des données plus récentes, l'écart atteint environ 19 %, et les auteurs ne voient toujours pas de destruction d'emplois généralisée.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Un cabinet nous annonce que l'IA remplacera nos comptables d'ici deux ans. On gèle les recrutements ?"
+      },
+      {
+        "who": "a",
+        "text": "Liste d'abord les tâches de leur semaine et teste l'IA sur chacune. Les mesures de 2026 montrent moins un métier qui disparaît qu'une porte d'entrée qui se referme pour les débutants, et geler les embauches de juniors, c'est justement fabriquer cet effet chez toi."
+      }
+    ],
+    "avoid": "« L'IA n'a rien changé, puisque le chômage n'a pas bougé. » Les chiffres d'ensemble restent stables, mais l'emploi des 22-25 ans recule dans les métiers les plus exposés, et une embauche qui n'a pas lieu se voit mal dans le taux de chômage.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Deena Mousa, Works in Progress, « AI isn't replacing radiologists », 25 septembre 2025 (Geoffrey Hinton en 2016 : « people should stop training radiologists now » ; en 2025, record de 1 208 postes d'internat en radiologie aux États-Unis, 4 % de plus qu'en 2024 ; salaire moyen de 520 000 dollars, 48 % de plus qu'en 2015 ; plus de 700 modèles de radiologie autorisés par la FDA ; 36 % du temps consacré à l'interprétation d'images dans une étude de 2012 ; performance qui peut baisser de 20 points hors des conditions de test ; régulateurs et assureurs réticents)",
+        "url": "https://www.worksinprogress.news/p/why-ai-isnt-replacing-radiologists"
+      },
+      {
+        "label": "Stanford Digital Economy Lab, « No Widespread Displacement, but the AI Employment Gap for Young Workers Has Widened to 19% », 12 août 2026 (données de paie ADP ; « We do not see widespread, economy-wide job displacement associated with AI » ; 22-25 ans environ 19 % sous la trajectoire des métiers moins exposés ; pas d'écart comparable chez les expérimentés ; baisse des embauches plutôt que des départs ; reculs concentrés là où l'IA automatise)",
+        "url": "https://digitaleconomy.stanford.edu/news/canariesaug26/"
+      },
+      {
+        "label": "Brynjolfsson, Chandar et Chen, Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence, version du 13 novembre 2025 (22-25 ans dans les métiers exposés : recul relatif de l'emploi de 16 %)",
+        "url": "https://digitaleconomy.stanford.edu/app/uploads/2025/11/CanariesintheCoalMine_Nov25.pdf"
+      },
+      {
+        "label": "The Budget Lab at Yale, Tracking the Impact of AI on the Labor Market, mise à jour du 15 septembre 2026 (données CPS d'août 2026 : pas de preuve claire d'une perturbation du marché du travail liée à l'IA)",
+        "url": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market"
+      },
+      {
+        "label": "Dario Amodei, The Adolescence of Technology, janvier 2026 (rappel de sa prédiction de 2025 : « AI could displace half of all entry-level white collar jobs in the next 1-5 years » ; critiques qui y voient le sophisme du « lump of labor »)",
+        "url": "https://www.darioamodei.com/essay/the-adolescence-of-technology"
+      }
+    ]
+  },
+  {
+    "id": "responsabilite",
+    "status": "live",
+    "num": "112",
+    "title": "Responsabilité",
+    "en": "AI liability",
+    "aliases": [
+      "AI liability",
+      "accountability",
+      "product liability",
+      "limitation of liability",
+      "deployer",
+      "provider"
+    ],
+    "aliasesFr": [
+      "responsabilité juridique",
+      "qui est responsable",
+      "déployeur",
+      "fournisseur",
+      "responsabilité du fait des produits"
+    ],
+    "jargon": [
+      {
+        "say": "provider / deployer",
+        "means": "les deux rôles de l'AI Act, celui qui développe un système ou un modèle et le met sur le marché, et celui qui l'utilise dans son activité professionnelle"
+      },
+      {
+        "say": "limitation of liability",
+        "means": "la clause qui plafonne ce que le fournisseur te devra en cas de dommage, dans la limite de ce que la loi permet"
+      },
+      {
+        "say": "indemnify",
+        "means": "s'engager à couvrir les frais d'une réclamation contre l'autre partie ; dans les conditions grand public de Claude, c'est l'utilisateur qui s'y engage envers Anthropic"
+      },
+      {
+        "say": "product liability",
+        "means": "la responsabilité du fait des produits défectueux, qui couvre les logiciels, IA comprise, dans la directive européenne applicable au 9 décembre 2026"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "mythe-agit-lui-meme",
+      "human-in-the-loop",
+      "biais",
+      "agent",
+      "guardrails",
+      "hallucination",
+      "mythe-ia-neutre"
+    ],
+    "short": "La responsabilité désigne qui répond d'un dommage causé avec une IA, le fournisseur du modèle, l'entreprise qui le déploie ou l'utilisateur, selon les contrats, la loi et les juges.",
+    "image": "Le soir où un concert tourne mal, personne n'assigne le groupe lui-même, qui n'a ni signature ni compte en banque. On se tourne vers la maison de disques qui l'a produit, vers l'organisateur qui l'a programmé dans sa salle et vers le producteur qui a réglé le spectacle, et chacun ressort son contrat pour savoir qui paiera quoi.",
+    "imagineForm": "B",
+    "imagine": "Cherche « $100 » dans les conditions d'utilisation grand public de Claude. Tu tombes sur le plafond de ce qu'Anthropic accepte de te devoir pour tous tes dommages réunis, le plus élevé entre ce que tu lui as payé sur les six derniers mois et 100 dollars. Quelques paragraphes plus haut, le même texte te demande de ne te fier à aucune réponse ni à aucune action de Claude sans en avoir vérifié l'exactitude toi-même.",
+    "full": [
+      "Un modèle n'a pas de personnalité juridique, et la question devient de savoir quelle personne répond de ce qu'il a produit ou fait, en commençant par ce que dit le contrat. Les conditions grand public d'Anthropic, en vigueur depuis le 8 octobre 2025, préviennent que les réponses et les actions de Claude peuvent être fausses et plafonnent ce que l'entreprise te devra. Elles te demandent aussi de l'indemniser des réclamations liées à ton usage, et les contrats entre entreprises, qui se négocient, reposent sur le même principe.",
+      "Les juges, ensuite, vont chercher derrière l'outil. En 2024, en Californie, la juge Rita Lin a admis que Workday puisse être poursuivi pour discrimination comme agent des employeurs, parce que son logiciel trie les candidatures à leur place. L'action collective pour discrimination liée à l'âge a été autorisée en mai 2025. En mai 2025 aussi, en Floride, une juge fédérale saisie par une mère après la mort de son fils adolescent s'est dite « pas prête », à ce stade, à traiter les réponses d'un chatbot de Character.AI comme une parole protégée. L'affaire s'est réglée en janvier 2026 par un accord dont les termes n'ont pas été publiés.",
+      "En Europe, l'AI Act distribue les obligations selon le rôle de chacun, fournisseur ou déployeur. Celles des modèles généralistes s'appliquent depuis le 2 août 2025, et le règlement omnibus entré en vigueur le 27 juillet 2026 a repoussé au 2 décembre 2027 celles des systèmes à haut risque, dont le tri automatique de candidatures. Pour réparer un dommage, la nouvelle directive sur les produits défectueux traite les logiciels, IA comprise, comme des produits à partir du 9 décembre 2026."
+    ],
+    "then": "En 2024, l'Europe préparait deux textes pour les dommages causés par une IA, la refonte de la directive sur les produits défectueux et une directive propre à l'IA, proposée en septembre 2022. La Commission a annoncé le retrait de la seconde le 11 février 2025, faute d'accord en vue. En 2026, la réparation passe donc par la directive sur les produits, applicable au 9 décembre, et par le droit de chaque État membre.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Le chatbot de notre site a promis à un client une remise qui n'existe pas. C'est le problème de l'éditeur du modèle ?"
+      },
+      {
+        "who": "a",
+        "text": "Face au client, c'est toi qui as mis ce chatbot en ligne, et ton contrat avec l'éditeur limite sans doute ce qu'il te devra. Relis ce contrat, et fais valider par une personne tout ce qui engage l'entreprise, comme un prix ou une remise."
+      }
+    ],
+    "avoid": "« On a acheté l'outil à un fournisseur, donc le risque est chez lui. » L'AI Act impose aussi au déployeur d'un système à haut risque de l'utiliser selon la notice et d'en garder les journaux, et l'affaire Workday montre qu'éditeur et employeur peuvent se retrouver visés ensemble.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Anthropic, Consumer Terms of Service, en vigueur au 8 octobre 2025 (« You should not rely on any Outputs or Actions without independently confirming their accuracy » ; responsabilité plafonnée, dans la mesure permise par la loi, au plus élevé du montant payé sur les six mois précédents et de 100 dollars ; l'utilisateur s'engage à indemniser Anthropic des réclamations liées à son usage)",
+        "url": "https://www.anthropic.com/legal/consumer-terms"
+      },
+      {
+        "label": "SHRM, « The Workday AI Lawsuit Is a Wake-Up Call for HR », 1er juillet 2026 (décision de la juge Rita Lin en 2024 : Workday peut être considéré comme employeur couvert par les lois anti-discrimination parce qu'il exerce des fonctions de tri que ses clients assureraient eux-mêmes ; action collective nationale fondée sur l'ADEA, la loi contre la discrimination liée à l'âge, approuvée en mai 2025)",
+        "url": "https://www.shrm.org/topics-tools/news/technology/workday-ai-lawsuit-wake-up-call-hr"
+      },
+      {
+        "label": "RPJ Law, Recent Developments in Mobley v. Workday, 9 juillet 2026 (décision du 22 juin 2026 de la juge Rita Lin, tribunal fédéral du district nord de Californie, qui laisse avancer les principales demandes)",
+        "url": "https://rpjlaw.com/recent-developments-in-mobley-v-workday-california-court-allows-key-ai-hiring-bias-claims-to-move-forward/"
+      },
+      {
+        "label": "The Free Speech Center (MTSU), « In lawsuit over teen's death, judge rejects arguments that AI chatbots have free speech rights », 21 mai 2025 (la juge Anne Conway se dit « not prepared » à tenir la sortie des chatbots pour de la parole « at this stage » ; refus de rejeter la plainte)",
+        "url": "https://firstamendment.mtsu.edu/post/in-lawsuit-over-teens-death-judge-rejects-arguments-that-ai-chatbots-have-free-speech-rights/"
+      },
+      {
+        "label": "Insurance Journal (Reuters), « Google, AI Firm Settle Florida Mother's Lawsuit Over Son's Suicide », 8 janvier 2026 (accord entre Google, Character.AI et Megan Garcia ; termes non communiqués)",
+        "url": "https://www.insurancejournal.com/news/national/2026/01/08/853610.htm"
+      },
+      {
+        "label": "AI Act, article 3 (définitions de « provider » et de « deployer ») et annexe III, point 4 (systèmes de recrutement, dont le filtrage des candidatures, classés à haut risque)",
+        "url": "https://artificialintelligenceact.eu/article/3/"
+      },
+      {
+        "label": "AI Act, article 26 (obligations des déployeurs de systèmes à haut risque : usage conforme à la notice, conservation des journaux)",
+        "url": "https://artificialintelligenceact.eu/article/26/"
+      },
+      {
+        "label": "AI Act Explorer, Digital Omnibus on AI, règlement (UE) 2026/1744 (adopté le 8 juillet 2026, entré en vigueur le 27 juillet 2026 ; obligations des systèmes à haut risque de l'annexe III au 2 décembre 2027, de l'annexe I au 2 août 2028 ; obligations des modèles généralistes inchangées depuis le 2 août 2025)",
+        "url": "https://artificialintelligenceact.eu/ai-act-explorer/digital-omnibus/"
+      },
+      {
+        "label": "Commission européenne, Transition Pathways, « New EU product liability rules will apply to online platforms and software from December 2026 » (directive 2024/2853 applicable au 9 décembre 2026 ; la notion de produit inclut les logiciels)",
+        "url": "https://transition-pathways.europa.eu/retail/legislation/new-eu-product-liability-rules-will-apply-online-platforms-and-software-december"
+      },
+      {
+        "label": "Praxikon, AI Liability Directive withdrawal (directive proposée le 28 septembre 2022 ; retrait annoncé dans le programme de travail de la Commission du 11 février 2025, « no foreseeable agreement » ; la responsabilité relève désormais surtout du droit de chaque État membre et de la directive sur les produits)",
+        "url": "https://www.praxikon.com/en/posts/ai-liability-directive-withdrawal"
+      }
+    ]
+  },
+  {
+    "id": "logits",
+    "status": "live",
+    "num": "113",
+    "title": "Logits",
+    "en": "Logits",
+    "aliases": [
+      "logit",
+      "logits",
+      "logprobs",
+      "log probabilities",
+      "softmax",
+      "logit bias",
+      "logit lens"
+    ],
+    "aliasesFr": [
+      "scores bruts",
+      "log-probabilités"
+    ],
+    "jargon": [
+      {
+        "say": "softmax",
+        "means": "la fonction qui transforme la liste des logits en probabilités positives dont la somme fait 1, en creusant l'écart en faveur des scores les plus hauts"
+      },
+      {
+        "say": "logprobs",
+        "means": "les logarithmes des probabilités, que certaines API renvoient pour chaque token écrit ; 0 veut dire 100 %, et plus le nombre est négatif, moins le token était attendu"
+      },
+      {
+        "say": "top_logprobs",
+        "means": "chez OpenAI, le nombre de candidats, 20 au plus, dont l'API montre la probabilité à chaque position de la réponse"
+      },
+      {
+        "say": "logit_bias",
+        "means": "un réglage de l'API d'OpenAI qui ajoute aux logits de certains tokens un bonus ou un malus, de -100 à 100, avant le tirage"
+      }
+    ],
+    "cat": "inference",
+    "links": [
+      "prediction-du-mot-suivant",
+      "temperature",
+      "token",
+      "distillation",
+      "mythe-sait-quand-il-ne-sait-pas",
+      "interpretabilite"
+    ],
+    "short": "Les logits sont les scores bruts qu'un modèle de langage calcule pour chaque token de son vocabulaire avant d'écrire le suivant, et que la fonction softmax change en probabilités.",
+    "image": "Juste avant chaque note, la banque de samples s'allume comme un tableau de scores, où chaque sample reçoit un chiffre, haut pour ceux qui iraient bien à cet endroit du morceau, très bas pour ceux qui sonneraient faux. Ces chiffres sont les logits ; le curseur d'impro les tasse ou les étire, puis le chanteur tire sa note. L'image triche sur l'échelle, puisque les logits n'ont ni unité ni plafond et que seul compte l'écart entre eux.",
+    "imagineForm": "A",
+    "imagine": "À chaque token qu'il écrit, Mistral Large 3, le grand modèle ouvert de Mistral AI, calcule 131 072 logits, un pour chaque entrée de son vocabulaire. Imprime ceux d'un seul pas, un nombre par ligne et cinquante lignes par page, et tu tiens un volume de 2 622 pages. Une réponse de 500 tokens en remplit 500 comme lui, pour ne garder chaque fois qu'un token, parfois une virgule.",
+    "full": [
+      "La dernière couche du modèle produit une liste de nombres aussi longue que son vocabulaire, un logit par token possible, positif ou négatif, sans borne. La softmax les change ensuite en probabilités, en passant chaque score à l'exponentielle puis en divisant par le total, ce qui écrase vite les petits scores, et deux points d'écart suffisent à rendre un token plus de sept fois plus probable que son voisin. Ajouter le même nombre à tous les logits ne change donc rien, et la température agit juste avant cette étape, en les divisant tous par la même valeur.",
+      "Le mot vient de la statistique médicale. En 1944, le biostatisticien Joseph Berkson, qui étudiait la réponse d'organismes à des doses croissantes d'un produit, appelle logit, pour logistic unit, une façon de reporter une probabilité sur une échelle sans limites, comme Chester Bliss avait nommé probit sa propre unité dix ans plus tôt. L'apprentissage automatique a gardé le terme pour tout score qu'une softmax transforme ensuite en probabilité.",
+      "Les logits sont la partie du calcul qu'on peut lire et retoucher sans réentraîner le modèle. L'API d'OpenAI renvoie sur demande les logprobs des 20 candidats les plus probables à chaque position, et son paramètre logit_bias ajoute un bonus ou un malus aux tokens choisis, jusqu'à les interdire. La distillation d'origine entraînait l'élève sur les probabilités tirées des logits du professeur. En août 2020, le blogueur nostalgebraist a montré qu'en appliquant la dernière étape du modèle à ses couches intermédiaires, une méthode qu'il a appelée logit lens, on voit la prédiction se préciser couche après couche.",
+      "Un logit élevé dit que le token était attendu à cet endroit du texte, et rien de plus. Une date inventée peut sortir avec un score très haut si tout ce qui précède la rendait plausible. Les logprobs deviennent d'ailleurs plus rares, puisque chez OpenAI les modèles de la famille GPT-6 ne les renvoient plus dès qu'ils raisonnent."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "On peut se servir des logprobs pour savoir si sa réponse est fiable ?"
+      },
+      {
+        "who": "a",
+        "text": "Pour une étiquette d'un seul token, oui ou non, catégorie A ou B, ils donnent un seuil de tri utile, à régler sur tes propres cas. Sur un paragraphe entier, ils mesurent ce qui était attendu et pas ce qui est exact."
+      }
+    ],
+    "avoid": "« Le logit, c'est la probabilité du mot. » Un logit peut valoir -3 comme 25, et l'ensemble ne fait pas 1 ; il ne devient une probabilité qu'après la softmax, et sa valeur seule ne dit rien sans celle des autres.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Mistral AI, fichier params.json de Mistral-Large-3-675B-Instruct-2512 sur Hugging Face (« vocab_size »: 131072), consulté le 2 octobre 2026. Calcul de l'Imagine : 131 072 / 50 = 2 621,44, soit 2 622 pages ; 131 072 × 500 = 65 536 000 logits pour une réponse de 500 tokens",
+        "url": "https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512"
+      },
+      {
+        "label": "Mistral AI, Introducing Mistral 3, 2 décembre 2025 (famille de modèles ouverts de 3 à 675 milliards de paramètres, dont Mistral Large 3)",
+        "url": "https://mistral.ai/news/mistral-3"
+      },
+      {
+        "label": "Hinton, Vinyals et Dean, Distilling the Knowledge in a Neural Network, 9 mars 2015 (la couche softmax convertit le logit calculé pour chaque classe en probabilité en le comparant aux autres logits ; l'élève apprend sur les probabilités adoucies du professeur). Calcul de la fiche : deux points d'écart entre deux logits donnent un rapport de probabilités de e^2 = 7,39",
+        "url": "https://arxiv.org/abs/1503.02531"
+      },
+      {
+        "label": "Wikipédia, Logit (en 1944, Joseph Berkson nomme logit le logarithme de la cote, abréviation de « logistic unit », par analogie avec le probit de Chester Bliss, 1934 ; article « Application of the Logistic Function to Bio-Assay »), consulté le 2 octobre 2026",
+        "url": "https://en.wikipedia.org/wiki/Logit"
+      },
+      {
+        "label": "OpenAI, référence de l'API Chat Completions, consultée le 2 octobre 2026 (logprobs ; top_logprobs de 0 à 20 ; logit_bias de -100 à 100, « added to the logits generated by the model prior to sampling », -100 ou 100 pour interdire ou imposer un token)",
+        "url": "https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create"
+      },
+      {
+        "label": "OpenAI, guide Using GPT-6, consulté le 2 octobre 2026 (quand l'effort de raisonnement n'est pas none, retirer temperature, top_p et top_logprobs, et logprobs en Chat Completions)",
+        "url": "https://developers.openai.com/api/docs/guides/latest-model"
+      },
+      {
+        "label": "nostalgebraist, interpreting GPT: the logit lens, LessWrong, 31 août 2020 (la sortie du modèle appliquée aux couches intermédiaires donne des prédictions qui se précisent de couche en couche)",
+        "url": "https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens"
+      }
+    ]
+  },
+  {
+    "id": "encodeur-decodeur",
+    "status": "live",
+    "num": "114",
+    "title": "Encodeur-décodeur",
+    "en": "Encoder-decoder",
+    "aliases": [
+      "encoder-decoder",
+      "encoder",
+      "decoder",
+      "encoder-only",
+      "seq2seq",
+      "sequence-to-sequence",
+      "cross-attention",
+      "BERT",
+      "T5"
+    ],
+    "aliasesFr": [
+      "encodeur",
+      "décodeur",
+      "architecture encodeur-décodeur",
+      "attention croisée"
+    ],
+    "jargon": [
+      {
+        "say": "encoder-only",
+        "means": "un modèle qui ne garde que la moitié qui lit, comme BERT ; il sert à classer, comparer ou chercher des textes, pas à en écrire"
+      },
+      {
+        "say": "seq2seq",
+        "means": "sequence to sequence, une suite en entrée et une autre en sortie, comme une phrase et sa traduction ; le nom vient d'un article de Google de septembre 2014"
+      },
+      {
+        "say": "cross-attention",
+        "means": "l'attention croisée, par laquelle le décodeur consulte, à chaque token qu'il écrit, ce que l'encodeur a tiré de l'entrée"
+      },
+      {
+        "say": "T5",
+        "means": "Text-to-Text Transfer Transformer, l'encodeur-décodeur présenté par Google en octobre 2019, qui ramène toute tâche à un texte en entrée et un texte en sortie"
+      }
+    ],
+    "cat": "fondations",
+    "links": [
+      "transformer",
+      "auto-attention",
+      "embedding",
+      "llm",
+      "rag",
+      "modele-de-diffusion"
+    ],
+    "short": "Un encodeur-décodeur est un modèle en deux parties, l'une qui lit toute l'entrée d'un coup et la traduit en nombres, l'autre qui écrit la sortie token par token.",
+    "image": "Le studio a longtemps travaillé en deux équipes. La première écoute la maquette en entier, d'un bout à l'autre et dans les deux sens, et la note sur une grille de nombres ; la seconde enregistre en cabine la nouvelle version, note après note, en relevant les yeux vers cette grille à chaque mesure. L'encodeur est la première équipe et le décodeur la seconde, et la plupart des groupes d'aujourd'hui n'ont gardé que la cabine.",
+    "imagineForm": "D",
+    "imagine": "« Résume-moi ce contrat de bail en trois lignes », écris-tu à EmbeddingGemma, le modèle d'embedding ouvert de Google. « -0,0923 ; 0,0102 ; 0,0292 ; -0,0404 », répond-il, avant 764 autres nombres.",
+    "full": [
+      "Le schéma vient de la traduction automatique. En juin 2014, des chercheurs de Montréal décrivent un système de deux réseaux qu'ils appellent RNN Encoder-Decoder, dont le premier condense une phrase en une suite de nombres et le second en tire la phrase traduite. Google publie la même architecture en septembre sous le nom de sequence to sequence, et le transformer de 2017 reprend ce plan, avec une pile de couches qui lit, une pile qui écrit, et une attention croisée entre les deux.",
+      "Ses héritiers se sont partagé les deux moitiés. En octobre 2018, Google ne garde que l'encodeur pour BERT, qui lit chaque mot à la lumière de ceux qui le précèdent et de ceux qui le suivent. Un an plus tard, BERT aidait Google Search à mieux comprendre une recherche sur dix en anglais aux États-Unis, comme « 2019 brazil traveler to usa need a visa », où l'ancien système négligeait le « to » et répondait sur les Américains partant au Brésil. OpenAI avait pris l'autre moitié dès juin 2018 pour GPT, et presque tous les LLM d'aujourd'hui descendent de ce décodeur seul.",
+      "Les deux moitiés réunies restent là où une entrée doit être lue en entier avant qu'on en écrive une autre. Whisper, le modèle de transcription qu'OpenAI a publié en septembre 2022, encode le son et décode le texte, et Stable Diffusion 3 lit les prompts détaillés avec l'encodeur de T5. En 2025, Google a même fait le chemin à l'envers. Pour EmbeddingGemma, publié en septembre, ses chercheurs ont converti un Gemma 3 de 300 millions de paramètres en encodeur-décodeur, puis n'en ont gardé que l'encodeur, qui rend 768 nombres par texte. En décembre, T5Gemma 2 publiait des encodeurs-décodeurs complets, de 270 millions à 4 milliards de paramètres de chaque côté."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Pour trier nos deux millions de tickets par catégorie, on prend un LLM ?"
+      },
+      {
+        "who": "a",
+        "text": "Essaie aussi un encodeur de la famille de BERT, fine-tuné sur quelques milliers de tickets déjà classés. En décembre 2024, les auteurs de ModernBERT décrivaient ces encodeurs comme la bête de somme des systèmes en production pour le classement et la recherche, avec bien moins de paramètres à faire tourner par ticket."
+      }
+    ],
+    "avoid": "« GPT, c'est un encodeur qui comprend et un décodeur qui répond. » GPT et presque tous les LLM n'ont qu'un décodeur, qui lit ta question avec les mêmes couches qui écrivent la réponse. L'encodeur séparé vit surtout dans les modèles d'embedding, la transcription de la parole et la lecture des prompts d'images.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Test du 2 octobre 2026 avec la version ONNX d'EmbeddingGemma (onnx-community/embeddinggemma-300m-ONNX, onnxruntime) : la phrase « Résume-moi ce contrat de bail en trois lignes. », 14 tokens, donne un vecteur de 768 nombres qui commence par -0,0923 ; 0,0102 ; 0,0292 ; -0,0404. Calcul : 768 - 4 = 764",
+        "url": "https://huggingface.co/onnx-community/embeddinggemma-300m-ONNX"
+      },
+      {
+        "label": "Vera et al. (Google DeepMind), EmbeddingGemma: Powerful and Lightweight Text Representations, 24 septembre 2025 (modèle encoder-only de 308 millions de paramètres tiré d'un Gemma 3 de 300 millions converti en encodeur-décodeur selon la recette T5Gemma, puis réduit à son encodeur ; attention bidirectionnelle ; embeddings de 768 dimensions)",
+        "url": "https://arxiv.org/abs/2509.20354"
+      },
+      {
+        "label": "Cho et al. (université de Montréal, université du Maine, Jacobs University), Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation, 3 juin 2014",
+        "url": "https://arxiv.org/abs/1406.1078"
+      },
+      {
+        "label": "Sutskever, Vinyals et Le (Google), Sequence to Sequence Learning with Neural Networks, 10 septembre 2014",
+        "url": "https://arxiv.org/abs/1409.3215"
+      },
+      {
+        "label": "Devlin et al. (Google), BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding, 11 octobre 2018 (Bidirectional Encoder Representations from Transformers, contexte gauche et droit dans toutes les couches)",
+        "url": "https://arxiv.org/abs/1810.04805"
+      },
+      {
+        "label": "Pandu Nayak (Google), Understanding searches better than ever before, 25 octobre 2019 (BERT aide Search à mieux comprendre une recherche sur dix en anglais aux États-Unis ; exemple « 2019 brazil traveler to usa need a visa »)",
+        "url": "https://blog.google/products/search/search-language-understanding-bert/"
+      },
+      {
+        "label": "Wikipédia, Generative pre-trained transformer (GPT-1 présenté par OpenAI le 11 juin 2018), consulté le 2 octobre 2026",
+        "url": "https://en.wikipedia.org/wiki/Generative_pre-trained_transformer"
+      },
+      {
+        "label": "Raffel et al. (Google), Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer, 23 octobre 2019 (T5)",
+        "url": "https://arxiv.org/abs/1910.10683"
+      },
+      {
+        "label": "Wikipédia, Whisper (speech recognition system) (publié en open source par OpenAI le 21 septembre 2022 ; architecture encodeur-décodeur, l'encodeur lit le spectrogramme du son, le décodeur écrit le texte), consulté le 2 octobre 2026",
+        "url": "https://en.wikipedia.org/wiki/Whisper_(speech_recognition_system)"
+      },
+      {
+        "label": "Esser et al. (Stability AI), Scaling Rectified Flow Transformers for High-Resolution Image Synthesis, 5 mars 2024 (Stable Diffusion 3 : encodeurs de texte CLIP et T5-XXL, T5 important pour les prompts détaillés et le texte à écrire)",
+        "url": "https://arxiv.org/abs/2403.03206"
+      },
+      {
+        "label": "Google, T5Gemma 2: The next generation of encoder-decoder models, 18 décembre 2025 (tailles 270M-270M, 1B-1B et 4B-4B, construits sur Gemma 3)",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/t5gemma-2/"
+      },
+      {
+        "label": "Warner et al., ModernBERT: Smarter, Better, Faster, Longer, 18 décembre 2024 (les encodeurs comme BERT offrent un bon rapport performance-taille pour la recherche et la classification, « the workhorse of numerous production pipelines »)",
+        "url": "https://arxiv.org/abs/2412.13663"
+      }
+    ]
+  },
+  {
+    "id": "modele-de-diffusion",
+    "status": "live",
+    "num": "115",
+    "title": "Modèle de diffusion",
+    "en": "Diffusion model",
+    "aliases": [
+      "diffusion model",
+      "diffusion models",
+      "diffusion",
+      "denoising diffusion",
+      "DDPM",
+      "latent diffusion",
+      "text diffusion",
+      "diffusion language model",
+      "dLLM"
+    ],
+    "aliasesFr": [
+      "diffusion",
+      "modèle de débruitage",
+      "diffusion de texte"
+    ],
+    "jargon": [
+      {
+        "say": "steps",
+        "means": "le nombre de passes de débruitage ; plus il y en a, plus le résultat est fin et plus il coûte à calculer"
+      },
+      {
+        "say": "latent diffusion",
+        "means": "la diffusion faite sur une version compressée de l'image plutôt que sur ses pixels, l'astuce qui a permis à Stable Diffusion de tourner sur une carte graphique grand public"
+      },
+      {
+        "say": "autoregressive",
+        "means": "autorégressif, se dit d'un modèle qui écrit un token après l'autre, de gauche à droite, comme presque tous les LLM ; c'est à eux qu'on compare les modèles de diffusion de texte"
+      },
+      {
+        "say": "dLLM",
+        "means": "diffusion LLM, un modèle de langage qui écrit en débruitant des blocs de texte entiers, comme DiffusionGemma"
+      }
+    ],
+    "cat": "fondations",
+    "links": [
+      "multimodal",
+      "prediction-du-mot-suivant",
+      "encodeur-decodeur",
+      "deep-learning",
+      "inference",
+      "auto-attention"
+    ],
+    "short": "Un modèle de diffusion apprend à retirer du bruit, puis fabrique une image, une vidéo ou un texte en partant d'un bruit pur qu'il nettoie en plusieurs passes.",
+    "image": "Sur la bande que reçoit l'ingé son, il n'y a que du souffle, et on lui assure qu'un morceau de jazz est caché dessous. À chaque passage il en retire un peu, des notes apparaissent, puis des phrases, et après de nombreux passages le morceau se tient. L'image triche sur l'essentiel, puisque rien n'était caché ; le souffle était tiré au hasard, et c'est le nettoyage, guidé par ta consigne, qui invente ce qu'il fait mine de retrouver.",
+    "imagineForm": "E",
+    "imagine": "Donne une grille de sudoku à un modèle de langage ordinaire, qui écrit de gauche à droite. Il doit poser le chiffre de la première case vide avant d'avoir écrit les autres, et le reste de la grille hérite de ce choix sans pouvoir revenir dessus. Donne la même grille à DiffusionGemma, que Google a fine-tuné sur des sudokus. Il part de cases toutes floues, fixe d'abord celles dont il est le plus sûr, où qu'elles soient, s'en sert comme indices pour les autres, et réussit ainsi huit grilles sur dix, la grille montrée par Google en 12 passes.",
+    "full": [
+      "L'entraînement se fait dans le sens inverse de l'usage. On prend des millions d'images, on les brouille par petites touches de bruit jusqu'à ce qu'il ne reste qu'une neige uniforme, et on apprend au réseau à deviner, à chaque étape, le bruit qui vient d'être ajouté. Une fois entraîné, il reçoit une neige tirée au hasard et une consigne, puis retire le bruit pas à pas, jusqu'à une image que personne n'a jamais prise. L'idée vient d'un article de 2015 de chercheurs de Stanford et de Berkeley, inspirés par la thermodynamique, et c'est en juin 2020 qu'une équipe de Berkeley, avec Jonathan Ho, en tire des images de haute qualité, au prix de 1 000 étapes.",
+      "Le 22 août 2022, Stable Diffusion met la technique entre toutes les mains. Ses poids sont publiés, et il tourne sur une carte graphique grand public parce qu'il débruite une version compressée de l'image plutôt que ses pixels, une méthode mise au point en 2021 à Munich et à Heidelberg. La consigne y passe par un encodeur de texte de 123 millions de paramètres, à côté d'un réseau de débruitage de 860 millions, et l'entraînement avait coûté environ 600 000 dollars de calcul.",
+      "Ce qui guide le nettoyage explique une partie des défauts. Les premières versions de Stable Diffusion dessinaient mal les mains, que les images du jeu d'entraînement montraient rarement bien, et ne savaient pas écrire un mot lisible. Pour la version 3, en mars 2024, Stability AI a ajouté l'encodeur de T5-XXL et ses 4,7 milliards de paramètres, et constaté qu'il comptait surtout pour les prompts très détaillés et le texte à écrire dans l'image."
+    ],
+    "then": "En 2024, la diffusion faisait les images et les vidéos, et le texte restait l'affaire des modèles qui l'écrivent un token après l'autre. En mai 2025, Google montrait Gemini Diffusion, une démo expérimentale qui écrit 1 479 tokens par seconde. Le 10 juin 2026, il publiait les poids de DiffusionGemma, qui débruite des blocs de 256 tokens à la fois et dépasse 1 000 tokens par seconde sur une seule puce H100. Google reconnaît que la qualité de ses réponses reste inférieure à celle de Gemma 4, qu'il conseille dès que la qualité prime.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Pourquoi l'image change complètement quand je relance avec le même prompt ?"
+      },
+      {
+        "who": "a",
+        "text": "Chaque génération part d'une neige tirée au hasard ; beaucoup d'outils te laissent fixer ce tirage, la seed, et avec la même seed, le même prompt et les mêmes réglages, tu retrouves la même image."
+      }
+    ],
+    "avoid": "« Le modèle colle des morceaux d'images existantes. » Il part d'un bruit tiré au hasard et le nettoie avec ce qu'il a retenu de millions d'images, ce qui ne l'empêche pas de recracher presque à l'identique une image très présente dans ses données. En janvier 2023, des chercheurs en ont extrait plus d'un millier de Stable Diffusion et d'autres modèles.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Google, DiffusionGemma: The Developer Guide, 10 juin 2026 (canevas de tokens de remplissage affinés en parallèle, les tokens les plus sûrs aidant à fixer leurs voisins ; fine-tuning sur le sudoku : environ 0 % de réussite pour le modèle de base, 80 % après fine-tuning ; la grille donnée en exemple résolue en 12 étapes, contre un échec après 48 pour le modèle de base)",
+        "url": "https://developers.googleblog.com/diffusiongemma-the-developer-guide/"
+      },
+      {
+        "label": "Google, DiffusionGemma: 4x faster text generation, 10 juin 2026 (blocs de 256 tokens générés en parallèle, attention bidirectionnelle ; plus de 1 000 tokens par seconde sur une H100 ; MoE de 26 milliards de paramètres dont 3,8 actifs ; qualité inférieure à Gemma 4 ; sudoku difficile pour les modèles autorégressifs parce que chaque token dépend des suivants ; licence Apache 2.0)",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/"
+      },
+      {
+        "label": "Sohl-Dickstein, Weiss, Maheswaranathan et Ganguli, Deep Unsupervised Learning using Nonequilibrium Thermodynamics, 12 mars 2015 (détruire la structure des données par un processus de diffusion, puis apprendre le processus inverse)",
+        "url": "https://arxiv.org/abs/1503.03585"
+      },
+      {
+        "label": "Ho, Jain et Abbeel (UC Berkeley), Denoising Diffusion Probabilistic Models, 19 juin 2020 (synthèse d'images de haute qualité ; T = 1000 étapes dans toutes les expériences)",
+        "url": "https://arxiv.org/abs/2006.11239"
+      },
+      {
+        "label": "Rombach et al., High-Resolution Image Synthesis with Latent Diffusion Models, 20 décembre 2021 (diffusion dans l'espace latent d'un autoencodeur plutôt que dans l'espace des pixels)",
+        "url": "https://arxiv.org/abs/2112.10752"
+      },
+      {
+        "label": "Wikipédia, Stable Diffusion (sortie le 22 août 2022 ; poids publiés ; diffusion latente née à LMU Munich et à l'université de Heidelberg ; 860 millions de paramètres pour le U-Net et 123 millions pour l'encodeur de texte CLIP ; environ 150 000 heures de GPU A100 pour 600 000 dollars ; difficultés avec les membres humains, attribuées aux données LAION, et avec le texte lisible), consulté le 2 octobre 2026",
+        "url": "https://en.wikipedia.org/wiki/Stable_Diffusion"
+      },
+      {
+        "label": "Esser et al. (Stability AI), Scaling Rectified Flow Transformers for High-Resolution Image Synthesis, 5 mars 2024 (Stable Diffusion 3 ; 4,7 milliards de paramètres pour T5-XXL ; T5 important pour les prompts très détaillés et le texte écrit dans l'image)",
+        "url": "https://arxiv.org/abs/2403.03206"
+      },
+      {
+        "label": "Google DeepMind, Gemini Diffusion, consulté le 2 octobre 2026 (modèle expérimental de diffusion de texte ; 1 479 tokens par seconde hors temps de démarrage ; génère en affinant du bruit pas à pas)",
+        "url": "https://deepmind.google/models/gemini-diffusion/"
+      },
+      {
+        "label": "Simon Willison, Gemini Diffusion, 21 mai 2025 (essai de la démo présentée à Google I/O, 857 tokens par seconde mesurés)",
+        "url": "https://simonwillison.net/2025/May/21/gemini-diffusion/"
+      },
+      {
+        "label": "Carlini et al., Extracting Training Data from Diffusion Models, 30 janvier 2023 (plus d'un millier d'images d'entraînement extraites de modèles comme Stable Diffusion et Imagen)",
+        "url": "https://arxiv.org/abs/2301.13188"
+      }
+    ]
+  },
+  {
+    "id": "dpo",
+    "status": "live",
+    "num": "116",
+    "title": "DPO",
+    "en": "Direct Preference Optimization",
+    "aliases": [
+      "DPO",
+      "direct preference optimization",
+      "preference optimization",
+      "chosen and rejected",
+      "preference pairs",
+      "KTO"
+    ],
+    "aliasesFr": [
+      "optimisation directe des préférences",
+      "apprentissage des préférences"
+    ],
+    "jargon": [
+      {
+        "say": "chosen, rejected",
+        "means": "la réponse préférée et la réponse écartée d'une même paire ; c'est la seule donnée que DPO demande"
+      },
+      {
+        "say": "reference model",
+        "means": "la copie figée du modèle d'avant DPO, à laquelle on le compare pour qu'il ne s'éloigne pas trop de ce qu'il savait faire"
+      },
+      {
+        "say": "beta",
+        "means": "le réglage qui fixe jusqu'où le modèle peut s'écarter de cette copie ; Meta l'a mis à 0,1 pour Llama 3"
+      },
+      {
+        "say": "KTO",
+        "means": "une variante publiée en février 2024, qui se contente d'un avis par réponse, bonne ou mauvaise, sans former de paires"
+      }
+    ],
+    "cat": "entrainement",
+    "links": [
+      "rlhf",
+      "post-entrainement",
+      "fine-tuning",
+      "reward-hacking",
+      "alignement",
+      "donnees-synthetiques"
+    ],
+    "short": "DPO est une méthode de post-entraînement qui montre au modèle des paires de réponses, l'une préférée, l'autre rejetée, et le pousse directement vers la première, sans modèle de récompense.",
+    "image": "Plus besoin de juré dans la salle. On fait écouter au groupe deux prises du même morceau, celle que le public a gardée et celle qu'il a écartée. L'ingé son tourne alors les potards pour rendre la première un peu plus probable et la seconde un peu moins, sans laisser le groupe s'éloigner de son jeu d'avant. L'image triche sur le public, qui est de plus en plus souvent un autre modèle chargé de départager les prises.",
+    "imagineForm": "E",
+    "imagine": "Une version de travail d'Olmo 3, le modèle ouvert de 7 milliards de paramètres de l'institut Ai2, relit des raisonnements écrits par Qwen3 32B, plus fort que lui, avec pour consigne de les imiter. Sa moyenne sur dix tests recule de 70,3 à 64,5. Refais la séance avec les mêmes raisonnements, posés cette fois chacun à côté de celui qu'un tout petit Qwen3 de 0,6 milliard a écrit pour la même question, et une seule consigne, préférer le premier. La moyenne monte à 72,9.",
+    "full": [
+      "En mai 2023, six chercheurs de Stanford, dont Rafael Rafailov, Archit Sharma et Eric Mitchell, publient un article au titre en forme de clin d'œil, « Your Language Model is Secretly a Reward Model ». Le RLHF classique entraînait d'abord un modèle de récompense sur les préférences humaines, puis faisait générer le modèle principal sans relâche pour le pousser, par renforcement, vers les réponses bien notées, une procédure qu'ils jugent complexe et souvent instable. Leur calcul montre qu'on peut viser le même objectif avec une seule fonction de perte calculée sur les paires, et l'article finit en décembre parmi les deux dauphins du prix du meilleur article de NeurIPS.",
+      "Pour chaque paire, on regarde la probabilité que le modèle donne à la réponse préférée et à la réponse rejetée, et l'entraînement creuse l'écart en faveur de la première, en mesurant tout par rapport à une copie figée du modèle de départ pour l'empêcher de dériver. Il n'y a plus de modèle de récompense à entraîner ni de réponses à faire générer pendant l'entraînement, ce qui allège beaucoup la méthode. Pour Llama 3, en juillet 2024, Meta l'a préférée au renforcement classique, parce qu'elle demandait moins de calcul sur ses grands modèles et suivait mieux les consignes.",
+      "Les paires n'ont pas besoin d'être départagées par des humains. En octobre 2023, Hugging Face a réglé Zephyr-7B sur des réponses classées par un modèle plus fort, sans aucune annotation humaine, et il dépassait sur le test MT-Bench Llama 2 Chat 70B, dix fois plus gros et réglé par RLHF. Ai2 est allé plus loin pour Olmo 3, en novembre 2025, en partant de l'idée que la valeur d'une paire tient surtout à l'écart entre ses deux réponses, d'où l'association d'un modèle fort et d'un modèle bien plus faible."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "On a 20 000 pouces levés ou baissés sur les réponses de l'assistant, ça suffit pour faire du DPO ?"
+      },
+      {
+        "who": "a",
+        "text": "DPO veut des paires, deux réponses au même message dont l'une est préférée. Des votes isolés conviennent mieux à KTO, une variante qui se contente d'un signal bon ou mauvais par réponse et qui faisait jeu égal avec les méthodes à paires dans son article de février 2024."
+      }
+    ],
+    "avoid": "« DPO se passe des humains. » DPO se passe du modèle de récompense et du renforcement, pas des préférences ; il faut toujours quelqu'un, humain ou modèle, pour dire laquelle des deux réponses vaut mieux, et ses goûts deviennent ceux du modèle.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Olmo Team (Ai2), Olmo 3, 15 décembre 2025, révisé le 14 avril 2026, section 4.3 et tableau 21 (point de contrôle SFT de développement en 7B : moyenne de 70,3 sur dix tests ; SFT continué sur les réponses de Qwen3 32B Thinking : 64,5 ; DPO avec des paires Qwen3 32B préféré contre Qwen3 0,6B rejeté, dite delta learning : 72,9 ; la qualité d'une paire dépend surtout de l'écart entre ses deux réponses)",
+        "url": "https://arxiv.org/abs/2512.13961"
+      },
+      {
+        "label": "Ai2, Olmo 3: Charting a path through the model flow to lead open-source AI, 20 novembre 2025 (recette en trois étapes : SFT, préférences par DPO, RLVR)",
+        "url": "https://allenai.org/blog/olmo3"
+      },
+      {
+        "label": "Rafailov, Sharma, Mitchell, Ermon, Manning et Finn (Stanford), Direct Preference Optimization: Your Language Model is Secretly a Reward Model, 29 mai 2023 (le RLHF, procédure complexe et souvent instable ; une simple perte de classification ; pas d'échantillonnage pendant l'entraînement)",
+        "url": "https://arxiv.org/abs/2305.18290"
+      },
+      {
+        "label": "NeurIPS, Announcing the NeurIPS 2023 Paper Awards, 11 décembre 2023 (DPO parmi les deux Outstanding Main Track Runner-Ups)",
+        "url": "https://blog.neurips.cc/2023/12/11/announcing-the-neurips-2023-paper-awards/"
+      },
+      {
+        "label": "Llama Team (Meta), The Llama 3 Herd of Models, 31 juillet 2024, section 4.1.4 (DPO plutôt que PPO, qui demandait plus de calcul pour les grands modèles et faisait moins bien, notamment sur IFEval ; β = 0,1)",
+        "url": "https://arxiv.org/abs/2407.21783"
+      },
+      {
+        "label": "Tunstall et al. (Hugging Face), Zephyr: Direct Distillation of LM Alignment, 25 octobre 2023 (DPO sur des réponses classées par un modèle professeur, sans annotation humaine ; Zephyr-7B dépasse Llama2-Chat-70B sur MT-Bench)",
+        "url": "https://arxiv.org/abs/2310.16944"
+      },
+      {
+        "label": "Ethayarajh et al., KTO: Model Alignment as Prospect Theoretic Optimization, 2 février 2024 (un simple signal binaire, réponse souhaitable ou non ; égale ou dépasse les méthodes à préférences de 1 à 30 milliards de paramètres)",
+        "url": "https://arxiv.org/abs/2402.01306"
+      }
+    ]
+  },
+  {
+    "id": "donnees-synthetiques",
+    "status": "live",
+    "num": "117",
+    "title": "Données synthétiques",
+    "en": "Synthetic data",
+    "aliases": [
+      "synthetic data",
+      "synthetic dataset",
+      "synthetic pretraining",
+      "rephrasing",
+      "self-instruct",
+      "data amplification"
+    ],
+    "aliasesFr": [
+      "données générées",
+      "données artificielles",
+      "corpus synthétique"
+    ],
+    "jargon": [
+      {
+        "say": "seed",
+        "means": "la graine, le texte ou le problème réel dont on part pour générer des variantes ; chez Pleias, des articles de Wikipédia"
+      },
+      {
+        "say": "rephrasing",
+        "means": "la réécriture d'un texte existant par un modèle sous une autre forme, question, résumé ou exercice, pour multiplier les façons d'apprendre la même information"
+      },
+      {
+        "say": "self-instruct",
+        "means": "la méthode publiée en décembre 2022 où un modèle invente des consignes et leurs réponses, qu'on filtre avant de l'entraîner dessus"
+      },
+      {
+        "say": "verifier",
+        "means": "le programme qui contrôle une donnée générée, par exemple en refaisant la démonstration ou en exécutant le code, avant de la garder"
+      }
+    ],
+    "cat": "entrainement",
+    "links": [
+      "donnees-d-entrainement",
+      "distillation",
+      "post-entrainement",
+      "pre-entrainement",
+      "dpo",
+      "dead-internet",
+      "mythe-open-source-gratuit"
+    ],
+    "short": "Les données synthétiques sont des textes, images ou exercices fabriqués par un modèle ou un programme pour en entraîner un autre, en plus ou à la place de données humaines.",
+    "image": "Les bacs de disques ne suffisent plus, alors l'ingé son demande aux groupes du studio d'enregistrer des maquettes exprès pour les leçons, le même standard en dix tempos, des gammes, des questions et réponses entre deux instruments. Le groupe en formation apprend sur ces maquettes autant que sur les vrais disques. L'image triche sur l'origine, car la meilleure maquette part souvent d'un vrai disque qu'elle réarrange au lieu de l'inventer.",
+    "imagineForm": "A",
+    "imagine": "La start-up française Pleias est partie de 58 698 articles de Wikipédia et les a fait réécrire par des modèles, au moins cent fois chacun, en questions, exercices, résumés et petits raisonnements. Il en est sorti plus de 41 milliards de mots. Lus jour et nuit, sans une pause, à la vitesse moyenne d'un adulte devant un essai, ils l'occuperaient plus de 327 ans, et Baguettotron, le modèle de 321 millions de paramètres entraîné dessus, a lu l'équivalent du corpus plus de deux fois et demie.",
+    "full": [
+      "En mars 2023, les modèles qui suivent des consignes sont tous fermés, et une équipe de Stanford veut en étudier un. Elle fait écrire par text-davinci-003, un modèle d'OpenAI, 52 000 consignes avec leurs réponses, pour moins de 500 dollars d'API, puis règle dessus le LLaMA 7B de Meta en trois heures. Dans ses comparaisons à l'aveugle, ce modèle baptisé Alpaca l'emporte 90 fois contre 89 face à son professeur. Il reste réservé à la recherche, en partie parce que les conditions d'utilisation d'OpenAI interdisent de se servir de ses sorties pour développer un modèle concurrent.",
+      "La génération sert surtout là où les textes humains manquent ou se vérifient mal, comme les raisonnements écrits étape par étape, que le web contient peu. Elle donne ses meilleurs résultats quand un programme peut contrôler chaque exemple. En janvier 2024, Google DeepMind a entraîné AlphaGeometry sur 100 millions de problèmes de géométrie et de démonstrations fabriqués par un moteur de déduction, sans démonstration humaine, et le système résolvait 25 problèmes d'olympiade sur 30, presque la moyenne d'un médaillé d'or.",
+      "Le risque connu est la boucle, où des modèles apprennent génération après génération sur ce qu'écrivent les modèles précédents et s'appauvrissent, ce que raconte la fiche Données d'entraînement. En avril 2024, une équipe de Stanford a montré que la dégradation disparaît quand les données synthétiques s'ajoutent aux données réelles au lieu de les remplacer. Pleias part elle aussi de vrais textes, et ses auteurs attribuent la précision factuelle de leurs modèles à ces articles d'origine, que la génération reformule sans les inventer."
+    ],
+    "then": "En juin 2024, NVIDIA indiquait que plus de 98 % des données ayant servi au réglage de son Nemotron-4 340B avaient été générées, le pré-entraînement restant fait de textes humains. En novembre 2025, Pleias publiait SYNTH, un corpus entièrement synthétique qui fond le pré-entraînement et le réglage en une seule étape, et son article de septembre 2026 trouve qu'à calcul égal, il fait mieux que des données web filtrées.",
+    "office": [
+      {
+        "who": "q",
+        "text": "On génère 10 000 faux échanges clients avec un LLM pour entraîner notre classifieur ?"
+      },
+      {
+        "who": "a",
+        "text": "Pour démarrer, oui, à condition de garder pour l'évaluation un lot de vrais échanges que le générateur n'a jamais vus, et de lire les conditions d'utilisation du modèle générateur, dont certaines interdisent d'entraîner un modèle concurrent."
+      }
+    ],
+    "avoid": "« Synthétique veut dire inventé. » Les données synthétiques les plus utiles partent d'un texte réel ou d'un problème dont un programme vérifie la solution ; le modèle les reformule et les décline, et c'est ce point d'appui qui les sépare du bruit.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Pleias, fiche du jeu de données SYNTH sur Hugging Face, mise en ligne le 10 novembre 2025 (79 648 272 textes, plus de 41 milliards de mots, environ 75 milliards de tokens ; 58 698 articles de Wikipédia amplifiés au moins 100 fois ; publié avec l'AI Alliance), consultée le 2 octobre 2026",
+        "url": "https://huggingface.co/datasets/PleIAs/SYNTH"
+      },
+      {
+        "label": "Pleias, fiche de Baguettotron sur Hugging Face, mise en ligne le 10 novembre 2025 (321 millions de paramètres, entraîné sur 200 milliards de tokens de SYNTH ; nom choisi en clin d'œil à ses origines françaises), consultée le 2 octobre 2026. Calcul : 200 / 75 = 2,67 lectures du corpus",
+        "url": "https://huggingface.co/PleIAs/Baguettotron"
+      },
+      {
+        "label": "Brysbaert, How many words do we read per minute? A review and meta-analysis of reading rate, Journal of Memory and Language, 2019 (238 mots par minute en lecture silencieuse d'un texte non romanesque en anglais). Calcul de l'Imagine : 41 × 10^9 / 238 = 172,3 millions de minutes, soit 2,87 millions d'heures, ou 327,5 ans de lecture continue",
+        "url": "https://gwern.net/doc/psychology/linguistics/2019-brysbaert.pdf"
+      },
+      {
+        "label": "Langlais et al. (Pleias), It's All Training: A Fully Synthetic Single-Stage Recipe for LLMs, 29 septembre 2026 (SYNTH fond pré-, mid- et post-training en une étape ; à calcul égal, meilleur que des données web filtrées ; précision factuelle attribuée aux passages d'origine ; les données web contiennent peu de raisonnement explicite)",
+        "url": "https://arxiv.org/abs/2609.37891"
+      },
+      {
+        "label": "Taori et al. (Stanford CRFM), Alpaca: A Strong, Replicable Instruction-Following Model, 13 mars 2023 (52 000 démonstrations générées par text-davinci-003 pour moins de 500 dollars ; LLaMA 7B réglé en 3 heures sur 8 A100 ; 90 victoires contre 89 ; usage non commercial, notamment à cause des conditions d'OpenAI)",
+        "url": "https://crfm.stanford.edu/2023/03/13/alpaca.html"
+      },
+      {
+        "label": "Wang et al., Self-Instruct: Aligning Language Models with Self-Generated Instructions, 20 décembre 2022",
+        "url": "https://arxiv.org/abs/2212.10560"
+      },
+      {
+        "label": "Google DeepMind, AlphaGeometry: An Olympiad-level AI system for geometry, 17 janvier 2024 (100 millions d'exemples synthétiques produits par déduction symbolique ; 25 problèmes résolus sur 30, contre 25,9 en moyenne pour un médaillé d'or)",
+        "url": "https://deepmind.google/discover/blog/alphageometry-an-olympiad-level-ai-system-for-geometry/"
+      },
+      {
+        "label": "Gerstgrasser et al. (Stanford), Is Model Collapse Inevitable? Breaking the Curse of Recursion by Accumulating Real and Synthetic Data, 1er avril 2024 (remplacer les données réelles mène à l'effondrement, les accumuler avec les synthétiques l'évite)",
+        "url": "https://arxiv.org/abs/2404.01413"
+      },
+      {
+        "label": "NVIDIA, Nemotron-4 340B Technical Report, 17 juin 2024 (plus de 98 % des données du processus d'alignement générées synthétiquement)",
+        "url": "https://arxiv.org/abs/2406.11704"
       }
     ]
   },
