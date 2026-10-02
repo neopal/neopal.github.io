@@ -155,3 +155,11 @@ Les gestes tirés des livres d'inspiration de PA (verbes anthropomorphes marqué
 - Uniquement des sources réelles, ouvertes et vérifiées (la page répond et contient bien le fait cité). Jamais de source reconstituée de mémoire.
 - La plus récente possible quand plusieurs existent (préférer 2025-2026 à 2023).
 - Si aucune source vérifiable n'existe pour un fait, on retire le fait ; si une fiche n'a aucune source vérifiable, pas de bloc Sources plutôt qu'une source douteuse.
+
+## Fiches modèles (classement du lecteur exigeant, 2026-10-02)
+
+À relire avant d'écrire une fiche : ce sont les trois mieux notées, chacune avec une forme d'Imagine différente.
+- **fine-tuning** (dialogue) : la réponse « Pas spam. » montre la limite sans un mot de commentaire et fait rire ; une règle qui tranche (« RAG pour les faits, fine-tuning pour la manière ») avec un exemple daté.
+- **rag** (expérience à faire soi-même) : le lecteur refait le mécanisme en 30 secondes et repart praticien (« Tu viens de faire du RAG à la main »), puis un chiffre sérieux en contrepoint.
+- **flagornerie** (avant / après) : une seule variable change entre les deux scènes, le renversement se suffit à lui-même, puis une histoire vraie et datée, puis la cause.
+Défauts des fiches les moins bien notées, à éviter : noms de modèles opaques et chiffres en rafale (tailles-de-modele, moe), six chiffres en deux phrases, dates empilées sans image, Imagine qui finit par une explication. Ouvertures « Avant, » : encore 8 Imagines, à ne plus utiliser.
