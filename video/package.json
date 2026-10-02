@@ -5,7 +5,7 @@
   "scripts": {
     "studio": "remotion studio src/index.ts",
     "render": "remotion render src/index.ts",
-    "check": "python out/tools/captions.py"
+    "check": "node check-captions.mjs"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.532",

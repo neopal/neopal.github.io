@@ -58,7 +58,7 @@ const Reponse: React.FC = () => {
   const typing = frame < BEAT * 3.4;
   return (
     <Scene
-      caps={[[0, "Un token est un bloc de texte numéroté, et le modèle ne travaille qu'avec ces numéros."]]}
+      caps={[[0, 'Un token est un bloc de texte numéroté, et le modèle ne lit que ce numéro.']]}
     >
       <div style={{position: 'relative', height: 260, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
         {typing ? (
@@ -84,7 +84,7 @@ const Bug: React.FC = () => {
   const dots = frame >= BEAT * 2.4 && frame < BEAT * 4;
   const cross = useProg(BEAT * 4.6, BEAT * 4.6 + 10);
   return (
-    <Scene caps={[[0, "À l'été 2024, à cette question, GPT-4o répondait souvent 2, alors que le mot en contient 3."]]}>
+    <Scene caps={[[0, "À l'été 2024, GPT-4o répondait souvent 2, alors qu'il y en a 3."]]}>
       <Bubble side="right" at={BEAT}><Say size={56}>Combien de r dans strawberry ?</Say></Bubble>
       <div style={{alignSelf: 'flex-start', height: 240, display: 'flex', alignItems: 'center'}}>
         {dots ? <Dots /> : frame >= BEAT * 4 ? (
@@ -108,7 +108,7 @@ const Pourquoi: React.FC = () => {
   const mystery = frame >= BEAT * 7;
   return (
     <Scene
-      caps={[[0, "Il ne voyait que trois blocs, st, raw et berry, et les r étaient *enfermés* dedans."]]}
+      caps={[[0, 'Il voyait st, raw et berry, avec les r *enfermés* dedans.']]}
     >
       <div style={{height: 90, display: 'flex', justifyContent: 'center', opacity: scanning ? 1 : 0}}>
         <Eye look={look} />
@@ -125,7 +125,7 @@ const Anecdote: React.FC = () => {
   const o1 = usePop(BEAT * 6);
   return (
     <Scene
-      caps={[[0, "Le projet d'OpenAI qui a réglé ça s'appelait Strawberry, et il est sorti en septembre 2024 sous le nom o1."]]}
+      caps={[[0, "OpenAI l'a réglé avec le projet Strawberry, sorti en 2024 sous le nom o1."]]}
       bottom={
         <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: 28, opacity: frame >= BEAT * 6 ? 1 : 0, transform: `scale(${0.7 + 0.3 * o1})`}}>
           <Mono size={44} color={GREY}>12 sept. 2024</Mono>
@@ -179,7 +179,7 @@ const Flow: React.FC = () => {
 };
 
 const EtDonc: React.FC = () => (
-  <Scene caps={[[0, "Quand tu interagis avec un LLM, tout se compte en tokens, à l'envoi comme à la réponse."]]}>
+  <Scene caps={[[0, "Avec un LLM, tout se compte en tokens, à l'envoi comme à la réponse."]]}>
     <Flow />
   </Scene>
 );
@@ -212,7 +212,7 @@ const Langues: React.FC = () => {
   );
   return (
     <Scene
-      caps={[[0, 'Le même paragraphe coûte 65 tokens en anglais et 78 en français, soit 20 % de plus.']]}
+      caps={[[0, 'Ce paragraphe fait 65 tokens en anglais et 78 en français.']]}
       gap={44}
       bottom={
         <div style={{display: 'flex', justifyContent: 'flex-end', opacity: frame >= BEAT * 6 ? 1 : 0}}>
@@ -234,7 +234,7 @@ const Chute: React.FC = () => {
   const count = rIdx.filter((k) => frame >= letterAt(k) + 4).length;
   return (
     <Scene
-      caps={[[0, 'En 2026, les modèles de raisonnement épellent le mot lettre par lettre avant de compter.']]}
+      caps={[[0, 'En 2026, les modèles de raisonnement épellent le mot avant de compter.']]}
       bottom={
         <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 24, opacity: count > 0 ? 1 : 0}}>
           <Mono size={140}>{count}</Mono>
@@ -262,7 +262,7 @@ const Chute: React.FC = () => {
 };
 
 const SCENES: Scenes = [
-  [Reponse, 180],
+  [Reponse, 196],
   [Bug, 210],
   [Pourquoi, 160],
   [Anecdote, 195],

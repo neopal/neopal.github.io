@@ -105,7 +105,7 @@ export const Mono: React.FC<{children: React.ReactNode; size?: number; color?: s
 export const svgPx = (px: number) => floor(px, 'texte SVG');
 
 // Mise en valeur : couleur d'accent et italique, en écho au mot géant. Au plus deux fois par short
-// (vérifié par out/tools/captions.py) ; dans une légende, on l'écrit *entre astérisques*.
+// (à vérifier à l'œil ; le rythme est contrôlé par check-captions.mjs) ; dans une légende, on l'écrit *entre astérisques*.
 export const Hi: React.FC<{children: React.ReactNode; color?: string}> = ({children, color}) => {
   const accent = useAccent();
   return <span style={{color: color ?? accent, fontStyle: 'italic'}}>{children}</span>;
@@ -113,7 +113,7 @@ export const Hi: React.FC<{children: React.ReactNode; color?: string}> = ({child
 
 // ---------- Légendes ----------
 
-// Une légende est une chaîne simple : *mot* = mise en valeur. Rien d'autre (captions.py lit ces chaînes telles quelles).
+// Une légende est une chaîne simple : *mot* = mise en valeur. Rien d'autre (check-captions.mjs lit ces chaînes telles quelles).
 export type Caps = [number, string][];
 
 const renderCap = (t: string) => t.split('*').map((part, k) => (k % 2 ? <Hi key={k}>{part}</Hi> : <React.Fragment key={k}>{part}</React.Fragment>));

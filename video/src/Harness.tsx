@@ -64,8 +64,8 @@ const Reponse: React.FC = () => {
   return (
     <Scene
       caps={[
-        [0, 'Le harness est tout le logiciel qui entoure un modèle pour en faire un agent.'],
-        [160, 'Claude Code, Codex et Gemini CLI sont tous les trois des harness.'],
+        [0, "Le harness est le logiciel qui fait d'un modèle un agent."],
+        [155, 'Claude Code, Codex et Gemini CLI sont des harness.'],
       ]}
     >
       <Pop at={BEAT * 0.6}><Rig mods={mods} ring={ring} /></Pop>
@@ -105,8 +105,8 @@ const Score: React.FC = () => {
   return (
     <Scene
       caps={[
-        [0, 'Sur Terminal-Bench 2.1, le même GPT-5.5 réussit 78 % des tâches dans Terminus 2 et 83,1 % dans Codex CLI.'],
-        [GEM, 'Le harness maison ne gagne pas toujours, puisque Gemini 3 Pro fait mieux dans Terminus 2.'],
+        [0, 'Sur Terminal-Bench 2.1, le même GPT-5.5 gagne 5 points dans Codex CLI.'],
+        [GEM, 'Mais Gemini 3 Pro fait mieux hors de son harness maison.'],
       ]}
       gap={22}
       bottom={
@@ -142,7 +142,7 @@ const Mecanisme: React.FC = () => {
   const step = 98;
   const H = y0 + step * 4.4;
   return (
-    <Scene caps={[[0, 'Le harness envoie au modèle ses consignes et ses outils, puis *exécute ou bloque* chaque action demandée.']]}>
+    <Scene caps={[[0, 'Il envoie consignes et outils au modèle, puis *exécute ou bloque* chaque action.']]}>
       <Pop at={BEAT * 0.6}>
         <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{display: 'block', overflow: 'visible'}}>
           <line x1={L} y1={140} x2={L} y2={H} stroke="#333" strokeWidth={4} strokeDasharray="10 12" />
@@ -212,7 +212,7 @@ const EtDonc: React.FC = () => {
   const rule = useProg(scanTo + 8, scanTo + 16);
   return (
     <Scene
-      caps={[[0, 'Quand Claude Code change de comportement, regarde qui a été mis à jour, le modèle ou le harness.']]}
+      caps={[[0, 'Si Claude Code change, demande-toi qui a bougé, le modèle ou le harness.']]}
       gap={24}
       bottom={
         <Pop at={BEAT * 1.2} style={{display: 'flex', alignItems: 'center', gap: 20}}>
@@ -270,7 +270,7 @@ const Chute: React.FC = () => {
   const score = swap ? 78 + (83.1 - 78) * swapPop : 78 * g;
   return (
     <Scene
-      caps={[[0, "Un agent, c'est donc toujours un modèle et son harness, et changer le harness suffit à *changer le score*."]]}
+      caps={[[0, "Un agent, c'est un modèle plus un harness, et ce dernier *change le score*."]]}
       gap={40}
       bottom={
         <Pop at={BEAT * 3.6} style={{display: 'flex', justifyContent: 'center'}}>
@@ -300,7 +300,7 @@ const Chute: React.FC = () => {
 };
 
 const SCENES: Scenes = [
-  [Reponse, 280],
+  [Reponse, 290],
   [Score, 360],
   [Mecanisme, 220],
   [EtDonc, 200],

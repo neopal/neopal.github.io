@@ -55,7 +55,7 @@ const Reponse: React.FC = () => {
   const r = 5 - steps.reduce((s, at) => s + interpolate(frame, [at, at + 6], [0, 1], clamp), 0);
   return (
     <Scene
-      caps={[[0, "Le benchmaxxing, c'est optimiser un modèle pour *grimper dans les classements* plutôt que pour mieux te servir."]]}
+      caps={[[0, "Le benchmaxxing, c'est viser *le classement* plutôt que ton usage."]]}
       bottom={
         <Pop at={BEAT * 2.4} style={{display: 'flex', flexDirection: 'column', gap: 12}}>
           <Mono size={40} color={GREY}>utilité pour toi</Mono>
@@ -85,8 +85,8 @@ const Maverick: React.FC = () => {
   return (
     <Scene
       caps={[
-        [0, 'Début avril 2025, une variante de Llama 4 Maverick réglée pour plaire aux votants arrive deuxième sur LMArena.'],
-        [MAV_SWAP, 'Le 11 avril, la version que tout le monde peut télécharger tombe à la 32e place.'],
+        [0, 'En avril 2025, un Llama 4 dopé pour plaire finit 2e sur LMArena.'],
+        [MAV_SWAP, 'Le 11 avril, la version publique tombe à la 32e place.'],
       ]}
       gap={16}
       bottom={
@@ -119,7 +119,7 @@ const Variantes: React.FC = () => {
   const pick = useProg(PICK, PICK + 10);
   return (
     <Scene
-      caps={[[0, 'Fin avril, une étude a compté 27 variantes privées testées par Meta avant la sortie.']]}
+      caps={[[0, 'Une étude compte 27 variantes testées en privé par Meta.']]}
       bottom={
         <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', opacity: frame >= at(0) ? 1 : 0}}>
           <div style={{display: 'flex', alignItems: 'baseline', gap: 16}}>
@@ -175,7 +175,7 @@ const Goodhart: React.FC = () => {
   const marker = interpolate(p, [X0, X0 + 0.06], [0, 1], clamp);
   const ends = interpolate(p, [0.95, 1], [0, 1], clamp);
   return (
-    <Scene caps={[[0, "Quand le score devient l'objectif, il grimpe plus vite que la qualité, comme le prévoit la loi de Goodhart."]]}>
+    <Scene caps={[[0, 'Selon la loi de Goodhart, un score visé monte plus vite que la qualité.']]}>
       <Pop at={BEAT * 0.6}>
         <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{display: 'block', overflow: 'visible'}}>
           <line x1={20} y1={H - 60} x2={W - 170} y2={H - 60} stroke="#555" strokeWidth={4} />
@@ -204,7 +204,7 @@ const EtDonc: React.FC = () => {
   const CW = 560;
   const bar = (w: number, k: number) => <div key={k} style={{height: 18, borderRadius: 9, background: '#555', width: `${w}%`}} />;
   return (
-    <Scene caps={[[0, 'Avant de migrer vers le modèle premier, regarde qui a fait passer les tests et sur quelle version.']]}>
+    <Scene caps={[[0, 'Avant de migrer, regarde qui a fait les tests, et sur quelle version.']]}>
       <div style={{position: 'relative', height: 600}}>
         <Pop at={BEAT * 0.8} style={{position: 'absolute', left: 0, top: 0, width: CW, height: 600, background: '#f2efe8', borderRadius: 10, padding: '36px 36px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: 20, transform: 'rotate(-2deg)'}}>
           <Mono size={36} color="#555">communiqué</Mono>
@@ -251,7 +251,7 @@ const Chute: React.FC = () => {
   const cell = W / COLS;
   return (
     <Scene
-      caps={[[0, "Souvent, aucune règle n'est enfreinte, car le score dit vrai sur le test mais promet trop pour le reste."]]}
+      caps={[[0, "Souvent rien n'est truqué, le score dit vrai sur le test et promet trop ailleurs."]]}
       bottom={
         <div style={{display: 'flex', justifyContent: 'space-between'}}>
           <div style={{opacity: lit}}><Mono size={40} color={PINK}>le test</Mono></div>

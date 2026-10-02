@@ -47,7 +47,7 @@ const Reponse: React.FC = () => {
   const segAt = (s: number) => BEAT * 1.6 + s * BEAT;
   const starts = SEGMENTS.reduce<number[]>((acc, [, n], s) => [...acc, s ? acc[s - 1] + SEGMENTS[s - 1][1] : 0], []);
   return (
-    <Scene caps={[[0, "C'est tout le texte qu'un modèle peut avoir *sous les yeux en même temps*, compté en tokens."]]} gap={44}>
+    <Scene caps={[[0, "C'est tout ce que le modèle a *sous les yeux*, compté en tokens."]]} gap={44}>
       <Pop at={BEAT}>
         <div style={{display: 'flex', border: `5px solid ${ACCENT}`, borderRadius: 8, padding: 4}}>
           {BAND.map((_, i) => {
@@ -82,7 +82,7 @@ const Debord: React.FC = () => {
   const crossP = useProg(BEAT * 5.4, BEAT * 6);
   const consX = WIN_X + (1.5 - shift) * C;
   return (
-    <Scene caps={[[0, 'Quand la fenêtre est pleine, le début sort pour laisser entrer la suite, et le modèle ne le voit plus.']]}>
+    <Scene caps={[[0, 'Quand elle est pleine, le début sort, et le modèle ne le voit plus.']]}>
       <Pop at={BEAT * 0.6}>
         <div style={{position: 'relative', height: 300}}>
           {STREAM.map((k, i) => {
@@ -126,8 +126,8 @@ const Proust: React.FC = () => {
   return (
     <Scene
       caps={[
-        [0, "Du côté de chez Swann fait 265 851 tokens, et la fenêtre de GPT-4 en 2023 n'en gardait que 3 %."],
-        [SWAP, "Une fenêtre d'un million de tokens le contient presque quatre fois."],
+        [0, "Ce roman fait 265 851 tokens, et GPT-4 en 2023 n'en gardait que 3 %."],
+        [SWAP, 'Un million de tokens le contient presque quatre fois.'],
       ]}
       bottom={
         <div style={{display: 'flex', flexDirection: 'column', gap: 8}}>
@@ -175,7 +175,7 @@ const Milieu: React.FC = () => {
   const low = U(p) < 0.45;
   return (
     <Scene
-      caps={[[0, "Une information placée *au milieu* d'une longue fenêtre est moins bien retrouvée qu'au début ou à la fin."]]}
+      caps={[[0, "Au milieu d'une longue fenêtre, une info est *moins bien retrouvée*."]]}
       bottom={
         <Pop at={BEAT * 8} style={{display: 'flex', justifyContent: 'center'}}>
           <Mono size={40} color={DIM}>étude Lost in the Middle, 2023</Mono>
@@ -233,7 +233,7 @@ const EtDonc: React.FC = () => {
     </div>
   );
   return (
-    <Scene caps={[[0, "Dans une longue conversation, redonne donc les consignes, ou repars d'une nouvelle avec un résumé."]]} gap={50}>
+    <Scene caps={[[0, "Dans une longue discussion, redonne les consignes ou repars d'un résumé."]]} gap={50}>
       <Pop at={BEAT * 1.2}>
         {label('1', 'redonne les consignes')}
         <div style={{display: 'flex', alignItems: 'center', marginTop: 14}}>
@@ -292,7 +292,7 @@ const Chute: React.FC = () => {
   const P2: Kind[] = ['consignes', 'consignes', 'historique', 'historique', 'reponse', 'question'];
   return (
     <Scene
-      caps={[[0, "Le modèle repart de zéro à chaque message, et il ne voit que ce que l'application lui renvoie."]]}
+      caps={[[0, "Il repart de zéro à chaque message, avec ce que l'appli lui renvoie."]]}
     >
       <Pop at={BEAT}>
         <div style={{position: 'relative', height: 560}}>
@@ -311,7 +311,7 @@ const Chute: React.FC = () => {
 const SCENES: Scenes = [
   [Reponse, 170],
   [Debord, 200],
-  [Proust, 310],
+  [Proust, 334],
   [Milieu, 185],
   [EtDonc, 190],
   [Chute, 215],
