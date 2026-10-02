@@ -77,6 +77,7 @@ Site CV/Portfolio interactif pour **Pierre-Adrien LAIR** avec chatbot IA intégr
 - Vidéos : rendu Remotion dans `video/`, puis recompression (`ffmpeg -crf 27 -movflags +faststart`) dans `lexique/videos/`.
 - Schémas : `lexique/schemas/<id>.svg` (viewBox 360 de large, couleurs via les classes `.schema svg .xxx` de `lexique/index.html`, `<title>` obligatoire), affichés après l'« Imagine » sur les fiches sans vidéo. `lexique/schemas.js` est généré par le build, ne pas l'éditer.
 - Un site cité en toutes lettres dans le texte (« va sur arcprize.org/play ») devient un lien si une source de la fiche pointe vers ce domaine. Les sources restent dans `terms.js` mais ne sont plus affichées.
+- Termes cités dans le texte : la première mention d'une autre fiche (titre, nom anglais ou alias) devient un lien souligné en pointillés (`linkTerms` dans `render.js`). Les mots trop ambigus sont dans la liste `NEVER` ; un alias ne doit désigner qu'une seule fiche.
 - Après toute modif de `terms.js`, `render.js` ou des schémas : `node scripts/build-lexique.mjs`. `lexique/index.html` est en CRLF : l'éditer sans convertir les fins de ligne.
 
 ## SEO & AI Discoverability

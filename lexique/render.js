@@ -24,9 +24,71 @@
       .trim();
   }
 
+  // ---------- Termes cités dans le texte ----------
+  // Chaque fiche publiée (hors mythes, dont le titre est une phrase) est reconnue dans la prose des autres
+  // par son titre, son nom anglais et ses alias. La première mention devient un lien souligné en pointillés.
+  // Un mot présent dans trop de fiches (« modèle ») n'est pas lié : il soulignerait la moitié du lexique.
+  const MAX_SHARE = 0.75;
+  // Formes trop ambiguës pour être liées automatiquement (sens courant différent du terme technique).
+  const NEVER = new Set(['mémoire', 'memory', 'temp', 'loop', 'corpus', 'test', 'tests', 'score', 'outil', 'outils', 'modèle', 'model', 'calcul', 'agentic', 'lab', 'fournisseur', 'provider', 'deployer', 'tools', 'harnais', 'plan', 'instructions', 'apprentissage', 'gpt', 'vision']);
+  const reEsc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const isAcronym = (f) => /^[A-Z0-9-]{2,6}$/.test(f) && /[A-Z]/.test(f);
+  const proseOf = (x) => [x.image, x.imagine, ...arr(x.full), x.then, x.avoid, ...arr(x.office).map((m) => m && m.text)].filter(Boolean).join(' ');
+  const indexCache = new WeakMap();
+  const idxRemoved = []; // formes écartées car trop répandues (diagnostic)
+  function termIndex(terms) {
+    if (indexCache.has(terms)) return indexCache.get(terms);
+    const live = liveTerms(terms);
+    const forms = new Map(); // forme en minuscules -> {id, exact}
+    // Deux passes : les titres et noms anglais d'abord, pour qu'un alias d'une fiche ne capte pas le titre d'une autre
+    // (« pré-entraînement » mène à sa fiche, pas à entraînement).
+    const pass = (pick) => {
+      for (const x of live) {
+        if (x.cat === 'mythes') continue;
+        const all = pick(x).flatMap((f) => String(f || '').split(/\s*[()]\s*/)).map((f) => f.trim()).filter((f) => f.length >= 3 || isAcronym(f));
+        for (const f of all) {
+          const k = f.toLowerCase();
+          if (!forms.has(k) && !NEVER.has(k)) forms.set(k, {id: x.id, exact: isAcronym(f) ? f : null});
+        }
+      }
+    };
+    pass((x) => [x.title, x.en]);
+    pass((x) => [...arr(x.aliases), ...arr(x.aliasesFr)]);
+    // Retire les formes trop répandues.
+    const texts = live.map((x) => proseOf(x).toLowerCase());
+    idxRemoved.length = 0;
+    for (const [k] of forms) {
+      const re = new RegExp(`(?<![\\p{L}\\p{N}_-])${reEsc(k)}(?:s|x)?(?![\\p{L}\\p{N}_-])`, 'u');
+      if (texts.filter((tx) => re.test(tx)).length > MAX_SHARE * live.length) { forms.delete(k); idxRemoved.push(k); }
+    }
+    const keys = [...forms.keys()].sort((a, b) => b.length - a.length).map((k) => reEsc(esc(k)));
+    const idx = {forms, byId: Object.fromEntries(live.map((x) => [x.id, x])), re: keys.length ? new RegExp(`(?<![\\p{L}\\p{N}_-])(${keys.join('|')})((?:s|x)?)(?![\\p{L}\\p{N}_-])`, 'giu') : null};
+    indexCache.set(terms, idx);
+    return idx;
+  }
+
+  // Lie, dans un texte déjà échappé, la première mention de chaque fiche (hors liens existants et hors la fiche elle-même).
+  function linkTerms(html, ctx) {
+    if (!ctx || !ctx.idx.re) return html;
+    return html.split(/(<a\b[^>]*>[\s\S]*?<\/a>)/).map((part) => (part.startsWith('<a') ? part : part.replace(ctx.idx.re, (all, word, suffix) => {
+      const raw = word.replace(/&#39;/g, "'").replace(/&amp;/g, '&');
+      const hit = ctx.idx.forms.get(raw.toLowerCase());
+      if (!hit || hit.id === ctx.self || ctx.seen.has(hit.id)) return all;
+      if (suffix && (raw.length < 5 || hit.exact)) return all;
+      if (hit.exact && raw !== hit.exact) return all;
+      ctx.seen.add(hit.id);
+      const x = ctx.idx.byId[hit.id];
+      return `<a class="tw" style="--c:${color(x, ctx.cats)}" href="${termUrl(x.id, ctx.o)}" data-go="${esc(x.id)}">${word}${suffix}</a>`;
+    }))).join('');
+  }
+
   // Texte échappé, où un site cité en toutes lettres (« va sur arcprize.org/play ») devient un lien
   // quand une source de la fiche pointe vers ce domaine. Un nom de marque comme Z.ai (majuscule) reste du texte.
-  function prose(s, t) {
+  function prose(s, t, ctx) {
+    return linkTerms(siteLinks(s, t), ctx);
+  }
+
+  function siteLinks(s, t) {
     const hosts = new Set(arr(t && t.sources).map((x) => {
       const m = /^https?:\/\/(?:www\.)?([^/]+)/i.exec((x && x.url) || '');
       return m ? m[1].toLowerCase() : '';
@@ -115,6 +177,7 @@
     const prev = i > 0 ? live[i - 1] : null;
     const next = i >= 0 && i < live.length - 1 ? live[i + 1] : null;
     const related = renderRelated(t, cats, terms, o);
+    const ctx = {idx: termIndex(terms), self: t.id, seen: new Set(), cats, o};
 
     const video = t.video && t.video.src
       ? `<div class="video"><video controls playsinline preload="none" poster="${esc(asset(t.video.poster, o))}" src="${esc(asset(t.video.src, o))}" aria-label="Vidéo : ${esc(t.title)}"></video></div>`
@@ -156,17 +219,17 @@
         ${related ? `<nav class="rel" aria-label="Termes liés">${related}</nav>` : ''}
         ${t.short ? `<p class="lead">${esc(t.short)}</p>` : ''}
         ${video}
-        ${t.image || splits ? `<h2>L'image</h2>${t.image ? `<p>${prose(t.image, t)}</p>` : ''}${splits}` : ''}
-        ${section('Imagine', t.imagine ? `<p class="imagine">${prose(t.imagine, t)}</p>` : '')}
+        ${t.image || splits ? `<h2>L'image</h2>${t.image ? `<p>${prose(t.image, t, ctx)}</p>` : ''}${splits}` : ''}
+        ${section('Imagine', t.imagine ? `<p class="imagine">${prose(t.imagine, t, ctx)}</p>` : '')}
         ${schema}
-        ${section('Définition complète', arr(t.full).map((p) => `<p>${prose(p, t)}</p>`).join(''))}
+        ${section('Définition complète', arr(t.full).map((p) => `<p>${prose(p, t, ctx)}</p>`).join(''))}
         ${reliability}
         ${table}
-        ${section('2024 vs 2026', t.then ? `<p>${prose(t.then, t)}</p>` : '')}
+        ${section('2024 vs 2026', t.then ? `<p>${prose(t.then, t, ctx)}</p>` : '')}
         ${jargon}
         ${solutions}
-        ${section('Entendu au bureau', arr(t.office).length ? `<div class="chat">${t.office.map((m) => `<div class="bubble ${m.who === 'q' ? 'q' : 'a'}">${prose(m.text, t)}</div>`).join('')}</div>` : '')}
-        ${section('À éviter', t.avoid ? `<div class="avoid"><b aria-hidden="true">✕</b><p>${prose(t.avoid, t)}</p></div>` : '')}
+        ${section('Entendu au bureau', arr(t.office).length ? `<div class="chat">${t.office.map((m) => `<div class="bubble ${m.who === 'q' ? 'q' : 'a'}">${prose(m.text, t, ctx)}</div>`).join('')}</div>` : '')}
+        ${section('À éviter', t.avoid ? `<div class="avoid"><b aria-hidden="true">✕</b><p>${prose(t.avoid, t, ctx)}</p></div>` : '')}
         ${related ? `<div class="connexions"><h2>Connexions</h2><div class="links">${related}</div></div>` : ''}
         <nav class="pager" aria-label="Fiches">
           ${navLink(prev, 'prev')}
@@ -235,5 +298,5 @@
     return out.sort((a, b) => a.score - b.score || a.idx - b.idx);
   }
 
-  return {renderTerm, renderIndex, renderRelated, search, normalize, termUrl, pageTitle, escapeHtml: esc};
+  return {linkStats: () => idxRemoved.slice(), renderTerm, renderIndex, renderRelated, search, normalize, termUrl, pageTitle, escapeHtml: esc};
 });

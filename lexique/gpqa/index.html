@@ -126,6 +126,8 @@ p{margin-bottom:12px}
 .schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
 .schema svg .dash{stroke-dasharray:4 4}
 .term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
+.term a.tw{color:inherit;text-decoration:underline dotted;text-decoration-thickness:2px;text-decoration-color:#6a6a6a;text-underline-offset:4px}
+.term a.tw:hover,.term a.tw:focus-visible{text-decoration-style:solid;text-decoration-color:var(--c)}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -349,7 +351,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>GPQA Diamond</dt><dd>le sous-ensemble de 198 questions le plus sûr, celui que citent les annonces de modèles</dd></div><div><dt>Google-proof</dt><dd>des questions dont la réponse ne se trouve pas en cherchant ; des non-spécialistes avec Internet et plus de 30 minutes par question n&#39;en réussissaient que 34 %</dd></div></dl>
         
-        <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Les deux modèles qu&#39;on hésite à prendre font 95 et 94 % sur GPQA. On prend le premier ?</div><div class="bubble a">L&#39;écart tient dans l&#39;erreur type, qui avoisine 1,4 point à ce niveau ; regarde plutôt un benchmark qui les sépare encore, puis tes propres tâches.</div></div>
+        <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Les deux modèles qu&#39;on hésite à prendre font 95 et 94 % sur GPQA. On prend le premier ?</div><div class="bubble a">L&#39;écart tient dans l&#39;erreur type, qui avoisine 1,4 point à ce niveau ; regarde plutôt un <a class="tw" style="--c:#F08DC2" href="/lexique/benchmarks/" data-go="benchmarks">benchmark</a> qui les sépare encore, puis tes propres tâches.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Il a 95 % au GPQA, il a le niveau d&#39;un docteur en chimie. » Il choisit la bonne réponse parmi quatre sur des questions écrites par des docteurs, et sa capacité à mener une expérience ou à poser la bonne question reste hors du test.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#F08DC2" href="/lexique/benchmarks-lesquels-croire/" data-go="benchmarks-lesquels-croire">Benchmarks : lesquels croire ?</a><a class="tl live" style="--c:#F08DC2" href="/lexique/humanitys-last-exam/" data-go="humanitys-last-exam">Humanity&#39;s Last Exam</a><a class="tl live" style="--c:#F08DC2" href="/lexique/mmlu/" data-go="mmlu">MMLU</a><a class="tl live" style="--c:#F08DC2" href="/lexique/benchmarks/" data-go="benchmarks">Benchmarks</a></div></div>
         <nav class="pager" aria-label="Fiches">
