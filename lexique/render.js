@@ -173,6 +173,7 @@
     return `
       <div class="index">
         <h1 class="sr">Lexique IA : les termes</h1>
+        <p class="lead">Les définitions que j'ai écrites pour comprendre comment marchent les LLM.</p>
         <ul>${rows}</ul>
       </div>`;
   }
