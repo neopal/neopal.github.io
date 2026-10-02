@@ -20,8 +20,8 @@
 <path class="la" d="M320 160 Q320 233 296 233"/><path class="la" d="M303 227 l-7 6 l7 6"/>
 <path class="la" d="M70 233 Q40 233 40 160"/><path class="la" d="M34 166 l6 -7 l6 7"/>
 <path class="la" d="M40 98 Q40 25 64 25"/><path class="la" d="M57 19 l7 6 l-7 6"/>
-<text class="m ac" x="0" y="58">autre</text>
-<text class="m ac" x="0" y="76">outil</text>
+<text class="m ac" x="52" y="76">autre</text>
+<text class="m ac" x="52" y="93">outil</text>
 <path class="lm" d="M14 154 V290"/><path class="lm" d="M9 284 l5 6 l5 -6"/>
 <text class="m mu" x="24" y="282">fini</text>
 <rect class="bx" x="0" y="296" width="150" height="34" rx="6"/>

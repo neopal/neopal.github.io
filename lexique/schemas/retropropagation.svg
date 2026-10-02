@@ -1,40 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 338" role="img" aria-labelledby="retropropagation-t">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 358" role="img" aria-labelledby="retropropagation-t">
 <title id="retropropagation-t">Une pile de quatre couches : l'aller monte du texte jusqu'à la loss en gardant les activations, le retour redescend en donnant son gradient à chaque couche, et ce retour coûte environ deux fois l'aller, contre 7 milliards de calculs complets pour tester les paramètres un par un.</title>
 <text class="m red b" x="180" y="16" text-anchor="middle">loss</text>
-<rect class="bx" x="130" y="26" width="100" height="26" rx="4"/>
-<rect class="fd" x="136" y="34" width="10" height="10" rx="1"/>
+<rect class="bx" x="118" y="26" width="124" height="26" rx="4"/>
+<rect class="lm" x="126" y="34" width="10" height="10" rx="1" fill="none"/>
 <text class="m" x="180" y="44" text-anchor="middle">couche 4</text>
-<rect class="fa" x="214" y="34" width="10" height="10" rx="1"/>
-<rect class="bx" x="130" y="60" width="100" height="26" rx="4"/>
-<rect class="fd" x="136" y="68" width="10" height="10" rx="1"/>
+<rect class="fa" x="224" y="34" width="10" height="10" rx="1"/>
+<rect class="bx" x="118" y="60" width="124" height="26" rx="4"/>
+<rect class="lm" x="126" y="68" width="10" height="10" rx="1" fill="none"/>
 <text class="m" x="180" y="78" text-anchor="middle">couche 3</text>
-<rect class="fa" x="214" y="68" width="10" height="10" rx="1"/>
-<rect class="bx" x="130" y="94" width="100" height="26" rx="4"/>
-<rect class="fd" x="136" y="102" width="10" height="10" rx="1"/>
+<rect class="fa" x="224" y="68" width="10" height="10" rx="1"/>
+<rect class="bx" x="118" y="94" width="124" height="26" rx="4"/>
+<rect class="lm" x="126" y="102" width="10" height="10" rx="1" fill="none"/>
 <text class="m" x="180" y="112" text-anchor="middle">couche 2</text>
-<rect class="fa" x="214" y="102" width="10" height="10" rx="1"/>
-<rect class="bx" x="130" y="128" width="100" height="26" rx="4"/>
-<rect class="fd" x="136" y="136" width="10" height="10" rx="1"/>
+<rect class="fa" x="224" y="102" width="10" height="10" rx="1"/>
+<rect class="bx" x="118" y="128" width="124" height="26" rx="4"/>
+<rect class="lm" x="126" y="136" width="10" height="10" rx="1" fill="none"/>
 <text class="m" x="180" y="146" text-anchor="middle">couche 1</text>
-<rect class="fa" x="214" y="136" width="10" height="10" rx="1"/>
+<rect class="fa" x="224" y="136" width="10" height="10" rx="1"/>
 <text class="m mu" x="180" y="176" text-anchor="middle">texte</text>
-<path class="lm" d="M112 160 V30"/><path class="lm" d="M107 36 l5 -6 l5 6"/>
-<path class="la" d="M248 30 V158"/><path class="la" d="M243 152 l5 6 l5 -6"/>
-<text class="m" x="102" y="88" text-anchor="end">forward</text>
-<text class="m" x="102" y="106" text-anchor="end">pass</text>
-<text class="m ac" x="258" y="88">backward</text>
-<text class="m ac" x="258" y="106">pass</text>
-<rect class="fd" x="0" y="196" width="10" height="10" rx="1"/>
+<path class="lm" d="M102 160 V30"/><path class="lm" d="M97 36 l5 -6 l5 6"/>
+<path class="la" d="M258 30 V158"/><path class="la" d="M253 152 l5 6 l5 -6"/>
+<text class="m" x="92" y="88" text-anchor="end">forward</text>
+<text class="m" x="92" y="106" text-anchor="end">pass</text>
+<text class="m ac" x="268" y="88">backward</text>
+<text class="m ac" x="268" y="106">pass</text>
+<rect class="lm" x="0.5" y="196.5" width="10" height="10" rx="1" fill="none"/>
 <text class="m mu" x="18" y="206">activations gardées à l'aller</text>
 <rect class="fa" x="0" y="216" width="10" height="10" rx="1"/>
 <text class="m mu" x="18" y="226">gradient rendu à la couche au retour</text>
 <path class="ln" d="M0 244 H360"/>
 <text class="m d" x="0" y="266">coût d'un pas, 7 milliards de paramètres</text>
 <text class="m" x="0" y="290">aller</text>
-<rect class="fl" x="96" y="280" width="30" height="12" rx="2"/>
+<rect class="lm" x="96.5" y="280.5" width="30" height="12" rx="2" fill="none"/>
 <text class="m" x="0" y="312">retour</text>
 <rect class="fa" x="96" y="302" width="60" height="12" rx="2"/>
 <text class="m mu" x="166" y="312">≈ 2 × l'aller</text>
 <text class="m red" x="0" y="334">un par un</text>
-<path class="lr dash" d="M96 330 H356"/>
+<path class="lr dash" d="M96 330 H346"/><path class="lr" d="M340 324 l6 6 l-6 6"/>
+<text class="m red" x="96" y="352">7 milliards de calculs complets</text>
 </svg>

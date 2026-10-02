@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 352" role="img" aria-labelledby="lmarena-t">
+<title id="lmarena-t">Un duel Arena : une question, deux réponses anonymes, un vote ; avec les mêmes votes, Claude Fable 5 est 9e sans style control et 3e avec.</title>
+<rect class="bx" x="115" y="8" width="130" height="32" rx="6"/>
+<text class="m" x="180" y="29" text-anchor="middle">ta question</text>
+<path class="lm" d="M150 40 v10 h-65 v8"/><path class="lm" d="M80 52 l5 6 l5 -6"/>
+<path class="lm" d="M210 40 v10 h65 v8"/><path class="lm" d="M270 52 l5 6 l5 -6"/>
+<rect class="bx" x="20" y="62" width="130" height="32" rx="6"/>
+<text class="m" x="85" y="83" text-anchor="middle">réponse A</text>
+<rect class="bx" x="210" y="62" width="130" height="32" rx="6"/>
+<text class="m" x="275" y="83" text-anchor="middle">réponse B</text>
+<path class="lm" d="M85 94 v10 h65 v8"/><path class="lm" d="M275 94 v10 h-65 v8"/>
+<path class="lm" d="M145 106 l5 6 l5 -6"/><path class="lm" d="M205 106 l5 6 l5 -6"/>
+<rect class="bxa" x="115" y="116" width="130" height="32" rx="6"/>
+<text class="m" x="180" y="137" text-anchor="middle">ton vote</text>
+<path class="lm" d="M180 148 v18"/><path class="lm" d="M175 160 l5 6 l5 -6"/>
+<text class="m mu" x="70" y="182" text-anchor="middle">sans style control</text>
+<text class="m mu" x="290" y="182" text-anchor="middle">avec style control</text>
+<circle class="fl" cx="70" cy="196" r="2.5"/>
+<circle class="fl" cx="290" cy="196" r="2.5"/>
+<circle class="fl" cx="70" cy="207" r="2.5"/>
+<circle class="fl" cx="290" cy="207" r="2.5"/>
+<circle class="fl" cx="70" cy="218" r="2.5"/>
+<circle class="fl" cx="290" cy="218" r="2.5"/>
+<circle class="fl" cx="70" cy="229" r="2.5"/>
+<circle class="fl" cx="290" cy="229" r="2.5"/>
+<circle class="fl" cx="70" cy="240" r="2.5"/>
+<circle class="fl" cx="290" cy="240" r="2.5"/>
+<circle class="fl" cx="70" cy="251" r="2.5"/>
+<circle class="fl" cx="290" cy="251" r="2.5"/>
+<circle class="fl" cx="70" cy="262" r="2.5"/>
+<circle class="fl" cx="290" cy="262" r="2.5"/>
+<circle class="fl" cx="70" cy="273" r="2.5"/>
+<circle class="fl" cx="290" cy="273" r="2.5"/>
+<circle class="fl" cx="70" cy="284" r="2.5"/>
+<circle class="fl" cx="290" cy="284" r="2.5"/>
+<circle class="fl" cx="70" cy="295" r="2.5"/>
+<circle class="fl" cx="290" cy="295" r="2.5"/>
+<path class="la" d="M70 284 L290 218"/>
+<circle class="fa" cx="70" cy="284" r="5"/><circle class="fa" cx="290" cy="218" r="5"/>
+<text class="m ac" x="58" y="289" text-anchor="end">9e</text>
+<text class="m ac" x="302" y="223">3e</text>
+<text class="m ac" x="225" y="278" text-anchor="middle">Claude Fable 5</text>
+<text class="i mu" x="0" y="322">Le style control réduit le poids de la longueur</text>
+<text class="i mu" x="0" y="342">et de la mise en forme dans les votes.</text>
+</svg>

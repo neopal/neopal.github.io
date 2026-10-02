@@ -3,8 +3,8 @@
 <rect class="bx" x="0" y="8" width="360" height="34" rx="6"/>
 <text class="m" x="180" y="30" text-anchor="middle">questions de près de 1 000 experts</text>
 <path class="lm" d="M180 42 v16"/><path class="lm" d="M175 52 l5 6 l5 -6"/>
-<rect class="bxa" x="60" y="62" width="240" height="34" rx="6"/>
-<text class="m" x="180" y="84" text-anchor="middle">posée aux meilleurs modèles</text>
+<rect class="bxa" x="35" y="62" width="290" height="34" rx="6"/>
+<text class="m" x="180" y="84" text-anchor="middle">chacune posée aux meilleurs modèles</text>
 <path class="la" d="M130 96 v52"/><path class="la" d="M124 142 l6 6 l6 -6"/>
 <text class="m ac" x="122" y="128" text-anchor="end">ratée, gardée</text>
 <path class="lm" d="M230 96 v14 h50 v4"/><path class="lm" d="M275 108 l5 6 l5 -6"/>
