@@ -1,6 +1,6 @@
 // Short Agent (fiche agent) : un modèle qu'on laisse choisir l'étape suivante (catégorie Agents, accent violet).
 // Scènes propres à ce short : le rail du workflow tracé d'un coup contre la route de l'agent qui se décide à chaque fourche,
-// et la nuit de Clio, de 18 h à midi le lendemain, sur une frise où la lune laisse place au soleil.
+// et la nuit d'un agent laissé seul (témoignage d'un développeur de Clio), de 18 h à midi le lendemain, sur une frise où la lune laisse place au soleil.
 import React from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
 import {ACCENTS, BEAT, Big, Check, DIM, Draw, GREY, Lock, Mono, Pop, RED, Scene, Scenes, Short, W, clamp, mono, svgPx, totalDuration, usePop, useProg, withAlpha} from './kit';
@@ -243,11 +243,11 @@ const Nuit: React.FC = () => {
   const plusPop = usePop(NIGHT_TO);
   return (
     <Scene
-      caps={[[0, 'Un développeur de Clio a laissé un agent travailler seul toute la nuit.']]}
+      caps={[[0, 'Lancé un soir par un développeur, un agent codait encore seul le lendemain à midi.']]}
       gap={26}
       bottom={
         <Pop at={BEAT * 1} style={{display: 'flex', justifyContent: 'center'}}>
-          <Mono size={40} color={DIM}>Claude Opus 5.5, 22 sept. 2026</Mono>
+          <Mono size={40} color={DIM}>annonce Claude Opus 5.5, 22 sept. 2026</Mono>
         </Pop>
       }
     >
@@ -409,7 +409,7 @@ const SCENES: Scenes = [
   [Reponse, 160],
   [Fourche, 205],
   [Mecanisme, 350],
-  [Nuit, 190],
+  [Nuit, 222],
   [Copie, 190],
   [Chute, 175],
 ];
