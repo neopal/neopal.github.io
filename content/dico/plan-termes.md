@@ -27,6 +27,8 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Encodeur et décodeur | encoder, decoder | publié | | LLM, HO, ULT | l'oreille qui analyse, la voix qui chante |
 | Multimodal | multimodal model | publié | | AGT, HO | le groupe qui voit enfin la salle |
 | Modèle de diffusion | diffusion model | publié | | CAR | la bande pleine de souffle qu'on nettoie passe après passe |
+| World model | world model | en cours (vague 9) | | | |
+| JEPA | Joint Embedding Predictive Architecture | en cours (vague 9) | | | |
 
 ## 2. Entraînement
 
