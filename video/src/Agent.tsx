@@ -301,14 +301,14 @@ const Folder: React.FC<{label: string; color: string; children?: React.ReactNode
   </div>
 );
 
-const ERASE = 26;
-const BACK = 86;
+const ERASE = 18;
+const BACK = 104;
 
 const Copie: React.FC = () => {
   const frame = useCurrentFrame();
   const lock = useProg(BEAT * 7.6, BEAT * 7.6 + 10);
   const hand = useProg(BEAT * 8.4, BEAT * 8.4 + 12);
-  const erased = frame >= ERASE + 45 && frame < BACK;
+  const erased = frame >= ERASE + 42 && frame < BACK;
   return (
     <Scene
       caps={[[0, "Il agit avec tes droits, alors confie-lui une copie, jamais l'original."]]}
@@ -341,7 +341,7 @@ const Copie: React.FC = () => {
         })}
       </div>
       <div style={{height: 50, display: 'flex', alignItems: 'center'}}>
-        {erased ? <Pop at={ERASE + 45}><Mono size={40} color={RED}>effacées par l'agent</Mono></Pop> : null}
+        {erased ? <Pop at={ERASE + 42}><Mono size={40} color={RED}>effacées par l'agent</Mono></Pop> : null}
         {frame >= BACK ? <Pop at={BACK}><Mono size={40} color={GREY}>sauvées par une restauration iCloud</Mono></Pop> : null}
       </div>
       <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
@@ -395,9 +395,9 @@ const Chute: React.FC = () => {
           <div style={{position: 'absolute', left: COL0 + colW + 8, width: colW - 16, top, height: HR * 1.6, borderRadius: 16, background: acA(0.85), opacity: frame >= BEAT * 1.6 ? 1 : 0, transform: `translateY(${(1 - drop) * -220}px)`, padding: '12px 16px', boxSizing: 'border-box', display: 'flex', flexDirection: 'column', gap: 4}}>
             <Mono size={38} color="#000">10 h 04</Mono>
             <Mono size={36} color="#000">→ Lyon</Mono>
-          </div>
-          <div style={{position: 'absolute', left: COL0 + colW * 2 + 20, top: top + 10}}>
-            <Check p={ok} size={120} color={AC} />
+            <div style={{position: 'absolute', right: 8, top: 10}}>
+              <Check p={ok} size={56} color="#000" />
+            </div>
           </div>
         </div>
       </Pop>

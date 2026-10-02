@@ -14,7 +14,7 @@ const fr2 = (n: number) => n.toFixed(2).replace('.', ',');
 const QUESTION = `Quel est le menu de jeudi${NB}?`;
 const CHUNKS = [
   {t: `Lundi${NB}: lasagnes`, v: '[0,3 −0,6 …]', s: 0.61},
-  {t: `Jeudi${NB}: hachis parmentier`, v: '[0,7 −0,2 …]', s: 0.86},
+  {t: `Jeudi${NB}: couscous`, v: '[0,7 −0,2 …]', s: 0.86},
   {t: `Ouvert de 11${NB}h${NB}30 à 14${NB}h`, v: '[−0,4 0,3 …]', s: 0.44},
   {t: 'Badge exigé au parking', v: '[0,1 0,8 …]', s: 0.08},
 ];
@@ -67,7 +67,7 @@ const Reponse: React.FC = () => {
         ) : frame >= FIX_AT ? (
           <Bubble side="left" at={FIX_AT}>
             <div style={{display: 'flex', alignItems: 'center', gap: 20}}>
-              <Say size={52}>Jeudi, c'est hachis parmentier.</Say>
+              <Say size={52}>Jeudi, c'est couscous.</Say>
               <Check p={ok} size={70} color={AC} />
             </div>
           </Bubble>
@@ -239,7 +239,7 @@ const Recherche: React.FC = () => {
 };
 
 // La fenêtre de contexte se remplit : consignes, les deux morceaux, la question ; la réponse sort, sourcée.
-const ANSWER = ['Jeudi,', "c'est", 'hachis', 'parmentier'];
+const ANSWER = ['Jeudi,', "c'est", 'couscous.'];
 const ANS_AT = BEAT * 4.8;
 
 const Contexte: React.FC = () => {
@@ -339,17 +339,17 @@ const Etude: React.FC = () => {
                 })}
               </div>
             </Pop>
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6, width: 260}}>
-              <div style={{opacity: solid > 0 ? 1 : 0}}><Big size={110} color={RED}>{solid} %</Big></div>
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6, width: 290}}>
+              <div style={{opacity: solid > 0 ? 1 : 0}}><Big size={100} color={RED}><span style={{whiteSpace: 'nowrap'}}>{solid}{NB}%</span></Big></div>
               <div style={{opacity: range > 0 ? 1 : 0}}><Mono size={40} color={GREY}>à</Mono></div>
-              <div style={{opacity: range > 0 ? 1 : 0}}><Big size={110} color={RED}>{17 + range} %</Big></div>
+              <div style={{opacity: range > 0 ? 1 : 0}}><Big size={100} color={RED}><span style={{whiteSpace: 'nowrap'}}>{17 + range}{NB}%</span></Big></div>
             </div>
           </div>
         </div>
         {frame >= PH ? (
           <div style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', gap: 0}}>
             <Pop at={PH} style={{alignSelf: 'flex-start', border: '4px solid #444', borderRadius: 34, padding: '20px 32px', display: 'flex', alignItems: 'baseline', gap: 14}}>
-              <Say size={52}>Jeudi, c'est hachis parmentier</Say>
+              <Say size={52}>Jeudi, c'est couscous</Say>
               <div style={{border: `3px solid ${acA(pulse)}`, borderRadius: 10, padding: '0 6px'}}><Mono size={40}>[1]</Mono></div>
             </Pop>
             <div style={{height: 90, marginLeft: 600, opacity: open}}>
