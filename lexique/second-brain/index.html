@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Au studio, rien ne survit à la fin de la session, puisque la bande est effacée et que la console ne bouge plus. Le second brain est le carnet de session qu&#39;on range sur l&#39;étagère, avec les arrangements trouvés et les erreurs à ne pas refaire, et que quelqu&#39;un pose sur le pupitre au début de la session suivante. Dans la version de 2026, c&#39;est le groupe qui tient le carnet, et toi qui le relis.</p>
         <h2>Imagine</h2><p class="imagine">Lundi, ton agent lit tes cinq rapports sur le marché du vélo et te rend une synthèse, où il relève que deux d&#39;entre eux ne donnent pas le même chiffre de ventes. Jeudi, pour une question voisine, il relit les cinq rapports depuis la première page, sans le moindre souvenir de cette contradiction. Rejoue la semaine avec un wiki ; lundi, il range sa synthèse et la contradiction dans une page, et jeudi il ouvre cette page avant tout le reste.</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 268" role="img" aria-labelledby="second-brain-t"> <title id="second-brain-t">Le LLM wiki : tu déposes tes sources dans raw/, que l'agent lit sans modifier ; il écrit et relie des pages dans wiki/, qu'il relit à chaque session, et toi tu poses les questions et relis.</title> <text class="m mu" x="50" y="14" text-anchor="middle">tu déposes</text> <text class="m mu" x="180" y="14" text-anchor="middle">tu demandes</text> <text class="m mu" x="310" y="14" text-anchor="middle">tu relis</text> <path class="lm" d="M50 22 V42"/><path class="lm" d="M45 37 l5 5 l5 -5"/> <path class="lm" d="M180 22 V72"/><path class="lm" d="M175 67 l5 5 l5 -5"/> <path class="lm" d="M310 42 V22"/><path class="lm" d="M305 27 l5 -5 l5 5"/> <rect class="bx" x="0" y="48" width="100" height="112" rx="6"/> <text class="m b" x="12" y="68">raw/</text> <rect class="fd" x="14" y="88" width="72" height="12" rx="2"/> <rect class="fd" x="14" y="108" width="72" height="12" rx="2"/> <rect class="fd" x="14" y="128" width="72" height="12" rx="2"/> <text class="m d" x="0" y="180">lecture seule</text> <path class="la" d="M104 104 H124"/><path class="la" d="M119 99 l5 5 l-5 5"/> <rect class="bxa" x="130" y="80" width="100" height="48" rx="6"/> <text class="b" x="180" y="109" text-anchor="middle">agent</text> <path class="la" d="M234 104 H254"/><path class="la" d="M249 99 l5 5 l-5 5"/> <rect class="bx" x="260" y="48" width="100" height="112" rx="6"/> <text class="m b" x="272" y="68">wiki/</text> <rect class="bxa" x="272" y="80" width="64" height="20" rx="3"/> <text class="m" x="304" y="95" text-anchor="middle">index</text> <path class="ln" d="M290 100 L282 120 M318 100 L326 120 M290 128 H318 M282 136 L304 144 M326 136 L304 144"/> <rect class="fa" x="274" y="120" width="16" height="16" rx="2"/> <rect class="fa" x="318" y="120" width="16" height="16" rx="2"/> <rect class="fa" x="296" y="138" width="16" height="16" rx="2"/> <path class="la dash" d="M310 164 C310 196, 180 196, 180 136"/><path class="la" d="M175 141 l5 -6 l5 6"/> <text class="m mu" x="245" y="212" text-anchor="middle">relu à chaque session</text> <text class="i mu" x="0" y="242">La synthèse s'accumule dans le wiki au lieu</text> <text class="i mu" x="0" y="262">d'être refaite de zéro à chaque question.</text> </svg></figure>
         <h2>Définition complète</h2><p>Tiago Forte part d&#39;un constat, que la tête sert à avoir des idées plutôt qu&#39;à les garder, et c&#39;est lui qui a popularisé l&#39;expression avec son livre Building a Second Brain, paru en juin 2022. Il y décrit un dépôt numérique et centralisé de ce que tu apprends, tenu hors de ta tête, qui tourne en quatre étapes : capturer ce qui te parle, l&#39;organiser par projet, en distiller l&#39;essentiel, puis t&#39;en servir dans ce que tu produis.</p><p>En avril 2026, Andrej Karpathy a décrit une variante où le LLM tient le carnet à ta place, qu&#39;il appelle LLM wiki. Tu déposes tes sources dans un dossier que l&#39;agent ne modifie jamais ; il les lit, écrit des pages de synthèse en Markdown, les relie entre elles, note où une nouvelle source contredit une ancienne et tient un index. Karpathy résume le partage des rôles ainsi : « Obsidian is the IDE; the LLM is the programmer; the wiki is the codebase. »</p><p>La différence avec le RAG tient à ce qui s&#39;accumule. Un RAG retrouve des morceaux de documents à chaque question et refait la synthèse de zéro, alors que le wiki garde la synthèse déjà faite, et qu&#39;une réponse utile peut y être rangée comme une nouvelle page. Le modèle ne change pas pour autant, parce que le second brain vit dans des fichiers que l&#39;agent recharge dans sa fenêtre de contexte à chaque session.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

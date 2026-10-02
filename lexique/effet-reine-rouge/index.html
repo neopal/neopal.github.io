@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Le videur de la salle, c&#39;est le détecteur, et les faussaires de billets jouent les générateurs. Le videur apprend à repérer les faux, les faussaires impriment mieux, et le videur doit réapprendre. Au bout d&#39;un an, les uns comme les autres sont devenus excellents, et la proportion de faux billets à l&#39;entrée n&#39;a presque pas bougé.</p>
         <h2>Imagine</h2><p class="imagine">En septembre, la directrice demande à l&#39;équipe sécurité : « Il repère combien d&#39;images générées, notre nouveau détecteur ? » L&#39;équipe répond fièrement : « 99 % de celles du générateur de juin. »</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 354" role="img" aria-labelledby="effet-reine-rouge-t"> <title id="effet-reine-rouge-t">Courbes en escalier : le générateur progresse, le détecteur mis à jour le suit de près, et l'écart se creuse avec un détecteur figé.</title> <path class="ln" d="M20 14 V190 H344"/> <path class="ln" d="M338 185 l6 5 l-6 5"/> <text class="m mu" x="26" y="14">niveau</text> <text class="m mu" x="344" y="210" text-anchor="end">temps</text> <path class="lm" d="M20 170 H80 V140 H140 V110 H200 V80 H260 V50 H340"/> <path class="la" d="M20 178 H100 V148 H160 V118 H220 V88 H280 V58 H340"/> <path class="lm dash" d="M20 178 H340"/> <path class="lr dash" d="M330 54 V174"/> <text class="m red" x="322" y="122" text-anchor="end">retard</text> <path class="lm" d="M20 233 H52"/> <text class="m" x="62" y="238">générateur</text> <path class="la" d="M20 255 H52"/> <text class="m" x="62" y="260">détecteur mis à jour</text> <path class="lm dash" d="M20 277 H52"/> <text class="m" x="62" y="282">détecteur figé</text> <text class="i mu" x="0" y="324">Un détecteur qu'on cesse de mettre à jour</text> <text class="i mu" x="0" y="344">recule sans avoir changé d'une ligne.</text> </svg></figure>
         <h2>Définition complète</h2><p>Le nom vient de De l&#39;autre côté du miroir, de Lewis Carroll (1871), où la Reine rouge explique à Alice que, dans son pays, il faut courir de toutes ses forces pour rester au même endroit. En 1973, le biologiste Leigh Van Valen en a tiré une hypothèse, dans « A new evolutionary law », premier article d&#39;Evolutionary Theory, une revue qu&#39;il venait de fonder.</p><p>Van Valen avait remarqué que la probabilité qu&#39;un groupe d&#39;espèces s&#39;éteigne ne dépend pas de son ancienneté et reste à peu près constante sur des millions d&#39;années. Il l&#39;expliquait par une course permanente, où chaque progrès d&#39;une espèce, un prédateur plus rapide ou un parasite plus rusé, dégrade le milieu des autres, qui doivent évoluer à leur tour pour ne pas reculer.</p><p>Dans l&#39;IA, l&#39;image sert d&#39;abord à la sécurité. En janvier 2025, Christian Borst, directeur technique de Vectra AI pour l&#39;Europe, le Moyen-Orient et l&#39;Afrique, comparait à la course de la Reine rouge le face-à-face entre attaques et défenses dopées à l&#39;IA, où rester immobile revient à prendre du retard.</p><p>La recherche en a fait une méthode. En janvier 2026, Sakana AI et le MIT ont publié Digital Red Queen, où un modèle de langage écrit des programmes guerriers pour Core War, un jeu de programmation de 1984, et où chaque nouveau guerrier doit battre tous les précédents. Les gagnants deviennent de plus en plus polyvalents face à des guerriers écrits par des humains, qu&#39;ils n&#39;ont jamais affrontés, et les auteurs y voient un terrain d&#39;essai pour la cybersécurité et le red teaming.</p><p>En juin 2026, la Red Queen Gödel Machine a appliqué la même idée à l&#39;évaluation, en faisant évoluer l&#39;évaluateur en même temps que l&#39;agent qui s&#39;améliore, au lieu de le juger sur une grille figée. On peut y lire une parade au benchmaxxing, puisqu&#39;un test qui ne bouge plus finit par récompenser l&#39;entraînement au test.</p><p>L&#39;image de Carroll a sa limite, car les deux camps progressent pour de bon. Dans cette course, un détecteur ou un filtre de sécurité qu&#39;on cesse de mettre à jour recule sans avoir changé d&#39;une ligne, parce que ce qu&#39;il doit arrêter ne cesse de s&#39;améliorer.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

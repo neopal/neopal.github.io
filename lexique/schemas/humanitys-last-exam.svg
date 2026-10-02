@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="humanitys-last-exam-t">
+<title id="humanitys-last-exam-t">Sélection des questions de Humanity's Last Exam : chaque question d'expert est posée aux meilleurs modèles, gardée seulement s'ils la ratent ; sur les 2 500 retenues, HLE-Verified n'en certifie telles quelles que 668.</title>
+<rect class="bx" x="0" y="8" width="360" height="34" rx="6"/>
+<text class="m" x="180" y="30" text-anchor="middle">questions de près de 1 000 experts</text>
+<path class="lm" d="M180 42 v16"/><path class="lm" d="M175 52 l5 6 l5 -6"/>
+<rect class="bxa" x="35" y="62" width="290" height="34" rx="6"/>
+<text class="m" x="180" y="84" text-anchor="middle">chacune posée aux meilleurs modèles</text>
+<path class="la" d="M130 96 v52"/><path class="la" d="M124 142 l6 6 l6 -6"/>
+<text class="m ac" x="122" y="128" text-anchor="end">ratée, gardée</text>
+<path class="lm" d="M230 96 v14 h50 v4"/><path class="lm" d="M275 108 l5 6 l5 -6"/>
+<text class="m mu" x="280" y="132" text-anchor="middle">réussie, écartée</text>
+<rect class="bx" x="0" y="152" width="360" height="30" rx="4"/>
+<rect class="fa" x="0" y="152" width="96" height="30" rx="4"/>
+<text class="m" x="108" y="172">2 500 questions retenues</text>
+<text class="m ac" x="0" y="204">668 certifiées telles quelles</text>
+<text class="m mu" x="0" y="222">par HLE-Verified en février 2026</text>
+<text class="i mu" x="0" y="260">Ne garder que les questions que les modèles</text>
+<text class="i mu" x="0" y="280">ratent favorise aussi les questions piégeuses.</text>
+</svg>

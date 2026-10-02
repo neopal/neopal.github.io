@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 326" role="img" aria-labelledby="inference-t">
+<title id="inference-t">Le déroulé d'une requête : le prefill lit tout le message d'un bloc, puis le decode écrit la réponse un token après l'autre, avec les mêmes paramètres figés à chaque étape.</title>
+<rect class="bx" x="0" y="4" width="360" height="30" rx="4"/>
+<text x="180" y="24" text-anchor="middle">paramètres figés</text>
+<path class="ln dash" d="M43 34 V54 M151 34 V108 M221 34 V108 M291 34 V108"/>
+<rect class="bx" x="0" y="56" width="86" height="22" rx="3"/>
+<text class="m" x="8" y="72">Quelle</text>
+<rect class="bx" x="0" y="82" width="86" height="22" rx="3"/>
+<text class="m" x="8" y="98">est</text>
+<rect class="bx" x="0" y="108" width="86" height="22" rx="3"/>
+<text class="m" x="8" y="124">la</text>
+<rect class="bx" x="0" y="134" width="86" height="22" rx="3"/>
+<text class="m" x="8" y="150">capitale</text>
+<rect class="bx" x="0" y="160" width="86" height="22" rx="3"/>
+<text class="m" x="8" y="176">du</text>
+<rect class="bx" x="0" y="186" width="86" height="22" rx="3"/>
+<text class="m" x="8" y="202">Pérou ?</text>
+<path class="lm" d="M90 58 h4 V206 h-4 M94 121 h18"/><path class="lm" d="M106 116 l6 5 l-6 5"/>
+<rect class="bxa" x="120" y="110" width="62" height="22" rx="3"/>
+<text class="m ac" x="151" y="126" text-anchor="middle">C'est</text>
+<path class="lm" d="M184 121 h14"/><path class="lm" d="M192 116 l6 5 l-6 5"/>
+<rect class="bxa" x="198" y="110" width="46" height="22" rx="3"/>
+<text class="m ac" x="221" y="126" text-anchor="middle">Lima</text>
+<path class="lm" d="M246 121 h14"/><path class="lm" d="M254 116 l6 5 l-6 5"/>
+<rect class="bxa" x="268" y="110" width="46" height="22" rx="3"/>
+<text class="m ac" x="291" y="126" text-anchor="middle">.</text>
+<path class="lm" d="M0 228 H350"/><path class="lm" d="M344 223 l6 5 l-6 5"/>
+<path class="la dash" d="M114 50 V228"/>
+<text class="m d" x="43" y="250" text-anchor="middle">prefill</text>
+<text class="m d" x="221" y="250" text-anchor="middle">decode</text>
+<text class="m mu" x="350" y="218" text-anchor="end">temps</text>
+<path class="ln" d="M0 260 v6 H114 v-6"/>
+<text class="m ac" x="57" y="282" text-anchor="middle">TTFT</text>
+<text class="i mu" x="0" y="316">Aucune étape ne modifie les paramètres.</text>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" role="img" aria-labelledby="benchmarks-lesquels-croire-t">
+<title id="benchmarks-lesquels-croire-t">SWE-bench Pro selon deux sources : sur la fiche de Qwen, Qwen3.8-27B fait 61,7 % et Claude Opus 4.6 53,4 % ; sur le classement officiel de Scale AI, Opus 4.6 fait 51,9 % et Qwen3.8-27B n'apparaît pas.</title>
+<text class="m mu" x="0" y="16">fiche Hugging Face de Qwen</text>
+<text class="m" x="0" y="45">Qwen3.8-27B</text>
+<rect class="fa" x="128" y="31" width="167" height="20" rx="3"/>
+<text class="m ac" x="302" y="46">61,7 %</text>
+<text class="m" x="0" y="75">Claude Opus 4.6</text>
+<rect class="mu" x="128" y="61" width="144" height="20" rx="3" opacity="0.5"/>
+<text class="m" x="279" y="76">53,4 %</text>
+<path class="ln" d="M0 102 h360"/>
+<text class="m mu" x="0" y="130">classement officiel de Scale AI</text>
+<text class="m" x="0" y="159">Claude Opus 4.6</text>
+<rect class="mu" x="128" y="145" width="140" height="20" rx="3" opacity="0.5"/>
+<text class="m" x="275" y="160">51,9 %</text>
+<text class="m" x="0" y="189">Qwen3.8-27B</text>
+<rect class="bx dash" x="128" y="175" width="167" height="20" rx="3"/>
+<text class="m mu" x="138" y="190">absent</text>
+<text class="i mu" x="0" y="222">Les deux sources n'ont pas fait passer le test</text>
+<text class="i mu" x="0" y="242">dans les mêmes conditions.</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 282" role="img" aria-labelledby="mythe-agent-autonome-t">
+<title id="mythe-agent-autonome-t">La boucle de l'agent, qui choisit un outil, lit le résultat et enchaîne, tourne à l'intérieur de trois cadres réglés par des humains : les outils du harness, les permissions, et la personne qui arrête et relit.</title>
+<rect class="bx" x="0" y="0" width="360" height="228" rx="10"/>
+<text class="b" x="14" y="23">humain</text>
+<text class="m mu" x="78" y="23">arrête la boucle, relit le travail</text>
+<rect class="lm" x="12" y="36" width="336" height="180" rx="8"/>
+<text class="b" x="26" y="59">permissions</text>
+<text class="m mu" x="130" y="59">ce qu'il fait sans demander</text>
+<rect class="ln" x="24" y="72" width="312" height="132" rx="6"/>
+<text class="b" x="38" y="95">harness</text>
+<text class="m mu" x="110" y="95">les outils branchés</text>
+<text class="m ac" x="38" y="122">agent, seul entre deux validations</text>
+<rect class="bxa" x="44" y="134" width="64" height="26" rx="4"/>
+<text class="m" x="76" y="152" text-anchor="middle">outil</text>
+<path class="la" d="M112 147 H138"/><path class="la" d="M133 142 l5 5 l-5 5"/>
+<rect class="bxa" x="142" y="134" width="84" height="26" rx="4"/>
+<text class="m" x="184" y="152" text-anchor="middle">résultat</text>
+<path class="la" d="M230 147 H256"/><path class="la" d="M251 142 l5 5 l-5 5"/>
+<rect class="bxa" x="260" y="134" width="64" height="26" rx="4"/>
+<text class="m" x="292" y="152" text-anchor="middle">suite</text>
+<path class="la" d="M292 164 C292 192, 76 192, 76 168"/><path class="la" d="M71 172 l5 -6 l5 6"/>
+<text class="i mu" x="0" y="256">L'agent tourne seul dans sa boucle, mais</text>
+<text class="i mu" x="0" y="276">chaque cadre est réglé par des humains.</text>
+</svg>

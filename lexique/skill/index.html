@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,12 +342,13 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Range dans la flight case une fiche technique par morceau du répertoire, avec les accords, le tempo et le réglage de la pédale du solo. Le groupe ne lit au départ que les titres collés sur les pochettes, et ne sort la fiche entière qu&#39;au moment de jouer le morceau ; c&#39;est ce qui lui permet d&#39;en transporter des centaines sans encombrer la scène.</p>
         <h2>Imagine</h2><p class="imagine">Avant, ton agent transforme le compte rendu de la réunion en slides et te rend un deck propre, aux couleurs par défaut, avec des titres en capitales que ta boîte n&#39;utilise jamais. Après, tu as ajouté à ses skills un dossier « charte-slides » avec les couleurs, la police et trois exemples de titres, et la même demande sort aux couleurs de la boîte.</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 336" role="img" aria-labelledby="skill-t"> <title id="skill-t">Le chargement par étages d'un skill : l'agent lit le nom et la description de chaque skill, ouvre le SKILL.md de celui qui correspond à la demande, et n'ouvre ses fichiers annexes que s'il en a besoin.</title> <rect class="bx" x="0" y="0" width="360" height="36" rx="6"/> <text x="14" y="23">« Prépare la facture du client Durand »</text> <path class="lm" d="M320 40 V84 H232"/><path class="lm" d="M238 79 l-6 5 l6 5"/> <text class="m" x="0" y="64">compte-rendu</text> <rect class="lm" x="140" y="55" width="80" height="10" rx="3"/> <rect class="bxa" x="-6" y="70" width="230" height="26" rx="5"/> <text class="m ac" x="0" y="88">modele-facture</text> <rect class="lm" x="140" y="79" width="80" height="10" rx="3"/> <path class="ln" d="M10 98 V172"/> <path class="ln" d="M10 112 h12"/> <text class="m" x="28" y="117">SKILL.md</text> <rect class="fa" x="140" y="107" width="200" height="10" rx="3" opacity="0.7"/> <path class="ln" d="M10 140 h12"/> <text class="m d" x="28" y="145">facture.xlsx</text> <rect class="lm dash" opacity="0.8" x="140" y="135" width="120" height="10" rx="3"/> <path class="ln" d="M10 168 h12"/> <text class="m d" x="28" y="173">remplir.py</text> <rect class="lm dash" opacity="0.8" x="140" y="163" width="150" height="10" rx="3"/> <text class="m" x="0" y="204">revue-contrat</text> <rect class="lm" x="140" y="195" width="80" height="10" rx="3"/> <text class="m" x="0" y="230">note-de-frais</text> <rect class="lm" x="140" y="221" width="80" height="10" rx="3"/> <path class="ln" d="M0 252 h360"/> <rect class="lm" x="0" y="268" width="22" height="10" rx="3"/> <text class="m mu" x="32" y="278">nom et description, toujours lus</text> <rect class="fa" x="0" y="292" width="22" height="10" rx="3" opacity="0.7"/> <text class="m mu" x="32" y="302">instructions, lues si la tâche correspond</text> <rect class="lm dash" opacity="0.8" x="0" y="316" width="22" height="10" rx="3"/> <text class="m mu" x="32" y="326">annexes, ouvertes si besoin</text> </svg></figure>
         <h2>Définition complète</h2><p>Anthropic a lancé les Agent Skills le 16 octobre 2025. Un skill est un dossier qui contient au minimum un fichier SKILL.md, avec un nom, une description et des instructions, auxquels on peut ajouter des scripts, de la documentation ou des gabarits. Anthropic les compare au livret d&#39;accueil qu&#39;on remet à une nouvelle recrue.</p><p>Tout l&#39;intérêt tient au chargement par étages. Au démarrage, l&#39;agent ne lit que le nom et la description de chaque skill ; quand une demande correspond, il lit les instructions complètes, puis ouvre les fichiers annexes seulement s&#39;il en a besoin. Dans Claude Code, la liste des descriptions a droit à 1 % de la fenêtre de contexte, et chaque description y est coupée à 1 536 caractères.</p><p>Un skill ne remplace ni le system prompt ni MCP. Le system prompt est relu à chaque requête, alors qu&#39;un skill n&#39;occupe la fenêtre que lorsqu&#39;il sert. MCP branche l&#39;agent sur un service, et le skill lui apprend une façon de faire, par exemple remplir le modèle de facture de la boîte avec les données que MCP est allé chercher.</p>
         
         
         <h2>2024 vs 2026</h2><p>Les skills sont nés chez Anthropic en octobre 2025, pour Claude. Le 18 décembre 2025, Anthropic en a fait un standard ouvert, et en 2026 le même dossier fonctionne dans Codex, Cursor, Gemini CLI, GitHub Copilot ou VS Code, qui figurent parmi les outils compatibles listés sur le site du standard.</p>
         <h2>Dans le jargon</h2><dl class="jargon"><div><dt>SKILL.md</dt><dd>le seul fichier obligatoire d&#39;un skill : en tête, un nom et une description ; en dessous, les instructions</dd></div><div><dt>progressive disclosure</dt><dd>le chargement par étages : l&#39;agent ne voit d&#39;abord que le nom et la description de chaque skill, lit les instructions quand une tâche correspond, et n&#39;ouvre les fichiers annexes que s&#39;il en a besoin</dd></div><div><dt>/nom-du-skill</dt><dd>dans Claude Code et d&#39;autres agents, la commande qui lance un skill à la main au lieu d&#39;attendre que l&#39;agent le choisisse</dd></div></dl>
-        
+        <h2>Solutions populaires</h2><dl class="solutions"><div><dt>collection officielle</dt><dd><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">Anthropic Skills</a>, <a href="https://github.com/vercel-labs/agent-skills" target="_blank" rel="noopener">Vercel Agent Skills</a></dd></div><div><dt>méthode de travail complète</dt><dd><a href="https://github.com/obra/superpowers" target="_blank" rel="noopener">Superpowers (Jesse Vincent)</a>, <a href="https://github.com/affaan-m/ECC" target="_blank" rel="noopener">ECC (Everything Claude Code)</a>, <a href="https://github.com/garrytan/gstack" target="_blank" rel="noopener">gstack (Garry Tan)</a>, <a href="https://github.com/addyosmani/agent-skills" target="_blank" rel="noopener">Agent Skills (Addy Osmani)</a></dd></div><div><dt>petits skills à piocher</dt><dd><a href="https://github.com/mattpocock/skills" target="_blank" rel="noopener">Skills de Matt Pocock</a>, <a href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener">Ponytail</a>, <a href="https://github.com/poteto/how" target="_blank" rel="noopener">how (poteto)</a></dd></div><div><dt>design et visuel</dt><dd><a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener">Impeccable</a>, <a href="https://github.com/nicobailon/visual-explainer" target="_blank" rel="noopener">Visual Explainer</a>, <a href="https://github.com/remotion-dev/skills" target="_blank" rel="noopener">Remotion Skills</a></dd></div><div><dt>annuaire</dt><dd><a href="https://github.com/VoltAgent/awesome-agent-skills" target="_blank" rel="noopener">Awesome Agent Skills</a>, <a href="https://github.com/hesreallyhim/awesome-claude-code" target="_blank" rel="noopener">Awesome Claude Code</a></dd></div></dl>
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Je colle les mêmes consignes de mise en forme dans chaque conversation, c&#39;est normal ?</div><div class="bubble a">C&#39;est le cas d&#39;usage type d&#39;un skill : écris-les une fois dans un dossier, avec une description qui dit quand s&#39;en servir, et l&#39;agent les ouvrira de lui-même quand la demande s&#39;y prête.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Le modèle a appris une nouvelle compétence. » Ses paramètres n&#39;ont pas bougé : il a ouvert un dossier et lu des instructions, comme une recrue qui consulte la procédure, et il devra le rouvrir à la prochaine conversation.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#D7A6FF" href="/lexique/mcp/" data-go="mcp">MCP</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/system-prompt/" data-go="system-prompt">System prompt</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/context-engineering/" data-go="context-engineering">Context engineering</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/tool-use/" data-go="tool-use">Tool use</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/fenetre-de-contexte/" data-go="fenetre-de-contexte">Fenêtre de contexte</a></div></div>
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

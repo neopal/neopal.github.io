@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 316" role="img" aria-labelledby="mythe-plus-gros-plus-intelligent-t">
+<title id="mythe-plus-gros-plus-intelligent-t">Gopher a 280 milliards de paramètres, Chinchilla 70 milliards mais quatre fois plus de données ; avec le même budget de calcul, c'est le plus petit qui a gagné.</title>
+<rect class="fd" x="0" y="4" width="12" height="12" rx="2"/>
+<rect class="lm" x="0" y="4" width="12" height="12" rx="2"/>
+<text class="m" x="20" y="15">Gopher</text>
+<rect class="fa" x="110" y="4" width="12" height="12" rx="2"/>
+<text class="m" x="130" y="15">Chinchilla</text>
+<rect class="fd" x="24" y="70" width="56" height="140" rx="2"/>
+<rect class="lm" x="24" y="70" width="56" height="140" rx="2"/>
+<text class="m" x="52" y="62" text-anchor="middle">280</text>
+<rect class="fa" x="90" y="175" width="56" height="35" rx="2"/>
+<text class="m ac" x="118" y="167" text-anchor="middle">70</text>
+<rect class="fd" x="204" y="175" width="56" height="35" rx="2"/>
+<rect class="lm" x="204" y="175" width="56" height="35" rx="2"/>
+<text class="m" x="232" y="167" text-anchor="middle">×1</text>
+<rect class="fa" x="270" y="70" width="56" height="140" rx="2"/>
+<text class="m ac" x="298" y="62" text-anchor="middle">×4</text>
+<path class="lm" d="M0 210 H360"/>
+<text x="85" y="234" text-anchor="middle">paramètres</text>
+<text class="m mu" x="85" y="253" text-anchor="middle">en milliards</text>
+<text x="265" y="234" text-anchor="middle">données lues</text>
+<text class="m mu" x="265" y="253" text-anchor="middle">Gopher = 1</text>
+<text class="i mu" x="0" y="288">À budget de calcul égal, le plus petit</text>
+<text class="i mu" x="0" y="308">a gagné parce qu'il avait plus lu.</text>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 276" role="img" aria-labelledby="tailles-de-modele-t">
+<title id="tailles-de-modele-t">Barres à la même échelle : Llama 3.1 405B fait travailler ses 405 milliards de paramètres pour chaque token, DeepSeek-V4-Pro 49 sur 1 600 milliards et Kimi K3 104 sur 2 800 milliards.</title>
+<rect class="lm" x="0.75" y="4.75" width="13" height="9" rx="2"/>
+<text class="m mu" x="20" y="14">en tout</text>
+<rect class="fa" x="100" y="4" width="14" height="10" rx="2"/>
+<text class="m mu" x="120" y="14">actifs pour chaque token</text>
+<text class="b" x="0" y="46">Llama 3.1 405B</text>
+<text class="m d" x="360" y="46" text-anchor="end">dense</text>
+<rect class="lm" x="0.75" y="54.75" width="47.7" height="12.5" rx="2"/>
+<rect class="fa" x="0" y="54" width="49.2" height="14" rx="2"/>
+<text class="m mu" x="0" y="84">405 B, tous actifs</text>
+<text class="b" x="0" y="110">DeepSeek-V4-Pro</text>
+<text class="m d" x="360" y="110" text-anchor="end">MoE</text>
+<rect class="lm" x="0.75" y="118.75" width="192.8" height="12.5" rx="2"/>
+<rect class="fa" x="0" y="118" width="6.0" height="14" rx="2"/>
+<text class="m mu" x="0" y="148">1 600 B dont 49 B actifs</text>
+<text class="b" x="0" y="174">Kimi K3</text>
+<text class="m d" x="360" y="174" text-anchor="end">MoE</text>
+<rect class="lm" x="0.75" y="182.75" width="338.5" height="12.5" rx="2"/>
+<rect class="fa" x="0" y="182" width="12.6" height="14" rx="2"/>
+<text class="m mu" x="0" y="212">2 800 B dont 104 B actifs</text>
+<text class="i mu" x="0" y="250">Le total fixe la mémoire à prévoir ; la part active</text>
+<text class="i mu" x="0" y="268">fixe le coût et la vitesse de chaque token.</text>
+</svg>

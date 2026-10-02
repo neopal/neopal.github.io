@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 354" role="img" aria-labelledby="effet-reine-rouge-t">
+<title id="effet-reine-rouge-t">Courbes en escalier : le générateur progresse, le détecteur mis à jour le suit de près, et l'écart se creuse avec un détecteur figé.</title>
+<path class="ln" d="M20 14 V190 H344"/>
+<path class="ln" d="M338 185 l6 5 l-6 5"/>
+<text class="m mu" x="26" y="14">niveau</text>
+<text class="m mu" x="344" y="210" text-anchor="end">temps</text>
+<path class="lm" d="M20 170 H80 V140 H140 V110 H200 V80 H260 V50 H340"/>
+<path class="la" d="M20 178 H100 V148 H160 V118 H220 V88 H280 V58 H340"/>
+<path class="lm dash" d="M20 178 H340"/>
+<path class="lr dash" d="M330 54 V174"/>
+<text class="m red" x="322" y="122" text-anchor="end">retard</text>
+<path class="lm" d="M20 233 H52"/>
+<text class="m" x="62" y="238">générateur</text>
+<path class="la" d="M20 255 H52"/>
+<text class="m" x="62" y="260">détecteur mis à jour</text>
+<path class="lm dash" d="M20 277 H52"/>
+<text class="m" x="62" y="282">détecteur figé</text>
+<text class="i mu" x="0" y="324">Un détecteur qu'on cesse de mettre à jour</text>
+<text class="i mu" x="0" y="344">recule sans avoir changé d'une ligne.</text>
+</svg>

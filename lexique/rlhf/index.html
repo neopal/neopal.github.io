@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Le public entre en scène après les répétitions. On joue devant lui deux versions du même morceau, il applaudit celle qu&#39;il préfère, et un juré apprend à prévoir ces applaudissements pour noter ensuite le groupe des millions de fois, bien plus souvent que la salle n&#39;aurait la patience de le faire. Le groupe finit par jouer ce que la salle applaudit, ce qui n&#39;est pas toujours ce qui est juste.</p>
         <h2>Imagine</h2><p class="imagine">La méthode qui a appris à GPT-3 à suivre des consignes a été mise au point en 2022 avec une quarantaine de notateurs, soit environ 825 questions par personne pour les 33 000 qui ont servi à entraîner le modèle de récompense. Ces personnes n&#39;étaient d&#39;accord entre elles qu&#39;environ trois fois sur quatre, et c&#39;est pourtant leur goût, moyenné, qui a défini ce qu&#39;est une bonne réponse.</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 270" role="img" aria-labelledby="rlhf-t"> <title id="rlhf-t">Le RLHF en deux temps : des notateurs classent deux réponses et un reward model apprend à prédire leur choix, puis le modèle est ajusté en boucle, sans humain, pour obtenir de meilleures notes de ce reward model.</title> <rect class="bx" x="0" y="14" width="92" height="28" rx="4"/> <text class="m" x="46" y="33" text-anchor="middle">réponse A</text> <rect class="bx" x="0" y="54" width="92" height="28" rx="4"/> <text class="m" x="46" y="73" text-anchor="middle">réponse B</text> <path class="lm" d="M96 48 h14"/><path class="lm" d="M104 43 l6 5 l-6 5"/> <rect class="bx" x="114" y="20" width="104" height="56" rx="4"/> <text class="m mu" x="166" y="42" text-anchor="middle">notateurs</text> <text x="166" y="63" text-anchor="middle">A plutôt que B</text> <path class="lm" d="M222 48 h14"/><path class="lm" d="M230 43 l6 5 l-6 5"/> <rect class="bxa" x="240" y="14" width="120" height="192" rx="6"/> <text class="m ac b" x="300" y="98" text-anchor="middle">reward</text> <text class="m ac b" x="300" y="116" text-anchor="middle">model</text> <text x="300" y="140" text-anchor="middle">prédit la note</text> <text x="300" y="158" text-anchor="middle">humaine</text> <path class="ln dash" d="M0 104 H230"/> <rect class="bx" x="0" y="130" width="112" height="76" rx="4"/> <text class="b" x="56" y="160" text-anchor="middle">modèle</text> <text class="m mu" x="56" y="184" text-anchor="middle">ajusté (PPO)</text> <text class="m" x="176" y="142" text-anchor="middle">réponse</text> <path class="lm" d="M116 152 h118"/><path class="lm" d="M228 147 l6 5 l-6 5"/> <path class="la" d="M234 182 h-118"/><path class="la" d="M122 177 l-6 5 l6 5"/> <text class="m ac" x="176" y="202" text-anchor="middle">note</text> <text class="i mu" x="0" y="242">Le modèle apprend à plaire au reward model,</text> <text class="i mu" x="0" y="262">qui imite le goût moyen des notateurs.</text> </svg></figure>
         <h2>Définition complète</h2><p>RLHF veut dire Reinforcement Learning from Human Feedback, apprentissage par renforcement à partir de retours humains. On demande au modèle plusieurs réponses à une même question, des humains les classent, et on entraîne sur ces classements un modèle de récompense (reward model) qui apprend à prédire la note humaine. Le modèle principal est ensuite ajusté pour obtenir de meilleures notes de ce juré automatique.</p><p>En mars 2022, OpenAI a publié InstructGPT, l&#39;article qui a installé la méthode. Les réponses d&#39;un modèle de 1,3 milliard de paramètres passé par ce réglage y étaient préférées à celles de GPT-3, cent fois plus gros. Le RLHF ajoute donc peu de connaissances ; il apprend au modèle à présenter ce qu&#39;il sait sous la forme que les gens préfèrent.</p><p>La limite tient dans le verbe préférer. Les travaux d&#39;Anthropic sur la flagornerie, en 2023, ont montré que les notateurs, et les modèles de récompense entraînés sur leurs choix, retenaient assez souvent la réponse convaincante qui allait dans leur sens plutôt que la réponse correcte, ce qui mène à la flagornerie. Pousser l&#39;optimisation trop fort contre le juré ouvre l&#39;autre dérive, le reward hacking.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

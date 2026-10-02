@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>La bande a beau être longue, on ne la remplit pas au hasard. Avant chaque prise, la régie choisit ce qui monte dessus (la consigne du producteur, les deux mesures utiles de la répétition d&#39;hier, la partition du jour) et coupe le bavardage d&#39;avant session. Plus la bande est chargée, moins le groupe entend ce qui compte.</p>
         <h2>Imagine</h2><p class="imagine">Tu as donné à ton agent un budget de 15 000 euros à 9 heures, puis tu as travaillé avec lui toute la journée. À 18 heures, tu lui demandes : « Quel budget je t&#39;ai donné ce matin ? » Il te répond : « Tu ne m&#39;as donné aucun budget dans cette session. »</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 334" role="img" aria-labelledby="context-engineering-t"> <title id="context-engineering-t">La fenêtre de contexte d'un agent à quatre moments : au début la consigne et beaucoup de place libre ; après des dizaines d'actions, une fenêtre pleine de résultats d'outils où la consigne se noie ; puis les anciens résultats d'outils effacés ; enfin la conversation résumée, qui libère de la place.</title> <rect class="fa" x="0" y="4" width="16" height="12" rx="2"/> <text class="m mu" x="22" y="15">consigne</text> <rect class="lm" x="100" y="4" width="16" height="12" rx="2"/> <text class="m mu" x="122" y="15">résultat d'outil</text> <rect class="bxa" x="266" y="4" width="16" height="12" rx="2"/> <text class="m mu" x="288" y="15">résumé</text> <path class="ln" d="M0 32 h360"/> <text class="m d" x="0" y="50">début de la tâche</text> <rect class="bx" x="0" y="60" width="360" height="24" rx="4"/> <rect class="fa" x="4" y="64" width="44" height="16" rx="2"/> <rect class="lm" x="52.0" y="64" width="18.0" height="16" rx="2"/> <rect class="lm" x="73.0" y="64" width="26.0" height="16" rx="2"/> <text class="m d" x="0" y="114">après des dizaines d'actions</text> <rect class="bx" x="0" y="124" width="360" height="24" rx="4"/> <rect class="fa" x="4" y="128" width="44" height="16" rx="2" opacity="0.35"/> <rect class="lm" x="52.0" y="128" width="15.2" height="16" rx="2"/> <rect class="lm" x="70.2" y="128" width="22.0" height="16" rx="2"/> <rect class="lm" x="95.2" y="128" width="11.8" height="16" rx="2"/> <rect class="lm" x="110.0" y="128" width="18.6" height="16" rx="2"/> <rect class="lm" x="131.6" y="128" width="25.4" height="16" rx="2"/> <rect class="lm" x="160.0" y="128" width="13.5" height="16" rx="2"/> <rect class="lm" x="176.5" y="128" width="16.9" height="16" rx="2"/> <rect class="lm" x="196.4" y="128" width="15.2" height="16" rx="2"/> <rect class="lm" x="214.6" y="128" width="22.0" height="16" rx="2"/> <rect class="lm" x="239.6" y="128" width="11.8" height="16" rx="2"/> <rect class="lm" x="254.4" y="128" width="18.6" height="16" rx="2"/> <rect class="lm" x="276.0" y="128" width="25.4" height="16" rx="2"/> <rect class="lm" x="304.4" y="128" width="13.5" height="16" rx="2"/> <rect class="lm" x="320.9" y="128" width="16.9" height="16" rx="2"/> <rect class="lm" x="340.8" y="128" width="15.2" height="16" rx="2"/> <text class="m d" x="0" y="178">anciens résultats d'outils effacés</text> <rect class="bx" x="0" y="188" width="360" height="24" rx="4"/> <rect class="fa" x="4" y="192" width="44" height="16" rx="2"/> <rect class="lm dash" opacity="0.35" x="52.0" y="192" width="15.2" height="16" rx="2"/> <rect class="lm dash" opacity="0.35" x="70.2" y="192" width="22.0" height="16" rx="2"/> <rect class="lm dash" opacity="0.35" x="95.2" y="192" width="11.8" height="16" rx="2"/> <rect class="lm dash" opacity="0.35" x="110.0" y="192" width="18.6" height="16" rx="2"/> <rect class="lm dash" opacity="0.35" x="131.6" y="192" width="25.4" height="16" rx="2"/> <rect class="lm dash" opacity="0.35" x="160.0" y="192" width="13.5" height="16" rx="2"/> <rect class="lm dash" opacity="0.35" x="176.5" y="192" width="16.9" height="16" rx="2"/> <rect class="lm dash" opacity="0.35" x="196.4" y="192" width="15.2" height="16" rx="2"/> <rect class="lm dash" opacity="0.35" x="214.6" y="192" width="22.0" height="16" rx="2"/> <rect class="lm dash" opacity="0.35" x="239.6" y="192" width="11.8" height="16" rx="2"/> <rect class="lm dash" opacity="0.35" x="254.4" y="192" width="18.6" height="16" rx="2"/> <rect class="lm" x="276.0" y="192" width="25.4" height="16" rx="2"/> <rect class="lm" x="304.4" y="192" width="13.5" height="16" rx="2"/> <rect class="lm" x="320.9" y="192" width="16.9" height="16" rx="2"/> <rect class="lm" x="340.8" y="192" width="15.2" height="16" rx="2"/> <text class="m d" x="0" y="242">conversation résumée</text> <rect class="bx" x="0" y="252" width="360" height="24" rx="4"/> <rect class="fa" x="4" y="256" width="44" height="16" rx="2"/> <rect class="bxa" x="52" y="256" width="84" height="16" rx="2"/> <rect class="lm" x="140" y="256" width="22" height="16" rx="2"/> <text class="i mu" x="0" y="306">Effacer puis résumer libère la fenêtre sans</text> <text class="i mu" x="0" y="326">perdre la consigne du départ.</text> </svg></figure>
         <h2>Définition complète</h2><p>Le terme s&#39;est répandu en juin 2025 : Tobi Lütke l&#39;a défendu le 19 juin, puis Andrej Karpathy l&#39;a repris le 25 en le préférant à « prompt engineering ». Un prompt évoque une consigne courte, alors qu&#39;une application sérieuse assemble à chaque appel des consignes, des exemples, des documents, des outils et un historique. Karpathy y voit un art et une science, celle de remplir la fenêtre avec exactement ce qui sert à l&#39;étape suivante.</p><p>C&#39;est la fenêtre elle-même qui oblige à trier. Plus elle se remplit, moins le modèle exploite bien chaque information, et Anthropic parle d&#39;un budget d&#39;attention que chaque token supplémentaire entame. Un agent qui tourne longtemps accumule pourtant des résultats d&#39;outils, des fichiers lus et des essais ratés, qui finissent par noyer la consigne du départ.</p><p>En septembre 2025, Anthropic a décrit les parades courantes. On résume l&#39;historique quand il devient trop long, on fait prendre des notes à l&#39;agent dans un fichier qu&#39;il relit plus tard, on va chercher l&#39;information au moment où elle sert, et on confie les recherches à des sous-agents qui ne rapportent qu&#39;un résumé. Les skills relèvent de la même idée, puisque leurs instructions n&#39;entrent dans la fenêtre que lorsqu&#39;elles servent.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

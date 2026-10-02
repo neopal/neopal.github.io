@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" role="img" aria-labelledby="few-shot-t">
+<title id="few-shot-t">Anatomie d'un prompt few-shot tiré de l'article de GPT-3 : une consigne, deux exemples, une question que le modèle complète ; et des exemples aux réponses tirées au hasard font presque aussi bien que des exemples justes.</title>
+<rect class="bx" x="0" y="8" width="252" height="120" rx="4"/>
+<text class="m" x="12" y="32">Translate English to French:</text>
+<text class="m" x="12" y="60">sea otter =&gt; loutre de mer</text>
+<text class="m" x="12" y="82">peppermint =&gt; menthe poivrée</text>
+<text class="m" x="12" y="112">cheese =&gt;</text>
+<text class="m b ac" x="96" y="112">fromage</text>
+<path class="lm" d="M262 20 h4 V36 h-4 M262 46 h4 V88 h-4 M262 98 h4 V118 h-4"/>
+<text x="274" y="33">consigne</text>
+<text x="274" y="72">exemples</text>
+<text x="274" y="113">question</text>
+<text class="m ac" x="96" y="150">écrit par le modèle</text>
+<text class="m d" x="0" y="186">score selon les réponses des exemples</text>
+<text class="m mu" x="0" y="214">réponses justes</text>
+<rect class="fa" x="166" y="202" width="180" height="16" rx="2"/>
+<text class="m mu" x="0" y="244">réponses au hasard</text>
+<rect class="fa" x="166" y="232" width="168" height="16" rx="2" opacity="0.6"/>
+<text class="i mu" x="0" y="290">Le modèle copie surtout la forme des exemples,</text>
+<text class="i mu" x="0" y="310">bien plus que la justesse de leurs réponses.</text>
+</svg>

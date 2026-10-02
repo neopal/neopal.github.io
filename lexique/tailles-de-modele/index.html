@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>La taille du groupe se compte en potards sur la console. Sur une console dense, chaque note fait bouger tous les potards ; sur celle d&#39;un MoE, deux ou trois rangées jouent pendant que les autres restent immobiles, et il faut pourtant de la place dans le studio pour la console entière.</p>
         <h2>Imagine</h2><p class="imagine">Tu demandes à l&#39;admin qui gère les serveurs : « Entre DeepSeek-V4-Flash et Qwen3.8-27B, lequel est le plus gros ? » Il réfléchit une seconde, puis te répond : « Les deux, puisque le premier a dix fois plus de paramètres et que le second en fait travailler deux fois plus pour chaque token. »</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 276" role="img" aria-labelledby="tailles-de-modele-t"> <title id="tailles-de-modele-t">Barres à la même échelle : Llama 3.1 405B fait travailler ses 405 milliards de paramètres pour chaque token, DeepSeek-V4-Pro 49 sur 1 600 milliards et Kimi K3 104 sur 2 800 milliards.</title> <rect class="lm" x="0.75" y="4.75" width="13" height="9" rx="2"/> <text class="m mu" x="20" y="14">en tout</text> <rect class="fa" x="100" y="4" width="14" height="10" rx="2"/> <text class="m mu" x="120" y="14">actifs pour chaque token</text> <text class="b" x="0" y="46">Llama 3.1 405B</text> <text class="m d" x="360" y="46" text-anchor="end">dense</text> <rect class="lm" x="0.75" y="54.75" width="47.7" height="12.5" rx="2"/> <rect class="fa" x="0" y="54" width="49.2" height="14" rx="2"/> <text class="m mu" x="0" y="84">405 B, tous actifs</text> <text class="b" x="0" y="110">DeepSeek-V4-Pro</text> <text class="m d" x="360" y="110" text-anchor="end">MoE</text> <rect class="lm" x="0.75" y="118.75" width="192.8" height="12.5" rx="2"/> <rect class="fa" x="0" y="118" width="6.0" height="14" rx="2"/> <text class="m mu" x="0" y="148">1 600 B dont 49 B actifs</text> <text class="b" x="0" y="174">Kimi K3</text> <text class="m d" x="360" y="174" text-anchor="end">MoE</text> <rect class="lm" x="0.75" y="182.75" width="338.5" height="12.5" rx="2"/> <rect class="fa" x="0" y="182" width="12.6" height="14" rx="2"/> <text class="m mu" x="0" y="212">2 800 B dont 104 B actifs</text> <text class="i mu" x="0" y="250">Le total fixe la mémoire à prévoir ; la part active</text> <text class="i mu" x="0" y="268">fixe le coût et la vitesse de chaque token.</text> </svg></figure>
         <h2>Définition complète</h2><p>La taille se compte en paramètres, les nombres réglés pendant l&#39;entraînement, et le jargon l&#39;abrège avec des lettres anglaises : B pour billion (milliard), T pour trillion (millier de milliards). Ce chiffre dit d&#39;abord combien de mémoire il faut pour faire tourner le modèle. En 16 bits, chaque paramètre occupe 2 octets, soit 2 Go par milliard de paramètres, un calcul qu&#39;on refait de tête ; les fichiers de Llama 3.1 405B pèsent ainsi 812 Go sur Hugging Face.</p><p>Avec les MoE, le chiffre se dédouble. Un modèle dense fait travailler tous ses paramètres pour chaque token, alors qu&#39;un MoE n&#39;en active qu&#39;une fraction : DeepSeek-V4-Pro, présenté en avril 2026, compte 1 600 milliards de paramètres et n&#39;en active que 49 milliards par token. Le total dit combien de serveurs il faut ; la part active dit combien coûte chaque token et à quelle vitesse il sort.</p><p>C&#39;est pour ça que Qwen écrit les deux nombres dans le nom de ses modèles, comme Qwen3-235B-A22B, qui se lit « 235 milliards en tout, dont 22 milliards actifs », ou Qwen3.8-2.4T-A95B. Face à un modèle dense, on compare le nombre qui suit le A quand on parle de vitesse, et le premier quand on parle de matériel.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

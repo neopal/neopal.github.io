@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Le groupe passe un blind test réservé aux spécialistes, où seuls les jazzmen reconnaissent les extraits de jazz modal, et où les rockeurs se trompent même avec Internet ouvert. Depuis 2026, le groupe reconnaît presque tous les extraits, et le blind test ne sert plus à classer les meilleurs.</p>
         <h2>Imagine</h2><p class="imagine">Une question de physique de GPQA tombe chez une biologiste en doctorat, qui a Internet et une demi-heure devant elle, et les non-spécialistes placés dans son cas ratent deux questions sur trois. La même question tombe chez un physicien, et les spécialistes du domaine en réussissent deux sur trois.</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="gpqa-t"> <title id="gpqa-t">Échelle de réussite à GPQA : 34 % pour des non-spécialistes avec Internet, 39 % pour le meilleur modèle en 2023, 65 % pour les experts du domaine ; en 2026, quatre modèles entre 95,4 et 95,8 % tiennent tous dans une erreur type d'environ 1,4 point.</title> <path class="ln" d="M40 22 v296"/> <text class="m mu" x="32" y="27" text-anchor="end">100</text> <text class="m mu" x="32" y="323" text-anchor="end">0</text> <circle class="fa" cx="40" cy="34" r="5"/> <path class="ln dash" d="M46 34 h130"/> <circle class="mu" cx="40" cy="126" r="5"/> <text class="m" x="52" y="131">65 % experts du domaine</text> <circle class="mu" cx="40" cy="203" r="5"/> <text class="m" x="52" y="204">39 % meilleur modèle, 2023</text> <circle class="mu" cx="40" cy="217" r="5"/> <text class="m" x="52" y="224">34 % non-spécialistes</text> <text class="m mu" x="52" y="242">avec Internet</text> <rect class="bxa" x="176" y="8" width="184" height="104" rx="6"/> <path class="lm" d="M226 24 h100"/><circle class="fa" cx="276" cy="24" r="4"/> <path class="lm" d="M223 37 h100"/><circle class="fa" cx="273" cy="37" r="4"/> <path class="lm" d="M221 50 h100"/><circle class="fa" cx="271" cy="50" r="4"/> <path class="lm" d="M215 63 h100"/><circle class="fa" cx="265" cy="63" r="4"/> <text class="m" x="268" y="86" text-anchor="middle">95,4 à 95,8 % en 2026</text> <text class="m mu" x="268" y="103" text-anchor="middle">erreur type ± 1,4 pt</text> <text class="i mu" x="56" y="292">Les quatre modèles de tête tiennent</text> <text class="i mu" x="56" y="312">tous dans la marge d'erreur.</text> </svg></figure>
         <h2>Définition complète</h2><p>Publié en novembre 2023, GPQA préparait le jour où il faudrait contrôler des réponses d&#39;IA plus savantes que les humains chargés de les vérifier. À sa sortie, le meilleur modèle, fondé sur GPT-4, réussissait 39 % des questions, contre 65 % pour les experts du domaine. Le test porte sur la connaissance scientifique de pointe en QCM, sans rien vérifier de la recherche, de la paillasse ou de la capacité à expliquer une réponse.</p><p>En septembre 2026, Epoch AI, qui fait passer GPQA Diamond lui-même faute de classement officiel, place quatre modèles entre 95,4 et 95,8 %, de GPT-6 Astra à Gemini 3.8 Flash. L&#39;erreur type, la marge d&#39;incertitude qu&#39;Epoch publie avec chaque score, avoisine 1,4 point, alors les quatre sont à égalité, et le test ne sait plus les classer.</p><p>En mai 2025, Epoch estimait qu&#39;au moins 90 % des questions de Diamond étaient valides, et une extrapolation qu&#39;il jugeait lui-même hasardeuse donnait 15 questions douteuses sur 198, soit 8 %. Les meilleurs scores dépassent désormais ce plafond pessimiste, ce qui veut dire que les questions douteuses sont moins nombreuses, ou que les modèles retrouvent la réponse attendue même là où elle se discute.</p>
         <h2>Fiable ?</h2><div class="rely rely-fragile"><b>fragile</b><p>Le test est saturé, puisque les quatre meilleurs modèles mesurés par Epoch AI tiennent dans son erreur type, et Epoch estimait en 2025 qu&#39;environ une question sur douze pouvait être douteuse. Il reste utile pour situer un modèle moyen, plus pour départager ceux de pointe.</p></div>
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

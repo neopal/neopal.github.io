@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -318,7 +341,8 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <p class="lead">Humanity&#39;s Last Exam est un benchmark de 2 500 questions de niveau expert, écrites par près de 1 000 spécialistes dans plus de cent matières, et retenues parce que les meilleurs modèles de l&#39;époque ne savaient pas y répondre.</p>
         
         <h2>L'image</h2><p>Mille professeurs du conservatoire ont chacun déposé la question de solfège la plus dure qu&#39;ils connaissaient, à condition que le groupe la rate sur le moment. Les corrigés ont été relus, mais pas tous assez, et une partie s&#39;est révélée fausse.</p>
-        <h2>Imagine</h2><p class="imagine">Lis à voix haute l&#39;un des exemples publiés sur la page d&#39;accueil de lastexam.ai, celui, signé par un chercheur du MIT, qui demande combien de tendons appariés soutient un petit os sésamoïde propre aux colibris. Tu n&#39;as sans doute aucune idée de la réponse, ni même de l&#39;endroit où la chercher, et il en reste 2 499 de ce calibre.</p>
+        <h2>Imagine</h2><p class="imagine">Lis à voix haute l&#39;un des exemples publiés sur la page d&#39;accueil de <a href="https://lastexam.ai" target="_blank" rel="noopener">lastexam.ai</a>, celui, signé par un chercheur du MIT, qui demande combien de tendons appariés soutient un petit os sésamoïde propre aux colibris. Tu n&#39;as sans doute aucune idée de la réponse, ni même de l&#39;endroit où la chercher, et il en reste 2 499 de ce calibre.</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="humanitys-last-exam-t"> <title id="humanitys-last-exam-t">Sélection des questions de Humanity's Last Exam : chaque question d'expert est posée aux meilleurs modèles, gardée seulement s'ils la ratent ; sur les 2 500 retenues, HLE-Verified n'en certifie telles quelles que 668.</title> <rect class="bx" x="0" y="8" width="360" height="34" rx="6"/> <text class="m" x="180" y="30" text-anchor="middle">questions de près de 1 000 experts</text> <path class="lm" d="M180 42 v16"/><path class="lm" d="M175 52 l5 6 l5 -6"/> <rect class="bxa" x="35" y="62" width="290" height="34" rx="6"/> <text class="m" x="180" y="84" text-anchor="middle">chacune posée aux meilleurs modèles</text> <path class="la" d="M130 96 v52"/><path class="la" d="M124 142 l6 6 l6 -6"/> <text class="m ac" x="122" y="128" text-anchor="end">ratée, gardée</text> <path class="lm" d="M230 96 v14 h50 v4"/><path class="lm" d="M275 108 l5 6 l5 -6"/> <text class="m mu" x="280" y="132" text-anchor="middle">réussie, écartée</text> <rect class="bx" x="0" y="152" width="360" height="30" rx="4"/> <rect class="fa" x="0" y="152" width="96" height="30" rx="4"/> <text class="m" x="108" y="172">2 500 questions retenues</text> <text class="m ac" x="0" y="204">668 certifiées telles quelles</text> <text class="m mu" x="0" y="222">par HLE-Verified en février 2026</text> <text class="i mu" x="0" y="260">Ne garder que les questions que les modèles</text> <text class="i mu" x="0" y="280">ratent favorise aussi les questions piégeuses.</text> </svg></figure>
         <h2>Définition complète</h2><p>Publié en janvier 2025 par le Center for AI Safety et Scale AI, puis dans Nature en janvier 2026, HLE réunit des questions à réponse courte ou à choix multiple, faciles à corriger automatiquement mais impossibles à trouver vite sur Internet. Il évalue la connaissance et le raisonnement d&#39;expert sur des questions fermées, et laisse échapper la recherche ouverte, la créativité ou la conduite d&#39;un projet.</p><p>Ne garder que les questions que les modèles ratent a un revers, puisque cela favorise les questions piégeuses. En juillet 2025, FutureHouse a confronté à la littérature scientifique les 321 questions de chimie et de biologie en texte seul, et trouvé que 29 % de leurs réponses officielles étaient contredites par des articles publiés. En février 2026, l&#39;équipe de HLE-Verified ne certifiait telles quelles que 668 questions sur 2 500.</p><p>Les organisateurs ont répondu par une version vivante, HLE-Rolling, en octobre 2025, puis par HLE-Diamond le 22 septembre 2026, 1 000 questions nettoyées, moitié raisonnement, moitié connaissances. Sans outils, GPT-6 Astra y réussit 59,9 %, devant Claude Opus 5.5 à 54,6 %. Une partie des questions reste gardée secrète pour repérer les modèles qui auraient appris les questions publiques.</p>
         <h2>Fiable ?</h2><div class="rely rely-a-nuancer"><b>à nuancer</b><p>Le test n&#39;est pas saturé et garde des questions secrètes, mais près de 29 % des réponses de chimie et de biologie de la version d&#39;origine étaient contredites par la littérature. L&#39;un des deux organisateurs, Scale AI, vend des données d&#39;entraînement aux labos, et Meta en détient 49 % depuis juin 2025.</p></div>
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 244" role="img" aria-labelledby="kv-cache-t">
+<title id="kv-cache-t">Deux triangles de calcul sur six pas de génération : sans cache, chaque pas recalcule tous les tokens précédents ; avec le KV cache, chaque pas ne calcule que le nouveau token et relit les autres.</title>
+<text class="m" x="113" y="18" text-anchor="middle">sans cache</text>
+<rect class="fa" x="52" y="34" width="18" height="18" rx="3"/>
+<rect class="fa" x="52" y="55" width="18" height="18" rx="3"/>
+<rect class="fa" x="73" y="55" width="18" height="18" rx="3"/>
+<rect class="fa" x="52" y="76" width="18" height="18" rx="3"/>
+<rect class="fa" x="73" y="76" width="18" height="18" rx="3"/>
+<rect class="fa" x="94" y="76" width="18" height="18" rx="3"/>
+<rect class="fa" x="52" y="97" width="18" height="18" rx="3"/>
+<rect class="fa" x="73" y="97" width="18" height="18" rx="3"/>
+<rect class="fa" x="94" y="97" width="18" height="18" rx="3"/>
+<rect class="fa" x="115" y="97" width="18" height="18" rx="3"/>
+<rect class="fa" x="52" y="118" width="18" height="18" rx="3"/>
+<rect class="fa" x="73" y="118" width="18" height="18" rx="3"/>
+<rect class="fa" x="94" y="118" width="18" height="18" rx="3"/>
+<rect class="fa" x="115" y="118" width="18" height="18" rx="3"/>
+<rect class="fa" x="136" y="118" width="18" height="18" rx="3"/>
+<rect class="fa" x="52" y="139" width="18" height="18" rx="3"/>
+<rect class="fa" x="73" y="139" width="18" height="18" rx="3"/>
+<rect class="fa" x="94" y="139" width="18" height="18" rx="3"/>
+<rect class="fa" x="115" y="139" width="18" height="18" rx="3"/>
+<rect class="fa" x="136" y="139" width="18" height="18" rx="3"/>
+<rect class="fa" x="157" y="139" width="18" height="18" rx="3"/>
+<text class="m" x="289" y="18" text-anchor="middle">avec KV cache</text>
+<rect class="fa" x="228" y="34" width="18" height="18" rx="3"/>
+<rect class="fd" x="228" y="55" width="18" height="18" rx="3"/>
+<rect class="fa" x="249" y="55" width="18" height="18" rx="3"/>
+<rect class="fd" x="228" y="76" width="18" height="18" rx="3"/>
+<rect class="fd" x="249" y="76" width="18" height="18" rx="3"/>
+<rect class="fa" x="270" y="76" width="18" height="18" rx="3"/>
+<rect class="fd" x="228" y="97" width="18" height="18" rx="3"/>
+<rect class="fd" x="249" y="97" width="18" height="18" rx="3"/>
+<rect class="fd" x="270" y="97" width="18" height="18" rx="3"/>
+<rect class="fa" x="291" y="97" width="18" height="18" rx="3"/>
+<rect class="fd" x="228" y="118" width="18" height="18" rx="3"/>
+<rect class="fd" x="249" y="118" width="18" height="18" rx="3"/>
+<rect class="fd" x="270" y="118" width="18" height="18" rx="3"/>
+<rect class="fd" x="291" y="118" width="18" height="18" rx="3"/>
+<rect class="fa" x="312" y="118" width="18" height="18" rx="3"/>
+<rect class="fd" x="228" y="139" width="18" height="18" rx="3"/>
+<rect class="fd" x="249" y="139" width="18" height="18" rx="3"/>
+<rect class="fd" x="270" y="139" width="18" height="18" rx="3"/>
+<rect class="fd" x="291" y="139" width="18" height="18" rx="3"/>
+<rect class="fd" x="312" y="139" width="18" height="18" rx="3"/>
+<rect class="fa" x="333" y="139" width="18" height="18" rx="3"/>
+<text class="m d" x="0" y="47">pas 1</text>
+<text class="m d" x="0" y="152">pas 6</text>
+<rect class="fa" x="0" y="174" width="14" height="14" rx="3"/>
+<text class="m mu" x="20" y="186">calculé</text>
+<rect class="fd" x="110" y="174" width="14" height="14" rx="3"/>
+<text class="m mu" x="130" y="186">relu dans le cache</text>
+<text class="i mu" x="0" y="218">Sans cache, une réponse de 1 000 tokens ferait</text>
+<text class="i mu" x="0" y="236">traiter 500 500 tokens au modèle, au lieu de 1 000.</text>
+</svg>

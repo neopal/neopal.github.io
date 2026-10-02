@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 284" role="img" aria-labelledby="hugging-face-t">
+<title id="hugging-face-t">L'arbre de Qwen2.5-7B-Instruct sur Hugging Face : plus de 3 000 versions fine-tunées et plus de 400 versions quantifiées en descendent.</title>
+<rect class="bxa" x="70" y="0" width="220" height="48" rx="4"/>
+<text class="m" x="180" y="20" text-anchor="middle">Qwen2.5-7B-Instruct</text>
+<text class="m mu" x="180" y="38" text-anchor="middle">modèle d'Alibaba</text>
+<path class="lm" d="M180 48 V62 H90 V80"/>
+<path class="lm" d="M180 62 H270 V80"/>
+<rect class="bx" x="10" y="80" width="160" height="44" rx="4"/>
+<text class="m" x="90" y="98" text-anchor="middle">fine-tunés</text>
+<text class="m ac" x="90" y="116" text-anchor="middle">plus de 3 000</text>
+<rect class="bx" x="200" y="80" width="140" height="44" rx="4"/>
+<text class="m" x="270" y="98" text-anchor="middle">quantifiés</text>
+<text class="m ac" x="270" y="116" text-anchor="middle">plus de 400</text>
+<path class="ln" d="M90 124 V136"/>
+<path class="ln" d="M270 124 V136"/>
+<rect class="fa" x="17" y="142" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="39" y="142" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="61" y="142" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="83" y="142" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="105" y="142" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="127" y="142" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="149" y="142" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="17" y="162" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="39" y="162" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="61" y="162" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="83" y="162" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="105" y="162" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="127" y="162" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="149" y="162" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="17" y="182" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="39" y="182" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="61" y="182" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="83" y="182" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="105" y="182" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="127" y="182" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="149" y="182" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="17" y="202" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="39" y="202" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="61" y="202" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="83" y="202" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="105" y="202" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="127" y="202" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="149" y="202" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="230" y="142" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="252" y="142" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="274" y="142" width="14" height="12" rx="2" opacity="0.7"/>
+<rect class="fa" x="296" y="142" width="14" height="12" rx="2" opacity="0.7"/>
+<text class="i mu" x="0" y="254">La fiche de chaque modèle recense les</text>
+<text class="i mu" x="0" y="274">versions que d'autres en ont tirées.</text>
+</svg>

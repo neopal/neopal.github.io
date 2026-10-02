@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 320" role="img" aria-labelledby="loop-t">
+<title id="loop-t">La loop : une consigne, l'agent essaie, on vérifie ; si la vérification échoue, on corrige et on recommence, et quand elle passe, le travail est terminé.</title>
+<rect class="bxa" x="83" y="17" width="84" height="26" rx="4"/>
+<text class="m" x="125" y="35" text-anchor="middle">consigne</text>
+<path class="la" d="M171 30 C205 30, 205 60, 205 101"/><path class="la" d="M200 96 l5 6 l5 -6"/>
+<rect class="bxa" x="142" y="107" width="126" height="26" rx="4"/>
+<text class="m" x="205" y="125" text-anchor="middle">l'agent essaie</text>
+<path class="la" d="M205 137 C205 190, 205 210, 186 210"/><path class="la" d="M191 205 l-6 5 l6 5"/>
+<rect class="bxa" x="70" y="197" width="112" height="26" rx="4"/>
+<text class="m" x="126" y="215" text-anchor="middle">vérification</text>
+<path class="la" d="M66 210 C50 210, 50 180, 50 139"/><path class="la" d="M45 144 l5 -6 l5 6"/>
+<text class="m mu" x="62" y="176">échoue</text>
+<path class="ln" d="M232 160 V208"/>
+<text class="m d" x="240" y="170">tests,</text>
+<text class="m d" x="240" y="188">compilation,</text>
+<text class="m d" x="240" y="206">capture d'écran</text>
+<rect class="bx" x="3" y="107" width="94" height="26" rx="4"/>
+<text class="m" x="50" y="125" text-anchor="middle">correction</text>
+<path class="la" d="M50 103 C50 60, 50 30, 79 30"/><path class="la" d="M74 25 l6 5 l-6 5"/>
+<path class="la" d="M126 227 V252 H226"/><path class="la" d="M221 247 l6 5 l-6 5"/>
+<text class="m ac" x="138" y="246">passe</text>
+<rect class="bxa" x="232" y="239" width="96" height="26" rx="4"/>
+<text class="m b" x="280" y="257" text-anchor="middle">terminé</text>
+<text class="i mu" x="0" y="294">Si l'agent lance lui-même les tests,</text>
+<text class="i mu" x="0" y="314">la boucle tourne sans attendre ton œil.</text>
+</svg>

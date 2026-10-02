@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="gradient-qui-disparait-t">
+<title id="gradient-qui-disparait-t">Un million d'euros d'erreur posé à la sortie, divisé par quatre à chaque couche remontée : la barre s'effondre dès la deuxième couche et il ne reste que 0,95 euro après dix couches.</title>
+<text class="m mu" x="358" y="16" text-anchor="end">un quart transmis à chaque couche</text>
+<path class="lm" d="M352 26 H10"/><path class="lm" d="M16 21 l-6 5 l6 5"/>
+<rect class="fa" x="320" y="60.0" width="20" height="130.0" rx="1"/>
+<text class="m" x="330" y="210" text-anchor="middle">0</text>
+<rect class="fa" x="290" y="157.5" width="20" height="32.5" rx="1"/>
+<text class="m mu" x="300" y="210" text-anchor="middle">1</text>
+<rect class="fa" x="260" y="181.9" width="20" height="8.1" rx="1"/>
+<text class="m mu" x="270" y="210" text-anchor="middle">2</text>
+<rect class="fa" x="230" y="188.0" width="20" height="2.0" rx="1"/>
+<text class="m mu" x="240" y="210" text-anchor="middle">3</text>
+<rect class="fl" x="200" y="187.5" width="20" height="2.5" rx="1"/>
+<text class="m mu" x="210" y="210" text-anchor="middle">4</text>
+<rect class="fl" x="170" y="187.5" width="20" height="2.5" rx="1"/>
+<text class="m mu" x="180" y="210" text-anchor="middle">5</text>
+<rect class="fl" x="140" y="187.5" width="20" height="2.5" rx="1"/>
+<text class="m mu" x="150" y="210" text-anchor="middle">6</text>
+<rect class="fl" x="110" y="187.5" width="20" height="2.5" rx="1"/>
+<text class="m mu" x="120" y="210" text-anchor="middle">7</text>
+<rect class="fl" x="80" y="187.5" width="20" height="2.5" rx="1"/>
+<text class="m mu" x="90" y="210" text-anchor="middle">8</text>
+<rect class="fl" x="50" y="187.5" width="20" height="2.5" rx="1"/>
+<text class="m mu" x="60" y="210" text-anchor="middle">9</text>
+<rect class="fl" x="20" y="187.5" width="20" height="2.5" rx="1"/>
+<text class="m mu" x="30" y="210" text-anchor="middle">10</text>
+<text class="m b" x="340" y="52" text-anchor="end">1 000 000 €</text>
+<text class="m" x="312" y="150" text-anchor="end">250 000 €</text>
+<text class="m red b" x="20" y="178" text-anchor="start">0,95 €</text>
+<path class="ln" d="M0 190.5 H360"/>
+<text class="m d" x="180" y="232" text-anchor="middle">couches remontées depuis la sortie</text>
+<text class="i mu" x="0" y="264">Les couches proches de l'entrée ne reçoivent</text>
+<text class="i mu" x="0" y="284">presque rien et ne bougent presque plus.</text>
+</svg>

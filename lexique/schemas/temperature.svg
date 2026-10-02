@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="temperature-t">
+<title id="temperature-t">Probabilités du token qui suit « Le ciel est » : à température basse, « bleu » écrase les autres ; à température haute, les quatre tokens gardent le même ordre mais leurs chances se rapprochent.</title>
+<text x="180" y="18" text-anchor="middle">« Le ciel est … »</text>
+<rect class="fa" x="2" y="58.2" width="30" height="127.8" rx="2"/>
+<text class="m ac" x="17" y="206" text-anchor="middle">bleu</text>
+<rect class="fa" x="43" y="179.6" width="30" height="6.4" rx="2" opacity="0.45"/>
+<text class="m mu" x="58" y="206" text-anchor="middle">gris</text>
+<rect class="fa" x="84" y="183.0" width="30" height="3.0" rx="2" opacity="0.45"/>
+<text class="m mu" x="99" y="206" text-anchor="middle">noir</text>
+<rect class="fa" x="125" y="183.0" width="30" height="3.0" rx="2" opacity="0.45"/>
+<text class="m mu" x="140" y="206" text-anchor="middle">rose</text>
+<path class="lm" d="M-2 186 H159"/>
+<text class="m" x="79" y="234" text-anchor="middle">température basse</text>
+<rect class="fa" x="205" y="108.5" width="30" height="77.5" rx="2"/>
+<text class="m ac" x="220" y="206" text-anchor="middle">bleu</text>
+<rect class="fa" x="246" y="157.5" width="30" height="28.5" rx="2" opacity="0.45"/>
+<text class="m mu" x="261" y="206" text-anchor="middle">gris</text>
+<rect class="fa" x="287" y="165.6" width="30" height="20.4" rx="2" opacity="0.45"/>
+<text class="m mu" x="302" y="206" text-anchor="middle">noir</text>
+<rect class="fa" x="328" y="175.5" width="30" height="10.5" rx="2" opacity="0.45"/>
+<text class="m mu" x="343" y="206" text-anchor="middle">rose</text>
+<path class="lm" d="M201 186 H362"/>
+<text class="m" x="282" y="234" text-anchor="middle">température haute</text>
+<path class="ln" d="M180 44 V238"/>
+<text class="i mu" x="0" y="266">La température garde l'ordre des tokens et ne</text>
+<text class="i mu" x="0" y="284">change que l'écart entre leurs chances.</text>
+</svg>

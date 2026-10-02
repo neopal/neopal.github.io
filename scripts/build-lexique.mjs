@@ -64,6 +64,26 @@ function loadTerms() {
   return {cats, terms};
 }
 
+// Schémas : lexique/schemas/<id>.svg (source) -> t.schema, et lexique/schemas.js pour le navigateur.
+function loadSchemas(terms) {
+  const dir = join(LEX, 'schemas');
+  const byId = new Map(terms.map((t) => [t.id, t]));
+  const out = {};
+  const files = existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith('.svg')).sort() : [];
+  for (const f of files) {
+    const id = f.slice(0, -4);
+    if (!byId.has(id)) fail(`schéma sans fiche : lexique/schemas/${f}`);
+    const svg = readFileSync(join(dir, f), 'utf8').replace(/<\?xml[^>]*>\s*/, '').replace(/\s*\n\s*/g, ' ').trim();
+    if (!/^<svg[\s>]/.test(svg) || !/<\/svg>$/.test(svg)) fail(`lexique/schemas/${f} n'est pas un <svg> seul`);
+    if (/<script|\son[a-z]+=|<foreignObject/i.test(svg)) fail(`lexique/schemas/${f} : script ou gestionnaire interdit`);
+    if (!/<title[\s>]/.test(svg)) fail(`lexique/schemas/${f} : <title> manquant (accessibilité)`);
+    out[id] = svg;
+    byId.get(id).schema = svg;
+  }
+  const js = `// Généré par scripts/build-lexique.mjs à partir de lexique/schemas/*.svg, ne pas éditer.\nwindow.LEX_SCHEMAS = ${JSON.stringify(out, null, 1).replace(/</g, '\\u003c')};\n`;
+  return () => writeIfChanged(join(LEX, 'schemas.js'), js) && console.log('màj      lexique/schemas.js');
+}
+
 // ---------- Utilitaires ----------
 const sha = (s) => createHash('sha256').update(s).digest('hex');
 const clean = (s) => String(s == null ? '' : s).replace(/\s+/g, ' ').trim();
@@ -322,6 +342,7 @@ function buildSitemap(live) {
 
 // ---------- Main ----------
 const {cats, terms} = loadTerms();
+const writeSchemas = loadSchemas(terms);
 const live = terms.filter((t) => t.status === 'live');
 const liveIds = new Set(live.map((t) => t.id));
 const indexFile = join(LEX, 'index.html');
@@ -335,6 +356,7 @@ if (!/<html lang="fr">/.test(template)) fail('<html lang="fr"> introuvable dans 
 if (!template.includes('window.LEX_BASE')) fail('script de démarrage introuvable dans lexique/index.html');
 if (!/\n<body>/.test(template)) fail('<body> introuvable dans lexique/index.html');
 
+writeSchemas();
 const cards = buildOgImages(live, cats);
 
 // 1. Page d'accueil du lexique : JSON-LD DefinedTermSet + index pré-rendu.

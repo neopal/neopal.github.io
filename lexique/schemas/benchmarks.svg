@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="benchmarks-t">
+<title id="benchmarks-t">Un benchmark fixe des questions, une façon de les poser et une façon de noter ; une fois publiées, ses questions passent sur Internet puis dans les données d'entraînement, et le modèle qui passe le test les a peut-être déjà vues.</title>
+<rect class="bxa" x="95" y="8" width="170" height="80" rx="6"/>
+<text class="m" x="180" y="34" text-anchor="middle">liste de questions</text>
+<text class="m" x="180" y="54" text-anchor="middle">façon de les poser</text>
+<text class="m" x="180" y="74" text-anchor="middle">façon de noter</text>
+<path class="lm" d="M265 48 h50 v76"/><path class="lm" d="M310 118 l5 6 l5 -6"/>
+<text class="m mu" x="272" y="40">publié</text>
+<rect class="bx" x="250" y="130" width="110" height="40" rx="6"/>
+<text class="m" x="305" y="155" text-anchor="middle">Internet</text>
+<path class="lm" d="M305 170 v70 h-29"/><path class="lm" d="M282 235 l-6 5 l6 5"/>
+<text class="m mu" x="297" y="208" text-anchor="end">collecté</text>
+<rect class="bx" x="86" y="220" width="190" height="40" rx="6"/>
+<text class="m" x="181" y="245" text-anchor="middle">données d'entraînement</text>
+<path class="lm" d="M86 240 h-31 v-64"/><path class="lm" d="M50 182 l5 -6 l5 6"/>
+<text class="m mu" x="62" y="208">entraîne</text>
+<rect class="bx" x="0" y="130" width="110" height="40" rx="6"/>
+<text class="m" x="55" y="155" text-anchor="middle">modèle</text>
+<path class="la" d="M55 130 v-82 h34"/><path class="la" d="M83 42 l6 6 l-6 6"/>
+<text class="m ac" x="62" y="110">passe le test</text>
+<text class="i mu" x="0" y="296">Plus les questions d'un test circulent, plus</text>
+<text class="i mu" x="0" y="316">son score mesure la mémoire du modèle.</text>
+</svg>

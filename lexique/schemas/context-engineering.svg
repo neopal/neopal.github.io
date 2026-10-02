@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 334" role="img" aria-labelledby="context-engineering-t">
+<title id="context-engineering-t">La fenêtre de contexte d'un agent à quatre moments : au début la consigne et beaucoup de place libre ; après des dizaines d'actions, une fenêtre pleine de résultats d'outils où la consigne se noie ; puis les anciens résultats d'outils effacés ; enfin la conversation résumée, qui libère de la place.</title>
+<rect class="fa" x="0" y="4" width="16" height="12" rx="2"/>
+<text class="m mu" x="22" y="15">consigne</text>
+<rect class="lm" x="100" y="4" width="16" height="12" rx="2"/>
+<text class="m mu" x="122" y="15">résultat d'outil</text>
+<rect class="bxa" x="266" y="4" width="16" height="12" rx="2"/>
+<text class="m mu" x="288" y="15">résumé</text>
+<path class="ln" d="M0 32 h360"/>
+<text class="m d" x="0" y="50">début de la tâche</text>
+<rect class="bx" x="0" y="60" width="360" height="24" rx="4"/>
+<rect class="fa" x="4" y="64" width="44" height="16" rx="2"/>
+<rect class="lm" x="52.0" y="64" width="18.0" height="16" rx="2"/>
+<rect class="lm" x="73.0" y="64" width="26.0" height="16" rx="2"/>
+<text class="m d" x="0" y="114">après des dizaines d'actions</text>
+<rect class="bx" x="0" y="124" width="360" height="24" rx="4"/>
+<rect class="fa" x="4" y="128" width="44" height="16" rx="2" opacity="0.35"/>
+<rect class="lm" x="52.0" y="128" width="15.2" height="16" rx="2"/>
+<rect class="lm" x="70.2" y="128" width="22.0" height="16" rx="2"/>
+<rect class="lm" x="95.2" y="128" width="11.8" height="16" rx="2"/>
+<rect class="lm" x="110.0" y="128" width="18.6" height="16" rx="2"/>
+<rect class="lm" x="131.6" y="128" width="25.4" height="16" rx="2"/>
+<rect class="lm" x="160.0" y="128" width="13.5" height="16" rx="2"/>
+<rect class="lm" x="176.5" y="128" width="16.9" height="16" rx="2"/>
+<rect class="lm" x="196.4" y="128" width="15.2" height="16" rx="2"/>
+<rect class="lm" x="214.6" y="128" width="22.0" height="16" rx="2"/>
+<rect class="lm" x="239.6" y="128" width="11.8" height="16" rx="2"/>
+<rect class="lm" x="254.4" y="128" width="18.6" height="16" rx="2"/>
+<rect class="lm" x="276.0" y="128" width="25.4" height="16" rx="2"/>
+<rect class="lm" x="304.4" y="128" width="13.5" height="16" rx="2"/>
+<rect class="lm" x="320.9" y="128" width="16.9" height="16" rx="2"/>
+<rect class="lm" x="340.8" y="128" width="15.2" height="16" rx="2"/>
+<text class="m d" x="0" y="178">anciens résultats d'outils effacés</text>
+<rect class="bx" x="0" y="188" width="360" height="24" rx="4"/>
+<rect class="fa" x="4" y="192" width="44" height="16" rx="2"/>
+<rect class="lm dash" opacity="0.35" x="52.0" y="192" width="15.2" height="16" rx="2"/>
+<rect class="lm dash" opacity="0.35" x="70.2" y="192" width="22.0" height="16" rx="2"/>
+<rect class="lm dash" opacity="0.35" x="95.2" y="192" width="11.8" height="16" rx="2"/>
+<rect class="lm dash" opacity="0.35" x="110.0" y="192" width="18.6" height="16" rx="2"/>
+<rect class="lm dash" opacity="0.35" x="131.6" y="192" width="25.4" height="16" rx="2"/>
+<rect class="lm dash" opacity="0.35" x="160.0" y="192" width="13.5" height="16" rx="2"/>
+<rect class="lm dash" opacity="0.35" x="176.5" y="192" width="16.9" height="16" rx="2"/>
+<rect class="lm dash" opacity="0.35" x="196.4" y="192" width="15.2" height="16" rx="2"/>
+<rect class="lm dash" opacity="0.35" x="214.6" y="192" width="22.0" height="16" rx="2"/>
+<rect class="lm dash" opacity="0.35" x="239.6" y="192" width="11.8" height="16" rx="2"/>
+<rect class="lm dash" opacity="0.35" x="254.4" y="192" width="18.6" height="16" rx="2"/>
+<rect class="lm" x="276.0" y="192" width="25.4" height="16" rx="2"/>
+<rect class="lm" x="304.4" y="192" width="13.5" height="16" rx="2"/>
+<rect class="lm" x="320.9" y="192" width="16.9" height="16" rx="2"/>
+<rect class="lm" x="340.8" y="192" width="15.2" height="16" rx="2"/>
+<text class="m d" x="0" y="242">conversation résumée</text>
+<rect class="bx" x="0" y="252" width="360" height="24" rx="4"/>
+<rect class="fa" x="4" y="256" width="44" height="16" rx="2"/>
+<rect class="bxa" x="52" y="256" width="84" height="16" rx="2"/>
+<rect class="lm" x="140" y="256" width="22" height="16" rx="2"/>
+<text class="i mu" x="0" y="306">Effacer puis résumer libère la fenêtre sans</text>
+<text class="i mu" x="0" y="326">perdre la consigne du départ.</text>
+</svg>

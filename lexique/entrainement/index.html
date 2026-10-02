@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Au début, l&#39;ingé son a devant lui une console dont tous les potards sont tournés au hasard. Il fait entendre au groupe une phrase coupée avant la fin, écoute la note que le groupe propose, et tourne des milliards de potards d&#39;un cran dans le sens qui aurait donné la bonne ; puis il recommence, des milliers de milliards de fois. Dans la réalité, personne n&#39;écoute ; c&#39;est un calcul qui déduit le sens de chaque cran de l&#39;écart entre la note jouée et la note attendue.</p>
         <h2>Imagine</h2><p class="imagine">Avant, un petit modèle tout neuf, tiré d&#39;un manuel, reçoit « Every effort moves you » et continue par « rentingetic wasnم refres RexMeCHicular stren ». Après dix passages sur une seule nouvelle de 3 600 mots, la même phrase de départ donne « Yes--quite insensible to the irony », une réplique recopiée mot pour mot de la nouvelle. À cette échelle minuscule, apprendre et retenir par cœur se confondent encore.</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="entrainement-t"> <title id="entrainement-t">La boucle d'un pas d'entraînement : un texte coupé, le token prédit comparé au vrai, l'écart mesuré par la loss, puis tous les paramètres ajustés d'un cran avant le texte suivant.</title> <rect class="bx" x="80" y="6" width="200" height="58" rx="6"/> <text class="m mu" x="180" y="28" text-anchor="middle">texte coupé</text> <text x="180" y="50" text-anchor="middle">« Il pleut, prends ton… »</text> <path class="lm" d="M284 35 h20 v51"/><path class="lm" d="M299 80 l5 6 l5 -6"/> <rect class="bx" x="200" y="90" width="160" height="100" rx="6"/> <text class="m mu" x="212" y="114">token prédit</text> <text class="red" x="212" y="134">« vélo »</text> <text class="m mu" x="212" y="160">vraie suite</text> <text class="ac" x="212" y="180">« parapluie »</text> <path class="lm" d="M304 194 v32 h-20"/><path class="lm" d="M290 221 l-6 5 l6 5"/> <rect class="bxa" x="80" y="198" width="200" height="58" rx="6"/> <text class="m ac b" x="180" y="220" text-anchor="middle">loss</text> <text x="180" y="242" text-anchor="middle">l'écart entre les deux</text> <path class="lm" d="M76 226 h-20 v-32"/><path class="lm" d="M51 200 l5 -6 l5 6"/> <rect class="bx" x="0" y="90" width="170" height="100" rx="6"/> <text class="m mu" x="10" y="114">descente de gradient</text> <text x="10" y="146">chaque paramètre</text> <text x="10" y="166">bouge d'un cran</text> <path class="lm" d="M56 86 v-51 h20"/><path class="lm" d="M70 30 l6 5 l-6 5"/> <text class="i mu" x="0" y="280">Le texte fournit lui-même la bonne réponse,</text> <text class="i mu" x="0" y="298">et aucun humain n'a besoin de l'annoter.</text> </svg></figure>
         <h2>Définition complète</h2><p>Tout commence par le pré-entraînement (pre-training). On montre au modèle un texte coupé à un endroit, il prédit le token suivant, on mesure son erreur, et un calcul appelé descente de gradient ajuste chaque paramètre dans le sens qui aurait réduit cette erreur. Le texte sert de corrigé à lui-même, et aucun humain n&#39;a besoin de l&#39;annoter, ce qui permet de passer à l&#39;échelle d&#39;Internet.</p><p>Llama 3, le modèle de Meta sorti en juillet 2024, a lu 15 600 milliards de tokens pour son pré-entraînement, et DeepSeek-V3, fin 2024, a demandé 2,788 millions d&#39;heures de GPU pour son entraînement complet. On obtient à la sortie un modèle de base, qui sait continuer un texte mais pas encore se conduire en assistant.</p><p>Vient ensuite le post-entraînement (post-training), bien plus court, qui en fait un assistant. On lui montre d&#39;abord des exemples de bonnes réponses, c&#39;est le fine-tuning supervisé, puis on le récompense selon ce que préfèrent des humains (le RLHF) ou selon des réponses qu&#39;on peut vérifier. C&#39;est cette dernière étape qui donne à un assistant son ton, ses refus et sa façon de répondre.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

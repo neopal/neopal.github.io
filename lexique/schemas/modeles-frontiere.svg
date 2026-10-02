@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="modeles-frontiere-t">
+<title id="modeles-frontiere-t">Échelle logarithmique du calcul d'entraînement : l'estimation pour GPT-4 encadre le seuil de 10^25 opérations de l'AI Act, celle de GPT-6 Astra se situe vers 10^27, au-delà du seuil de 10^26 de la loi californienne SB 53.</title>
+<text class="m ac" x="110" y="30" text-anchor="middle">AI Act</text>
+<text class="m mu" x="200" y="30" text-anchor="middle">SB 53</text>
+<path class="la" d="M110 40 V186"/>
+<path class="lm dash" d="M200 40 V186"/>
+<text class="" x="118" y="72">GPT-4</text>
+<rect class="fa" x="101.3" y="82" width="62.9" height="10" rx="5" opacity="0.35"/>
+<circle class="fa" cx="139.0" cy="87" r="6"/>
+<text class="m mu" x="118" y="114">mars 2023</text>
+<text class="" x="340" y="132" text-anchor="end">GPT-6 Astra</text>
+<rect class="fa" x="262.9" y="142" width="54.2" height="10" rx="5" opacity="0.35"/>
+<circle class="fa" cx="290" cy="147" r="6"/>
+<text class="m mu" x="340" y="174" text-anchor="end">sept. 2026</text>
+<path class="lm" d="M20 192 H344"/>
+<path class="lm" d="M20 188 V196"/>
+<text class="m" x="20" y="214" text-anchor="middle">10^24</text>
+<path class="lm" d="M110 188 V196"/>
+<text class="m" x="110" y="214" text-anchor="middle">10^25</text>
+<path class="lm" d="M200 188 V196"/>
+<text class="m" x="200" y="214" text-anchor="middle">10^26</text>
+<path class="lm" d="M290 188 V196"/>
+<text class="m" x="290" y="214" text-anchor="middle">10^27</text>
+<text class="m mu" x="20" y="238">calcul d'entraînement estimé par Epoch AI</text>
+<text class="i mu" x="0" y="270">L'estimation pour GPT-4 encadre le seuil</text>
+<text class="i mu" x="0" y="290">européen, que GPT-6 Astra dépasse de loin.</text>
+</svg>

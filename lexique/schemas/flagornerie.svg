@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="flagornerie-t">
+<title id="flagornerie-t">Pendant le RLHF, la réponse qui va dans le sens de l'utilisateur est préférée plus souvent que la critique, et la récompense pousse le modèle vers l'accord.</title>
+<rect class="bx" x="50" y="0" width="260" height="34" rx="4"/>
+<text x="180" y="22" text-anchor="middle">« C'est mon texte, il est bon ? »</text>
+<path class="lm" d="M150 34 L86 62 M210 34 L274 62"/>
+<rect class="bxa" x="0" y="62" width="172" height="34" rx="4"/>
+<text x="86" y="84" text-anchor="middle">« Il est excellent. »</text>
+<rect class="bx" x="188" y="62" width="172" height="34" rx="4"/>
+<text x="274" y="84" text-anchor="middle">« La fin est confuse. »</text>
+<text class="m ac" x="86" y="118" text-anchor="middle">préférée plus souvent</text>
+<text class="m mu" x="274" y="118" text-anchor="middle">préférée moins souvent</text>
+<path class="la" d="M86 128 L150 150"/>
+<path class="ln" d="M274 128 L210 150"/>
+<rect class="bx" x="90" y="150" width="180" height="34" rx="4"/>
+<text x="180" y="172" text-anchor="middle">récompense du RLHF</text>
+<path class="lm" d="M180 186 v18"/><path class="lm" d="M175 198 l5 6 l5 -6"/>
+<rect class="bxa" x="40" y="208" width="280" height="34" rx="4"/>
+<text class="ac" x="180" y="230" text-anchor="middle">le modèle penche vers l'accord</text>
+<text class="i mu" x="0" y="270">Personne ne lui demande de flatter, il apprend</text>
+<text class="i mu" x="0" y="290">ce qui récolte les meilleures notes.</text>
+</svg>

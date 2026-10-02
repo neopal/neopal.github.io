@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 226" role="img" aria-labelledby="mythe-chatgpt-c-est-le-modele-t">
+<title id="mythe-chatgpt-c-est-le-modele-t">L'application ChatGPT garde son nom et ses couches de consignes, de mémoire, de recherche web et d'outils, pendant que le modèle à l'intérieur change, de GPT-3.5 en 2022 à GPT-6 en 2026.</title>
+<rect class="bxa" x="0" y="0" width="360" height="164" rx="8"/>
+<text class="b" x="14" y="26">ChatGPT</text>
+<text class="m mu" x="346" y="26" text-anchor="end">même adresse, même logo</text>
+<text class="m" x="14" y="52">consignes, mémoire, recherche web, outils</text>
+<rect class="bx dash" x="10" y="66" width="340" height="86" rx="6"/>
+<text class="m mu" x="22" y="88">plus d'une quinzaine de modèles, dont</text>
+<path class="ln" d="M51 124 H317"/>
+<text class="m" x="51.0" y="114" text-anchor="middle">GPT-3.5</text>
+<circle class="fd" cx="51.0" cy="124" r="3.5"/>
+<text class="m mu" x="51.0" y="143" text-anchor="middle">2022</text>
+<text class="m" x="108.3" y="114" text-anchor="middle">GPT-4</text>
+<circle class="fd" cx="108.3" cy="124" r="3.5"/>
+<text class="m" x="161.7" y="114" text-anchor="middle">GPT-4o</text>
+<circle class="fd" cx="161.7" cy="124" r="3.5"/>
+<text class="m" x="203.4" y="114" text-anchor="middle">o1</text>
+<circle class="fd" cx="203.4" cy="124" r="3.5"/>
+<text class="m" x="229.5" y="114" text-anchor="middle">o3</text>
+<circle class="fd" cx="229.5" cy="124" r="3.5"/>
+<text class="m" x="267.3" y="114" text-anchor="middle">GPT-5</text>
+<circle class="fd" cx="267.3" cy="124" r="3.5"/>
+<text class="m mu" x="267.3" y="143" text-anchor="middle">2025</text>
+<text class="m ac" x="316.8" y="114" text-anchor="middle">GPT-6</text>
+<circle class="fa" cx="316.8" cy="124" r="3.5"/>
+<text class="m mu" x="316.8" y="143" text-anchor="middle">2026</text>
+<text class="i mu" x="0" y="196">L'application garde son nom pendant que</text>
+<text class="i mu" x="0" y="216">le modèle qui répond à l'intérieur change.</text>
+</svg>

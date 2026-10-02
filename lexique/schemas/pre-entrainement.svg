@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="pre-entrainement-t">
+<title id="pre-entrainement-t">En milliards de tokens, du web indexé utile (environ 400 000) à Common Crawl (environ 130 000), puis FineWeb (15 000), tiré de Common Crawl par dédoublonnage et filtrage, et FineWeb-Edu (1 300), limité aux pages éducatives.</title>
+<text class="m d" x="358" y="14" text-anchor="end">milliards de tokens</text>
+<text class="m" x="0" y="40">web indexé utile</text>
+<text class="m mu" x="358" y="40" text-anchor="end">≈ 400 000</text>
+<rect class="bx" x="2.0" y="48" width="356.0" height="14" rx="2"/>
+<text class="m" x="0" y="88">Common Crawl</text>
+<text class="m mu" x="358" y="88" text-anchor="end">≈ 130 000</text>
+<rect class="bx" x="122.2" y="96" width="115.7" height="14" rx="2"/>
+<text class="m mu" x="180" y="136" text-anchor="middle">96 instantanés dédoublonnés et filtrés</text>
+<path class="lm" d="M175 144 l5 6 l5 -6"/>
+<text class="m" x="0" y="170">FineWeb</text>
+<text class="m ac" x="358" y="170" text-anchor="end">15 000</text>
+<rect class="fa" x="173.3" y="178" width="13.3" height="14" rx="2"/>
+<text class="m mu" x="180" y="218" text-anchor="middle">pages éducatives seulement</text>
+<path class="lm" d="M175 226 l5 6 l5 -6"/>
+<text class="m" x="0" y="252">FineWeb-Edu</text>
+<text class="m ac" x="358" y="252" text-anchor="end">1 300</text>
+<rect class="fa" x="179.0" y="260" width="2.0" height="14" rx="2"/>
+<text class="i mu" x="0" y="302">Les modèles qui lisent FineWeb-Edu font</text>
+<text class="i mu" x="0" y="322">mieux que ceux qui lisent FineWeb entier.</text>
+</svg>

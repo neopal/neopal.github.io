@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" role="img" aria-labelledby="rag-t">
+<title id="rag-t">Le RAG en trois temps : la question déclenche une recherche dans les documents découpés en chunks, les chunks les plus proches sont copiés dans la fenêtre de contexte avec la question, et le LLM répond à partir d'eux.</title>
+<rect class="bx" x="0" y="0" width="360" height="38" rx="6"/>
+<text x="14" y="24">« Combien de jours de congé par an ? »</text>
+<path class="lm" d="M60 42 v22"/><path class="lm" d="M55 58 l5 6 l5 -6"/>
+<text class="m mu" x="74" y="58">recherche</text>
+<rect class="bx" x="0" y="70" width="360" height="92" rx="6"/>
+<text class="m d" x="14" y="91">documents découpés en chunks</text>
+<rect class="bx" x="14" y="102" width="102" height="48" rx="3"/>
+<rect class="bx" x="129" y="102" width="102" height="48" rx="3"/>
+<rect class="bx" x="244" y="102" width="102" height="48" rx="3"/>
+<rect class="fd" x="20" y="108" width="90" height="7" rx="2"/>
+<rect class="fa" x="20" y="119" width="90" height="7" rx="2"/>
+<rect class="fd" x="20" y="130" width="90" height="7" rx="2"/>
+<rect class="fd" x="20" y="141" width="60" height="4" rx="2"/>
+<rect class="fd" x="135" y="108" width="90" height="7" rx="2"/>
+<rect class="fd" x="135" y="119" width="90" height="7" rx="2"/>
+<rect class="fd" x="135" y="130" width="90" height="7" rx="2"/>
+<rect class="fd" x="135" y="141" width="70" height="4" rx="2"/>
+<rect class="fa" x="250" y="108" width="90" height="7" rx="2"/>
+<rect class="fd" x="250" y="119" width="90" height="7" rx="2"/>
+<rect class="fa" x="250" y="130" width="90" height="7" rx="2"/>
+<rect class="fd" x="250" y="141" width="50" height="4" rx="2"/>
+<path class="lm" d="M60 166 v22"/><path class="lm" d="M55 182 l5 6 l5 -6"/>
+<text class="m mu" x="74" y="182">les chunks les plus proches</text>
+<rect class="bxa" x="0" y="194" width="236" height="80" rx="6"/>
+<text class="m d" x="14" y="215">fenêtre de contexte</text>
+<rect class="fa" x="14" y="226" width="64" height="7" rx="2"/>
+<rect class="fa" x="86" y="226" width="64" height="7" rx="2"/>
+<rect class="fa" x="158" y="226" width="64" height="7" rx="2"/>
+<text class="m" x="14" y="257">+ la question</text>
+<path class="lm" d="M240 216 h24"/><path class="lm" d="M258 211 l6 5 l-6 5"/>
+<rect class="bx" x="270" y="194" width="90" height="44" rx="6"/>
+<text class="b" x="315" y="221" text-anchor="middle">LLM</text>
+<path class="lm" d="M315 242 v16"/><path class="lm" d="M310 252 l5 6 l5 -6"/>
+<text x="315" y="276" text-anchor="middle">réponse</text>
+<text class="i mu" x="0" y="312">Les documents restent hors du modèle, et seuls</text>
+<text class="i mu" x="0" y="332">quelques passages entrent dans la conversation.</text>
+</svg>

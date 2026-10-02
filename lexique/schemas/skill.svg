@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 336" role="img" aria-labelledby="skill-t">
+<title id="skill-t">Le chargement par étages d'un skill : l'agent lit le nom et la description de chaque skill, ouvre le SKILL.md de celui qui correspond à la demande, et n'ouvre ses fichiers annexes que s'il en a besoin.</title>
+<rect class="bx" x="0" y="0" width="360" height="36" rx="6"/>
+<text x="14" y="23">« Prépare la facture du client Durand »</text>
+<path class="lm" d="M320 40 V84 H232"/><path class="lm" d="M238 79 l-6 5 l6 5"/>
+<text class="m" x="0" y="64">compte-rendu</text>
+<rect class="lm" x="140" y="55" width="80" height="10" rx="3"/>
+<rect class="bxa" x="-6" y="70" width="230" height="26" rx="5"/>
+<text class="m ac" x="0" y="88">modele-facture</text>
+<rect class="lm" x="140" y="79" width="80" height="10" rx="3"/>
+<path class="ln" d="M10 98 V172"/>
+<path class="ln" d="M10 112 h12"/>
+<text class="m" x="28" y="117">SKILL.md</text>
+<rect class="fa" x="140" y="107" width="200" height="10" rx="3" opacity="0.7"/>
+<path class="ln" d="M10 140 h12"/>
+<text class="m d" x="28" y="145">facture.xlsx</text>
+<rect class="lm dash" opacity="0.8" x="140" y="135" width="120" height="10" rx="3"/>
+<path class="ln" d="M10 168 h12"/>
+<text class="m d" x="28" y="173">remplir.py</text>
+<rect class="lm dash" opacity="0.8" x="140" y="163" width="150" height="10" rx="3"/>
+<text class="m" x="0" y="204">revue-contrat</text>
+<rect class="lm" x="140" y="195" width="80" height="10" rx="3"/>
+<text class="m" x="0" y="230">note-de-frais</text>
+<rect class="lm" x="140" y="221" width="80" height="10" rx="3"/>
+<path class="ln" d="M0 252 h360"/>
+<rect class="lm" x="0" y="268" width="22" height="10" rx="3"/>
+<text class="m mu" x="32" y="278">nom et description, toujours lus</text>
+<rect class="fa" x="0" y="292" width="22" height="10" rx="3" opacity="0.7"/>
+<text class="m mu" x="32" y="302">instructions, lues si la tâche correspond</text>
+<rect class="lm dash" opacity="0.8" x="0" y="316" width="22" height="10" rx="3"/>
+<text class="m mu" x="32" y="326">annexes, ouvertes si besoin</text>
+</svg>

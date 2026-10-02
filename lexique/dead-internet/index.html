@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Transposée au studio, la théorie voudrait que la salle soit remplie de mannequins, que les applaudissements sortent d&#39;une bande et que la maison de disques ait monté le tout pour te vendre ses albums. Les compteurs de la salle racontent une histoire moins romanesque. Un peu plus de la moitié des entrées sont bien des machines, mais beaucoup sont des techniciens venus recopier les partitions, comme les robots d&#39;indexation, et non des faux fans.</p>
         <h2>Imagine</h2><p class="imagine">Sous la vidéo d&#39;un chat qui joue du piano, vue deux millions de fois, tu écris « Il reste des humains ici ? ». Moins d&#39;une minute plus tard, un compte sans photo te répond : « Excellente question ! La place de l&#39;humain dans le monde numérique est un sujet passionnant. »</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 282" role="img" aria-labelledby="dead-internet-t"> <title id="dead-internet-t">Part du trafic web automatisé selon Imperva : 52 % en 2016, 51 % en 2024, plus de 53 % en 2025 ; et part des nouveaux articles en anglais jugés générés par l'IA selon Graphite : autour de la moitié.</title> <text class="m mu" x="0" y="14">requêtes web faites par des machines,</text> <text class="m mu" x="0" y="32">selon Imperva</text> <text class="m" x="0" y="58">2016</text> <rect class="fd" x="44" y="44" width="316" height="18" rx="3"/> <rect class="fa" x="44" y="44" width="164" height="18" rx="3"/> <text class="m ac" x="216" y="58">52 %</text> <text class="m d" x="44" y="82">l'année de la « mort » selon la théorie</text> <text class="m" x="0" y="108">2024</text> <rect class="fd" x="44" y="94" width="316" height="18" rx="3"/> <rect class="fa" x="44" y="94" width="161" height="18" rx="3"/> <text class="m ac" x="213" y="108">51 %</text> <text class="m" x="0" y="138">2025</text> <rect class="fd" x="44" y="124" width="316" height="18" rx="3"/> <rect class="fa" x="44" y="124" width="169" height="18" rx="3"/> <text class="m ac" x="221" y="138">plus de 53 %</text> <text class="m mu" x="0" y="172">nouveaux articles en anglais jugés</text> <text class="m mu" x="0" y="190">générés par l'IA, selon Graphite</text> <rect class="fd" x="44" y="202" width="316" height="18" rx="3"/> <rect class="fa" x="44" y="202" width="158" height="18" rx="3"/> <text class="m ac" x="210" y="216">autour de la moitié</text> <text class="i mu" x="0" y="254">Beaucoup des machines qui visitent les pages</text> <text class="i mu" x="0" y="274">les lisent sans rien y écrire.</text> </svg></figure>
         <h2>Définition complète</h2><p>Le texte fondateur a été publié le 5 janvier 2021 par un utilisateur nommé IlluminatiPirate sur Agora Road&#39;s Macintosh Cafe, un petit forum, et reprenait des idées nées sur des imageboards comme Wizardchan. Selon lui, l&#39;internet serait mort vers 2016 ou 2017, et le web qu&#39;on croit humain serait écrit en grande partie par des intelligences artificielles, aidées d&#39;influenceurs payés pour fabriquer la demande.</p><p>La suite du texte relève du complot. L&#39;auteur y voit la main du gouvernement américain, qui se servirait de Google, de Facebook ou d&#39;Amazon pour mener ce qu&#39;il appelle un gaslighting de la population mondiale par l&#39;IA, et sa preuve se résume à une liste de faits sans lien entre eux. En septembre 2021, un article de Kaitlyn Tiffany dans The Atlantic, « Maybe You Missed It, but the Internet &#39;Died&#39; Five Years Ago », l&#39;a fait sortir des forums, et c&#39;est lui que toute la presse a cité ensuite.</p><p>La part des machines dans le trafic se mesure, en revanche, et Imperva comptait déjà 52 % de trafic automatisé en 2016, l&#39;année même où la théorie date la mort de l&#39;internet. Selon le rapport annuel d&#39;Imperva sur les bots, publié en avril 2026, les programmes automatisés ont fait plus de 53 % des requêtes web en 2025, contre 51 % l&#39;année précédente. Ce chiffre compte ensemble les robots d&#39;indexation, les crawlers des labos d&#39;IA et les bots malveillants, et il dit combien de machines visitent les pages, pas combien en écrivent.</p><p>Pour l&#39;écriture, l&#39;étude la plus citée vient de Graphite, une agence de référencement, qui a passé au détecteur 43 000 articles en anglais tirés de Common Crawl. La part jugée générée par l&#39;IA y dépasse celle des textes humains en novembre 2024, puis plafonne autour de la moitié. Les auteurs notent eux-mêmes que ces articles apparaissent peu dans Google et dans ChatGPT, et que leur détecteur prend pour de l&#39;IA 4,2 % de textes écrits avant ChatGPT.</p><p>Le web n&#39;est donc pas mort, mais une bonne part de son trafic vient de machines, et près de la moitié de ses nouveaux articles en anglais aussi, selon le détecteur de Graphite.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

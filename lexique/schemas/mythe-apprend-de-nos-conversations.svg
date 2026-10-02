@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 298" role="img" aria-labelledby="mythe-apprend-de-nos-conversations-t">
+<title id="mythe-apprend-de-nos-conversations-t">Une préférence dite dans une conversation est notée dans la mémoire du produit, puis recollée dans la conversation suivante ; le modèle, en dessous, garde des paramètres figés.</title>
+<rect class="bx" x="0" y="0" width="160" height="84" rx="6"/>
+<text class="m mu" x="12" y="20">conversation 1</text>
+<text x="12" y="48">« Je code</text>
+<text x="12" y="70">en Python. »</text>
+<rect class="bx" x="200" y="0" width="160" height="84" rx="6"/>
+<text class="m mu" x="212" y="20">conversation 2</text>
+<rect class="bxa dash" x="210" y="30" width="128" height="24" rx="4"/>
+<text class="m ac" x="220" y="46">code en Python</text>
+<text x="212" y="74">« Quel langage ? »</text>
+<path class="ln" d="M20 84 V184"/>
+<path class="ln" d="M340 84 V184"/>
+<path class="la" d="M80 84 C80 128, 84 128, 98 128"/><path class="la" d="M93 123 l6 5 l-6 5"/>
+<text class="m mu" x="32" y="122">notée</text>
+<rect class="bxa" x="100" y="112" width="160" height="32" rx="4"/>
+<text class="m" x="180" y="133" text-anchor="middle">mémoire du produit</text>
+<path class="la" d="M260 128 C280 128, 280 110, 280 90"/><path class="la" d="M275 96 l5 -6 l5 6"/>
+<text class="m mu" x="290" y="122">recollée</text>
+<rect class="bx" x="0" y="184" width="360" height="48" rx="6"/>
+<text class="b" x="16" y="213">modèle</text>
+<text class="mu" x="80" y="213">paramètres figés, rien n'y est écrit</text>
+<text class="i mu" x="0" y="268">Ce qui revient d'une conversation à l'autre</text>
+<text class="i mu" x="0" y="288">a été noté par le produit, pas appris.</text>
+</svg>

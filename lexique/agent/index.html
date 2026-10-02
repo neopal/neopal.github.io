@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Envoie le groupe en tournée avec ses roadies et leurs caisses à outils, et tu as un agent. En studio, il jouait le morceau qu&#39;on lui demandait ; sur la route, il décide de l&#39;étape suivante, demande aux roadies de monter la scène ou d&#39;appeler la salle, écoute ce que ça donne et choisit la suite, sans jamais porter une caisse lui-même.</p>
         <h2>Imagine</h2><p class="imagine">Le 22 septembre 2026, dans l&#39;annonce de Claude Opus 5.5, un développeur de Clio raconte avoir confié au modèle une tâche répartie sur six dépôts de code et l&#39;avoir laissé tourner seul toute la nuit. Le modèle est resté sur la tâche plus de 18 heures ; lancé à 18 heures en quittant le bureau, il travaillait encore à midi le lendemain, l&#39;équivalent de deux journées et demie d&#39;un temps plein à 35 heures par semaine.</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 384" role="img" aria-labelledby="agent-t"> <title id="agent-t">Workflow contre agent : le workflow suit un chemin écrit à l'avance, ticket puis résumer puis ranger en file ; l'agent choisit à chaque étape parmi plusieurs actions d'après le résultat de la précédente, ici chercher, puis reformuler après une recherche vide, puis répondre.</title> <text class="m d" x="0" y="14">workflow</text> <rect class="bx" x="0" y="24" width="72" height="34" rx="6"/> <text class="m" x="36" y="46" text-anchor="middle">ticket</text> <rect class="bx" x="96" y="24" width="100" height="34" rx="6"/> <text class="m" x="146" y="46" text-anchor="middle">résumer</text> <rect class="bx" x="220" y="24" width="140" height="34" rx="6"/> <text class="m" x="290" y="46" text-anchor="middle">ranger en file</text> <path class="lm" d="M75 41 h18"/><path class="lm" d="M87 36 l6 5 l-6 5"/> <path class="lm" d="M199 41 h18"/><path class="lm" d="M211 36 l6 5 l-6 5"/> <path class="ln" d="M0 80 h360"/> <text class="m d" x="0" y="104">agent</text> <text class="mu" x="360" y="104" text-anchor="end">« un train pour Lyon jeudi »</text> <rect class="bxa" x="0" y="118" width="110" height="30" rx="6"/> <text class="m" x="55" y="138" text-anchor="middle">chercher</text> <rect class="bx dash" x="125" y="118" width="110" height="30" rx="6" opacity="0.6"/> <text class="m d" x="180" y="138" text-anchor="middle">lire l'agenda</text> <rect class="bx dash" x="250" y="118" width="110" height="30" rx="6" opacity="0.6"/> <text class="m d" x="305" y="138" text-anchor="middle">répondre</text> <text class="m red" x="55" y="168" text-anchor="middle">aucun résultat</text> <path class="ln dash" d="M55 176 L55 204"/> <path class="la" d="M55 176 L180 204"/> <path class="ln dash" d="M55 176 L305 204"/> <rect class="bx dash" x="0" y="208" width="110" height="30" rx="6" opacity="0.6"/> <text class="m d" x="55" y="228" text-anchor="middle">lire l'agenda</text> <rect class="bxa" x="125" y="208" width="110" height="30" rx="6"/> <text class="m" x="180" y="228" text-anchor="middle">reformuler</text> <rect class="bx dash" x="250" y="208" width="110" height="30" rx="6" opacity="0.6"/> <text class="m d" x="305" y="228" text-anchor="middle">répondre</text> <text class="m mu" x="180" y="258" text-anchor="middle">des horaires</text> <path class="ln dash" d="M180 266 L55 294"/> <path class="ln dash" d="M180 266 L180 294"/> <path class="la" d="M180 266 L305 294"/> <rect class="bx dash" x="0" y="298" width="110" height="30" rx="6" opacity="0.6"/> <text class="m d" x="55" y="318" text-anchor="middle">reformuler</text> <rect class="bx dash" x="125" y="298" width="110" height="30" rx="6" opacity="0.6"/> <text class="m d" x="180" y="318" text-anchor="middle">lire l'agenda</text> <rect class="bxa" x="250" y="298" width="110" height="30" rx="6"/> <text class="m" x="305" y="318" text-anchor="middle">répondre</text> <text class="i mu" x="0" y="356">Le modèle choisit l'étape suivante après</text> <text class="i mu" x="0" y="376">avoir lu le résultat de la précédente.</text> </svg></figure>
         <h2>Définition complète</h2><p>Un agent est un modèle de langage placé dans une boucle, avec des outils. On lui donne un objectif, par exemple « trouve-moi un train pour Lyon jeudi et mets-le dans mon agenda ». Il choisit une action, comme chercher les horaires, lit le résultat, puis choisit la suivante, jusqu&#39;à ce qu&#39;il juge la tâche finie ou qu&#39;une limite l&#39;arrête. Ces actions, ce sont les programmes autour de lui qui les exécutent, à partir des demandes qu&#39;il écrit.</p><p>Pour reconnaître un agent, la question est de savoir qui choisit l&#39;étape suivante. Anthropic a posé la distinction en décembre 2024 : dans un workflow, un développeur écrit les étapes à l&#39;avance, même si un modèle intervient à chacune ; dans un agent, le modèle décide en cours de route de ses actions et de ses outils. Le bot qui résume chaque ticket entrant puis le range dans une file reste donc un workflow, alors que l&#39;assistant qui relance de lui-même une recherche quand la première ne donne rien penche du côté de l&#39;agent.</p><p>Les agents les plus utilisés en 2026 travaillent dans le code. Claude Code est sorti chez Anthropic en février 2025, Codex chez OpenAI en avril 2025, et Codex comptait plus de 2 millions d&#39;utilisateurs par semaine en mars 2026 ; Cursor joue dans la même catégorie. Tous lisent les fichiers d&#39;un projet, les modifient, lancent les tests et recommencent tant que les tests échouent.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

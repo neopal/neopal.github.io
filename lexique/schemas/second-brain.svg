@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 268" role="img" aria-labelledby="second-brain-t">
+<title id="second-brain-t">Le LLM wiki : tu déposes tes sources dans raw/, que l'agent lit sans modifier ; il écrit et relie des pages dans wiki/, qu'il relit à chaque session, et toi tu poses les questions et relis.</title>
+<text class="m mu" x="50" y="14" text-anchor="middle">tu déposes</text>
+<text class="m mu" x="180" y="14" text-anchor="middle">tu demandes</text>
+<text class="m mu" x="310" y="14" text-anchor="middle">tu relis</text>
+<path class="lm" d="M50 22 V42"/><path class="lm" d="M45 37 l5 5 l5 -5"/>
+<path class="lm" d="M180 22 V72"/><path class="lm" d="M175 67 l5 5 l5 -5"/>
+<path class="lm" d="M310 42 V22"/><path class="lm" d="M305 27 l5 -5 l5 5"/>
+<rect class="bx" x="0" y="48" width="100" height="112" rx="6"/>
+<text class="m b" x="12" y="68">raw/</text>
+<rect class="fd" x="14" y="88" width="72" height="12" rx="2"/>
+<rect class="fd" x="14" y="108" width="72" height="12" rx="2"/>
+<rect class="fd" x="14" y="128" width="72" height="12" rx="2"/>
+<text class="m d" x="0" y="180">lecture seule</text>
+<path class="la" d="M104 104 H124"/><path class="la" d="M119 99 l5 5 l-5 5"/>
+<rect class="bxa" x="130" y="80" width="100" height="48" rx="6"/>
+<text class="b" x="180" y="109" text-anchor="middle">agent</text>
+<path class="la" d="M234 104 H254"/><path class="la" d="M249 99 l5 5 l-5 5"/>
+<rect class="bx" x="260" y="48" width="100" height="112" rx="6"/>
+<text class="m b" x="272" y="68">wiki/</text>
+<rect class="bxa" x="272" y="80" width="64" height="20" rx="3"/>
+<text class="m" x="304" y="95" text-anchor="middle">index</text>
+<path class="ln" d="M290 100 L282 120 M318 100 L326 120 M290 128 H318 M282 136 L304 144 M326 136 L304 144"/>
+<rect class="fa" x="274" y="120" width="16" height="16" rx="2"/>
+<rect class="fa" x="318" y="120" width="16" height="16" rx="2"/>
+<rect class="fa" x="296" y="138" width="16" height="16" rx="2"/>
+<path class="la dash" d="M310 164 C310 196, 180 196, 180 136"/><path class="la" d="M175 141 l5 -6 l5 6"/>
+<text class="m mu" x="245" y="212" text-anchor="middle">relu à chaque session</text>
+<text class="i mu" x="0" y="242">La synthèse s'accumule dans le wiki au lieu</text>
+<text class="i mu" x="0" y="262">d'être refaite de zéro à chaque question.</text>
+</svg>

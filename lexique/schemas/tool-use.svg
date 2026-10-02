@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 384" role="img" aria-labelledby="tool-use-t">
+<title id="tool-use-t">Un appel d'outil entre le modèle, l'application et un outil météo : l'application envoie la question et la description des outils, le modèle répond par un bloc tool_use, l'application exécute l'outil, renvoie le résultat dans un bloc tool_result, puis le modèle rédige la réponse.</title>
+<text class="m d" x="50" y="16" text-anchor="middle">modèle</text>
+<text class="m d" x="180" y="16" text-anchor="middle">application</text>
+<text class="m d" x="310" y="16" text-anchor="middle">outil météo</text>
+<path class="ln dash" d="M50 26 V316"/>
+<path class="ln dash" d="M180 26 V316"/>
+<path class="ln dash" d="M310 26 V316"/>
+<path class="lm" d="M176 58 H54"/><path class="lm" d="M60 53 l-6 5 l6 5"/>
+<text x="115" y="48" text-anchor="middle">question + outils</text>
+<path class="la" d="M54 112 H176"/><path class="la" d="M170 107 l6 5 l-6 5"/>
+<text class="m ac" x="115" y="102" text-anchor="middle">tool_use</text>
+<text class="m" x="115" y="132" text-anchor="middle">meteo("Lyon")</text>
+<path class="lm" d="M184 168 H306"/><path class="lm" d="M300 163 l6 5 l-6 5"/>
+<text x="245" y="158" text-anchor="middle">exécute</text>
+<path class="lm" d="M306 212 H184"/><path class="lm" d="M190 207 l-6 5 l6 5"/>
+<text class="m" x="245" y="202" text-anchor="middle">"pluie"</text>
+<path class="la" d="M176 258 H54"/><path class="la" d="M60 253 l-6 5 l6 5"/>
+<text class="m ac" x="115" y="248" text-anchor="middle">tool_result</text>
+<path class="lm" d="M54 304 H176"/><path class="lm" d="M170 299 l6 5 l-6 5"/>
+<text x="115" y="294" text-anchor="middle">réponse</text>
+<text class="i mu" x="115" y="326" text-anchor="middle">« Il pleut à Lyon. »</text>
+<text class="i mu" x="0" y="356">Le modèle se contente d'écrire l'appel, et</text>
+<text class="i mu" x="0" y="376">c'est l'application qui exécute l'outil.</text>
+</svg>

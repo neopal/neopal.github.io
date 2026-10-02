@@ -83,7 +83,7 @@ Chaque fiche porte, juste après son titre :
 
 Champ optionnel `solutions: [{name, kind, url}]`, rendu après « Dans le jargon » et cherchable par nom (taper « Pinecone » mène au RAG).
 - Seulement quand le lecteur repart avec un outil à essayer : RAG, Embedding, Tokenizer, Token, Paramètres. Pas ailleurs sans évidence.
-- 6 entrées au plus, groupées par `kind`, un type court en français (« base vectorielle », « modèle d'embedding », « plateforme cloud », « bibliothèque open source », « outil pour tester »).
+- 6 entrées au plus (exception : Skill, 10 à 15 dépôts connus à date, demande PA du 2026-10-02), groupées par `kind`, un type court en français (« base vectorielle », « modèle d'embedding », « plateforme cloud », « bibliothèque open source », « outil pour tester »).
 - Mélanger commercial, cloud et open source.
 - URL = site ou doc officielle, vérifiée avant publication (une URL qui ne répond pas se corrige ou l'entrée sort).
 - Aucun adjectif commercial, aucune affirmation de part de marché.

@@ -104,6 +104,28 @@ p{margin-bottom:12px}
 .video{margin:28px 0 4px}
 .video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
 
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
 .splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
 .split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
@@ -252,6 +274,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .connexions{display:none}
 
   .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
   .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
 
   .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
@@ -319,6 +342,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         
         <h2>L'image</h2><p>Quand la fausse note sort des enceintes, elle a traversé la console tranche après tranche, et la rétropropagation refait le chemin à l&#39;envers. La dernière tranche établit sa part de la faute et transmet le reste à celle d&#39;avant, qui fait de même, jusqu&#39;au micro. Personne ne marche dans le studio, en réalité ; chaque tranche a gardé ses notes de l&#39;aller, et le retour se contente de les relire.</p>
         <h2>Imagine</h2><p class="imagine">« Qui a joué faux ? », demande le producteur après la prise, et l&#39;ingé son lui tend un listing de sept milliards de lignes : « Tout le monde, un peu, et voici exactement de combien chacun. »</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 358" role="img" aria-labelledby="retropropagation-t"> <title id="retropropagation-t">Une pile de quatre couches : l'aller monte du texte jusqu'à la loss en gardant les activations, le retour redescend en donnant son gradient à chaque couche, et ce retour coûte environ deux fois l'aller, contre 7 milliards de calculs complets pour tester les paramètres un par un.</title> <text class="m red b" x="180" y="16" text-anchor="middle">loss</text> <rect class="bx" x="118" y="26" width="124" height="26" rx="4"/> <rect class="lm" x="126" y="34" width="10" height="10" rx="1" fill="none"/> <text class="m" x="180" y="44" text-anchor="middle">couche 4</text> <rect class="fa" x="224" y="34" width="10" height="10" rx="1"/> <rect class="bx" x="118" y="60" width="124" height="26" rx="4"/> <rect class="lm" x="126" y="68" width="10" height="10" rx="1" fill="none"/> <text class="m" x="180" y="78" text-anchor="middle">couche 3</text> <rect class="fa" x="224" y="68" width="10" height="10" rx="1"/> <rect class="bx" x="118" y="94" width="124" height="26" rx="4"/> <rect class="lm" x="126" y="102" width="10" height="10" rx="1" fill="none"/> <text class="m" x="180" y="112" text-anchor="middle">couche 2</text> <rect class="fa" x="224" y="102" width="10" height="10" rx="1"/> <rect class="bx" x="118" y="128" width="124" height="26" rx="4"/> <rect class="lm" x="126" y="136" width="10" height="10" rx="1" fill="none"/> <text class="m" x="180" y="146" text-anchor="middle">couche 1</text> <rect class="fa" x="224" y="136" width="10" height="10" rx="1"/> <text class="m mu" x="180" y="176" text-anchor="middle">texte</text> <path class="lm" d="M102 160 V30"/><path class="lm" d="M97 36 l5 -6 l5 6"/> <path class="la" d="M258 30 V158"/><path class="la" d="M253 152 l5 6 l5 -6"/> <text class="m" x="92" y="88" text-anchor="end">forward</text> <text class="m" x="92" y="106" text-anchor="end">pass</text> <text class="m ac" x="268" y="88">backward</text> <text class="m ac" x="268" y="106">pass</text> <rect class="lm" x="0.5" y="196.5" width="10" height="10" rx="1" fill="none"/> <text class="m mu" x="18" y="206">activations gardées à l'aller</text> <rect class="fa" x="0" y="216" width="10" height="10" rx="1"/> <text class="m mu" x="18" y="226">gradient rendu à la couche au retour</text> <path class="ln" d="M0 244 H360"/> <text class="m d" x="0" y="266">coût d'un pas, 7 milliards de paramètres</text> <text class="m" x="0" y="290">aller</text> <rect class="lm" x="96.5" y="280.5" width="30" height="12" rx="2" fill="none"/> <text class="m" x="0" y="312">retour</text> <rect class="fa" x="96" y="302" width="60" height="12" rx="2"/> <text class="m mu" x="166" y="312">≈ 2 × l'aller</text> <text class="m red" x="0" y="334">un par un</text> <path class="lr dash" d="M96 330 H346"/><path class="lr" d="M340 324 l6 6 l-6 6"/> <text class="m red" x="96" y="352">7 milliards de calculs complets</text> </svg></figure>
         <h2>Définition complète</h2><p>Pour corriger un modèle, la descente de gradient a besoin de savoir, pour chacun de ses milliards de paramètres, dans quel sens il aurait fallu le tourner. Les tester un par un demanderait, pour un modèle de 7 milliards de paramètres, 7 milliards de calculs complets à chaque pas. La rétropropagation obtient toutes ces réponses d&#39;un seul retour, qui coûte environ deux fois le calcul de l&#39;aller, en appliquant couche par couche la règle de dérivation en chaîne.</p><p>Ce raccourci coûte cher en mémoire, car le retour relit tout ce que l&#39;aller a calculé. Hugging Face compte, pour un entraînement classique, 18 octets par paramètre avant même ces valeurs intermédiaires, contre 2 octets pour faire tourner le même modèle en 16 bits. La même documentation cite un modèle de 4 milliards de paramètres qui demande environ 85 Go de mémoire GPU pour s&#39;entraîner.</p><p>L&#39;idée vient de plusieurs endroits. Seppo Linnainmaa en publie la forme générale en 1970, Paul Werbos l&#39;applique aux réseaux de neurones en 1982, et c&#39;est l&#39;article de David Rumelhart, Geoffrey Hinton et Ronald Williams dans Nature, en 1986, qui la fait adopter par tout le domaine. Les grands modèles actuels sont encore entraînés de cette façon.</p>
         
         
@@ -347,7 +371,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
   if (base.slice(-1) !== '/') base += '/';
   window.LEX_BASE = base;
-  var files = ['terms.js', 'render.js'];
+  var files = ['terms.js', 'schemas.js', 'render.js'];
   var pending = files.length;
   files.forEach(function (f) {
     var s = document.createElement('script');
@@ -366,6 +390,8 @@ window.__lexBoot = function () {
   const R = window.LexRender;
   const CATS = window.DICO_CATEGORIES;
   const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
   const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
   const OPTS = {base: BASE, urls: URLS};
   const SITE = 'https://neopal.github.io';

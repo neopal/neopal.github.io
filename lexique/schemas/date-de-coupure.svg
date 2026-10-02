@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 236" role="img" aria-labelledby="date-de-coupure-t">
+<title id="date-de-coupure-t">Frise de GPT-4o : textes lus jusqu'à la date de coupure du 1er octobre 2023, sortie 225 jours plus tard le 13 mai 2024, puis 1 097 jours de retard au 2 octobre 2026.</title>
+<text class="m ac" x="120" y="18" text-anchor="middle">date de coupure</text>
+<text class="m" x="120" y="36" text-anchor="middle">1er oct. 2023</text>
+<text class="m" x="358" y="18" text-anchor="end">2 oct. 2026</text>
+<text class="m mu" x="358" y="36" text-anchor="end">toujours au catalogue</text>
+<text class="m mu" x="2" y="64">textes lus</text>
+<rect class="fa" x="2" y="74" width="118" height="12" rx="2"/>
+<path class="lm dash" d="M120 80 H352"/>
+<path class="la" d="M120 44 V96"/>
+<path class="lm" d="M165 72 V88"/>
+<path class="lm" d="M352 44 V88"/>
+<text class="m mu" x="252" y="70" text-anchor="middle">jamais lu</text>
+<text class="m" x="165" y="110" text-anchor="middle">sortie de GPT-4o</text>
+<text class="m" x="165" y="128" text-anchor="middle">13 mai 2024</text>
+<path class="lm" d="M120 140 v6 h45 v-6"/>
+<text class="m mu" x="174" y="151">225 jours</text>
+<path class="la" d="M120 164 v8 h232 v-8"/>
+<text class="m ac" x="236" y="192" text-anchor="middle">1 097 jours de retard</text>
+<text class="i mu" x="2" y="226">Son retard grandit chaque jour de service.</text>
+</svg>
