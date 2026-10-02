@@ -303,7 +303,7 @@ const Paquets: React.FC<{at: number}> = ({at}) => {
       </Pop>
       {lane(3, 'Queens, New York', at + BEAT, '#fff')}
       {lane(8, 'New York City', at + BEAT * 3, GREY)}
-      <Pop at={at + BEAT * 4.5}><Mono size={40} color={DIM}>même question, autre paquet</Mono></Pop>
+      <Pop at={at + BEAT * 4.5}><Mono size={40} color={DIM}>même question, autre paquet (exemple)</Mono></Pop>
     </div>
   );
 };
