@@ -7,8 +7,13 @@ import {Harness, HARNESS_DURATION} from './Harness';
 import {Mcp, MCP_DURATION} from './Mcp';
 import {Benchmaxxing, BENCHMAXXING_DURATION} from './Benchmaxxing';
 import {Fenetre, FENETRE_DURATION} from './Fenetre';
+import {Prediction, PREDICTION_DURATION} from './Prediction';
+import {Temperature, TEMPERATURE_DURATION} from './Temperature';
+import {Rag, RAG_DURATION} from './Rag';
+import {Embedding, EMBEDDING_DURATION} from './Embedding';
+import {Agent, AGENT_DURATION} from './Agent';
 
-// Les sept shorts dans une seule entrée (stills et rendus partagent le même bundle).
+// Les douze shorts dans une seule entrée (stills et rendus partagent le même bundle).
 const C = {fps: 30, width: 1080, height: 1920} as const;
 
 export const Root: React.FC = () => (
@@ -20,5 +25,10 @@ export const Root: React.FC = () => (
     <Composition id="Mcp" component={Mcp} durationInFrames={MCP_DURATION} {...C} />
     <Composition id="Benchmaxxing" component={Benchmaxxing} durationInFrames={BENCHMAXXING_DURATION} {...C} />
     <Composition id="Fenetre" component={Fenetre} durationInFrames={FENETRE_DURATION} {...C} />
+    <Composition id="Prediction" component={Prediction} durationInFrames={PREDICTION_DURATION} {...C} />
+    <Composition id="Temperature" component={Temperature} durationInFrames={TEMPERATURE_DURATION} {...C} />
+    <Composition id="Rag" component={Rag} durationInFrames={RAG_DURATION} {...C} />
+    <Composition id="Embedding" component={Embedding} durationInFrames={EMBEDDING_DURATION} {...C} />
+    <Composition id="Agent" component={Agent} durationInFrames={AGENT_DURATION} {...C} />
   </>
 );
