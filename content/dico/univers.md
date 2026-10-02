@@ -85,3 +85,9 @@ Règles de rythme et de visuel (retour PA sur la v3, 2026-10-02) :
 En une phrase (ELI5) > L'image (studio) > Imagine (situation impossible) > Définition complète (le sérieux) > 2024 vs 2026 (si une vraie évolution existe) > Entendu au bureau > À éviter > Script du short.
 3. Le studio sert l'explication ; si un concept s'explique mieux sans lui, on s'en passe et on le dit.
 4. Les exemples sont récents (2025-2026) dès qu'ils existent ; la rubrique « 2024 vs 2026 » apparaît seulement quand il y a une vraie évolution à raconter.
+
+## Règles de la page web (retour PA, 2026-10-02)
+
+- Nom de la section : **Lexique IA**. Wordmark en texte simple, une seule couleur (pas de « IA » en couleur d'accent).
+- Aucun micro-texte décoratif : pas de surtitre qui répète le titre, pas de légende qui décrit l'évidence (« La version courte en 30 secondes, à partager »), pas d'indication d'usage quand l'interface parle d'elle-même.
+- Test avant mise en ligne : lister chaque texte qui n'est pas du contenu (surtitres, légendes, aides, libellés) et supprimer ceux qu'un lecteur ne regretterait pas.

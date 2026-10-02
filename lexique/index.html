@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lexique IA | Pierre-Adrien Lair</title>
+<meta name="description" content="Le vocabulaire de l'IA expliqué simplement, en français : une définition, une image, une vidéo courte et les sources. Par Pierre-Adrien Lair.">
+<link rel="canonical" href="https://neopal.github.io/lexique/">
+<meta property="og:title" content="Lexique IA">
+<meta property="og:description" content="Le vocabulaire de l'IA expliqué simplement, en français, avec une vidéo courte par terme.">
+<meta property="og:url" content="https://neopal.github.io/lexique/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://neopal.github.io/lexique/videos/token.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0b; --panel:#111; --line:#262626; --text:#f2f2f2; --muted:#a8a8a8; --dim:#8a8a8a;
+  --accent:#7CFFB2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+#graph g{outline:none}
+#graph g:focus-visible circle{stroke:#fff;stroke-width:6}
+
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;border-bottom:1px solid var(--line);background:rgba(11,11,11,.92);backdrop-filter:blur(8px)}
+.top a.back{font-size:14px;color:var(--muted);text-decoration:none}
+.top a.back:hover{color:var(--text)}
+.brand{font-weight:800;font-size:20px;letter-spacing:-.01em;text-decoration:none}
+
+.layout{display:grid;grid-template-columns:1fr minmax(0,560px);min-height:calc(100vh - 57px)}
+.graph-wrap{position:sticky;top:57px;height:calc(100vh - 57px);overflow:hidden;border-right:1px solid var(--line)}
+#graph{width:100%;height:100%;display:block;touch-action:none}
+.legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+
+.panel{padding:40px 40px 80px;background:var(--panel)}
+.kicker{font-size:14px;font-weight:600;color:var(--cat,var(--accent));margin-bottom:10px}
+h1{font-size:44px;line-height:1.05;font-weight:800;letter-spacing:-.02em;margin-bottom:20px}
+.lead{font-size:21px;line-height:1.5;font-weight:600}
+h2{font-size:17px;font-weight:800;color:var(--text);margin:36px 0 8px}
+p{margin-bottom:12px}
+p.muted{color:var(--muted)}
+.imagine{border-left:3px solid var(--cat,var(--accent));padding-left:16px;font-style:italic}
+
+.video{margin:28px 0 4px;display:flex;gap:16px;align-items:flex-end}
+.video video{width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
+.video p{font-size:14px;color:var(--muted);max-width:220px}
+.novideo{margin-top:24px;font-size:14px;color:var(--dim)}
+
+.splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.split .w{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--muted);min-width:96px}
+.chip{font-family:'IBM Plex Mono',monospace;font-size:15px;padding:3px 10px;border:1.5px solid var(--cat,var(--accent));color:var(--text);border-radius:6px}
+
+.chat{display:flex;flex-direction:column;gap:10px}
+.bubble{max-width:88%;padding:12px 16px;border-radius:18px;font-size:16px}
+.bubble.q{align-self:flex-end;background:#232323}
+.bubble.a{align-self:flex-start;border:1.5px solid var(--line)}
+
+.avoid{display:flex;gap:12px}
+.avoid b{color:#FF7A7A;font-size:20px;line-height:1.4}
+
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.links button{font:inherit;font-size:14px;padding:6px 12px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--text);cursor:pointer}
+.links button.live{border-color:var(--c)}
+.links button.live:hover{background:rgba(255,255,255,.06)}
+.links button.soon{color:var(--dim);cursor:default}
+
+.sources{font-size:14px;color:var(--muted);padding-left:18px}
+.sources li{margin-bottom:6px}
+
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:44px;padding-top:20px;border-top:1px solid var(--line)}
+.nav button{font:inherit;font-size:15px;background:transparent;border:0;color:var(--muted);cursor:pointer;text-align:left}
+.nav button:hover{color:var(--text)}
+.nav button[disabled]{visibility:hidden}
+
+.index h1{font-size:52px}
+.index ul{list-style:none;margin-top:8px}
+.index li{border-top:1px solid var(--line)}
+.index li button{width:100%;display:flex;justify-content:space-between;gap:12px;font:inherit;background:transparent;border:0;color:var(--text);padding:14px 0;cursor:pointer;text-align:left}
+.index li button:hover .t{color:var(--accent)}
+.index li .c{font-size:14px;color:var(--muted)}
+.index li.soon button{color:var(--dim);cursor:default}
+.index li.soon .c{color:var(--dim)}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#222;border:1px solid var(--line);padding:10px 16px;border-radius:10px;font-size:14px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:30}
+.toast.on{opacity:1}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .graph-wrap{position:relative;top:0;height:62vh;border-right:0;border-top:1px solid var(--line);order:2}
+  .panel{order:1;padding:28px 16px 48px}
+  h1{font-size:34px}
+  .index h1{font-size:40px}
+  .video{flex-direction:column;align-items:flex-start}
+  .video video{width:min(260px,70vw)}
+  .top{padding:12px 16px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="./">Lexique IA</a>
+  <a class="back" href="../">Pierre-Adrien Lair, CV</a>
+</header>
+
+<div class="layout">
+  <div class="graph-wrap" aria-label="Graphe des termes">
+    <svg id="graph" role="img" aria-label="Carte des termes et de leurs liens"></svg>
+    <div class="legend" id="legend"></div>
+  </div>
+  <main class="panel" id="panel" aria-live="polite"></main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="terms.js"></script>
+<script>
+(function () {
+  const CATS = window.DICO_CATEGORIES;
+  const TERMS = window.DICO_TERMS;
+  const byId = Object.fromEntries(TERMS.map((t) => [t.id, t]));
+  const live = TERMS.filter((t) => t.status === 'live');
+  const panel = document.getElementById('panel');
+  const svg = document.getElementById('graph');
+  const NS = 'http://www.w3.org/2000/svg';
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+  const color = (t) => CATS[t.cat].color;
+
+  function toast(msg) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.classList.add('on');
+    clearTimeout(toast.t);
+    toast.t = setTimeout(() => el.classList.remove('on'), 1800);
+  }
+
+  // ---------- Panneau ----------
+
+  function renderIndex() {
+    document.title = 'Lexique IA | Pierre-Adrien Lair';
+    panel.style.removeProperty('--cat');
+    const rows = TERMS.map((t) => `
+      <li class="${t.status}"><button data-go="${t.id}" ${t.status === 'soon' ? 'aria-disabled="true"' : ''}>
+        <span class="t">${esc(t.title)}</span><span class="c">${t.status === 'soon' ? 'à venir' : esc(CATS[t.cat].label)}</span>
+      </button></li>`).join('');
+    panel.innerHTML = `
+      <div class="index">
+        <h1>Lexique IA</h1>
+        <p class="lead">Les définitions qui m'ont aidé à comprendre comment marchent les LLM, avec leurs sources.</p>
+        <h2>Les termes</h2>
+        <ul>${rows}</ul>
+      </div>`;
+  }
+
+  function renderTerm(t) {
+    document.title = `${t.title.replace(/[«»]/g, '').trim()} | Lexique IA`;
+    panel.style.setProperty('--cat', color(t));
+    const i = live.indexOf(t);
+    const prev = live[i - 1];
+    const next = live[i + 1];
+    const video = t.video
+      ? `<div class="video"><video controls playsinline preload="none" poster="${t.video.poster}" src="${t.video.src}" aria-label="Vidéo : ${esc(t.title)}"></video></div>`
+      : '';
+    const splits = t.split
+      ? `<div class="splits">${t.split.map((s) => `<div class="split"><span class="w">${esc(s.mot)}</span>${s.blocs.map((b) => `<span class="chip">${esc(b)}</span>`).join('')}</div>`).join('')}</div>`
+      : '';
+    const links = (t.links || [])
+      .map((id) => byId[id])
+      .filter(Boolean)
+      .map((l) => `<button class="${l.status}" style="--c:${color(l)}" data-go="${l.id}" ${l.status === 'soon' ? 'aria-disabled="true" title="À venir"' : ''}>${esc(l.title)}</button>`)
+      .join('');
+    panel.innerHTML = `
+      <article>
+        <div class="kicker">${esc(CATS[t.cat].label)}</div>
+        <h1>${esc(t.title)}</h1>
+        <p class="lead">${esc(t.short)}</p>
+        ${video}
+        <h2>L'image</h2>
+        <p>${esc(t.image)}</p>
+        ${splits}
+        <h2>Imagine</h2>
+        <p class="imagine">${esc(t.imagine)}</p>
+        <h2>Définition complète</h2>
+        ${t.full.map((p) => `<p>${esc(p)}</p>`).join('')}
+        ${t.then ? `<h2>2024 vs 2026</h2><p>${esc(t.then)}</p>` : ''}
+        <h2>Entendu au bureau</h2>
+        <div class="chat">${t.office.map((m) => `<div class="bubble ${m.who}">${esc(m.text)}</div>`).join('')}</div>
+        <h2>À éviter</h2>
+        <div class="avoid"><b aria-hidden="true">✕</b><p>${esc(t.avoid)}</p></div>
+        <h2>Connexions</h2>
+        <div class="links">${links}</div>
+        <h2>Sources</h2>
+        <ol class="sources">${t.sources.map((s) => `<li><a href="${s.url}" target="_blank" rel="noopener">${esc(s.label)}</a></li>`).join('')}</ol>
+        <nav class="nav">
+          <button data-go="${prev ? prev.id : ''}" ${prev ? '' : 'disabled'}>← ${prev ? esc(prev.title) : ''}</button>
+          <button data-go="index">Tous les termes</button>
+          <button data-go="${next ? next.id : ''}" ${next ? '' : 'disabled'}>${next ? esc(next.title) : ''} →</button>
+        </nav>
+      </article>`;
+  }
+
+  // ---------- Navigation ----------
+
+  let current = null;
+  function go(id, push = true) {
+    if (id === 'index' || !id) {
+      current = null;
+      renderIndex();
+      if (push) history.pushState({}, '', './');
+    } else {
+      const t = byId[id];
+      if (!t) return go('index', push);
+      if (t.status === 'soon') return toast(`« ${t.title} » arrive bientôt.`);
+      current = t;
+      renderTerm(t);
+      if (push) history.pushState({id}, '', `?term=${id}`);
+    }
+    highlight();
+    if (window.innerWidth <= 900) window.scrollTo({top: 0, behavior: reduced ? 'auto' : 'smooth'});
+    else panel.scrollTop = 0;
+  }
+
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-go]');
+    if (b && b.dataset.go) go(b.dataset.go);
+  });
+  window.addEventListener('popstate', () => go(new URLSearchParams(location.search).get('term') || 'index', false));
+
+  // ---------- Graphe ----------
+
+  const edges = [];
+  const seen = new Set();
+  TERMS.forEach((t) => (t.links || []).forEach((l) => {
+    if (!byId[l]) return;
+    const k = [t.id, l].sort().join('|');
+    if (!seen.has(k)) { seen.add(k); edges.push([t.id, l]); }
+  }));
+
+  const nodes = TERMS.map((t, i) => {
+    const a = (i / TERMS.length) * Math.PI * 2;
+    return {t, x: Math.cos(a) * 160, y: Math.sin(a) * 160, vx: 0, vy: 0, r: t.status === 'live' ? 22 : 11};
+  });
+  const nodeOf = Object.fromEntries(nodes.map((n) => [n.t.id, n]));
+
+  // Petite simulation de forces, calculée une fois au chargement.
+  for (let step = 0; step < 400; step++) {
+    for (const a of nodes) {
+      for (const b of nodes) {
+        if (a === b) continue;
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const d2 = Math.max(dx * dx + dy * dy, 100);
+        const f = 5200 / d2;
+        a.vx += (dx / Math.sqrt(d2)) * f;
+        a.vy += (dy / Math.sqrt(d2)) * f;
+      }
+      a.vx -= a.x * 0.004;
+      a.vy -= a.y * 0.004;
+    }
+    for (const [s, d] of edges) {
+      const a = nodeOf[s], b = nodeOf[d];
+      const dx = b.x - a.x, dy = b.y - a.y;
+      const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+      const f = (dist - 150) * 0.012;
+      a.vx += (dx / dist) * f; a.vy += (dy / dist) * f;
+      b.vx -= (dx / dist) * f; b.vy -= (dy / dist) * f;
+    }
+    for (const n of nodes) { n.x += n.vx; n.y += n.vy; n.vx *= 0.6; n.vy *= 0.6; }
+  }
+
+  const gEdges = document.createElementNS(NS, 'g');
+  const gNodes = document.createElementNS(NS, 'g');
+  svg.append(gEdges, gNodes);
+
+  const edgeEls = edges.map(([s, d]) => {
+    const l = document.createElementNS(NS, 'line');
+    l.setAttribute('stroke', '#2c2c2c');
+    l.setAttribute('stroke-width', '1.5');
+    gEdges.append(l);
+    return {s, d, el: l};
+  });
+
+  const nodeEls = nodes.map((n) => {
+    const g = document.createElementNS(NS, 'g');
+    g.style.cursor = n.t.status === 'live' ? 'pointer' : 'default';
+    g.setAttribute('tabindex', n.t.status === 'live' ? '0' : '-1');
+    g.setAttribute('role', 'button');
+    g.setAttribute('aria-label', n.t.status === 'live' ? n.t.title : `${n.t.title}, à venir`);
+    const c = document.createElementNS(NS, 'circle');
+    c.setAttribute('r', n.r);
+    const live = n.t.status === 'live';
+    c.setAttribute('fill', live ? color(n.t) : '#1a1a1a');
+    c.setAttribute('stroke', live ? color(n.t) : '#3a3a3a');
+    c.setAttribute('stroke-width', live ? '0' : '1.5');
+    const txt = document.createElementNS(NS, 'text');
+    txt.textContent = n.t.graphLabel || n.t.title;
+    txt.setAttribute('y', n.r + 20);
+    txt.setAttribute('text-anchor', 'middle');
+    txt.setAttribute('fill', live ? '#f2f2f2' : '#8a8a8a');
+    txt.setAttribute('font-family', live ? 'Inter, sans-serif' : 'IBM Plex Mono, monospace');
+    txt.setAttribute('font-weight', live ? '800' : '400');
+    txt.setAttribute('font-size', live ? '15' : '12');
+    g.append(c, txt);
+    g.addEventListener('click', () => go(n.t.id));
+    g.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(n.t.id); } });
+    gNodes.append(g);
+    return {n, g, c};
+  });
+
+  function highlight() {
+    const id = current && current.id;
+    const near = new Set(id ? [id, ...(byId[id].links || [])] : []);
+    edgeEls.forEach((e) => {
+      const on = id && (e.s === id || e.d === id);
+      e.el.setAttribute('stroke', on ? color(byId[id]) : '#2c2c2c');
+      e.el.setAttribute('stroke-opacity', on ? '0.8' : '1');
+    });
+    nodeEls.forEach(({n, g, c}) => {
+      g.style.opacity = !id || near.has(n.t.id) ? '1' : '0.35';
+      c.setAttribute('stroke-width', n.t.id === id ? '6' : n.t.status === 'live' ? '0' : '1.5');
+      if (n.t.id === id) c.setAttribute('stroke', 'rgba(255,255,255,.85)');
+      else c.setAttribute('stroke', n.t.status === 'live' ? color(n.t) : '#3a3a3a');
+    });
+  }
+
+  function fit() {
+    const box = svg.getBoundingClientRect();
+    const xs = nodes.map((n) => n.x), ys = nodes.map((n) => n.y);
+    const pad = 90;
+    const bottomPad = 70;
+    const minX = Math.min(...xs) - pad, maxX = Math.max(...xs) + pad;
+    const minY = Math.min(...ys) - pad, maxY = Math.max(...ys) + pad + bottomPad;
+    svg.setAttribute('viewBox', `${minX} ${minY} ${maxX - minX} ${maxY - minY}`);
+    svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    return box;
+  }
+
+  // Légère respiration du graphe.
+  function frame(t) {
+    nodes.forEach((n, i) => {
+      const ox = reduced ? 0 : Math.sin(t / 1900 + i) * 4;
+      const oy = reduced ? 0 : Math.cos(t / 2300 + i * 1.3) * 4;
+      n.px = n.x + ox; n.py = n.y + oy;
+    });
+    nodeEls.forEach(({n, g}) => g.setAttribute('transform', `translate(${n.px},${n.py})`));
+    edgeEls.forEach((e) => {
+      const a = nodeOf[e.s], b = nodeOf[e.d];
+      e.el.setAttribute('x1', a.px); e.el.setAttribute('y1', a.py);
+      e.el.setAttribute('x2', b.px); e.el.setAttribute('y2', b.py);
+    });
+    if (!reduced) requestAnimationFrame(frame);
+  }
+
+  document.getElementById('legend').innerHTML = Object.values(CATS)
+    .map((c) => `<span><i style="background:${c.color}"></i>${esc(c.label)}</span>`)
+    .join('') + '<span><i style="background:#1a1a1a;border:1.5px solid #555"></i>à venir</span>';
+
+  fit();
+  window.addEventListener('resize', fit);
+  requestAnimationFrame(frame);
+  go(new URLSearchParams(location.search).get('term') || 'index', false);
+})();
+</script>
+</body>
+</html>

@@ -23,6 +23,10 @@ Site CV/Portfolio interactif pour **Pierre-Adrien LAIR** avec chatbot IA intégr
 ├── sitemap.xml         # SEO
 ├── robots.txt          # SEO + AI crawlers
 ├── llms.txt            # Contexte pour AI assistants
+├── lexique/            # Lexique IA : index.html (graphe + fiche), terms.js (données), videos/
+├── dico/               # Redirection vers lexique/ (ancienne URL)
+├── content/dico/       # Bible éditoriale (univers.md), brouillons, maquettes DA
+├── video/              # Pilote Remotion des shorts (node_modules et out/ ignorés)
 ├── .nojekyll           # Désactive Jekyll sur GitHub Pages
 └── .github/workflows/static.yml  # GitHub Actions deploy
 ```
@@ -64,6 +68,13 @@ Site CV/Portfolio interactif pour **Pierre-Adrien LAIR** avec chatbot IA intégr
 - Casquette + flèche pixel art en bas du viewport
 - Disparaît après scroll (quand hero section passe 50% viewport)
 - `id="scrollIndicator"` avec toggle `opacity-0`/`pointer-events-none`
+
+### 5. Lexique IA (`/lexique/`)
+- Glossaire FR de l'AI engineering : graphe des termes à gauche, fiche à droite, URL `?term=<id>`.
+- Contenu dans `lexique/terms.js` (`status: 'live'` = publié, `'soon'` = grisé dans le graphe).
+- **Avant d'écrire une fiche ou un short, lire `content/dico/univers.md`** : gabarit de fiche, univers studio, règles d'écriture à l'écran (pas de staccato, pas de micro-texte décoratif), règles de rythme vidéo.
+- Chaque fait daté porte sa source dans `sources` ; les chiffres de tokenisation viennent d'un test `tiktoken`.
+- Vidéos : rendu Remotion dans `video/`, puis recompression (`ffmpeg -crf 27 -movflags +faststart`) dans `lexique/videos/`.
 
 ## SEO & AI Discoverability
 - JSON-LD Schema.org (Person) dans `<head>`
