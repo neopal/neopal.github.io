@@ -53,7 +53,7 @@ const Reponse: React.FC = () => {
   const SY = 260;
   return (
     <Scene
-      caps={[[0, "MCP est un standard ouvert qui définit comment une application d'IA *se branche* sur un outil."]]}
+      caps={[[0, "MCP est un standard ouvert pour *brancher* une appli d'IA sur un outil."]]}
     >
       <svg width={W} height={520} viewBox={`0 0 ${W} 520`} style={{display: 'block', overflow: 'visible'}}>
         <Node x={SX} y={SY - 90} w={288} h={180} label="GitHub" sub="serveur MCP" p={interpolate(frame, [BEAT * 1.6, BEAT * 1.6 + 10], [0, 1], clamp)} />
@@ -90,7 +90,7 @@ const Frise: React.FC = () => {
   const axis = useProg(BEAT * 1.2, BEAT * 7);
   return (
     <Scene
-      caps={[[0, "Anthropic l'a publié en novembre 2024, et OpenAI puis Google l'ont adopté en mars et avril 2025."]]}
+      caps={[[0, "Anthropic l'a publié en 2024, OpenAI et Google l'ont adopté en 2025."]]}
       bottom={
         <Pop at={BEAT * 8.4} style={{display: 'flex', alignItems: 'baseline', justifyContent: 'center', gap: 20}}>
           <Mono size={72}>97 M</Mono>
@@ -147,8 +147,8 @@ const Calcul: React.FC = () => {
   return (
     <Scene
       caps={[
-        [0, 'Sans prise commune, six applications et plus de 10 000 serveurs demandent un câble sur mesure par paire.'],
-        [AFTER, 'Avec MCP, chaque application et chaque serveur ont *leur propre prise*, et 10 006 pièces suffisent.'],
+        [0, 'Sans prise commune, il faut un câble sur mesure par paire.'],
+        [AFTER, 'Avec MCP, chacun a *sa prise*, et 10 006 prises suffisent.'],
       ]}
       bottom={
         <div style={{display: 'flex', justifyContent: 'center'}}>
@@ -210,7 +210,7 @@ const Incident: React.FC = () => {
   });
   const Y2 = 330;
   return (
-    <Scene caps={[[0, 'En mai 2025, un ticket piégé a poussé un agent branché par MCP à recopier des dépôts privés dans un dépôt public.']]}>
+    <Scene caps={[[0, 'En mai 2025, un ticket piégé a fait fuiter des dépôts privés via un agent MCP.']]}>
       <svg width={W} height={560} viewBox={`0 0 ${W} 560`} style={{display: 'block', overflow: 'visible'}}>
         <Node x={0} y={40} w={240} h={110} label="GitHub" />
         <Node x={W - 240} y={40} w={240} h={110} label="agent" hi />
@@ -259,7 +259,7 @@ const Switch: React.FC<{on: number}> = ({on}) => (
 const Chute: React.FC = () => {
   const frame = useCurrentFrame();
   return (
-    <Scene caps={[[0, "Avant de brancher un serveur, lis donc les outils qu'il expose et ne lui laisse que les droits utiles."]]}>
+    <Scene caps={[[0, 'Avant de brancher un serveur, lis ses outils et ne lui laisse que les droits utiles.']]}>
       <Pop at={BEAT * 1} style={{border: '4px solid #444', borderRadius: 28, padding: '22px 28px', display: 'flex', flexDirection: 'column', gap: 10}}>
         <Mono size={40} color="#fff">serveur MCP · outils</Mono>
         {TOOLS.map((t, k) => {

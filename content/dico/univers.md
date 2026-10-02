@@ -166,7 +166,7 @@ Défauts des fiches les moins bien notées, à éviter : noms de modèles opaque
 
 ## Règles vidéo v2 (critique des 7 premiers shorts, 2026-10-02)
 
-- **Temps de lecture** : au moins 0,3 s par mot pour chaque légende, mesuré de son apparition à la suivante. Moins de mots plutôt que des légendes rapides : 110 à 130 mots par short au maximum.
+- **Temps de lecture** (révisé le 2026-10-02 après retours : « pas le temps de lire », notamment sur Paramètres) : au plus 12 caractères par seconde pour chaque légende, mesurés de son apparition à la suivante moins 0,3 s d'animation d'entrée. L'œil lit la légende ET regarde le schéma : l'ancienne règle de 0,3 s par mot donnait 15 à 19 car/s, trop rapide. Pour garder un short nerveux, on coupe des mots plutôt qu'on allonge : une légende fait 50 à 80 caractères (10 à 15 mots), et ce que le schéma montre déjà (noms, dates, chiffres) sort de la phrase. 60 à 90 mots par short. Contrôle : `cd video && npm run check`.
 - **Durée** : 35 à 45 s si le temps de lecture l'exige ; la règle des 30-32 s cède devant la lisibilité.
 - **Zone de légende fixe** : la phrase occupe toujours la même zone (tiers haut), le schéma le tiers central, le tiers bas sert aux chiffres et libellés. L'œil ne cherche jamais la légende.
 - **Taille minimale** : aucun texte sous 36 px sur un cadre de 1080 px (environ 13 px sur un téléphone) ; libellés mono à 36-44 px.

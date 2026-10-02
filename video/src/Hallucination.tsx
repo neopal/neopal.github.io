@@ -70,7 +70,7 @@ const AirCanada: React.FC = () => {
   const frame = useCurrentFrame();
   return (
     <Scene
-      caps={[[0, "En février 2024, un tribunal a jugé Air Canada responsable d'une règle de remboursement que son chatbot avait inventée."]]}
+      caps={[[0, "En 2024, Air Canada a été jugée responsable d'une règle inventée par son bot."]]}
       gap={40}
     >
       <Pop at={BEAT * 1.2} style={{display: 'flex', alignItems: 'center', gap: 24}}>
@@ -115,8 +115,8 @@ const Pourquoi: React.FC = () => {
   return (
     <Scene
       caps={[
-        [0, "En septembre 2025, OpenAI a montré que la plupart des évaluations notent les modèles comme un QCM sans points négatifs."],
-        [215, "Avouer rapporte zéro et deviner parfois un point, alors l'entraînement pousse les modèles à *deviner*."],
+        [0, 'En 2025, OpenAI montre que les tests notent comme un QCM sans points négatifs.'],
+        [215, 'Avouer rapporte zéro, deviner parfois un point, donc il *devine*.'],
       ]}
       gap={40}
       bottom={
@@ -149,7 +149,7 @@ const EtDonc: React.FC = () => {
   const cx = 330 + (target < 0 ? 120 : 0);
   const press = REFS.some((_, k) => frame >= clickAt(k) && frame < clickAt(k) + 4);
   return (
-    <Scene caps={[[0, 'Quand il te cite trois études avec auteurs et année, ouvre chacune avant de la mettre dans ton deck.']]}>
+    <Scene caps={[[0, "S'il te cite trois études, ouvre chacune avant de la mettre dans ton deck."]]}>
       <div style={{position: 'relative', height: REFS.length * (CARD + GAP)}}>
         {REFS.map((r, k) => {
           const opened = frame >= clickAt(k) + 4;
@@ -190,7 +190,7 @@ const Chute: React.FC = () => {
     </Pop>
   );
   return (
-    <Scene caps={[[0, 'Il ne ment pas pour autant, puisque mentir suppose de connaître la vérité.']]} gap={90}>
+    <Scene caps={[[0, 'Il ne ment pas, puisque mentir suppose de connaître la vérité.']]} gap={90}>
       {gauge('plausible', 0.94 * g, BEAT * 0.6)}
       {gauge('vrai', 0, BEAT * 1, true)}
     </Scene>
@@ -200,7 +200,7 @@ const Chute: React.FC = () => {
 const SCENES: Scenes = [
   [Reponse, 320],
   [AirCanada, 210],
-  [Pourquoi, 370],
+  [Pourquoi, 390],
   [EtDonc, 210],
   [Chute, 175],
 ];

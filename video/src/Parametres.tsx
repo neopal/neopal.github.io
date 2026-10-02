@@ -67,7 +67,7 @@ const Reponse: React.FC = () => {
   const value = (turn / 135) * 0.05;
   return (
     <Scene
-      caps={[[0, "Un paramètre est un nombre, comme la position d'un potard, et un modèle de langage en contient des *milliards*."]]}
+      caps={[[0, 'Un paramètre est un nombre réglable, et un modèle en a des *milliards*.']]}
       bottom={
         <div style={{display: 'flex', justifyContent: 'center'}}>
           {single ? (
@@ -92,7 +92,7 @@ const Lecture: React.FC = () => {
   const done = p >= 1;
   return (
     <Scene
-      caps={[[0, 'DeepSeek-V3 en a 671 milliards, et les lire à voix haute, un par seconde, prendrait environ 21 000 ans.']]}
+      caps={[[0, 'Lire les 671 milliards de DeepSeek-V3, un par seconde, prendrait 21 000 ans.']]}
       gap={40}
     >
       <Pop at={BEAT * 0.6} style={{display: 'flex', flexDirection: 'column', gap: 8}}>
@@ -128,7 +128,7 @@ const Entrainement: React.FC = () => {
   const iconP = cur ? interpolate(frame, [cur.at + 3, cur.at + 12], [0, 1], clamp) : 0;
   const angle = (i: number) => baseAngle(i) + (rnd(i + 100) - 0.5) * 80 * t1;
   return (
-    <Scene caps={[[0, "Pendant l'entraînement, chaque paramètre est ajusté par petites touches pour que le modèle prédise mieux le token suivant."]]} gap={36}>
+    <Scene caps={[[0, "L'entraînement tourne un peu les potards à chaque erreur de prédiction."]]} gap={36}>
       <Pop at={BEAT}>
         <Say size={52} color={GREY}>Le plus haut sommet des Alpes est</Say>
         <div style={{height: 120, display: 'flex', alignItems: 'center', gap: 24}}>
@@ -155,7 +155,7 @@ const Fige: React.FC = () => {
   const lock = useProg(BEAT * 1, BEAT * 1 + 10);
   return (
     <Scene
-      caps={[[0, "Ensuite ils ne bougent plus, et c'est pour ça que discuter avec lui ne le change pas."]]}
+      caps={[[0, 'Ensuite ils sont figés, et discuter avec le modèle ne les change pas.']]}
       gap={40}
       bottom={
         <Pop at={BEAT * 6} style={{display: 'flex', alignItems: 'baseline', gap: 24, justifyContent: 'center'}}>
@@ -183,7 +183,7 @@ const Reparti: React.FC = () => {
   const lit = (i: number) => (FACT.has(i) ? interpolate(frame, [BEAT * 2 + rnd(i + 400) * 30, BEAT * 2 + rnd(i + 400) * 30 + 4], [0, 1], clamp) : 0);
   return (
     <Scene
-      caps={[[0, 'Un fait comme « le Mont-Blanc est le plus haut sommet des Alpes » est *réparti* sur des milliers de paramètres.']]}
+      caps={[[0, 'Un fait comme celui du Mont-Blanc est *réparti* sur des milliers de potards.']]}
       bottom={
         <Pop at={BEAT * 6} style={{display: 'flex', justifyContent: 'center'}}>
           <Mono size={44} color={GREY}>aucun potard ne le contient seul</Mono>
@@ -212,7 +212,7 @@ const Chute: React.FC = () => {
   const crossP = useProg(BEAT * 6.4, BEAT * 7.2);
   const lit = (i: number) => (FACT.has(i) ? 1 : 0);
   return (
-    <Scene caps={[[0, "On ne peut donc pas l'effacer comme on supprime une ligne dans une base de données."]]} gap={40}>
+    <Scene caps={[[0, "On ne peut donc pas l'effacer comme une ligne de base de données."]]} gap={40}>
       <Pop at={BEAT * 1.2}>
         <Mono size={40} color={DIM}>base de données</Mono>
         <div style={{display: 'flex', alignItems: 'center', gap: 24, marginTop: 12}}>
