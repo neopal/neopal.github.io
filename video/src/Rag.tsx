@@ -74,8 +74,8 @@ const Reponse: React.FC = () => {
         ) : frame >= BEAT * 3 ? (
           <Bubble side="left" at={BEAT * 3}>
             <div style={{display: 'flex', alignItems: 'center', gap: 20, opacity: frame >= FILE_AT ? 0.45 : 1}}>
-              <Say size={52}>Je ne connais pas ce menu.</Say>
-              <Cross p={cross} size={70} />
+              <Say size={48}>Je ne connais pas ce menu.</Say>
+              <Cross p={cross} size={56} />
             </div>
           </Bubble>
         ) : null}

@@ -363,7 +363,7 @@ const Copie: React.FC = () => {
 
 const DAYS = ['mer.', 'jeu.', 'ven.'];
 const HOURS = ['8 h', '9 h', '10 h', '11 h', '12 h'];
-const HR = 92;
+const HR = 110;
 
 const Chute: React.FC = () => {
   const frame = useCurrentFrame();
