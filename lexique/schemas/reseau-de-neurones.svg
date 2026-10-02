@@ -1,72 +1,72 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 318" role="img" aria-labelledby="reseau-de-neurones-t">
 <title id="reseau-de-neurones-t">Un petit réseau de neurones en quatre rangées, des entrées aux sorties, où chaque lien porte un poids ; un neurone agrandi multiplie ses trois entrées par leurs poids, fait la somme, applique un seuil et transmet le résultat.</title>
-<path class="ln" d="M49 50 L121 34"/>
-<path class="ln" d="M49 50 L121 98"/>
-<path class="ln" d="M49 50 L121 130"/>
-<path class="ln" d="M49 82 L121 34"/>
-<path class="ln" d="M49 82 L121 98"/>
-<path class="ln" d="M49 82 L121 130"/>
-<path class="ln" d="M49 114 L121 34"/>
-<path class="ln" d="M49 114 L121 98"/>
-<path class="ln" d="M49 114 L121 130"/>
-<path class="ln" d="M139 34 L211 34"/>
-<path class="ln" d="M139 34 L211 66"/>
-<path class="ln" d="M139 34 L211 98"/>
-<path class="ln" d="M139 34 L211 130"/>
-<path class="ln" d="M139 66 L211 34"/>
-<path class="ln" d="M139 66 L211 66"/>
-<path class="ln" d="M139 66 L211 98"/>
-<path class="ln" d="M139 66 L211 130"/>
-<path class="ln" d="M139 98 L211 34"/>
-<path class="ln" d="M139 98 L211 66"/>
-<path class="ln" d="M139 98 L211 98"/>
-<path class="ln" d="M139 98 L211 130"/>
-<path class="ln" d="M139 130 L211 34"/>
-<path class="ln" d="M139 130 L211 66"/>
-<path class="ln" d="M139 130 L211 98"/>
-<path class="ln" d="M139 130 L211 130"/>
-<path class="ln" d="M229 34 L301 66"/>
-<path class="ln" d="M229 34 L301 98"/>
-<path class="ln" d="M229 66 L301 66"/>
-<path class="ln" d="M229 66 L301 98"/>
-<path class="ln" d="M229 98 L301 66"/>
-<path class="ln" d="M229 98 L301 98"/>
-<path class="ln" d="M229 130 L301 66"/>
-<path class="ln" d="M229 130 L301 98"/>
-<path class="la" d="M49 50 L121 66"/>
-<path class="la" d="M49 82 L121 66"/>
-<path class="la" d="M49 114 L121 66"/>
-<circle class="fd" cx="40" cy="50" r="9"/>
-<circle class="lm" cx="40" cy="50" r="9"/>
-<circle class="fd" cx="40" cy="82" r="9"/>
-<circle class="lm" cx="40" cy="82" r="9"/>
-<circle class="fd" cx="40" cy="114" r="9"/>
-<circle class="lm" cx="40" cy="114" r="9"/>
-<circle class="fd" cx="130" cy="34" r="9"/>
-<circle class="lm" cx="130" cy="34" r="9"/>
-<circle class="fa" cx="130" cy="66" r="9"/>
-<circle class="fd" cx="130" cy="98" r="9"/>
-<circle class="lm" cx="130" cy="98" r="9"/>
-<circle class="fd" cx="130" cy="130" r="9"/>
-<circle class="lm" cx="130" cy="130" r="9"/>
-<circle class="fd" cx="220" cy="34" r="9"/>
-<circle class="lm" cx="220" cy="34" r="9"/>
-<circle class="fd" cx="220" cy="66" r="9"/>
-<circle class="lm" cx="220" cy="66" r="9"/>
-<circle class="fd" cx="220" cy="98" r="9"/>
-<circle class="lm" cx="220" cy="98" r="9"/>
-<circle class="fd" cx="220" cy="130" r="9"/>
-<circle class="lm" cx="220" cy="130" r="9"/>
-<circle class="fd" cx="310" cy="66" r="9"/>
-<circle class="lm" cx="310" cy="66" r="9"/>
-<circle class="fd" cx="310" cy="98" r="9"/>
-<circle class="lm" cx="310" cy="98" r="9"/>
-<text class="m mu" x="40" y="162" text-anchor="middle">entrées</text>
-<text class="m mu" x="130" y="162" text-anchor="middle">couche 1</text>
-<text class="m mu" x="220" y="162" text-anchor="middle">couche 2</text>
-<text class="m mu" x="310" y="162" text-anchor="middle">sorties</text>
-<path class="lm dash" d="M130 75 L40 186"/>
-<path class="lm dash" d="M130 75 L320 186"/>
+<path class="ln" d="M49 66 L121 50"/>
+<path class="ln" d="M49 66 L121 114"/>
+<path class="ln" d="M49 66 L121 146"/>
+<path class="ln" d="M49 98 L121 50"/>
+<path class="ln" d="M49 98 L121 114"/>
+<path class="ln" d="M49 98 L121 146"/>
+<path class="ln" d="M49 130 L121 50"/>
+<path class="ln" d="M49 130 L121 114"/>
+<path class="ln" d="M49 130 L121 146"/>
+<path class="ln" d="M139 50 L211 50"/>
+<path class="ln" d="M139 50 L211 82"/>
+<path class="ln" d="M139 50 L211 114"/>
+<path class="ln" d="M139 50 L211 146"/>
+<path class="ln" d="M139 82 L211 50"/>
+<path class="ln" d="M139 82 L211 82"/>
+<path class="ln" d="M139 82 L211 114"/>
+<path class="ln" d="M139 82 L211 146"/>
+<path class="ln" d="M139 114 L211 50"/>
+<path class="ln" d="M139 114 L211 82"/>
+<path class="ln" d="M139 114 L211 114"/>
+<path class="ln" d="M139 114 L211 146"/>
+<path class="ln" d="M139 146 L211 50"/>
+<path class="ln" d="M139 146 L211 82"/>
+<path class="ln" d="M139 146 L211 114"/>
+<path class="ln" d="M139 146 L211 146"/>
+<path class="ln" d="M229 50 L301 82"/>
+<path class="ln" d="M229 50 L301 114"/>
+<path class="ln" d="M229 82 L301 82"/>
+<path class="ln" d="M229 82 L301 114"/>
+<path class="ln" d="M229 114 L301 82"/>
+<path class="ln" d="M229 114 L301 114"/>
+<path class="ln" d="M229 146 L301 82"/>
+<path class="ln" d="M229 146 L301 114"/>
+<path class="la" d="M49 66 L121 82"/>
+<path class="la" d="M49 98 L121 82"/>
+<path class="la" d="M49 130 L121 82"/>
+<circle class="fd" cx="40" cy="66" r="9"/>
+<circle class="lm" cx="40" cy="66" r="9"/>
+<circle class="fd" cx="40" cy="98" r="9"/>
+<circle class="lm" cx="40" cy="98" r="9"/>
+<circle class="fd" cx="40" cy="130" r="9"/>
+<circle class="lm" cx="40" cy="130" r="9"/>
+<circle class="fd" cx="130" cy="50" r="9"/>
+<circle class="lm" cx="130" cy="50" r="9"/>
+<circle class="fa" cx="130" cy="82" r="9"/>
+<circle class="fd" cx="130" cy="114" r="9"/>
+<circle class="lm" cx="130" cy="114" r="9"/>
+<circle class="fd" cx="130" cy="146" r="9"/>
+<circle class="lm" cx="130" cy="146" r="9"/>
+<circle class="fd" cx="220" cy="50" r="9"/>
+<circle class="lm" cx="220" cy="50" r="9"/>
+<circle class="fd" cx="220" cy="82" r="9"/>
+<circle class="lm" cx="220" cy="82" r="9"/>
+<circle class="fd" cx="220" cy="114" r="9"/>
+<circle class="lm" cx="220" cy="114" r="9"/>
+<circle class="fd" cx="220" cy="146" r="9"/>
+<circle class="lm" cx="220" cy="146" r="9"/>
+<circle class="fd" cx="310" cy="82" r="9"/>
+<circle class="lm" cx="310" cy="82" r="9"/>
+<circle class="fd" cx="310" cy="114" r="9"/>
+<circle class="lm" cx="310" cy="114" r="9"/>
+<text class="m mu" x="40" y="14" text-anchor="middle">entrées</text>
+<text class="m mu" x="130" y="14" text-anchor="middle">couche 1</text>
+<text class="m mu" x="220" y="14" text-anchor="middle">couche 2</text>
+<text class="m mu" x="310" y="14" text-anchor="middle">sorties</text>
+<path class="lm dash" d="M130 91 L60 186"/>
+<path class="lm dash" d="M130 91 L220 186"/>
 <rect class="bxa dash" x="0" y="186" width="360" height="86" rx="6"/>
 <text class="m" x="12" y="210">entrée 1 × poids 1</text>
 <path class="lm" d="M160 206 L196 229"/>
