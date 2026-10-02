@@ -162,10 +162,12 @@
   function renderIndex(cats, terms, opts) {
     const o = opt(opts);
     cats = cats || {};
-    const rows = arr(terms).map((t) => {
+    // Tri A-Z sans accents ni guillemets, comme la liste de la colonne de gauche.
+    const sortKey = (t) => normalize((t.title || '').replace(/[«»"]/g, '').trim());
+    const rows = [...arr(terms)].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).map((t) => {
       const en = t.en && normalize(t.en) !== normalize(t.title) ? `<span class="e" lang="en">${esc(t.en)}</span>` : '';
       const side = t.status === 'live' ? esc(catLabel(t, cats)) : 'à venir';
-      const inner = `<span class="t">${esc(t.title)}</span>${en}<span class="c">${side}</span>`;
+      const inner = `<i aria-hidden="true"></i><span class="t">${esc(t.title)}</span>${en}<span class="c">${side}</span>`;
       return t.status === 'live'
         ? `<li class="live" style="--c:${color(t, cats)}"><a href="${termUrl(t.id, o)}" data-go="${esc(t.id)}">${inner}</a></li>`
         : `<li class="soon"><span class="row">${inner}</span></li>`;
