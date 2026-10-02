@@ -611,7 +611,7 @@ window.DICO_TERMS = [
       "parametres",
       "tailles-de-modele",
       "open-weights",
-      "cout-d-une-requete",
+      
       "mythe-plus-gros-plus-intelligent"
     ],
     "short": "Un MoE est un modèle découpé en nombreux sous-réseaux, les experts, dont seuls quelques-uns travaillent pour chaque token ; il occupe la mémoire d'un très gros modèle mais calcule chaque token comme un petit.",
@@ -831,8 +831,8 @@ window.DICO_TERMS = [
     "links": [
       "parametres",
       "tailles-de-modele",
-      "open-weights",
-      "cout-d-une-requete"
+      "open-weights"
+      
     ],
     "solutions": [
       {
@@ -3238,7 +3238,2108 @@ window.DICO_TERMS = [
       }
     ]
   },
+  {
+    "id": "benchmarks-lesquels-croire",
+    "status": "live",
+    "num": "42",
+    "title": "Benchmarks : lesquels croire ?",
+    "en": "Benchmark reliability",
+    "aliases": [
+      "which benchmarks to trust",
+      "self-reported scores",
+      "benchmark comparison"
+    ],
+    "aliasesFr": [
+      "fiabilité des benchmarks",
+      "lire un score de benchmark"
+    ],
+    "jargon": [
+      {
+        "say": "self-reported",
+        "means": "un score que le labo a mesuré lui-même, avec son harness et ses réglages, sans passer par l'organisateur du benchmark"
+      },
+      {
+        "say": "± 2,8 %",
+        "means": "la marge d'erreur publiée à côté du score ; deux modèles dont les marges se chevauchent sont à égalité, quel que soit l'ordre du classement"
+      },
+      {
+        "say": "held-out",
+        "means": "des questions que l'organisateur garde secrètes, pour qu'aucun modèle n'ait pu les voir pendant son entraînement"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "swe-bench",
+      "terminal-bench",
+      "arc-agi",
+      "humanitys-last-exam",
+      "gpqa",
+      "lmarena",
+      "mmlu",
+      "benchmarks",
+      "benchmaxxing",
+      "evals"
+    ],
+    "short": "Savoir quels benchmarks croire, c'est vérifier pour chaque score annoncé ce que le test mesure, qui l'a fait passer, dans quelles conditions, et s'il départage encore les meilleurs modèles.",
+    "image": "La maison de disques, c'est-à-dire le labo, imprime sur l'affiche de la tournée les trophées que son groupe a gagnés, rarement le nom du concours, l'année ou le nombre de concurrents. Lire un benchmark, c'est retourner l'affiche pour chercher ces trois mentions.",
+    "imagineForm": "A",
+    "imagine": "GPQA Diamond compte 198 questions, et chacune y pèse donc à peu près un demi-point. En septembre 2026, Epoch AI classe GPT-6 Astra premier, devant Claude Sonnet 5.5, avec moins d'une demi-question d'avance, alors que l'erreur type qu'il publie à côté de chaque score, c'est-à-dire sa marge d'incertitude, couvre près de trois questions.",
+    "full": [
+      "Sur sa fiche Hugging Face, Qwen3.8-27B, un modèle d'Alibaba de 27 milliards de paramètres, bat Claude Opus 4.6 sur SWE-bench Pro, 61,7 % contre 53,4 %. Les notes sous le tableau précisent que le score d'Opus est celui qu'Anthropic a publié, alors que Qwen a fait passer les autres modèles dans Claude Code, sur une version du test dont il avait lui-même corrigé les tâches défectueuses. Sur le classement officiel de Scale AI, qui a créé SWE-bench Pro, Opus 4.6 est à 51,9 % et Qwen3.8-27B n'apparaît pas.",
+      "Devant un score annoncé, cinq questions suffisent à le situer. Quel benchmark, et dans quelle version, puisque Terminal-Bench 2.1 est presque saturé, tous les modèles récents y dépassant 82 %, quand la version 4.0 sépare encore les modèles ? Qui a fait passer le test, l'organisateur ou le labo ? Avec quel harness, c'est-à-dire quel programme autour du modèle pour lui donner ses outils et le relancer, avec quel niveau d'effort et combien d'essais ? L'écart dépasse-t-il la marge d'erreur ? Et le test départage-t-il encore quelqu'un, ou les meilleurs se tassent-ils sous le plafond ?",
+      "Même un bon benchmark mesure une tâche et non ton travail. En 2023, une expérience menée avec GitHub Copilot trouvait des développeurs 55,8 % plus rapides sur une tâche unique, coder un serveur HTTP en JavaScript. En 2025, l'essai randomisé de METR, mené avec 16 développeurs open source expérimentés dans leurs propres projets, les trouvait 19 % plus lents avec l'IA, alors qu'ils se croyaient 20 % plus rapides.",
+      "En février 2026, METR a dû revoir son protocole, parce que trop de développeurs refusaient désormais de travailler sans IA pour que la mesure reste fiable, et il pense que le gain a grandi depuis 2025 sans pouvoir le chiffrer. La dernière question se pose donc chez toi, avec tes evals, sur tes propres tâches."
+    ],
+    "table": {
+      "caption": "Les principaux benchmarks, ce qu'ils mesurent et ce qu'ils valent",
+      "asOf": "2 octobre 2026",
+      "columns": [
+        "Benchmark",
+        "Ce qu'il mesure",
+        "Meilleur score connu",
+        "Saturé ?",
+        "Fiabilité"
+      ],
+      "rows": [
+        [
+          "MMLU",
+          "QCM de connaissances, 57 matières",
+          "Plus de 90 % ; les labos ne le publient plus",
+          "Oui",
+          "Fragile"
+        ],
+        [
+          "GPQA Diamond",
+          "198 questions de sciences introuvables sur Google",
+          "95,8 %, GPT-6 Astra, mesuré par Epoch AI (sept. 2026)",
+          "Oui",
+          "Fragile"
+        ],
+        [
+          "SWE-bench Verified",
+          "500 vrais bugs Python à corriger",
+          "79,2 %, Sonar avec Claude Opus 4.5 (déc. 2025), non vérifié",
+          "Oui, et contaminé",
+          "Fragile"
+        ],
+        [
+          "SWE-bench Pro",
+          "731 tâches de code sur des dépôts sous licence copyleft",
+          "61,5 %, Muse Spark 1.1 de Meta, classement de Scale AI",
+          "Non",
+          "À nuancer"
+        ],
+        [
+          "HLE-Diamond",
+          "1 000 questions d'experts, sans outils",
+          "59,9 %, GPT-6 Astra (22 sept. 2026)",
+          "Non",
+          "À nuancer"
+        ],
+        [
+          "Arena (texte)",
+          "Préférence de votants entre deux réponses anonymes",
+          "1 525 points, Gemini 4 Argon, préliminaire (2 oct. 2026)",
+          "Non",
+          "À nuancer"
+        ],
+        [
+          "Terminal-Bench 4.0",
+          "Tâches longues menées seul dans un terminal",
+          "58,2 % ± 2,8, GPT-6 Astra dans Codex (3 sept. 2026)",
+          "Non",
+          "Solide"
+        ],
+        [
+          "ARC-AGI-3",
+          "Jeux inconnus dont il faut découvrir le but",
+          "62,7 %, GPT-6 Astra, harness standard (sept. 2026)",
+          "Presque, avec un autre harness",
+          "Solide"
+        ]
+      ],
+      "note": "Scores relevés le 2 octobre 2026 sur les classements officiels, sauf GPQA, qui n'en a pas ; un score ne se compare qu'à un autre score du même classement."
+    },
+    "office": [
+      {
+        "who": "q",
+        "text": "Le commercial nous montre un tableau où son modèle est premier sur douze benchmarks. Je regarde quoi ?"
+      },
+      {
+        "who": "a",
+        "text": "Les notes sous le tableau, pour savoir qui a mesuré chaque score, dans quel harness, et si les écarts dépassent la marge d'erreur ; compare ensuite ce qui reste avec le classement officiel de chaque benchmark."
+      }
+    ],
+    "avoid": "« Il est premier sur Arena, c'est donc le meilleur modèle. » Arena mesure la réponse que préfèrent des votants, et GPT-6 Astra, premier sur ARC-AGI-3 et sur Terminal-Bench 4.0, n'arrive qu'à la 29e place de son classement texte.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Qwen, fiche de Qwen3.8-27B sur Hugging Face, consultée le 2 octobre 2026 (SWE-bench Pro : 61,7 % pour Qwen3.8-27B, 53,4 % pour Opus 4.6 Max, score officiel publié ; autres modèles évalués dans Claude Code sur un benchmark aux tâches corrigées)",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      },
+      {
+        "label": "Scale AI, classement SWE-Bench Pro (public), consulté le 2 octobre 2026 (Muse Spark 1.1 à 61,50 % ± 3,10 ; claude-opus-4-6 thinking à 51,90 %, harness mini-swe-agent ; 731 tâches publiques sous licence copyleft)",
+        "url": "https://labs.scale.com/leaderboard/swe_bench_pro_public"
+      },
+      {
+        "label": "Epoch AI, données du Benchmarking Hub, GPQA Diamond, téléchargées le 2 octobre 2026 (GPT-6 Astra 95,77 % ± 1,37 ; Claude Sonnet 5.5 95,58 % ; GPT-6.1 Sol et Gemini 3.8 Flash 95,39 %). Calcul de l'Imagine : 1/198 = 0,505 point par question ; 0,19 point d'écart = 0,37 question ; erreur type de 1,37 point = 2,7 questions",
+        "url": "https://epoch.ai/benchmarks/gpqa-diamond"
+      },
+      {
+        "label": "SWE-bench, classements officiels, consultés le 2 octobre 2026 (Verified : 500 tâches, sommet à 79,2 % pour Sonar Foundation Agent avec Claude Opus 4.5, non vérifié par l'équipe ; dernière entrée le 26 février 2026)",
+        "url": "https://www.swebench.com/"
+      },
+      {
+        "label": "OpenAI, Pourquoi SWE-bench Verified ne mesure plus les capacités de codage de pointe, 23 février 2026 (page qui renvoie 403 aux robots, contenu recoupé par la presse ci-dessous)",
+        "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/"
+      },
+      {
+        "label": "Center for AI Safety et Scale AI, Introducing HLE-Diamond, 22 septembre 2026 (1 000 questions ; sans outils, raisonnement élevé : GPT-6 Astra 59,9 %)",
+        "url": "https://lastexam.ai/blog/hle-diamond"
+      },
+      {
+        "label": "Arena, classement texte, votes arrêtés au 2 octobre 2026, consulté le jour même (8 626 731 votes, 412 modèles ; gemini-4-argon-high 1 525 ± 9, préliminaire, 4 932 votes ; gpt-6-astra-max 29e)",
+        "url": "https://arena.ai/leaderboard/text"
+      },
+      {
+        "label": "Terminal-Bench, classement de Terminal-Bench 4.0, consulté le 2 octobre 2026 (GPT-6 Astra dans Codex, effort max, 58,2 % ± 2,8, 192 essais réussis sur 330, entrée du 3 septembre 2026)",
+        "url": "https://www.tbench.ai/leaderboard"
+      },
+      {
+        "label": "ARC Prize, résultats de GPT-6 Astra, septembre 2026 (ARC-AGI-3 semi-privé : 62,7 % dans le harness standard, 99,9 % avec le harness Provider Adapter, adapté à l'API du fournisseur)",
+        "url": "https://arcprize.org/results/openai-gpt-6-astra"
+      },
+      {
+        "label": "Center for AI Safety et Scale AI, Humanity's Last Exam, janvier 2025, révisé en juillet 2026 (les modèles dépassent 90 % sur MMLU)",
+        "url": "https://arxiv.org/abs/2501.14249"
+      },
+      {
+        "label": "Wikipédia, MMLU (« partially phased out » depuis 2025, en faveur de tests plus difficiles)",
+        "url": "https://en.wikipedia.org/wiki/MMLU"
+      },
+      {
+        "label": "Peng et al., The Impact of AI on Developer Productivity: Evidence from GitHub Copilot, février 2023 (serveur HTTP en JavaScript, 55,8 % plus rapide)",
+        "url": "https://arxiv.org/abs/2302.06590"
+      },
+      {
+        "label": "METR, Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity, 10 juillet 2025 (16 développeurs, 246 tâches, 19 % plus lents, 20 % plus rapides selon eux)",
+        "url": "https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/"
+      },
+      {
+        "label": "METR, We are Changing our Developer Productivity Experiment Design, 24 février 2026 (refus de travailler sans IA, biais de sélection, gain probablement plus élevé début 2026, preuve très faible)",
+        "url": "https://metr.org/blog/2026-02-24-uplift-update/"
+      },
+      {
+        "label": "DeepSeek, fiche de DeepSeek-V4.1-Flash sur Hugging Face, septembre 2026 (Terminal-Bench 2.1 : 82,7 à 90,6 % pour les sept modèles comparés ; Terminal-Bench 4.0 : 7,0 à 51,8 %)",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+      }
+    ]
+  },
+  {
+    "id": "swe-bench",
+    "status": "live",
+    "num": "43",
+    "title": "SWE-bench",
+    "en": "SWE-bench",
+    "aliases": [
+      "SWE-bench Verified",
+      "SWE-bench Pro",
+      "SWE-bench Lite"
+    ],
+    "aliasesFr": [],
+    "jargon": [
+      {
+        "say": "% resolved",
+        "means": "la part des tickets que l'agent a corrigés au point de faire passer les tests cachés du projet"
+      },
+      {
+        "say": "gold patch",
+        "means": "la correction écrite par les développeurs du projet, qui sert de référence ; un modèle qui la recopie de mémoire trahit une contamination"
+      },
+      {
+        "say": "bash only",
+        "means": "le classement de SWE-bench où tous les modèles travaillent dans le même environnement minimal, mini-SWE-agent, ce qui sépare le modèle de son harness"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "benchmarks-lesquels-croire",
+      "benchmarks",
+      "terminal-bench",
+      "agent",
+      "reward-hacking"
+    ],
+    "short": "SWE-bench est un benchmark de programmation où un agent reçoit un vrai ticket d'un projet open source publié sur GitHub et doit modifier le code jusqu'à faire passer les tests que les développeurs avaient écrits pour le corriger.",
+    "image": "On tend au groupe une vieille partition abîmée, tirée des archives d'un autre groupe, avec une seule consigne, réparer la mesure qui sonne faux, et le jury rejoue le morceau pour vérifier. Ces archives sont publiques, et le groupe a pu entendre la version réparée pendant que l'ingé son lui faisait écouter des millions de morceaux.",
+    "imagineForm": "E",
+    "imagine": "Claude Opus 4.6 passe SWE-bench Verified dans mini-SWE-agent, le même environnement minimal pour tous, et corrige 75,6 % des 500 tickets. Donne au même modèle, dans le même type d'environnement, les tickets de SWE-bench Pro, tirés de dépôts que leur licence protège mieux contre la reprise dans les données d'entraînement, et il tombe à 51,9 %.",
+    "full": [
+      "SWE-bench est paru en octobre 2023 avec 2 294 tickets réels tirés de 12 projets Python. L'agent reçoit le code du projet et la description du problème, puis ses modifications sont jugées par les tests que les développeurs avaient ajoutés avec leur propre correction. Le test dit si un agent sait corriger un bug bien délimité dans un projet existant ; il laisse de côté la conception d'un logiciel, la discussion avec un client et la qualité du code au-delà des tests.",
+      "En août 2024, OpenAI en a tiré SWE-bench Verified, 500 tickets triés à la main, devenu le chiffre phare de chaque annonce de modèle. OpenAI l'a abandonné en février 2026, parce que GPT-5.2, Claude Opus 4.5 et un modèle Gemini savaient recopier de mémoire des corrections de référence, et qu'une bonne partie des tests rejetaient des solutions correctes. Le classement officiel n'a plus reçu d'entrée depuis le 26 février 2026, et son sommet, 79,2 %, n'a pas été vérifié par l'équipe de SWE-bench.",
+      "SWE-bench Pro, lancé par Scale AI en septembre 2025, a pris le relais avec 731 tâches publiques tirées de dépôts sous licence GPL, une barrière juridique contre leur reprise dans les données d'entraînement, et des tâches privées venues de start-up. La barrière ne suffit pas tout à fait, puisqu'en septembre 2026 les auteurs de SWE-Bench Pro Verified y ont trouvé des fuites de solutions et des tâches mal posées qui gonflaient certains scores."
+    ],
+    "reliability": {
+      "level": "fragile",
+      "why": "Le SWE-bench Verified que citent encore les communiqués est contaminé, ses tests rejettent des solutions correctes, et son classement est figé depuis février 2026. SWE-bench Pro résiste mieux, mais des fuites de solutions y ont été trouvées en septembre 2026, et Scale AI, qui le tient, a Meta pour actionnaire à 49 %, alors que Muse Spark 1.1, de Meta, mène son classement, à égalité statistique avec GPT-5.4."
+    },
+    "then": "En octobre 2023, le meilleur modèle testé, Claude 2, corrigeait 1,96 % des tickets de SWE-bench. Fin 2025, les agents dépassaient 79 % sur la version Verified, et en février 2026 OpenAI renonçait à ce score, qu'une partie des modèles réussissait de mémoire.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Le fournisseur annonce 80 % sur SWE-bench. C'est bien ?"
+      },
+      {
+        "who": "a",
+        "text": "Demande lequel, Verified ou Pro, et dans quel harness ; à 80 %, c'est presque sûrement Verified, qu'OpenAI a cessé de publier parce que les modèles en connaissaient une partie des corrections."
+      }
+    ],
+    "avoid": "« 75 % sur SWE-bench, il corrige trois bugs sur quatre. » Il corrige trois tickets Python sur quatre dans des projets publics qu'il a pu voir, avec des tests déjà écrits pour le juger, ce qui ne dit pas grand-chose de ce qu'il fera sur ton code sans tests.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Jimenez et al., SWE-bench: Can Language Models Resolve Real-World GitHub Issues?, octobre 2023 (2 294 problèmes, 12 dépôts Python, Claude 2 à 1,96 %)",
+        "url": "https://arxiv.org/abs/2310.06770"
+      },
+      {
+        "label": "SWE-bench, classements officiels, consultés le 2 octobre 2026 (Verified 500 tâches, sommet 79,2 % non vérifié ; bash only : Claude Opus 4.6 à 75,6 % dans mini-SWE-agent ; dernière entrée le 26 février 2026 ; Verified lancé avec OpenAI en août 2024)",
+        "url": "https://www.swebench.com/"
+      },
+      {
+        "label": "OpenAI, Pourquoi SWE-bench Verified ne mesure plus les capacités de codage de pointe, 23 février 2026 (page qui renvoie 403 aux robots, contenu recoupé par l'article suivant)",
+        "url": "https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/"
+      },
+      {
+        "label": "It Does What Now?, OpenAI stops evaluating models on SWE-bench Verified, 24 février 2026 (GPT-5.2, Claude Opus 4.5 et un Gemini en préversion reproduisent de mémoire les corrections ou les énoncés ; tests qui rejettent des solutions valides ; SWE-bench Pro comme remplaçant partiel)",
+        "url": "https://itdoeswhatnow.com/m/2026-02-24-openai-stops-evaluating-models-on-swe-bench-verified/"
+      },
+      {
+        "label": "Scale AI, classement SWE-Bench Pro (public), consulté le 2 octobre 2026 (731 tâches publiques sous licence copyleft contre la contamination ; Muse Spark 1.1 en tête à 61,50 % ± 3,10, gpt-5.4 classé 1er ex aequo à 59,10 % ± 3,56 ; claude-opus-4-6 thinking à 51,90 % dans mini-swe-agent)",
+        "url": "https://labs.scale.com/leaderboard/swe_bench_pro_public"
+      },
+      {
+        "label": "Deng et al., SWE-Bench Pro, septembre 2025 (1 865 problèmes, 41 dépôts, ensembles public, réservé et commercial)",
+        "url": "https://arxiv.org/abs/2509.16941"
+      },
+      {
+        "label": "SWE-Bench Pro Verified: A Reliable Benchmark for Software Engineering Agents, 8 septembre 2026 (fuites de solutions, reward hacking, tâches mal posées qui gonflent les scores)",
+        "url": "https://arxiv.org/abs/2609.08149"
+      },
+      {
+        "label": "Wikipédia, Scale AI (Meta détient 49 % des parts, sans droit de vote, depuis juin 2025)",
+        "url": "https://en.wikipedia.org/wiki/Scale_AI"
+      },
+      {
+        "label": "Arena, classement texte, consulté le 2 octobre 2026 (les modèles muse-spark y sont attribués à Meta)",
+        "url": "https://arena.ai/leaderboard/text"
+      }
+    ]
+  },
+  {
+    "id": "terminal-bench",
+    "status": "live",
+    "num": "44",
+    "title": "Terminal-Bench",
+    "en": "Terminal-Bench",
+    "aliases": [
+      "TB 4.0",
+      "Terminal-Bench 2.0",
+      "Terminal-Bench 3.0",
+      "tbench"
+    ],
+    "aliasesFr": [],
+    "jargon": [
+      {
+        "say": "Terminus",
+        "means": "l'agent minimal fourni par les auteurs de Terminal-Bench, qui sert à comparer les modèles dans un harness neutre"
+      },
+      {
+        "say": "pass@5",
+        "means": "la part des tâches réussies au moins une fois en cinq essais ; sur Terminal-Bench 4.0, elle inverse les deux premiers du classement"
+      },
+      {
+        "say": "benchmark continu",
+        "means": "un test mis à jour comme un logiciel, dont chaque version retire les tâches saturées et corrige les tâches défectueuses"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "benchmarks-lesquels-croire",
+      "swe-bench",
+      "harness",
+      "agent",
+      "boucle-agent",
+      "benchmaxxing"
+    ],
+    "short": "Terminal-Bench est un benchmark où un agent travaille sans aide humaine, en ligne de commande, sur des tâches techniques longues inspirées de vrais problèmes de travail, chacune dans son propre environnement et vérifiée par des tests.",
+    "image": "Pour cette épreuve, on laisse le groupe seul dans la régie technique, devant les câbles, les machines et une liste de travaux à finir avant le matin. Le producteur, c'est-à-dire le harness, reste à ses côtés, et chaque ligne du classement nomme les deux, le groupe et son producteur.",
+    "imagineForm": "D",
+    "imagine": "Ton manager te demande : « Qui est premier sur Terminal-Bench 4.0 ? » Tu ouvres le classement et tu lui réponds : « GPT-6 Astra dans Codex, avec un essai réussi de plus que Claude Fable 5.1 dans Claude Code, sur 330. Si on compte une tâche comme réussie dès qu'un essai sur cinq passe, c'est Fable qui gagne, et largement. »",
+    "full": [
+      "Terminal-Bench est tenu par Stanford et le Laude Institute, sur le framework Harbor. Sa version 2.0, décrite en janvier 2026, comptait 89 tâches, chacune avec son environnement, une solution écrite par un humain et des tests, et aucun agent n'y dépassait alors 65 %. On y apprend si un agent sait finir une tâche technique sans qu'on le relance, mais rien sur l'élégance de ce qu'il laisse derrière lui, le travail en équipe ou la façon dont il comprendrait une demande floue.",
+      "Le test s'use vite, puisque sur la fiche de DeepSeek-V4.1-Flash, les sept modèles comparés dépassent tous 82 % sur Terminal-Bench 2.1, alors qu'ils s'étalent de 7 à 52 % sur la version 4.0. L'équipe a donc choisi de le traiter comme un logiciel, et la version 4.0 a retiré huit tâches, dont celles que tous les modèles réussissaient et celles dont la solution traînait en ligne, puis en a corrigé dix-neuf.",
+      "Les organisateurs publient aussi leurs incidents. Ils ont retiré de leur classement un agent qui cachait des solutions chiffrées dans son programme et un autre qui embarquait les dossiers de tests, et ils ont remis à zéro les essais où un agent allait chercher la solution sur Internet. Depuis, un agent juge relit chaque essai réussi avant publication."
+    ],
+    "reliability": {
+      "level": "solide",
+      "why": "Les scores sont soumis par les équipes, souvent les labos eux-mêmes dans leur propre harness, mais chaque essai réussi doit fournir sa trajectoire et passe devant un agent juge, et les tricheurs sont retirés. Les tâches et le tri des signalements sont publics, les marges d'erreur affichées, et la seule réserve tient aux tâches publiques, qui obligent à guetter les fuites de solutions."
+    },
+    "then": "Début 2026, l'article qui présentait Terminal-Bench 2.0 notait qu'aucun modèle n'y dépassait 65 %. À l'automne 2026, la version 2.1 est presque saturée, et l'équipe numérote ses mises à jour comme un logiciel, 3.0 puis 4.0, en retirant chaque tâche que tous les modèles récents réussissent cinq fois sur cinq.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Notre agent maison fait 70 % sur Terminal-Bench. On l'annonce ?"
+      },
+      {
+        "who": "a",
+        "text": "Précise d'abord la version, puisque 70 % sur la 2.1 te placerait derrière tous les modèles de pointe, et qu'aucun agent n'atteint ce score sur la 4.0."
+      }
+    ],
+    "avoid": "« GPT-6 Astra est premier sur Terminal-Bench, c'est le meilleur pour coder. » Son avance tient dans la marge d'erreur, il a été mesuré dans le harness de son propre labo, Codex, et rien ne garantit qu'il garde cet avantage dans le tien ni sur ton code.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Merrill et al., Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces, 17 janvier 2026 (version 2.0, 89 tâches, moins de 65 % pour les meilleurs agents)",
+        "url": "https://arxiv.org/abs/2601.11868"
+      },
+      {
+        "label": "Terminal-Bench, classement de Terminal-Bench 4.0, consulté le 2 octobre 2026 (GPT-6 Astra dans Codex : 58,2 % ± 2,8, 192 réussites sur 330, pass@5 71,2 % ; Claude Fable 5.1 dans Claude Code : 57,9 % ± 3,8, 191 réussites, pass@5 78,8 % ; organisé par Stanford, Harbor et le Laude Institute)",
+        "url": "https://www.tbench.ai/leaderboard"
+      },
+      {
+        "label": "Terminal-Bench, Terminal-Bench 4.0 (8 tâches retirées, dont 2 saturées, 2 refusées par les modèles et 2 à solution publique ; 19 corrigées ; tâche saturée = réussie 5 fois sur 5 par tous les modèles récents)",
+        "url": "https://www.tbench.ai/news/terminal-bench-4-0"
+      },
+      {
+        "label": "Terminal-Bench, Leaderboard Integrity Update (solutions chiffrées dans le binaire d'OB-1, dossier tests embarqué par Pilot, solutions téléchargées par ForgeCode remises à zéro, agent juge sur les essais réussis)",
+        "url": "https://www.tbench.ai/news/leaderboard-integrity-update"
+      },
+      {
+        "label": "DeepSeek, fiche de DeepSeek-V4.1-Flash sur Hugging Face, septembre 2026 (sept modèles : 82,7 à 90,6 % sur Terminal-Bench 2.1, 7,0 à 51,8 % sur Terminal-Bench 4.0)",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+      },
+      {
+        "label": "Terminal-Bench, Terminus (agent des auteurs, compatible avec tous les modèles, pensé comme instrument de mesure à la place des agents des labos)",
+        "url": "https://www.tbench.ai/news/terminus"
+      }
+    ]
+  },
+  {
+    "id": "arc-agi",
+    "status": "live",
+    "num": "45",
+    "title": "ARC-AGI",
+    "en": "ARC-AGI",
+    "aliases": [
+      "ARC Prize",
+      "ARC-AGI-2",
+      "ARC-AGI-3",
+      "Abstraction and Reasoning Corpus"
+    ],
+    "aliasesFr": [],
+    "jargon": [
+      {
+        "say": "semi-privé",
+        "means": "le jeu de tâches qu'ARC Prize garde pour tester les modèles des labos ; il passe par leurs API, d'où un risque de fuite que la fondation surveille"
+      },
+      {
+        "say": "ARC-AGI-3",
+        "means": "la version de mars 2026, faite de petits jeux sans consigne, où l'agent doit découvrir le but en jouant"
+      },
+      {
+        "say": "coût par tâche",
+        "means": "ce que coûtent les appels au modèle pour résoudre une tâche ; ARC Prize le publie à côté de chaque score, parce qu'un score obtenu à n'importe quel prix ne dit pas grand-chose"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "benchmarks-lesquels-croire",
+      "modeles-de-raisonnement",
+      "mythe-plus-gros-plus-intelligent",
+      "benchmaxxing",
+      "harness"
+    ],
+    "short": "ARC-AGI est une série de benchmarks d'énigmes visuelles, d'abord des grilles de couleurs puis de petits jeux, où il faut trouver une règle jamais vue à partir de quelques exemples, ce qui teste l'adaptation à la nouveauté plutôt que les connaissances.",
+    "image": "Invente une gamme qui n'existe pas, joue au groupe trois mesures d'exemple, et demande-lui la quatrième. Les millions de morceaux que l'ingé son lui a fait écouter ne servent plus à rien, et c'est ce qu'ARC-AGI cherche à isoler, trouver une règle neuve plutôt que se souvenir d'une ancienne.",
+    "imagineForm": "B",
+    "imagine": "Va sur arcprize.org/play, la page où ARC Prize met en ligne une grille par jour, et cherche la règle qui fait passer des grilles d'exemple à leur solution, sans aucune consigne écrite. Tu la trouveras sans doute avec ce que tout le monde sait déjà des formes, des couleurs et des symétries, sans rien avoir appris par cœur pour l'occasion.",
+    "full": [
+      "La fondation ARC Prize, une organisation à but non lucratif cofondée par François Chollet et Mike Knoop, conçoit ces tests et les fait passer elle-même. Ses tâches ne demandent ni langage ni culture générale, seulement des notions de base sur les objets, les nombres et l'espace. ARC-AGI teste donc l'adaptation à un problème neuf avec très peu d'exemples, alors que les connaissances, le code ou l'utilité au travail sortent de son champ.",
+      "Les scores vérifiés sont produits par l'équipe de la fondation, sur des tâches semi-privées, avec un accord de non-conservation des données signé par chaque fournisseur testé. La fondation reconnaît qu'une fuite lente reste possible, puisque les tâches transitent par les API des labos, et elle la guette en comparant les scores sur les tâches publiques et semi-privées, avant de publier une nouvelle version chaque année.",
+      "Lancé en mars 2026, ARC-AGI-3 remplace les grilles par des jeux dont il faut découvrir le but, et les modèles de pointe y faisaient alors moins de 1 %. Début septembre 2026, ARC Prize mesure GPT-6 Astra à 62,7 % dans son harness standard. Avec un harness adapté à l'API du fournisseur, qui conserve le raisonnement du modèle d'un appel à l'autre, il monte à 99,9 % sur les mêmes jeux, et il y fait moins d'actions que l'humain médian sur 96 % des niveaux."
+    ],
+    "reliability": {
+      "level": "solide",
+      "why": "La fondation, à but non lucratif, fait passer elle-même les tests sur des tâches que les labos n'ont pas, avec un accord de non-conservation des données, et renouvelle le benchmark chaque année. Les réserves viennent de la saturation des deux premières versions, où GPT-6 Astra frôle déjà le plafond, et d'ARC-AGI-3, où son score passe de 62,7 à 99,9 % selon le harness."
+    },
+    "then": "En 2025, le concours d'ARC Prize sur ARC-AGI-2, où le calcul autorisé est limité, plafonnait à 24 % sur les tâches privées. En septembre 2026, GPT-6 Astra atteint 95 % sur les tâches semi-privées de cette même version, et la fondation a déjà déplacé la mesure vers les jeux d'ARC-AGI-3.",
+    "office": [
+      {
+        "who": "q",
+        "text": "GPT-6 Astra fait 99,9 % sur ARC-AGI-3. L'AGI, c'est pour cette année ?"
+      },
+      {
+        "who": "a",
+        "text": "C'est son score dans un harness adapté à l'API d'OpenAI ; dans le harness standard de la fondation, le même modèle fait 62,7 %, et le test ne porte de toute façon que sur des petits jeux abstraits."
+      }
+    ],
+    "avoid": "« ARC-AGI mesure l'intelligence générale, comme son nom l'indique. » Il mesure la capacité à trouver une règle visuelle neuve à partir de quelques exemples, un exercice étroit qui ne dit rien des connaissances ni du travail en entreprise.",
+    "video": null,
+    "sources": [
+      {
+        "label": "ARC Prize, About (fondation à but non lucratif, cofondée par François Chollet et Mike Knoop)",
+        "url": "https://arcprize.org/about"
+      },
+      {
+        "label": "ARC Prize, Testing policy (jeu semi-privé passé aux API des labos, accords de non-conservation, fuite lente surveillée par l'écart public / semi-privé, nouvelle version chaque année ; tests menés par l'équipe de la fondation)",
+        "url": "https://arcprize.org/policy"
+      },
+      {
+        "label": "ARC Prize Foundation, ARC-AGI-3: A New Challenge for Frontier Agentic Intelligence, 24 mars 2026 (jeux interactifs, connaissances de base sans langage, humains à 100 %, modèles de pointe sous 1 % en mars 2026)",
+        "url": "https://arxiv.org/abs/2603.24621"
+      },
+      {
+        "label": "ARC Prize, résultats de GPT-6 Astra, septembre 2026 (ARC-AGI-3 semi-privé : 62,7 % en effort max dans le harness standard ; 99,9 % en effort high avec le harness Provider Adapter, qui conserve l'état de raisonnement entre les requêtes ; ARC-AGI-2 : 95,0 %)",
+        "url": "https://arcprize.org/results/openai-gpt-6-astra"
+      },
+      {
+        "label": "Greg Kamradt, ARC Prize, OpenAI's GPT-6 Astra on ARC-AGI-3, 3 septembre 2026 (62,7 % pour 26 000 dollars dans le harness standard, 99,9 % pour 19 000 dollars avec un harness Provider Adapter ; moins d'actions que l'humain médian sur 96 % des niveaux)",
+        "url": "https://arcprize.org/blog/astra"
+      },
+      {
+        "label": "ARC Prize, classement, consulté le 2 octobre 2026 (coût par tâche publié à côté de chaque score ; scores de GPT-6 Astra sur ARC-AGI-1 et 2, 98,5 % et 95,0 %, sur la page de résultats ci-dessus)",
+        "url": "https://arcprize.org/leaderboard"
+      },
+      {
+        "label": "ARC Prize, ARC Prize 2025: Technical Report, 15 janvier 2026 (concours Kaggle sur ARC-AGI-2, meilleur score de 24 % sur les tâches privées)",
+        "url": "https://arxiv.org/abs/2601.10904"
+      },
+      {
+        "label": "ARC Prize, grille du jour à résoudre dans le navigateur",
+        "url": "https://arcprize.org/play"
+      }
+    ]
+  },
+  {
+    "id": "humanitys-last-exam",
+    "status": "live",
+    "num": "46",
+    "title": "Humanity's Last Exam",
+    "en": "Humanity's Last Exam",
+    "aliases": [
+      "HLE",
+      "HLE-Diamond",
+      "HLE-Rolling"
+    ],
+    "aliasesFr": [
+      "dernier examen de l'humanité"
+    ],
+    "jargon": [
+      {
+        "say": "HLE (no tools)",
+        "means": "le score sans recherche web ni exécution de code, celui qui dit ce que le modèle sait et raisonne seul"
+      },
+      {
+        "say": "HLE w/ tools",
+        "means": "le score avec le web et le code ; sur HLE-Diamond, GPT-6 Astra passe de 59,9 % à 82,9 %"
+      },
+      {
+        "say": "calibration error",
+        "means": "l'écart entre la confiance que le modèle annonce et son taux de réussite réel ; dans le tableau du site officiel, il va de 50 à 89 % selon les modèles"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "benchmarks-lesquels-croire",
+      "gpqa",
+      "mmlu",
+      "hallucination",
+      "mythe-sait-quand-il-ne-sait-pas"
+    ],
+    "short": "Humanity's Last Exam est un benchmark de 2 500 questions de niveau expert, écrites par près de 1 000 spécialistes dans plus de cent matières, et retenues parce que les meilleurs modèles de l'époque ne savaient pas y répondre.",
+    "image": "Mille professeurs du conservatoire ont chacun déposé la question de solfège la plus dure qu'ils connaissaient, à condition que le groupe la rate sur le moment. Les corrigés ont été relus, mais pas tous assez, et une partie s'est révélée fausse.",
+    "imagineForm": "B",
+    "imagine": "Lis à voix haute l'un des exemples publiés sur la page d'accueil de lastexam.ai, celui, signé par un chercheur du MIT, qui demande combien de tendons appariés soutient un petit os sésamoïde propre aux colibris. Tu n'as sans doute aucune idée de la réponse, ni même de l'endroit où la chercher, et il en reste 2 499 de ce calibre.",
+    "full": [
+      "Publié en janvier 2025 par le Center for AI Safety et Scale AI, puis dans Nature en janvier 2026, HLE réunit des questions à réponse courte ou à choix multiple, faciles à corriger automatiquement mais impossibles à trouver vite sur Internet. Il évalue la connaissance et le raisonnement d'expert sur des questions fermées, et laisse échapper la recherche ouverte, la créativité ou la conduite d'un projet.",
+      "Ne garder que les questions que les modèles ratent a un revers, puisque cela favorise les questions piégeuses. En juillet 2025, FutureHouse a confronté à la littérature scientifique les 321 questions de chimie et de biologie en texte seul, et trouvé que 29 % de leurs réponses officielles étaient contredites par des articles publiés. En février 2026, l'équipe de HLE-Verified ne certifiait telles quelles que 668 questions sur 2 500.",
+      "Les organisateurs ont répondu par une version vivante, HLE-Rolling, en octobre 2025, puis par HLE-Diamond le 22 septembre 2026, 1 000 questions nettoyées, moitié raisonnement, moitié connaissances. Sans outils, GPT-6 Astra y réussit 59,9 %, devant Claude Opus 5.5 à 54,6 %. Une partie des questions reste gardée secrète pour repérer les modèles qui auraient appris les questions publiques."
+    ],
+    "reliability": {
+      "level": "à nuancer",
+      "why": "Le test n'est pas saturé et garde des questions secrètes, mais près de 29 % des réponses de chimie et de biologie de la version d'origine étaient contredites par la littérature. L'un des deux organisateurs, Scale AI, vend des données d'entraînement aux labos, et Meta en détient 49 % depuis juin 2025."
+    },
+    "then": "Dans le tableau que les organisateurs publiaient en 2025, GPT-4o réussissait 2,7 % de HLE et o1 8 %. En septembre 2026, GPT-6 Astra réussit 59,9 % de la version nettoyée, HLE-Diamond, sans outils, et 82,9 % quand il peut chercher sur le web et exécuter du code.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Le labo annonce 83 % sur Humanity's Last Exam. C'est énorme, non ?"
+      },
+      {
+        "who": "a",
+        "text": "Regarde si c'est avec ou sans outils, et sur quelle version ; 82,9 % est le score de GPT-6 Astra sur HLE-Diamond avec le web et le code, et il retombe à 59,9 % quand il doit répondre seul."
+      }
+    ],
+    "avoid": "« Il a 60 % au dernier examen de l'humanité, il en sait plus que les experts. » Chaque question demande la spécialité de son seul auteur, et un bon score dit que le modèle couvre beaucoup de ces spécialités à la fois, pas qu'il fait de la recherche comme eux.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Center for AI Safety et Scale AI, Humanity's Last Exam, site officiel, consulté le 2 octobre 2026 (2 500 questions, plus de cent matières, près de 1 000 contributeurs, ensemble secret ; exemples de questions ; tableau : GPT-4o 2,7 %, o1 8,0 %, erreur de calibration de 50 à 89 % ; HLE-Rolling en octobre 2025, Nature en janvier 2026)",
+        "url": "https://lastexam.ai/"
+      },
+      {
+        "label": "Phan et al., Humanity's Last Exam, janvier 2025, révisé en juillet 2026 (questions à corriger automatiquement, introuvables vite sur Internet)",
+        "url": "https://arxiv.org/abs/2501.14249"
+      },
+      {
+        "label": "Center for AI Safety et Scale AI, Introducing HLE-Diamond, 22 septembre 2026 (1 000 questions, 500 de raisonnement et 500 de connaissances ; sans outils : GPT-6 Astra 59,9 %, Claude Opus 5.5 54,6 % ; avec web et code : GPT-6 Astra 82,9 %)",
+        "url": "https://lastexam.ai/blog/hle-diamond"
+      },
+      {
+        "label": "FutureHouse, About 30% of Humanity's Last Exam chemistry/biology answers are likely wrong, 23 juillet 2025 (321 questions, 29,3 % ± 3,7 contredites par la littérature ; sélection qui favorise les questions piégeuses)",
+        "url": "https://www.futurehouse.org/research/hle-exam"
+      },
+      {
+        "label": "HLE-Verified: A Systematic Verification and Structured Revision of Humanity's Last Exam, 15 février 2026 (668 questions vérifiées, 1 143 révisées, 689 incertaines)",
+        "url": "https://arxiv.org/abs/2602.13964"
+      },
+      {
+        "label": "Wikipédia, Scale AI (coorganisateur de HLE, clients parmi les labos, plateforme Outlier pour le RLHF, 49 % détenus par Meta depuis juin 2025)",
+        "url": "https://en.wikipedia.org/wiki/Scale_AI"
+      }
+    ]
+  },
+  {
+    "id": "gpqa",
+    "status": "live",
+    "num": "47",
+    "title": "GPQA",
+    "en": "GPQA",
+    "aliases": [
+      "GPQA Diamond",
+      "Graduate-Level Google-Proof Q&A"
+    ],
+    "aliasesFr": [],
+    "jargon": [
+      {
+        "say": "GPQA Diamond",
+        "means": "le sous-ensemble de 198 questions le plus sûr, celui que citent les annonces de modèles"
+      },
+      {
+        "say": "Google-proof",
+        "means": "des questions dont la réponse ne se trouve pas en cherchant ; des non-spécialistes avec Internet et plus de 30 minutes par question n'en réussissaient que 34 %"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "benchmarks-lesquels-croire",
+      "humanitys-last-exam",
+      "mmlu",
+      "benchmarks"
+    ],
+    "short": "GPQA est un QCM de 448 questions de biologie, de physique et de chimie écrites par des docteurs et doctorants, conçues pour qu'un non-spécialiste ne trouve pas la réponse même en cherchant sur Internet.",
+    "image": "Le groupe passe un blind test réservé aux spécialistes, où seuls les jazzmen reconnaissent les extraits de jazz modal, et où les rockeurs se trompent même avec Internet ouvert. Depuis 2026, le groupe reconnaît presque tous les extraits, et le blind test ne sert plus à classer les meilleurs.",
+    "imagineForm": "E",
+    "imagine": "Une question de physique de GPQA tombe chez une biologiste en doctorat, qui a Internet et une demi-heure devant elle, et les non-spécialistes placés dans son cas ratent deux questions sur trois. La même question tombe chez un physicien, et les spécialistes du domaine en réussissent deux sur trois.",
+    "full": [
+      "Publié en novembre 2023, GPQA préparait le jour où il faudrait contrôler des réponses d'IA plus savantes que les humains chargés de les vérifier. À sa sortie, le meilleur modèle, fondé sur GPT-4, réussissait 39 % des questions, contre 65 % pour les experts du domaine. Le test porte sur la connaissance scientifique de pointe en QCM, sans rien vérifier de la recherche, de la paillasse ou de la capacité à expliquer une réponse.",
+      "En septembre 2026, Epoch AI, qui fait passer GPQA Diamond lui-même faute de classement officiel, place quatre modèles entre 95,4 et 95,8 %, de GPT-6 Astra à Gemini 3.8 Flash. L'erreur type, la marge d'incertitude qu'Epoch publie avec chaque score, avoisine 1,4 point, alors les quatre sont à égalité, et le test ne sait plus les classer.",
+      "En mai 2025, Epoch estimait qu'au moins 90 % des questions de Diamond étaient valides, et une extrapolation qu'il jugeait lui-même hasardeuse donnait 15 questions douteuses sur 198, soit 8 %. Les meilleurs scores dépassent désormais ce plafond pessimiste, ce qui veut dire que les questions douteuses sont moins nombreuses, ou que les modèles retrouvent la réponse attendue même là où elle se discute."
+    ],
+    "reliability": {
+      "level": "fragile",
+      "why": "Le test est saturé, puisque les quatre meilleurs modèles mesurés par Epoch AI tiennent dans son erreur type, et Epoch estimait en 2025 qu'environ une question sur douze pouvait être douteuse. Il reste utile pour situer un modèle moyen, plus pour départager ceux de pointe."
+    },
+    "office": [
+      {
+        "who": "q",
+        "text": "Les deux modèles qu'on hésite à prendre font 95 et 94 % sur GPQA. On prend le premier ?"
+      },
+      {
+        "who": "a",
+        "text": "L'écart tient dans l'erreur type, qui avoisine 1,4 point à ce niveau ; regarde plutôt un benchmark qui les sépare encore, puis tes propres tâches."
+      }
+    ],
+    "avoid": "« Il a 95 % au GPQA, il a le niveau d'un docteur en chimie. » Il choisit la bonne réponse parmi quatre sur des questions écrites par des docteurs, et sa capacité à mener une expérience ou à poser la bonne question reste hors du test.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Rein et al., GPQA: A Graduate-Level Google-Proof Q&A Benchmark, 20 novembre 2023 (448 questions, experts à 65 %, non-experts à 34 % avec plus de 30 minutes et Internet, GPT-4 à 39 %, supervision de systèmes plus savants que leurs contrôleurs)",
+        "url": "https://arxiv.org/abs/2311.12022"
+      },
+      {
+        "label": "Epoch AI, données du Benchmarking Hub, GPQA Diamond, téléchargées le 2 octobre 2026 (GPT-6 Astra 95,77 % ± 1,37 ; Claude Sonnet 5.5 95,58 % ± 1,37 ; GPT-6.1 Sol 95,39 % ± 1,38 ; Gemini 3.8 Flash 95,39 % ± 1,40 ; hasard à 25 %, soit quatre choix)",
+        "url": "https://epoch.ai/benchmarks/gpqa-diamond"
+      },
+      {
+        "label": "Greg Burnham, Epoch AI, GPQA Diamond: What's left?, 30 mai 2025 (198 questions ; au moins 90 % valides ; extrapolation jugée tirée par les cheveux à 15 sur 198, soit 8 %)",
+        "url": "https://epoch.ai/gradient-updates/gpqa-diamond-whats-left"
+      }
+    ]
+  },
+  {
+    "id": "lmarena",
+    "status": "live",
+    "num": "48",
+    "title": "LMArena (Arena)",
+    "en": "LMArena",
+    "aliases": [
+      "Arena",
+      "Chatbot Arena",
+      "arena.ai",
+      "LM Arena"
+    ],
+    "aliasesFr": [],
+    "jargon": [
+      {
+        "say": "Arena score",
+        "means": "un score de type Elo, calculé à partir des duels entre modèles et affiché avec sa marge d'erreur"
+      },
+      {
+        "say": "style control",
+        "means": "la correction qu'Arena applique au classement pour que la longueur et la mise en forme d'une réponse pèsent moins dans le vote"
+      },
+      {
+        "say": "preliminary",
+        "means": "un modèle classé avec encore peu de votes, dont le rang peut bouger"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "benchmarks-lesquels-croire",
+      "benchmaxxing",
+      "flagornerie",
+      "rlhf",
+      "benchmarks"
+    ],
+    "short": "LMArena, rebaptisé Arena en 2026, est un classement fondé sur des votes humains, où l'on pose une question à deux modèles anonymes, choisit la meilleure réponse, puis découvre leurs noms.",
+    "image": "Deux groupes jouent derrière un rideau le morceau demandé par quelqu'un du public, qui vote pour celui qu'il préfère avant de voir qui jouait. Le public, dans ce cas, ne note pas la justesse mais son plaisir, et c'est exactement ce que mesure le classement.",
+    "imagineForm": "B",
+    "imagine": "Pose sur arena.ai une question dont tu connais bien la réponse, puis lis les deux réponses anonymes avant de voter. Regarde si ta main penche vers la plus longue ou la mieux présentée avant que tu aies vérifié laquelle est juste ; des millions de votants ont le même réflexe, et Arena corrige son classement pour en tenir compte.",
+    "full": [
+      "Arena est né en 2023 comme un projet de recherche de l'université de Berkeley, sous le nom de Chatbot Arena. Au 2 octobre 2026, son classement texte repose sur plus de 8,6 millions de votes et 412 modèles. Le classement reflète ce que des utilisateurs préfèrent sur leurs propres questions, et il ne vérifie pas qu'une réponse est exacte, ni qu'un modèle tient une tâche longue.",
+      "Les mêmes votes peuvent donner deux classements. Avec la correction de style, Claude Fable 5 est 3e du classement texte ; sans elle, il tombe 9e, parce que la longueur et la mise en forme pèsent dans les votes, un effet qu'Arena mesure depuis 2024. Le premier, Gemini 4 Argon, de Google, est noté « préliminaire », avec moins de 5 000 votes et 9 points de marge d'erreur.",
+      "Arena est devenu une entreprise en avril 2025, a levé 150 millions de dollars en janvier 2026 pour une valorisation de 1,7 milliard, et vend depuis septembre 2025 un service d'évaluation que les labos eux-mêmes peuvent acheter. Fin avril 2025, les auteurs de The Leaderboard Illusion estimaient que Google et OpenAI avaient reçu chacun environ 20 % des données de l'arène, contre 29,7 % pour 83 modèles open weights réunis."
+    ],
+    "reliability": {
+      "level": "à nuancer",
+      "why": "Les votes sont nombreux, réels et faits à l'aveugle, mais ils mesurent une préférence que la longueur et la présentation influencent. The Leaderboard Illusion a montré en 2025 un accès inégal aux données en faveur des grands labos, et l'entreprise vend ses évaluations à ces mêmes labos."
+    },
+    "then": "En 2023, Chatbot Arena était un projet universitaire financé par des subventions et des dons. En janvier 2026, il est devenu Arena, une entreprise valorisée 1,7 milliard de dollars, avec des classements pour le code, les agents, l'image et la vidéo.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Notre fournisseur n'est que 4e sur Arena. On regarde ailleurs ?"
+      },
+      {
+        "who": "a",
+        "text": "Regarde d'abord la colonne des rangs possibles, puisque les marges se chevauchent ; le 4e du classement texte, Claude Opus 5.5, peut s'y trouver n'importe où entre la 2e et la 13e place."
+      }
+    ],
+    "avoid": "« C'est le vote du public, donc impossible à truquer. » Un labo peut tester en privé plusieurs versions avant d'en publier une, et les réponses longues et soignées partent avantagées, d'où la correction de style.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Arena, classement texte avec correction de style, votes arrêtés au 2 octobre 2026, consulté le jour même (8 626 731 votes, 412 modèles ; gemini-4-argon-high 1 525 ± 9, préliminaire, 4 932 votes ; claude-fable-5-high 3e ; claude-opus-5.5-high 4e, rangs possibles de 2 à 13)",
+        "url": "https://arena.ai/leaderboard/text"
+      },
+      {
+        "label": "Arena, classement texte sans correction de style, consulté le 2 octobre 2026 (claude-fable-5-high 9e)",
+        "url": "https://arena.ai/leaderboard/text/overall-no-style-control"
+      },
+      {
+        "label": "LMSYS, Does style matter? Disentangling style and substance in Chatbot Arena, 28 août 2024 (longueur et markdown contrôlés, la longueur pèse le plus)",
+        "url": "https://www.lmsys.org/blog/2024-08-28-style-control/"
+      },
+      {
+        "label": "Chiang et al., Chatbot Arena: An Open Platform for Evaluating LLMs by Human Preference, mars 2024 (duels anonymes, votes de la foule)",
+        "url": "https://arxiv.org/abs/2403.04132"
+      },
+      {
+        "label": "TechCrunch, LMArena lands $1.7B valuation four months after launching its product, 6 janvier 2026 (150 millions de dollars, service AI Evaluations ouvert aux labos en septembre 2025, 30 millions de dollars annualisés en décembre 2025, projet de Berkeley financé par subventions et dons en 2023)",
+        "url": "https://techcrunch.com/2026/01/06/lmarena-lands-1-7b-valuation-four-months-after-launching-its-product/"
+      },
+      {
+        "label": "Arena, LMArena is now Arena, 28 janvier 2026 (changement de nom, image et vidéo)",
+        "url": "https://arena.ai/blog/lmarena-is-now-arena/"
+      },
+      {
+        "label": "Wikipédia, Arena.ai (entreprise indépendante depuis avril 2025)",
+        "url": "https://en.wikipedia.org/wiki/Arena.ai"
+      },
+      {
+        "label": "Singh et al., The Leaderboard Illusion, 29 avril 2025 (Google 19,2 % et OpenAI 20,4 % des données, 83 modèles open weights 29,7 %)",
+        "url": "https://arxiv.org/abs/2504.20879"
+      }
+    ]
+  },
+  {
+    "id": "mmlu",
+    "status": "live",
+    "num": "49",
+    "title": "MMLU",
+    "en": "MMLU",
+    "aliases": [
+      "Massive Multitask Language Understanding",
+      "MMLU-Pro",
+      "MMLU-Redux"
+    ],
+    "aliasesFr": [],
+    "jargon": [
+      {
+        "say": "5-shot",
+        "means": "le modèle voit cinq questions résolues avant celle qu'on lui pose, la façon classique de faire passer MMLU"
+      },
+      {
+        "say": "MMLU-Pro",
+        "means": "une version plus difficile, qui sature à son tour ; en janvier 2026, la fiche de Kimi K2.5 y donnait 90,1 % à Gemini 3 Pro"
+      },
+      {
+        "say": "MMLU-Redux",
+        "means": "5 700 questions de MMLU relues à la main en 2024 pour corriger les réponses fausses"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "benchmarks-lesquels-croire",
+      "humanitys-last-exam",
+      "gpqa",
+      "quantization",
+      "mythe-plus-gros-plus-intelligent"
+    ],
+    "short": "MMLU est un QCM de 15 908 questions dans 57 matières, des mathématiques au droit en passant par la médecine, publié en 2020 pour mesurer l'étendue des connaissances d'un modèle de langage.",
+    "image": "C'était l'examen d'entrée au conservatoire, un QCM de culture musicale que chaque groupe passait avant d'être pris au sérieux. Aujourd'hui, tous les groupes de premier plan y frôlent la note maximale, et le corrigé lui-même contient des erreurs.",
+    "imagineForm": "D",
+    "imagine": "En entretien, un candidat data scientist te demande : « Un modèle qui fait 100 % au MMLU, il est parfait ? » Tu lui réponds : « Il a coché la réponse attendue à un millier de questions dont l'énoncé ou le corrigé est erroné. »",
+    "full": [
+      "Publié en septembre 2020 par Dan Hendrycks et son équipe, MMLU pose 15 908 questions à quatre choix dans 57 matières. À sa sortie, GPT-3 obtenait 43,9 % et les auteurs estimaient le niveau d'experts humains à environ 89,8 %. MMLU couvre l'étendue des connaissances scolaires et universitaires, mais pas le raisonnement long, l'usage d'outils ou la capacité à dire qu'on ne sait pas.",
+      "En juin 2024, une équipe de chercheurs a relu à la main 5 700 questions et estimé que 6,5 % de MMLU contient une erreur ; dans la partie virologie, 57 % des questions examinées en avaient une. Le plafond réel est donc nettement sous 100 %, autour de 93,5 % si l'estimation est juste, et un score au-delà veut dire que le modèle suit le corrigé jusque dans ses erreurs.",
+      "Ses questions circulent en ligne depuis 2020, et le risque qu'elles se retrouvent dans les données d'entraînement est connu depuis longtemps. Les labos l'ont laissé de côté, et les fiches de quatre modèles à poids ouverts publiés entre mars et août 2026 par Mistral AI, MiniMax, Moonshot AI et Z.ai ne le mentionnent plus du tout."
+    ],
+    "reliability": {
+      "level": "fragile",
+      "why": "Le test est saturé depuis 2024, environ 6,5 % de ses questions ont un énoncé ou un corrigé erroné, et ses questions, publiques depuis 2020, ont eu tout le temps de passer dans les données d'entraînement. Il ne sert plus qu'à vérifier qu'un petit modèle ou un modèle compressé n'a pas perdu ses connaissances."
+    },
+    "then": "Mi-2024, Anthropic, OpenAI et Meta affichaient encore un score MMLU autour de 88 % dans les annonces de Claude 3.5 Sonnet, de GPT-4o et de Llama 3.1. En 2026, les fiches des modèles de pointe citent GPQA, HLE ou Terminal-Bench, et MMLU n'y figure plus.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Le petit modèle qu'on veut embarquer fait 70 % au MMLU. Ça veut dire quoi ?"
+      },
+      {
+        "who": "a",
+        "text": "Que c'est un repère pour le comparer à d'autres petits modèles, ou à sa version non compressée, et presque rien de plus sur ce qu'il fera de tes demandes."
+      }
+    ],
+    "avoid": "« Avec Language Understanding dans son nom, MMLU teste la compréhension du langage. » Il teste des connaissances en QCM, matière par matière, et ne vérifie ni la rédaction, ni le suivi d'une consigne, ni le raisonnement en plusieurs étapes.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Hendrycks et al., Measuring Massive Multitask Language Understanding, septembre 2020 (57 matières)",
+        "url": "https://arxiv.org/abs/2009.03300"
+      },
+      {
+        "label": "Wikipédia, MMLU (15 908 questions ; GPT-3 à 43,9 % ; experts estimés à 89,8 % ; environ 88 % pour Claude 3.5 Sonnet, GPT-4o et Llama 3.1 mi-2024 ; contamination ; « partially phased out » depuis 2025)",
+        "url": "https://en.wikipedia.org/wiki/MMLU"
+      },
+      {
+        "label": "Gema et al., Are We Done with MMLU?, juin 2024 (5 700 questions relues, 6,49 % d'erreurs estimées, 57 % en virologie, dont 33 % de corrigés faux, 14 % de questions floues et 4 % à plusieurs bonnes réponses). Calcul de l'Imagine : 15 908 x 0,0649 = 1 032 questions",
+        "url": "https://arxiv.org/abs/2406.04127"
+      },
+      {
+        "label": "Moonshot AI, fiche de Kimi K2.5 sur Hugging Face, janvier 2026 (MMLU-Pro : Gemini 3 Pro à 90,1 %)",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2.5"
+      },
+      {
+        "label": "Mistral AI, fiche de Mistral Medium 3.5 sur Hugging Face, 31 mars 2026, consultée le 2 octobre 2026 (aucune mention de MMLU)",
+        "url": "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B"
+      },
+      {
+        "label": "MiniMax, fiche de MiniMax-M3 sur Hugging Face, 2 juin 2026, consultée le 2 octobre 2026 (aucune mention de MMLU)",
+        "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3"
+      },
+      {
+        "label": "Moonshot AI, fiche de Kimi K3 sur Hugging Face, 13 juin 2026, consultée le 2 octobre 2026 (aucune mention de MMLU)",
+        "url": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+        "label": "Z.ai, fiche de GLM-5.3 sur Hugging Face, 25 août 2026, consultée le 2 octobre 2026 (aucune mention de MMLU)",
+        "url": "https://huggingface.co/zai-org/GLM-5.3"
+      },
+      {
+        "label": "DeepSeek, fiche de DeepSeek-V4.1-Flash sur Hugging Face, septembre 2026 (GPQA Diamond, HLE et Terminal-Bench pour le modèle instruct, MMLU-Pro seulement pour le modèle de base)",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+      }
+    ]
+  },
+  {
+    "id": "modeles-frontiere",
+    "status": "live",
+    "num": "50",
+    "title": "Modèles frontière",
+    "en": "Frontier models",
+    "aliases": [
+      "frontier model",
+      "frontier AI",
+      "frontier lab",
+      "state of the art",
+      "SOTA"
+    ],
+    "aliasesFr": [
+      "modèle de pointe",
+      "IA de frontière"
+    ],
+    "jargon": [
+      {
+        "say": "frontier lab",
+        "means": "un labo qui entraîne des modèles à la frontière ; le mot sert autant à se présenter qu'à décrire, et chaque labo l'emploie pour son modèle de tête"
+      },
+      {
+        "say": "10^25 FLOP",
+        "means": "le seuil de l'AI Act européen : un modèle généraliste dont l'entraînement a demandé plus de 10^25 opérations de calcul (un 1 suivi de 25 zéros) est présumé à risque systémique"
+      },
+      {
+        "say": "GPAI",
+        "means": "general-purpose AI model, le nom que l'AI Act donne aux modèles généralistes ; au-dessus du seuil de calcul, ils passent dans la catégorie « à risque systémique »"
+      },
+      {
+        "say": "SOTA",
+        "means": "state of the art, le meilleur score publié à une date donnée sur un benchmark précis"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "comparatif-des-modeles",
+      "compute",
+      "tailles-de-modele",
+      "benchmarks",
+      "open-weights"
+    ],
+    "short": "Un modèle frontière est l'un des quelques modèles les plus capables à une date donnée ; la loi californienne SB 53 reprend le mot et le définit par le calcul dépensé pour l'entraîner, plus de 10^26 opérations.",
+    "image": "Parmi les maisons de disques, quelques-unes seulement peuvent louer le plus grand studio de la ville pendant des mois, et leurs albums fixent le niveau que les autres essaient d'atteindre. Le régulateur, qui ne peut pas écouter un album avant sa sortie, a choisi de compter les heures de studio, en sachant qu'elles ne disent pas qui joue le mieux.",
+    "imagineForm": "E",
+    "imagine": "En mars 2023, GPT-4 sort, et c'est le modèle frontière par excellence. En septembre 2026, le même GPT-4, sans un paramètre changé, est sorti de la frontière, dépassé par toute une génération de modèles dont GPT-6 Astra, qu'Epoch AI estime entraîné avec environ cinquante fois plus de calcul.",
+    "full": [
+      "La définition la plus utile vient du Frontier Model Forum, l'association créée en 2023 qui réunit Amazon, Anthropic, Google, Meta, Microsoft et OpenAI. Un modèle frontière y est un modèle généraliste qui dépasse, sur un ensemble de benchmarks ou d'évaluations de capacités à risque, tous les modèles largement déployés depuis au moins douze mois. La frontière est une date autant qu'un niveau, et elle avance à chaque sortie. En octobre 2026, chaque labo place son modèle de tête de ce côté. OpenAI présente GPT-6 Astra comme son modèle le plus capable, SpaceXAI (ex-xAI) appelle Grok 4.7 son « frontier model », et Mistral AI décrit Mistral Medium 3.5 comme un modèle « frontier-class ».",
+      "Le mot compte aussi parce que la régulation s'appuie sur la même idée. L'AI Act européen ne parle pas de frontière mais de « modèle à risque systémique », et il présume qu'un modèle généraliste a des capacités à fort impact quand son entraînement dépasse 10^25 opérations. GPT-4 lui-même tombe sur la ligne, puisque l'estimation d'Epoch AI pour son entraînement, entre 8 × 10^24 et 4 × 10^25 opérations, encadre le seuil. Les fournisseurs de ces modèles doivent alors évaluer le modèle avec des tests adverses, mesurer les risques, signaler les incidents graves et protéger le modèle contre les attaques. Ces obligations s'appliquent depuis le 2 août 2025, et la Commission peut infliger des amendes depuis le 2 août 2026. En Californie, la loi SB 53, signée le 29 septembre 2025, appelle « frontier model » tout modèle entraîné avec plus de 10^26 opérations, fine-tuning et apprentissage par renforcement compris, et vise surtout les développeurs qui dépassent 500 millions de dollars de chiffre d'affaires annuel.",
+      "Le seuil de calcul a l'avantage d'être un chiffre, et l'inconvénient que le public ne peut presque jamais le vérifier. Dans la base d'Epoch AI mise à jour le 1er octobre 2026, 1 410 des 3 626 modèles recensés ont une estimation de calcul d'entraînement. Elle manque justement pour Claude Fable 5.1, Gemini 3.1 Pro ou Muse Spark 1.3, dont les labos ne publient rien. Pour ces modèles, c'est au fournisseur de faire le calcul et de se déclarer auprès du Bureau de l'IA de la Commission."
+    ],
+    "then": "En septembre 2024, le gouverneur de Californie refusait de signer SB 1047, une première loi sur les modèles frontière, et le mot restait surtout celui des labos et des chercheurs. Deux ans plus tard, il figure dans SB 53, une loi californienne signée en 2025, et le seuil européen de 10^25 opérations est assorti d'amendes depuis le 2 août 2026.",
+    "office": [
+      {
+        "who": "q",
+        "text": "10^25 opérations, ça représente quoi, concrètement ?"
+      },
+      {
+        "who": "a",
+        "text": "Une seule carte H200 qui calculerait sans s'arrêter à sa puissance de pointe mettrait environ trois siècles à les faire ; les labos y arrivent en quelques mois avec des dizaines de milliers de puces."
+      }
+    ],
+    "avoid": "« L'AI Act interdit les modèles frontière. » Le texte ne les interdit pas, mais au-delà de 10^25 opérations d'entraînement, il présume un risque systémique et impose des obligations, comme les évaluations, les tests adverses, le signalement des incidents graves et la cybersécurité.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Frontier Model Forum, About us (créé en 2023 ; définition d'un modèle frontière : dépasse tous les modèles largement déployés depuis au moins 12 mois), consulté le 2 octobre 2026",
+        "url": "https://www.frontiermodelforum.org/about-us/"
+      },
+      {
+        "label": "Frontier Model Forum, Membership (Amazon, Anthropic, Google, Meta, Microsoft, OpenAI), consulté le 2 octobre 2026",
+        "url": "https://www.frontiermodelforum.org/membership/"
+      },
+      {
+        "label": "OpenAI, fiche de GPT-6 Astra (« Our most capable model »), consultée le 2 octobre 2026",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      },
+      {
+        "label": "SpaceXAI, fiche de Grok 4.7 (« frontier model for coding, agentic tasks, and knowledge work »), consultée le 2 octobre 2026",
+        "url": "https://docs.x.ai/developers/models/grok-4.7"
+      },
+      {
+        "label": "Wikipédia, SpaceXAI (nom actuel de X.AI Corp., 2023-2026)",
+        "url": "https://en.wikipedia.org/wiki/SpaceXAI"
+      },
+      {
+        "label": "Mistral AI, fiche de Mistral Medium 3.5 (« frontier-class multimodal model »), consultée le 2 octobre 2026",
+        "url": "https://docs.mistral.ai/models/mistral-medium-3-5-26-04"
+      },
+      {
+        "label": "AI Act, article 51, paragraphe 2 (présomption au-delà de 10^25 opérations de calcul d'entraînement)",
+        "url": "https://artificialintelligenceact.eu/article/51/"
+      },
+      {
+        "label": "AI Act, article 55 (obligations des fournisseurs de modèles à risque systémique : évaluation et tests adverses, risques, incidents graves, cybersécurité)",
+        "url": "https://artificialintelligenceact.eu/article/55/"
+      },
+      {
+        "label": "Commission européenne, lignes directrices pour les fournisseurs de modèles d'IA à usage général (obligations depuis le 2 août 2025, pouvoirs d'exécution et amendes depuis le 2 août 2026, notification au Bureau de l'IA)",
+        "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-gpai-providers"
+      },
+      {
+        "label": "California Legislative Information, SB 53, chapitre 138 (approuvée par le gouverneur le 29 septembre 2025 ; « frontier model » au-delà de 10^26 opérations, fine-tuning et RL compris ; « large frontier developer » au-delà de 500 millions de dollars de chiffre d'affaires)",
+        "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260SB53"
+      },
+      {
+        "label": "Wikipédia, Transparency in Frontier Artificial Intelligence Act (SB 1047, la loi précédente, rejetée par le gouverneur Gavin Newsom en 2024)",
+        "url": "https://en.wikipedia.org/wiki/Transparency_in_Frontier_Artificial_Intelligence_Act"
+      },
+      {
+        "label": "Epoch AI, base AI models, fichier all_ai_models.csv mis à jour le 1er octobre 2026 : GPT-4 (mars 2023) 2,1 x 10^25 FLOP (« Likely », intervalle à 90 % de 8,2 x 10^24 à 4,4 x 10^25) ; GPT-6 Astra (septembre 2026) environ 10^27 FLOP (« Likely », intervalle 5 x 10^26 à 2 x 10^27, au moins 100 000 GB200) ; 1 410 modèles sur 3 626 avec une estimation ; aucune pour Claude Fable 5.1, Gemini 3.1 Pro, Muse Spark 1.3. Calcul de l'Imagine : 10^27 / 2,1 x 10^25 = 48, environ cinquante fois",
+        "url": "https://epoch.ai/data/all_ai_models.csv"
+      },
+      {
+        "label": "NVIDIA, H200 (1 979 TFLOPS en BF16, chiffre donné avec sparsité, soit environ 990 TFLOPS en calcul dense, la sparsité doublant le débit théorique). Calcul du bureau : 10^25 / 9,9 x 10^14 = 1,0 x 10^10 secondes, environ 320 ans",
+        "url": "https://www.nvidia.com/en-us/data-center/h200/"
+      }
+    ]
+  },
+  {
+    "id": "comparatif-des-modeles",
+    "status": "live",
+    "num": "51",
+    "title": "Comparatif des modèles",
+    "en": "LLM pricing comparison",
+    "aliases": [
+      "model comparison",
+      "price per million tokens",
+      "$/MTok"
+    ],
+    "aliasesFr": [
+      "prix des modèles",
+      "tarifs des API",
+      "comparatif des prix"
+    ],
+    "jargon": [
+      {
+        "say": "$/MTok",
+        "means": "dollars par million de tokens, l'unité de tous les tarifs ; Anthropic écrit MTok, OpenAI et Google « per 1M tokens »"
+      },
+      {
+        "say": "cached input",
+        "means": "les tokens d'entrée relus depuis un cache parce qu'ils ont déjà été envoyés récemment ; ils coûtent de 2,5 % du prix normal chez Claude Fable 5.1 à 25 % chez Grok 4.7"
+      },
+      {
+        "say": "Batch API",
+        "means": "envoyer des requêtes par lots, traitées en différé, contre 50 % de remise chez Anthropic, OpenAI et Google ; Grok 4.7 ne l'accepte pas"
+      },
+      {
+        "say": "long context pricing",
+        "means": "au-delà d'un seuil (200 000 tokens chez Google et SpaceXAI, 272 000 chez OpenAI), toute la requête passe au tarif supérieur ; Anthropic et Meta n'appliquent pas de surcoût"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "cout-d-une-requete",
+      "modeles-frontiere",
+      "open-weights",
+      "tokenizer",
+      "tailles-de-modele",
+      "benchmarks"
+    ],
+    "short": "Le comparatif des modèles met côte à côte les modèles des principaux labos et leurs prix, comptés en dollars par million de tokens, avec un tarif pour ce que tu envoies au modèle et un autre, plus élevé, pour ce qu'il écrit.",
+    "image": "Chaque maison de disques affiche son tarif horaire à l'entrée de son studio, mais aucune n'utilise la même horloge, et chez l'une la minute dure un peu plus longtemps que chez la voisine. Les tokens se comportent de la même façon, parce que chaque labo découpe le texte avec sa propre sampleuse.",
+    "imagineForm": "A",
+    "imagine": "Demande à chaque modèle du tableau de te réécrire Notre-Dame de Paris en entier, soit 295 934 tokens au compteur du tokenizer d'OpenAI. La sortie te coûterait un peu plus d'un dollar chez DeepSeek-V4-Pro ou Muse Spark 1.3, et près de 15 $ chez Claude Fable 5.1 ou GPT-6 Astra, avant même de savoir en combien de morceaux chacun découpe le roman.",
+    "table": {
+      "caption": "Prix des modèles de tête",
+      "asOf": "2 octobre 2026",
+      "columns": [
+        "Modèle",
+        "Labo",
+        "Entrée $ / 1M tokens",
+        "Sortie $ / 1M tokens",
+        "Fenêtre de contexte",
+        "Poids ouverts"
+      ],
+      "rows": [
+        [
+          "Claude Fable 5.1",
+          "Anthropic",
+          "10",
+          "50",
+          "1M",
+          "non"
+        ],
+        [
+          "Claude Opus 5.5",
+          "Anthropic",
+          "4",
+          "20",
+          "1M",
+          "non"
+        ],
+        [
+          "GPT-6 Astra",
+          "OpenAI",
+          "10",
+          "50",
+          "1,05M",
+          "non"
+        ],
+        [
+          "GPT-6.1 Sol",
+          "OpenAI",
+          "2",
+          "10",
+          "1,05M",
+          "non"
+        ],
+        [
+          "Gemini 3.1 Pro (preview)",
+          "Google",
+          "2",
+          "12",
+          "1M",
+          "non"
+        ],
+        [
+          "Grok 4.7",
+          "SpaceXAI",
+          "2",
+          "6",
+          "500k",
+          "non"
+        ],
+        [
+          "Muse Spark 1.3",
+          "Meta",
+          "1,25",
+          "4,25",
+          "1M",
+          "non"
+        ],
+        [
+          "Qwen3.8-Max",
+          "Alibaba",
+          "2",
+          "6",
+          "1M",
+          "oui, licence maison"
+        ],
+        [
+          "DeepSeek-V4-Pro",
+          "DeepSeek",
+          "1,32",
+          "3,96",
+          "1M",
+          "oui, MIT"
+        ],
+        [
+          "Mistral Medium 3.5",
+          "Mistral AI",
+          "1,5",
+          "7,5",
+          "256k",
+          "oui, MIT modifiée"
+        ]
+      ],
+      "note": "Tarif standard, sans cache ni batch, pour une requête sous le seuil de contexte long ; DeepSeek aux heures de pointe (moitié prix le reste du temps), Alibaba au tarif international."
+    },
+    "full": [
+      "Le tableau compare des prix au million de tokens, mais un token n'a pas la même taille partout, puisque chaque labo a son tokenizer. Anthropic prévient ainsi que le tokenizer introduit avec Claude Opus 4.7 produit environ 30 % de tokens de plus pour le même texte. Pour comparer deux modèles sur ta tâche, compte donc la facture de quelques vraies requêtes plutôt que le tarif affiché.",
+      "Sur toutes les lignes, la sortie coûte de trois à six fois plus que l'entrée. Le texte que tu envoies est lu d'un seul passage, tous les tokens en parallèle, ce qui occupe pleinement les puces. La réponse s'écrit au contraire token par token, et chaque token demande de relire en mémoire tous les poids actifs du modèle pour un seul résultat. L'étude Splitwise décrit cette phase de génération comme limitée par la mémoire et laissant la puissance de calcul en grande partie inutilisée. Les labos ne publient pas leurs coûts, et rien ne dit que le rapport entre les deux prix suive exactement celui de leurs dépenses.",
+      "La facture réelle s'écarte du tableau dans les deux sens. Le cache de prompt fait payer les passages déjà envoyés entre 2,5 % et 25 % du prix d'entrée, et le batch divise tout par deux chez Anthropic, OpenAI et Google. Au-delà de 272 000 tokens, OpenAI double le prix d'entrée de GPT-6 Astra pour toute la requête. Les modèles de raisonnement ajoutent des tokens de réflexion que tu ne vois pas, payés au tarif de sortie, et Google l'écrit en toutes lettres sur sa grille. Le calendrier compte aussi, puisque DeepSeek divise ses prix par deux hors des heures de pointe et que Gemini 3.8 Flash doublera les siens le 1er janvier 2027."
+    ],
+    "then": "En avril 2024, GPT-4 Turbo, alors le modèle de tête d'OpenAI, coûtait 10 $ le million de tokens d'entrée et 30 $ en sortie, des prix toujours affichés sur la page de tarifs. En 2026, GPT-6.1 Sol, qu'OpenAI présente comme proche de GPT-6 Astra, coûte 2 $ et 10 $, cinq fois moins en entrée et trois fois moins en sortie.",
+    "office": [
+      {
+        "who": "q",
+        "text": "On a pris le modèle le moins cher au million de tokens, et la facture dépasse celle de l'ancien. Comment c'est possible ?"
+      },
+      {
+        "who": "a",
+        "text": "Compare les tokens consommés par requête plutôt que les tarifs, parce que son tokenizer découpe peut-être ton texte en plus de morceaux, et que s'il réfléchit plus longtemps, son brouillon compte comme de la sortie."
+      }
+    ],
+    "avoid": "« Les modèles à poids ouverts sont gratuits. » Les poids se téléchargent sans payer, mais il faut des GPU pour les faire tourner, et par l'API de leur labo, DeepSeek-V4-Pro ou Qwen3.8-Max se paient au token comme les autres.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Anthropic, Pricing (Claude Fable 5.1 : 10 $ et 50 $ ; Claude Opus 5.5 : 4 $ et 20 $ ; Claude Opus 4 : 15 $ et 75 $ ; lecture du cache à 2,5 %, 5 % ou 10 % du prix d'entrée ; batch à 50 % ; pas de surcoût de contexte long ; tokenizer de Claude Opus 4.7 et suivants : environ 30 % de tokens en plus), consulté le 2 octobre 2026",
+        "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      {
+        "label": "Anthropic, Models overview (fenêtre de 1M tokens pour Claude Fable 5.1 et Claude Opus 5.5), consulté le 2 octobre 2026",
+        "url": "https://platform.claude.com/docs/en/about-claude/models/overview"
+      },
+      {
+        "label": "OpenAI, Pricing (GPT-6 Astra : 10 $ et 50 $ ; GPT-6.1 Sol : 2 $ et 10 $ ; gpt-4-turbo-2024-04-09 : 10 $ et 30 $ ; batch à 50 %), consulté le 2 octobre 2026",
+        "url": "https://developers.openai.com/api/docs/pricing"
+      },
+      {
+        "label": "OpenAI, fiche de GPT-6 Astra (fenêtre de 1 050 000 tokens ; au-delà de 272 000 tokens d'entrée, entrée et cache x2, sortie x1,5 pour toute la requête)",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6-astra"
+      },
+      {
+        "label": "OpenAI, fiche de GPT-6.1 Sol (« near-Astra performance » ; fenêtre de 1 050 000 tokens, lecture du cache à 5 % du prix d'entrée)",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+      },
+      {
+        "label": "Google, Gemini API Pricing (Gemini 3.1 Pro Preview : 2 $ et 12 $ jusqu'à 200 000 tokens, prix de sortie « including thinking tokens » ; Gemini 3.8 Flash : 0,75 $ et 3,75 $ jusqu'au 31 décembre 2026, puis 1,50 $ et 7,50 $ ; batch à 50 %), consulté le 2 octobre 2026",
+        "url": "https://ai.google.dev/gemini-api/docs/pricing"
+      },
+      {
+        "label": "Google, fiche de Gemini 3.1 Pro Preview (1 048 576 tokens en entrée)",
+        "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.1-pro-preview"
+      },
+      {
+        "label": "SpaceXAI, fiche de Grok 4.7 (2 $ et 6 $ sous 200 000 tokens, cache à 0,50 $, fenêtre de 500 000 tokens, pas de Batch API), consultée le 2 octobre 2026",
+        "url": "https://docs.x.ai/developers/models/grok-4.7"
+      },
+      {
+        "label": "Meta, Pricing and rate limits (Muse Spark 1.3 : 1,25 $ et 4,25 $, cache à 0,15 $, pas de surcoût de contexte long ; tier Contributor à 0,10 $ et 0,20 $ contre l'usage des données pour l'entraînement), consulté le 2 octobre 2026",
+        "url": "https://dev.meta.ai/docs/pricing-rate-limits"
+      },
+      {
+        "label": "Meta, Models (Muse Spark hébergé sur l'API, fenêtre de 1 048 576 tokens ; Muse Glimmer est le modèle à poids ouverts)",
+        "url": "https://dev.meta.ai/docs/models"
+      },
+      {
+        "label": "Alibaba Cloud Model Studio, Model pricing, région internationale (Singapour) : qwen3.8-max à 2 $ et 6 $ jusqu'à 1M tokens par requête, consulté le 2 octobre 2026",
+        "url": "https://www.alibabacloud.com/help/en/model-studio/model-pricing"
+      },
+      {
+        "label": "Qwen, fiche de Qwen3.8-2.4T-A95B sur Hugging Face (poids publiés sous licence « qwen3.8-max » ; Qwen3.8-Max en est la version officielle avec des fonctions en plus)",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+      },
+      {
+        "label": "DeepSeek, Models & Pricing (deepseek-v4-pro : 1,32 $ et 3,96 $ aux heures de pointe, moitié prix hors pointe ; fenêtre de 1M tokens), consulté le 2 octobre 2026",
+        "url": "https://api-docs.deepseek.com/quick_start/pricing"
+      },
+      {
+        "label": "DeepSeek, fiche de DeepSeek-V4-Pro (poids sous licence MIT)",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+      },
+      {
+        "label": "Mistral AI, fiche de Mistral Medium 3.5 (1,5 $ et 7,5 $, fenêtre de 256k, poids ouverts sous licence MIT modifiée), consultée le 2 octobre 2026",
+        "url": "https://docs.mistral.ai/models/mistral-medium-3-5-26-04"
+      },
+      {
+        "label": "Patel et al., Splitwise: Efficient generative LLM inference using phase splitting, novembre 2023 (lecture du prompt limitée par le calcul, génération limitée par la mémoire)",
+        "url": "https://arxiv.org/abs/2311.18677"
+      },
+      {
+        "label": "OpenAI, Reasoning models (tokens de raisonnement invisibles, facturés comme des tokens de sortie)",
+        "url": "https://developers.openai.com/api/docs/guides/reasoning"
+      },
+      {
+        "label": "Victor Hugo, Notre-Dame de Paris, Projet Gutenberg (ebook 19657) : 295 934 tokens en o200k_base, comptés avec tiktoken le 2 octobre 2026 sur le texte entre les marqueurs START et END. Calcul de l'Imagine : 0,295934 x 3,96 = 1,17 $ ; x 4,25 = 1,26 $ ; x 50 = 14,80 $",
+        "url": "https://www.gutenberg.org/ebooks/19657"
+      },
+      {
+        "label": "Wikipédia, Claude (AI) (Claude Opus 4 sorti le 22 mai 2025, Claude Opus 5.5 le 22 septembre 2026)",
+        "url": "https://en.wikipedia.org/wiki/Claude_(AI)"
+      }
+    ]
+  },
+  {
+    "id": "cout-d-une-requete",
+    "status": "live",
+    "num": "52",
+    "title": "Coût d'une requête",
+    "en": "Inference cost",
+    "aliases": [
+      "API pricing",
+      "cost per token",
+      "cost per request",
+      "prompt caching"
+    ],
+    "aliasesFr": [
+      "prix d'une requête",
+      "facture API"
+    ],
+    "jargon": [
+      {
+        "say": "prompt caching",
+        "means": "garder côté serveur le début d'une requête qui revient à l'identique (consignes, documents) ; relu depuis le cache, il est facturé une fraction du prix d'entrée, 5 % sur Claude Opus 5.5"
+      },
+      {
+        "say": "cache write",
+        "means": "la première écriture d'un passage dans le cache, facturée 1,25 fois le prix d'entrée chez Anthropic et OpenAI ; la remise ne vient qu'aux lectures suivantes"
+      },
+      {
+        "say": "reasoning tokens",
+        "means": "les tokens du brouillon d'un modèle de raisonnement ; tu ne les vois pas forcément, et on les paie au tarif de sortie"
+      },
+      {
+        "say": "usage",
+        "means": "le bloc que renvoie chaque réponse d'API avec le décompte exact des tokens d'entrée, de sortie et de cache ; c'est lui qu'on additionne pour connaître la facture"
+      }
+    ],
+    "cat": "inference",
+    "links": [
+      "token",
+      "comparatif-des-modeles",
+      "fenetre-de-contexte",
+      "modeles-de-raisonnement",
+      "gpu",
+      "kv-cache"
+    ],
+    "short": "Le coût d'une requête, c'est le nombre de tokens d'entrée multiplié par leur prix, plus le nombre de tokens de sortie multiplié par le leur, avec une remise pour ce qui est relu depuis un cache.",
+    "image": "Le studio facture à la ligne, et chaque sample qui passe par la sampleuse se paie au tarif de l'entrée, chaque note que chante le chanteur au tarif de la sortie, nettement plus cher. Les pistes déjà enregistrées, qu'on repasse telles quelles sur la bande, ne coûtent presque rien.",
+    "imagineForm": "E",
+    "imagine": "Ton assistant interne envoie à Claude Opus 5.5, avec chaque question, les mêmes 30 000 tokens de procédures, et chaque réponse te coûte environ 14 centimes. Active le cache de prompt sur ces procédures, et la même réponse tombe à 2 centimes, pour exactement le même travail.",
+    "full": [
+      "Le calcul tient en trois lignes. Une question envoyée à GPT-6.1 Sol avec un document de 12 000 tokens coûte 2,4 centimes en entrée, au tarif de 2 $ le million. Sa réponse visible de 600 tokens ajoute 0,6 centime au tarif de sortie, 10 $ le million, soit trois centimes en tout. Sol réfléchit pourtant toujours avant de répondre, puisqu'OpenAI ne permet pas de régler son effort de raisonnement sous le niveau « low ». Avec un brouillon de 5 000 tokens, la sortie passe à 5 600 tokens et le total à 0,08 $, presque le triple de ce que la réponse visible laissait croire.",
+      "Ces tokens de réflexion sont la grande inconnue de la facture. OpenAI indique que ses modèles en produisent de quelques centaines à plusieurs dizaines de milliers selon la difficulté, et qu'une requête peut même s'arrêter faute de place avant toute réponse visible, après avoir facturé l'entrée et la réflexion. Les outils pèsent aussi, puisque chez Anthropic déclarer le kit de navigation web ajoute environ 6 600 tokens d'entrée à chaque appel, et chaque recherche web coûte 10 $ les 1 000.",
+      "Trois leviers font baisser la facture. Avec le cache, les passages répétés ne coûtent qu'une fraction du prix, le batch divise par deux le prix des requêtes qui peuvent attendre, et un modèle plus petit traite les tâches simples. Anthropic estime ainsi à environ 37 $ le traitement de 10 000 tickets de support avec Claude Haiku 4.5. Dans l'autre sens, une requête très longue peut basculer d'un coup sur un tarif plus cher, comme chez OpenAI au-delà de 272 000 tokens d'entrée."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "On paie quoi, exactement, quand l'agent lit une page web ?"
+      },
+      {
+        "who": "a",
+        "text": "Tu paies le texte de la page, qui entre comme tokens d'entrée, et Anthropic compte environ 2 500 tokens pour une page web moyenne, 125 000 pour un article de recherche en PDF ; la recherche elle-même se paie en plus."
+      }
+    ],
+    "avoid": "« Ça coûte des fractions de centime, inutile de compter. » La réponse de l'assistant à 14 centimes coûte 1 368 $ quand elle revient 10 000 fois, et c'est à cette échelle que le cache, le batch et le choix du modèle se décident.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Anthropic, Pricing (Claude Opus 5.5 : 4 $ en entrée, 20 $ en sortie, lecture du cache à 0,20 $ ; écriture du cache à 1,25 fois le prix d'entrée ; kit de navigation web d'environ 6 600 tokens ; recherche web à 10 $ les 1 000 ; page web moyenne d'environ 2 500 tokens, PDF de 500 Ko d'environ 125 000 ; exemple de 10 000 tickets pour environ 37 $ avec Claude Haiku 4.5), consulté le 2 octobre 2026. Calcul de l'Imagine : 30 200 x 4 / 10^6 + 800 x 20 / 10^6 = 0,1368 $ ; avec cache : 30 000 x 0,20 / 10^6 + 200 x 4 / 10^6 + 0,016 = 0,0228 $, hors écriture initiale du cache (0,15 $ à chaque renouvellement)",
+        "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      {
+        "label": "OpenAI, fiche de GPT-6.1 Sol (2 $ en entrée, 10 $ en sortie ; efforts de raisonnement « none » et « minimal » non disponibles ; au-delà de 272 000 tokens d'entrée, entrée x2 et sortie x1,5 pour toute la requête ; écriture du cache à 1,25 fois le prix d'entrée), consultée le 2 octobre 2026",
+        "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol"
+      },
+      {
+        "label": "OpenAI, Reasoning models (de quelques centaines à plusieurs dizaines de milliers de tokens de raisonnement, facturés comme de la sortie ; coût possible sans réponse visible)",
+        "url": "https://developers.openai.com/api/docs/guides/reasoning"
+      }
+    ]
+  },
+  {
+    "id": "compute",
+    "status": "live",
+    "num": "53",
+    "title": "Compute",
+    "en": "Compute",
+    "aliases": [
+      "FLOP",
+      "FLOPs",
+      "training compute",
+      "inference compute",
+      "MFU"
+    ],
+    "aliasesFr": [
+      "puissance de calcul",
+      "calcul"
+    ],
+    "jargon": [
+      {
+        "say": "FLOP",
+        "means": "floating-point operation, une multiplication ou une addition sur des nombres à virgule ; le calcul d'un entraînement se compte en FLOP au total"
+      },
+      {
+        "say": "FLOP/s",
+        "means": "la vitesse d'une puce, en opérations par seconde ; à ne pas confondre avec FLOP tout court, qui compte un total"
+      },
+      {
+        "say": "6ND",
+        "means": "la règle de calcul approchée d'un entraînement : 6 opérations par paramètre et par token lu, avec N paramètres (les paramètres actifs pour un MoE) et D tokens"
+      },
+      {
+        "say": "MFU",
+        "means": "model FLOPs utilization, la part de la puissance de pointe vraiment utilisée pendant l'entraînement ; Epoch AI suppose 25 % pour estimer celui de GPT-6 Astra"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "gpu",
+      "entrainement",
+      "modeles-frontiere",
+      "parametres",
+      "cout-d-une-requete",
+      "modeles-de-raisonnement"
+    ],
+    "short": "Le compute, c'est la quantité de calcul que demande un modèle, comptée en opérations sur des nombres (FLOP), d'abord en quantité énorme pour l'entraîner, une seule fois, puis à chaque token qu'il lit ou écrit pour te répondre.",
+    "image": "Pour le studio, le compute se compte en heures de location et en kilowatts. Les mois passés à régler la console dans le grand studio, c'est l'entraînement, payé une fois ; chaque concert qui suit, c'est l'inférence, qui consomme un peu de courant à chaque note, mais tous les soirs et dans toutes les salles à la fois.",
+    "imagineForm": "B",
+    "imagine": "Prends ta calculatrice et refais l'estimation d'Epoch AI pour Olmo 3 32B, le modèle d'Ai2 dont les données d'entraînement sont publiques, en multipliant 6 par ses 32 milliards de paramètres, puis par les 5 500 milliards de tokens qu'il a lus. Tu obtiens environ 1,1 × 10^24 opérations, et il en faudrait encore près de dix fois plus pour atteindre le seuil de 10^25 que l'AI Act réserve aux modèles à risque systémique.",
+    "full": [
+      "Un entraînement fait passer chaque token des données dans le modèle, puis ajuste les paramètres, ce qui revient à environ six opérations par paramètre et par token. Avec des dizaines de milliards de paramètres et des milliers de milliards de tokens, on arrive aux ordres de grandeur du domaine, entre 10^24 et 10^27 opérations, la notation 10^24 désignant un 1 suivi de 24 zéros, soit mille milliards de milliards. Les labos de tête ne publient plus ces chiffres, qui viennent donc d'estimations, comme celle d'Epoch AI pour GPT-6 Astra, environ 10^27 opérations sur au moins 100 000 puces GB200 de NVIDIA installées à Abilene, au Texas.",
+      "L'inférence coûte beaucoup moins par token, mais elle se répète à chaque requête de chaque utilisateur, et c'est elle que Google mesure quand il compte les tokens traités chaque mois sur ses services. Les modèles de raisonnement déplacent encore la dépense vers ce moment-là, puisque leur brouillon, écrit avant chaque réponse, peut à lui seul dépasser la réponse en longueur.",
+      "Le compute se paie en puces et en électricité. Quand Anthropic annonce en octobre 2025 un accord pour utiliser jusqu'à un million de puces TPU de Google, il le chiffre aussi en énergie, avec bien plus d'un gigawatt de capacité en service en 2026."
+    ],
+    "then": "En 2024, Google traitait 9 700 milliards de tokens par mois sur ses services. En mai 2026, Sundar Pichai annonce plus de 3,2 millions de milliards par mois, plus de trois cents fois plus, et chacun de ces tokens a été lu ou écrit pour répondre à quelqu'un.",
+    "office": [
+      {
+        "who": "q",
+        "text": "On nous propose d'entraîner notre propre modèle de zéro. C'est jouable ?"
+      },
+      {
+        "who": "a",
+        "text": "Fais le calcul 6ND avant d'en discuter, en sachant qu'Olmo 3 32B, pourtant loin de la frontière, a occupé 1 024 GPU H100 selon Epoch AI ; c'est ce budget-là qu'il faut mettre en face du projet."
+      }
+    ],
+    "avoid": "« Une fois entraîné, le modèle ne coûte plus rien en calcul. » Chaque token lu ou écrit mobilise tous les paramètres actifs du modèle. Cette dépense revient à chaque requête, multipliée par le nombre d'utilisateurs et, pour un modèle de raisonnement, par la longueur de son brouillon.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Epoch AI, base AI models, fichier all_ai_models.csv mis à jour le 1er octobre 2026 : Olmo 3 32B à 1,1 x 10^24 FLOP (6 x 3,2 x 10^10 x 5,5 x 10^12, « Confident »), entraîné sur 1 024 H100 ; GPT-6 Astra à environ 10^27 FLOP (« Likely », au moins 100 000 GB200 de NVIDIA à Abilene, 90 jours à 25 % de MFU supposés) ; règle C = 6ND. Calcul de l'Imagine : 10^25 / 1,056 x 10^24 = 9,5",
+        "url": "https://epoch.ai/data/all_ai_models.csv"
+      },
+      {
+        "label": "Ai2, fiche d'Olmo 3 32B sur Hugging Face (5,50 trillions de tokens d'entraînement)",
+        "url": "https://huggingface.co/allenai/Olmo-3-1125-32B"
+      },
+      {
+        "label": "AI Act, article 51, paragraphe 2 (seuil de 10^25 opérations)",
+        "url": "https://artificialintelligenceact.eu/article/51/"
+      },
+      {
+        "label": "Google, Sundar Pichai à Google I/O 2026, 19 mai 2026 (9,7 trillions de tokens par mois il y a deux ans, environ 480 trillions à I/O 2025, plus de 3,2 quadrillions aujourd'hui)",
+        "url": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/"
+      },
+      {
+        "label": "OpenAI, Reasoning models (de quelques centaines à plusieurs dizaines de milliers de tokens de raisonnement selon le problème)",
+        "url": "https://developers.openai.com/api/docs/guides/reasoning"
+      },
+      {
+        "label": "Anthropic, Expanding our use of Google Cloud TPUs and Services, 23 octobre 2025 (jusqu'à un million de TPU, bien plus d'un gigawatt en 2026)",
+        "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services"
+      }
+    ]
+  },
+  {
+    "id": "gpu",
+    "status": "live",
+    "num": "54",
+    "title": "GPU",
+    "en": "GPU",
+    "aliases": [
+      "graphics processing unit",
+      "TPU",
+      "AI accelerator",
+      "HBM",
+      "CUDA"
+    ],
+    "aliasesFr": [
+      "carte graphique",
+      "processeur graphique",
+      "puce IA"
+    ],
+    "jargon": [
+      {
+        "say": "HBM",
+        "means": "high bandwidth memory, la mémoire montée au plus près de la puce ; une H200 de NVIDIA en a 141 Go, lus à 4,8 To par seconde"
+      },
+      {
+        "say": "TPU",
+        "means": "tensor processing unit, la puce que Google conçoit pour l'IA et qu'il loue aussi à d'autres labos, dont Anthropic"
+      },
+      {
+        "say": "CUDA",
+        "means": "la couche logicielle de NVIDIA qui permet de programmer ses cartes graphiques pour autre chose que l'affichage ; AlexNet était déjà écrit avec, en 2012"
+      },
+      {
+        "say": "avec sparsité",
+        "means": "la mention qui accompagne souvent les TFLOPS annoncés : le chiffre suppose qu'au moins deux valeurs sur quatre sont des zéros, et la puissance sur un calcul ordinaire vaut la moitié"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "compute",
+      "parametres",
+      "quantization",
+      "cout-d-une-requete",
+      "open-weights",
+      "modeles-frontiere"
+    ],
+    "short": "Un GPU est une puce conçue à l'origine pour l'affichage graphique, capable de faire des milliers de multiplications en même temps ; c'est ce que demande un modèle d'IA, dont le calcul consiste surtout à multiplier de grands tableaux de nombres.",
+    "image": "Au studio, un processeur ordinaire serait un ingé son très rapide qui tourne les potards un à un, alors que le GPU est une équipe de milliers de techniciens qui tournent chacun le leur, tous en même temps. L'image oublie la place, car les potards doivent aussi tenir dans la mémoire de la carte, et c'est souvent elle qui décide du nombre de cartes.",
+    "imagineForm": "D",
+    "imagine": "« Une H200 suffira pour faire tourner GLM-5.3 chez nous ? », demande le directeur informatique à propos du modèle à poids ouverts de Z.ai. L'ingénieure répond : « Même stocké sur 8 bits par paramètre, il pèse 755 Go, et une H200 n'a que 141 Go de mémoire, alors il en faut six avant d'avoir posé la première question. »",
+    "full": [
+      "En 2012, Alex Krizhevsky entraîne AlexNet, le réseau qui allait lancer la vague actuelle de l'apprentissage profond, sur deux cartes graphiques de jeu GTX 580 installées dans sa chambre, chez ses parents. L'entraînement dure cinq à six jours, et le réseau est coupé en deux parce qu'il ne tient pas dans les 3 Go d'une seule carte. On y trouve déjà tout le reste de l'histoire, puisqu'un réseau de neurones se calcule en multipliant des tableaux de nombres, un GPU fait ces multiplications par milliers en parallèle, et la mémoire fixe la taille de ce qu'on peut faire tourner.",
+      "Pour écrire une réponse, la mémoire compte souvent plus que la puissance affichée. Chaque token oblige à relire les poids actifs du modèle, et une H200 de NVIDIA est construite autour de ça, avec 141 Go de mémoire lus à 4,8 To par seconde. L'étude Splitwise montre que cette phase de génération laisse une bonne part du calcul inutilisée, ce qui aide à comprendre pourquoi la quantization, qui allège les poids, accélère aussi les réponses.",
+      "NVIDIA n'est pas seul. Google conçoit ses propres puces, les TPU, et Ironwood, présenté en avril 2025 comme le premier pensé pour l'inférence, porte 192 Go de mémoire par puce et s'assemble en grappes allant jusqu'à 9 216 puces. La génération suivante, présentée en mai 2026, se dédouble même, avec un TPU 8t pour l'entraînement et un TPU 8i pour l'inférence. Anthropic répartit son calcul entre trois familles, les TPU de Google, les Trainium d'Amazon et les GPU de NVIDIA."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Pourquoi on ne ferait pas tourner le modèle sur nos serveurs classiques, sans GPU ?"
+      },
+      {
+        "who": "a",
+        "text": "Pour un petit modèle quantifié, ça se tente ; au-delà, chaque token oblige à relire tous les poids actifs en mémoire, et une H200 les relit à 4,8 To par seconde."
+      }
+    ],
+    "avoid": "« Plus de TFLOPS, c'est un modèle qui répond plus vite. » Pendant qu'il écrit, le modèle attend surtout sa mémoire, et sa capacité comme sa bande passante comptent autant que la puissance affichée. Celle-ci est souvent donnée avec sparsité, donc deux fois plus haute que sur un calcul ordinaire.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Wikipédia, AlexNet (deux GTX 580 de 3 Go dans la chambre de Krizhevsky, cinq à six jours d'entraînement, réseau coupé en deux faute de mémoire, code écrit avec CUDA)",
+        "url": "https://en.wikipedia.org/wiki/AlexNet"
+      },
+      {
+        "label": "NVIDIA, H200 (141 Go de mémoire HBM3e, 4,8 To/s ; TFLOPS donnés avec sparsité), consulté le 2 octobre 2026",
+        "url": "https://www.nvidia.com/en-us/data-center/h200/"
+      },
+      {
+        "label": "Z.ai, GLM-5.3 sur Hugging Face (753 milliards de paramètres, poids en FP8 pour environ 755 Go selon l'API Hugging Face, consultée le 2 octobre 2026). Calcul de l'Imagine : 755 / 141 = 5,4, donc 6 cartes",
+        "url": "https://huggingface.co/zai-org/GLM-5.3"
+      },
+      {
+        "label": "Patel et al., Splitwise: Efficient generative LLM inference using phase splitting, novembre 2023 (la génération de tokens sous-utilise la puissance de calcul)",
+        "url": "https://arxiv.org/abs/2311.18677"
+      },
+      {
+        "label": "NVIDIA Developer, Structured Sparsity in the NVIDIA Ampere Architecture (au moins deux zéros sur quatre valeurs ; débit théorique doublé par rapport au calcul dense)",
+        "url": "https://developer.nvidia.com/blog/structured-sparsity-in-the-nvidia-ampere-architecture-and-applications-in-search-engines/"
+      },
+      {
+        "label": "Google, Ironwood: The first Google TPU for the age of inference, 9 avril 2025 (192 Go de HBM par puce, 7,37 To/s, grappes de 9 216 puces)",
+        "url": "https://blog.google/products/google-cloud/ironwood-tpu-age-of-inference/"
+      },
+      {
+        "label": "Google, Sundar Pichai à Google I/O 2026, 19 mai 2026 (TPU 8t pour l'entraînement, TPU 8i pour l'inférence)",
+        "url": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/"
+      },
+      {
+        "label": "Anthropic, Expanding our use of Google Cloud TPUs and Services, 23 octobre 2025 (jusqu'à un million de TPU ; TPU, Trainium et GPU NVIDIA)",
+        "url": "https://www.anthropic.com/news/expanding-our-use-of-google-cloud-tpus-and-services"
+      }
+    ]
+  },
+  {
+    "id": "inference",
+    "status": "live",
+    "num": "55",
+    "title": "Inférence",
+    "en": "Inference",
+    "aliases": [
+      "model inference",
+      "serving",
+      "inference time"
+    ],
+    "aliasesFr": [
+      "utilisation du modèle"
+    ],
+    "jargon": [
+      {
+        "say": "prefill, decode",
+        "means": "les deux temps d'une réponse : le modèle lit d'abord tout ton message d'un bloc, en parallèle, puis produit sa réponse au fil des tokens"
+      },
+      {
+        "say": "TTFT",
+        "means": "time to first token, le délai avant que le premier mot de la réponse s'affiche ; c'est surtout la durée de la lecture du message"
+      },
+      {
+        "say": "inference provider",
+        "means": "une entreprise qui fait tourner des modèles sur ses propres machines et te facture chaque requête, souvent pour des modèles open weights qu'elle n'a pas entraînés"
+      },
+      {
+        "say": "batching",
+        "means": "le serveur traite les requêtes de nombreux utilisateurs en même temps sur le même GPU, ce qui fait baisser le coût de chacune"
+      }
+    ],
+    "cat": "inference",
+    "links": [
+      "entrainement",
+      "prediction-du-mot-suivant",
+      "kv-cache",
+      "quantization",
+      "cout-d-une-requete",
+      "token"
+    ],
+    "solutions": [
+      {
+        "name": "vLLM",
+        "kind": "moteur d'inférence open source",
+        "url": "https://github.com/vllm-project/vllm"
+      },
+      {
+        "name": "SGLang",
+        "kind": "moteur d'inférence open source",
+        "url": "https://github.com/sgl-project/sglang"
+      },
+      {
+        "name": "Hugging Face Inference Providers",
+        "kind": "plateforme cloud",
+        "url": "https://huggingface.co/docs/inference-providers/index"
+      },
+      {
+        "name": "Together AI",
+        "kind": "plateforme cloud",
+        "url": "https://www.together.ai/"
+      },
+      {
+        "name": "Groq",
+        "kind": "plateforme cloud",
+        "url": "https://groq.com/"
+      }
+    ],
+    "short": "L'inférence est l'utilisation d'un modèle déjà entraîné : on lui donne un texte, il calcule sa réponse avec des paramètres figés, et rien de ce qu'il fait à ce moment ne modifie ce qu'il a appris.",
+    "image": "L'inférence correspond au concert, une fois les répétitions finies et le rideau levé. La console reste réglée telle que l'ingé son l'a laissée, le groupe joue pour la salle de ce soir, et une fausse note ne change plus aucun potard ; on rejouera le même réglage demain, dans une autre ville.",
+    "imagineForm": "A",
+    "imagine": "En mai 2026, Google faisait passer chaque mois plus de 3,2 millions de milliards de tokens dans ses modèles, sur l'ensemble de ses produits, soit environ 1,2 milliard par seconde. Chaque seconde, ses serveurs traitaient donc l'équivalent de plus de 3 000 exemplaires des Trois Mousquetaires, et ils recommençaient la seconde suivante.",
+    "full": [
+      "Un modèle vit deux vies. Pendant l'entraînement, on ajuste ses paramètres pendant des semaines sur des milliers de GPU, une seule fois ; pendant l'inférence, on s'en sert avec ces paramètres figés, autant de fois qu'il y a de questions. Chaque requête se déroule en deux temps, la lecture de tout le message d'un bloc (le prefill), puis la production de la réponse, token par token (le decode).",
+      "Un token traité en inférence coûte bien moins cher qu'un token d'entraînement, parce qu'il ne demande que le calcul vers l'avant, sans le calcul de retour qui sert à corriger les paramètres. Pour un modèle classique, où tous les paramètres travaillent sur chaque token, la règle courante tirée des lois d'échelle de 2020 donne un rapport d'environ un à trois.",
+      "Ramené à une seule question, le coût reste petit. En août 2025, Google a mesuré qu'une requête texte médiane dans l'application Gemini consommait 0,24 Wh, moins que neuf secondes de télévision, et que cette consommation avait été divisée par 33 entre mai 2024 et mai 2025."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "On l'a repris trois fois ce matin sur la même erreur. Il va finir par retenir ?"
+      },
+      {
+        "who": "a",
+        "text": "Pas en inférence, ses paramètres ne bougent pas pendant qu'il te répond. Mets la correction dans les consignes de l'outil, qu'il relira à chaque requête."
+      }
+    ],
+    "avoid": "« Le modèle fait une inférence, il déduit la réponse. » En IA, le mot désigne l'exécution du modèle sur une entrée, sans aucun raisonnement logique garanti ; une réponse fausse est une inférence au même titre qu'une juste.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Google, discours de Sundar Pichai à la keynote d'I/O, 19 mai 2026 (9 700 milliards de tokens par mois il y a deux ans, environ 480 000 milliards en 2025, plus de 3,2 millions de milliards en 2026). Calcul de l'Imagine : 3,2 x 10^15 tokens / (30,44 jours x 86 400 s) = 1,22 milliard de tokens par seconde ; 1,22 x 10^9 / 368 798 = 3 299 exemplaires",
+        "url": "https://blog.google/innovation-and-ai/sundar-pichai-io-2026/"
+      },
+      {
+        "label": "Les Trois Mousquetaires, Alexandre Dumas, texte du Projet Gutenberg compté avec tiktoken (o200k_base) le 2 octobre 2026 entre les marqueurs START et END : 368 798 tokens, 0,61 mot par token",
+        "url": "https://www.gutenberg.org/ebooks/13951"
+      },
+      {
+        "label": "Kaplan et al., Scaling Laws for Neural Language Models, janvier 2020 (le calcul de retour coûte environ deux fois le calcul vers l'avant, soit environ 6N opérations par token d'entraînement)",
+        "url": "https://arxiv.org/abs/2001.08361"
+      },
+      {
+        "label": "Google Cloud, Measuring the environmental impact of AI inference, 21 août 2025 (requête texte médiane de l'application Gemini : 0,24 Wh, moins de 9 secondes de télévision, énergie divisée par 33 de mai 2024 à mai 2025)",
+        "url": "https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference"
+      },
+      {
+        "label": "Elsworth et al., Measuring the environmental impact of delivering AI at Google scale, août 2025 (méthodologie détaillée)",
+        "url": "https://arxiv.org/abs/2508.15734"
+      },
+      {
+        "label": "NVIDIA, Mastering LLM Techniques: Inference Optimization, 17 novembre 2023 (phases de prefill et de decode)",
+        "url": "https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/"
+      }
+    ]
+  },
+  {
+    "id": "kv-cache",
+    "status": "live",
+    "num": "56",
+    "title": "KV cache",
+    "en": "KV cache",
+    "aliases": [
+      "key-value cache",
+      "prefix caching"
+    ],
+    "aliasesFr": [
+      "cache clé-valeur"
+    ],
+    "jargon": [
+      {
+        "say": "KV",
+        "means": "key et value, clé et valeur, les deux séries de nombres que le modèle calcule pour chaque token à chaque couche, et que les tokens suivants consultent pour savoir ce qui précède"
+      },
+      {
+        "say": "GQA",
+        "means": "grouped-query attention, une architecture où plusieurs têtes d'attention partagent les mêmes clés et valeurs, ce qui rétrécit le cache ; Mistral Small 3.2 a 32 têtes pour 8 jeux de clés et valeurs"
+      },
+      {
+        "say": "PagedAttention",
+        "means": "la technique du moteur vLLM qui range le cache par petits blocs, comme les pages de la mémoire d'un ordinateur ; avant elle, 20 à 38 % seulement de la mémoire réservée au cache servait vraiment"
+      },
+      {
+        "say": "prefix caching",
+        "means": "la réutilisation du cache d'un début de texte commun à plusieurs requêtes, ce qui permet aux fournisseurs de facturer moins cher un début déjà vu (voir Coût d'une requête)"
+      }
+    ],
+    "cat": "inference",
+    "links": [
+      "prediction-du-mot-suivant",
+      "fenetre-de-contexte",
+      "inference",
+      "cout-d-une-requete"
+    ],
+    "short": "Le KV cache est la mémoire de travail où un modèle garde, pendant qu'il écrit, les calculs déjà faits sur les tokens précédents, pour ne pas les refaire à chaque nouveau token.",
+    "image": "Sur une table multipiste, les prises déjà enregistrées restent sur la bande, et le chanteur pose sa nouvelle phrase en les écoutant sans que le groupe rejoue tout depuis le début ; le KV cache tient ce rôle. L'image triche sur un point, car ce qui est gardé n'est pas le son des prises mais des notes de travail prises à chaque étage de la console, beaucoup plus lourdes que le texte lui-même.",
+    "imagineForm": "D",
+    "imagine": "La cheffe de projet écrit à l'équipe infra : « Notre GPU a 80 Go de mémoire et Mistral Small 3.2 en prend 48 ; combien de clients peuvent lui envoyer en même temps un dossier qui remplit toute sa fenêtre ? » Réponse de l'équipe : « Un seul, et il reste à peine de quoi servir la moitié d'un deuxième. »",
+    "full": [
+      "Pour choisir le token suivant, chaque couche du modèle consulte tous les tokens déjà présents à travers deux séries de nombres calculées pour chacun, ses clés et ses valeurs. Ces nombres ne changent plus une fois calculés, donc le serveur les garde dans la mémoire du GPU et n'ajoute à chaque pas que ceux du nouveau token. Sans ce cache, une réponse de 1 000 tokens obligerait le modèle à traiter 500 500 tokens en tout, au lieu de 1 000. La lecture du message remplit le cache d'un coup, l'écriture de la réponse l'allonge d'un token à chaque fois.",
+      "Ce cache pèse lourd, et les auteurs de vLLM l'estimaient en 2023 à 800 Ko par token pour un modèle de 13 milliards de paramètres, soit jusqu'à 1,6 Go pour une seule requête de 2 048 tokens. Pour Mistral Small 3.2, sorti en juin 2025, le calcul tiré de sa configuration donne environ 164 Ko par token, et quelque 21 Go quand sa fenêtre est pleine, près de la moitié de ce que pèsent ses paramètres. C'est souvent ce cache, plus que le modèle, qui limite le nombre de conversations qu'un GPU sert en même temps.",
+      "Le même principe sert d'une requête à l'autre. Quand deux requêtes commencent par le même texte, un moteur comme vLLM peut réutiliser les blocs de cache du début commun au lieu de les recalculer. C'est ce qui permet aux fournisseurs d'API de facturer moins cher un début de requête déjà envoyé quelques minutes plus tôt, et la fiche Coût d'une requête en donne les prix."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Notre modèle maison sert dix personnes sans broncher, mais il refuse du monde dès que les conversations s'allongent."
+      },
+      {
+        "who": "a",
+        "text": "C'est le KV cache qui remplit la mémoire du GPU, puisqu'il grandit avec chaque token de chaque conversation ; résume les vieux historiques, ou passe sur un moteur comme vLLM qui le range sans gaspillage."
+      }
+    ],
+    "avoid": "« Le KV cache, c'est la mémoire du modèle d'une conversation à l'autre. » Il ne contient que des calculs sur le texte en cours, il disparaît après la requête ou au bout de quelques minutes, et le modèle n'y apprend rien.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Kwon et al., Efficient Memory Management for Large Language Model Serving with PagedAttention (vLLM), septembre 2023 (800 Ko de cache par token pour OPT-13B, jusqu'à 1,6 Go par requête de 2 048 tokens ; 20,4 à 38,2 % seulement de la mémoire du cache réellement utilisée dans les systèmes précédents ; taille du cache qui limite le nombre de requêtes servies ensemble)",
+        "url": "https://arxiv.org/abs/2309.06180"
+      },
+      {
+        "label": "Mistral AI, configuration de Mistral-Small-3.2-24B-Instruct-2506 (40 couches, 32 têtes d'attention, 8 têtes clé-valeur de dimension 128, fenêtre de 131 072 tokens, bfloat16). Calcul : 2 x 40 x 8 x 128 x 2 octets = 163 840 octets, environ 164 Ko par token ; x 131 072 tokens = 21,5 Go ; 24 milliards de paramètres x 2 octets = 48 Go. Imagine : 80 - 48 = 32 Go libres, 32 - 21,5 = 10,5 Go, environ la moitié d'une deuxième fenêtre pleine, hors mémoire de calcul. Sans cache : 1 + 2 + ... + 1 000 = 500 500",
+        "url": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506/blob/main/config.json"
+      },
+      {
+        "label": "Wikipédia, Hopper (microarchitecture) (H100 avec jusqu'à 80 Go de mémoire)",
+        "url": "https://en.wikipedia.org/wiki/Hopper_(microarchitecture)"
+      },
+      {
+        "label": "NVIDIA, Mastering LLM Techniques: Inference Optimization, 17 novembre 2023 (clés et valeurs gardées en mémoire pour éviter de les recalculer, cache qui grandit avec la longueur de la séquence)",
+        "url": "https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/"
+      },
+      {
+        "label": "Ainslie et al., GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints, mai 2023",
+        "url": "https://arxiv.org/abs/2305.13245"
+      },
+      {
+        "label": "vLLM, documentation Automatic Prefix Caching (réutilisation des blocs de KV cache quand deux requêtes partagent un même début)",
+        "url": "https://docs.vllm.ai/en/latest/design/prefix_caching.html"
+      }
+    ]
+  },
+  {
+    "id": "descente-de-gradient",
+    "status": "live",
+    "num": "57",
+    "title": "Descente de gradient",
+    "en": "Gradient descent",
+    "aliases": [
+      "SGD",
+      "stochastic gradient descent",
+      "optimizer",
+      "learning rate"
+    ],
+    "aliasesFr": [
+      "descente du gradient",
+      "optimiseur",
+      "taux d'apprentissage"
+    ],
+    "jargon": [
+      {
+        "say": "learning rate",
+        "means": "le taux d'apprentissage, la taille du pas : trop grand, l'entraînement saute par-dessus les bons réglages et diverge ; trop petit, il n'avance plus"
+      },
+      {
+        "say": "SGD",
+        "means": "stochastic gradient descent, la descente calculée à chaque pas sur un petit paquet d'exemples tiré au hasard plutôt que sur toutes les données, plus bruitée mais bien plus rapide"
+      },
+      {
+        "say": "AdamW, Muon",
+        "means": "des optimiseurs, c'est-à-dire des façons plus fines de faire chaque pas, qui tiennent compte des pas précédents ; AdamW date de 2017, Muon a fait ses preuves à grande échelle en 2025"
+      },
+      {
+        "say": "la loss descend",
+        "means": "l'erreur mesurée baisse au fil des pas, signe que l'entraînement progresse ; si elle remonte d'un coup, on parle de loss spike"
+      }
+    ],
+    "cat": "entrainement",
+    "links": [
+      "entrainement",
+      "parametres",
+      "retropropagation",
+      "gradient-qui-disparait"
+    ],
+    "short": "La descente de gradient est la méthode qui ajuste les paramètres d'un modèle pendant l'entraînement, en calculant à chaque pas dans quel sens chaque paramètre doit bouger pour que l'erreur baisse, puis en le déplaçant un peu dans ce sens.",
+    "image": "Retourne dans la régie, où l'ingé son n'a pas d'oreille mais un vumètre dont l'aiguille dit à quel point la dernière note sonnait faux. Pour chaque potard, un calcul lui indique de quel côté tourner pour faire baisser l'aiguille et à quel point elle y réagit ; il tourne alors tous les potards ensemble, chacun selon sa sensibilité, d'un geste volontairement petit, et refait une mesure.",
+    "imagineForm": "B",
+    "imagine": "Cache un objet dans la pièce, ferme les yeux et demande à ton voisin de te guider en ne disant que « plus chaud » ou « plus froid » après chaque pas. Avance à pas de géant, et tu dépasses l'objet, reviens, le dépasses encore ; avance à pas de fourmi, et tu y es encore dans dix minutes. Entre les deux se trouve le bon taux d'apprentissage.",
+    "full": [
+      "L'entraînement mesure à chaque pas l'erreur du modèle, la loss, sur un paquet de textes. Le gradient dit, pour chaque paramètre, si l'augmenter un peu ferait monter ou baisser cette erreur, et avec quelle force. La descente consiste à déplacer tous les paramètres à la fois dans le sens qui la fait baisser, d'une quantité réglée par le taux d'apprentissage, puis à recommencer sur un autre paquet, jusqu'à la fin de l'entraînement.",
+      "L'image classique est celle d'un randonneur pris dans le brouillard, qui sent la pente sous ses pieds et descend du côté où elle plonge. Elle triche à trois endroits. Le terrain a autant de directions que le modèle a de paramètres, des milliards et pas deux. La pente n'est pas sentie mais calculée, sur un paquet de textes différent à chaque pas, comme si le sol bougeait sous le randonneur. Et le but n'est pas le fond de la vallée, qu'on n'atteint jamais, mais un replat assez bas pour que les prédictions soient bonnes.",
+      "La méthode est ancienne, puisqu'on l'attribue à Augustin-Louis Cauchy en 1847. Elle ne trouve qu'un bon réglage, sans aucune garantie que ce soit le meilleur possible, et elle a besoin d'un autre calcul pour connaître la pente de chaque paramètre, la rétropropagation."
+    ],
+    "then": "AdamW, publié en 2017 et intégré depuis à PyTorch, est resté l'optimiseur le plus courant pour entraîner les grands modèles. En février 2025, Moonshot AI a montré que Muon, un optimiseur qui redresse la direction de chaque pas, atteignait le même résultat qu'AdamW avec environ deux fois moins de calcul, avant de s'en servir pour entraîner ses propres modèles.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Le fine-tuning de cette nuit a planté, la loss est partie à l'infini au bout de vingt minutes."
+      },
+      {
+        "who": "a",
+        "text": "Commence par diviser le learning rate par deux ou par trois et relance ; un pas trop grand fait exactement ce que tu décris."
+      }
+    ],
+    "avoid": "« La descente de gradient trouve le réglage optimal. » Elle trouve un réglage où l'erreur ne baisse plus beaucoup autour, ce qui suffit en pratique, sans rien prouver sur l'existence d'un meilleur réglage ailleurs.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Wikipédia, Gradient descent (méthode attribuée à Cauchy, 1847 ; analogie des randonneurs dans le brouillard)",
+        "url": "https://en.wikipedia.org/wiki/Gradient_descent"
+      },
+      {
+        "label": "Loshchilov et Hutter, Decoupled Weight Decay Regularization (AdamW), novembre 2017 (adopté par la communauté et intégré à TensorFlow et PyTorch)",
+        "url": "https://arxiv.org/abs/1711.05101"
+      },
+      {
+        "label": "Moonshot AI, Kimi K2: Open Agentic Intelligence, juillet 2025 (préentraînement avec MuonClip, une variante de Muon)",
+        "url": "https://arxiv.org/abs/2507.20534"
+      },
+      {
+        "label": "Moonshot AI, Muon is Scalable for LLM Training, 24 février 2025 (Muon environ deux fois plus efficace en calcul qu'AdamW)",
+        "url": "https://arxiv.org/abs/2502.16982"
+      },
+      {
+        "label": "Kingma et Ba, Adam: A Method for Stochastic Optimization, décembre 2014",
+        "url": "https://arxiv.org/abs/1412.6980"
+      }
+    ]
+  },
+  {
+    "id": "retropropagation",
+    "status": "live",
+    "num": "58",
+    "title": "Rétropropagation",
+    "en": "Backpropagation",
+    "aliases": [
+      "backprop",
+      "backward pass",
+      "reverse-mode automatic differentiation"
+    ],
+    "aliasesFr": [
+      "rétropropagation du gradient",
+      "passe arrière"
+    ],
+    "jargon": [
+      {
+        "say": "forward pass, backward pass",
+        "means": "l'aller, où le texte traverse le modèle jusqu'à la prédiction, puis le retour, où l'erreur remonte de la sortie vers l'entrée pour attribuer à chaque paramètre sa part"
+      },
+      {
+        "say": "backprop",
+        "means": "le diminutif courant ; « faire une backprop », c'est calculer les gradients d'un pas d'entraînement"
+      },
+      {
+        "say": "activations",
+        "means": "les valeurs intermédiaires calculées pendant l'aller, gardées en mémoire parce que le retour en a besoin ; ce sont elles qui font exploser la mémoire d'un entraînement"
+      },
+      {
+        "say": "autograd",
+        "means": "la partie des bibliothèques comme PyTorch qui fait la rétropropagation toute seule, sans qu'on écrive le calcul à la main"
+      }
+    ],
+    "cat": "entrainement",
+    "links": [
+      "descente-de-gradient",
+      "gradient-qui-disparait",
+      "entrainement",
+      "parametres"
+    ],
+    "short": "La rétropropagation est le calcul qui, après chaque erreur d'un modèle pendant l'entraînement, remonte de la sortie vers l'entrée pour établir combien chaque paramètre a contribué à cette erreur, et donc dans quel sens le corriger.",
+    "image": "Quand la fausse note sort des enceintes, elle a traversé la console tranche après tranche, et la rétropropagation refait le chemin à l'envers. La dernière tranche établit sa part de la faute et transmet le reste à celle d'avant, qui fait de même, jusqu'au micro. Personne ne marche dans le studio, en réalité ; chaque tranche a gardé ses notes de l'aller, et le retour se contente de les relire.",
+    "imagineForm": "D",
+    "imagine": "« Qui a joué faux ? », demande le producteur après la prise, et l'ingé son lui tend un listing de sept milliards de lignes : « Tout le monde, un peu, et voici exactement de combien chacun. »",
+    "full": [
+      "Pour corriger un modèle, la descente de gradient a besoin de savoir, pour chacun de ses milliards de paramètres, dans quel sens il aurait fallu le tourner. Les tester un par un demanderait, pour un modèle de 7 milliards de paramètres, 7 milliards de calculs complets à chaque pas. La rétropropagation obtient toutes ces réponses d'un seul retour, qui coûte environ deux fois le calcul de l'aller, en appliquant couche par couche la règle de dérivation en chaîne.",
+      "Ce raccourci coûte cher en mémoire, car le retour relit tout ce que l'aller a calculé. Hugging Face compte, pour un entraînement classique, 18 octets par paramètre avant même ces valeurs intermédiaires, contre 2 octets pour faire tourner le même modèle en 16 bits. La même documentation cite un modèle de 4 milliards de paramètres qui demande environ 85 Go de mémoire GPU pour s'entraîner.",
+      "L'idée vient de plusieurs endroits. Seppo Linnainmaa en publie la forme générale en 1970, Paul Werbos l'applique aux réseaux de neurones en 1982, et c'est l'article de David Rumelhart, Geoffrey Hinton et Ronald Williams dans Nature, en 1986, qui la fait adopter par tout le domaine. Les grands modèles actuels sont encore entraînés de cette façon."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Le modèle de 8 milliards tourne très bien sur notre GPU de 24 Go. On le fine-tune dessus ce week-end ?"
+      },
+      {
+        "who": "a",
+        "text": "Pas en entier, parce que l'entraînement garde en mémoire bien plus que les poids. Pars sur une méthode qui ne réentraîne qu'une petite partie des paramètres, comme LoRA, ou loue une machine plus grosse."
+      }
+    ],
+    "avoid": "« La rétropropagation, c'est quand le modèle apprend de ses erreurs en te parlant. » Elle n'a lieu que pendant l'entraînement, sur des exemples dont on connaît la bonne réponse ; quand le modèle te répond, aucun retour n'est calculé.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Rumelhart, Hinton et Williams, Learning representations by back-propagating errors, Nature, 9 octobre 1986",
+        "url": "https://www.nature.com/articles/323533a0"
+      },
+      {
+        "label": "Wikipédia, Backpropagation (Linnainmaa 1970, Werbos 1982, Rumelhart en 1985 et 1986)",
+        "url": "https://en.wikipedia.org/wiki/Backpropagation"
+      },
+      {
+        "label": "Kaplan et al., Scaling Laws for Neural Language Models, janvier 2020 (le retour coûte environ deux fois l'aller)",
+        "url": "https://arxiv.org/abs/2001.08361"
+      },
+      {
+        "label": "Hugging Face, documentation Model training anatomy (6 octets de poids, 8 octets pour Adam et 4 octets de gradients par paramètre, activations gardées pour le retour ; environ 85 Go pour entraîner un modèle de 4 milliards de paramètres), consultée le 2 octobre 2026",
+        "url": "https://huggingface.co/docs/transformers/model_memory_anatomy"
+      }
+    ]
+  },
+  {
+    "id": "gradient-qui-disparait",
+    "status": "live",
+    "num": "59",
+    "title": "Gradient qui disparaît",
+    "en": "Vanishing gradient",
+    "aliases": [
+      "vanishing gradient problem",
+      "exploding gradient",
+      "exploding gradient problem"
+    ],
+    "aliasesFr": [
+      "disparition du gradient",
+      "explosion du gradient",
+      "gradient évanescent"
+    ],
+    "jargon": [
+      {
+        "say": "vanishing / exploding gradient",
+        "means": "le signal de correction qui s'éteint, ou au contraire qui s'emballe, en remontant les couches du réseau"
+      },
+      {
+        "say": "residual connection, skip connection",
+        "means": "un raccourci qui ajoute l'entrée d'un bloc à sa sortie, pour que le signal puisse traverser le bloc sans passer par ses calculs"
+      },
+      {
+        "say": "LayerNorm, BatchNorm",
+        "means": "des étapes qui remettent les nombres d'une couche à une échelle standard, pour qu'ils ne grossissent ni ne fondent d'une couche à l'autre"
+      },
+      {
+        "say": "gradient clipping",
+        "means": "on plafonne la taille du signal de correction à chaque pas, la parade la plus courante quand il s'emballe"
+      }
+    ],
+    "cat": "entrainement",
+    "links": [
+      "retropropagation",
+      "descente-de-gradient",
+      "entrainement",
+      "tailles-de-modele"
+    ],
+    "short": "Le gradient qui disparaît est le problème qui a longtemps empêché d'entraîner des réseaux profonds, parce qu'en remontant les couches, le signal qui dit comment corriger chaque paramètre rétrécit jusqu'à presque rien et que les premières couches n'apprennent plus.",
+    "image": "Branche cinquante pédales d'effet à la suite, chacune baissant un peu le volume, et la guitare n'arrive plus à l'ampli ; si chacune le monte un peu, tu obtiens un larsen. La correction remonte les couches d'un réseau de la même façon, et la parade a été de poser à côté de chaque pédale un câble direct, qui laisse passer le son propre quoi que fasse la pédale.",
+    "imagineForm": "A",
+    "imagine": "Pose un million d'euros d'erreur à la sortie d'un réseau dont chaque couche ne transmet au mieux qu'un quart du signal qu'elle reçoit. Après dix couches, il reste 95 centimes à répartir dans la première, et après vingt couches, moins d'un dix-millième de centime. Mistral Small 3.2, un modèle de langage de taille moyenne, en empile quarante.",
+    "full": [
+      "Pendant la rétropropagation, le signal de correction est multiplié à chaque couche qu'il remonte. Si les facteurs sont petits, il fond de façon exponentielle et les couches proches de l'entrée ne bougent presque plus ; s'ils sont grands, il explose, les nombres débordent et l'entraînement diverge. Dans son manuel en ligne de 2015, Michael Nielsen mesure un réseau à quatre couches cachées dont la première apprend environ cent fois moins vite que la dernière.",
+      "Sepp Hochreiter a décrit le problème dans son mémoire de 1991, et c'est pour le contourner dans les réseaux qui lisent des séquences qu'il a publié le LSTM avec Jürgen Schmidhuber en 1997, une cellule de mémoire où l'erreur circule sans s'éteindre. Pour les réseaux très profonds, le déblocage arrive par couches successives, avec une meilleure initialisation des poids en 2010, la fonction ReLU en 2011, la normalisation en février 2015, puis les connexions résiduelles en décembre 2015.",
+      "L'article des connexions résiduelles, ResNet, précise que la disparition du gradient était déjà largement réglée par l'initialisation et la normalisation, et qu'il restait un autre mur, puisqu'un réseau de 56 couches faisait plus d'erreurs qu'un réseau de 20, même à l'entraînement. Avec le raccourci, ResNet a gagné le concours ImageNet 2015 avec 152 couches. Le Transformer de 2017 a repris le raccourci et la normalisation autour de chacun de ses blocs, et c'est ce qui permet d'empiler les dizaines de couches des grands modèles actuels."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Pourquoi les réseaux de neurones ont mis trente ans à décoller, alors que la rétropropagation date de 1986 ?"
+      },
+      {
+        "who": "a",
+        "text": "Entre autres raisons, on ne savait pas faire passer la correction à travers plus de quelques couches, et ce verrou n'a sauté qu'entre 2010 et 2015."
+      }
+    ],
+    "avoid": "« ResNet a résolu le gradient qui disparaît. » Ses auteurs écrivent eux-mêmes que l'initialisation et la normalisation l'avaient déjà largement réglé ; les connexions résiduelles ont réglé le problème suivant, la dégradation des réseaux trop profonds.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Michael Nielsen, Neural Networks and Deep Learning, chapitre 5, 2015 (dérivée de la sigmoïde au plus égale à 1/4 ; première couche cachée environ 100 fois plus lente que la dernière dans un réseau à quatre couches cachées). Calcul de l'Imagine, avec des poids inférieurs à 1 : 10^6 x 0,25^10 = 0,95 euro ; 10^6 x 0,25^20 = 9,1 x 10^-7 euro",
+        "url": "http://neuralnetworksanddeeplearning.com/chap5.html"
+      },
+      {
+        "label": "Wikipédia, Vanishing gradient problem (mémoire de Hochreiter, 1991 ; explosion du gradient)",
+        "url": "https://en.wikipedia.org/wiki/Vanishing_gradient_problem"
+      },
+      {
+        "label": "Hochreiter, Untersuchungen zu dynamischen neuronalen Netzen, mémoire de diplôme, TU Munich, 1991",
+        "url": "https://people.idsia.ch/~juergen/SeppHochreiter1991ThesisAdvisorSchmidhuber.pdf"
+      },
+      {
+        "label": "Hochreiter et Schmidhuber, Long Short-Term Memory, Neural Computation, 1997",
+        "url": "https://www.bioinf.jku.at/publications/older/2604.pdf"
+      },
+      {
+        "label": "Glorot et Bengio, Understanding the difficulty of training deep feedforward neural networks, AISTATS 2010",
+        "url": "https://proceedings.mlr.press/v9/glorot10a.html"
+      },
+      {
+        "label": "Glorot, Bordes et Bengio, Deep Sparse Rectifier Neural Networks (ReLU), AISTATS 2011",
+        "url": "https://proceedings.mlr.press/v15/glorot11a.html"
+      },
+      {
+        "label": "Ioffe et Szegedy, Batch Normalization, février 2015",
+        "url": "https://arxiv.org/abs/1502.03167"
+      },
+      {
+        "label": "He et al., Deep Residual Learning for Image Recognition, décembre 2015 (56 couches moins bonnes que 20 sans raccourci, disparition du gradient déjà largement traitée par l'initialisation et la normalisation, 152 couches, 1re place ILSVRC 2015)",
+        "url": "https://arxiv.org/abs/1512.03385"
+      },
+      {
+        "label": "Pascanu, Mikolov et Bengio, On the difficulty of training Recurrent Neural Networks, 2012 (plafonnement du gradient contre son explosion)",
+        "url": "https://arxiv.org/abs/1211.5063"
+      },
+      {
+        "label": "Vaswani et al., Attention Is All You Need, juin 2017 (connexion résiduelle et normalisation autour de chaque sous-couche)",
+        "url": "https://arxiv.org/abs/1706.03762"
+      },
+      {
+        "label": "Mistral AI, configuration de Mistral-Small-3.2-24B-Instruct-2506 (40 couches)",
+        "url": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506/blob/main/config.json"
+      }
+    ]
+  },
+  {
+    "id": "webmcp",
+    "status": "live",
+    "num": "60",
+    "title": "WebMCP",
+    "en": "WebMCP",
+    "aliases": [
+      "Web Model Context Protocol",
+      "document.modelContext",
+      "navigator.modelContext"
+    ],
+    "aliasesFr": [],
+    "jargon": [
+      {
+        "say": "document.modelContext",
+        "means": "l'objet par lequel une page déclare ses outils dans le brouillon actuel ; les premières versions et certains scripts disent encore navigator.modelContext"
+      },
+      {
+        "say": "API impérative, API déclarative",
+        "means": "deux façons d'exposer un outil : en JavaScript avec registerTool, ou en ajoutant à un formulaire HTML des attributs comme toolname et tooldescription"
+      },
+      {
+        "say": "origin trial",
+        "means": "l'essai à durée limitée par lequel Chrome laisse des sites activer une fonction expérimentale pour leurs vrais visiteurs, avant de décider de la garder"
+      },
+      {
+        "say": "toolautosubmit",
+        "means": "l'attribut qui autorise l'agent à envoyer le formulaire lui-même ; sans lui, le navigateur s'arrête sur le bouton et c'est l'utilisateur qui valide"
+      }
+    ],
+    "cat": "agents",
+    "links": [
+      "mcp",
+      "tool-use",
+      "agent",
+      "prompt-injection",
+      "harness"
+    ],
+    "solutions": [
+      {
+        "name": "Lighthouse, catégorie Agentic Browsing",
+        "kind": "outil pour tester",
+        "url": "https://developer.chrome.com/docs/lighthouse/agentic-browsing/registered-webmcp-tools"
+      },
+      {
+        "name": "MCP-B",
+        "kind": "bibliothèque open source",
+        "url": "https://mcp-b.ai/"
+      }
+    ],
+    "short": "WebMCP est une proposition de standard web qui permet à un site d'exposer des outils aux agents IA qui tournent dans le navigateur, chacun décrit par son nom, son rôle et ses paramètres, pour qu'ils agissent sur la page sans deviner où cliquer.",
+    "image": "En tournée, certaines salles collent à l'entrée des artistes une fiche d'accueil qui dit où brancher, quels boutons toucher et ce qui est interdit, et les roadies n'ont plus à tâtonner sur une console inconnue. WebMCP fait de cette fiche un standard du web. La fiche est rédigée par la salle elle-même, et rien ne garantit qu'elle décrive fidèlement ce que voit le public.",
+    "imagineForm": "B",
+    "imagine": "Ouvre reebok.com, affiche le code source de la page (Ctrl+U sous Windows, Cmd+Option+U sur Mac) et cherche « webmcp ». Tu tombes sur un petit script de Shopify qui ne charge la suite que si le navigateur sait accueillir des outils, et cette suite déclare onze outils pour les agents, de search_catalog à proceed_to_checkout.",
+    "full": [
+      "Un agent qui utilise un site aujourd'hui fait comme toi, en regardant la page et en devinant quel bouton correspond à quoi avant de cliquer et de taper, et il se trompe dès que la mise en page change. Avec WebMCP, le site déclare ses actions comme des outils, chacun accompagné d'un texte qui explique son rôle et d'un schéma de paramètres, et l'agent les appelle directement. On les déclare en JavaScript, ou en annotant un formulaire HTML existant, une variante encore décrite à part puisque la section correspondante de la spécification reste à écrire.",
+      "WebMCP reprend le vocabulaire de MCP, les outils et leurs schémas, mais pas son architecture. Il n'y a pas de serveur à installer, l'outil est une fonction de la page qui s'exécute dans l'onglet avec la session de l'utilisateur, et un agent ne le découvre qu'en visitant la page. Google présente l'API comme conçue pour un humain présent dans la boucle, et une règle d'accès réserve par défaut les outils au site lui-même, les cadres venus d'autres sites devant y être autorisés.",
+      "Les risques sont ceux du tool use, déplacés dans le navigateur. La spécification cite elle-même l'injection de consignes cachées dans les descriptions ou les résultats d'outils, et la fuite de données personnelles par des outils trop gourmands en paramètres. Mozilla relève un autre piège, celui d'un site qui proposerait des outils ne correspondant pas à ce qu'un humain voit sur la même page."
+    ],
+    "table": {
+      "caption": "Où en est WebMCP",
+      "asOf": "2 octobre 2026",
+      "columns": [
+        "Acteur",
+        "Statut",
+        "Date"
+      ],
+      "rows": [
+        [
+          "Spécification",
+          "Brouillon de Community Group du W3C, hors voie de standardisation",
+          "Version du 30 septembre 2026"
+        ],
+        [
+          "Chrome",
+          "Flag depuis la 146, origin trial de la 149 à la 156",
+          "9 juin 2026"
+        ],
+        [
+          "Firefox (Mozilla)",
+          "Position neutre, proposée le 1er juin",
+          "5 août 2026"
+        ],
+        [
+          "Safari (WebKit)",
+          "Position opposée, publiée le 3 juin",
+          "11 juin 2026"
+        ],
+        [
+          "Lighthouse",
+          "Audit des outils, alerte au-delà de 40",
+          "21 septembre 2026"
+        ]
+      ],
+      "note": "Spécification coéditée par Microsoft et Google ; l'audit Lighthouse demande Chrome 150 ou plus, et aucun navigateur n'active WebMCP par défaut."
+    },
+    "then": "Le premier texte de WebMCP, signé par des équipes de Microsoft et de Google, date du 13 août 2025, et Chrome en a ouvert un aperçu aux développeurs le 10 février 2026. Entre-temps, l'objet d'entrée est passé de navigator.modelContext à document.modelContext, au point que le script de Shopify sur Reebok teste encore les deux noms.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Le client e-commerce veut savoir s'il doit exposer son tunnel de commande en WebMCP."
+      },
+      {
+        "who": "a",
+        "text": "Teste-le en origin trial sur la recherche et le panier, garde la validation de la commande à l'humain, et ne refonds rien pour ça, puisque seul Chrome l'implémente et que WebKit s'y oppose."
+      }
+    ],
+    "avoid": "« WebMCP, c'est la version web de MCP, un standard du W3C. » C'est un brouillon de Community Group, qui n'est pas sur la voie des standards du W3C, et il ne parle pas le protocole de MCP, dont il ne garde que le vocabulaire, sans serveur ni connexion à un service distant.",
+    "video": null,
+    "sources": [
+      {
+        "label": "W3C Web Machine Learning Community Group, WebMCP, Draft Community Group Report du 30 septembre 2026 (hors voie de standardisation ; éditeurs Brandon Walderman pour Microsoft, Khushal Sagar et Dominic Farolino pour Google ; document.modelContext, registerTool ; règle d'accès « tools » ; risques d'injection et de fuite de données ; section déclarative encore à écrire)",
+        "url": "https://webmachinelearning.github.io/webmcp/"
+      },
+      {
+        "label": "Dépôt webmachinelearning/webmcp (premier texte publié le 13 août 2025, inspiration MCP-B, vocabulaire partagé avec MCP)",
+        "url": "https://github.com/webmachinelearning/webmcp"
+      },
+      {
+        "label": "Explainer de l'API déclarative (attributs toolname, tooldescription, toolparamdescription et toolautosubmit ; sans toolautosubmit, l'utilisateur valide le formulaire)",
+        "url": "https://github.com/webmachinelearning/webmcp/blob/main/declarative-api-explainer.md"
+      },
+      {
+        "label": "Chrome Platform Status, fiche WebMCP (statut « Proposed », essai développeur à partir de Chrome 146, origin trial de Chrome 149 à 156), consultée le 2 octobre 2026",
+        "url": "https://chromestatus.com/feature/5117755740913664"
+      },
+      {
+        "label": "Chrome for Developers, WebMCP is available for early preview, 10 février 2026",
+        "url": "https://developer.chrome.com/blog/webmcp-epp"
+      },
+      {
+        "label": "Chrome for Developers, Join the WebMCP origin trial, 9 juin 2026",
+        "url": "https://developer.chrome.com/blog/ai-webmcp-origin-trial"
+      },
+      {
+        "label": "Chrome for Developers, documentation WebMCP, mise à jour le 1er octobre 2026 (API conçue pour un humain dans la boucle, découverte des outils en visitant le site, règle d'accès « tools » limitée par défaut au site, autorisation explicite pour les cadres d'autres sites)",
+        "url": "https://developer.chrome.com/docs/ai/webmcp"
+      },
+      {
+        "label": "WebKit standards-positions, issue 670 (position opposée publiée le 3 juin 2026, actée par le label « position: oppose » le 11 juin : préférence pour combler les manques dans HTML et ARIA plutôt que de doubler la page d'une couche d'outils)",
+        "url": "https://github.com/WebKit/standards-positions/issues/670"
+      },
+      {
+        "label": "Mozilla standards-positions, issue 1412 (position neutre proposée le 1er juin 2026, actée par le label « position: neutral » le 5 août 2026 ; risque de sites dont les outils ne correspondent pas à ce que voit l'utilisateur)",
+        "url": "https://github.com/mozilla/standards-positions/issues/1412"
+      },
+      {
+        "label": "Chrome for Developers, Lighthouse, audit Registered WebMCP tools (alerte au-delà de 40 outils), mis à jour le 21 septembre 2026",
+        "url": "https://developer.chrome.com/docs/lighthouse/agentic-browsing/registered-webmcp-tools"
+      },
+      {
+        "label": "Chrome for Developers, Lighthouse agentic browsing scoring (Chrome 150 ou plus requis, inscription à l'origin trial pour les audits WebMCP), mis à jour le 5 mai 2026",
+        "url": "https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring"
+      },
+      {
+        "label": "Script WebMCP de la vitrine Shopify de Reebok, ouvert le 2 octobre 2026 (11 définitions d'outils avec nom, annotations et description, dont search_catalog, add_to_cart et proceed_to_checkout ; chargé seulement si document.modelContext ou navigator.modelContext expose registerTool)",
+        "url": "https://www.reebok.com/cdn/shopifycloud/storefront/assets/storefront/webmcp-c6b62ece.js"
+      }
+    ]
+  },
   // Termes prévus : visibles dans le graphe, fiche à venir.
-  {id: 'kv-cache', status: 'soon', title: 'KV cache', en: 'KV cache', aliases: ['key-value cache'], jargon: [], cat: 'inference'},
-  {id: 'cout-d-une-requete', status: 'soon', title: "Coût d'une requête", en: 'Inference cost', aliases: ['API pricing', 'cost per token'], jargon: [], cat: 'inference'},
 ];

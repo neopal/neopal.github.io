@@ -163,3 +163,13 @@ Les gestes tirés des livres d'inspiration de PA (verbes anthropomorphes marqué
 - **rag** (expérience à faire soi-même) : le lecteur refait le mécanisme en 30 secondes et repart praticien (« Tu viens de faire du RAG à la main »), puis un chiffre sérieux en contrepoint.
 - **flagornerie** (avant / après) : une seule variable change entre les deux scènes, le renversement se suffit à lui-même, puis une histoire vraie et datée, puis la cause.
 Défauts des fiches les moins bien notées, à éviter : noms de modèles opaques et chiffres en rafale (tailles-de-modele, moe), six chiffres en deux phrases, dates empilées sans image, Imagine qui finit par une explication. Ouvertures « Avant, » : encore 8 Imagines, à ne plus utiliser.
+
+## Règles vidéo v2 (critique des 7 premiers shorts, 2026-10-02)
+
+- **Temps de lecture** : au moins 0,3 s par mot pour chaque légende, mesuré de son apparition à la suivante. Moins de mots plutôt que des légendes rapides : 110 à 130 mots par short au maximum.
+- **Durée** : 35 à 45 s si le temps de lecture l'exige ; la règle des 30-32 s cède devant la lisibilité.
+- **Zone de légende fixe** : la phrase occupe toujours la même zone (tiers haut), le schéma le tiers central, le tiers bas sert aux chiffres et libellés. L'œil ne cherche jamais la légende.
+- **Taille minimale** : aucun texte sous 36 px sur un cadre de 1080 px (environ 13 px sur un téléphone) ; libellés mono à 36-44 px.
+- **Pas de gabarit répété** : chaque short a au moins une scène dont la mise en scène n'existe dans aucun autre (pas deux « Et donc » en checklist avec un œil) ; l'italique couleur d'accent sert au plus deux fois par short.
+- **Chute** : une seule légende, au moins 3 s de lecture, puis une image finale pleine (pas un cadre presque vide).
+- **Carte titre** : 45 images partout, mot géant de taille constante d'un short à l'autre.
