@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="mythe-taux-d-erreur-t">
+<title id="mythe-taux-d-erreur-t">La part de réponses fausses sur une échelle de 0 à 100 %. ChatGPT fin 2022 va de 28 sur 30 à 7 sur 30 justes selon le jeu de raisonnement, pour 36 % d'erreurs en moyenne. GPT-4o se trompe dans 9,6 % de ses résumés d'un article fourni et dans 60,8 % des questions de SimpleQA. Sur un même test de résumé, les modèles vont de 1,8 % à 24,2 %.</title>
+<text class="m mu" x="20" y="14">part de réponses fausses</text>
+<path class="ln" d="M20 22 V262"/>
+<path class="ln dash" d="M180 22 V262"/>
+<text x="20" y="36">ChatGPT fin 2022, raisonnement</text>
+<rect class="fl" x="41" y="61" width="224" height="6" rx="3"/>
+<circle class="fa" cx="134" cy="64" r="6"/>
+<text class="m ac" x="144" y="56">36 % en moyenne</text>
+<text class="m mu" x="24" y="88">28/30 justes</text>
+<text class="m mu" x="265" y="88" text-anchor="end">7/30 justes</text>
+<text x="20" y="122">GPT-4o, selon la tâche</text>
+<path class="lm dash" d="M51 140 H215"/>
+<circle class="fa" cx="51" cy="140" r="6"/>
+<circle class="fa" cx="215" cy="140" r="6"/>
+<text class="m mu" x="24" y="164">résumé fourni</text>
+<text class="m ac" x="24" y="182">9,6 %</text>
+<text class="m mu" x="215" y="164" text-anchor="middle">SimpleQA</text>
+<text class="m ac" x="215" y="182" text-anchor="middle">60,8 %</text>
+<text x="20" y="218">Un même test de résumé, 2026</text>
+<rect class="fl" x="26" y="232" width="71" height="6" rx="3"/>
+<circle class="fa" cx="26" cy="235" r="6"/>
+<circle class="fa" cx="97" cy="235" r="6"/>
+<text class="m ac" x="24" y="258">1,8 %</text>
+<text class="m ac" x="110" y="240">24,2 %</text>
+<path class="lm" d="M20 268 H340"/>
+<path class="lm" d="M20 264 V272 M180 264 V272 M340 264 V272"/>
+<text class="m d" x="20" y="290">0 %</text>
+<text class="m d" x="180" y="290" text-anchor="middle">50 %</text>
+<text class="m d" x="340" y="290" text-anchor="end">100 %</text>
+</svg>

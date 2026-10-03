@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 245" role="img" aria-labelledby="mythe-ia-ne-cree-pas-t">
+<title id="mythe-ia-ne-cree-pas-t">Les notes des relecteurs pour deux groupes d'idées de recherche, celles d'un LLM et celles de chercheurs. Sur le papier, en 2024, les idées du LLM sont mieux notées ; une fois réalisées, en 2025, elles perdent plus de points et passent derrière.</title>
+<text class="m mu" x="20" y="16">note des relecteurs</text>
+<text class="m" x="130" y="40" text-anchor="middle">sur le papier</text>
+<text class="m" x="290" y="40" text-anchor="middle">réalisées</text>
+<text class="m d" x="130" y="58" text-anchor="middle">2024</text>
+<text class="m d" x="290" y="58" text-anchor="middle">2025</text>
+<path class="ln dash" d="M130 68 V180"/>
+<path class="ln dash" d="M290 68 V180"/>
+<path class="lm" d="M130 112 L290 132"/>
+<path class="la" d="M130 86 L290 162"/>
+<circle class="fd" cx="130" cy="112" r="5"/>
+<circle class="lm" cx="130" cy="112" r="5"/>
+<circle class="fd" cx="290" cy="132" r="5"/>
+<circle class="lm" cx="290" cy="132" r="5"/>
+<circle class="fa" cx="130" cy="86" r="5"/>
+<circle class="fa" cx="290" cy="162" r="5"/>
+<text class="m ac" x="118" y="90" text-anchor="end">idées du LLM</text>
+<text class="m mu" x="118" y="116" text-anchor="end">idées humaines</text>
+<text class="i mu" x="20" y="212">Mieux notées sur le papier, les idées</text>
+<text class="i mu" x="20" y="232">du LLM perdent plus une fois réalisées.</text>
+</svg>

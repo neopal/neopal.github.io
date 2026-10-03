@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 312" role="img" aria-labelledby="mythe-que-des-statistiques-t">
+<title id="mythe-que-des-statistiques-t">Exemple d'un même calcul vu de deux côtés. Une question entre dans une fonction aux milliards de paramètres, qui donne une probabilité à chaque suite possible, ici trois actions ; c'est le mécanisme. L'action la plus probable, lancer une recherche web, est choisie et part ; c'est une décision.</title>
+<rect class="bx" x="8" y="8" width="242" height="36" rx="4"/>
+<text class="m" x="20" y="31">Cinéma en VO à Nantes ce soir ?</text>
+<path class="lm" d="M129 44 V58"/>
+<path class="lm" d="M124 52 l5 6 l5 -6"/>
+<rect class="bx" x="8" y="62" width="242" height="54" rx="4"/>
+<text x="20" y="85">une fonction aux milliards</text>
+<text x="20" y="105">de paramètres</text>
+<path class="lm" d="M129 116 V130"/>
+<path class="lm" d="M124 124 l5 6 l5 -6"/>
+<rect class="bx" x="8" y="134" width="242" height="88" rx="4"/>
+<text class="m ac" x="18" y="158">chercher « VO Nantes »</text>
+<rect class="fa" x="198" y="149" width="44" height="10" rx="2"/>
+<text class="m mu" x="18" y="184">lire le site d'un cinéma</text>
+<rect class="lm" x="214" y="175" width="28" height="10" rx="2"/>
+<text class="m mu" x="18" y="210">répondre de mémoire</text>
+<rect class="lm" x="230" y="201" width="12" height="10" rx="2"/>
+<path class="la" d="M129 222 V236"/>
+<path class="la" d="M124 230 l5 6 l5 -6"/>
+<rect class="bxa" x="8" y="240" width="242" height="36" rx="4"/>
+<text class="ac" x="20" y="263">la recherche web est lancée</text>
+<path class="lm" d="M260 10 h6 V114 h-6"/>
+<text class="m mu" x="274" y="66">mécanisme</text>
+<path class="la" d="M260 136 h6 V274 h-6"/>
+<text class="m ac" x="274" y="210">décision</text>
+<text class="i mu" x="8" y="302">Les deux mots décrivent le même calcul.</text>
+</svg>
