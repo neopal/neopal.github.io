@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 262" role="img" aria-labelledby="context-rot-t">
+<title id="context-rot-t">La qualité des réponses en fonction du nombre de tokens dans la session : elle reste haute dans la smart zone, jusque vers 150 000 tokens, puis décline dans la dumb zone, bien avant la limite d'une fenêtre d'un million de tokens.</title>
+<text class="m mu" x="0" y="20">qualité des réponses</text>
+<text class="m mu" x="340" y="20" text-anchor="end">limite de la fenêtre</text>
+<rect class="fa" x="20" y="34" width="48" height="136" opacity="0.18"/>
+<path class="ln" d="M20 30 v140 h320"/>
+<path class="lm dash" d="M338 30 v140"/>
+<text class="m ac" x="44" y="132" text-anchor="middle">smart</text>
+<text class="m ac" x="44" y="148" text-anchor="middle">zone</text>
+<text class="m mu" x="250" y="88" text-anchor="middle">dumb zone</text>
+<path class="la" d="M20 46 C 48 46, 62 50, 80 70 S 150 132, 220 148 S 300 160, 336 162"/>
+<text class="m d" x="20" y="190" text-anchor="middle">0</text>
+<text class="m d" x="70" y="190" text-anchor="middle">150 000</text>
+<text class="m d" x="340" y="190" text-anchor="end">1 million</text>
+<text class="m mu" x="180" y="210" text-anchor="middle">tokens dans la session</text>
+<text class="i mu" x="0" y="238">La qualité baisse bien avant la limite, et</text>
+<text class="i mu" x="0" y="257">repartir d'une session vide la fait remonter.</text>
+</svg>

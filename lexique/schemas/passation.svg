@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 340" role="img" aria-labelledby="passation-t">
+<title id="passation-t">Une passation : la session 1 écrit une note, source secondaire, que lit la session 2 partie d'une fenêtre vide ; la note renvoie aux sources primaires restées dans le projet, le code, l'historique git et les tests, et la session 2 ne peut pas interroger la session 1.</title>
+<rect class="bx" x="20" y="20" width="150" height="66" rx="4"/>
+<text class="m" x="32" y="42">session 1</text>
+<text class="m mu" x="32" y="62">conversation,</text>
+<text class="m mu" x="32" y="78">essais, raisons</text>
+<path class="la" d="M95 90 V114"/><path class="la" d="M90 108 l5 6 l5 -6"/>
+<rect class="bxa" x="20" y="120" width="150" height="54" rx="4"/>
+<text class="m ac" x="95" y="143" text-anchor="middle">note de passation</text>
+<text class="m mu" x="95" y="162" text-anchor="middle">source secondaire</text>
+<path class="la" d="M95 178 V202"/><path class="la" d="M90 196 l5 6 l5 -6"/>
+<rect class="bx" x="20" y="208" width="150" height="50" rx="4"/>
+<text class="m" x="32" y="230">session 2</text>
+<text class="m mu" x="32" y="248">fenêtre vide</text>
+<path class="lr dash" d="M20 233 H8 V53 H16"/>
+<path class="lr" d="M3 138 l10 10 M13 138 l-10 10"/>
+<text class="m red" x="20" y="282">pas de retour vers la session 1</text>
+<rect class="bx" x="206" y="20" width="150" height="238" rx="4"/>
+<text class="m d" x="218" y="42">le projet</text>
+<rect class="fl" x="220" y="78" width="10" height="10" rx="2"/>
+<text class="m" x="236" y="88">code</text>
+<rect class="fl" x="220" y="128" width="10" height="10" rx="2"/>
+<text class="m" x="236" y="138">historique git</text>
+<rect class="fl" x="220" y="178" width="10" height="10" rx="2"/>
+<text class="m" x="236" y="188">tests</text>
+<text class="m mu" x="281" y="236" text-anchor="middle">sources primaires</text>
+<path class="la dash" d="M170 140 C196 140, 200 84, 216 84"/>
+<path class="la dash" d="M170 147 C196 147, 204 133, 216 133"/>
+<path class="la dash" d="M170 154 C196 154, 200 183, 216 183"/>
+<text class="i mu" x="0" y="314">La note renvoie au projet et garde les</text>
+<text class="i mu" x="0" y="334">raisons des choix, que le code ne dit pas.</text>
+</svg>

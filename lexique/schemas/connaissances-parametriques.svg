@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 318" role="img" aria-labelledby="connaissances-parametriques-t">
+<title id="connaissances-parametriques-t">Deux sources alimentent la réponse d'un modèle, ses paramètres, figés et flous sur les sujets rares, et son contexte, lu au moment de répondre ; quand le contexte contient une erreur, le modèle la reprend d'autant plus qu'elle est vraisemblable.</title>
+<rect class="bx" x="0" y="6" width="250" height="74" rx="4"/>
+<text class="m b" x="12" y="28">paramètres</text>
+<text class="m" x="12" y="50">figés à l'entraînement</text>
+<text class="m" x="12" y="68">flous si le sujet est rare</text>
+<rect class="bxa" x="0" y="94" width="250" height="74" rx="4"/>
+<text class="m b ac" x="12" y="116">contexte</text>
+<text class="m" x="12" y="138">lu au moment de répondre</text>
+<text class="m" x="12" y="156">exact, à jour, payé en tokens</text>
+<path class="lm" d="M254 43 L282 74"/><path class="lm" d="M273 72 l9 2 l-3 -9"/>
+<path class="la" d="M254 131 L282 100"/><path class="la" d="M279 109 l3 -9 l-9 2"/>
+<rect class="bx" x="286" y="70" width="72" height="34" rx="4"/>
+<text class="m" x="322" y="92" text-anchor="middle">réponse</text>
+<text class="m mu" x="0" y="204">si le contexte contient une erreur</text>
+<rect class="fa" x="0" y="214" width="60" height="12"/>
+<rect class="fa" x="60" y="214" width="60" height="12" opacity="0.8"/>
+<rect class="fa" x="120" y="214" width="60" height="12" opacity="0.6"/>
+<rect class="fa" x="180" y="214" width="60" height="12" opacity="0.42"/>
+<rect class="fa" x="240" y="214" width="60" height="12" opacity="0.28"/>
+<rect class="fa" x="300" y="214" width="60" height="12" opacity="0.15"/>
+<text class="m" x="0" y="246">vraisemblable</text>
+<text class="m" x="360" y="246" text-anchor="end">grossière</text>
+<text class="m ac" x="0" y="266">il la reprend</text>
+<text class="m mu" x="360" y="266" text-anchor="end">il résiste mieux</text>
+<text class="i mu" x="0" y="294">Le contexte l'emporte le plus souvent,</text>
+<text class="i mu" x="0" y="313">même quand il se trompe.</text>
+</svg>

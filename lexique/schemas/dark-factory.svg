@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 394" role="img" aria-labelledby="dark-factory-t">
+<title id="dark-factory-t">Une dark factory : un déclencheur (ticket, test qui casse, heure fixe) lance l'agent, qui écrit le code ; une vérification automatique le renvoie à l'agent s'il échoue, puis le code part en production sans relecture humaine. Les humains écrivent les specs, les scénarios et les contrôles.</title>
+<rect class="bx" x="30" y="10" width="170" height="88" rx="4"/>
+<text class="m" x="42" y="30">déclencheurs</text>
+<text class="m mu" x="42" y="50">ticket ouvert</text>
+<text class="m mu" x="42" y="68">test qui casse</text>
+<text class="m mu" x="42" y="86">heure fixe</text>
+<path class="la" d="M 115 102 V 122"/><path class="la" d="M 110 116 l 5 6 l 5 -6"/>
+<rect class="bxa" x="30" y="126" width="170" height="32" rx="4"/>
+<text class="m" x="115" y="147" text-anchor="middle">l'agent code (AFK)</text>
+<path class="la" d="M 115 162 V 182"/><path class="la" d="M 110 176 l 5 6 l 5 -6"/>
+<rect class="bxa" x="30" y="186" width="170" height="32" rx="4"/>
+<text class="m" x="115" y="207" text-anchor="middle">vérification auto</text>
+<path class="lm" d="M 30 202 H 14 V 142 H 24"/><path class="lm" d="M 19 137 l 6 5 l -6 5"/>
+<text class="m red" x="0" y="178">✗</text>
+<path class="la" d="M 115 222 V 298"/><path class="la" d="M 110 292 l 5 6 l 5 -6"/>
+<path class="lm dash" d="M 119 255 H 150"/>
+<rect class="bx dash" x="152" y="240" width="168" height="30" rx="4" opacity="0.7"/>
+<text class="m d" x="236" y="260" text-anchor="middle">relecture humaine</text>
+<path class="lr" d="M 160 255 H 312"/>
+<rect class="bx" x="30" y="302" width="170" height="32" rx="4"/>
+<text class="m b" x="115" y="323" text-anchor="middle">production</text>
+<rect class="bx" x="228" y="126" width="128" height="92" rx="4"/>
+<text class="m d" x="240" y="146">les humains</text>
+<text class="m" x="240" y="168">specs</text>
+<text class="m" x="240" y="186">scénarios</text>
+<text class="m" x="240" y="204">contrôles</text>
+<path class="lm dash" d="M 228 164 H 204"/>
+<path class="lm dash" d="M 228 196 H 204"/>
+<text class="i mu" x="0" y="364">Sans relecture, le code vaut ce que valent</text>
+<text class="i mu" x="0" y="384">les contrôles qui le jugent.</text>
+</svg>

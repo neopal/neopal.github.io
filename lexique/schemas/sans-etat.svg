@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 286" role="img" aria-labelledby="sans-etat-t">
+<title id="sans-etat-t">Ce que reçoit le modèle à chaque requête : les consignes, puis tout l'historique déjà envoyé, plus un seul élément nouveau ; un tour contient plusieurs requêtes, et après /clear la requête repart des seules consignes.</title>
+<text class="m d" x="0" y="16">tour 1</text>
+<rect class="fl" x="0" y="24" width="40" height="16"/>
+<rect class="fa" x="41" y="24" width="26" height="16"/>
+<text class="m mu" x="76" y="37">requête 1</text>
+<rect class="fl" x="0" y="46" width="40" height="16"/>
+<rect class="fa" x="41" y="46" width="26" height="16" opacity="0.35"/>
+<rect class="fa" x="68" y="46" width="50" height="16"/>
+<text class="m mu" x="127" y="59">requête 2</text>
+<rect class="fl" x="0" y="68" width="40" height="16"/>
+<rect class="fa" x="41" y="68" width="26" height="16" opacity="0.35"/>
+<rect class="fa" x="68" y="68" width="50" height="16" opacity="0.35"/>
+<rect class="fa" x="119" y="68" width="50" height="16"/>
+<text class="m mu" x="178" y="81">requête 3</text>
+<text class="m d" x="0" y="112">tour 2</text>
+<rect class="fl" x="0" y="120" width="40" height="16"/>
+<rect class="fa" x="41" y="120" width="26" height="16" opacity="0.35"/>
+<rect class="fa" x="68" y="120" width="50" height="16" opacity="0.35"/>
+<rect class="fa" x="119" y="120" width="50" height="16" opacity="0.35"/>
+<rect class="fa" x="170" y="120" width="34" height="16" opacity="0.35"/>
+<rect class="fa" x="205" y="120" width="26" height="16"/>
+<text class="m mu" x="240" y="133">requête 4</text>
+<text class="m d" x="0" y="164">après /clear</text>
+<rect class="fl" x="0" y="172" width="40" height="16"/>
+<rect class="fa" x="41" y="172" width="26" height="16"/>
+<text class="m mu" x="76" y="185">requête 5</text>
+<rect class="fl" x="0" y="206" width="12" height="12"/>
+<text class="m" x="18" y="217">consignes</text>
+<rect class="fa" x="104" y="206" width="12" height="12" opacity="0.35"/>
+<text class="m" x="122" y="217">déjà envoyé</text>
+<rect class="fa" x="232" y="206" width="12" height="12"/>
+<text class="m" x="250" y="217">nouveau</text>
+<text class="i mu" x="0" y="256">Chaque requête renvoie toute la session, et</text>
+<text class="i mu" x="0" y="276">/clear repart des seules consignes.</text>
+</svg>
