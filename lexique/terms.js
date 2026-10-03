@@ -4566,7 +4566,6 @@ window.DICO_TERMS = [
       "API pricing",
       "cost per token",
       "cost per request",
-      "prompt caching",
       "input tokens",
       "output tokens"
     ],
@@ -4601,7 +4600,8 @@ window.DICO_TERMS = [
       "fenetre-de-contexte",
       "modeles-de-raisonnement",
       "gpu",
-      "kv-cache"
+      "kv-cache",
+      "prompt-caching"
     ],
     "short": "Le coût d'une requête, c'est le nombre de tokens d'entrée multiplié par leur prix, plus le nombre de tokens de sortie multiplié par le leur, avec une remise pour ce qui est relu depuis un cache.",
     "image": "« Ce que tu me racontes au comptoir, je te le compte au prix du café ; ce que je te réponds, au prix du cognac. Et quand tu me ressers la même histoire que d'habitude, je te fais presque cadeau. »",
@@ -4989,7 +4989,8 @@ window.DICO_TERMS = [
       "prediction-du-mot-suivant",
       "fenetre-de-contexte",
       "inference",
-      "cout-d-une-requete"
+      "cout-d-une-requete",
+      "prompt-caching"
     ],
     "short": "Le KV cache est la mémoire de travail où un modèle garde, pendant qu'il écrit, les calculs déjà faits sur les tokens précédents, pour ne pas les refaire à chaque nouveau token.",
     "image": "Chaque matin, Thierry de la compta refait toutes les additions du classeur depuis janvier avant d'ajouter la ligne du jour. Valérie garde ses sous-totaux sur des post-it ; elle va dix fois plus vite, et son bureau en est couvert jusqu'au plafond.",
@@ -14519,6 +14520,106 @@ window.DICO_TERMS = [
       {
         "label": "GitHub, GitHub Copilot: Meet the new coding agent, 19 mai 2025 (agent lancé en lui assignant une issue ; « The agent's pull requests require human approval before any CI/CD workflows are run » ; le demandeur ne peut pas approuver lui-même)",
         "url": "https://github.blog/news-insights/product-news/github-copilot-meet-the-new-coding-agent/"
+      }
+    ]
+  },
+  {
+    "id": "prompt-caching",
+    "status": "live",
+    "num": "150",
+    "title": "Cache de prompt",
+    "en": "Prompt caching",
+    "aliases": [
+      "prompt caching",
+      "context caching",
+      "cache hit",
+      "cache miss",
+      "cache read",
+      "cache hit rate",
+      "cache_control"
+    ],
+    "aliasesFr": [
+      "cache de prompt",
+      "mise en cache du prompt",
+      "taux de cache"
+    ],
+    "jargon": [
+      {
+        "say": "cache hit",
+        "means": "la requête commence exactement comme une requête récente, et ce début est relu depuis le cache au lieu d'être recalculé ; l'inverse s'appelle un cache miss"
+      },
+      {
+        "say": "hit rate",
+        "means": "la part des tokens d'entrée relus depuis le cache ; dans Claude Code, la commande /usage l'affiche pour la session en cours"
+      },
+      {
+        "say": "TTL",
+        "means": "time to live, la durée pendant laquelle un passage reste en cache sans être réutilisé ; cinq minutes par défaut chez Anthropic, une heure en option"
+      },
+      {
+        "say": "breakpoint",
+        "means": "chez Anthropic, l'endroit du prompt marqué par cache_control, jusqu'où le début de la requête est mis en cache"
+      }
+    ],
+    "cat": "inference",
+    "links": [
+      "cout-d-une-requete",
+      "kv-cache",
+      "sans-etat",
+      "agents-md",
+      "context-engineering",
+      "comparatif-des-modeles"
+    ],
+    "short": "Le cache de prompt garde quelques minutes chez le fournisseur le calcul du début d'une requête ; si la suivante commence à l'identique, ce début coûte jusqu'à dix fois moins.",
+    "image": "Chaque lundi, Roger dépose au pressing ses cinq chemises dans le même ordre, et Mme Lopez lui ressort son ticket sans rien recompter. Le jour où il met la bleue en premier, elle recompte tout depuis le début, et s'il passe après sa pause de midi aussi.",
+    "imagineForm": "B",
+    "imagine": "Avec l'API de Claude, envoie à Claude Sonnet 5.5 un prompt système d'au moins 2 000 tokens marqué pour le cache, puis renvoie exactement la même requête dans la minute. Dans le bloc usage de la réponse, le premier appel affiche ces tokens en cache_creation_input_tokens, le second les affiche en cache_read_input_tokens, facturés dix fois moins. Ajoute une virgule à la première phrase du prompt système et renvoie encore, la lecture retombe à zéro et tout est recalculé.",
+    "full": [
+      "Un modèle ne garde rien d'une requête à l'autre, si bien qu'un agent renvoie à chaque tour ses outils, ses consignes, le fichier du projet et toute la conversation. Le cache de prompt évite de tout recalculer. Le fournisseur garde quelques minutes le calcul déjà fait sur le début de la requête, son KV cache, et si la requête suivante commence par exactement les mêmes tokens, il le reprend tel quel. Chez Anthropic, l'écriture coûte 1,25 fois le prix d'entrée pour cinq minutes, ou deux fois pour une heure, et chaque relecture 0,1 fois, voire 0,05 fois sur Claude Opus 5.5. Chez OpenAI, le cache est automatique dès 1 024 tokens et garde un début de requête trente minutes sur GPT-5.6 et les modèles suivants.",
+      "Tout tient au mot « exactement ». Le cache se lit dans l'ordre, outils, puis consignes, puis messages, et le moindre changement fait recalculer tout ce qui le suit. L'équipe de Claude Code a raconté le 30 avril 2026 qu'elle surveille son taux de cache comme une panne, avec alertes et incident déclaré quand il baisse. Les erreurs qui le cassent sont banales, comme une heure écrite au début du prompt système, des outils listés dans un ordre qui change, un outil ajouté en cours de session. Changer de modèle au milieu d'une conversation coûte souvent plus cher que de continuer, puisque le nouveau modèle repart sans cache ; Claude Code confie plutôt la tâche à un sous-agent.",
+      "Uber a raconté le 27 août 2026 comment ses agents de code coûtent à peu près le même prix depuis avril, alors qu'entre février et août le nombre d'employés qui s'en servent chaque semaine a été multiplié par 7 et le nombre de requêtes par 9,4. Le cache y tient sa place. Ses ingénieurs laissaient souvent leur session de côté plus de cinq minutes, le cache expirait et tout le contexte repartait au plein tarif, alors Uber l'a passé à une heure. Le reste vient de modèles moins chers pour les sous-agents, d'une compaction déclenchée à 400 000 tokens et d'outils appelés en ligne de commande plutôt que décrits d'avance, ce qui retire 50 000 à 70 000 tokens par requête. Avec un même modèle, le coût d'une session a baissé de 52 % depuis son pic de juin."
+    ],
+    "then": "En août 2024, Anthropic lançait le cache de prompt en bêta, à activer à la main, pour Claude 3.5 Sonnet et Claude 3 Haiku, et OpenAI le rendait automatique en octobre avec 50 % de remise. En 2026, la relecture coûte 10 % du prix d'entrée chez les deux, 5 % ou moins sur les modèles haut de gamme, et le taux de cache est devenu un chiffre que les équipes suivent chaque jour.",
+    "office": [
+      {
+        "who": "q",
+        "text": "On a juste ajouté l'heure exacte en haut du prompt système pour que l'agent sache quand on est, et la facture a doublé."
+      },
+      {
+        "who": "a",
+        "text": "Cette heure change à chaque requête, donc rien de ce qui la suit n'est plus jamais relu depuis le cache ; déplace-la dans le dernier message."
+      }
+    ],
+    "avoid": "« Le cache garde les réponses déjà données. » Il garde le calcul fait sur l'entrée, pas la réponse ; le modèle écrit une réponse neuve à chaque fois et les tokens de sortie se paient plein tarif. Renvoyer une réponse déjà produite à une question voisine est une autre technique, le cache sémantique, que l'application gère elle-même.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Anthropic, documentation Prompt caching (écriture 1,25 fois le prix d'entrée pour cinq minutes, 2 fois pour une heure, lecture 0,1 fois, 0,05 fois sur Claude Opus 5.5 ; durée de cinq minutes rafraîchie à chaque lecture ; minimum de 512 tokens sur Claude Sonnet 5.5 ; correspondance exacte du début ; ordre outils, système, messages ; tableau de ce qui invalide le cache), consultée le 3 octobre 2026",
+        "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
+      },
+      {
+        "label": "OpenAI, documentation Prompt caching (activé par défaut, 1 024 tokens minimum, lecture à 0,1 fois sur GPT-5.6 et suivants, conservation 30 minutes après la dernière écriture ou lecture ; correspondance exacte du début), consultée le 3 octobre 2026",
+        "url": "https://developers.openai.com/api/docs/guides/prompt-caching"
+      },
+      {
+        "label": "Thariq Shihipar (Anthropic), Lessons from building Claude Code: Prompt caching is everything, 30 avril 2026 (alertes et SEV sur le taux de cache ; horodatage dans le prompt statique, ordre des outils, outils modifiés en cours de session ; changer de modèle en cours de conversation ; sous-agents ; mode plan gardé sous forme d'outils)",
+        "url": "https://claude.dev/blog/lessons-from-building-claude-code-prompt-caching-is-everything/"
+      },
+      {
+        "label": "Claude Code Docs, How Claude Code uses prompt caching (requête renvoyée en entier à chaque tour, correspondance exacte du début, changer de modèle recalcule tout, /usage affiche le taux de cache de la session), consultée le 3 octobre 2026",
+        "url": "https://code.claude.com/docs/en/prompt-caching"
+      },
+      {
+        "label": "Uday Kiran Medisetty (Uber), Running a Software Factory Efficiently at Uber Scale, 27 août 2026 (utilisateurs hebdomadaires ×7 et requêtes ×9,4 de février à août 2026 ; dépense stable depuis avril ; cache passé de 5 minutes à 1 heure ; compaction à 400 000 tokens ; 50 000 à 70 000 tokens de schémas MCP évités ; coût par session en baisse de 52 % depuis le pic de juin à modèle constant)",
+        "url": "https://www.uber.com/us/en/blog/efficient-software-factory/"
+      },
+      {
+        "label": "SiliconANGLE, Anthropic speeds up its AI model access times with prompt caching, 14 août 2024 (bêta publique pour Claude 3.5 Sonnet et Claude 3 Haiku)",
+        "url": "https://siliconangle.com/2024/08/14/anthropic-speeds-ai-model-access-times-prompt-caching/"
+      },
+      {
+        "label": "OpenAI, Prompt Caching in the API, 1er octobre 2024 (automatique, 50 % de remise sur les tokens d'entrée déjà vus, à partir de 1 024 tokens)",
+        "url": "https://openai.com/index/api-prompt-caching/"
       }
     ]
   },

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="prompt-caching-t">
+<title id="prompt-caching-t">Trois requêtes d'une même session. À la première, tout est écrit dans le cache. À la deuxième, le début identique est relu depuis le cache à un dixième du prix, seul le nouveau message est calculé plein tarif. À la troisième, une heure ajoutée en tête change le début, et tout est recalculé.</title>
+<text class="m mu" x="10" y="16">tour 1</text>
+<rect class="bx" x="10" y="24" width="62" height="34" rx="3"/><text class="m" x="41" y="46" text-anchor="middle">outils</text>
+<rect class="bx" x="76" y="24" width="80" height="34" rx="3"/><text class="m" x="116" y="46" text-anchor="middle">consignes</text>
+<rect class="bx" x="160" y="24" width="96" height="34" rx="3"/><text class="m" x="208" y="46" text-anchor="middle">AGENTS.md</text>
+<rect class="bx" x="260" y="24" width="90" height="34" rx="3"/><text class="m" x="305" y="46" text-anchor="middle">message 1</text>
+<text class="m mu" x="10" y="76">écrit dans le cache, 1,25 fois le prix</text>
+<text class="m mu" x="10" y="114">tour 2</text>
+<rect class="fa" x="10" y="122" width="294" height="34" rx="3" opacity="0.35"/>
+<rect class="fa" x="308" y="122" width="42" height="34" rx="3"/>
+<text class="m" x="157" y="144" text-anchor="middle">même début qu'au tour 1</text>
+<text class="m ac" x="10" y="174">relu, 0,1 fois le prix</text>
+<text class="m" x="350" y="174" text-anchor="end">neuf</text>
+<text class="m mu" x="10" y="212">tour 3, avec l'heure en tête</text>
+<rect class="bx" x="10" y="220" width="46" height="34" rx="3" style="stroke:#FF7A7A"/><text class="m red" x="33" y="242" text-anchor="middle">14:02</text>
+<rect class="fd" x="60" y="220" width="290" height="34" rx="3"/>
+<text class="m red" x="205" y="242" text-anchor="middle">tout est recalculé</text>
+<path class="lr" d="M33 262 V280 H350"/>
+<text class="m mu" x="10" y="306">un seul caractère changé au début</text>
+<text class="m mu" x="10" y="324">et la suite repart au plein tarif</text>
+</svg>
