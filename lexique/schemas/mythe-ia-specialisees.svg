@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" role="img" aria-labelledby="mythe-ia-specialisees-t">
+<title id="mythe-ia-specialisees-t">Bonnes réponses à l'examen médical MedQA, sur une échelle de 0 à 100 %. Med-PaLM 2, affiné pour la santé, fait 86,5 % en 2023 ; MedGemma, construit sur Gemma 3, fait 87,7 % en 2025 ; GPT-4 guidé par de simples consignes fait 90,2 % en 2023. Les trois tiennent en moins de quatre points.</title>
+<text class="m mu" x="20" y="14">MedQA, part de bonnes réponses</text>
+<text x="20" y="44">Med-PaLM 2, affiné pour la santé</text>
+<rect class="fd" x="20" y="52" width="259.5" height="14" rx="2"/>
+<rect class="lm" x="20" y="52" width="259.5" height="14" rx="2"/>
+<text class="m" x="286" y="64">86,5 %</text>
+<text x="20" y="94">MedGemma, tiré de Gemma 3</text>
+<rect class="fd" x="20" y="102" width="263.1" height="14" rx="2"/>
+<rect class="lm" x="20" y="102" width="263.1" height="14" rx="2"/>
+<text class="m" x="290" y="114">87,7 %</text>
+<text x="20" y="144">GPT-4, simples consignes</text>
+<rect class="fa" x="20" y="152" width="270.6" height="14" rx="2"/>
+<text class="m ac" x="297" y="164">90,2 %</text>
+<path class="lm" d="M20 180 H320"/>
+<path class="lm" d="M20 176 V184 M170 176 V184 M320 176 V184"/>
+<text class="m d" x="20" y="200">0 %</text>
+<text class="m d" x="170" y="200" text-anchor="middle">50 %</text>
+<text class="m d" x="320" y="200" text-anchor="end">100 %</text>
+<text class="i mu" x="20" y="230">Les trois scores tiennent en moins de quatre points.</text>
+</svg>

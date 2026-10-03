@@ -58,6 +58,12 @@ Le studio n'est plus le décor imposé de « L'image » : trop de termes n'y ont
 
 **Écriture** : 1 à 3 phrases ; concret (prénom, chiffre, lieu, objet) ; la chute EST le point technique, sans explication après ; jamais « c'est comme », jamais de jeu de mots sur le terme ; pas de cliché IA (cerveau, robot, bibliothèque géante) ; les règles d'écriture et anti-slop ci-dessus s'appliquent. Les prénoms varient d'une fiche à l'autre (pas plus de deux fiches par prénom).
 
+**Le répertoire que PA aime** (exemples de ton, pas à recopier) : des figures que tout le monde reconnaît en une ligne et des références de culture populaire qui disent un style d'un mot.
+- Archétypes du quotidien : le crypto bro qui te dit de tout miser sur un jeton, le type qui se lève dix minutes avant l'arrêt et bloque la porte du train, celui qui double dans la file de la poste, le voisin qui te parle de la météo, le beau-frère qui a un avis sur tout au repas de famille, le collègue qui répond « vu » à tous les mails.
+- Références : « spectaculaire, morne et gris, comme un film de Christopher Nolan », « Stanley Kubrick sur un plateau » (quarante prises pour une porte qui s'ouvre), une série, une BD, un chanteur, un sportif, tant que la référence est juste et connue.
+- Ce qui fait le plus rire PA : les épisodes mordants qu'on a un peu oubliés, scandales, moments politiques, sport (Alonso en 2015 qui hurle « GP2 engine ! » à la radio). Uniquement des faits publics, datés et documentés, racontés sans insulter personne ; la chute porte sur la notion, pas sur la personne.
+- Plus c'est court et reconnaissable, mieux c'est : une figure, un trait, une chute. Un même archétype ou une même référence sert à deux fiches au plus.
+
 **Auto-contrôle avant de rendre** : la propriété technique est-elle exacte ? L'image la rend-elle sans rectificatif ? Fait-elle sourire à la première lecture ? Si une réponse est non, on réécrit.
 
 L'« Imagine » garde ses cinq formes. Quand l'Imagine d'une fiche fait déjà le travail de l'image, l'image prend un autre angle de la notion plutôt que de répéter la même scène.

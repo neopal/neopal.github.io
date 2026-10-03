@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 250" role="img" aria-labelledby="mythe-ia-n-existe-pas-t">
+<title id="mythe-ia-n-existe-pas-t">La phrase « L'IA n'existe pas » se lit de deux façons. Si intelligence veut dire conscience ou intelligence générale, la question reste ouverte. Si l'IA désigne la discipline et ses systèmes, ils existent depuis 1956 et se mesurent, par exemple à 73 % au test de Turing en 2025.</title>
+<rect class="bx" x="70" y="8" width="220" height="42" rx="4"/>
+<text class="big" x="180" y="36" text-anchor="middle">« L'IA n'existe pas »</text>
+<text class="m mu" x="180" y="76" text-anchor="middle">selon le sens du mot</text>
+<path class="lm" d="M80 50 L66 96"/>
+<path class="lm" d="M64.1 88.2 L66 96 L71.8 90.5"/>
+<path class="la" d="M280 50 L294 96"/>
+<path class="la" d="M295.9 88.2 L294 96 L288.2 90.5"/>
+<rect class="bx" x="8" y="102" width="164" height="62" rx="4"/>
+<text x="90" y="128" text-anchor="middle">une conscience,</text>
+<text x="90" y="150" text-anchor="middle">une intelligence générale</text>
+<rect class="bxa" x="188" y="102" width="164" height="62" rx="4"/>
+<text x="270" y="128" text-anchor="middle">la discipline</text>
+<text x="270" y="150" text-anchor="middle">et ses systèmes</text>
+<path class="lm" d="M90 164 V186"/>
+<path class="lm" d="M85 180 l5 6 l5 -6"/>
+<path class="la" d="M270 164 V186"/>
+<path class="la" d="M265 180 l5 6 l5 -6"/>
+<text class="i mu" x="90" y="210" text-anchor="middle">question ouverte</text>
+<text class="ac" x="270" y="210" text-anchor="middle">existent depuis 1956</text>
+<text class="m ac" x="270" y="232" text-anchor="middle">73 % au test de Turing</text>
+</svg>
