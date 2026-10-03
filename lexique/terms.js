@@ -2024,7 +2024,7 @@ window.DICO_TERMS = [
     ],
     "short": "Un agent est un modèle de langage qu'on laisse agir : avec un objectif et des outils, il enchaîne les actions, chacune choisie d'après le résultat de la précédente.",
     "image": "Le mardi, Nadine laisse à son fils une liste de courses. Le jeudi, vingt euros et « Fais-nous un dîner » ; il trouve le marché fermé, ouvre le frigo, appelle sa grand-mère, et à 20 h il y a des crêpes que personne n'avait prévues.",
-    "imagine": "Le 22 septembre 2026, dans l'annonce de Claude Opus 5.5, un développeur de Clio raconte avoir confié au modèle une tâche répartie sur six dépôts de code et l'avoir laissé tourner seul toute la nuit. Le modèle est resté sur la tâche plus de 18 heures ; lancé à 18 heures en quittant le bureau, il travaillait encore à midi le lendemain, l'équivalent de deux journées et demie d'un temps plein à 35 heures par semaine.",
+    "imagine": "Le 22 septembre 2026, Anthropic publie le témoignage d'un développeur de Clio, un éditeur canadien de logiciels pour cabinets d'avocats. Avant de quitter le bureau à 18 heures, il a confié à Claude Opus 5.5 une seule tâche, à mener sur six dépôts de code, puis il est rentré dormir. Personne n'a relancé l'agent de la nuit, et le lendemain à midi il y travaillait encore, plus de 18 heures d'affilée, deux journées et demie d'un temps plein à 35 heures.",
     "imagineForm": "A",
     "full": [
       "Un agent est un modèle de langage placé dans une boucle, avec des outils. On lui donne un objectif, par exemple « trouve-moi un train pour Lyon jeudi et mets-le dans mon agenda ». Il choisit une action, comme chercher les horaires, lit le résultat, puis choisit la suivante, jusqu'à ce qu'il juge la tâche finie ou qu'une limite l'arrête. Ces actions, ce sont les programmes autour de lui qui les exécutent, à partir des demandes qu'il écrit.",
@@ -2071,6 +2071,10 @@ window.DICO_TERMS = [
       {
         "label": "Futurism, 13 février 2026 : Claude Cowork efface le dossier de photos de famille, restauré depuis iCloud",
         "url": "https://futurism.com/artificial-intelligence/claude-wife-photos"
+      },
+      {
+        "label": "Wikipédia, Clio (software company) : éditeur de logiciels de gestion pour cabinets d'avocats, fondé en 2007, siège à Burnaby (Colombie-Britannique, Canada)",
+        "url": "https://en.wikipedia.org/wiki/Clio_(software_company)"
       }
     ]
   },
