@@ -13,6 +13,7 @@ import {Rag, RAG_DURATION} from './Rag';
 import {Embedding, EMBEDDING_DURATION} from './Embedding';
 import {Agent, AGENT_DURATION} from './Agent';
 import {ContextRot, CONTEXTROT_DURATION} from './ContextRot';
+import {SansEtat, SANSETAT_DURATION} from './SansEtat';
 import {Nondeterminisme, NONDETERMINISME_DURATION} from './Nondeterminisme';
 
 // Les shorts dans une seule entrée (stills et rendus partagent le même bundle).
@@ -33,6 +34,7 @@ export const Root: React.FC = () => (
     <Composition id="Embedding" component={Embedding} durationInFrames={EMBEDDING_DURATION} {...C} />
     <Composition id="Agent" component={Agent} durationInFrames={AGENT_DURATION} {...C} />
     <Composition id="ContextRot" component={ContextRot} durationInFrames={CONTEXTROT_DURATION} {...C} />
+    <Composition id="SansEtat" component={SansEtat} durationInFrames={SANSETAT_DURATION} {...C} />
     <Composition id="Nondeterminisme" component={Nondeterminisme} durationInFrames={NONDETERMINISME_DURATION} {...C} />
   </>
 );

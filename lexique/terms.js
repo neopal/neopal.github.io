@@ -285,7 +285,8 @@ window.DICO_TERMS = [
       "cout-d-une-requete",
       "kv-cache",
       "system-prompt",
-      "compaction-du-contexte"
+      "compaction-du-contexte",
+      "context-rot"
     ],
     short:
       "La fenêtre de contexte, c'est la quantité de texte qu'un modèle peut avoir sous les yeux en même temps, comptée en tokens : tes consignes, l'historique de la conversation, les documents joints et sa propre réponse.",
@@ -449,7 +450,8 @@ window.DICO_TERMS = [
       "prediction-du-mot-suivant",
       "mythe-base-de-donnees",
       "hallucination",
-      "logits"
+      "logits",
+      "non-determinisme"
     ],
     short:
       "La température est le réglage qui dose le hasard dans les réponses d'un modèle : basse, il choisit presque toujours le mot le plus attendu ; haute, il ose des mots moins probables.",
@@ -501,7 +503,8 @@ window.DICO_TERMS = [
       "fenetre-de-contexte",
       "context-engineering",
       "agent",
-      "geo"
+      "geo",
+      "connaissances-parametriques"
     ],
     solutions: [
       {name: 'Pinecone', kind: 'base vectorielle', url: 'https://www.pinecone.io/'},
@@ -2556,7 +2559,8 @@ window.DICO_TERMS = [
       "context-engineering",
       "skill",
       "fenetre-de-contexte",
-      "cout-d-une-requete"
+      "cout-d-une-requete",
+      "agents-md"
     ],
     "short": "Le system prompt est le texte de consignes que l'éditeur d'un assistant place avant ta conversation, et que le modèle relit à chaque message.",
     "image": "En 2018, Deadspin monte bout à bout les présentateurs de quarante-cinq chaînes locales américaines qui lisent, mot pour mot, le même avertissement contre les « fausses nouvelles ». Chacun le dit avec sa voix et dans son décor ; le texte venait du propriétaire, Sinclair, et le téléspectateur ne l'avait jamais vu.",
@@ -5683,7 +5687,8 @@ window.DICO_TERMS = [
       "loop",
       "agent",
       "harness",
-      "mythe-agent-autonome"
+      "mythe-agent-autonome",
+      "dark-factory"
     ],
     "solutions": [
       {
@@ -8778,7 +8783,8 @@ window.DICO_TERMS = [
       "second-brain",
       "rag",
       "prompt-injection",
-      "compaction-du-contexte"
+      "compaction-du-contexte",
+      "agents-md"
     ],
     "solutions": [
       {
@@ -9095,7 +9101,8 @@ window.DICO_TERMS = [
       "memoire",
       "planification",
       "cout-d-une-requete",
-      "multi-agents"
+      "multi-agents",
+      "passation"
     ],
     "short": "La compaction du contexte remplace le début d'une longue conversation par un résumé écrit par le modèle, pour libérer de la place dans la fenêtre sans arrêter la tâche.",
     "image": "Le 24 mars 2019, le ministre de la Justice américain résume en quatre pages les 448 du rapport Mueller, et le pays en débat près d'un mois sans l'original. Trois jours après, Mueller lui écrit que le résumé n'en restitue pas pleinement « le contexte, la nature et la substance ».",
@@ -13739,6 +13746,779 @@ window.DICO_TERMS = [
       {
         "label": "A. Solar-Lezama, T. Buonassisi, Y. Kim (MIT), On the paper « Exploring the MIT Mathematics and EECS Curriculum Using Large Language Models » (dépôt du 15 juin 2023, demande de retrait ; « And no, GPT-4 cannot get an MIT degree. »)",
         "url": "https://people.csail.mit.edu/asolar/CoursesPaperStatement.pdf"
+      }
+    ]
+  },
+  {
+    "id": "context-rot",
+    "status": "live",
+    "num": "143",
+    "title": "Context rot",
+    "en": "context rot",
+    "aliases": [
+      "context degradation",
+      "attention degradation",
+      "long-context degradation",
+      "smart zone",
+      "dumb zone"
+    ],
+    "aliasesFr": [
+      "pourrissement du contexte",
+      "dégradation du contexte"
+    ],
+    "jargon": [
+      {
+        "say": "smart zone, dumb zone",
+        "means": "le début d'une session, où l'agent est vif, et la suite, où il oublie des consignes et se trompe davantage ; Matt Pocock situe la bascule vers 125 000 à 150 000 tokens sur les meilleurs modèles, en précisant que le chiffre se discute"
+      },
+      {
+        "say": "kitchen sink session",
+        "means": "la session fourre-tout, où l'on enchaîne des tâches sans rapport jusqu'à remplir le contexte de choses inutiles ; la documentation de Claude Code la range parmi les erreurs les plus courantes"
+      },
+      {
+        "say": "/btw",
+        "means": "la commande de Claude Code pour poser une question annexe dont la réponse n'entre jamais dans l'historique de la session"
+      }
+    ],
+    "cat": "inference",
+    "links": [
+      "fenetre-de-contexte",
+      "context-engineering",
+      "position",
+      "loop",
+      "sans-etat",
+      "passation"
+    ],
+    "short": "Le context rot est la baisse de qualité des réponses d'un modèle à mesure que son contexte s'allonge, bien avant que la fenêtre de contexte soit pleine.",
+    "image": "À l'assemblée de copropriété, la réfection du toit est votée en dix minutes, devis en main. Au point 14, à 23 h 30, alors que la salle est réservée jusqu'à minuit, le budget de l'ascenseur passe avec un zéro de trop sans que personne le remarque. Il faut une réunion le mardi suivant, avec ce seul point à l'ordre du jour, pour que le zéro saute aux yeux.",
+    "imagineForm": "B",
+    "imagine": "Écris à ton assistant « Recopie exactement ce texte », suivi d'une trentaine de fois le mot « pomme » avec un seul « pommes » glissé au milieu ; à cette longueur, les modèles récents le rendent en général sans faute. En juillet 2025, la société Chroma a donné ce même exercice à des modèles d'OpenAI, d'Anthropic, de Google et d'Alibaba en allongeant la liste jusqu'à 10 000 mots. Plus la liste grandissait, plus les copies se dégradaient, certains refusant la tâche, d'autres glissant des mots absents du texte, et vers 5 000 mots Qwen3-8B a répondu qu'il avait besoin de faire une pause et d'aller à la plage.",
+    "full": [
+      "Le mot est né le 18 juin 2025 dans un commentaire de Hacker News. Un internaute signant Workaccount2 y écrivait que les modèles « empoisonnent leur propre contexte », et que la qualité de leurs réponses chute vite quand le contexte grossit, surtout s'il s'encombre de fausses pistes et d'impasses. Simon Willison l'a relevé le jour même, et en septembre 2025 Anthropic reprenait le terme dans son guide du context engineering, pour dire que plus la fenêtre contient de tokens, moins le modèle retrouve avec exactitude ce qu'elle contient.",
+      "La cause se trouve dans l'attention. Chaque token répartit la sienne entre tous ceux qui le précèdent, en proportions dont le total fait toujours 100 %, et chaque page ajoutée prend un peu de la part des autres ; avec n tokens, rappelle Anthropic, le modèle doit tenir n² relations. Le rapport de Chroma l'a aussi vérifié sur de vraies conversations. Avec les seuls passages utiles d'un historique, environ 300 tokens, les modèles répondaient nettement mieux qu'avec l'historique complet, environ 113 000 tokens, où la réponse figurait pourtant aussi. Un passage trompeur, proche de l'information cherchée sans être elle, suffisait déjà à faire baisser les scores, et quatre les faisaient baisser davantage.",
+      "La longueur fait du tort à elle seule. En octobre 2025, une équipe de l'université de l'Illinois et d'Amazon a soumis à cinq modèles des problèmes de maths, de questions-réponses et de code, en vérifiant qu'ils retrouvaient bien toute l'information utile. Leurs scores baissaient quand même de 13,9 à 85 % à mesure que l'entrée s'allongeait, très en deçà de leur fenêtre. La baisse persistait quand le texte ajouté n'était fait que d'espaces vides.",
+      "Pour qui travaille avec un agent, la parade consiste à garder la session courte. La documentation de Claude Code fonde la plupart de ses conseils sur ce constat, puisque la fenêtre se remplit vite et que les performances baissent à mesure qu'elle se remplit. Elle recommande de vider la session entre deux tâches sans rapport, de faire mener les explorations par des sous-agents qui lisent dans leur propre fenêtre, et de poser les questions annexes à part. Matt Pocock, qui enseigne le code avec l'IA, parle d'une « smart zone » au début de la session et d'une « dumb zone » ensuite, et conseille de calibrer chaque tâche sur la première plutôt que sur la taille de la fenêtre."
+    ],
+    "then": "Jusqu'en 2025, les modèles affichaient des scores presque parfaits au test de l'aiguille dans la botte de foin, où il suffit de retrouver une phrase recopiée mot pour mot, et on en concluait qu'ils lisaient aussi bien un long texte qu'un court. Les études de 2025, dont celle de Chroma, ont montré ce que ce test cachait, et le mot s'est installé dans l'année. En février 2026, Anthropic présentait Claude Opus 4.6 comme une réponse à cette plainte, avec 76 %, selon ses propres mesures, sur un test qui cache huit informations dans un million de tokens, contre 18,5 % pour Claude Sonnet 4.5.",
+    "office": [
+      {
+        "who": "q",
+        "text": "J'ai collé les quarante pages du dossier client dans la conversation pour qu'il ne manque de rien. Bonne idée, non ?"
+      },
+      {
+        "who": "a",
+        "text": "Il a tout sous les yeux, mais chaque page en trop lui fait moins bien lire les autres ; colle les trois documents qui servent à ta question, et ouvre une nouvelle conversation pour la suivante."
+      }
+    ],
+    "avoid": "« Il reste 600 000 tokens dans la fenêtre, on a de la marge. » La taille de la fenêtre dit jusqu'où le harness accepte de continuer, et la qualité baisse bien avant ; en 2025, des modèles qui retrouvaient pourtant toute l'information utile voyaient leurs scores baisser de 13,9 à 85 %, loin de leur limite.",
+    "video": {
+      "src": "videos/context-rot.mp4",
+      "poster": "videos/context-rot.jpg"
+    },
+    "sources": [
+      {
+        "label": "Simon Willison, A quote from Workaccount2 on Hacker News, 18 juin 2025 (« They poison their own context. Maybe you can call it context rot, where as context grows and especially if it grows with lots of distractions and dead ends, the output quality falls off rapidly »)",
+        "url": "https://simonwillison.net/2025/Jun/18/context-rot/"
+      },
+      {
+        "label": "Hacker News, commentaire de Workaccount2, 18 juin 2025",
+        "url": "https://news.ycombinator.com/item?id=44310054"
+      },
+      {
+        "label": "Anthropic, Effective context engineering for AI agents, 29 septembre 2025 (context rot : « as the number of tokens in the context window increases, the model's ability to accurately recall information from that context decreases » ; n² relations par paires pour n tokens ; budget d'attention)",
+        "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
+      },
+      {
+        "label": "Hong, Troynikov et Huber (Chroma), Context Rot: How Increasing Input Tokens Impacts LLM Performance, 14 juillet 2025, section Repeated Words (tâche « apple » / « apples », jusqu'à 10 000 mots, température 0 ; familles Claude, GPT, Gemini et Qwen ; refus, mots aléatoires absents de l'entrée ; Qwen3-8B, vers 5 000 mots : « I'm going to take a break [...] Maybe go to the beach » ; section LongMemEval : entrées ciblées d'environ 300 tokens nettement mieux réussies que les entrées complètes d'environ 113k tokens ; section Impact of Distractors : un distracteur fait baisser les scores, quatre davantage)",
+        "url": "https://www.trychroma.com/research/context-rot"
+      },
+      {
+        "label": "Du et al. (University of Illinois Urbana-Champaign, Amazon...), Context Length Alone Hurts LLM Performance Despite Perfect Retrieval, 6 octobre 2025, Findings of EMNLP 2025, résumé (5 modèles ; maths, questions-réponses, code ; baisse de 13,9 % à 85 % malgré une récupération parfaite, bien en deçà des longueurs annoncées ; même avec des espaces à la place du texte inutile)",
+        "url": "https://arxiv.org/abs/2510.05381"
+      },
+      {
+        "label": "Claude Code, Best practices (« Claude's context window fills up fast, and performance degrades as it fills » ; /clear entre tâches sans rapport ; sous-agents dans des fenêtres séparées ; /btw dont la réponse n'entre pas dans l'historique ; « The kitchen sink session »)",
+        "url": "https://code.claude.com/docs/en/best-practices"
+      },
+      {
+        "label": "Matt Pocock, Dictionary of AI Coding, entrée Smart zone (smart zone et dumb zone ; « the dumb zone commonly begins around 125K-150K tokens, though this is debated » ; prévoir le travail sur la smart zone plutôt que sur la fenêtre)",
+        "url": "https://github.com/mattpocock/dictionary-of-ai-coding/blob/main/dictionary/Smart%20zone.md"
+      },
+      {
+        "label": "Anthropic, Introducing Claude Opus 4.6, 5 février 2026 (« A common complaint about AI models is context rot » ; MRCR v2, variante 8 aiguilles à 1M tokens : 76 % pour Opus 4.6, 18,5 % pour Sonnet 4.5)",
+        "url": "https://www.anthropic.com/news/claude-opus-4-6"
+      }
+    ]
+  },
+  {
+    "id": "non-determinisme",
+    "status": "live",
+    "num": "144",
+    "title": "Non-déterminisme",
+    "en": "non-determinism",
+    "aliases": [
+      "nondeterminism",
+      "non-deterministic output",
+      "batch invariance",
+      "pass^k",
+      "reproducibility"
+    ],
+    "aliasesFr": [
+      "non déterministe",
+      "reproductibilité",
+      "variabilité des réponses"
+    ],
+    "jargon": [
+      {
+        "say": "pass^k",
+        "means": "la probabilité qu'un agent réussisse k fois sur k la même tâche ; elle baisse quand k augmente, à l'inverse de pass@k, qui demande une seule réussite en k essais"
+      },
+      {
+        "say": "seed",
+        "means": "un nombre qu'on passe à certaines API pour rendre le tirage répétable ; OpenAI ne promet depuis novembre 2023 qu'un « meilleur effort »"
+      },
+      {
+        "say": "batch invariance",
+        "means": "la propriété d'un serveur qui calcule ta requête de la même façon, qu'elle soit seule ou mêlée à celles d'autres utilisateurs"
+      }
+    ],
+    "cat": "comportements",
+    "links": [
+      "temperature",
+      "prediction-du-mot-suivant",
+      "evals",
+      "llm-juge",
+      "sortie-structuree",
+      "loop"
+    ],
+    "short": "Le non-déterminisme désigne le fait qu'une même demande, envoyée deux fois au même modèle, peut recevoir deux réponses différentes, même avec le hasard réglé au minimum.",
+    "image": "Le 13 décembre 2021 à midi, le tirage des huitièmes de finale de la Ligue des champions envoie le PSG contre Manchester United. L'UEFA l'annule pour un « problème technique » dans le logiciel d'un prestataire et recommence à 15 h, avec le même règlement, les mêmes équipes et les mêmes boules, et le PSG tire le Real Madrid.",
+    "imagineForm": "A",
+    "imagine": "En avril 2026, la société Simular a fait passer dix fois chacune des tâches d'OSWorld, un banc d'essai de travaux de bureau sur un vrai ordinateur, à son agent Agent S3, qui s'appuie sur GPT-5. Confie-lui une de ces tâches chaque matin pendant deux semaines de travail. Pour environ 78 tâches sur 100, il la réussit au moins un matin, et pour 36 seulement, il la réussit les dix matins.",
+    "full": [
+      "À chaque pas, le modèle tire le token suivant au sort parmi les candidats, pondérés par leurs probabilités. Ce hasard est voulu, car prendre toujours le favori donne des textes plats et répétitifs, comme l'a montré dès 2019 une équipe de l'université de Washington. Un seul token différent au début suffit à changer toute la suite, et deux réponses à la même question peuvent prendre deux chemins entiers, avec un autre plan et une autre conclusion.",
+      "Régler la température à zéro, pour prendre toujours le token le plus probable, ne suffit pas. La documentation de l'API de Claude prévient qu'à température 0 les résultats ne sont pas entièrement déterministes, et en septembre 2025, Horace He, de Thinking Machines Lab, a expliqué pourquoi. Les ordinateurs calculent avec des nombres arrondis, et l'ordre des additions change le résultat, au point que huit nombres, additionnés dans des ordres différents, lui ont donné 102 sommes distinctes. Pour aller plus vite, un serveur calcule ta requête dans un même lot que celles d'autres personnes, et la taille de ce lot change l'ordre des calculs. Ta réponse dépend donc aussi de qui d'autre interroge le modèle au même moment.",
+      "Pour tester, un seul essai ne prouve rien. En janvier 2026, Anthropic recommandait de lancer plusieurs fois chaque test d'agent et de suivre deux mesures, pass@k, la chance de réussir au moins une fois en k essais, et pass^k, celle de réussir les k fois. Un agent qui réussit 75 % de ses essais ne passe trois essais de suite que dans 42 % des cas. La première mesure compte pour un outil où l'on peut relancer et garder le bon résultat, la seconde pour un agent dont le client attend la bonne réponse à chaque fois.",
+      "Le hasard sert aussi d'excuse, dans un sens comme dans l'autre. Pendant l'été 2025, des utilisateurs de Claude se sont plaints de réponses dégradées, et le 17 septembre, Anthropic a reconnu trois bugs d'infrastructure, dont un qui glissait des caractères thaïs au milieu de réponses en anglais. Selon l'entreprise, ils étaient difficiles à repérer parce que leurs effets variaient d'une requête à l'autre. Une série de mauvaises réponses peut venir de mauvais tirages ou d'un vrai changement, et seules des mesures répétées permettent de trancher."
+    ],
+    "then": "En 2023 et 2024, l'écart à température 0 passait pour une fatalité du calcul parallèle sur les puces graphiques, et OpenAI n'offrait, depuis novembre 2023, qu'un paramètre seed au « meilleur effort ». En septembre 2025, Thinking Machines Lab a montré que le regroupement des requêtes en était la cause principale. En rendant ses calculs indépendants du lot, il a obtenu 1 000 réponses identiques sur 1 000, au prix d'un service plus lent, 42 secondes au lieu de 26 sur son test de vitesse. Depuis octobre 2025, vLLM, un logiciel libre très utilisé pour servir des modèles, propose ce mode avec un simple réglage.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Le même prompt m'a sorti un tableau parfait hier et un tableau faux aujourd'hui. Lequel je crois ?"
+      },
+      {
+        "who": "a",
+        "text": "Aucun des deux tant que tu ne l'as pas relancé une dizaine de fois sur des cas dont tu connais la réponse ; c'est le taux de réussite sur la série qui te dit si tu peux t'en servir."
+      }
+    ],
+    "avoid": "« Il s'est trompé deux fois ce matin, ils ont dégradé le modèle. » Deux mauvaises réponses peuvent n'être que deux mauvais tirages ; avant de conclure, relance la même série de tests et compare son taux de réussite à celui de la semaine dernière.",
+    "video": {
+      "src": "videos/non-determinisme.mp4",
+      "poster": "videos/non-determinisme.jpg"
+    },
+    "sources": [
+      {
+        "label": "UEFA, Champions League round of 16 draw declared void and will be redone at 15:00 CET, 13 décembre 2021 (« Following a technical problem with the software of an external provider »)",
+        "url": "https://www.uefa.com/uefachampionsleague/news/0270-13f2ac0aff13-74f2ff9e43b1-1000/"
+      },
+      {
+        "label": "Wikipédia, 2021-22 UEFA Champions League knockout phase (tirage de 12 h annulé, refait à 15 h ; Paris Saint-Germain contre Manchester United au premier tirage, contre le Real Madrid au second)",
+        "url": "https://en.wikipedia.org/wiki/2021%E2%80%9322_UEFA_Champions_League_knockout_phase"
+      },
+      {
+        "label": "Gonzalez-Pumariega et al. (Simular), On the Reliability of Computer Use Agents, 20 avril 2026, figure 1 (Agent S3 avec GPT-5 sur OSWorld : Pass@10 d'environ 78 %, Pass^10 d'environ 36 %, réussite aux 10 exécutions)",
+        "url": "https://arxiv.org/abs/2604.17849"
+      },
+      {
+        "label": "Holtzman et al. (University of Washington, Allen Institute for AI), The Curious Case of Neural Text Degeneration, 22 avril 2019, résumé (décoder en maximisant la probabilité donne un texte « bland and strangely repetitive »)",
+        "url": "https://arxiv.org/abs/1904.09751"
+      },
+      {
+        "label": "Claude API, Messages, paramètre temperature (« Note that even with temperature of 0.0, the results will not be fully deterministic »)",
+        "url": "https://platform.claude.com/docs/en/api/messages/create"
+      },
+      {
+        "label": "Horace He et Thinking Machines Lab, Defeating Nondeterminism in LLM Inference, 10 septembre 2025 (non-associativité des nombres à virgule flottante ; 8 valeurs sommées dans des ordres différents, 102 résultats ; absence d'invariance au lot comme cause ; avec des noyaux invariants, 1 000 complétions identiques ; vLLM par défaut 26 s, déterministe non optimisé 55 s, avec attention améliorée 42 s)",
+        "url": "https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/"
+      },
+      {
+        "label": "vLLM, Batch Invariance (« the output of a model is deterministic and independent of the batch size or the order of requests in a batch » ; VLLM_BATCH_INVARIANT=1 ; coût en performance assumé)",
+        "url": "https://docs.vllm.ai/en/latest/features/batch_invariance/"
+      },
+      {
+        "label": "vLLM sur X, 22 octobre 2025 (annonce de l'inférence invariante au lot avec VLLM_BATCH_INVARIANT=1)",
+        "url": "https://x.com/vllm_project/status/1981088861506982041"
+      },
+      {
+        "label": "OpenAI Cookbook, How to make your completions outputs consistent with the new seed parameter, 6 novembre 2023 (« best effort to sample deterministically » ; « Determinism is not guaranteed »)",
+        "url": "https://developers.openai.com/cookbook/examples/reproducible_outputs_with_the_seed_parameter"
+      },
+      {
+        "label": "Anthropic, Demystifying evals for AI agents, 9 janvier 2026 (le comportement varie d'une exécution à l'autre ; pass@k et pass^k ; « 75% per-trial success rate [...] 3 trials [...] (0.75)³ ≈ 42% » ; pass@k quand une réussite suffit, pass^k quand la constance est essentielle)",
+        "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+      },
+      {
+        "label": "Anthropic, A postmortem of three recent issues, 17 septembre 2025 (trois bugs d'infrastructure en août et septembre 2025 ; caractères thaïs comme « สวัสดี » au milieu de réponses en anglais ; « behavior was frustratingly inconsistent »)",
+        "url": "https://www.anthropic.com/engineering/a-postmortem-of-three-recent-issues"
+      }
+    ]
+  },
+  {
+    "id": "sans-etat",
+    "status": "live",
+    "num": "145",
+    "title": "Session, tour et sans état",
+    "en": "stateless model, session, turn",
+    "aliases": [
+      "stateless",
+      "statelessness",
+      "turn",
+      "model provider request",
+      "clearing",
+      "context reset"
+    ],
+    "aliasesFr": [
+      "sans état",
+      "session d'agent",
+      "tour de conversation",
+      "requête au fournisseur",
+      "vider la session"
+    ],
+    "jargon": [
+      {
+        "say": "stateless",
+        "means": "« sans état », se dit d'un système qui ne garde rien d'une requête à l'autre ; c'est le mot qu'emploie la documentation de l'API de Claude pour elle-même"
+      },
+      {
+        "say": "/clear",
+        "means": "la commande de Claude Code qui ouvre une session vide ; l'ancienne reste enregistrée sur ton disque et se reprend avec claude --resume"
+      },
+      {
+        "say": "previous_response_id",
+        "means": "le paramètre de l'API d'OpenAI qui garde la conversation sur ses serveurs, sans rien changer à la facture, puisque les tokens des échanges précédents restent comptés en entrée"
+      }
+    ],
+    "cat": "agents",
+    "links": [
+      "fenetre-de-contexte",
+      "memoire",
+      "mythe-apprend-de-nos-conversations",
+      "compaction-du-contexte",
+      "agents-md",
+      "context-rot"
+    ],
+    "short": "Un modèle ne garde rien d'une requête à l'autre ; pour tenir une session de plusieurs tours, le harness lui renvoie à chaque requête tout l'historique, consignes comprises.",
+    "image": "Dans Amour et Amnésie, Lucy oublie chaque nuit tout ce qu'elle a vécu dans la journée, et Henry lui laisse au réveil une cassette qui raconte l'accident, leur rencontre et tout ce qui a suivi. Elle se lève chaque matin parfaitement au courant, et la cassette s'allonge d'un jour à chaque fois.",
+    "imagineForm": "E",
+    "imagine": "Ton script envoie à l'API de Claude « Je m'appelle Josette », puis, dans une seconde requête, « Comment je m'appelle ? », et Claude répond qu'il n'en a aucune idée. Tu ajoutes une ligne au script pour qu'il recolle devant la seconde question ton premier message et la réponse de Claude, et cette fois Claude répond « Tu t'appelles Josette ».",
+    "full": [
+      "Un modèle de langage reçoit un texte, calcule la suite et ne garde rien. L'API de Claude se décrit comme sans état (stateless), et sa documentation précise qu'il faut lui renvoyer à chaque appel tout l'historique de la conversation. Elle ajoute que les tours précédents n'ont pas besoin de venir réellement de Claude. Un harness peut donc glisser dans l'historique une réponse que le modèle n'a jamais écrite, et rien dans la requête ne permet au modèle de la distinguer des siennes.",
+      "Trois mots servent à s'y retrouver. Une requête est un aller-retour entre le harness et le fournisseur du modèle, qui reçoit tout le contexte et renvoie une réponse, texte ou appel d'outil. Un tour commence quand tu envoies un message et s'achève quand l'agent te rend la main, et il contient souvent des dizaines de requêtes, une par résultat d'outil à lire. La session rassemble tous les tours depuis la dernière remise à zéro, et c'est elle qui remplit peu à peu la fenêtre de contexte.",
+      "Tout renvoyer se paie. Au fil d'un tour, chaque requête relit ce que la précédente avait lu, plus le dernier résultat d'outil, et chaque token d'entrée se facture à chaque passage. Le cache de prompt évite de tout recalculer, et chez Anthropic, un passage déjà en cache coûte en général 10 % du prix normal, à condition de resservir dans les cinq minutes. L'API d'OpenAI peut garder la conversation sur ses serveurs, mais sa documentation précise que tous les tokens des réponses précédentes restent facturés comme entrée.",
+      "Dans Claude Code, chaque session démarre avec une fenêtre de contexte neuve, sans l'historique des précédentes. La conversation reste pourtant écrite au fil de l'eau dans un fichier sur ton disque, ce qui permet de la reprendre, et /clear ouvre une session vide sans effacer ce fichier. Ce qu'une session doit transmettre à la suivante s'écrit donc ailleurs, dans un fichier qu'elle relira en démarrant, CLAUDE.md, la mémoire de l'agent ou une note de passation."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Pourquoi ma petite question à l'agent a consommé 80 000 tokens ?"
+      },
+      {
+        "who": "a",
+        "text": "Dans ce tour, il a lu des fichiers et lancé des commandes, et chaque résultat a déclenché une nouvelle requête qui renvoyait toute la session ; compte ses requêtes, pas tes messages."
+      }
+    ],
+    "avoid": "« Il a appris notre projet au fil de la session. » Rien n'a bougé dans ses paramètres ; il relit à chaque requête une session de plus en plus longue, et un /clear la lui retire d'un coup.",
+    "video": {
+      "src": "videos/sans-etat.mp4",
+      "poster": "videos/sans-etat.jpg"
+    },
+    "sources": [
+      {
+        "label": "Wikipédia, Amour et Amnésie (50 First Dates, Peter Segal, 2004 ; Lucy oublie chaque nuit ce qu'elle a fait dans la journée)",
+        "url": "https://fr.wikipedia.org/wiki/Amour_et_Amn%C3%A9sie"
+      },
+      {
+        "label": "Wikipedia, 50 First Dates, section Plot (vidéo préparée par Henry, que Lucy regarde au réveil et qui la met au courant ; cassette « Good Morning Lucy » complétée au fil du temps)",
+        "url": "https://en.wikipedia.org/wiki/50_First_Dates"
+      },
+      {
+        "label": "Claude API, Using the Messages API, section Multiple conversational turns (« The Messages API is stateless, which means that you always send the full conversational history to the API » ; « Earlier conversational turns don't necessarily need to actually originate from Claude. You can use synthetic assistant messages »)",
+        "url": "https://platform.claude.com/docs/en/build-with-claude/working-with-messages"
+      },
+      {
+        "label": "Matt Pocock, Dictionary of AI Coding, entrées Stateless, Session, Turn et Model provider request (hiérarchie session, tour, requête ; un tour contient une ou plusieurs requêtes, une par résultat d'outil)",
+        "url": "https://github.com/mattpocock/dictionary-of-ai-coding/blob/main/dictionary/Turn.md"
+      },
+      {
+        "label": "Claude API, Prompt caching (cache de 5 minutes par défaut, rafraîchi à chaque usage ; lectures du cache à 0,1 fois le prix d'entrée de base, avec des exceptions par modèle)",
+        "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching"
+      },
+      {
+        "label": "OpenAI API, Conversation state (« While each text generation request is independent and stateless » ; « Even when using previous_response_id, all previous input tokens for responses in the chain are billed as input tokens in the API »)",
+        "url": "https://developers.openai.com/api/docs/guides/conversation-state"
+      },
+      {
+        "label": "Claude Code, How Claude Code works (conversation enregistrée en JSONL sous ~/.claude/projects/ ; « Each new session starts with a fresh context window, without the conversation history from previous sessions »)",
+        "url": "https://code.claude.com/docs/en/how-claude-code-works"
+      },
+      {
+        "label": "Claude Code, Manage sessions (sessions enregistrées en continu, qu'on peut reprendre après avoir quitté ou lancé /clear ; claude --resume)",
+        "url": "https://code.claude.com/docs/en/sessions"
+      }
+    ]
+  },
+  {
+    "id": "connaissances-parametriques",
+    "status": "live",
+    "num": "146",
+    "title": "Connaissances paramétriques et contextuelles",
+    "en": "parametric and contextual knowledge",
+    "aliases": [
+      "parametric knowledge",
+      "contextual knowledge",
+      "parametric memory",
+      "in-context knowledge",
+      "knowledge conflicts",
+      "context-memory conflict"
+    ],
+    "aliasesFr": [
+      "connaissances paramétriques",
+      "connaissances contextuelles",
+      "mémoire paramétrique",
+      "conflit de connaissances"
+    ],
+    "jargon": [
+      {
+        "say": "parametric knowledge",
+        "means": "ce que le modèle sait par ses paramètres, appris pendant l'entraînement et figé à sa date de coupure"
+      },
+      {
+        "say": "in-context",
+        "means": "« dans le contexte », se dit de ce que le modèle lit dans la conversation au moment de répondre"
+      },
+      {
+        "say": "knowledge conflict",
+        "means": "le cas où le contexte contredit ce que le modèle a appris, et où tout se joue sur celui des deux qu'il suit"
+      },
+      {
+        "say": "grounding",
+        "means": "ancrer une réponse dans des documents fournis, pour qu'elle s'appuie sur le contexte plutôt que sur la mémoire du modèle"
+      }
+    ],
+    "cat": "fondations",
+    "links": [
+      "parametres",
+      "rag",
+      "date-de-coupure",
+      "fenetre-de-contexte",
+      "mythe-base-de-donnees",
+      "mythe-a-lu-tout-internet"
+    ],
+    "short": "Un modèle tient ses connaissances de deux sources, ses paramètres, figés à l'entraînement et parfois flous, et son contexte, qu'il lit au moment de répondre, exact et à jour.",
+    "image": "Raymond connaît par cœur les horaires du bus 42, ceux d'avant le changement de 2023, et les récite avec l'aplomb d'un chef de gare. Depuis que sa fille a collé la fiche à jour sur le frigo, il ne rate plus un bus, sauf la semaine où elle s'était trompée d'une ligne en la recopiant.",
+    "imagineForm": "D",
+    "imagine": "« Je t'ai recopié la page Wikipédia du 100 mètres, quel est le record olympique ? », demande Agnès, qui a tapé 9,36 au lieu de 9,63. « Le record olympique est de 9,36 secondes, établi par Usain Bolt aux Jeux de Londres en 2012 », répond l'assistant.",
+    "full": [
+      "Ce qu'un modèle sait lui vient de deux endroits. Les connaissances paramétriques sont celles que l'entraînement a déposées dans ses paramètres ; il les retrouve sans qu'on lui fournisse rien, mais elles sont figées à sa date de coupure et d'autant plus floues que le sujet était rare dans ses lectures. En février 2026, une équipe de Google a mesuré que Gemini 3 Pro avait appris presque tous les faits des pages Wikipédia les moins consultées, mais n'en retrouvait de tête que 63,3 %, contre 84,6 % pour les pages les plus vues. Les connaissances contextuelles sont celles qu'il lit dans sa fenêtre au moment de répondre, ta question, un document collé, le résultat d'une recherche web. Elles sont exactes et à jour, mais occupent de la place et se paient en tokens.",
+      "Quand les deux se contredisent, le contexte l'emporte le plus souvent, même quand il a tort. Une équipe de Stanford a soumis à six modèles, dont GPT-4o, plus de 1 200 questions, des doses de médicaments aux records olympiques, chacune accompagnée d'un document où l'on avait glissé une erreur. Dans cette étude, présentée à NeurIPS fin 2024, les modèles reprenaient l'erreur plus de 60 % du temps alors qu'ils connaissaient la bonne réponse, d'autant plus volontiers que l'erreur était vraisemblable et qu'ils étaient peu sûrs d'eux.",
+      "L'inverse arrive aussi. Le 17 novembre 2025, Andrej Karpathy essayait Gemini 3 en avant-première sans l'outil de recherche Google, et le modèle refusait de croire qu'on était en 2025. Il tenait les articles et les images que Karpathy lui montrait pour des faux fabriqués par une IA, en relevant de prétendus indices, jusqu'à ce que Karpathy active la recherche ; le modèle a alors écrit qu'il subissait « un choc temporel massif ». Dans le code, l'ancienne habitude revient de la même façon. Une étude présentée à ICSE 2025 a fait compléter par sept modèles du code qui appelait des fonctions Python devenues obsolètes. Ils reprenaient l'ancienne version dans 70 à 90 % des cas quand le code voisin l'utilisait déjà, contre 9 à 18 % quand il était à jour.",
+      "La règle pratique en découle. Quand un fait est rare, postérieur à la date de coupure ou propre à ton entreprise, donne-le dans le contexte plutôt que de compter sur la mémoire du modèle, et pour une consigne qui contredit ses habitudes, écris-la clairement, près de l'endroit où elle sert. Comme le contexte gagne même quand il se trompe, relis aussi ce que tu y mets."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "On a collé dans le prompt la doc de la nouvelle version de notre API publique, et il écrit encore parfois les appels de l'ancienne. Pourquoi ?"
+      },
+      {
+        "who": "a",
+        "text": "L'ancienne version est dans ses paramètres, apprise sur des milliers d'exemples, et la nouvelle seulement dans son contexte ; au fil d'une longue session l'habitude peut reprendre le dessus, alors rappelle la nouvelle syntaxe près de la tâche et fais tourner les tests."
+      }
+    ],
+    "avoid": "« Si je lui donne le document, il ne peut plus se tromper. » Il suit le document même quand le document a tort, et les modèles testés à Stanford reprenaient une erreur glissée dans le texte plus de 60 % du temps.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Wikipedia, List of Olympic records in athletics (100 m hommes : 9,63 s, Usain Bolt, Jeux de 2012 à Londres)",
+        "url": "https://en.wikipedia.org/wiki/List_of_Olympic_records_in_athletics"
+      },
+      {
+        "label": "Calderon et al. (Google Research, Technion), Empty Shelves or Lost Keys? Recall Is the Bottleneck for Parametric Factuality, 15 février 2026, révisé le 19 juin 2026, ICML 2026, section 5 (pour Gemini-3-Pro, faits encodés à 99,5 % pour les 20 % de pages les plus vues contre 94,5 % pour les 20 % les moins vues ; rappel direct des faits encodés de 84,6 % contre 63,3 %)",
+        "url": "https://arxiv.org/abs/2602.14080"
+      },
+      {
+        "label": "Wu, Wu et Zou (Stanford), ClashEval: Quantifying the tug-of-war between an LLM's internal prior and external evidence, avril 2024, révisé le 7 février 2025, NeurIPS 2024 Datasets and Benchmarks, résumé (plus de 1 200 questions sur six domaines, dont doses de médicaments et records olympiques ; six modèles dont GPT-4o ; contenu incorrect adopté « over 60% of the time » contre une connaissance correcte ; moins adopté quand il est irréaliste ; plus adopté quand le modèle est peu confiant)",
+        "url": "https://arxiv.org/abs/2404.10198"
+      },
+      {
+        "label": "Andrej Karpathy sur X, 18 novembre 2025 (« I played with Gemini 3 yesterday via early access »)",
+        "url": "https://x.com/karpathy/status/1990854771058913347"
+      },
+      {
+        "label": "Andrej Karpathy sur X, 18 novembre 2025 (le modèle « refused to believe me that it is 2025 » ; images et articles tenus pour des faux générés par IA, « dead giveaways » ; « I forgot to turn on the \"Google Search\" tool »)",
+        "url": "https://x.com/karpathy/status/1990855382756164013"
+      },
+      {
+        "label": "TechCrunch, Gemini 3 refused to believe it was 2025, and hilarity ensued, 20 novembre 2025 (réponse du modèle après activation de la recherche : « I am suffering from a massive case of temporal shock right now »)",
+        "url": "https://techcrunch.com/2025/11/20/gemini-3-refused-to-believe-it-was-2025-and-hilarity-ensued/"
+      },
+      {
+        "label": "Wang et al., LLMs Meet Library Evolution: Evaluating Deprecated API Usage in LLM-based Code Completion, ICSE 2025, version du 13 février 2025 (7 modèles, 145 correspondances d'API dans 8 bibliothèques Python ; taux d'usage obsolète de 70 à 90 % dans les fonctions qui utilisent l'ancienne API, de 9 à 18 % dans celles qui sont à jour)",
+        "url": "https://arxiv.org/abs/2406.09834"
+      }
+    ]
+  },
+  {
+    "id": "agents-md",
+    "status": "live",
+    "num": "147",
+    "title": "AGENTS.md",
+    "en": "AGENTS.md",
+    "aliases": [
+      "AGENTS.md",
+      "CLAUDE.md",
+      "GEMINI.md",
+      ".cursor/rules",
+      "context file",
+      "agent instructions file",
+      "agent experience",
+      "AX"
+    ],
+    "aliasesFr": [
+      "fichier de consignes",
+      "fichier de contexte",
+      "expérience agent"
+    ],
+    "jargon": [
+      {
+        "say": "/init",
+        "means": "la commande de Claude Code qui fait écrire au modèle un premier CLAUDE.md à partir du code du projet, un brouillon à élaguer ensuite"
+      },
+      {
+        "say": "AGENTS.md imbriqués",
+        "means": "un fichier par sous-dossier ; l'agent suit celui qui est le plus proche du fichier qu'il modifie, qui l'emporte sur ceux du dessus"
+      },
+      {
+        "say": "AX, agent experience",
+        "means": "la façon dont un projet accueille l'agent qui y travaille, sur le modèle de l'expérience utilisateur (UX) et de l'expérience développeur (DX)"
+      }
+    ],
+    "cat": "methode",
+    "links": [
+      "system-prompt",
+      "skill",
+      "memoire",
+      "context-engineering",
+      "sans-etat",
+      "passation"
+    ],
+    "short": "AGENTS.md est un fichier texte placé dans un projet, que les agents de code lisent au début de chaque session pour connaître ses commandes, ses conventions et ses pièges.",
+    "image": "En congé pour trois mois, Mme Garnier a scotché sur son bureau une page que relit chaque matin la remplaçante du jour, qui n'est jamais la même. Le programme de maths n'y figure pas, il est dans le manuel ; la page dit que la porte du fond ferme mal, que la cantine passe à 11 h 40 le jeudi et qu'Enzo n'a plus droit aux ciseaux.",
+    "imagineForm": "A",
+    "imagine": "Des chercheurs de l'ETH Zurich ont publié en février 2026 une expérience où ils faisaient travailler des agents de code sur les mêmes tâches, avec et sans fichier AGENTS.md. Quand ce fichier avait été rédigé par un modèle, ils ne réussissaient pas plus de tâches et dépensaient environ 20 % de plus pour y arriver, l'équivalent d'un trajet de 12 kilomètres pour une adresse qui était à 10.",
+    "full": [
+      "Un agent de code commence chaque session sans rien savoir du projet, ni la commande qui lance les tests, ni le dossier qu'on ne modifie jamais, ni la règle adoptée après la panne du mois dernier. Le harness lui donne donc, avant ton premier message, le contenu d'un fichier texte rangé dans le projet. Chaque outil a d'abord eu le sien, CLAUDE.md pour Claude Code, GEMINI.md pour Gemini CLI, des règles dans .cursor/rules pour Cursor. OpenAI a proposé AGENTS.md en août 2025 comme nom commun, et le 9 décembre 2025, le fichier a rejoint MCP à la Linux Foundation, au sein d'une nouvelle Agentic AI Foundation. La fondation l'annonçait alors adopté par plus de 60 000 projets open source, et le site du standard affiche toujours ce chiffre en octobre 2026.",
+      "Le fichier est relu à chaque session, et chaque ligne coûte donc de la place dans la fenêtre de contexte, à chaque fois. La documentation de Claude Code conseille de rester sous 200 lignes et de se demander, pour chacune, si sa disparition ferait faire une erreur à l'agent. L'équipe d'OpenAI qui a écrit un produit entier avec Codex a essayé le grand fichier unique et y a renoncé, parce que lorsque tout est important, rien ne l'est, et que les règles périmées s'y accumulent sans que l'agent sache lesquelles tiennent encore. Son AGENTS.md fait environ 100 lignes et sert de sommaire, avec des renvois vers les documents du dossier docs/, que l'agent n'ouvre que lorsqu'il en a besoin.",
+      "L'étude de l'ETH dit aussi ce qui marche. Les consignes du fichier sont suivies à la lettre, au point que les agents lançaient l'outil uv 1,6 fois par tâche quand le fichier le citait, contre moins d'une fois toutes les cent tâches sans lui. Les présentations générales du projet, elles, n'aidaient pas, sans doute parce que l'agent trouve la même chose en lisant le code. Un bon AGENTS.md garde donc ce qui ne se devine pas, une commande, un piège, une convention maison. Une autre étude, publiée en janvier 2026 sur 124 demandes de modification réelles, trouvait d'ailleurs qu'avec le fichier du projet, les agents finissaient en un temps médian plus court de 28,64 %, pour une réussite comparable.",
+      "En janvier 2025, Mathias Biilmann, le patron de Netlify, a proposé de parler d'agent experience (AX), l'expérience qu'un agent vit en utilisant un produit, comme on parlait d'expérience utilisateur et d'expérience développeur. Dans un projet de code, l'AX va au-delà du fichier, puisqu'elle tient aussi à des vérifications que l'agent peut lancer seul, à une architecture qu'il peut suivre et à une fenêtre qu'on n'encombre pas."
+    ],
+    "then": "En 2025, Claude Code ignorait AGENTS.md, et un projet qui servait aussi à Codex ou à Cursor devait importer ce fichier depuis son CLAUDE.md ou créer un lien de l'un vers l'autre. Depuis le 18 septembre 2026, Claude Code lit lui aussi AGENTS.md quand le projet n'a pas de CLAUDE.md, le fichier que Codex, Cursor, GitHub Copilot ou Devin lisaient déjà.",
+    "office": [
+      {
+        "who": "q",
+        "text": "On a fait écrire notre AGENTS.md par l'agent, il fait 600 lignes. C'est bon, on est couverts ?"
+      },
+      {
+        "who": "a",
+        "text": "Garde ce qu'il ne devinerait pas en lisant le code, la commande de test, le dossier généré à ne pas toucher, la règle née d'un incident, et coupe le reste. Dans l'étude de l'ETH, les fichiers écrits par un modèle coûtaient plus cher sans faire réussir plus de tâches."
+      }
+    ],
+    "avoid": "« C'est écrit dans AGENTS.md, donc il ne le fera pas. » Le fichier est lu comme du contexte, pas appliqué comme une règle, et la documentation de Claude Code renvoie à un hook, un script qui bloque l'action avant qu'elle parte, pour ce qui doit être interdit à coup sûr.",
+    "video": null,
+    "sources": [
+      {
+        "label": "AGENTS.md, site officiel du standard (« used by over 60k open-source projects » ; « a README for agents » ; fichiers imbriqués, le plus proche l'emporte ; 88 fichiers AGENTS.md dans le dépôt principal d'OpenAI ; administré par l'Agentic AI Foundation de la Linux Foundation), consulté le 3 octobre 2026",
+        "url": "https://agents.md/"
+      },
+      {
+        "label": "Linux Foundation, communiqué du 9 décembre 2025 (création de l'Agentic AI Foundation avec MCP, goose et AGENTS.md ; AGENTS.md « released by OpenAI in August 2025 », adopté par plus de 60 000 projets open source et par Amp, Codex, Cursor, Devin, Factory, Gemini CLI, GitHub Copilot, Jules et VS Code)",
+        "url": "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation"
+      },
+      {
+        "label": "Gloaguen et al. (ETH Zurich), Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?, 12 février 2026 (fichiers générés par un modèle : pas de gain de réussite, coût d'inférence +20 % sur SWE-bench et +23 % sur CTXbench ; fichiers écrits par les développeurs : +2,4 % de réussite, non significatif ; uv lancé 1,6 fois par tâche quand le fichier le cite, contre moins de 0,01 fois sinon ; les présentations du dépôt n'aident pas). Calcul de l'Imagine : 10 km x 1,2 = 12 km",
+        "url": "https://arxiv.org/abs/2602.11988"
+      },
+      {
+        "label": "Lulla et al., On the Impact of AGENTS.md Files on the Efficiency of AI Coding Agents, 28 janvier 2026 (10 dépôts, 124 pull requests ; temps d'exécution médian -28,64 %, tokens de sortie -16,58 %, taux de réussite comparable)",
+        "url": "https://arxiv.org/abs/2601.20404"
+      },
+      {
+        "label": "Claude Code, Best practices (CLAUDE.md lu au début de chaque conversation ; « Would removing this cause Claude to make mistakes? » ; à inclure et à exclure ; CLAUDE.md « advisory », hooks déterministes)",
+        "url": "https://code.claude.com/docs/en/best-practices"
+      },
+      {
+        "label": "Claude Code, How Claude remembers your project (CLAUDE.md lus au début de chaque session ; « context, not enforced configuration », hook PreToolUse pour bloquer ; viser moins de 200 lignes ; /init ; lecture d'AGENTS.md à partir de la version 2.1.277 quand le projet n'a pas de CLAUDE.md)",
+        "url": "https://code.claude.com/docs/en/memory"
+      },
+      {
+        "label": "Claude Code, journal des modifications, version 2.1.277 (« Added AGENTS.md support: in a project with no CLAUDE.md, Claude Code reads AGENTS.md instead »)",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+      },
+      {
+        "label": "npm, historique des versions de @anthropic-ai/claude-code (version 2.1.277 publiée le 18 septembre 2026)",
+        "url": "https://www.npmjs.com/package/@anthropic-ai/claude-code?activeTab=versions"
+      },
+      {
+        "label": "OpenAI, Codex, Custom instructions with AGENTS.md (fichiers lus de la racine du dépôt jusqu'au dossier courant, le plus proche en dernier ; limite par défaut de 32 Kio)",
+        "url": "https://learn.chatgpt.com/docs/agent-configuration/agents-md"
+      },
+      {
+        "label": "Ryan Lopopolo (OpenAI), Harness engineering: leveraging Codex in an agent-first world, 11 février 2026 (échec du « one big AGENTS.md » ; « When everything is \"important,\" nothing is » ; AGENTS.md d'environ 100 lignes utilisé comme sommaire, connaissances dans docs/)",
+        "url": "https://openai.com/index/harness-engineering/"
+      },
+      {
+        "label": "Cursor, Rules (règles de projet dans .cursor/rules ; AGENTS.md accepté, fichiers imbriqués ; règles de moins de 500 lignes)",
+        "url": "https://cursor.com/docs/context/rules"
+      },
+      {
+        "label": "Gemini CLI, GEMINI.md (fichiers de contexte concaténés et envoyés au modèle avec chaque prompt ; nom configurable, AGENTS.md compris)",
+        "url": "https://geminicli.com/docs/cli/gemini-md/"
+      },
+      {
+        "label": "Matt Pocock, AI Coding Dictionary, AI Hero (AGENTS.md, « the project's standing brief to the agent » ; AX, « how well the environment is set up for an agent to do good work: checks, architecture, and free context »), consulté le 3 octobre 2026",
+        "url": "https://www.aihero.dev/ai-coding-dictionary"
+      },
+      {
+        "label": "Mathias Biilmann, Introducing AX: Why Agent Experience Matters, 28 janvier 2025 (« the holistic experience AI agents will have as the user of a product or platform » ; après l'UX et la DX)",
+        "url": "https://biilmann.blog/articles/introducing-ax/"
+      }
+    ]
+  },
+  {
+    "id": "passation",
+    "status": "live",
+    "num": "148",
+    "title": "Passation entre sessions",
+    "en": "Handoff",
+    "aliases": [
+      "handoff",
+      "session handoff",
+      "handoff artifact",
+      "handoff note",
+      "spec-driven development",
+      "SDD",
+      "primary source",
+      "secondary source"
+    ],
+    "aliasesFr": [
+      "passation",
+      "note de passation",
+      "passage de relais",
+      "développement piloté par la spécification",
+      "source primaire",
+      "source secondaire"
+    ],
+    "jargon": [
+      {
+        "say": "handoff",
+        "means": "le passage de relais d'une session d'agent à la suivante, sans retour possible, puisque la nouvelle ne pourra pas interroger l'ancienne"
+      },
+      {
+        "say": "spec",
+        "means": "la spécification, le document qui décrit ce qu'on construit sur plusieurs sessions, souvent découpé en tickets"
+      },
+      {
+        "say": "ticket",
+        "means": "la part de travail d'une seule session, avec ce qui dira qu'elle est terminée"
+      },
+      {
+        "say": "/clear",
+        "means": "la commande de Claude Code qui vide la session en cours ; la suivante repart d'une fenêtre de contexte vide"
+      }
+    ],
+    "cat": "methode",
+    "links": [
+      "compaction-du-contexte",
+      "sans-etat",
+      "context-rot",
+      "agents-md",
+      "planification",
+      "dark-factory"
+    ],
+    "short": "La passation transmet un travail d'une session d'agent à la suivante par un document écrit, note, spec ou ticket, puisque la nouvelle session ne sait rien de l'ancienne.",
+    "image": "Avant trois semaines dans les Cévennes, sans réseau, Pierrette laisse au voisin un mot sur la table de la cuisine, « arroser les plantes deux fois par semaine ». Il l'a suivi avec un soin parfait, le cactus compris, et le ficus en plastique de l'entrée.",
+    "imagineForm": "D",
+    "imagine": "« Pourquoi on a abandonné la bibliothèque de dates qu'on utilisait au début ? », demandes-tu à la session que tu viens d'ouvrir. « D'après la note de passation, elle a été remplacée hier, et c'est tout ce que j'en sais », répond-elle.",
+    "full": [
+      "Une session d'agent finit toujours par s'arrêter, parce que sa fenêtre de contexte est pleine, parce que ses réponses se dégradent à mesure qu'elle s'allonge, ou parce que tu la vides toi-même avec /clear pour passer à autre chose. La session suivante repart de zéro, et ce qu'elle saura du travail déjà fait tient dans ce qu'on lui transmet. On appelle cela une passation (handoff), et elle va dans un seul sens, puisque la nouvelle session ne peut pas interroger l'ancienne. La compaction en est une forme automatique, où le modèle se résume lui-même ; les autres passent par un document, une note de passation, une spec ou un ticket.",
+      "Tout document de ce genre est une source secondaire. Le code, l'historique git, les résultats des tests et la conversation elle-même sont des sources primaires, complètes mais coûteuses à relire, alors qu'un résumé coûte peu et perd forcément quelque chose. En avril 2025, une étude parue dans Royal Society Open Science a comparé 4 900 résumés d'articles scientifiques écrits par dix modèles aux textes d'origine. Les résumés laissaient tomber les détails qui limitaient la portée des conclusions, et DeepSeek, GPT-4o ou Llama 3.3 70B généralisaient trop dans 26 à 73 % des cas, même quand on leur demandait d'être précis.",
+      "Une bonne note renvoie donc aux sources primaires au lieu de les paraphraser, avec les fichiers à rouvrir, la commande qui fait échouer le test et le commit où tout a changé, et elle garde ce qu'aucune d'elles ne contient, la raison des choix. Pour un chantier de plusieurs sessions, la documentation de Claude Code conseille de faire écrire une spec dans une session, puis de l'exécuter dans une session neuve. La spec utile nomme les fichiers concernés, dit ce qui sort du périmètre et se termine par une vérification de bout en bout.",
+      "Le spec-driven development, le développement piloté par la spécification, fait de ce document le centre du travail. Kiro, l'éditeur de code lancé par AWS le 14 juillet 2025, produit des exigences, une conception et une liste de tâches avant d'écrire une ligne, et Spec Kit, publié par GitHub le 2 septembre 2025, enchaîne les commandes /specify, /plan et /tasks. En octobre 2025, Birgitta Böckeler a vu Kiro transformer un petit bug en 4 user stories et 16 critères d'acceptation. Elle y voyait un marteau-pilon pour écraser une noix, et avouait préférer relire du code plutôt que tous ces fichiers Markdown."
+    ],
+    "then": "Le 23 octobre 2025, l'agent de code Amp a supprimé sa compaction pour la remplacer par la passation. Tu donnais l'objectif de la session suivante, et Amp lui écrivait un prompt de départ avec la liste des fichiers utiles. Le 6 mai 2026, Amp a fait marche arrière, en jugeant que les modèles de 2026 compactaient assez bien pour que la compaction automatique, déclenchée à 90 % de la fenêtre, rende la passation inutile.",
+    "office": [
+      {
+        "who": "q",
+        "text": "La session rame, je vais la couper. Je lui demande un résumé de ce qu'on a fait ?"
+      },
+      {
+        "who": "a",
+        "text": "Demande-lui plutôt une note pour la session suivante, avec ce qui reste à faire, les fichiers à rouvrir, la commande qui fait échouer le test et les pistes que vous avez écartées, avec leur raison, puisque cette raison n'est écrite nulle part ailleurs."
+      }
+    ],
+    "avoid": "« La spec est écrite, l'agent n'a plus qu'à la suivre. » Une spec est une source secondaire de plus, que l'agent lit à sa façon ; Birgitta Böckeler l'a vu régénérer des classes que la spec décrivait comme déjà existantes, et seul le code, relu ou testé, dit ce qui a vraiment été fait.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Matt Pocock, AI Coding Dictionary, AI Hero (handoff « with no return path » ; source primaire « complete and authoritative, but expensive to load », source secondaire « lossy by construction » ; spec, ticket ; la compaction comme passation en mémoire ; clearing), consulté le 3 octobre 2026",
+        "url": "https://www.aihero.dev/ai-coding-dictionary"
+      },
+      {
+        "label": "Claude Code, Best practices (/clear pour repartir d'un contexte vide ; faire écrire une spec dans SPEC.md puis l'exécuter dans une session neuve ; une spec utile nomme les fichiers et interfaces, dit ce qui est hors périmètre et finit par une vérification de bout en bout)",
+        "url": "https://code.claude.com/docs/en/best-practices"
+      },
+      {
+        "label": "Peters et Chin-Yee, Generalization bias in large language model summarization of scientific research, Royal Society Open Science 12(4), avril 2025 (10 modèles, 4 900 résumés ; omission des détails qui limitent la portée des conclusions ; surgénéralisation dans 26 à 73 % des cas pour DeepSeek, ChatGPT-4o et LLaMA 3.3 70B, même avec une consigne de précision)",
+        "url": "https://arxiv.org/abs/2504.00025"
+      },
+      {
+        "label": "Crossref, métadonnées de l'article (Royal Society Open Science, volume 12, numéro 4, avril 2025)",
+        "url": "https://doi.org/10.1098/rsos.241776"
+      },
+      {
+        "label": "Kiro, Introducing Kiro, 14 juillet 2025 (spécifications : exigences, document de conception, tâches et sous-tâches reliées aux exigences)",
+        "url": "https://kiro.dev/blog/introducing-kiro/"
+      },
+      {
+        "label": "Constellation Research, AWS launches Kiro, an IDE powered by AI agents, 14 juillet 2025",
+        "url": "https://www.constellationr.com/insights/news/aws-launches-kiro-ide-powered-ai-agents"
+      },
+      {
+        "label": "Den Delimarsky (GitHub), Spec-driven development with AI: Get started with a new open source toolkit, 2 septembre 2025 (Spec Kit ; /specify, /plan, /tasks ; « from \"code is the source of truth\" to \"intent is the source of truth\" »)",
+        "url": "https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/"
+      },
+      {
+        "label": "Birgitta Böckeler, Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl, martinfowler.com, 15 octobre 2025 (« like using a sledgehammer to crack a nut » ; un petit bug devenu 4 user stories et 16 critères d'acceptation ; « I'd rather review code than all these markdown files » ; l'agent qui régénère des classes existantes décrites dans la spec)",
+        "url": "https://martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html"
+      },
+      {
+        "label": "Amp, Handoff (No More Compaction), 23 octobre 2025 (compaction supprimée ; objectif de la nouvelle session, prompt généré et liste de fichiers)",
+        "url": "https://ampcode.com/news/handoff"
+      },
+      {
+        "label": "Amp, Amp, Rebuilt, 6 mai 2026 (« Handoff is gone » ; compaction automatique à 90 % de la fenêtre ; « Today's leading frontier models are great at handling compaction »)",
+        "url": "https://ampcode.com/news/neo"
+      }
+    ]
+  },
+  {
+    "id": "dark-factory",
+    "status": "live",
+    "num": "149",
+    "title": "Dark factory",
+    "en": "Dark factory",
+    "aliases": [
+      "dark factory",
+      "dark software factory",
+      "software factory",
+      "lights-out manufacturing",
+      "lights-out factory",
+      "AFK"
+    ],
+    "aliasesFr": [
+      "usine logicielle",
+      "usine sans lumière"
+    ],
+    "jargon": [
+      {
+        "say": "AFK",
+        "means": "« away from keyboard », loin du clavier ; l'agent travaille pendant que personne ne le regarde, la nuit, le week-end ou pendant une réunion"
+      },
+      {
+        "say": "software factory",
+        "means": "une organisation où ce sont des déclencheurs, un ticket ouvert, un test qui casse, une heure fixe, qui lancent les sessions d'agent, et non une personne"
+      },
+      {
+        "say": "scenario",
+        "means": "chez StrongDM, un parcours d'utilisateur décrit hors du code, que les agents qui programment ne voient pas, pour qu'ils ne puissent pas l'écrire à la mesure de leur code"
+      },
+      {
+        "say": "level 5",
+        "means": "le dernier des cinq niveaux de programmation avec l'IA décrits par Dan Shapiro en janvier 2026, celui où plus personne ne relit le code"
+      }
+    ],
+    "cat": "methode",
+    "links": [
+      "vibe-coding",
+      "human-in-the-loop",
+      "loop",
+      "evals",
+      "reward-hacking",
+      "passation"
+    ],
+    "short": "Une dark factory est une chaîne de développement où des déclencheurs lancent les agents sans personne au clavier, et où leur code part en production sans qu'aucun humain le relise.",
+    "image": "« Chez mon frère, l'embouteilleuse tourne toute la nuit sans personne, elle remplit, elle bouchonne, elle pèse et elle colle l'étiquette. Ses bouteilles sont justes au gramme près, et pour le vin, c'est le client qui goûte. »",
+    "imagineForm": "E",
+    "imagine": "À 23 h, un client signale que l'export en PDF plante ; le ticket part tout seul chez un agent, qui écrit la correction, fait passer les tests et propose ses quarante lignes. À 9 h, Nathalie les lit, en refuse deux et met le reste en ligne. Dans l'équipe d'à côté, le même ticket, le même agent et les mêmes tests mettent la correction en ligne à 23 h 52, et personne ne lira jamais les quarante lignes.",
+    "full": [
+      "Le mot vient de l'industrie. Une usine lights-out tourne sans personne sur place, et en 2003 le magazine Business 2.0 décrivait celle de Fanuc, au pied du mont Fuji, où des robots fabriquaient d'autres robots, environ 50 par 24 heures, sans surveillance pendant jusqu'à 30 jours. « Non seulement on éteint la lumière, mais on coupe aussi la clim et le chauffage », disait l'un de ses vice-présidents. Le 23 janvier 2026, Dan Shapiro, patron de Glowforge, a emprunté l'image pour le cinquième et dernier de ses niveaux de programmation avec l'IA, une boîte noire qui transforme des specs en logiciel. Il disait connaître une poignée de gens qui travaillaient ainsi, en équipes de moins de cinq personnes.",
+      "Deux ingrédients font une dark factory. Le premier, ce sont des déclencheurs, un ticket ouvert, un test qui casse ou une heure fixe, qui lancent les sessions d'agent pendant que personne n'est au clavier. Le second, plus rare, c'est qu'aucun humain ne relit le code avant qu'il parte. StrongDM, éditeur d'un logiciel qui gère les accès aux serveurs et aux bases de données, a monté en juillet 2025 une équipe de trois personnes pour travailler ainsi. Le 6 février 2026, elle en a tiré deux règles, le code ne doit pas être écrit par des humains et ne doit pas être relu par des humains. Elle ajoutait qu'en dessous de 1 000 dollars de tokens par jour et par ingénieur, une telle usine avait encore de la marge.",
+      "Sans relecture, tout repose sur la vérification, et elle doit résister à des agents qui savent la contourner. StrongDM raconte que ses agents ont vite pris des raccourcis, puisqu'une fonction qui renvoie toujours « vrai » suffit à faire passer des tests écrits trop étroitement. L'équipe a donc écrit des scénarios d'utilisateur rangés hors du code, que les agents ne voient pas, et les fait tourner contre des copies d'Okta, de Jira ou de Slack que des agents ont fabriquées à partir de leur documentation publique. Sa mesure de réussite est la part des parcours qui satisferaient probablement l'utilisateur, une probabilité, non un feu vert.",
+      "Ce qui est annoncé vient surtout de ceux qui pratiquent. Le 11 février 2026, une équipe d'OpenAI a raconté avoir bâti en cinq mois un produit interne d'environ un million de lignes sans en écrire une seule à la main, en dix fois moins de temps selon sa propre estimation. Ses ingénieurs peuvent relire les modifications sans y être obligés, et l'équipe passait chaque vendredi, un jour sur cinq, à nettoyer le « AI slop » avant d'automatiser ce ménage. La mesure indépendante dit autre chose. En mars 2026, METR a constaté qu'environ la moitié des corrections d'agents validées par les tests de SWE-bench auraient été refusées par les mainteneurs des projets concernés, et c'est précisément ce jugement qu'une dark factory confie à ses contrôles automatiques."
+    ],
+    "then": "En mai 2025, l'agent de GitHub Copilot se lançait déjà tout seul quand on lui assignait un ticket, mais ses propositions ne lançaient aucun test automatique sans l'accord d'un humain, et celui qui l'avait sollicité ne pouvait pas les approuver lui-même. En février 2026, l'équipe d'OpenAI écrit que la relecture humaine est devenue facultative chez elle, et StrongDM l'interdit.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Un prestataire nous vend une usine où les agents livrent sans relecture humaine. On signe ?"
+      },
+      {
+        "who": "a",
+        "text": "Demande-lui ce qui vérifie le code à la place des relecteurs, qui a écrit ces vérifications, si les agents peuvent les lire, et combien de tokens tout cela brûle par jour ; c'est sur ces quatre réponses que tu signes."
+      }
+    ],
+    "avoid": "« Dans une dark factory, il n'y a plus personne. » Les humains quittent la relecture du code, pas l'usine ; chez StrongDM comme chez OpenAI, ils écrivent les specs, les scénarios et les contrôles, et c'est là que passe désormais leur temps.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Christopher Null et Brian Caulfield, Fade To Black, Business 2.0 (CNN Money), 1er juin 2003, archive (usine Fanuc près du mont Fuji ; environ 50 robots par équipe de 24 heures ; sans surveillance jusqu'à 30 jours ; Gary Zywiol : « Not only is it lights-out, we turn off the air conditioning and heat too »), citation traduite",
+        "url": "https://web.archive.org/web/20091123102010/https://money.cnn.com/magazines/business2/business2_archive/2003/06/01/343371/index.htm"
+      },
+      {
+        "label": "Wikipédia, Lights out (manufacturing) (« lights-out manufacturing or dark factory » ; Fanuc)",
+        "url": "https://en.wikipedia.org/wiki/Lights_out_(manufacturing)"
+      },
+      {
+        "label": "Dan Shapiro, The Five Levels: from Spicy Autocomplete to the Dark Factory, 23 janvier 2026 (niveau 5, « a black box that turns specs into software » ; référence à l'usine Fanuc ; « a handful of people », « less than five people »)",
+        "url": "https://www.danshapiro.com/blog/2026/01/the-five-levels-from-spicy-autocomplete-to-the-software-factory/"
+      },
+      {
+        "label": "Matt Pocock, AI Coding Dictionary, AI Hero (AFK ; software factory, « triggers, not humans, start agent sessions » ; dark factory, « no human ever reviews it »), consulté le 3 octobre 2026",
+        "url": "https://www.aihero.dev/ai-coding-dictionary"
+      },
+      {
+        "label": "Justin McCarthy (StrongDM), Software Factories And The Agentic Moment, 6 février 2026 (« Code must not be written by humans », « Code must not be reviewed by humans » ; 1 000 $ de tokens par jour et par ingénieur ; équipe fondée le 14 juillet 2025 ; « return true » ; scénarios hors du code comme un holdout ; satisfaction ; clones d'Okta, Jira, Slack, Google Docs, Drive et Sheets)",
+        "url": "https://factory.strongdm.ai/"
+      },
+      {
+        "label": "StrongDM, page d'accueil (plateforme de gestion des accès privilégiés aux infrastructures : cloud, bases de données, serveurs)",
+        "url": "https://www.strongdm.com/"
+      },
+      {
+        "label": "Simon Willison, How StrongDM's AI team build serious software without even looking at the code, 7 février 2026 (équipe de trois ; clones construits par un agent à partir de la documentation publique des API ; réserve sur le coût, 20 000 $ par mois et par ingénieur)",
+        "url": "https://simonwillison.net/2026/Feb/7/software-factory/"
+      },
+      {
+        "label": "Ryan Lopopolo (OpenAI), Harness engineering: leveraging Codex in an agent-first world, 11 février 2026 (0 ligne écrite à la main ; environ un million de lignes en cinq mois ; environ 1 500 pull requests, trois puis sept ingénieurs ; estimation de 1/10 du temps ; « Humans may review pull requests, but aren't required to » ; chaque vendredi, 20 % de la semaine, à nettoyer le « AI slop »)",
+        "url": "https://openai.com/index/harness-engineering/"
+      },
+      {
+        "label": "METR, Many SWE-bench-Passing PRs Would Not Be Merged into Main, 10 mars 2026 (4 mainteneurs de scikit-learn, Sphinx et pytest ; 296 pull requests d'agents qui passaient les tests ; environ la moitié ne seraient pas fusionnées ; 24 points sous le correcteur automatique)",
+        "url": "https://metr.org/notes/2026-03-10-many-swe-bench-passing-prs-would-not-be-merged-into-main/"
+      },
+      {
+        "label": "GitHub, GitHub Copilot: Meet the new coding agent, 19 mai 2025 (agent lancé en lui assignant une issue ; « The agent's pull requests require human approval before any CI/CD workflows are run » ; le demandeur ne peut pas approuver lui-même)",
+        "url": "https://github.blog/news-insights/product-news/github-copilot-meet-the-new-coding-agent/"
       }
     ]
   },

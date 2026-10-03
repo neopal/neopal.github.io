@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 304" role="img" aria-labelledby="non-determinisme-t">
+<title id="non-determinisme-t">La même requête, à température 0, calculée seule ou dans un lot avec d'autres : l'ordre des calculs change les arrondis, deux mots presque à égalité échangent leur place, et les deux réponses divergent dès ce mot.</title>
+<rect class="bx" x="80" y="4" width="200" height="30" rx="4"/>
+<text class="m" x="180" y="24" text-anchor="middle">« Le chat dort sur le »</text>
+<text class="m mu" x="180" y="52" text-anchor="middle">même requête, température 0</text>
+<path class="lm" d="M150 60 L95 82"/><path class="lm" d="M95 76 l-6 7 l9 1"/>
+<path class="lm" d="M210 60 L265 82"/><path class="lm" d="M262 84 l9 -1 l-6 -7"/>
+<text class="m d" x="90" y="102" text-anchor="middle">calculée seule</text>
+<text class="m d" x="270" y="102" text-anchor="middle">dans un lot</text>
+<text class="m" x="4" y="129">canapé</text>
+<rect class="fa" x="62" y="118" width="108" height="14" rx="2"/>
+<text class="m" x="4" y="151">lit</text>
+<rect class="fa" x="62" y="140" width="104" height="14" rx="2" opacity="0.35"/>
+<text class="m" x="190" y="129">canapé</text>
+<rect class="fa" x="248" y="118" width="104" height="14" rx="2" opacity="0.35"/>
+<text class="m" x="190" y="151">lit</text>
+<rect class="fa" x="248" y="140" width="108" height="14" rx="2"/>
+<path class="lm" d="M90 164 v20"/><path class="lm" d="M85 178 l5 6 l5 -6"/>
+<path class="lm" d="M270 164 v20"/><path class="lm" d="M265 178 l5 6 l5 -6"/>
+<rect class="bxa" x="4" y="192" width="172" height="30" rx="4"/>
+<text class="m" x="90" y="212" text-anchor="middle">canapé, en boule</text>
+<rect class="bxa" x="184" y="192" width="172" height="30" rx="4"/>
+<text class="m" x="270" y="212" text-anchor="middle">lit de ses maîtres</text>
+<text class="i mu" x="2" y="254">Le lot change l'ordre des calculs, et un</text>
+<text class="i mu" x="2" y="274">arrondi suffit à départager deux mots</text>
+<text class="i mu" x="2" y="294">presque à égalité.</text>
+</svg>
