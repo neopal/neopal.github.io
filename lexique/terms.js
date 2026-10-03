@@ -2255,7 +2255,8 @@ window.DICO_TERMS = [
     "aliases": [
       "function calling",
       "tool calling",
-      "tools"
+      "tools",
+      "tool result"
     ],
     "aliasesFr": [
       "appel d'outil",
@@ -2433,10 +2434,12 @@ window.DICO_TERMS = [
     "aliases": [
       "skills",
       "Agent Skills",
-      "SKILL.md"
+      "SKILL.md",
+      "progressive disclosure"
     ],
     "aliasesFr": [
-      "compétence"
+      "compétence",
+      "divulgation progressive"
     ],
     "jargon": [
       {
@@ -4559,11 +4562,15 @@ window.DICO_TERMS = [
       "API pricing",
       "cost per token",
       "cost per request",
-      "prompt caching"
+      "prompt caching",
+      "input tokens",
+      "output tokens"
     ],
     "aliasesFr": [
       "prix d'une requête",
-      "facture API"
+      "facture API",
+      "tokens d'entrée",
+      "tokens de sortie"
     ],
     "jargon": [
       {
@@ -7800,7 +7807,9 @@ window.DICO_TERMS = [
       "best-of-N",
       "self-consistency",
       "parallel thinking",
-      "overthinking"
+      "overthinking",
+      "reasoning effort",
+      "effort level"
     ],
     "aliasesFr": [
       "calcul au moment de répondre",
@@ -8869,7 +8878,9 @@ window.DICO_TERMS = [
       "least privilege",
       "allowlist",
       "permission modes",
-      "excessive agency"
+      "excessive agency",
+      "agent mode",
+      "permission request"
     ],
     "aliasesFr": [
       "bac à sable",
