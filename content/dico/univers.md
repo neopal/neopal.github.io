@@ -39,8 +39,28 @@ Toutes les fiches et tous les shorts se passent dans le même studio, avec les m
 
 ## Règles d'usage
 
-1. Une image par fiche, tirée de ce casting. Pas de métaphore filée sur trois paragraphes.
+1. Une image par fiche, selon la règle « L'image d'une fiche » ci-dessous (le casting du studio ne sert plus qu'aux shorts). Pas de métaphore filée sur trois paragraphes.
 2. Chaque fiche a son « Imagine » : un moment qui fait sentir le concept ou sa limite sans l'expliquer. C'est la signature du lexique, on simplifie sans mentir et on fait sourire, mais la forme change d'une fiche à l'autre (voir « Les formes de l'Imagine ») pour que la formule ne se voie pas.
+
+## L'image d'une fiche (règle révisée, PA, 2026-10-03)
+
+Le studio n'est plus le décor imposé de « L'image » : trop de termes n'y ont pas d'équivalent, et 14 fiches devaient avouer que « l'image triche sur un point ». Pour chaque notion, la métaphore vient de la vie courante (cuisine, bureau, bistrot, famille, commerce, métro, repas du dimanche) ou des arts (cinéma, musique, peinture, théâtre, BD, série). Le studio reste l'habillage visuel des shorts.
+
+**Objectif** : faire comprendre la notion en une image, et faire sourire. L'humour est le véhicule, la justesse est le but : une image drôle mais fausse est un échec.
+
+1. **Le mécanisme avant l'image.** Nommer d'abord la propriété clé (« les paramètres ne bougent plus pendant l'utilisation », « on rejette à partir de la première erreur », « le coût explose avec la longueur »). L'image rend CETTE propriété, pas seulement le thème.
+2. **Test de cohérence.** Chaque élément de l'image correspond à un élément technique : quelqu'un qui n'a compris que l'image doit pouvoir deviner une propriété vraie de la notion. Si l'image a besoin d'un rectificatif, on change d'image.
+3. **Un des quatre registres**, en alternant selon ce qui est le plus juste et le plus drôle :
+   - **Chronique** (ton Society) : observé, juste, légèrement ironique ; un fait ou un portrait précis, une chute sèche.
+   - **Absurde du quotidien** (ton Fabcaro) : bureau, métro, repas du dimanche, soirée à deux, la petite de 4 ans ; une situation banale qui dérape avec un sérieux total ; prénoms datés (Thierry de la compta, Patrick, Valérie, Gérard).
+   - **Sagesse naïve** (la grand-mère) : un savoir empirique jamais formalisé, tendre, dont l'angle mort fait la chute.
+   - **Comptoir** : une seule réplique de bistrot entre guillemets, lucide et un peu cynique ; le patron sait de quoi il parle.
+
+**Écriture** : 1 à 3 phrases ; concret (prénom, chiffre, lieu, objet) ; la chute EST le point technique, sans explication après ; jamais « c'est comme », jamais de jeu de mots sur le terme ; pas de cliché IA (cerveau, robot, bibliothèque géante) ; les règles d'écriture et anti-slop ci-dessus s'appliquent. Les prénoms varient d'une fiche à l'autre (pas plus de deux fiches par prénom).
+
+**Auto-contrôle avant de rendre** : la propriété technique est-elle exacte ? L'image la rend-elle sans rectificatif ? Fait-elle sourire à la première lecture ? Si une réponse est non, on réécrit.
+
+L'« Imagine » garde ses cinq formes. Quand l'Imagine d'une fiche fait déjà le travail de l'image, l'image prend un autre angle de la notion plutôt que de répéter la même scène.
 
 ## Les formes de l'Imagine
 

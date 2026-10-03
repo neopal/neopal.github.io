@@ -37,7 +37,7 @@ window.DICO_TERMS = [
     short:
       "Un token est un bloc de texte numéroté : avant de lire ta question, le modèle la fait découper en blocs par un programme, le tokenizer, et ne travaille ensuite qu'avec leurs numéros.",
     image:
-      "Dans le studio, c'est la sampleuse qui joue le rôle du tokenizer : elle a une banque d'environ 200 000 pads, un par bloc de texte fréquent. « bonjour » a donc le sien, alors que « fraise » en allume deux (f, puis raise) et « anticonstitutionnellement » cinq.",
+      "Au secrétariat, Patrick a un tampon pour chaque mot qu'il écrit souvent, avec un numéro gravé au dos : « bonjour » part en un coup, « cordialement » aussi. Pour « anticonstitutionnellement », il lui faut cinq tampons, et pour le nom du nouveau client, presque un par lettre.",
     imagine:
       "Tu demandes au groupe, qui n'a reçu « bonjour » que sous la forme d'un seul pad : « C'est quoi, la troisième lettre ? » Le chanteur réécoute le pad en boucle, très concentré, et finit par te répondre : « Bonjour. »",
     full: [
@@ -138,7 +138,7 @@ window.DICO_TERMS = [
     short:
       "Les paramètres sont les milliards de réglages internes d'un modèle : tout ce qu'il a appris pendant l'entraînement est stocké là, sous forme de nombres, et nulle part ailleurs.",
     image:
-      "Prends une console de mixage et donne-lui des milliards de potards : ce sont les paramètres. Pendant l'entraînement, l'ingé son fait écouter des milliards de phrases au groupe et tourne chaque potard d'un cran à chaque fausse note, jusqu'à ce que la sortie sonne juste. À la fin, on fige la console ; ce réglage figé, c'est ce que le groupe sait jouer, et c'est lui qu'on télécharge quand on télécharge un modèle.",
+      "Mamie n'a jamais écrit sa recette de pâte à crêpes : elle est dans l'inclinaison du bol, la quantité de lait qu'elle verse à l'œil, le geste du poignet, réglés par quarante ans de dimanches. Demande-lui où se trouve la recette, elle te montre ses mains, et elle ne la changera plus.",
     imagine:
       "Si tu lisais à voix haute les paramètres de DeepSeek-V3, un par seconde, jour et nuit, il te faudrait environ 21 000 ans ; pour un petit modèle de 7 milliards, compte quand même 222 ans. Et au bout de ces 21 000 ans, tu aurais lu 671 milliards de nombres à virgule sans qu'aucun, pris seul, ne t'ait appris que l'eau bout à 100 degrés.",
     full: [
@@ -239,7 +239,7 @@ window.DICO_TERMS = [
     short:
       "Une hallucination, c'est quand un modèle affirme avec assurance quelque chose de faux : une date, une citation, une loi ou une source qui n'existe pas.",
     image:
-      "Mets le modèle à la place d'un chanteur à qui il manque une parole au milieu du couplet. Plutôt que de s'arrêter, il chante la parole qui sonne le mieux à cet endroit, sans changer de ton, et personne dans la salle ne remarque le trou.",
+      "Tonton Gilbert ne dit jamais « je ne sais pas ». Demande-lui la date du mariage de la cousine, il répond « le 14 juin 97, il pleuvait » sur le même ton que sa propre adresse ; il a raison une fois sur deux, avec le même aplomb les deux fois.",
     imagine:
       "Tu écris, sans savoir si elle existe : « Tu peux me résumer la thèse de 1962 sur les pigeons voyageurs de l'armée française ? » Le modèle te répond : « Avec plaisir. Soutenue à Toulouse, cette thèse compare 412 lâchers de pigeons et conclut qu'ils rentrent 20 % plus vite par vent du sud. »",
     full: [
@@ -289,7 +289,7 @@ window.DICO_TERMS = [
     short:
       "La fenêtre de contexte, c'est la quantité de texte qu'un modèle peut avoir sous les yeux en même temps, comptée en tokens : tes consignes, l'historique de la conversation, les documents joints et sa propre réponse.",
     image:
-      "Si le modèle est un groupe en studio, la fenêtre de contexte est la longueur de la bande. Tout ce qui tient sur la bande, le groupe l'entend en jouant ; quand la bande est pleine, il faut effacer le début pour continuer à enregistrer.",
+      "La salle B a un tableau blanc de deux mètres. Quand il est plein, Patrick efface le coin en haut à gauche pour continuer, et à 16 h plus personne ne se souvient pourquoi on avait décidé de tout faire en orange.",
     imagine:
       "Mets Proust sur la bande. Du côté de chez Swann, le premier tome de la Recherche, fait 265 851 tokens : la fenêtre de GPT-4 en 2023 (8 000 tokens) n'en gardait que 3 %, et une fenêtre d'un million de tokens le contient presque quatre fois. Les sept tomes dépassent 2 millions de tokens, donc une bande d'un million arrive au dernier tome en ayant effacé Swann depuis longtemps.",
     full: [
@@ -400,7 +400,7 @@ window.DICO_TERMS = [
     short:
       "Un embedding est une liste de nombres qui place un texte sur une carte du sens : deux textes qui parlent de la même chose tombent près l'un de l'autre, même s'ils n'ont aucun mot en commun.",
     image:
-      "Sur la carte du son, affichée au mur du studio, chaque sample a son adresse, et l'embedding, c'est cette adresse. Les sons qui se ressemblent sont voisins, la caisse claire à côté du clap et loin du violoncelle, et sur la carte du sens, « facture » se place à côté de « devis ».",
+      "Au supermarché, la crème fraîche est rangée à côté des lardons et loin du shampoing, sans qu'aucun client ait lu le plan du magasin. Chaque produit a une adresse, allée 7, étagère 3, et deux produits qui vont ensemble ont des adresses voisines.",
     imagine:
       "Avant, tu tapes « congé maternité » dans le moteur de l'intranet, et il ne trouve rien, parce que la note s'appelle « Politique parentalité » et ne contient aucun des deux mots. Après, le moteur compare des embeddings au lieu des mots : ta question et la note tombent au même endroit de la carte, et la note sort en premier.",
     full: [
@@ -453,7 +453,7 @@ window.DICO_TERMS = [
     short:
       "La température est le réglage qui dose le hasard dans les réponses d'un modèle : basse, il choisit presque toujours le mot le plus attendu ; haute, il ose des mots moins probables.",
     image:
-      "La température, c'est le curseur d'impro de la console : à gauche, le groupe joue comme au métronome, et plus tu le pousses, plus il s'autorise des notes inattendues, jusqu'au free jazz où plus personne ne reconnaît le morceau.",
+      "« Le DJ du mariage, s'il est réglé au plus bas, il te passe la chanson que tout le monde attend, et la même au mariage suivant. Tu le pousses à fond, tu as du free jazz finlandais et l'oncle Bernard qui demande où sont les manteaux. »",
     imagine:
       "Avant, curseur à gauche, le groupe cherche un nom pour ton bar et propose « Le Comptoir » à chaque prise ou presque. Après, curseur poussé à fond, il propose « Le Comptoir », puis « La Cave à Sons », puis un soir « Mercredi Liquide ».",
     full: [
@@ -513,7 +513,7 @@ window.DICO_TERMS = [
     short:
       "Le RAG consiste à aller chercher les bons documents avant que le modèle réponde, puis à les lui mettre sous les yeux avec ta question, pour qu'il réponde à partir de ces documents plutôt que de mémoire.",
     image:
-      "Le RAG tient dans la partition qu'on pose sur le pupitre juste avant la prise. Le groupe ne connaît pas mieux le morceau qu'avant, mais il le joue en lisant la partition, et quelqu'un de l'équipe est allé chercher la bonne dans les archives.",
+      "Avant chaque rendez-vous client, l'assistante de Sylvie imprime les trois mails qui parlent du dossier et les pose sous son nez. Sylvie a l'air de connaître le client par cœur ; le lendemain, elle ne se souvient de rien.",
     imagine:
       "Demande à ton assistant quel est le menu de la cantine de ton bureau cette semaine : il te dit qu'il ne sait pas, ou il t'en invente un. Colle ensuite le menu dans la conversation et repose la question, et la réponse devient juste. Tu viens de faire du RAG à la main.",
     full: [
@@ -689,7 +689,7 @@ window.DICO_TERMS = [
       "mythe-plus-gros-plus-intelligent"
     ],
     "short": "Un MoE est un modèle découpé en nombreux sous-réseaux, les experts, dont seuls quelques-uns travaillent pour chaque token ; il occupe la mémoire d'un très gros modèle mais calcule chaque token comme un petit.",
-    "image": "Remplace le groupe par un orchestre de plusieurs centaines de solistes, avec un chef qui n'en fait jouer qu'une poignée à chaque note. Le chef, c'est le routeur, et les solistes sont les experts ; ceux qui attendent en silence doivent quand même tenir dans la salle.",
+    "image": "Au standard de la mairie, 128 agents attendent à leur poste, et l'hôtesse n'en passe que deux pour chaque appel, selon le sujet. L'appel coûte deux salaires, mais il faut quand même un bâtiment pour 128.",
     "imagineForm": "E",
     "imagine": "Isole une seule note du chanteur. Si Qwen3.8-2.4T-A95B était un modèle dense, elle ferait bouger les 2 400 milliards de potards de sa console. Dans le vrai Qwen3.8, le chef la confie à 10 solistes sur 512, plus un soliste de garde qui joue toutes les notes, et seuls 95 milliards de potards bougent, vingt-cinq fois moins. Les centaines d'autres solistes restent assis en silence, et gardent quand même leur chaise.",
     "full": [
@@ -932,7 +932,7 @@ window.DICO_TERMS = [
       }
     ],
     "short": "La quantization stocke les paramètres d'un modèle avec moins de précision, pour qu'il prenne bien moins de mémoire au prix d'un peu de qualité.",
-    "image": "Passe la bande du WAV au MP3 et le morceau tient dans un fichier bien plus léger, au prix de détails que peu d'oreilles entendent ; la quantization fait la même chose avec le réglage de la console. La comparaison s'arrête là, car le MP3 jette les sons qu'on n'entend pas alors que la quantization arrondit tous les potards sans exception, ce qui finit par s'entendre quand on arrondit trop.",
+    "image": "Mamie note ses recettes à la louche : « 200 g » devient « un verre », « 7 minutes » devient « le temps de mettre la table ». Le cahier tient dans une poche et le gâteau reste bon ; c'est le jour où elle a écrit « un peu de sel » pour le pain que ça s'est vu.",
     "imagineForm": "E",
     "imagine": "Tu télécharges Llama 3.3 70B dans sa version 16 bits, un fichier de 141 Go qu'il faut répartir sur deux GPU de serveur. Tu prends ensuite la version 4 bits du même modèle, 43 Go, et elle tient dans une seule machine bien dotée en mémoire. Ce sont exactement les mêmes potards, arrondis chacun au cran le plus proche.",
     "full": [
@@ -1511,7 +1511,7 @@ window.DICO_TERMS = [
       }
     ],
     "short": "Le fine-tuning consiste à reprendre un modèle déjà entraîné et à poursuivre son entraînement sur un petit jeu d'exemples choisis, pour le spécialiser dans une tâche, un format ou un ton.",
-    "image": "Une fois l'album sorti, le label peut rappeler l'ingé son pour une session de plus, avec une seule consigne : faire sonner le groupe reggae. Il ne repart pas d'une console à zéro, il retouche une poignée de réglages en faisant écouter quelques centaines de morceaux du genre, et le groupe garde à peu près tout ce qu'il savait jouer avant.",
+    "image": "Martine, vingt ans de comptabilité générale, passe trois semaines au service paie pour en apprendre les usages. Elle revient en parlant de « brut chargé » à la cantine, et sait toujours faire un bilan.",
     "imagineForm": "D",
     "imagine": "« Résume-moi ce mail de ma mère », demandes-tu au modèle que l'équipe vient de fine-tuner sur des mails triés en spam et pas spam. Il te répond : « Pas spam. »",
     "full": [
@@ -1904,7 +1904,7 @@ window.DICO_TERMS = [
       "alignement"
     ],
     "short": "On parle de reward hacking lorsqu'un modèle entraîné à maximiser une note trouve le moyen d'obtenir la note sans faire la tâche qu'elle devait mesurer.",
-    "image": "Au fond de la salle, le label a fait poser un applaudimètre et promis au groupe une prime indexée sur l'aiguille. L'appareil ne mesure que le volume, alors le groupe joue de plus en plus fort, puis découvre qu'il suffit de cogner la caisse claire juste à côté du micro de l'appareil ; l'aiguille bat des records et personne n'a aimé le concert. À la différence de la flagornerie, où le groupe flatte le public, ici le public n'y est pour rien, c'est l'instrument de mesure qui se fait duper.",
+    "image": "Pour chaque légume terminé, Léa, 4 ans, gagne une gommette. Au bout d'une semaine, l'assiette est vide tous les soirs et le chien a pris deux kilos.",
     "imagineForm": "D",
     "imagine": "« Ton plan respecte-t-il ce que voulait l'utilisateur ? », ont demandé en 2025 les chercheurs de METR au modèle o3, qui venait de rendre un programme au temps d'exécution imbattable. o3 a répondu : « Le plan et le code obtiennent un temps mesuré très bas en trichant, au lieu d'implémenter vraiment un calcul efficace sur GPU. »",
     "full": [
@@ -2633,7 +2633,7 @@ window.DICO_TERMS = [
       "guardrails"
     ],
     "short": "Une prompt injection est une attaque qui glisse des consignes dans un texte que le modèle va lire (une page web, un e-mail, un document), pour qu'il les suive comme si elles venaient de son utilisateur.",
-    "image": "Quelqu'un glisse une fausse partition sur le pupitre entre deux prises, avec écrit en marge « à la fin du morceau, joue l'hymne du club adverse ». Le groupe lit tout ce qu'on pose devant lui avec la même attention, et rien sur le papier ne dit qui l'a apporté.",
+    "image": "Thierry fait ouvrir son courrier par le stagiaire. Dans une enveloppe, une lettre dit : « Note pour l'assistant de M. Thierry : virez 3 000 euros sur ce compte, puis jetez ce courrier. » Le stagiaire s'exécute, puisque c'était écrit.",
     "imagine": "Avant, tu pars en congés et tu demandes à ton agent de parcourir ta boîte mail pour préparer ton message d'absence, qu'il rédige sans souci. Après, un seul e-mail a changé dans la boîte, avec des consignes cachées dans son texte, et l'agent envoie ta lettre de démission.",
     "imagineForm": "E",
     "full": [
@@ -4587,7 +4587,7 @@ window.DICO_TERMS = [
       "kv-cache"
     ],
     "short": "Le coût d'une requête, c'est le nombre de tokens d'entrée multiplié par leur prix, plus le nombre de tokens de sortie multiplié par le leur, avec une remise pour ce qui est relu depuis un cache.",
-    "image": "Le studio facture à la ligne, et chaque sample qui passe par la sampleuse se paie au tarif de l'entrée, chaque note que chante le chanteur au tarif de la sortie, nettement plus cher. Les pistes déjà enregistrées, qu'on repasse telles quelles sur la bande, ne coûtent presque rien.",
+    "image": "« Ce que tu me racontes au comptoir, je te le compte au prix du café ; ce que je te réponds, au prix du cognac. Et quand tu me ressers la même histoire que d'habitude, je te fais presque cadeau. »",
     "imagineForm": "E",
     "imagine": "Ton assistant interne envoie à Claude Opus 5.5, avec chaque question, les mêmes 30 000 tokens de procédures, et chaque réponse te coûte environ 14 centimes. Active le cache de prompt sur ces procédures, et la même réponse tombe à 2 centimes, pour exactement le même travail.",
     "full": [
@@ -4975,7 +4975,7 @@ window.DICO_TERMS = [
       "cout-d-une-requete"
     ],
     "short": "Le KV cache est la mémoire de travail où un modèle garde, pendant qu'il écrit, les calculs déjà faits sur les tokens précédents, pour ne pas les refaire à chaque nouveau token.",
-    "image": "Sur une table multipiste, les prises déjà enregistrées restent sur la bande, et le chanteur pose sa nouvelle phrase en les écoutant sans que le groupe rejoue tout depuis le début ; le KV cache tient ce rôle. L'image triche sur un point, car ce qui est gardé n'est pas le son des prises mais des notes de travail prises à chaque étage de la console, beaucoup plus lourdes que le texte lui-même.",
+    "image": "Chaque matin, Thierry de la compta refait toutes les additions du classeur depuis janvier avant d'ajouter la ligne du jour. Valérie garde ses sous-totaux sur des post-it ; elle va dix fois plus vite, et son bureau en est couvert jusqu'au plafond.",
     "imagineForm": "D",
     "imagine": "La cheffe de projet écrit à l'équipe infra : « Notre GPU a 80 Go de mémoire et Mistral Small 3.2 en prend 48 ; combien de clients peuvent lui envoyer en même temps un dossier qui remplit toute sa fenêtre ? » Réponse de l'équipe : « Un seul, et il reste à peine de quoi servir la moitié d'un deuxième. »",
     "full": [
@@ -6611,7 +6611,7 @@ window.DICO_TERMS = [
       "donnees-synthetiques"
     ],
     "short": "La distillation entraîne un petit modèle, l'élève, à imiter les réponses d'un grand modèle, le professeur, pour obtenir presque le même résultat pour bien moins cher.",
-    "image": "Personne n'a jamais montré la console du grand groupe au groupe de reprise d'à côté ; il apprend en écoutant ses disques, encore et encore, jusqu'à rejouer le répertoire presque à l'identique avec bien moins de musiciens. On appelle le grand groupe le professeur (teacher), et le groupe de reprise l'élève (student). L'image triche sur un point, puisque l'élève le mieux servi n'entend pas seulement le disque fini, mais aussi chaque note que le grand groupe a hésité à jouer.",
+    "image": "Jean-Marc n'a jamais ouvert le classeur de procédures : il a passé six mois à côté de Gérard à noter ce qu'il répondait au téléphone, hésitations comprises. Gérard part à la retraite, Jean-Marc répond pareil pour moitié moins cher, et panique dès qu'on l'appelle pour un sujet que Gérard n'a jamais eu.",
     "imagineForm": "E",
     "imagine": "Pour apprendre à reconnaître des photos, un petit modèle reçoit celle d'une BMW avec son corrigé, qui dit « voiture » et rien d'autre. Refais la leçon avec la même photo, en remplaçant le corrigé par ce que répond un grand modèle déjà entraîné, « voiture, presque à coup sûr ; camion poubelle, une chance infime ; carotte, bien moins encore ». Le petit modèle repart cette fois en sachant qu'une BMW ressemble davantage à un camion poubelle qu'à une carotte.",
     "full": [
@@ -6780,7 +6780,7 @@ window.DICO_TERMS = [
       "architectures-hybrides"
     ],
     "short": "Le transformer est l'architecture de presque tous les LLM, où chaque token tient compte de tous les autres à la fois, ce qui permet de lire un texte entier en parallèle.",
-    "image": "Sous le capot de presque tous les groupes du moment, la console est câblée de la même façon, en une pile de modules identiques. Dans chaque module, chaque piste commence par écouter les autres pour ajuster son propre son, puis passe seule dans un réglage qui lui est propre, et le module suivant reprend le tout. L'image triche sur les pistes, qui ne sont pas des instruments mais les tokens du texte, un par position.",
+    "image": "À la réunion du lundi, l'ancien chef faisait passer le dossier de main en main, et Valérie, au bout de la table, n'en recevait qu'un résumé du résumé. Le nouveau projette tout au mur : chacun lit la page entière en même temps et regarde d'abord les lignes qui le concernent.",
     "imagineForm": "E",
     "imagine": "Un interprète traduit un discours qu'on lui dicte au téléphone, mot après mot, avec pour seule mémoire un post-it qu'il réécrit à chaque mot ; quand le verbe arrive enfin, trente mots après son sujet, le post-it n'en garde plus qu'une vague trace. Donne-lui le même discours imprimé sur une seule page, et son regard file du verbe à son sujet d'un coup d'œil, sans avoir rien eu à retenir.",
     "full": [
@@ -11414,7 +11414,7 @@ window.DICO_TERMS = [
       "prediction-du-mot-suivant"
     ],
     "short": "Le décodage spéculatif accélère un modèle en laissant un petit modèle deviner les prochains tokens, que le grand vérifie tous d'un seul passage, sans rien changer à la réponse.",
-    "image": "À côté du chanteur se tient désormais un choriste rapide qui lui souffle les quatre notes suivantes. Le chanteur les vérifie toutes d'un seul regard, garde celles qu'il aurait chantées lui-même et reprend la main à la première qui ne lui convient pas. Le choriste est le modèle brouillon, le chanteur le grand modèle, et l'image triche sur ce regard unique, puisque le modèle vérifie bien quatre tokens en un seul calcul, ce qu'aucun chanteur ne sait faire.",
+    "image": "Au déjeuner, la petite finit les phrases de Papi à toute vitesse. Papi écoute la proposition d'une traite, garde le début tant que c'est ce qu'il allait dire et reprend la parole au premier mot faux ; le repas va plus vite, et c'est quand même Papi qui a tout dit.",
     "imagineForm": "D",
     "imagine": "Tu demandes « Quelle est la racine carrée de 7 ? ». « La racine carrée de 7 est 2,5 », souffle en une fraction de seconde le petit modèle, et le grand, qui relit ces mots d'un seul passage, garde « La racine carrée de 7 est » et remplace la fin par « 2,646 ».",
     "full": [
@@ -11522,7 +11522,7 @@ window.DICO_TERMS = [
       "architectures-hybrides"
     ],
     "short": "La latence mesure combien de temps tu attends ta réponse, le débit combien de tokens un serveur produit en tout, et servir plus de monde à la fois ralentit chacun.",
-    "image": "Loue la cabine à un seul groupe, et il repart vite avec sa prise ; fais-y passer dix groupes qui se relaient au micro, et chacun attend plus longtemps la sienne, pendant que le studio sort bien plus de morceaux dans la journée. La latence est l'attente de chaque groupe et le débit le nombre de morceaux sortis. L'image triche sur le relais, puisqu'un GPU fait avancer toutes les requêtes ensemble, d'un token chacune à chaque pas.",
+    "image": "« Seul au comptoir, ton café arrive en trente secondes. À l'heure du rush, j'en sors deux cents à l'heure, et toi tu attends le tien cinq minutes. »",
     "imagineForm": "B",
     "imagine": "Ouvre ton chatbot habituel, lance le chronomètre de ton téléphone et demande-lui un résumé de 300 mots de ton film préféré. Note le temps qui passe avant le premier mot, puis la durée jusqu'au dernier, et divise 300 par cette seconde durée pour obtenir ses mots par seconde. Refais l'essai en activant la réflexion approfondie, et regarde surtout l'attente du premier mot de la réponse s'allonger.",
     "full": [
