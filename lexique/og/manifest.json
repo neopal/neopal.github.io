@@ -117,6 +117,7 @@
   "post-entrainement": "b5d0937ed7f1e9d289baa6e2ebd734ba8e83165e0e26c9fea40e894dfeba2740",
   "pre-entrainement": "a033893a50b25a5ea1fab7036718313687034f84837710d063bc01cbafcf880f",
   "prediction-du-mot-suivant": "6663e1429ee3c3e1dc856b3d343ce90bb31cf11e675cd3aadafb1f1532254a22",
+  "prompt-caching": "c3a7435dd78f08875b785141e8aa183b149822f231cf58dd95fcef0c189b9488",
   "prompt-engineering": "66ea621a02ded9b860ca26a56ac72008854c5328b6fb70fd81f09d0c43c937ea",
   "prompt-injection": "70c62357489b7a46f58bfde6395b02e3f7580a7398c3c75595cbea75b5aeb75e",
   "quantization": "2d349784c40fdfb0835ca09a109fcc1f1524961c1f8342ee417541ea6b75f89d",
