@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 372" role="img" aria-labelledby="arxiv-t">
+<title id="arxiv-t">Un identifiant arXiv se lit comme une date : 1706.03762v7, c'est juin 2017, 3 762e article du mois, septième version. L'article est en ligne dès le lendemain du dépôt ; la relecture par des pairs vient plus tard, ailleurs, ou jamais.</title>
+<rect class="bxa" x="14" y="8" width="60" height="44" rx="4"/>
+<text class="m big" x="44" y="37" text-anchor="middle">17</text>
+<rect class="bxa" x="84" y="8" width="60" height="44" rx="4"/>
+<text class="m big" x="114" y="37" text-anchor="middle">06</text>
+<text class="m big" x="154" y="37" text-anchor="middle">.</text>
+<rect class="bxa" x="164" y="8" width="104" height="44" rx="4"/>
+<text class="m big" x="216" y="37" text-anchor="middle">03762</text>
+<rect class="bx" x="278" y="8" width="68" height="44" rx="4"/>
+<text class="m big" x="312" y="37" text-anchor="middle">v7</text>
+<text class="m ac" x="44" y="72" text-anchor="middle">2017</text>
+<text class="m ac" x="114" y="72" text-anchor="middle">juin</text>
+<text class="m ac" x="216" y="72" text-anchor="middle">3 762e</text>
+<text class="m mu" x="216" y="88" text-anchor="middle">du mois</text>
+<text class="m ac" x="312" y="72" text-anchor="middle">7e</text>
+<text class="m mu" x="312" y="88" text-anchor="middle">version</text>
+<rect class="bx" x="30" y="118" width="300" height="44" rx="4"/>
+<text class="m" x="180" y="136" text-anchor="middle">dépôt</text>
+<text class="m mu" x="180" y="154" text-anchor="middle">gratuit, auteur parrainé</text>
+<path class="ln" d="M180 162 V180"/>
+<rect class="bx" x="30" y="180" width="300" height="44" rx="4"/>
+<text class="m" x="180" y="198" text-anchor="middle">modération</text>
+<text class="m mu" x="180" y="216" text-anchor="middle">le sujet, pas les résultats</text>
+<path class="ln" d="M180 224 V242"/>
+<rect class="bxa" x="30" y="242" width="300" height="44" rx="4"/>
+<text class="m ac" x="180" y="260" text-anchor="middle">en ligne, lisible par tous</text>
+<text class="m mu" x="180" y="278" text-anchor="middle">le soir même ou le lendemain</text>
+<path class="lm dash" d="M180 286 V304"/>
+<rect class="bx dash" x="30" y="304" width="300" height="44" rx="4"/>
+<text class="m" x="180" y="322" text-anchor="middle">relecture par des pairs</text>
+<text class="m red" x="180" y="340" text-anchor="middle">plus tard, ailleurs, ou jamais</text>
+</svg>

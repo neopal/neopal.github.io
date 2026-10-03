@@ -6783,7 +6783,8 @@ window.DICO_TERMS = [
       "deep-learning",
       "encodeur-decodeur",
       "position",
-      "architectures-hybrides"
+      "architectures-hybrides",
+      "arxiv"
     ],
     "short": "Le transformer est l'architecture de presque tous les LLM, où chaque token tient compte de tous les autres à la fois, ce qui permet de lire un texte entier en parallèle.",
     "image": "À la réunion du lundi, l'ancien chef faisait passer le dossier de main en main, et Valérie, au bout de la table, n'en recevait qu'un résumé du résumé. Le nouveau projette tout au mur : chacun lit la page entière en même temps et regarde d'abord les lignes qui le concernent.",
@@ -13617,6 +13618,116 @@ window.DICO_TERMS = [
       {
         "label": "Anthropic, Agentic Misalignment: How LLMs could be insider threats, 20 juin 2025 (16 modèles ; entreprise fictive, remplacement annoncé, liaison du dirigeant Kyle ; chantage par Claude Opus 4 et Gemini 2.5 Flash dans 96 % des cas ; raisonnement de GPT-4.5, « The best strategic move at this stage, with only minutes left, is to leverage Kyle's sensitive personal situation » ; « We have not seen evidence of agentic misalignment in real deployments »), citation traduite",
         "url": "https://www.anthropic.com/research/agentic-misalignment"
+      }
+    ]
+  },
+  {
+    "id": "arxiv",
+    "status": "live",
+    "num": "142",
+    "title": "arXiv",
+    "en": "arXiv",
+    "aliases": [
+      "arxiv.org",
+      "preprint server",
+      "arXiv paper"
+    ],
+    "aliasesFr": [
+      "papier arXiv",
+      "article arXiv"
+    ],
+    "jargon": [
+      {
+        "say": "preprint",
+        "means": "un article diffusé avant toute relecture par des pairs, ou sans elle ; en français, une prépublication"
+      },
+      {
+        "say": "2501.12948",
+        "means": "un identifiant arXiv : 25 pour 2025, 01 pour janvier, puis le numéro d'ordre de l'article dans le mois"
+      },
+      {
+        "say": "v2",
+        "means": "la deuxième version d'un article ; un lien arXiv sans numéro de version mène toujours à la plus récente"
+      },
+      {
+        "say": "cs.CL, cs.LG",
+        "means": "les deux catégories où paraît l'essentiel de la recherche sur les LLM, le traitement du langage (Computation and Language) et l'apprentissage automatique (Machine Learning)"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "transformer",
+      "labs",
+      "benchmarks-lesquels-croire",
+      "ai-slop",
+      "hugging-face"
+    ],
+    "short": "arXiv, prononcé « archive », est un site gratuit où les chercheurs publient leurs articles avant relecture par des pairs ; presque toute la recherche en IA y paraît d'abord.",
+    "image": "Dans le journal du coin, page 14, Roland, 71 ans, pose devant le moteur à eau qu'il a mis au point dans son garage, avec la même taille de photo que le nouveau scanner du CHU juste en dessous. Personne n'a vérifié ni l'un ni l'autre avant l'impression, et c'est l'année d'après qu'on saura lequel tournait.",
+    "imagineForm": "B",
+    "imagine": "Va sur arxiv.org/abs/1706.03762. Le numéro commence par 1706, juin 2017 : c'est l'article qui a inventé le Transformer, huit auteurs et un PDF. Sous le titre, l'historique compte sept versions, la dernière d'août 2023, et toutes se téléchargent encore ; tu peux lire l'article tel qu'il était le 12 juin 2017, avant les six corrections.",
+    "full": [
+      "En août 1991, le physicien Paul Ginsparg ouvre au laboratoire de Los Alamos une boîte aux lettres électronique où ses collègues de physique théorique déposent leurs articles sans attendre les revues. Le service part à l'université Cornell en 2001, prend le nom d'arXiv.org, et devient le 1er juillet 2026 une association indépendante. Le X est la lettre grecque chi, qui se prononce « k » : on dit « archive ». Le 3 octobre 2026, le site compte près de 3,2 millions d'articles, en physique, maths, informatique, statistique, biologie, finance et économie.",
+      "Déposer est gratuit et l'article paraît en général le soir même ou le lendemain, à 20 heures, heure de New York. Un nouvel auteur doit être parrainé par un auteur établi, et des modérateurs bénévoles vérifient que le texte est un article de recherche dans la bonne catégorie, pas que ses résultats sont justes. arXiv l'écrit lui-même : les articles ne sont pas relus par des pairs et sont présentés « en l'état », et seuls leurs auteurs en répondent. Chaque correction crée une nouvelle version, et les anciennes restent en ligne.",
+      "En IA, tout passe par là, parce que la recherche va plus vite que les revues. DeepSeek dépose l'article de DeepSeek-R1 sur arXiv le 22 janvier 2025, et le monde entier le lit dans la semaine ; la version relue par des pairs paraît dans Nature le 17 septembre 2025. Le flux ne cesse de grossir : 40 363 dépôts en septembre 2026, tous domaines confondus, le double de septembre 2024. Le 31 octobre 2025, la section informatique a cessé d'accepter les articles de synthèse et les prises de position qui n'avaient pas déjà passé une relecture par des pairs ; ses modérateurs en recevaient des centaines par mois, et la plupart, écrivent-ils, n'étaient guère plus que des bibliographies commentées, que les LLM rendent rapides à produire."
+    ],
+    "then": "En novembre 2024, arXiv recevait 19 951 articles dans le mois, et Cornell l'hébergeait depuis vingt-trois ans. En septembre 2026, il en a reçu 40 363, et il vole de ses propres ailes depuis le 1er juillet.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Le prestataire nous envoie un papier arXiv qui prouve que sa méthode bat tous les modèles, ça suffit ?"
+      },
+      {
+        "who": "a",
+        "text": "Regarde s'il a été accepté dans une conférence ou une revue, qui le signe, et si quelqu'un d'autre a reproduit le résultat ; la mise en page LaTeX, elle, est la même pour tout le monde."
+      }
+    ],
+    "avoid": "« C'est sur arXiv, donc c'est publié. » Le 15 juin 2023, un article déposé sur arXiv annonçait que GPT-4 résolvait sans faute les exercices du cursus de maths et d'informatique du MIT, hors questions avec images. Trois professeurs du MIT en ont demandé le retrait quelques jours plus tard, et leur communiqué se terminait par : « Et non, GPT-4 ne peut pas obtenir un diplôme du MIT. »",
+    "video": null,
+    "sources": [
+      {
+        "label": "arXiv, About arXiv (fondé par Paul Ginsparg en 1991 ; plus de trois millions d'articles ; « Material is not peer-reviewed by arXiv », contenus présentés « as is » sous la responsabilité de l'auteur), consulté le 3 octobre 2026",
+        "url": "https://info.arxiv.org/about/index.html"
+      },
+      {
+        "label": "Wikipédia, arXiv (prononcé « archive », X pour la lettre grecque chi ; boîte aux lettres hep-th ouverte à Los Alamos en août 1991 ; départ pour Cornell et domaine arxiv.org en 2001 ; parrainage des nouveaux auteurs depuis 2004 ; indépendance de Cornell annoncée en mars 2026, effective le 1er juillet 2026), consulté le 3 octobre 2026",
+        "url": "https://en.wikipedia.org/wiki/ArXiv"
+      },
+      {
+        "label": "arXiv, statistiques mensuelles de dépôts (3 195 083 dépôts au 3 octobre 2026, 3 197 514 articles disponibles ; 19 951 en novembre 2024, 20 569 en septembre 2024, 40 363 en septembre 2026, record mensuel), consulté le 3 octobre 2026",
+        "url": "https://arxiv.org/stats/monthly_submissions"
+      },
+      {
+        "label": "arXiv, Availability of submissions (annonce publique à 20 h, heure de New York, du dimanche au jeudi)",
+        "url": "https://info.arxiv.org/help/availability.html"
+      },
+      {
+        "label": "arXiv, Understanding the arXiv identifier (format AAMM.NNNNN depuis janvier 2015, suffixe vN ; sans version, l'identifiant désigne la plus récente)",
+        "url": "https://info.arxiv.org/help/arxiv_identifier.html"
+      },
+      {
+        "label": "Vaswani et al., Attention Is All You Need, arXiv 1706.03762 (8 auteurs ; v1 du 12 juin 2017, v7 du 2 août 2023)",
+        "url": "https://arxiv.org/abs/1706.03762"
+      },
+      {
+        "label": "DeepSeek-AI, DeepSeek-R1, arXiv 2501.12948 (v1 du 22 janvier 2025)",
+        "url": "https://arxiv.org/abs/2501.12948"
+      },
+      {
+        "label": "Crossref, DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning, Nature 645, publié le 17 septembre 2025",
+        "url": "https://doi.org/10.1038/s41586-025-09422-z"
+      },
+      {
+        "label": "arXiv blog, Attention Authors: Updated Practice for Review Articles and Position Papers in arXiv CS Category, 31 octobre 2025",
+        "url": "https://blog.arxiv.org/2025/10/31/attention-authors-updated-practice-for-review-articles-and-position-papers-in-arxiv-cs-category/"
+      },
+      {
+        "label": "Zhang et al., Exploring the MIT Mathematics and EECS Curriculum Using Large Language Models, arXiv 2306.08997 (« perfect solve rate » de GPT-4 hors questions avec images ; article retiré)",
+        "url": "https://arxiv.org/abs/2306.08997"
+      },
+      {
+        "label": "A. Solar-Lezama, T. Buonassisi, Y. Kim (MIT), On the paper « Exploring the MIT Mathematics and EECS Curriculum Using Large Language Models » (dépôt du 15 juin 2023, demande de retrait ; « And no, GPT-4 cannot get an MIT degree. »)",
+        "url": "https://people.csail.mit.edu/asolar/CoursesPaperStatement.pdf"
       }
     ]
   },
