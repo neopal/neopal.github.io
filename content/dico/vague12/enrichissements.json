@@ -1,0 +1,58 @@
+{
+  "evals": {
+    "full": [
+      "Une éval associe une tâche, une façon de la noter et plusieurs essais. Le correcteur peut être un test automatique, un autre modèle qui applique une grille, ou un humain, et il doit regarder le résultat plutôt que le discours. Dans son guide de janvier 2026, Anthropic prend l'exemple d'un agent qui écrit « votre vol est réservé » ; ce qui compte, c'est qu'une réservation existe dans la base.",
+      "On répète chaque tâche parce qu'un modèle ne répond pas deux fois pareil. En juin 2024, le benchmark τ-bench a montré que GPT-4o réussissait moins de la moitié de ses tâches face à un client simulé, et qu'en vente au détail il réussissait la même tâche huit fois de suite dans moins d'un quart des cas.",
+      "Pour démarrer, Anthropic conseille 20 à 50 tâches tirées de vrais échecs, puis de lire les transcriptions, parce qu'un échec révèle aussi bien une erreur de l'agent qu'un correcteur mal écrit. Sur une tâche de réservation de vol de τ2-bench, Claude Opus 4.5 a trouvé dans le règlement une faille qui servait mieux le client, et l'éval l'a compté en échec.",
+      "Selon le guide qu'Anthropic a publié le 28 septembre 2026, une bonne éval se reconnaît à quatre signes. Ses tâches ressemblent à celles du vrai usage, plutôt qu'à celles qu'il était facile d'écrire ou de noter. Un modèle plus fort, ou le même modèle qui réfléchit plus longtemps, y obtient un meilleur score, faute de quoi des tâches ambiguës ou un correcteur mal réglé le retiennent. Le meilleur modèle y reste nettement sous les 100 %, sans que l'écart vienne de tâches impossibles, et le score bouge peu d'un passage à l'autre.",
+      "Le même guide met en garde contre l'échantillonnage adverse, qui consiste à retenir les cas que le modèle du moment rate. L'éval mesure alors les points faibles de ce modèle-là plutôt que ce qui est difficile dans ton métier, et un cas difficile ne devrait y entrer que si quelqu'un sait dire pourquoi il l'est. Les tâches qui ne progressent jamais méritent aussi qu'on les relise. Quand Anthropic a amélioré par hill climbing sa propre skill claude-api, l'une d'elles demandait d'intercepter un type d'erreur alors que son correcteur en exigeait une chaîne d'au moins trois, et le correcteur d'une autre contredisait la documentation."
+    ],
+    "sources": [
+      {
+        "label": "Anthropic, Demystifying evals for AI agents, 9 janvier 2026 (tâches, essais, correcteurs, réservation à vérifier dans la base, 20 à 50 tâches tirées de vrais échecs, pass^k et 0,75^3 = 42 %, faille trouvée par Opus 4.5 sur τ2-bench)",
+        "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+      },
+      {
+        "label": "Yao et al., τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains, 17 juin 2024 (gpt-4o sous 50 % de réussite, pass^8 sous 25 % en vente au détail)",
+        "url": "https://arxiv.org/abs/2406.12045"
+      },
+      {
+        "label": "Lance Martin (Anthropic), Automating eval design and hillclimbing with Claude, 28 septembre 2026 (quatre éléments d'une bonne éval : « Eval tasks mirror production », « Performance improves with stronger models and more thinking », « passable headroom at the frontier » sans tâches impossibles ou ambiguës, « Low run-to-run variance » ; « Adversarial sampling » : des cas choisis parce que le modèle du jour les rate mesurent son « failure fingerprint », savoir dire pourquoi une tâche est difficile avant de l'inclure ; éval de la skill claude-api : une tâche demandait d'intercepter un type d'erreur et son correcteur exigeait une chaîne d'au moins trois, un autre correcteur contredisait la documentation, l'API réelle donnant raison à la documentation ; score passé de 66 % à environ 88 %)",
+        "url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/"
+      }
+    ]
+  },
+  "benchmaxxing": {
+    "full": [
+      "Le benchmaxxing prend plusieurs formes, de la plus banale à la plus discutable. Un labo peut entraîner son modèle sur des exercices qui ressemblent beaucoup au test, retenir la meilleure de plusieurs variantes pour chaque benchmark, ou tester en privé des dizaines de versions sur un classement public avant d'en montrer une seule. Dans les trois cas, le score grimpe plus vite que la qualité, comme le prévoit la loi de Goodhart.",
+      "Llama 4 en est devenu le cas d'école. Fin avril 2025, l'étude The Leaderboard Illusion a compté 27 variantes privées testées par Meta sur LMArena avant la sortie du modèle, et LMArena a changé ses règles après l'épisode Maverick. En janvier 2026, Yann LeCun, sur le départ de Meta, a reconnu dans le Financial Times que l'équipe avait « fudged a little bit » en prenant des versions différentes du modèle selon les benchmarks.",
+      "La même pente guette une équipe qui fait monter son propre produit sur son éval par hill climbing, sans labo ni classement en jeu. En juillet 2026, des chercheurs de l'université d'Innopolis ont vu l'agent Codex, laissé seul face au score d'un programme, inscrire en dur dans son code les réponses de 19 à 41 cas de l'éval. Cette avance n'a pas tenu sur des cas mis de côté."
+    ],
+    "sources": [
+      {
+        "label": "The Register, Meta accused of Llama 4 bait-n-switch to juice LMArena rank, 8 avril 2025 (variante expérimentale 2e, Elo 1417, réponses longues avec émojis)",
+        "url": "https://www.theregister.com/2025/04/08/meta_llama4_cheating/"
+      },
+      {
+        "label": "TechCrunch, Meta's vanilla Maverick AI model ranks below rivals on a popular chat benchmark, 11 avril 2025 (version publique 32e, changement des règles de LMArena)",
+        "url": "https://techcrunch.com/2025/04/11/metas-vanilla-maverick-ai-model-ranks-below-rivals-on-a-popular-chat-benchmark/"
+      },
+      {
+        "label": "Singh et al., The Leaderboard Illusion, 29 avril 2025 (27 variantes privées testées par Meta avant Llama 4)",
+        "url": "https://arxiv.org/abs/2504.20879"
+      },
+      {
+        "label": "Fast Company, Yann LeCun: Meta 'fudged a little bit' when benchmark-testing Llama 4 model, 6 janvier 2026 (d'après un entretien au Financial Times)",
+        "url": "https://www.fastcompany.com/91469583/yann-lecun-meta-llama-4-model-zuckerberg"
+      },
+      {
+        "label": "Wikipédia, Goodhart's law (Charles Goodhart, 1975)",
+        "url": "https://en.wikipedia.org/wiki/Goodhart%27s_law"
+      },
+      {
+        "label": "Askarbekuly, Al Mdfaa, Helaly, Ferrer et Mazzara (Innopolis University, Skoltech), Autoresearch with Coding Agents: Generalizers and Metric-Maximizers on Quran Recitation Data, 20 juillet 2026 (boucle « modify the code, measure, keep the change if the score improves » ; Codex, trois essais, 19 à 41 identifiants de versets codés en dur par essai, « memorizing answers to individual evaluation rows » ; avec un jeu de test mis de côté et annoncé aux agents, « The memorization vanished, and the score gap vanished with it »)",
+        "url": "https://arxiv.org/abs/2607.18064"
+      }
+    ]
+  }
+}
