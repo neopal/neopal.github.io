@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="agents-md-t">
+<title id="agents-md-t">Un projet avec un AGENTS.md à la racine et un autre dans le sous-dossier api : au début de la session, le harness les place dans le contexte, dans l'ordre, avant ta demande ; le plus proche du fichier modifié est lu en dernier et l'emporte.</title>
+<text class="m d" x="0" y="16">le projet</text>
+<text class="m d" x="196" y="16">le contexte</text>
+<text class="m" x="0" y="46">mon-projet/</text>
+<text class="m ac" x="16" y="82">AGENTS.md</text>
+<text class="m mu" x="16" y="106">web/</text>
+<text class="m" x="16" y="130">api/</text>
+<text class="m ac" x="32" y="154">AGENTS.md</text>
+<text class="m mu" x="32" y="178">factures.py</text>
+<text class="m mu" x="32" y="200">↑ fichier modifié</text>
+<path class="ln" d="M6 52 V172 M6 78 h6 M6 102 h6 M6 126 h6 M22 136 V172 M22 150 h6 M22 174 h6"/>
+<path class="la dash" d="M98 78 H196"/>
+<path class="la dash" d="M114 150 C150 150, 160 114, 196 114"/>
+<rect class="bx" x="196" y="30" width="160" height="30" rx="4"/>
+<text class="m d" x="206" y="50">1</text>
+<text class="m" x="226" y="50">system prompt</text>
+<rect class="bxa" x="196" y="66" width="160" height="30" rx="4"/>
+<text class="m d" x="206" y="86">2</text>
+<text class="m" x="226" y="86">AGENTS.md racine</text>
+<rect class="bxa" x="196" y="102" width="160" height="30" rx="4"/>
+<text class="m d" x="206" y="122">3</text>
+<text class="m" x="226" y="122">api/AGENTS.md</text>
+<rect class="bx" x="196" y="138" width="160" height="30" rx="4"/>
+<text class="m d" x="206" y="158">4</text>
+<text class="m" x="226" y="158">ta demande</text>
+<rect class="fd" x="196" y="174" width="160" height="34" rx="4" opacity="0.6"/>
+<text class="m mu" x="276" y="196" text-anchor="middle">le travail</text>
+<text class="i mu" x="0" y="238">Le fichier le plus proche du code modifié</text>
+<text class="i mu" x="0" y="258">est lu en dernier et l'emporte, et chaque</text>
+<text class="i mu" x="0" y="278">ligne reprend sa place à chaque session.</text>
+</svg>
