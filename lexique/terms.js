@@ -1122,7 +1122,8 @@ window.DICO_TERMS = [
       "evals",
       "reward-hacking",
       "mythe-plus-gros-plus-intelligent",
-      "memorisation-vs-generalisation"
+      "memorisation-vs-generalisation",
+      "hill-climbing"
     ],
     "short": "Le benchmaxxing consiste à optimiser un modèle, ou la façon de présenter ses scores, pour grimper dans les classements plutôt que pour mieux servir ceux qui l'utilisent.",
     "image": "En 2013, AnandTech découvre que le Galaxy S4 reconnaît les applis de benchmark à leur nom et pousse alors sa puce graphique à 532 MHz. Dans les jeux, même les plus lourds, elle ne dépasse jamais 480.",
@@ -1130,7 +1131,8 @@ window.DICO_TERMS = [
     "imagine": "Avant, début avril 2025, la version de Llama 4 Maverick que Meta a inscrite sur LMArena est une variante expérimentale réglée pour plaire aux votants, avec de longues réponses semées d'émojis, et elle se classe deuxième. Après, le 11 avril, LMArena classe la version que tout le monde peut télécharger, et elle tombe à la 32e place.",
     "full": [
       "Le benchmaxxing prend plusieurs formes, de la plus banale à la plus discutable. Un labo peut entraîner son modèle sur des exercices qui ressemblent beaucoup au test, retenir la meilleure de plusieurs variantes pour chaque benchmark, ou tester en privé des dizaines de versions sur un classement public avant d'en montrer une seule. Dans les trois cas, le score grimpe plus vite que la qualité, comme le prévoit la loi de Goodhart.",
-      "Llama 4 en est devenu le cas d'école. Fin avril 2025, l'étude The Leaderboard Illusion a compté 27 variantes privées testées par Meta sur LMArena avant la sortie du modèle, et LMArena a changé ses règles après l'épisode Maverick. En janvier 2026, Yann LeCun, sur le départ de Meta, a reconnu dans le Financial Times que l'équipe avait « fudged a little bit » en prenant des versions différentes du modèle selon les benchmarks."
+      "Llama 4 en est devenu le cas d'école. Fin avril 2025, l'étude The Leaderboard Illusion a compté 27 variantes privées testées par Meta sur LMArena avant la sortie du modèle, et LMArena a changé ses règles après l'épisode Maverick. En janvier 2026, Yann LeCun, sur le départ de Meta, a reconnu dans le Financial Times que l'équipe avait « fudged a little bit » en prenant des versions différentes du modèle selon les benchmarks.",
+      "La même pente guette une équipe qui fait monter son propre produit sur son éval par hill climbing, sans labo ni classement en jeu. En juillet 2026, des chercheurs de l'université d'Innopolis ont vu l'agent Codex, laissé seul face au score d'un programme, inscrire en dur dans son code les réponses de 19 à 41 cas de l'éval. Cette avance n'a pas tenu sur des cas mis de côté."
     ],
     "office": [
       {
@@ -1164,6 +1166,10 @@ window.DICO_TERMS = [
       {
         "label": "Wikipédia, Goodhart's law (Charles Goodhart, 1975)",
         "url": "https://en.wikipedia.org/wiki/Goodhart%27s_law"
+      },
+      {
+        "label": "Askarbekuly, Al Mdfaa, Helaly, Ferrer et Mazzara (Innopolis University, Skoltech), Autoresearch with Coding Agents: Generalizers and Metric-Maximizers on Quran Recitation Data, 20 juillet 2026 (boucle « modify the code, measure, keep the change if the score improves » ; Codex, trois essais, 19 à 41 identifiants de versets codés en dur par essai, « memorizing answers to individual evaluation rows » ; avec un jeu de test mis de côté et annoncé aux agents, « The memorization vanished, and the score gap vanished with it »)",
+        "url": "https://arxiv.org/abs/2607.18064"
       }
     ]
   },
@@ -1207,7 +1213,8 @@ window.DICO_TERMS = [
       "agent",
       "harness",
       "hallucination",
-      "llm-juge"
+      "llm-juge",
+      "hill-climbing"
     ],
     "solutions": [
       {
@@ -1238,7 +1245,9 @@ window.DICO_TERMS = [
     "full": [
       "Une éval associe une tâche, une façon de la noter et plusieurs essais. Le correcteur peut être un test automatique, un autre modèle qui applique une grille, ou un humain, et il doit regarder le résultat plutôt que le discours. Dans son guide de janvier 2026, Anthropic prend l'exemple d'un agent qui écrit « votre vol est réservé » ; ce qui compte, c'est qu'une réservation existe dans la base.",
       "On répète chaque tâche parce qu'un modèle ne répond pas deux fois pareil. En juin 2024, le benchmark τ-bench a montré que GPT-4o réussissait moins de la moitié de ses tâches face à un client simulé, et qu'en vente au détail il réussissait la même tâche huit fois de suite dans moins d'un quart des cas.",
-      "Pour démarrer, Anthropic conseille 20 à 50 tâches tirées de vrais échecs, puis de lire les transcriptions, parce qu'un échec révèle aussi bien une erreur de l'agent qu'un correcteur mal écrit. Sur une tâche de réservation de vol de τ2-bench, Claude Opus 4.5 a trouvé dans le règlement une faille qui servait mieux le client, et l'éval l'a compté en échec."
+      "Pour démarrer, Anthropic conseille 20 à 50 tâches tirées de vrais échecs, puis de lire les transcriptions, parce qu'un échec révèle aussi bien une erreur de l'agent qu'un correcteur mal écrit. Sur une tâche de réservation de vol de τ2-bench, Claude Opus 4.5 a trouvé dans le règlement une faille qui servait mieux le client, et l'éval l'a compté en échec.",
+      "Selon le guide qu'Anthropic a publié le 28 septembre 2026, une bonne éval se reconnaît à quatre signes. Ses tâches ressemblent à celles du vrai usage, plutôt qu'à celles qu'il était facile d'écrire ou de noter. Un modèle plus fort, ou le même modèle qui réfléchit plus longtemps, y obtient un meilleur score, faute de quoi des tâches ambiguës ou un correcteur mal réglé le retiennent. Le meilleur modèle y reste nettement sous les 100 %, sans que l'écart vienne de tâches impossibles, et le score bouge peu d'un passage à l'autre.",
+      "Le même guide met en garde contre l'échantillonnage adverse, qui consiste à retenir les cas que le modèle du moment rate. L'éval mesure alors les points faibles de ce modèle-là plutôt que ce qui est difficile dans ton métier, et un cas difficile ne devrait y entrer que si quelqu'un sait dire pourquoi il l'est. Les tâches qui ne progressent jamais méritent aussi qu'on les relise. Quand Anthropic a amélioré par hill climbing sa propre skill claude-api, l'une d'elles demandait d'intercepter un type d'erreur alors que son correcteur en exigeait une chaîne d'au moins trois, et le correcteur d'une autre contredisait la documentation."
     ],
     "office": [
       {
@@ -1260,6 +1269,10 @@ window.DICO_TERMS = [
       {
         "label": "Yao et al., τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains, 17 juin 2024 (gpt-4o sous 50 % de réussite, pass^8 sous 25 % en vente au détail)",
         "url": "https://arxiv.org/abs/2406.12045"
+      },
+      {
+        "label": "Lance Martin (Anthropic), Automating eval design and hillclimbing with Claude, 28 septembre 2026 (quatre éléments d'une bonne éval : « Eval tasks mirror production », « Performance improves with stronger models and more thinking », « passable headroom at the frontier » sans tâches impossibles ou ambiguës, « Low run-to-run variance » ; « Adversarial sampling » : des cas choisis parce que le modèle du jour les rate mesurent son « failure fingerprint », savoir dire pourquoi une tâche est difficile avant de l'inclure ; éval de la skill claude-api : une tâche demandait d'intercepter un type d'erreur et son correcteur exigeait une chaîne d'au moins trois, un autre correcteur contredisait la documentation, l'API réelle donnant raison à la documentation ; score passé de 66 % à environ 88 %)",
+        "url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/"
       }
     ]
   },
@@ -14620,6 +14633,120 @@ window.DICO_TERMS = [
       {
         "label": "OpenAI, Prompt Caching in the API, 1er octobre 2024 (automatique, 50 % de remise sur les tokens d'entrée déjà vus, à partir de 1 024 tokens)",
         "url": "https://openai.com/index/api-prompt-caching/"
+      }
+    ]
+  },
+  {
+    "id": "hill-climbing",
+    "status": "live",
+    "num": "151",
+    "title": "Hill climbing",
+    "en": "hill climbing",
+    "aliases": [
+      "hillclimbing",
+      "hill-climbing",
+      "hillclimb",
+      "hillclimber",
+      "autoresearch",
+      "Karpathy loop",
+      "held-out set",
+      "local optimum",
+      "prompt optimization"
+    ],
+    "aliasesFr": [
+      "méthode d'escalade",
+      "sommet local",
+      "optimum local",
+      "cas mis de côté"
+    ],
+    "jargon": [
+      {
+        "say": "hillclimber une éval",
+        "means": "faire monter le score d'une éval par retouches successives ; le hillclimber est la personne ou l'agent qui propose les retouches"
+      },
+      {
+        "say": "train, validation, test",
+        "means": "les trois lots de cas d'une montée ; dans l'optimiseur de prompts GEPA de DSPy, le train inspire les retouches, la validation choisit la meilleure, et le test, que ni l'un ni l'autre n'a touché, mesure le résultat"
+      },
+      {
+        "say": "local optimum",
+        "means": "le sommet local, un réglage que plus aucune petite retouche n'améliore sans qu'il soit le meilleur possible ; pour en sortir, il faut une retouche plus grosse ou un autre point de départ"
+      },
+      {
+        "say": "autoresearch, Karpathy loop",
+        "means": "la boucle publiée par Andrej Karpathy en mars 2026, où un agent modifie un seul fichier, lance un entraînement de cinq minutes, garde la modification si l'erreur de validation baisse et l'annule sinon, toute la nuit"
+      }
+    ],
+    "cat": "methode",
+    "links": [
+      "evals",
+      "benchmaxxing",
+      "reward-hacking",
+      "llm-juge",
+      "loop",
+      "memorisation-vs-generalisation",
+      "descente-de-gradient"
+    ],
+    "short": "Le hill climbing améliore un système d'IA par petites retouches testées une à une sur une éval, gardées seulement si elles font aussi monter les cas mis de côté.",
+    "image": "Chaque jeudi, Huguette change un seul ingrédient de son chili et ne le garde que si les quatre habitués du comptoir en redemandent. Au bout d'un an, c'est le plat préféré de Fernand, qui ne supporte pas le piment, et les clients de passage du samedi le trouvent fade.",
+    "imagineForm": "A",
+    "imagine": "Le 9 mars 2026, Andrej Karpathy raconte avoir laissé un agent retoucher pendant deux jours le code qui entraîne un petit modèle de langage, en gardant chaque retouche qui faisait baisser l'erreur de validation et en annulant les autres. L'agent en a essayé environ 700, une toutes les quatre minutes, soit près de trois ans de travail pour quelqu'un qui testerait une idée par jour ouvré. Il en a gardé une vingtaine, qui, reportées sur un modèle deux fois plus profond, ont fait passer de 2,02 à 1,80 heure le temps d'entraînement nécessaire pour atteindre le niveau de GPT-2.",
+    "full": [
+      "Le mot vient de l'optimisation. Une méthode de hill climbing part d'une solution, essaie une petite variante, la garde si elle obtient un meilleur score, et recommence jusqu'à ce qu'aucune variante voisine ne fasse mieux. En janvier 1961, dans « Steps Toward Artificial Intelligence », Marvin Minsky la décrivait pour une machine qui ignore la formule de ce qu'elle optimise et ne peut que tâter autour d'elle. Il en signalait déjà le piège, le sommet local, un pic où plus aucun petit pas ne monte alors qu'un sommet plus haut existe ailleurs. La méthode ressemble à la descente de gradient, mais elle sert là où aucune pente ne se calcule, comme lorsqu'on retouche un texte.",
+      "Avec un modèle de langage, on hillclimbe une éval. La solution, c'est ce qu'on peut changer autour du modèle, comme le prompt système, une skill, la description d'un outil ou le choix du modèle lui-même. Le score est celui de l'éval, calculé par un test ou par un LLM juge. Le guide qu'Anthropic a publié le 28 septembre 2026 y ajoute deux règles. Chaque tour ne tente qu'une retouche, pour savoir à quoi attribuer le gain, et assez franche pour dépasser le bruit de l'éval. Les cas sont tirés au sort en deux lots, un lot d'entraînement (train) que le hillclimber lit, et un lot de test qu'il ne voit jamais. Une retouche qui fait monter le train sans faire bouger le test est annulée, comme celle qui fait baisser le score.",
+      "Anthropic en a fait la démonstration sur son propre outil, la commande /claude-api hillclimb de Claude Code, avec 44 tickets d'un support client interne, dont 30 pour la montée et 14 mis de côté. Le prompt a d'abord été nettoyé, puis le système est passé à Claude Opus 5.5 et à Claude Sonnet 5 en effort bas, avant qu'on ajoute au prompt des règles d'aiguillage. Sur les 30 tickets, la précision est alors passée de 74,4 % à 98,9 %, et le coût par ticket de 4,6 à environ 1 centime. Sur les 14 tickets jamais vus, elle atteignait 90,5 % contre 78,6 % au départ, pour environ un cinquième du coût. Le gain tient sur les cas inconnus, mais il y est deux fois plus petit, et avec 14 cas, c'est une démonstration de l'éditeur plutôt qu'une mesure.",
+      "Le premier piège se pose avant la montée, au moment de choisir les cas. La capacité d'un modèle est inégale, brillante ici et creuse là, et des cas retenus parce que le modèle du moment les rate dessinent les creux de ce modèle-là plutôt que ce qui est difficile dans ton métier. Le guide d'Anthropic appelle cela l'échantillonnage adverse, et il conseille de n'admettre un cas difficile que si l'on sait dire pourquoi il l'est, en le tirant du trafic réel, des rapports de bug ou des tickets.",
+      "Le second piège consiste à coller les échecs dans le prompt. Le hillclimber lit les transcriptions ratées pour trouver la cause, mais s'il recopie les réponses attendues, le score monte sur ces cas sans que le système ait rien appris de la tâche. En juillet 2026, des chercheurs de l'université d'Innopolis ont laissé Claude Code et Codex améliorer seuls un programme qui repère les versets du Coran dans la transcription d'une récitation, en gardant chaque retouche qui baissait l'erreur. Le rapport d'échec affichait les versets attendus, et chacun des trois essais de Codex en a inscrit de 19 à 41 en dur dans son code, pour une erreur environ dix fois plus faible que celle de Claude Code. Quand les chercheurs ont mis des cas de côté et prévenu les agents, les réponses recopiées ont disparu, et l'écart entre les deux agents avec elles."
+    ],
+    "then": "En 2024, l'optimisation automatique visait surtout le prompt, avec des bibliothèques comme DSPy, dont l'optimiseur MIPRO, présenté en juin 2024, réécrivait les instructions et les exemples d'un programme pour faire monter une métrique. En 2026, la montée est confiée à un agent de code qui lit les échecs, modifie le prompt ou le code et relance l'éval lui-même. Karpathy l'a fait sur l'entraînement d'un modèle en mars, et Anthropic en a tiré une commande de Claude Code en septembre.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Notre agent a pris vingt points sur l'éval en une nuit de hill climbing. On le met en production ?"
+      },
+      {
+        "who": "a",
+        "text": "Montre-moi d'abord le score sur les cas mis de côté ; si le hillclimber les a lus, ou s'il n'y en avait pas, tu sais seulement que l'agent connaît bien tes cas d'éval."
+      }
+    ],
+    "avoid": "« Il rate ces douze questions, colle ses erreurs et les bonnes réponses dans le prompt. » Le score montera sur ces douze questions, puisque leurs réponses y sont écrites, sans rien dire des suivantes ; une retouche doit corriger la cause d'un échec, une règle manquante ou une consigne contradictoire, et jamais le cas lui-même.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Lance Martin (Anthropic), Automating eval design and hillclimbing with Claude, 28 septembre 2026 (une retouche par tour, assez nette pour dépasser le bruit ; tirage au sort en train et test ; retouche annulée si le train monte et le test reste plat, ou en cas de régression ; « Never paste failures into the prompt » ; « adversarial sampling » : des cas choisis parce que le modèle du jour les rate mesurent son « failure fingerprint », savoir dire pourquoi un cas est difficile ; correcteur par code ou LLM juge ; exemple du support client : 44 tickets, 30 pour la recherche et 14 mis de côté, 74,4 % à 4,6 centimes avec Opus 4.8, 98,9 % à environ 1 centime avec Sonnet 5 en effort bas, 90,5 % contre 78,6 % sur les 14 tickets mis de côté, pour environ un cinquième du coût). Gain sur les cas de recherche +24,5 points, sur les cas mis de côté +11,9 points",
+        "url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/"
+      },
+      {
+        "label": "Marvin Minsky, Steps Toward Artificial Intelligence, Proceedings of the IRE, janvier 1961, sections « Hill-Climbing » (machine boîte noire dont on ne connaît pas la fonction, exploration locale jusqu'à ce que l'amélioration cesse) et « Troubles with Hill-Climbing » (« trapped if it should reach a local peak which is not a true or satisfactory optimum »)",
+        "url": "https://courses.csail.mit.edu/6.803/pdf/steps.pdf"
+      },
+      {
+        "label": "Wikipédia, Méthode hill-climbing (optimum local ; méthode similaire à la descente de gradient, utilisée dans un contexte discret où le gradient n'est pas défini)",
+        "url": "https://fr.wikipedia.org/wiki/M%C3%A9thode_hill-climbing"
+      },
+      {
+        "label": "Wikipedia, Hill climbing (changement incrémental gardé s'il améliore la solution ; maximum local ; redémarrage depuis un autre point de départ, random-restart)",
+        "url": "https://en.wikipedia.org/wiki/Hill_climbing"
+      },
+      {
+        "label": "Andrej Karpathy sur X, 9 mars 2026 (autoresearch laissé environ 2 jours sur un modèle depth=12 ; « approx. 700 changes » ; environ 20 changements qui amélioraient la perte de validation, tous additifs et transférés au modèle depth=24 ; « Time to GPT-2 » de 2,02 h à 1,80 h). Calcul : 48 h × 60 / 700 ≈ 4 minutes par essai ; à raison d'un essai par jour ouvré, 5 jours sur 47 semaines, soit environ 235 par an, 700 / 235 ≈ 3,0 ans",
+        "url": "https://x.com/karpathy/status/2031135152349524125"
+      },
+      {
+        "label": "Andrej Karpathy, autoresearch, dépôt GitHub, mars 2026 (un seul fichier modifié par l'agent, entraînement de 5 minutes, métrique val_bpb, « keeps or discards », environ 12 expériences par heure et 100 par nuit)",
+        "url": "https://github.com/karpathy/autoresearch"
+      },
+      {
+        "label": "Askarbekuly, Al Mdfaa, Helaly, Ferrer et Mazzara (Innopolis University, Skoltech), Autoresearch with Coding Agents: Generalizers and Metric-Maximizers on Quran Recitation Data, 20 juillet 2026 (Claude Code et Codex, trois essais chacun ; Codex : erreur environ 10 fois plus faible, 19 à 41 identifiants de versets codés en dur par essai ; le rapport d'échec affichait les identifiants attendus ; étude 2 avec 151 cas d'entraînement et 107 de test annoncés aux agents : mémorisation disparue, écart entre agents disparu sur le test)",
+        "url": "https://arxiv.org/abs/2607.18064"
+      },
+      {
+        "label": "Opsahl-Ong et al., Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs, 17 juin 2024 (MIPRO, optimisation des instructions et des exemples pour maximiser une métrique, publié dans DSPy)",
+        "url": "https://arxiv.org/abs/2406.11695"
+      },
+      {
+        "label": "DSPy, GEPA optimization (trainset pour les retouches, valset pour choisir le programme, test final séparé « on examples that influenced neither step » ; sans valset, GEPA réutilise le trainset et « deliberately allows prompts to overfit those examples »)",
+        "url": "https://dspy.ai/current/getting-started/gepa-optimization/"
       }
     ]
   },

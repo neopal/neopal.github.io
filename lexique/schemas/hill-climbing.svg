@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="hill-climbing-t">
+<title id="hill-climbing-t">Six tours de hill climbing : à chaque tour une retouche est essayée ; elle est gardée quand le score du train et celui du test montent tous les deux, annulée quand seul le train monte ou quand le score baisse, et le score finit par plafonner sur un sommet local.</title>
+<text class="m mu" x="0" y="16">score</text>
+<path class="ln" d="M48 24 V206 H350"/>
+<text class="m mu" x="306" y="224">tours</text>
+<path class="ln dash" d="M105 30 V200"/>
+<path class="ln dash" d="M150 30 V200"/>
+<path class="ln dash" d="M195 30 V200"/>
+<path class="ln dash" d="M240 30 V200"/>
+<path class="ln dash" d="M285 30 V200"/>
+<path class="ln dash" d="M330 30 V200"/>
+<path class="la" d="M60 176 H105 V146 H240 V112 H285 V88 H350"/>
+<path class="lm dash" d="M60 192 H105 V170 H240 V146 H285 V132 H350"/>
+<text class="m ac" x="0" y="180">train</text>
+<text class="m mu" x="0" y="197">test</text>
+<circle class="fa" cx="105" cy="146" r="4"/>
+<circle class="fa" cx="240" cy="112" r="4"/>
+<circle class="fa" cx="285" cy="88" r="4"/>
+<circle class="lr" cx="150" cy="112" r="4"/>
+<circle class="lr" cx="150" cy="170" r="4"/>
+<path class="lr dash" d="M150 142 V116"/>
+<text class="m red" x="112" y="96">train seul</text>
+<circle class="lr" cx="195" cy="166" r="4"/>
+<path class="lr dash" d="M195 150 V162"/>
+<text class="m red" x="178" y="190">baisse</text>
+<circle class="lr" cx="330" cy="94" r="4"/>
+<text class="m ac" x="256" y="62">sommet local</text>
+<path class="la" d="M100 236 l4 5 l8 -9"/>
+<path class="lr" d="M145 232 l10 10 M155 232 l-10 10"/>
+<path class="lr" d="M190 232 l10 10 M200 232 l-10 10"/>
+<path class="la" d="M235 236 l4 5 l8 -9"/>
+<path class="la" d="M280 236 l4 5 l8 -9"/>
+<path class="lr" d="M325 232 l10 10 M335 232 l-10 10"/>
+<path class="la" d="M4 266 l4 5 l8 -9"/>
+<text class="m" x="24" y="271">gardée, le train et le test montent</text>
+<path class="lr" d="M4 284 l10 10 M14 284 l-10 10"/>
+<text class="m" x="24" y="294">annulée, le test ne suit pas</text>
+<text class="m" x="24" y="312">ou le score baisse</text>
+</svg>
