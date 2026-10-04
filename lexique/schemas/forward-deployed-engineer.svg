@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 318" role="img" aria-labelledby="forward-deployed-engineer-t">
+<title id="forward-deployed-engineer-t">Le produit d'un éditeur part chez trois clients. Chez l'un d'eux, un forward-deployed engineer écrit du code dans les systèmes du client, puis fait remonter au produit ce qui se répète d'un client à l'autre ; si rien ne remonte, son travail reste du conseil.</title>
+<rect class="bxa" x="100" y="8" width="184" height="40" rx="4"/>
+<text class="m b" x="192" y="33" text-anchor="middle">produit de l'éditeur</text>
+<path class="lm" d="M190 52 V130"/><path class="lm" d="M185 124 l5 6 l5 -6"/>
+<path class="lm" d="M240 52 L300 130"/><path class="lm" d="M293 127 l7 3 l0 -7"/>
+<rect class="bx" x="140" y="134" width="100" height="44" rx="4"/>
+<text class="m" x="190" y="161" text-anchor="middle">client B</text>
+<rect class="bx" x="252" y="134" width="100" height="44" rx="4"/>
+<text class="m" x="302" y="161" text-anchor="middle">client C</text>
+<rect class="bxa" x="4" y="134" width="130" height="84" rx="4"/>
+<text class="m" x="68" y="154" text-anchor="middle">client A</text>
+<circle class="fa" cx="22" cy="178" r="6"/>
+<text class="m ac" x="34" y="183">FDE</text>
+<text class="m mu" x="14" y="207">code sur place</text>
+<path class="la" d="M68 130 V70 Q68 28 94 28"/><path class="la" d="M88 22 l7 6 l-7 6"/>
+<text class="m ac" x="76" y="84">ce qui se</text>
+<text class="m ac" x="76" y="102">répète</text>
+<path class="lr dash" d="M134 196 H200"/>
+<path class="lr" d="M204 190 l10 10 M214 190 l-10 10"/>
+<text class="m red" x="140" y="226">rien ne remonte,</text>
+<text class="m red" x="140" y="244">c'est du conseil</text>
+<path class="ln" d="M0 262 H360"/>
+<text class="m mu" x="0" y="284">Dev, une capacité, beaucoup de clients</text>
+<text class="m ac" x="0" y="306">Delta (FDE), un client, beaucoup de capacités</text>
+</svg>

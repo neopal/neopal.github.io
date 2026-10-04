@@ -1204,6 +1204,14 @@ window.DICO_TERMS = [
       {
         "say": "eval de régression",
         "means": "les tâches que l'agent réussissait déjà, relancées à chaque changement pour vérifier que rien n'a cassé"
+      },
+      {
+        "say": "golden dataset",
+        "means": "le jeu de vraies demandes étiquetées avec la bonne réponse, qui sert de référence à chaque nouvelle version du prompt, du modèle ou des outils"
+      },
+      {
+        "say": "trajectory, trace",
+        "means": "le journal complet d'un passage de l'agent, appels d'outils, arguments et résultats intermédiaires ; OpenAI appelle trace grading le fait de le noter"
       }
     ],
     "cat": "agents",
@@ -1246,6 +1254,8 @@ window.DICO_TERMS = [
       "Une éval associe une tâche, une façon de la noter et plusieurs essais. Le correcteur peut être un test automatique, un autre modèle qui applique une grille, ou un humain, et il doit regarder le résultat plutôt que le discours. Dans son guide de janvier 2026, Anthropic prend l'exemple d'un agent qui écrit « votre vol est réservé » ; ce qui compte, c'est qu'une réservation existe dans la base.",
       "On répète chaque tâche parce qu'un modèle ne répond pas deux fois pareil. En juin 2024, le benchmark τ-bench a montré que GPT-4o réussissait moins de la moitié de ses tâches face à un client simulé, et qu'en vente au détail il réussissait la même tâche huit fois de suite dans moins d'un quart des cas.",
       "Pour démarrer, Anthropic conseille 20 à 50 tâches tirées de vrais échecs, puis de lire les transcriptions, parce qu'un échec révèle aussi bien une erreur de l'agent qu'un correcteur mal écrit. Sur une tâche de réservation de vol de τ2-bench, Claude Opus 4.5 a trouvé dans le règlement une faille qui servait mieux le client, et l'éval l'a compté en échec.",
+      "Ce jeu de départ s'appelle souvent un golden dataset. Chaque ligne y est une vraie demande, tirée si possible des échanges avec les utilisateurs, avec la réponse ou l'action attendue, fixée d'avance par quelqu'un qui connaît le métier. Chez Varick Agents, qui construit des agents pour de grandes entreprises, on y note aussi pourquoi cette réponse est la bonne. Une vingtaine de lignes suffisent au début, parce qu'un changement fait alors de grands écarts de score, visibles sur peu de cas.",
+      "Pour un agent, la note se dédouble. Le résultat (outcome) dit si la facture est rangée au bon endroit ou le doublon signalé, et la trajectoire (trajectory), le journal de chaque outil appelé avec ses arguments, dit comment l'agent y est arrivé. Eyad Khrais, de Varick, demande de rapporter les deux notes séparément. Un agent qui classe bien 95 % des factures mais touche un champ interdit dans 4 % des passages paraît excellent sur une note unique, et fait des dégâts en production. Anthropic met en garde contre l'excès inverse, exiger une suite d'appels précise, alors que les agents trouvent souvent des chemins valides que personne n'avait prévus. Sur la trajectoire, on vérifie donc les interdits, comme un paiement envoyé avant l'accord, plutôt que l'ordre des étapes.",
       "Selon le guide qu'Anthropic a publié le 28 septembre 2026, une bonne éval se reconnaît à quatre signes. Ses tâches ressemblent à celles du vrai usage, plutôt qu'à celles qu'il était facile d'écrire ou de noter. Un modèle plus fort, ou le même modèle qui réfléchit plus longtemps, y obtient un meilleur score, faute de quoi des tâches ambiguës ou un correcteur mal réglé le retiennent. Le meilleur modèle y reste nettement sous les 100 %, sans que l'écart vienne de tâches impossibles, et le score bouge peu d'un passage à l'autre.",
       "Le même guide met en garde contre l'échantillonnage adverse, qui consiste à retenir les cas que le modèle du moment rate. L'éval mesure alors les points faibles de ce modèle-là plutôt que ce qui est difficile dans ton métier, et un cas difficile ne devrait y entrer que si quelqu'un sait dire pourquoi il l'est. Les tâches qui ne progressent jamais méritent aussi qu'on les relise. Quand Anthropic a amélioré par hill climbing sa propre skill claude-api, l'une d'elles demandait d'intercepter un type d'erreur alors que son correcteur en exigeait une chaîne d'au moins trois, et le correcteur d'une autre contredisait la documentation."
     ],
@@ -1273,6 +1283,22 @@ window.DICO_TERMS = [
       {
         "label": "Lance Martin (Anthropic), Automating eval design and hillclimbing with Claude, 28 septembre 2026 (quatre éléments d'une bonne éval : « Eval tasks mirror production », « Performance improves with stronger models and more thinking », « passable headroom at the frontier » sans tâches impossibles ou ambiguës, « Low run-to-run variance » ; « Adversarial sampling » : des cas choisis parce que le modèle du jour les rate mesurent son « failure fingerprint », savoir dire pourquoi une tâche est difficile avant de l'inclure ; éval de la skill claude-api : une tâche demandait d'intercepter un type d'erreur et son correcteur exigeait une chaîne d'au moins trois, un autre correcteur contredisait la documentation, l'API réelle donnant raison à la documentation ; score passé de 66 % à environ 88 %)",
         "url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/"
+      },
+      {
+        "label": "Anthropic, Demystifying evals for AI agents, 9 janvier 2026, compléments (définitions : « transcript (also called a trace or trajectory) » et « outcome » ; « large effect size means small sample sizes suffice » ; « reference solution » pour chaque tâche ; vérifier une suite précise d'appels d'outils est « too rigid », « it's often better to grade what the agent produced, not the path it took »)",
+        "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+      },
+      {
+        "label": "Grey Luo (Varick Agents), AI Agents 102, blog Varick, page datée du 30 septembre 2026 (« Golden datasets form the foundation of systematic evals » ; exemples réels du domaine ; pour chacun, l'entrée exacte, la sortie ou l'action attendue, « the reasoning for why that output is correct » et des métadonnées)",
+        "url": "https://www.varickagents.com/blog/ai-agents-102"
+      },
+      {
+        "label": "Eyad Khrais (Varick Agents), How to Become an Applied AI Engineer, blog Varick, page datée du 30 septembre 2026 (« grade the outcome », « grade the trajectory » ; contrôle déterministe que send_payment n'apparaît jamais avant l'accord ; agent juste dans 95 % des cas qui touche un champ interdit dans 4 % des passages ; « These need to be reported separately »)",
+        "url": "https://www.varickagents.com/blog/how-to-become-an-applied-ai-engineer"
+      },
+      {
+        "label": "OpenAI, documentation Trace grading (« the end-to-end log of decisions, tool calls, and reasoning steps » ; « Unlike black-box evaluations, trace evals provide more data to better understand why an agent succeeds or fails »), consultée le 4 octobre 2026",
+        "url": "https://developers.openai.com/api/docs/guides/trace-grading"
       }
     ]
   },
@@ -2004,7 +2030,8 @@ window.DICO_TERMS = [
       "rag",
       "mythe-agent-autonome",
       "multi-agents",
-      "human-in-the-loop"
+      "human-in-the-loop",
+      "workflow-ou-agent"
     ],
     "solutions": [
       {
@@ -4614,7 +4641,8 @@ window.DICO_TERMS = [
       "modeles-de-raisonnement",
       "gpu",
       "kv-cache",
-      "prompt-caching"
+      "prompt-caching",
+      "routage-de-modeles"
     ],
     "short": "Le coût d'une requête, c'est le nombre de tokens d'entrée multiplié par leur prix, plus le nombre de tokens de sortie multiplié par le leur, avec une remise pour ce qui est relu depuis un cache.",
     "image": "« Ce que tu me racontes au comptoir, je te le compte au prix du café ; ce que je te réponds, au prix du cognac. Et quand tu me ressers la même histoire que d'habitude, je te fais presque cadeau. »",
@@ -7656,6 +7684,10 @@ window.DICO_TERMS = [
       {
         "say": "parallélisable",
         "means": "se dit d'une tâche dont les morceaux avancent sans attendre les autres ; c'est la condition pour que plusieurs agents fassent mieux qu'un seul"
+      },
+      {
+        "say": "idempotent",
+        "means": "se dit d'une action qu'on peut relancer sans risque : avec la même clé, la deuxième demande renvoie le résultat de la première au lieu de recommencer, comme dans l'API de paiement de Stripe"
       }
     ],
     "cat": "agents",
@@ -7674,7 +7706,7 @@ window.DICO_TERMS = [
     "full": [
       "Un agent seul accumule tout dans une seule fenêtre de contexte, ses recherches, les pages lues et les essais ratés, et la fenêtre finit par déborder. Dans un système multi-agents, un agent principal, l'orchestrateur, découpe la tâche et lance des sous-agents qui partent chacun avec une fenêtre neuve, explorent leur morceau en parallèle et ne lui renvoient que l'essentiel. En juin 2025, Anthropic a décrit ainsi son outil de recherche, où Claude Opus 4 dirige des sous-agents Claude Sonnet 4 et fait 90,2 % mieux qu'un Claude Opus 4 seul sur son évaluation interne.",
       "Ce gain coûte cher en tokens. D'après le même billet, un agent dépense environ 4 fois plus de tokens qu'une conversation, et un système multi-agents environ 15 fois plus, et sur le benchmark BrowseComp, la quantité de tokens dépensés explique à elle seule 80 % des écarts de résultats. La veille, Walden Yan, de Cognition, publiait « Don't Build Multi-Agents » avec l'exemple d'un clone de Flappy Bird confié à deux sous-agents. L'un a dessiné un décor façon Super Mario, l'autre un oiseau qui ne ressemblait pas à celui du jeu, chacun ayant pris des décisions que l'autre ignorait.",
-      "La règle qui se dégage est que plusieurs agents gagnent quand les morceaux sont indépendants et faciles à vérifier. En février 2026, Nicholas Carlini, chercheur chez Anthropic, a lancé 16 agents Claude Opus 4.6 sur l'écriture d'un compilateur C en Rust. Chaque agent réservait sa tâche en déposant un fichier dans un dossier commun, et après près de 2 000 sessions et 20 000 dollars d'API, les 100 000 lignes obtenues compilaient le noyau Linux 6.9 sur trois architectures. Carlini avait écrit les tests qui disaient à chaque agent si son morceau marchait, puis s'était presque entièrement retiré."
+      "La règle qui se dégage est que plusieurs agents gagnent quand les morceaux sont indépendants et faciles à vérifier. En février 2026, Nicholas Carlini, chercheur chez Anthropic, a lancé 16 agents Claude Opus 4.6 sur l'écriture d'un compilateur C en Rust. Chaque agent réservait sa tâche en déposant un fichier dans un dossier commun, et après près de 2 000 sessions et 20 000 dollars d'API, les 100 000 lignes obtenues compilaient le noyau Linux 6.9 sur trois architectures. Carlini avait écrit les tests qui disaient à chaque agent si son morceau marchait, puis s'était presque entièrement retiré. Quand plusieurs agents agissent sur les mêmes systèmes, deux vieilles règles des systèmes distribués s'appliquent telles quelles, même si chaque boucle contient un modèle. Chaque donnée critique, une fiche client ou le statut d'une commande, n'a qu'un agent autorisé à l'écrire, et les autres lui demandent le changement. Chaque action qui modifie le monde porte aussi une clé unique, pour qu'un agent qui la relance après une coupure récupère le premier résultat au lieu de payer deux fois la même facture."
     ],
     "office": [
       {
@@ -7708,6 +7740,18 @@ window.DICO_TERMS = [
       {
         "label": "Cemri et al. (UC Berkeley), Why Do Multi-Agent LLM Systems Fail?, mars 2025, révisé en octobre 2025 (gains souvent minimes sur les benchmarks ; 14 modes d'échec ; plus de 1 600 traces de 7 frameworks)",
         "url": "https://arxiv.org/abs/2503.13657"
+      },
+      {
+        "label": "Eyad Khrais (Varick Agents), How to Become an Applied AI Engineer, blog Varick, page datée du 30 septembre 2026 (« Multi-Agent Deployments are a Distributed Systems Problem » ; « Single-writer principle » : une seule écriture par donnée importante, les autres agents lisent ou soumettent une demande ; « Idempotency keys » sur chaque appel d'outil qui modifie un système externe, pour ne pas envoyer deux fois le même paiement)",
+        "url": "https://www.varickagents.com/blog/how-to-become-an-applied-ai-engineer"
+      },
+      {
+        "label": "Martin Thompson, Single Writer Principle, Mechanical Sympathy, 22 septembre 2011 (« for any item of data, or resource, that item of data should be owned by a single execution context for all mutations »)",
+        "url": "https://mechanical-sympathy.blogspot.com/2011/09/single-writer-principle.html"
+      },
+      {
+        "label": "Stripe, documentation Idempotent requests (réessayer une requête « without accidentally performing the same operation twice » ; le résultat de la première requête est enregistré et renvoyé pour la même clé), consultée le 4 octobre 2026",
+        "url": "https://docs.stripe.com/api/idempotent_requests"
       }
     ]
   },
@@ -14747,6 +14791,523 @@ window.DICO_TERMS = [
       {
         "label": "DSPy, GEPA optimization (trainset pour les retouches, valset pour choisir le programme, test final séparé « on examples that influenced neither step » ; sans valset, GEPA réutilise le trainset et « deliberately allows prompts to overfit those examples »)",
         "url": "https://dspy.ai/current/getting-started/gepa-optimization/"
+      }
+    ]
+  },
+  {
+    "id": "workflow-ou-agent",
+    "status": "live",
+    "num": "152",
+    "title": "Workflow ou agent",
+    "en": "Workflow vs agent",
+    "aliases": [
+      "workflow",
+      "workflows",
+      "agentic workflow",
+      "workflow vs agent",
+      "deterministic workflow",
+      "prompt chaining"
+    ],
+    "aliasesFr": [
+      "workflow ou agent",
+      "chaîne déterministe"
+    ],
+    "jargon": [
+      {
+        "say": "déterministe",
+        "means": "se dit d'une étape qui donne toujours le même résultat pour la même entrée, comme une règle écrite en code ; un modèle de langage ne l'est pas"
+      },
+      {
+        "say": "prompt chaining",
+        "means": "un workflow où chaque appel au modèle reprend la sortie du précédent dans un ordre fixé d'avance, par exemple écrire le plan d'un document, vérifier qu'il respecte des critères, puis rédiger le document"
+      },
+      {
+        "say": "escalade",
+        "means": "le moment où le système passe la main à une personne, avec les pièces rassemblées, parce que l'enjeu est trop grand ou que l'agent n'y arrive pas"
+      }
+    ],
+    "cat": "agents",
+    "links": [
+      "agent",
+      "boucle-agent",
+      "multi-agents",
+      "routage-de-modeles",
+      "mythe-ajouter-ia",
+      "evals",
+      "sandbox-et-permissions"
+    ],
+    "short": "Workflow ou agent, c'est la question de savoir qui fixe les étapes d'une tâche automatisée : le développeur, à l'avance, ou le modèle, en cours de route.",
+    "image": "« Le chauffeur du 63 a beau tenir le volant, c'est la RATP qui a tracé la ligne. Le taxi choisit ses rues d'après les bouchons, et toi, tu regardes tourner le compteur. »",
+    "imagineForm": "D",
+    "imagine": "« Tu peux me lister les étapes du traitement des réclamations, que je les fasse automatiser ? », demande Karine, la nouvelle responsable qualité, à Bernard, qui les traite depuis vingt-deux ans. « D'abord j'ouvre le mail et je cherche le numéro de commande, et après, ça dépend de ce que le client a vraiment voulu dire », répond-il.",
+    "full": [
+      "La question se pose dès qu'on automatise une tâche avec un modèle de langage. Anthropic y a répondu en décembre 2024 par un critère qui tient en une phrase, savoir si l'on peut écrire la liste des étapes avant de lancer. Si oui, c'est un workflow, un chemin tracé dans le code où le modèle intervient à des endroits prévus. Si la suite dépend de ce que le modèle découvre en route, c'est un agent, qui choisit lui-même ses actions et ses outils. Le cas qui trompe est celui où un modèle découpe la tâche et en confie les morceaux à d'autres. Les sous-tâches ne sont connues qu'au moment de lancer, et Anthropic range pourtant ce schéma parmi les workflows, parce que sa forme, découper, déléguer puis rassembler, reste écrite d'avance.",
+      "Le critère se joue étape par étape plutôt que pour tout un processus. Varick Agents, une société de San Francisco qui conçoit des agents pour de grandes entreprises, trie chaque étape dans l'une de trois cases. Ce qui suit une règle, comme payer une facture sous un certain montant quand elle correspond au bon de commande et au bon de réception, s'écrit en code, qui coûte peu, se vérifie et n'invente rien. Ce qui demande du jugement sur un cas déjà tranché des milliers de fois, comme imputer une dépense au bon compte comptable, va à un modèle, à condition que l'erreur coûte peu. Le reste revient à une personne, à qui un agent prépare le dossier. Quand une facture ne colle pas au bon de commande, l'agent rassemble les pièces et propose d'approuver, de rejeter ou de transmettre, et Varick estime que la personne tranche alors en 30 secondes au lieu de chercher 40 minutes dans ses mails.",
+      "OpenAI dit la même chose dans son guide d'avril 2025. Un agent se justifie pour des décisions nuancées, des règles devenues impossibles à maintenir ou des documents à interpréter, et sinon, écrit l'éditeur, « une solution déterministe peut suffire ». Les actions sensibles, irréversibles ou à fort enjeu, comme annuler une commande, accorder un gros remboursement ou payer, passent par un humain tant que la confiance dans l'agent ne s'est pas installée.",
+      "Varick raconte ainsi le cas d'un client qui rapprochait chaque mois plus de 300 comptes bancaires, avec plus de 12 000 écritures en attente et quatre jours passés, à chaque début de mois, à réclamer les relevés. Selon Varick, le temps partait dans l'attente des relevés et des réponses des contrôleurs, bien plus que dans le rapprochement lui-même. Dans le processus redessiné, les relevés arrivent d'eux-mêmes, des règles rapprochent tout ce qui se rapproche, un agent monte le dossier de chaque écart avec une proposition, et une personne traite sa file d'exceptions, pièces en main. C'est le récit d'un prestataire sur son propre client, mais le découpage se reproduit sur n'importe quel processus."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Le prestataire nous propose un agent pour tout le traitement des notes de frais, de la réception du ticket au remboursement."
+      },
+      {
+        "who": "a",
+        "text": "Demande-lui quelles étapes ont vraiment besoin d'un modèle ; vérifier qu'un ticket dépasse le plafond tient en une ligne de code, et c'est l'addition froissée d'un restaurant de Lisbonne qui mérite qu'on paie un modèle."
+      }
+    ],
+    "avoid": "« Un agent, c'est un workflow en plus intelligent. » L'agent ajoute de la liberté, et avec elle des tokens, de l'attente et des résultats moins prévisibles. Anthropic conseille de chercher la solution la plus simple et de n'ajouter de la complexité que lorsqu'elle améliore le résultat, ce qui veut parfois dire ne pas construire d'agent du tout.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Anthropic, Building effective agents, 19 décembre 2024 (workflows : « LLMs and tools are orchestrated through predefined code paths » ; agents : « LLMs dynamically direct their own processes and tool usage » ; agents pour les problèmes où l'on ne peut pas prévoir le nombre d'étapes ni coder un chemin fixe ; orchestrator-workers classé parmi les workflows, « subtasks aren't pre-defined, but determined by the orchestrator » ; « finding the simplest solution possible [...] might mean not building agentic systems at all » ; prompt chaining : plan, vérification du plan, rédaction)",
+        "url": "https://www.anthropic.com/engineering/building-effective-agents"
+      },
+      {
+        "label": "Vas Moza (Varick Agents), Don't Apply AI, blog Varick, page datée du 30 septembre 2026 (trois cases : règle « If X then Y » en code, jugement confié à un LLM quand il existe des milliers d'exemples tranchés et que le risque est faible, humain dans la boucle avec les pièces préparées ; paiement d'une facture sous seuil qui correspond au bon de commande et au bon de réception ; GL coding ; écart facture et bon de commande : approuver, rejeter ou transmettre, 40 minutes de recherche évitées, décision en 30 secondes ; client aux plus de 300 comptes bancaires, plus de 12 000 éléments ouverts, 4 jours pour obtenir les relevés, « matching was never the problem » ; processus redessiné : relevés en flux, rapprochement par règles, dossier monté par un agent, file d'exceptions humaine ; clients de 500 M$ à 100 Md$ de chiffre d'affaires)",
+        "url": "https://www.varickagents.com/blog/don-t-apply-ai"
+      },
+      {
+        "label": "Vas Moza (Varick Agents), Spend Less Tokens, blog Varick, page datée du 30 septembre 2026 (« the number of steps in a workflow and the amount of intelligence required in that workflow are two very different things » ; « If the answer can be known ahead of time, use code »)",
+        "url": "https://www.varickagents.com/blog/spend-less-tokens"
+      },
+      {
+        "label": "OpenAI, A practical guide to building agents, avril 2025, PDF créé le 7 avril 2025 (critères : « Complex decision-making », « Difficult-to-maintain rules », « Heavy reliance on unstructured data » ; « Otherwise, a deterministic solution may suffice » ; « High-risk actions » : annuler des commandes, autoriser de gros remboursements, effectuer des paiements, sous supervision humaine « until confidence in the agent's reliability grows »)",
+        "url": "https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf"
+      },
+      {
+        "label": "Varick Agents, page d'accueil (« Varick designs and deploys AI agent systems that execute operational workflows inside enterprise organizations », siège au 311 California Street, San Francisco)",
+        "url": "https://www.varickagents.com/"
+      }
+    ]
+  },
+  {
+    "id": "routage-de-modeles",
+    "status": "live",
+    "num": "153",
+    "title": "Routage de modèles",
+    "en": "Model routing",
+    "aliases": [
+      "model routing",
+      "LLM routing",
+      "LLM router",
+      "RouteLLM",
+      "model cascade",
+      "LLM cascade",
+      "90/9/1"
+    ],
+    "aliasesFr": [
+      "routeur de modèles",
+      "aiguillage entre modèles",
+      "cascade de modèles"
+    ],
+    "jargon": [
+      {
+        "say": "router",
+        "means": "le programme qui lit une demande et choisit le modèle qui y répondra ; à ne pas confondre avec le routeur interne d'un modèle MoE, qui répartit chaque token entre ses experts"
+      },
+      {
+        "say": "cascade",
+        "means": "on essaie d'abord le petit modèle et on ne passe au grand que si sa réponse ne tient pas ; en mai 2023, FrugalGPT égalait ainsi GPT-4 sur ses tests pour un coût jusqu'à 98 % plus bas"
+      },
+      {
+        "say": "90/9/1",
+        "means": "la répartition que revendique Varick Agents chez ses clients, 90 % des appels sur des modèles hors de la frontière, 9 % sur des modèles proches de la frontière et 1 % sur les plus puissants"
+      },
+      {
+        "say": "Pareto",
+        "means": "chez Uber, on ne retient que les modèles qu'aucun autre ne bat à la fois sur le coût par tâche réussie et sur la qualité, et on refait le choix quand un nouveau modèle sort"
+      }
+    ],
+    "cat": "inference",
+    "links": [
+      "cout-d-une-requete",
+      "tailles-de-modele",
+      "workflow-ou-agent",
+      "prompt-caching",
+      "multi-agents",
+      "evals",
+      "mythe-chatgpt-c-est-le-modele"
+    ],
+    "solutions": [
+      {
+        "name": "RouteLLM",
+        "kind": "bibliothèque open source",
+        "url": "https://lmsys.org/blog/2024-07-01-routellm/"
+      },
+      {
+        "name": "OpenRouter Auto Router",
+        "kind": "routeur commercial",
+        "url": "https://openrouter.ai/docs/guides/routing/routers/auto-router"
+      },
+      {
+        "name": "Not Diamond",
+        "kind": "routeur commercial",
+        "url": "https://www.notdiamond.ai/"
+      },
+      {
+        "name": "Microsoft Foundry model router",
+        "kind": "plateforme cloud",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-router"
+      },
+      {
+        "name": "Amazon Bedrock Intelligent Prompt Routing",
+        "kind": "plateforme cloud",
+        "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-routing.html"
+      }
+    ],
+    "short": "Le routage de modèles envoie chaque tâche ou chaque demande au plus petit modèle qui la réussit, et réserve les modèles les plus chers aux cas qui en ont besoin.",
+    "image": "Au garage, Serge confie les vidanges à l'apprenti et garde les boîtes de vitesses pour Gilles, qui coûte trois fois plus cher de l'heure. Le jour où une Twingo qui faisait « juste un petit bruit » est partie chez l'apprenti, Gilles a passé sa semaine sur la boîte.",
+    "imagineForm": "A",
+    "imagine": "Prends un agent qui tourne 40 000 fois par mois et qui lit 3 000 tokens et en écrit 500 à chaque passage. Tout confié à Claude Fable 5.1, en haut de la grille d'Anthropic, il coûte environ 2 200 dollars par mois ; réparti à 90 % sur Haiku 4.5, 9 % sur Sonnet 5.5 et 1 % sur Fable 5.1, environ 260. Si Haiku rate un passage sur dix et qu'on refait ceux-là sur Fable, la facture remonte à 460 dollars, encore près de cinq fois moins, à condition que quelque chose ait repéré les ratés.",
+    "full": [
+      "Chez Anthropic, en octobre 2026, le million de tokens écrits coûte 5 dollars avec Claude Haiku 4.5, 10 avec Sonnet 5.5 et 50 avec Fable 5.1, dix fois plus que le petit modèle. Le routage consiste à ne payer le haut de gamme que là où il change le résultat, et il prend deux formes. On fixe le modèle de chaque étape en concevant le système, ou bien un routeur choisit à chaque demande.",
+      "La première forme est la plus sûre, parce qu'elle se mesure avant la mise en service. OpenAI la conseille dans son guide d'avril 2025, qui propose de construire d'abord avec le modèle le plus capable pour fixer une référence, puis d'essayer des modèles plus petits et de garder ceux qui tiennent l'objectif. Varick Agents, qui conçoit des agents pour de grandes entreprises, en a fait sa règle 90/9/1, 90 % des appels hors de la frontière, 9 % près d'elle, 1 % sur les modèles les plus puissants. Elle y voit la source de factures de tokens réduites de plus de 90 %, un chiffre qu'elle tire de ses propres clients.",
+      "Le 27 août 2026, Uber a détaillé la façon dont elle fait ce choix pour ses agents de code. Pour uReview, son agent de relecture, elle a bâti un banc d'essai à partir de vraies pull requests aux bugs connus, classées faciles, moyennes et difficiles. Elle n'y retient que les modèles qu'aucun autre ne bat à la fois sur le coût par tâche réussie et sur la qualité. Elle refait ce choix sans cesse, puisque cette frontière se déplace toutes les quelques semaines. Ses sous-agents, qui reçoivent des tâches bien bornées, tournent par défaut sur un modèle moins cher, et un tableau de bord signale aux ingénieurs les sessions simples menées sur Opus que Sonnet aurait suffi à traiter.",
+      "La seconde forme demande au routeur de deviner la difficulté d'une demande avant qu'on y réponde. En juillet 2024, l'équipe de LMSYS a publié RouteLLM, des routeurs entraînés sur les votes de Chatbot Arena pour choisir entre GPT-4 et Mixtral 8x7B, un modèle bien moins cher. Sur le test MT Bench, le meilleur d'entre eux atteignait 95 % de la qualité de GPT-4 en ne lui envoyant que 14 % des questions.",
+      "Le cas le plus visible est celui de ChatGPT. Le 7 août 2025, GPT-5 arrive avec un routeur qui choisit en temps réel entre un modèle rapide et un modèle de raisonnement, selon le type de conversation, sa complexité et l'intention de l'utilisateur. Le lendemain, Sam Altman reconnaît qu'une panne a mis ce routeur hors service une partie de la journée et que GPT-5 « semblait bien plus bête ». En décembre, OpenAI le retire pour les comptes gratuits et Go. Selon Wired, il avait fait passer l'usage des modèles de raisonnement de moins de 1 % à 7 % chez les utilisateurs gratuits, ce qui coûtait cher, et la lenteur de ces réponses pesait sur le nombre d'utilisateurs actifs chaque jour. Un routeur se trompe donc dans les deux sens, et chaque erreur se paie, en réponses fausses quand il vise trop bas, en argent et en attente quand il vise trop haut."
+    ],
+    "then": "En juillet 2024, le routage était un sujet de recherche, et RouteLLM aiguillait entre deux modèles sur des bancs d'essai publics. En août 2025, il est entré dans le produit d'IA le plus utilisé avec GPT-5, et en 2026, des entreprises comme Uber choisissent un modèle par charge de travail à partir de bancs d'essai bâtis sur leur propre travail.",
+    "office": [
+      {
+        "who": "q",
+        "text": "On passe tout sur le petit modèle, ça divisera la facture par dix ?"
+      },
+      {
+        "who": "a",
+        "text": "Sur les tâches où ton éval montre qu'il tient, oui ; sur les autres, ses erreurs arriveront chez tes clients avant d'apparaître sur la facture."
+      }
+    ],
+    "avoid": "« Le routeur envoie chaque question au meilleur modèle pour elle. » Il choisit d'après une estimation de la difficulté faite avant toute réponse, et il se trompe. En janvier 2026, sur LLMRouterBench, un banc d'essai de 33 modèles, plusieurs routeurs récents, dont celui d'OpenRouter, ne faisaient pas mieux de façon fiable que d'envoyer tout au meilleur modèle.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Anthropic, documentation Pricing (Claude Fable 5.1 : 10 $ en entrée et 50 $ en sortie par million de tokens ; Claude Sonnet 5.5 : 2 $ et 10 $ ; Claude Haiku 4.5 : 1 $ et 5 $), consultée le 4 octobre 2026. Calcul de l'Imagine : par passage, Fable 5.1 = 3 000 × 10 / 10⁶ + 500 × 50 / 10⁶ = 0,055 $ ; Sonnet 5.5 = 0,006 + 0,005 = 0,011 $ ; Haiku 4.5 = 0,003 + 0,0025 = 0,0055 $. Tout en Fable : 40 000 × 0,055 = 2 200 $. Répartition 90/9/1 : 40 000 × (0,9 × 0,0055 + 0,09 × 0,011 + 0,01 × 0,055) = 259,6 $. Un passage Haiku sur dix refait sur Fable : 3 600 × 0,055 = 198 $, total 457,6 $ ; 2 200 / 457,6 = 4,8",
+        "url": "https://platform.claude.com/docs/en/about-claude/pricing"
+      },
+      {
+        "label": "Vas Moza (Varick Agents), Spend Less Tokens, blog Varick, page datée du 30 septembre 2026 (« use the smallest model that reliably handles it » ; « 90% non-frontier, 9% near-frontier, and 1% frontier. We call this the 90/9/1 split » ; « cut your token spend by over 90% » ; modèles évalués tâche par tâche)",
+        "url": "https://www.varickagents.com/blog/spend-less-tokens"
+      },
+      {
+        "label": "Vas Moza (Varick Agents), Don't Apply AI, blog Varick, page datée du 30 septembre 2026 (« what an agent that runs 40,000 times in a month costs » ; choix du modèle par type de tâche)",
+        "url": "https://www.varickagents.com/blog/don-t-apply-ai"
+      },
+      {
+        "label": "OpenAI, A practical guide to building agents, avril 2025 (« Not every task requires the smartest model » ; prototype avec le modèle le plus capable pour établir une référence, puis « swapping in smaller models » ; évals, objectif de précision, puis coût et latence)",
+        "url": "https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf"
+      },
+      {
+        "label": "Uday Kiran Medisetty (Uber), Running a Software Factory Efficiently at Uber Scale, 27 août 2026 (choix « Pareto efficient » : coût par tâche réussie, qualité, fiabilité ; banc d'essai d'uReview tiré de vraies pull requests aux bugs connus, classées easy, medium, hard ; « The frontier shifts every few weeks » ; sous-agents par défaut sur « a weaker, more cost-effective model » ; tableau de bord : « simple multi-turn sessions on Opus that Sonnet could easily fulfill »)",
+        "url": "https://www.uber.com/us/en/blog/efficient-software-factory/"
+      },
+      {
+        "label": "Ong, Almahairi, Wu, Chiang, Wu, Gonzalez, Kadous et Stoica (LMSYS), RouteLLM: An Open-Source Framework for Cost-Effective LLM Routing, 1er juillet 2024 (routeurs entraînés sur les préférences de Chatbot Arena ; GPT-4 Turbo contre Mixtral 8x7B ; sur MT Bench, avec données augmentées par un LLM juge, 95 % de la performance de GPT-4 avec 14 % d'appels à GPT-4)",
+        "url": "https://lmsys.org/blog/2024-07-01-routellm/"
+      },
+      {
+        "label": "Li et al., LLMRouterBench: A Massive Benchmark and Unified Framework for LLM Routing, 12 janvier 2026 (21 jeux de données, 33 modèles ; « several recent approaches, including commercial routers, fail to reliably outperform a simple baseline » ; OpenRouter ne bat pas le meilleur modèle unique)",
+        "url": "https://arxiv.org/abs/2601.07206"
+      },
+      {
+        "label": "Chen, Zaharia et Zou, FrugalGPT, 9 mai 2023 (cascade de LLM ; performance de GPT-4 égalée avec jusqu'à 98 % de coût en moins)",
+        "url": "https://arxiv.org/abs/2305.05176"
+      },
+      {
+        "label": "Wikipédia, GPT-5 (lancé le 7 août 2025 ; « a real-time router that decides which model to use based on conversation type, complexity, tool needs, and explicit user intent » ; Altman le lendemain : « the autoswitcher broke and was out of commission for a chunk of the day, and the result was GPT-5 seemed way dumber »)",
+        "url": "https://en.wikipedia.org/wiki/GPT-5"
+      },
+      {
+        "label": "TechCrunch, Sam Altman addresses 'bumpy' GPT-5 rollout, 8 août 2025 (« we had a sev and the autoswitcher was out of commission for a chunk of the day »), citation traduite",
+        "url": "https://techcrunch.com/2025/08/08/sam-altman-addresses-bumpy-gpt-5-rollout-bringing-4o-back-and-the-chart-crime/"
+      },
+      {
+        "label": "Maxwell Zeff, OpenAI Rolls Back ChatGPT's Model Router System for Most Users, Wired, 16 décembre 2025 (routeur retiré pour les offres Free et Go, GPT-5.2 Instant par défaut ; usage des modèles de raisonnement chez les gratuits passé de moins de 1 % à 7 % ; selon une source, effet négatif sur les utilisateurs actifs quotidiens ; routeur conservé pour les abonnés payants)",
+        "url": "https://www.wired.com/story/openai-router-relaunch-gpt-5-sam-altman/"
+      }
+    ]
+  },
+  {
+    "id": "mythe-ajouter-ia",
+    "status": "live",
+    "num": "154",
+    "title": "« Il suffit d'ajouter de l'IA à nos processus »",
+    "en": "Myth: just add AI to our processes",
+    "aliases": [
+      "paving the cow paths",
+      "business process reengineering",
+      "BPR",
+      "productivity paradox",
+      "Solow paradox",
+      "don't automate, obliterate"
+    ],
+    "aliasesFr": [
+      "ajouter de l'IA",
+      "réingénierie des processus",
+      "paradoxe de la productivité",
+      "paradoxe de Solow"
+    ],
+    "jargon": [
+      {
+        "say": "paving the cow paths",
+        "means": "« goudronner les chemins de vaches », l'expression de Michael Hammer en 1990 pour une informatique qui rend plus rapide un vieux circuit au lieu de le redessiner"
+      },
+      {
+        "say": "reengineering, BPR",
+        "means": "la réingénierie des processus, redessiner un circuit à partir du résultat attendu en supprimant les étapes qui n'existaient que pour l'ancienne organisation"
+      },
+      {
+        "say": "paradoxe de Solow",
+        "means": "l'écart entre une technologie qu'on voit partout et une productivité qui ne bouge pas dans les statistiques, d'après une remarque de l'économiste Robert Solow en 1987"
+      },
+      {
+        "say": "temps gagné",
+        "means": "les minutes économisées par une personne sur une tâche ; elles ne deviennent de la productivité que si le circuit autour en profite"
+      }
+    ],
+    "graphLabel": "Mythe : ajouter de l'IA",
+    "cat": "mythes",
+    "links": [
+      "workflow-ou-agent",
+      "human-in-the-loop",
+      "routage-de-modeles",
+      "evals",
+      "forward-deployed-engineer",
+      "mythe-95-pourcent"
+    ],
+    "short": "Ajouter de l'IA à un processus existant accélère les étapes qu'il contient sans toucher aux attentes et aux passages de main, là où se perd souvent l'essentiel du temps.",
+    "image": "« Le patron a pris un terminal sans contact pour que ça aille plus vite. Tu paies en une seconde, et tu attends toujours vingt minutes que Ginette voie que t'as levé la main. »",
+    "imagineForm": "E",
+    "imagine": "Au début des années 1980, Ford veut alléger son service des factures fournisseurs, plus de 500 personnes en Amérique du Nord. En rationalisant le circuit et en installant de nouveaux ordinateurs pour rapprocher plus vite la commande, le bon de réception et la facture, il compte réduire l'effectif d'environ 20 %. En 1990, quand Michael Hammer raconte l'histoire, Ford a demandé à ses fournisseurs de ne plus envoyer de facture et paie dès que la marchandise reçue correspond à la commande. Là où ce circuit est en place, le service tourne avec 75 % de personnes en moins.",
+    "full": [
+      "En juillet 1990, Michael Hammer, ancien professeur d'informatique du MIT devenu consultant, publie dans la Harvard Business Review « Reengineering Work: Don't Automate, Obliterate ». Selon lui, les lourds investissements informatiques des entreprises ont déçu parce qu'elles s'en servaient pour mécaniser leurs vieilles façons de faire, en gardant les processus intacts et en les accélérant à coups d'ordinateurs. Il est temps, écrit-il, d'arrêter de goudronner les chemins de vaches et de redessiner le travail lui-même. Chez Ford, l'idée décisive a été de remplacer une règle que personne n'avait jamais écrite, « on paie quand on reçoit la facture », par « on paie quand on reçoit la marchandise ».",
+      "Son autre exemple montre où part le temps. Chez l'assureur Mutual Benefit Life, une demande de contrat traversait jusqu'à 30 étapes, 5 services et 19 personnes, et mettait en général de 5 à 25 jours, passés surtout à faire circuler l'information d'un service à l'autre. Un autre assureur estimait qu'une demande restée 22 jours en traitement n'avait été travaillée que 17 minutes. Accélérer ces 17 minutes ne change presque rien au délai. Mutual Benefit Life a plutôt confié chaque demande à un seul gestionnaire, du dépôt jusqu'au contrat, et l'a équipé d'un poste qui réunissait toutes les informations, et le délai moyen est tombé à deux à cinq jours.",
+      "Le phénomène avait déjà un nom chez les économistes. En 1987, Robert Solow notait qu'on voyait l'ère de l'ordinateur partout, sauf dans les statistiques de productivité. Les gains sont arrivés dans les années 1990, et les études d'Erik Brynjolfsson et Lorin Hitt ont trouvé un lien net entre informatique et productivité, du moins quand l'investissement accompagnait un changement d'organisation.",
+      "L'IA rejoue la scène. D'octobre à décembre 2024, le ministère britannique du Commerce (Department for Business and Trade) a confié 1 000 licences de Microsoft 365 Copilot à ses agents pour leurs tâches habituelles. Son évaluation, publiée en août 2025, trouve 72 % d'utilisateurs satisfaits et des minutes gagnées sur les comptes rendus et les courriels. Lors des tâches observées, les utilisateurs de Copilot mettaient pourtant plus de temps que les autres à analyser des données dans Excel, pour un résultat moins exact. Le rapport ne trouve aucune preuve solide que ces minutes aient amélioré la productivité du ministère, tout en précisant que ce n'était pas le but premier de l'évaluation.",
+      "Redessiner d'abord, c'est partir du résultat attendu, compter les jours d'attente plutôt que les minutes de travail, puis décider pour chaque étape restante qui la fait. Varick Agents, une entreprise qui vend ce travail, en a fait sa doctrine dans un article du 30 septembre 2026. Une règle se code, un jugement peu risqué va à un modèle, et une décision à risque revient à un humain qui tranche sur un dossier préparé. Elle y cite un client chez qui l'ouverture d'un dossier demandait 25 minutes de travail et de 2 jours à 2 semaines de délai."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "On vient d'acheter 2 000 licences d'assistant IA. Comment on prouve à la direction que ça rapporte ?"
+      },
+      {
+        "who": "a",
+        "text": "Choisis un circuit, une demande client ou une clôture mensuelle, mesure son délai de bout en bout avant et après, et note où le dossier attend. Les minutes que chacun dit gagner ne se voient sur ce délai que si elles tombent là où le dossier attendait."
+      }
+    ],
+    "avoid": "« Le ministère britannique a montré que l'IA ne sert à rien. » Son évaluation a trouvé des gains réels sur certaines tâches, comme les synthèses de rapports, et des pertes sur d'autres ; ce qu'elle ne trouve pas, c'est un effet sur la productivité du ministère, qu'elle n'avait d'ailleurs pas pour but premier de mesurer.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Michael Hammer, Reengineering Work: Don't Automate, Obliterate, Harvard Business Review, juillet-août 1990 (« use technology to mechanize old ways of doing business » ; « It is time to stop paving the cow paths » ; Ford : plus de 500 personnes aux comptes fournisseurs en Amérique du Nord, objectif initial de 20 % d'effectif en moins, 5 personnes chez Mazda, « invoiceless processing », 14 éléments à rapprocher puis 3, 75 % d'effectif en moins là où le nouveau processus est en place, règle « We pay when we receive the invoice » remplacée par « We pay when we receive the goods » ; Mutual Benefit Life : jusqu'à 30 étapes, 5 services, 19 personnes, 5 à 25 jours, gestionnaire unique « case manager », 2 à 5 jours en moyenne ; un autre assureur : 22 jours de traitement pour 17 minutes de travail)",
+        "url": "https://hbr.org/1990/07/reengineering-work-dont-automate-obliterate"
+      },
+      {
+        "label": "Wikipedia, Michael Martin Hammer (professeur d'informatique au MIT, consultant à partir de 1987, fondateur de la réingénierie des processus avec James Champy)",
+        "url": "https://en.wikipedia.org/wiki/Michael_Martin_Hammer"
+      },
+      {
+        "label": "Wikipedia, Productivity paradox (Robert Solow, New York Times Book Review, 12 juillet 1987 : « You can see the computer age everywhere but in the productivity statistics » ; terme formalisé par Erik Brynjolfsson en 1993 ; retour des gains dans les années 1990 ; Brynjolfsson et Hitt, 1996 et 1998 : relation positive entre informatique et productivité quand l'investissement accompagne des changements d'organisation)",
+        "url": "https://en.wikipedia.org/wiki/Productivity_paradox"
+      },
+      {
+        "label": "Department for Business and Trade, Microsoft 365 Copilot evaluation, août 2025 (pilote de 1 000 licences d'octobre à décembre 2024, sans contrefactuel ; 72 % de répondants satisfaits ou très satisfaits ; gains de temps sur les tâches écrites ; tâches observées : analyse Excel en 25 min 01 contre 20 min 33 et exactitude de 1,5 contre 2,7 sur 5, diapositives PowerPoint plus de 7 minutes plus vite mais de moins bonne qualité ; « We did not find robust evidence to suggest that time savings are leading to improved productivity », ce n'était pas un objectif principal de l'évaluation ; 1,14 action Copilot par utilisateur et par jour)",
+        "url": "https://assets.publishing.service.gov.uk/media/68adbe409e1cebdd2c96a19d/dbt-microsoft-365-copilot-evaluation.pdf"
+      },
+      {
+        "label": "Vas Moza (Varick Agents), Don't Apply AI, 30 septembre 2026 (affirmations d'un prestataire qui vend ce service : trois cases, « Deterministic », « Agentic » pour un jugement peu risqué, humain pour une décision à risque ; client dont l'ouverture d'un dossier demandait 25 minutes de travail pour un délai de 2 jours à 2 semaines ; reprise de Hammer et des « cow paths »)",
+        "url": "https://www.varickagents.com/blog/don-t-apply-ai"
+      }
+    ]
+  },
+  {
+    "id": "forward-deployed-engineer",
+    "status": "live",
+    "num": "155",
+    "title": "Forward-deployed engineer",
+    "en": "forward-deployed engineer",
+    "aliases": [
+      "FDE",
+      "forward deployed engineer",
+      "forward deployed software engineer",
+      "FDSE",
+      "Delta",
+      "forward deployed engineering",
+      "services-led growth"
+    ],
+    "aliasesFr": [
+      "ingénieur déployé chez le client",
+      "ingénieur en déploiement avancé"
+    ],
+    "jargon": [
+      {
+        "say": "FDE",
+        "means": "forward-deployed engineer, l'ingénieur qu'un éditeur installe chez un client pour y écrire du code de production avec les outils de l'éditeur"
+      },
+      {
+        "say": "Delta",
+        "means": "le nom du poste chez Palantir, qui l'a créé au début des années 2010 ; l'ingénieur produit classique y était appelé Dev"
+      },
+      {
+        "say": "services-led growth",
+        "means": "la croissance tirée par le service, la thèse d'Andreessen Horowitz en juin 2025 selon laquelle une jeune entreprise d'IA gagne à vendre beaucoup de mise en place, même au prix de sa marge"
+      },
+      {
+        "say": "Applied AI",
+        "means": "le nom de l'équipe où travaillent les FDE d'Anthropic, entre la vente, le produit et l'ingénierie"
+      }
+    ],
+    "cat": "ecosysteme",
+    "links": [
+      "workflow-ou-agent",
+      "mythe-ajouter-ia",
+      "harness",
+      "mcp",
+      "labs",
+      "mythe-95-pourcent"
+    ],
+    "short": "Un forward-deployed engineer est un ingénieur qu'un éditeur de logiciel ou d'IA envoie chez un client pour construire dans ses systèmes ce que le produit seul ne fait pas.",
+    "image": "Yannick, poseur de cuisines, passe trois jours chez chaque client à découper autour du compteur à gaz que le plan ignorait. Quand il a taillé la même encoche dans quarante pavillons du même lotissement, l'usine l'a mise au catalogue.",
+    "imagineForm": "B",
+    "imagine": "Ouvre un chatbot grand public, sans accès à tes documents, et demande-lui comment se passe le remboursement d'une note de frais dans ton entreprise. Il te décrira un circuit générique, ou il te demandera de le lui expliquer. Le nom de l'outil, le seuil au-delà duquel ton manager doit signer, le justificatif que la compta refuse toujours, tout ce qui manque à sa réponse est ce qu'un forward-deployed engineer vient chercher sur place.",
+    "full": [
+      "Le poste vient de Palantir, l'éditeur de logiciels d'analyse de données qui travaille pour la police, l'armée, d'autres administrations et des entreprises. Au début des années 2010, il y envoie des ingénieurs chez ses clients, qu'il appelle les Deltas. Palantir résume la différence avec ses ingénieurs produit en deux formules, « une capacité, beaucoup de clients » pour le Dev, et « un client, beaucoup de capacités » pour le Delta. Jusque vers 2016, l'entreprise comptait plus de Deltas que d'ingénieurs produit ; quand elle a lancé sa plateforme Foundry cette année-là, une partie d'entre eux est retournée au produit.",
+      "Les labs d'IA ont repris le modèle. Début 2025, Colin Jarvis montait chez OpenAI une équipe de deux FDE, qui en comptait plus de dix en août, dans huit villes et sur trois continents. Le 11 mai 2026, OpenAI a lancé une société entière, l'OpenAI Deployment Company, dotée de 4 milliards de dollars avec 19 investisseurs, et y a fait entrer environ 150 ingénieurs en rachetant le cabinet Tomoro. Anthropic recrute aussi des FDE, à Paris, Munich ou Londres.",
+      "L'offre d'emploi d'Anthropic à Paris, mise à jour le 28 août 2026, décrit le travail concret. Le FDE développe des applications de production avec Claude à l'intérieur des systèmes du client, livre des serveurs MCP, des sous-agents et des skills, et passe 25 à 50 % de son temps en déplacement. Il doit aussi repérer ce qui se répète d'un déploiement à l'autre et le remonter aux équipes produit. Varick Agents, qui vend ce service, décrit chez ses clients le même enchaînement, une cartographie du travail réel, des evals qui vérifient l'agent, puis la mise en production.",
+      "La critique tient en une question, celle du conseil qui ne dit pas son nom. Un FDE, c'est du service, facturé à part ou inclus dans le contrat, et le service rapporte moins que le logiciel. En juin 2025, Andreessen Horowitz rappelait qu'à leur entrée en Bourse, ServiceNow et Workday n'avaient que 63,2 % et 54,1 % de marge brute, loin des 80 % qu'on attend d'un éditeur, et conseillait pourtant de vendre ce service à prix coûtant. Le jour du lancement de la société d'OpenAI, le site Channel Dive titrait sur une « activité de conseil autonome »."
+    ],
+    "then": "Début 2025, l'équipe de forward-deployed engineers d'OpenAI comptait deux personnes. En mai 2026, OpenAI crée une société consacrée au déploiement chez les clients et y fait entrer d'un coup environ 150 ingénieurs et spécialistes du déploiement.",
+    "office": [
+      {
+        "who": "q",
+        "text": "L'éditeur nous offre deux FDE pendant six mois avec le contrat. On a besoin d'une équipe IA en interne, du coup ?"
+      },
+      {
+        "who": "a",
+        "text": "Plus que jamais, puisqu'ils partiront au bout de six mois. Mets dès le premier jour un de tes ingénieurs à côté d'eux, et exige qu'ils laissent du code que ton équipe sait relancer et des evals qu'elle sait lire, sinon tu auras loué un système que personne chez toi ne sait réparer."
+      }
+    ],
+    "avoid": "« Un FDE, c'est un consultant avec un titre d'ingénieur. » La différence se vérifie à ce qui remonte au produit ; chez Palantir, ce que les Deltas avaient bricolé client par client a fini dans une plateforme vendue à tous, et l'offre d'Anthropic demande de rapporter aux équipes produit ce qui se répète. Un FDE dont rien ne remonte fait bien du conseil.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Gergely Orosz, What are Forward Deployed Engineers, and why are they so in demand?, The Pragmatic Engineer, 12 août 2025 (poste créé chez Palantir au début des années 2010 sous le nom de « Delta » ; citation de Palantir : « one capability, many customers » pour un Dev, « one customer, many capabilities » pour un Delta ; plus de Deltas que d'ingénieurs logiciels jusque vers 2016, lancement de Foundry cette année-là ; Colin Jarvis, Head of Forward Deployed Engineering chez OpenAI ; équipe créée début 2025, de deux à plus de dix ingénieurs, huit villes, trois continents)",
+        "url": "https://newsletter.pragmaticengineer.com/p/forward-deployed-engineers"
+      },
+      {
+        "label": "Anthropic, offre « Forward Deployed Engineer », Paris, mise à jour le 28 août 2026 (équipe Applied AI ; travail au sein des systèmes clients pour développer des applications de production avec Claude ; livraison de serveurs MCP, sous-agents et compétences d'agent ; codifier les modèles de déploiement reproductibles et les remonter aux équipes Produit et Ingénierie ; déplacements de 25 à 50 % ; plus de 8 ans d'expérience). Autres offres FDE ouvertes à Munich et Londres, et de manager FDE à Londres et New York, sur le même site (consulté le 4 octobre 2026)",
+        "url": "https://job-boards.greenhouse.io/anthropic/jobs/5391021008"
+      },
+      {
+        "label": "Matt Ashare, OpenAI spins up standalone consulting business, Channel Dive, 11 mai 2026 (OpenAI Deployment Company, 4 milliards de dollars, OpenAI et 19 investisseurs menés par TPG avec Advent, Bain Capital et Brookfield ; rachat de Tomoro, environ 150 ingénieurs et spécialistes du déploiement)",
+        "url": "https://www.channeldive.com/news/openai-deployment-company-4-billion-ai-consulting-integration/819888/"
+      },
+      {
+        "label": "Joe Schmidt (Andreessen Horowitz), Trading Margin for Moat: Why the Forward Deployed Engineer Is the Hottest Job in Startups, 4 juin 2025 (marge brute à l'introduction en Bourse : ServiceNow 63,2 %, Workday 54,1 %, contre environ 80 % idéalement pour du logiciel ; critiques : le service limite le passage à l'échelle et devrait revenir aux partenaires ; conseil de vendre le service à prix coûtant)",
+        "url": "https://a16z.com/services-led-growth/"
+      },
+      {
+        "label": "Eyad Khrais (Varick Agents), Forward-Deployed Engineering 101, 30 septembre 2026 (présentation d'un prestataire qui vend ce métier : audit des flux de travail, evals, déploiement ; origine du terme chez Palantir)",
+        "url": "https://www.varickagents.com/blog/forward-deployed-engineering-101"
+      }
+    ]
+  },
+  {
+    "id": "mythe-95-pourcent",
+    "status": "live",
+    "num": "156",
+    "title": "« 95 % des projets d'IA échouent »",
+    "en": "Myth: 95% of AI projects fail",
+    "aliases": [
+      "95% of AI pilots fail",
+      "GenAI Divide",
+      "MIT NANDA report",
+      "State of AI in Business 2025",
+      "shadow AI"
+    ],
+    "aliasesFr": [
+      "95 % des pilotes échouent",
+      "rapport du MIT sur les pilotes",
+      "fracture de l'IA générative"
+    ],
+    "jargon": [
+      {
+        "say": "pilot to production",
+        "means": "le passage d'un essai limité à un outil utilisé pour de bon dans le travail ; c'est l'étape que le rapport du MIT dit rarement franchie"
+      },
+      {
+        "say": "P&L impact",
+        "means": "un effet visible sur le compte de résultat, en chiffre d'affaires ou en coûts, le critère de réussite le plus exigeant qu'on puisse fixer à un pilote"
+      },
+      {
+        "say": "shadow AI",
+        "means": "l'usage d'outils d'IA personnels au travail, sans abonnement de l'entreprise ; dans le même rapport, il concernait des salariés de plus de 90 % des entreprises interrogées"
+      }
+    ],
+    "graphLabel": "Mythe : 95 % des projets échouent",
+    "cat": "mythes",
+    "links": [
+      "mythe-ajouter-ia",
+      "forward-deployed-engineer",
+      "evals",
+      "mythe-remplace-metier",
+      "mythe-taux-d-erreur"
+    ],
+    "short": "Le chiffre de 95 % de projets d'IA en échec vient d'un rapport de 2025 au petit échantillon, qui comptait parmi les échecs les entreprises n'ayant jamais lancé de pilote.",
+    "image": "« Quatre-vingt-quinze pour cent de nos adhérents n'ont jamais fini un marathon », annonce Mireille à l'assemblée du club. Sur les vingt qui ont pris le départ, cinq ont passé la ligne ; les quatre-vingts autres sont à l'aquagym.",
+    "imagineForm": "D",
+    "imagine": "« Le MIT dit que 95 % des pilotes d'IA échouent, on arrête le nôtre ? », demande Hélène en septembre 2025 au collègue qui a lu le rapport en entier. « Pour y compter comme une réussite, un outil devait avoir produit, d'après ses utilisateurs ou ses dirigeants, un effet marqué et durable sur la productivité ou les comptes, mesuré six mois après le pilote », répond-il.",
+    "full": [
+      "Le rapport s'intitule « The GenAI Divide: State of AI in Business 2025 ». Il est daté de juillet 2025 et signé par quatre auteurs de Project NANDA, une initiative née au MIT Media Lab. Il repose sur une revue de plus de 300 projets annoncés publiquement, des entretiens avec des représentants de 52 organisations et 153 réponses de dirigeants recueillies lors de quatre grandes conférences professionnelles, entre janvier et juin 2025. Sa phrase centrale affirme que 95 % des organisations n'obtiennent aucun retour de leurs investissements en IA générative.",
+      "Le chiffre se lit sur un seul graphique. Pour les outils d'IA conçus pour une tâche précise, 60 % des organisations en ont étudié un, 20 % en ont essayé un en pilote et 5 % l'ont mis en place avec succès. Les 95 % comptent donc aussi les 80 % qui n'ont jamais lancé de pilote, et parmi celles qui l'avaient fait, environ une sur quatre avait réussi. Les auteurs préviennent eux-mêmes que ces chiffres sont indicatifs, tirés d'entretiens et non de comptes publiés, et qu'un délai de six mois peut sous-estimer la réussite des projets complexes.",
+      "Le 18 août 2025, le magazine Fortune titre que 95 % des pilotes d'IA générative en entreprise échouent, et décrit l'étude comme fondée sur 150 entretiens et une enquête auprès de 350 salariés. Le lendemain, le Nasdaq perd 1,46 % et Palantir plus de 9 %, et une partie de la presse y voit l'effet du rapport et d'une remarque de Sam Altman sur une bulle de l'IA. Le rapport, lui, ne s'obtenait qu'en remplissant un formulaire. Le 26 août, le site Futuriom relevait que le chiffre tenait en une phrase sans calcul détaillé, et que le projet NANDA développe justement les protocoles d'agents que le rapport recommande.",
+      "Un an plus tard, le chiffre circule toujours, jusqu'en ouverture d'articles de prestataires qui vendent du déploiement d'agents, comme Varick Agents le 30 septembre 2026. Ce qui reste vrai est plus modeste et mieux mesuré. En février 2026, des économistes du National Bureau of Economic Research ont interrogé près de 6 000 dirigeants aux États-Unis, au Royaume-Uni, en Allemagne et en Australie. Plus de 80 % des entreprises ne voyaient encore aucun effet de l'IA sur leur productivité ni sur leurs effectifs. Les mêmes dirigeants en attendent une hausse de productivité de 1,4 % sur les trois années suivantes."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Le comité de direction ressort le chiffre des 95 % pour bloquer notre pilote. Je réponds quoi ?"
+      },
+      {
+        "who": "a",
+        "text": "Propose d'écrire avant de lancer le chiffre que le pilote doit faire bouger, la date à laquelle on le regarde et ce qu'on fait s'il ne bouge pas. Un pilote jugé sur un critère fixé d'avance t'en apprendra plus sur ton entreprise que le pourcentage d'une enquête sur d'autres."
+      }
+    ],
+    "avoid": "« Le chiffre du MIT est faux, donc l'IA fonctionne en entreprise. » Les critiques visent le calcul et l'échantillon, pas le constat d'ensemble ; en février 2026, plus de 80 % des entreprises interrogées par le NBER ne voyaient encore aucun effet de l'IA sur leur productivité.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Aditya Challapally, Chris Pease, Ramesh Raskar et Pradyumna Chari (MIT NANDA), The GenAI Divide: State of AI in Business 2025, juillet 2025, copie du PDF (recherche de janvier à juin 2025 ; plus de 300 initiatives publiques, 52 organisations interrogées, 153 dirigeants sondés lors de quatre conférences ; « 95% of organizations are getting zero return » ; outils spécialisés : 60 % étudiés, 20 % en pilote, 5 % mis en place avec succès ; réussite : « marked and sustained productivity and/or P&L impact » selon utilisateurs ou dirigeants, mesurée 6 mois après le pilote ; chiffres « directionally accurate based on individual interviews » ; « Six-month observation period may be insufficient » ; 40 % des entreprises ont un abonnement LLM, des salariés de plus de 90 % en utilisent ; NANDA s'appuie sur MCP et A2A). Calcul : 5 / 20 = 25 % des organisations qui ont lancé un pilote",
+        "url": "https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf"
+      },
+      {
+        "label": "Sheryl Estrada, MIT report: 95% of generative AI pilots at companies are failing, Fortune, 18 août 2025 (étude présentée comme fondée sur « 150 interviews with leaders, a survey of 350 employees, and an analysis of 300 public AI deployments »)",
+        "url": "https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/"
+      },
+      {
+        "label": "John Towfighi, AI and tech stocks slide as summer rally peters out, CNN, 20 août 2025 (Nasdaq -1,46 % le mardi 19 août, Palantir -9,35 % ; pas de déclencheur explicite, mais des investisseurs citent les propos de Sam Altman et le rapport du MIT)",
+        "url": "https://www.cnn.com/2025/08/20/business/us-stock-market-tech-ai-selloff"
+      },
+      {
+        "label": "Beatrice Nolan, U.S. tech stocks slide after Altman warns of 'bubble' in AI and MIT study doubts the hype, Fortune, 20 août 2025 (Nvidia -3,5 %, Palantir près de -10 % ; baisse « sparked in part » par le rapport du MIT)",
+        "url": "https://fortune.com/2025/08/20/us-tech-stocks-slide-altman-bubble-ai-mit-study/"
+      },
+      {
+        "label": "R. Scott Raynovich, Why We Don't Believe MIT NANDA's Weird AI Study, Futuriom, 26 août 2025 (« The 95% figure is presented in one sentence » ; rapport derrière un formulaire ; NANDA, projet issu du MIT Media Lab qui développe des protocoles d'agents ; critique de Kevin Werbach, Wharton)",
+        "url": "https://www.futuriom.com/articles/news/why-we-dont-believe-mit-nandas-werid-ai-study/2025/08"
+      },
+      {
+        "label": "Rob Wiblin, The story behind the bad AI stat that moved markets and misled millions, 80,000 Hours, 28 avril 2026, enregistré le 13 février 2026 (80 % des entreprises n'avaient jamais lancé de pilote d'outil sur mesure ; environ un quart de réussite parmi celles qui l'avaient fait ; Fortune annonçait 150 entretiens et 350 salariés contre 52 entretiens et 153 réponses ; rapport accessible par un formulaire Google)",
+        "url": "https://80000hours.org/podcast/episodes/ai-workplace-mit-study/"
+      },
+      {
+        "label": "Yotzov, Barrero, Bloom, Davis et al., Firm Data on AI, NBER Working Paper 34836, février 2026 (près de 6 000 dirigeants aux États-Unis, au Royaume-Uni, en Allemagne et en Australie ; plus de 80 % des entreprises sans effet de l'IA sur l'emploi ni la productivité au cours des trois dernières années ; prévision de +1,4 % de productivité sur trois ans)",
+        "url": "https://www.nber.org/papers/w34836"
+      },
+      {
+        "label": "Daniel Kornum (Varick Agents), If AI Is So Great, Why Isn't It Working, 30 septembre 2026 (« 5% of integrated AI pilots are pulling millions in value. The other 95% have nothing to show for it »)",
+        "url": "https://www.varickagents.com/blog/if-ai-is-so-great-why-isn-t-it-working"
       }
     ]
   },
