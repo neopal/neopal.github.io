@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="mythe-ajouter-ia-t">
+<title id="mythe-ajouter-ia-t">Trois frises du délai d'une demande d'assurance : 22 jours dont 17 minutes de travail ; presque le même délai quand le travail va deux fois plus vite ; 2 à 5 jours quand un seul gestionnaire suit la demande de bout en bout.</title>
+<text class="m" x="0" y="16">chez un assureur</text>
+<rect class="fd" x="20" y="26" width="320" height="22" rx="3"/>
+<rect class="fa" x="96" y="26" width="3" height="22"/>
+<text class="m mu" x="222" y="41" text-anchor="middle">attentes entre services</text>
+<path class="la" d="M97 52 V62"/>
+<text class="m ac" x="20" y="78">17 minutes de travail</text>
+<text class="m mu" x="340" y="78" text-anchor="end">22 jours</text>
+<text class="m" x="0" y="112">si une IA faisait le travail 2 fois plus vite</text>
+<rect class="fd" x="20" y="122" width="319" height="22" rx="3"/>
+<rect class="fa" x="96" y="122" width="1.5" height="22"/>
+<text class="m mu" x="222" y="137" text-anchor="middle">attentes entre services</text>
+<text class="m mu" x="340" y="164" text-anchor="end">presque 22 jours</text>
+<text class="m" x="0" y="198">Mutual Benefit Life, un gestionnaire</text>
+<text class="m" x="0" y="216">suit chaque demande du début à la fin</text>
+<rect class="fa" x="20" y="226" width="29" height="22" rx="3"/>
+<rect class="fa" x="49" y="226" width="44" height="22" opacity="0.45"/>
+<text class="m ac" x="104" y="242">2 à 5 jours</text>
+<text class="i mu" x="0" y="278">Le délai ne fond que si les attentes disparaissent.</text>
+</svg>

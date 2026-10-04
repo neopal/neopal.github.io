@@ -8,7 +8,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/</loc>
-        <lastmod>2026-10-03</lastmod>
+        <lastmod>2026-10-04</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -110,7 +110,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/evals/</loc>
-        <lastmod>2026-10-03</lastmod>
+        <lastmod>2026-10-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -164,7 +164,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/agent/</loc>
-        <lastmod>2026-10-03</lastmod>
+        <lastmod>2026-10-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -320,7 +320,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/cout-d-une-requete/</loc>
-        <lastmod>2026-10-03</lastmod>
+        <lastmod>2026-10-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -500,7 +500,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/multi-agents/</loc>
-        <lastmod>2026-10-03</lastmod>
+        <lastmod>2026-10-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -914,7 +914,37 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/hill-climbing/</loc>
-        <lastmod>2026-10-03</lastmod>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://neopal.github.io/lexique/workflow-ou-agent/</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://neopal.github.io/lexique/routage-de-modeles/</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://neopal.github.io/lexique/mythe-ajouter-ia/</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://neopal.github.io/lexique/forward-deployed-engineer/</loc>
+        <lastmod>2026-10-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://neopal.github.io/lexique/mythe-95-pourcent/</loc>
+        <lastmod>2026-10-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>

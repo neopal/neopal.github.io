@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 372" role="img" aria-labelledby="workflow-ou-agent-t">
+<title id="workflow-ou-agent-t">Le traitement d'une facture découpé en étapes, chacune rangée dans une case : la réception, le contrôle et le paiement d'une facture conforme sont du code ; l'imputation comptable et le dossier monté en cas d'écart reviennent à un modèle ; la décision finale revient à une personne, qui approuve, rejette ou transmet.</title>
+<text class="m mu" x="0" y="31">code</text>
+<rect class="bx" x="70" y="10" width="190" height="34" rx="3"/>
+<text class="m" x="165" y="32" text-anchor="middle">facture reçue</text>
+<path class="lm" d="M165 44 V64"/><path class="lm" d="M160 58 l5 6 l5 -6"/>
+<text class="m ac" x="0" y="94">modèle</text>
+<rect class="bxa" x="70" y="66" width="190" height="48" rx="3"/>
+<text class="m" x="165" y="86" text-anchor="middle">chaque ligne imputée</text>
+<text class="m" x="165" y="104" text-anchor="middle">au bon compte</text>
+<path class="lm" d="M165 114 V134"/><path class="lm" d="M160 128 l5 6 l5 -6"/>
+<text class="m mu" x="0" y="171">code</text>
+<rect class="bx" x="70" y="136" width="190" height="66" rx="3"/>
+<text class="m" x="165" y="157" text-anchor="middle">conforme à la commande</text>
+<text class="m" x="165" y="174" text-anchor="middle">et à la réception,</text>
+<text class="m" x="165" y="191" text-anchor="middle">sous le seuil ?</text>
+<path class="lm" d="M260 169 H284"/><path class="lm" d="M278 164 l6 5 l-6 5"/>
+<text class="m mu" x="262" y="157">oui</text>
+<rect class="bx" x="288" y="152" width="62" height="34" rx="3"/>
+<text class="m" x="319" y="174" text-anchor="middle">payée</text>
+<path class="lm" d="M165 202 V230"/><path class="lm" d="M160 224 l5 6 l5 -6"/>
+<text class="m mu" x="174" y="221">non</text>
+<text class="m ac" x="0" y="259">modèle</text>
+<rect class="bxa" x="70" y="232" width="190" height="48" rx="3"/>
+<text class="m" x="165" y="252" text-anchor="middle">un agent monte</text>
+<text class="m" x="165" y="270" text-anchor="middle">le dossier de l'écart</text>
+<path class="lm" d="M165 280 V300"/><path class="lm" d="M160 294 l5 6 l5 -6"/>
+<text class="m b" x="0" y="329">humain</text>
+<rect class="fd" x="70" y="302" width="190" height="48" rx="3"/>
+<text class="m b" x="165" y="322" text-anchor="middle">approuver, rejeter</text>
+<text class="m b" x="165" y="340" text-anchor="middle">ou transmettre</text>
+<text class="m ac" x="270" y="314">30 s</text>
+<text class="m ac" x="270" y="331">au lieu de</text>
+<text class="m ac" x="270" y="348">40 min</text>
+</svg>
