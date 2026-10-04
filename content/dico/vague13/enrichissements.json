@@ -1,0 +1,128 @@
+{
+  "evals": {
+    "full": [
+      "Une éval associe une tâche, une façon de la noter et plusieurs essais. Le correcteur peut être un test automatique, un autre modèle qui applique une grille, ou un humain, et il doit regarder le résultat plutôt que le discours. Dans son guide de janvier 2026, Anthropic prend l'exemple d'un agent qui écrit « votre vol est réservé » ; ce qui compte, c'est qu'une réservation existe dans la base.",
+      "On répète chaque tâche parce qu'un modèle ne répond pas deux fois pareil. En juin 2024, le benchmark τ-bench a montré que GPT-4o réussissait moins de la moitié de ses tâches face à un client simulé, et qu'en vente au détail il réussissait la même tâche huit fois de suite dans moins d'un quart des cas.",
+      "Pour démarrer, Anthropic conseille 20 à 50 tâches tirées de vrais échecs, puis de lire les transcriptions, parce qu'un échec révèle aussi bien une erreur de l'agent qu'un correcteur mal écrit. Sur une tâche de réservation de vol de τ2-bench, Claude Opus 4.5 a trouvé dans le règlement une faille qui servait mieux le client, et l'éval l'a compté en échec.",
+      "Ce jeu de départ s'appelle souvent un golden dataset. Chaque ligne y est une vraie demande, tirée si possible des échanges avec les utilisateurs, avec la réponse ou l'action attendue, fixée d'avance par quelqu'un qui connaît le métier. Chez Varick Agents, qui construit des agents pour de grandes entreprises, on y note aussi pourquoi cette réponse est la bonne. Une vingtaine de lignes suffisent au début, parce qu'un changement fait alors de grands écarts de score, visibles sur peu de cas.",
+      "Pour un agent, la note se dédouble. Le résultat (outcome) dit si la facture est rangée au bon endroit ou le doublon signalé, et la trajectoire (trajectory), le journal de chaque outil appelé avec ses arguments, dit comment l'agent y est arrivé. Eyad Khrais, de Varick, demande de rapporter les deux notes séparément. Un agent qui classe bien 95 % des factures mais touche un champ interdit dans 4 % des passages paraît excellent sur une note unique, et fait des dégâts en production. Anthropic met en garde contre l'excès inverse, exiger une suite d'appels précise, alors que les agents trouvent souvent des chemins valides que personne n'avait prévus. Sur la trajectoire, on vérifie donc les interdits, comme un paiement envoyé avant l'accord, plutôt que l'ordre des étapes.",
+      "Selon le guide qu'Anthropic a publié le 28 septembre 2026, une bonne éval se reconnaît à quatre signes. Ses tâches ressemblent à celles du vrai usage, plutôt qu'à celles qu'il était facile d'écrire ou de noter. Un modèle plus fort, ou le même modèle qui réfléchit plus longtemps, y obtient un meilleur score, faute de quoi des tâches ambiguës ou un correcteur mal réglé le retiennent. Le meilleur modèle y reste nettement sous les 100 %, sans que l'écart vienne de tâches impossibles, et le score bouge peu d'un passage à l'autre.",
+      "Le même guide met en garde contre l'échantillonnage adverse, qui consiste à retenir les cas que le modèle du moment rate. L'éval mesure alors les points faibles de ce modèle-là plutôt que ce qui est difficile dans ton métier, et un cas difficile ne devrait y entrer que si quelqu'un sait dire pourquoi il l'est. Les tâches qui ne progressent jamais méritent aussi qu'on les relise. Quand Anthropic a amélioré par hill climbing sa propre skill claude-api, l'une d'elles demandait d'intercepter un type d'erreur alors que son correcteur en exigeait une chaîne d'au moins trois, et le correcteur d'une autre contredisait la documentation."
+    ],
+    "sources": [
+      {
+        "label": "Anthropic, Demystifying evals for AI agents, 9 janvier 2026 (tâches, essais, correcteurs, réservation à vérifier dans la base, 20 à 50 tâches tirées de vrais échecs, pass^k et 0,75^3 = 42 %, faille trouvée par Opus 4.5 sur τ2-bench)",
+        "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+      },
+      {
+        "label": "Yao et al., τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains, 17 juin 2024 (gpt-4o sous 50 % de réussite, pass^8 sous 25 % en vente au détail)",
+        "url": "https://arxiv.org/abs/2406.12045"
+      },
+      {
+        "label": "Lance Martin (Anthropic), Automating eval design and hillclimbing with Claude, 28 septembre 2026 (quatre éléments d'une bonne éval : « Eval tasks mirror production », « Performance improves with stronger models and more thinking », « passable headroom at the frontier » sans tâches impossibles ou ambiguës, « Low run-to-run variance » ; « Adversarial sampling » : des cas choisis parce que le modèle du jour les rate mesurent son « failure fingerprint », savoir dire pourquoi une tâche est difficile avant de l'inclure ; éval de la skill claude-api : une tâche demandait d'intercepter un type d'erreur et son correcteur exigeait une chaîne d'au moins trois, un autre correcteur contredisait la documentation, l'API réelle donnant raison à la documentation ; score passé de 66 % à environ 88 %)",
+        "url": "https://claude.dev/blog/automating-eval-design-and-hillclimbing/"
+      },
+      {
+        "label": "Anthropic, Demystifying evals for AI agents, 9 janvier 2026, compléments (définitions : « transcript (also called a trace or trajectory) » et « outcome » ; « large effect size means small sample sizes suffice » ; « reference solution » pour chaque tâche ; vérifier une suite précise d'appels d'outils est « too rigid », « it's often better to grade what the agent produced, not the path it took »)",
+        "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"
+      },
+      {
+        "label": "Grey Luo (Varick Agents), AI Agents 102, blog Varick, page datée du 30 septembre 2026 (« Golden datasets form the foundation of systematic evals » ; exemples réels du domaine ; pour chacun, l'entrée exacte, la sortie ou l'action attendue, « the reasoning for why that output is correct » et des métadonnées)",
+        "url": "https://www.varickagents.com/blog/ai-agents-102"
+      },
+      {
+        "label": "Eyad Khrais (Varick Agents), How to Become an Applied AI Engineer, blog Varick, page datée du 30 septembre 2026 (« grade the outcome », « grade the trajectory » ; contrôle déterministe que send_payment n'apparaît jamais avant l'accord ; agent juste dans 95 % des cas qui touche un champ interdit dans 4 % des passages ; « These need to be reported separately »)",
+        "url": "https://www.varickagents.com/blog/how-to-become-an-applied-ai-engineer"
+      },
+      {
+        "label": "OpenAI, documentation Trace grading (« the end-to-end log of decisions, tool calls, and reasoning steps » ; « Unlike black-box evaluations, trace evals provide more data to better understand why an agent succeeds or fails »), consultée le 4 octobre 2026",
+        "url": "https://developers.openai.com/api/docs/guides/trace-grading"
+      }
+    ],
+    "jargon": [
+      {
+        "say": "pass@k",
+        "means": "la part des tâches réussies au moins une fois en k essais"
+      },
+      {
+        "say": "pass^k",
+        "means": "la part des tâches réussies à chacun des k essais ; avec 75 % de réussite par essai, trois réussites d'affilée n'arrivent que 42 % du temps"
+      },
+      {
+        "say": "LLM-as-a-judge",
+        "means": "un modèle qui note les réponses d'un autre selon une grille écrite, à recaler de temps en temps sur des notes humaines"
+      },
+      {
+        "say": "eval de régression",
+        "means": "les tâches que l'agent réussissait déjà, relancées à chaque changement pour vérifier que rien n'a cassé"
+      },
+      {
+        "say": "golden dataset",
+        "means": "le jeu de vraies demandes étiquetées avec la bonne réponse, qui sert de référence à chaque nouvelle version du prompt, du modèle ou des outils"
+      },
+      {
+        "say": "trajectory, trace",
+        "means": "le journal complet d'un passage de l'agent, appels d'outils, arguments et résultats intermédiaires ; OpenAI appelle trace grading le fait de le noter"
+      }
+    ]
+  },
+  "multi-agents": {
+    "full": [
+      "Un agent seul accumule tout dans une seule fenêtre de contexte, ses recherches, les pages lues et les essais ratés, et la fenêtre finit par déborder. Dans un système multi-agents, un agent principal, l'orchestrateur, découpe la tâche et lance des sous-agents qui partent chacun avec une fenêtre neuve, explorent leur morceau en parallèle et ne lui renvoient que l'essentiel. En juin 2025, Anthropic a décrit ainsi son outil de recherche, où Claude Opus 4 dirige des sous-agents Claude Sonnet 4 et fait 90,2 % mieux qu'un Claude Opus 4 seul sur son évaluation interne.",
+      "Ce gain coûte cher en tokens. D'après le même billet, un agent dépense environ 4 fois plus de tokens qu'une conversation, et un système multi-agents environ 15 fois plus, et sur le benchmark BrowseComp, la quantité de tokens dépensés explique à elle seule 80 % des écarts de résultats. La veille, Walden Yan, de Cognition, publiait « Don't Build Multi-Agents » avec l'exemple d'un clone de Flappy Bird confié à deux sous-agents. L'un a dessiné un décor façon Super Mario, l'autre un oiseau qui ne ressemblait pas à celui du jeu, chacun ayant pris des décisions que l'autre ignorait.",
+      "La règle qui se dégage est que plusieurs agents gagnent quand les morceaux sont indépendants et faciles à vérifier. En février 2026, Nicholas Carlini, chercheur chez Anthropic, a lancé 16 agents Claude Opus 4.6 sur l'écriture d'un compilateur C en Rust. Chaque agent réservait sa tâche en déposant un fichier dans un dossier commun, et après près de 2 000 sessions et 20 000 dollars d'API, les 100 000 lignes obtenues compilaient le noyau Linux 6.9 sur trois architectures. Carlini avait écrit les tests qui disaient à chaque agent si son morceau marchait, puis s'était presque entièrement retiré. Quand plusieurs agents agissent sur les mêmes systèmes, deux vieilles règles des systèmes distribués s'appliquent telles quelles, même si chaque boucle contient un modèle. Chaque donnée critique, une fiche client ou le statut d'une commande, n'a qu'un agent autorisé à l'écrire, et les autres lui demandent le changement. Chaque action qui modifie le monde porte aussi une clé unique, pour qu'un agent qui la relance après une coupure récupère le premier résultat au lieu de payer deux fois la même facture."
+    ],
+    "sources": [
+      {
+        "label": "Anthropic Engineering, How we built our multi-agent research system, 13 juin 2025 (Opus 4 et sous-agents Sonnet 4 : 90,2 % de mieux que Opus 4 seul sur l'évaluation interne ; agents environ 4 fois et multi-agents environ 15 fois plus de tokens qu'une conversation ; 80 % de la variance sur BrowseComp ; les administrateurs des entreprises IT du S&P 500, échec de l'agent seul par des recherches lentes et séquentielles ; compression par des fenêtres de contexte séparées)",
+        "url": "https://www.anthropic.com/engineering/multi-agent-research-system"
+      },
+      {
+        "label": "Walden Yan (Cognition), Don't Build Multi-Agents, 12 juin 2025 (le clone de Flappy Bird, le décor façon Super Mario Bros. et l'oiseau qui ne colle pas ; « actions carry implicit decisions »)",
+        "url": "https://cognition.com/blog/dont-build-multi-agents"
+      },
+      {
+        "label": "Nicholas Carlini (Anthropic), Building a C compiler with a team of parallel Claudes, 5 février 2026 (16 agents Opus 4.6, près de 2 000 sessions Claude Code, 20 000 dollars, 100 000 lignes de Rust, Linux 6.9 sur x86, ARM et RISC-V ; verrou par fichier texte dans current_tasks/)",
+        "url": "https://www.anthropic.com/engineering/building-c-compiler"
+      },
+      {
+        "label": "Claude Code, documentation Orchestrate teams of Claude Code sessions (agent teams expérimentales, liste de tâches partagée, messages directs ; deux coéquipiers qui modifient le même fichier s'écrasent ; coût en tokens proportionnel au nombre de coéquipiers), consultée le 2 octobre 2026",
+        "url": "https://code.claude.com/docs/en/agent-teams"
+      },
+      {
+        "label": "Cemri et al. (UC Berkeley), Why Do Multi-Agent LLM Systems Fail?, mars 2025, révisé en octobre 2025 (gains souvent minimes sur les benchmarks ; 14 modes d'échec ; plus de 1 600 traces de 7 frameworks)",
+        "url": "https://arxiv.org/abs/2503.13657"
+      },
+      {
+        "label": "Eyad Khrais (Varick Agents), How to Become an Applied AI Engineer, blog Varick, page datée du 30 septembre 2026 (« Multi-Agent Deployments are a Distributed Systems Problem » ; « Single-writer principle » : une seule écriture par donnée importante, les autres agents lisent ou soumettent une demande ; « Idempotency keys » sur chaque appel d'outil qui modifie un système externe, pour ne pas envoyer deux fois le même paiement)",
+        "url": "https://www.varickagents.com/blog/how-to-become-an-applied-ai-engineer"
+      },
+      {
+        "label": "Martin Thompson, Single Writer Principle, Mechanical Sympathy, 22 septembre 2011 (« for any item of data, or resource, that item of data should be owned by a single execution context for all mutations »)",
+        "url": "https://mechanical-sympathy.blogspot.com/2011/09/single-writer-principle.html"
+      },
+      {
+        "label": "Stripe, documentation Idempotent requests (réessayer une requête « without accidentally performing the same operation twice » ; le résultat de la première requête est enregistré et renvoyé pour la même clé), consultée le 4 octobre 2026",
+        "url": "https://docs.stripe.com/api/idempotent_requests"
+      }
+    ],
+    "jargon": [
+      {
+        "say": "orchestrator, subagents",
+        "means": "l'agent principal découpe la tâche et lance des sous-agents, qui travaillent chacun dans sa propre fenêtre de contexte et lui rapportent un résumé"
+      },
+      {
+        "say": "agent teams",
+        "means": "dans Claude Code, une fonction expérimentale où plusieurs sessions se partagent une liste de tâches et s'écrivent directement, au lieu de tout faire remonter à un chef"
+      },
+      {
+        "say": "parallélisable",
+        "means": "se dit d'une tâche dont les morceaux avancent sans attendre les autres ; c'est la condition pour que plusieurs agents fassent mieux qu'un seul"
+      },
+      {
+        "say": "idempotent",
+        "means": "se dit d'une action qu'on peut relancer sans risque : avec la même clé, la deuxième demande renvoie le résultat de la première au lieu de recommencer, comme dans l'API de paiement de Stripe"
+      }
+    ]
+  }
+}
