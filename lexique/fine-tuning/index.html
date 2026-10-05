@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Fine-tuning">
+<meta property="article:published_time" content="2026-10-02">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Entraînement">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fine-tuning | Lexique IA">
 <meta name="twitter:description" content="Le fine-tuning consiste à reprendre un modèle déjà entraîné et à poursuivre son entraînement sur un petit jeu d&#39;exemples choisis, pour le spécialiser…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/fine-tuning.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/fine-tuning.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/fine-tuning/#term","name":"Fine-tuning","description":"Le fine-tuning consiste à reprendre un modèle déjà entraîné et à poursuivre son entraînement sur un petit jeu d'exemples choisis, pour le spécialiser dans une tâche, un format ou un ton.","url":"https://neopal.github.io/lexique/fine-tuning/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["finetuning","fine-tune","supervised fine-tuning","SFT","LoRA","ajustement fin","affinage"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/fine-tuning/#term","name":"Fine-tuning","description":"Le fine-tuning consiste à reprendre un modèle déjà entraîné et à poursuivre son entraînement sur un petit jeu d'exemples choisis, pour le spécialiser dans une tâche, un format ou un ton.","url":"https://neopal.github.io/lexique/fine-tuning/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["finetuning","fine-tune","supervised fine-tuning","SFT","LoRA","ajustement fin","affinage"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/fine-tuning/#article","headline":"Fine-tuning","name":"Fine-tuning | Lexique IA","description":"Le fine-tuning consiste à reprendre un modèle déjà entraîné et à poursuivre son entraînement sur un petit jeu d'exemples choisis, pour le spécialiser dans une tâche, un format ou un ton.","url":"https://neopal.github.io/lexique/fine-tuning/","mainEntityOfPage":"https://neopal.github.io/lexique/fine-tuning/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/fine-tuning.jpg","datePublished":"2026-10-02","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Entraînement","about":{"@id":"https://neopal.github.io/lexique/fine-tuning/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/fine-tuning/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/entrainement/#term"},{"@id":"https://neopal.github.io/lexique/parametres/#term"},{"@id":"https://neopal.github.io/lexique/rlhf/#term"},{"@id":"https://neopal.github.io/lexique/rag/#term"},{"@id":"https://neopal.github.io/lexique/system-prompt/#term"},{"@id":"https://neopal.github.io/lexique/distillation/#term"},{"@id":"https://neopal.github.io/lexique/mythe-ia-specialisees/#term"}],"citation":[{"@type":"CreativeWork","name":"Hu et al., LoRA: Low-Rank Adaptation of Large Language Models, juin 2021 (paramètres entraînables divisés par 10 000 et mémoire GPU par 3 sur GPT-3 175B)","url":"https://arxiv.org/abs/2106.09685"},{"@type":"CreativeWork","name":"OpenAI, guide Model optimization (SFT, vision, DPO, RFT ; entraîner un modèle plus petit et moins cher pour une tâche précise)","url":"https://developers.openai.com/api/docs/guides/model-optimization"},{"@type":"CreativeWork","name":"Sebastian Raschka, LLMs-from-scratch, chapitre 6 : un modèle fine-tuné pour la classification ne sait plus produire que les classes vues à l'entraînement, « spam » et « not spam »","url":"https://github.com/rasbt/LLMs-from-scratch/tree/main/ch06"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/fine-tuning/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Fine-tuning","item":"https://neopal.github.io/lexique/fine-tuning/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">On le fine-tune sur notre intranet pour qu&#39;il connaisse nos procédures ?</div><div class="bubble a">Pas si les procédures changent tous les mois ; branche-le plutôt sur l&#39;intranet avec un RAG, et garde le fine-tuning pour le format et le ton des réponses.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« On l&#39;a fine-tuné, il ne se trompera plus sur nos produits. » Le fine-tuning rend certaines réponses plus probables sans les garantir, et le modèle peut toujours inventer un détail qui ne figurait dans aucun exemple.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#F5D76E" href="/lexique/entrainement/" data-go="entrainement">Entraînement</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/parametres/" data-go="parametres">Paramètres</a><a class="tl live" style="--c:#F5D76E" href="/lexique/rlhf/" data-go="rlhf">RLHF</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/rag/" data-go="rag">RAG</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/system-prompt/" data-go="system-prompt">System prompt</a><a class="tl live" style="--c:#F5D76E" href="/lexique/distillation/" data-go="distillation">Distillation</a><a class="tl live" style="--c:#FF7A7A" href="/lexique/mythe-ia-specialisees/" data-go="mythe-ia-specialisees">« Les LLM généralistes ne servent à rien, il faut des IA spécialisées »</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Fine-tuning », Lexique IA, https://neopal.github.io/lexique/fine-tuning/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/entrainement/" data-go="entrainement" rel="prev"><span aria-hidden="true">←</span><span class="nt">Entraînement</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

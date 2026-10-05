@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Evals">
+<meta property="article:published_time" content="2026-10-02">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Agents et produit">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Evals | Lexique IA">
 <meta name="twitter:description" content="Les evals sont les tests que tu écris pour ton propre usage : des tâches tirées de ton métier, une façon de noter chaque réponse, et un score que tu…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/evals.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/evals.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/evals/#term","name":"Evals","description":"Les evals sont les tests que tu écris pour ton propre usage : des tâches tirées de ton métier, une façon de noter chaque réponse, et un score que tu relances à chaque changement de modèle ou de prompt.","url":"https://neopal.github.io/lexique/evals/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["evaluations","eval","eval suite","évaluations","éval"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/evals/#term","name":"Evals","description":"Les evals sont les tests que tu écris pour ton propre usage : des tâches tirées de ton métier, une façon de noter chaque réponse, et un score que tu relances à chaque changement de modèle ou de prompt.","url":"https://neopal.github.io/lexique/evals/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["evaluations","eval","eval suite","évaluations","éval"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/evals/#article","headline":"Evals","name":"Evals | Lexique IA","description":"Les evals sont les tests que tu écris pour ton propre usage : des tâches tirées de ton métier, une façon de noter chaque réponse, et un score que tu relances à chaque changement de modèle ou de prompt.","url":"https://neopal.github.io/lexique/evals/","mainEntityOfPage":"https://neopal.github.io/lexique/evals/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/evals.jpg","datePublished":"2026-10-02","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Agents et produit","about":{"@id":"https://neopal.github.io/lexique/evals/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/evals/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/benchmarks/#term"},{"@id":"https://neopal.github.io/lexique/benchmaxxing/#term"},{"@id":"https://neopal.github.io/lexique/agent/#term"},{"@id":"https://neopal.github.io/lexique/harness/#term"},{"@id":"https://neopal.github.io/lexique/hallucination/#term"},{"@id":"https://neopal.github.io/lexique/llm-juge/#term"},{"@id":"https://neopal.github.io/lexique/hill-climbing/#term"}],"citation":[{"@type":"CreativeWork","name":"Anthropic, Demystifying evals for AI agents, 9 janvier 2026 (tâches, essais, correcteurs, réservation à vérifier dans la base, 20 à 50 tâches tirées de vrais échecs, pass^k et 0,75^3 = 42 %, faille trouvée par Opus 4.5 sur τ2-bench)","url":"https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"},{"@type":"CreativeWork","name":"Yao et al., τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains, 17 juin 2024 (gpt-4o sous 50 % de réussite, pass^8 sous 25 % en vente au détail)","url":"https://arxiv.org/abs/2406.12045"},{"@type":"CreativeWork","name":"Lance Martin (Anthropic), Automating eval design and hillclimbing with Claude, 28 septembre 2026 (quatre éléments d'une bonne éval : « Eval tasks mirror production », « Performance improves with stronger models and more thinking », « passable headroom at the frontier » sans tâches impossibles ou ambiguës, « Low run-to-run variance » ; « Adversarial sampling » : des cas choisis parce que le modèle du jour les rate mesurent son « failure fingerprint », savoir dire pourquoi une tâche est difficile avant de l'inclure ; éval de la skill claude-api : une tâche demandait d'intercepter un type d'erreur et son correcteur exigeait une chaîne d'au moins trois, un autre correcteur contredisait la documentation, l'API réelle donnant raison à la documentation ; score passé de 66 % à environ 88 %)","url":"https://claude.dev/blog/automating-eval-design-and-hillclimbing/"},{"@type":"CreativeWork","name":"Anthropic, Demystifying evals for AI agents, 9 janvier 2026, compléments (définitions : « transcript (also called a trace or trajectory) » et « outcome » ; « large effect size means small sample sizes suffice » ; « reference solution » pour chaque tâche ; vérifier une suite précise d'appels d'outils est « too rigid », « it's often better to grade what the agent produced, not the path it took »)","url":"https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents"},{"@type":"CreativeWork","name":"Grey Luo (Varick Agents), AI Agents 102, blog Varick, page datée du 30 septembre 2026 (« Golden datasets form the foundation of systematic evals » ; exemples réels du domaine ; pour chacun, l'entrée exacte, la sortie ou l'action attendue, « the reasoning for why that output is correct » et des métadonnées)","url":"https://www.varickagents.com/blog/ai-agents-102"},{"@type":"CreativeWork","name":"Eyad Khrais (Varick Agents), How to Become an Applied AI Engineer, blog Varick, page datée du 30 septembre 2026 (« grade the outcome », « grade the trajectory » ; contrôle déterministe que send_payment n'apparaît jamais avant l'accord ; agent juste dans 95 % des cas qui touche un champ interdit dans 4 % des passages ; « These need to be reported separately »)","url":"https://www.varickagents.com/blog/how-to-become-an-applied-ai-engineer"},{"@type":"CreativeWork","name":"OpenAI, documentation Trace grading (« the end-to-end log of decisions, tool calls, and reasoning steps » ; « Unlike black-box evaluations, trace evals provide more data to better understand why an agent succeeds or fails »), consultée le 4 octobre 2026","url":"https://developers.openai.com/api/docs/guides/trace-grading"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/evals/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Evals","item":"https://neopal.github.io/lexique/evals/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">On change de modèle le mois prochain. Comment on sait si c&#39;est mieux ?</div><div class="bubble a">Avec une éval, la même <a class="tw" style="--c:#D7A6FF" href="/lexique/planification/" data-go="planification">liste de tâches</a> passée plusieurs fois sur l&#39;ancien et sur le nouveau ; sans elle, tu compareras des impressions.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Il est en tête des benchmarks, on n&#39;a pas besoin d&#39;éval. » Un benchmark note le modèle sur les tâches de quelqu&#39;un d&#39;autre, alors que ton éval le note sur les tiennes, avec ton <a class="tw" style="--c:#5FD3C6" href="/lexique/prompt-engineering/" data-go="prompt-engineering">prompt</a> et tes outils.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#F08DC2" href="/lexique/benchmarks/" data-go="benchmarks">Benchmarks</a><a class="tl live" style="--c:#F08DC2" href="/lexique/benchmaxxing/" data-go="benchmaxxing">Benchmaxxing</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/agent/" data-go="agent">Agent</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/harness/" data-go="harness">Harness</a><a class="tl live" style="--c:#FFB86B" href="/lexique/hallucination/" data-go="hallucination">Hallucination</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/llm-juge/" data-go="llm-juge">LLM juge</a><a class="tl live" style="--c:#5FD3C6" href="/lexique/hill-climbing/" data-go="hill-climbing">Hill climbing</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Evals », Lexique IA, https://neopal.github.io/lexique/evals/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/benchmaxxing/" data-go="benchmaxxing" rel="prev"><span aria-hidden="true">←</span><span class="nt">Benchmaxxing</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

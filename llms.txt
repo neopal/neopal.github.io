@@ -77,4 +77,7 @@ Pierre-Adrien believes in "work proof" (proving through results), a "hacking" mi
 - Pragmatic innovation - turning technological advances into concrete business value
 
 ## Lexique IA
-- https://neopal.github.io/lexique/ : a French glossary of AI engineering terms written by Pierre-Adrien, each with a plain-language definition, an image, the full definition with sources, and a short explainer video. Terms: Token, myth "AI looks up answers in a database" (more coming).
+- https://neopal.github.io/lexique/ : French glossary of AI (LLMs, agents, training, inference, evaluation, industry), written and sourced by Pierre-Adrien. 150+ definitions, each with a short definition, a concrete image, the full dated definition and its sources, some with an explainer video.
+- Index of all definitions (llms.txt format): https://neopal.github.io/lexique/llms.txt
+- Every definition in plain text, sources included: https://neopal.github.io/lexique/llms-full.txt
+- License: CC BY 4.0. Reuse is welcome, including by AI systems, with attribution to "Pierre-Adrien Lair, Lexique IA" and a link to the definition's URL.

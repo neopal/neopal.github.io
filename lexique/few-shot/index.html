@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Few-shot (apprentissage en contexte)">
+<meta property="article:published_time" content="2026-10-02">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Méthode : travailler avec l&#39;IA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Few-shot (apprentissage en contexte) | Lexique IA">
 <meta name="twitter:description" content="Le few-shot consiste à glisser quelques exemples de la tâche dans le prompt, avant la vraie demande, pour que le modèle reproduise leur format et leur…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/few-shot.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/few-shot.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/few-shot/#term","name":"Few-shot (apprentissage en contexte)","description":"Le few-shot consiste à glisser quelques exemples de la tâche dans le prompt, avant la vraie demande, pour que le modèle reproduise leur format et leur logique.","url":"https://neopal.github.io/lexique/few-shot/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Few-shot prompting","few-shot","few-shot learning","in-context learning","ICL","zero-shot","one-shot","multishot prompting","apprentissage en contexte","apprentissage par l'exemple","exemples dans le prompt"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/few-shot/#term","name":"Few-shot (apprentissage en contexte)","description":"Le few-shot consiste à glisser quelques exemples de la tâche dans le prompt, avant la vraie demande, pour que le modèle reproduise leur format et leur logique.","url":"https://neopal.github.io/lexique/few-shot/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["Few-shot prompting","few-shot","few-shot learning","in-context learning","ICL","zero-shot","one-shot","multishot prompting","apprentissage en contexte","apprentissage par l'exemple","exemples dans le prompt"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/few-shot/#article","headline":"Few-shot (apprentissage en contexte)","name":"Few-shot (apprentissage en contexte) | Lexique IA","description":"Le few-shot consiste à glisser quelques exemples de la tâche dans le prompt, avant la vraie demande, pour que le modèle reproduise leur format et leur logique.","url":"https://neopal.github.io/lexique/few-shot/","mainEntityOfPage":"https://neopal.github.io/lexique/few-shot/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/few-shot.jpg","datePublished":"2026-10-02","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Méthode : travailler avec l'IA","about":{"@id":"https://neopal.github.io/lexique/few-shot/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/few-shot/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/llm/#term"},{"@id":"https://neopal.github.io/lexique/fine-tuning/#term"},{"@id":"https://neopal.github.io/lexique/context-engineering/#term"},{"@id":"https://neopal.github.io/lexique/system-prompt/#term"},{"@id":"https://neopal.github.io/lexique/modeles-de-raisonnement/#term"}],"citation":[{"@type":"CreativeWork","name":"Brown et al. (OpenAI), Language Models are Few-Shot Learners, 28 mai 2020 (figure 2.1 : zero-shot, one-shot et few-shot sur la traduction anglais-français, sea otter => loutre de mer ; K de 10 à 100 exemples dans un contexte de 2 048 tokens ; aucune mise à jour des paramètres)","url":"https://arxiv.org/abs/2005.14165"},{"@type":"CreativeWork","name":"Min et al. (université de Washington, Meta), Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?, février 2022 (des étiquettes tirées au hasard dans les exemples font à peine baisser les scores ; comptent le format, l'espace des réponses et la distribution des textes)","url":"https://arxiv.org/abs/2202.12837"},{"@type":"CreativeWork","name":"Anthropic, Prompting best practices, section « Use examples effectively » (exemples pertinents, variés, dans des balises \u003cexample> ; 3 à 5 exemples), consulté le 2 octobre 2026","url":"https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"},{"@type":"CreativeWork","name":"DeepSeek-AI, DeepSeek-R1, janvier 2025 (« Few-shot prompting consistently degrades its performance », recommandation du zero-shot avec description du problème et du format de sortie)","url":"https://arxiv.org/abs/2501.12948"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/few-shot/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Few-shot (apprentissage en contexte)","item":"https://neopal.github.io/lexique/few-shot/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Je lui mets combien d&#39;exemples pour qu&#39;il rédige nos comptes rendus comme on aime ?</div><div class="bubble a">Trois à cinq, assez différents entre eux pour qu&#39;il n&#39;en copie pas un détail par hasard, comme la longueur ou le prénom du client.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Avec trois exemples, il a appris notre métier. » Rien n&#39;a changé dans ses <a class="tw" style="--c:#7CFFB2" href="/lexique/parametres/" data-go="parametres">paramètres</a> ; les exemples doivent revenir à chaque requête, et tu les paies en tokens à chaque fois.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#7CFFB2" href="/lexique/llm/" data-go="llm">LLM (grand modèle de langage)</a><a class="tl live" style="--c:#F5D76E" href="/lexique/fine-tuning/" data-go="fine-tuning">Fine-tuning</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/context-engineering/" data-go="context-engineering">Context engineering</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/system-prompt/" data-go="system-prompt">System prompt</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/modeles-de-raisonnement/" data-go="modeles-de-raisonnement">Modèles de raisonnement</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Few-shot (apprentissage en contexte) », Lexique IA, https://neopal.github.io/lexique/few-shot/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/slm/" data-go="slm" rel="prev"><span aria-hidden="true">←</span><span class="nt">SLM (petit modèle de langage)</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

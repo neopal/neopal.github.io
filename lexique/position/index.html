@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Encodage positionnel">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Fondations">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Encodage positionnel | Lexique IA">
 <meta name="twitter:description" content="L&#39;encodage positionnel est l&#39;information qu&#39;un transformer ajoute à chaque token pour indiquer sa place dans le texte, parce que l&#39;attention, seule, ne…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/position.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/position.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/position/#term","name":"Encodage positionnel","description":"L'encodage positionnel est l'information qu'un transformer ajoute à chaque token pour indiquer sa place dans le texte, parce que l'attention, seule, ne voit pas l'ordre des mots.","url":"https://neopal.github.io/lexique/position/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Positional encoding","positional encoding","positional embedding","position embedding","RoPE","rotary position embedding","ALiBi","NoPE","YaRN","context extension","encodage de position","position des tokens","extension de contexte"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/position/#term","name":"Encodage positionnel","description":"L'encodage positionnel est l'information qu'un transformer ajoute à chaque token pour indiquer sa place dans le texte, parce que l'attention, seule, ne voit pas l'ordre des mots.","url":"https://neopal.github.io/lexique/position/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["Positional encoding","positional encoding","positional embedding","position embedding","RoPE","rotary position embedding","ALiBi","NoPE","YaRN","context extension","encodage de position","position des tokens","extension de contexte"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/position/#article","headline":"Encodage positionnel","name":"Encodage positionnel | Lexique IA","description":"L'encodage positionnel est l'information qu'un transformer ajoute à chaque token pour indiquer sa place dans le texte, parce que l'attention, seule, ne voit pas l'ordre des mots.","url":"https://neopal.github.io/lexique/position/","mainEntityOfPage":"https://neopal.github.io/lexique/position/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/position.jpg","datePublished":"2026-10-03","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Fondations","about":{"@id":"https://neopal.github.io/lexique/position/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/position/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/auto-attention/#term"},{"@id":"https://neopal.github.io/lexique/transformer/#term"},{"@id":"https://neopal.github.io/lexique/embedding/#term"},{"@id":"https://neopal.github.io/lexique/kv-cache/#term"},{"@id":"https://neopal.github.io/lexique/mythe-lit-mot-par-mot/#term"},{"@id":"https://neopal.github.io/lexique/architectures-hybrides/#term"}],"citation":[{"@type":"CreativeWork","name":"Qwen, fichier config.json de Qwen3-8B sur Hugging Face (head_dim 128, rope_theta 1000000), consulté le 2 octobre 2026. Calcul de l'Imagine : 128 / 2 = 64 fréquences ; la plus rapide tourne d'un radian par token, soit un tour en 2π = 6,28 tokens ; la plus lente vaut 1 000 000^(-126/128) radian par token, soit un tour en 5 063 256 tokens, 58,6 jours à un token par seconde ; sur 32 768 tokens (9,1 heures), elle tourne de 360 × 32 768 / 5 063 256 = 2,3 degrés","url":"https://huggingface.co/Qwen/Qwen3-8B/blob/main/config.json"},{"@type":"CreativeWork","name":"Qwen, fiche de Qwen3-8B sur Hugging Face, consultée le 2 octobre 2026 (32 768 tokens en natif, 131 072 avec YaRN, facteur 4 ; YaRN statique « potentially impacting performance on shorter texts », à n'activer que pour les longs contextes)","url":"https://huggingface.co/Qwen/Qwen3-8B"},{"@type":"CreativeWork","name":"Wikipédia, Qwen (famille Qwen3 publiée le 28 avril 2025), consulté le 2 octobre 2026","url":"https://en.wikipedia.org/wiki/Qwen"},{"@type":"CreativeWork","name":"Vaswani et al. (Google), Attention Is All You Need, juin 2017, section 3.5 (« Since our model contains no recurrence and no convolution... we must inject some information about the relative or absolute position » ; longueurs d'onde de 2π à 10000 · 2π ; version apprise aux résultats « nearly identical »)","url":"https://arxiv.org/abs/1706.03762"},{"@type":"CreativeWork","name":"OpenAI, fichier config.json de GPT-2 sur Hugging Face (n_positions 1024), consulté le 2 octobre 2026 ; dans l'implémentation de Hugging Face, la position passe par une table apprise de cette taille (nn.Embedding(config.max_position_embeddings, ...))","url":"https://huggingface.co/openai-community/gpt2/blob/main/config.json"},{"@type":"CreativeWork","name":"Su et al., RoFormer: Enhanced Transformer with Rotary Position Embedding, 20 avril 2021 (RoPE code la position absolue par une rotation et fait apparaître la position relative dans l'attention)","url":"https://arxiv.org/abs/2104.09864"},{"@type":"CreativeWork","name":"Press, Smith et Lewis, Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation, 27 août 2021 (ALiBi pénalise le score d'attention proportionnellement à la distance ; entraîné sur 1 024 tokens, extrapole à 2 048)","url":"https://arxiv.org/abs/2108.12409"},{"@type":"CreativeWork","name":"Chen et al. (Meta), Extending Context Window of Large Language Models via Positional Interpolation, 27 juin 2023 (LLaMA étendu jusqu'à 32 768 tokens en moins de 1 000 pas, positions réduites pour rester dans la fenêtre d'origine)","url":"https://arxiv.org/abs/2306.15595"},{"@type":"CreativeWork","name":"Peng et al., YaRN: Efficient Context Window Extension of Large Language Models, 31 août 2023","url":"https://arxiv.org/abs/2309.00071"},{"@type":"CreativeWork","name":"Meta, The Llama 4 herd, 5 avril 2025 (« interleaved attention layers without positional embeddings », architecture iRoPE ; Llama 4 Scout passe de 128 000 tokens chez Llama 3 à 10 millions)","url":"https://ai.meta.com/blog/llama-4-multimodal-intelligence/"},{"@type":"CreativeWork","name":"Haviv et al., Transformer Language Models without Positional Encodings Still Learn Positional Information, 30 mars 2022 (sans encodage, un modèle causal acquiert une notion implicite de position absolue, sans doute en comptant les tokens qui le précèdent)","url":"https://arxiv.org/abs/2203.16634"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/position/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Encodage positionnel","item":"https://neopal.github.io/lexique/position/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Notre Qwen3 installé en interne annonce 32 768 tokens. On peut lui confier un dossier de 100 000 ?</div><div class="bubble a">Oui, en activant YaRN avec un facteur 4, qui le mène à 131 072 tokens. Alibaba conseille toutefois de ne pas le laisser allumé si tes textes restent sous les 32 768 tokens, car la version courante, à facteur fixe, peut dégrader les réponses sur les textes courts.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Le modèle sait où est chaque mot parce qu&#39;il lit la phrase dans l&#39;ordre. » Le transformer traite tous les tokens en même temps, et c&#39;est l&#39;encodage positionnel, ajouté à l&#39;entrée ou appliqué dans chaque calcul d&#39;attention, qui lui fournit l&#39;ordre. Sans lui, il ne reste que le masque qui cache les tokens suivants pour laisser deviner une place.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#7CFFB2" href="/lexique/auto-attention/" data-go="auto-attention">Auto-attention</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/transformer/" data-go="transformer">Transformer</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/embedding/" data-go="embedding">Embedding</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/kv-cache/" data-go="kv-cache">KV cache</a><a class="tl live" style="--c:#FF7A7A" href="/lexique/mythe-lit-mot-par-mot/" data-go="mythe-lit-mot-par-mot">« L&#39;IA lit mot par mot »</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/architectures-hybrides/" data-go="architectures-hybrides">Architectures hybrides</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Encodage positionnel », Lexique IA, https://neopal.github.io/lexique/position/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/donnees-synthetiques/" data-go="donnees-synthetiques" rel="prev"><span aria-hidden="true">←</span><span class="nt">Données synthétiques</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

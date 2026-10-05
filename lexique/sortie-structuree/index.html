@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Sortie structurée">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Agents et produit">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sortie structurée | Lexique IA">
 <meta name="twitter:description" content="Une sortie structurée est une réponse qu&#39;un modèle doit rendre dans un format fixé d&#39;avance, souvent un JSON conforme à un schéma, pour qu&#39;un programme…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/sortie-structuree.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/sortie-structuree.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/sortie-structuree/#term","name":"Sortie structurée","description":"Une sortie structurée est une réponse qu'un modèle doit rendre dans un format fixé d'avance, souvent un JSON conforme à un schéma, pour qu'un programme la lise sans erreur.","url":"https://neopal.github.io/lexique/sortie-structuree/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Structured output","structured output","structured outputs","JSON mode","JSON schema","constrained decoding","grammar-constrained decoding","guided generation","strict mode","response_format","décodage contraint","mode JSON","génération guidée"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/sortie-structuree/#term","name":"Sortie structurée","description":"Une sortie structurée est une réponse qu'un modèle doit rendre dans un format fixé d'avance, souvent un JSON conforme à un schéma, pour qu'un programme la lise sans erreur.","url":"https://neopal.github.io/lexique/sortie-structuree/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["Structured output","structured output","structured outputs","JSON mode","JSON schema","constrained decoding","grammar-constrained decoding","guided generation","strict mode","response_format","décodage contraint","mode JSON","génération guidée"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/sortie-structuree/#article","headline":"Sortie structurée","name":"Sortie structurée | Lexique IA","description":"Une sortie structurée est une réponse qu'un modèle doit rendre dans un format fixé d'avance, souvent un JSON conforme à un schéma, pour qu'un programme la lise sans erreur.","url":"https://neopal.github.io/lexique/sortie-structuree/","mainEntityOfPage":"https://neopal.github.io/lexique/sortie-structuree/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/sortie-structuree.jpg","datePublished":"2026-10-03","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Agents et produit","about":{"@id":"https://neopal.github.io/lexique/sortie-structuree/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/sortie-structuree/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/logits/#term"},{"@id":"https://neopal.github.io/lexique/harness/#term"},{"@id":"https://neopal.github.io/lexique/system-prompt/#term"},{"@id":"https://neopal.github.io/lexique/agent/#term"},{"@id":"https://neopal.github.io/lexique/evals/#term"},{"@id":"https://neopal.github.io/lexique/prompt-engineering/#term"}],"citation":[{"@type":"CreativeWork","name":"OpenAI, guide Structured model outputs, consulté le 2 octobre 2026 (JSON mode assure un JSON valide, Structured Outputs l'adhésion au schéma ; sans consigne explicite, en JSON mode, « the model may generate an unending stream of whitespace » ; « Structured Outputs can still contain mistakes » ; « can result in hallucinations if the input is completely unrelated to the schema » ; sortie dans l'ordre des clés du schéma)","url":"https://developers.openai.com/api/docs/guides/structured-outputs"},{"@type":"CreativeWork","name":"Anthropic, documentation Structured outputs, consultée le 2 octobre 2026 (garantie par « constrained decoding » ; grammaire compilée à la première requête puis gardée 24 heures en cache ; sorties non conformes en cas de refus ou de max_tokens ; casse des valeurs enum non garantie ; un champ qui demande le raisonnement pas à pas peut provoquer un refus « reasoning_extraction », demander plutôt une courte explication)","url":"https://platform.claude.com/docs/en/build-with-claude/structured-outputs"},{"@type":"CreativeWork","name":"Anthropic, Structured outputs on the Claude Developer Platform, 14 novembre 2025 (bêta publique pour Claude Sonnet 4.5 et Opus 4.1, disponibilité générale le 4 février 2026)","url":"https://claude.com/blog/structured-outputs-on-the-claude-developer-platform"},{"@type":"CreativeWork","name":"Willard et Louf, Efficient Guided Generation for Large Language Models, 19 juillet 2023 (génération guidée par expressions régulières et grammaires, implémentée dans la bibliothèque Outlines)","url":"https://arxiv.org/abs/2307.09702"},{"@type":"CreativeWork","name":"Dong et al., XGrammar: Flexible and Efficient Structured Generation Engine for Large Language Models, 22 novembre 2024 (jusqu'à 100 fois plus rapide que les solutions existantes, « near-zero overhead » de bout en bout)","url":"https://arxiv.org/abs/2411.15100"},{"@type":"CreativeWork","name":"Tam et al., Let Me Speak Freely? A Study on the Impact of Format Restrictions on Performance of Large Language Models, 5 août 2024 (« a significant decline in LLMs reasoning abilities under format restrictions », plus forte quand la contrainte est stricte)","url":"https://arxiv.org/abs/2408.02442"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/sortie-structuree/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Sortie structurée","item":"https://neopal.github.io/lexique/sortie-structuree/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Le JSON est garanti, alors on branche la sortie directement sur la base clients ?</div><div class="bubble a">Sa forme l&#39;est, pas ses valeurs. Garde une validation métier derrière, un numéro de client qui existe, un montant plausible, et essaie quelques documents qui n&#39;ont rien à voir avec le schéma pour voir ce que le modèle invente quand il n&#39;a rien à extraire.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« J&#39;ai activé le mode JSON, donc la réponse respecte mon schéma. » Le mode JSON ne garantit qu&#39;un JSON valide ; seul le décodage contraint par un schéma garantit les champs, et même lui ne vérifie pas que les valeurs sont justes.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#8FB8FF" href="/lexique/logits/" data-go="logits">Logits</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/harness/" data-go="harness">Harness</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/system-prompt/" data-go="system-prompt">System prompt</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/agent/" data-go="agent">Agent</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/evals/" data-go="evals">Evals</a><a class="tl live" style="--c:#5FD3C6" href="/lexique/prompt-engineering/" data-go="prompt-engineering">Prompt engineering</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Sortie structurée », Lexique IA, https://neopal.github.io/lexique/sortie-structuree/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/latence-vs-debit/" data-go="latence-vs-debit" rel="prev"><span aria-hidden="true">←</span><span class="nt">Latence et débit</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

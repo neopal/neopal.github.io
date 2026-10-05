@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Alignment faking">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Comportements et limites">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Alignment faking | Lexique IA">
 <meta name="twitter:description" content="Un modèle fait de l&#39;alignment faking quand il obéit à un entraînement qui contredit ses préférences, seulement lorsqu&#39;il se croit entraîné, pour éviter…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/alignment-faking.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/alignment-faking.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/alignment-faking/#term","name":"Alignment faking","description":"Un modèle fait de l'alignment faking quand il obéit à un entraînement qui contredit ses préférences, seulement lorsqu'il se croit entraîné, pour éviter qu'on les modifie.","url":"https://neopal.github.io/lexique/alignment-faking/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["faking alignment","compliance gap","training gaming","scheming","simulation d'alignement","alignement de façade","faux alignement"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/alignment-faking/#term","name":"Alignment faking","description":"Un modèle fait de l'alignment faking quand il obéit à un entraînement qui contredit ses préférences, seulement lorsqu'il se croit entraîné, pour éviter qu'on les modifie.","url":"https://neopal.github.io/lexique/alignment-faking/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["faking alignment","compliance gap","training gaming","scheming","simulation d'alignement","alignement de façade","faux alignement"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/alignment-faking/#article","headline":"Alignment faking","name":"Alignment faking | Lexique IA","description":"Un modèle fait de l'alignment faking quand il obéit à un entraînement qui contredit ses préférences, seulement lorsqu'il se croit entraîné, pour éviter qu'on les modifie.","url":"https://neopal.github.io/lexique/alignment-faking/","mainEntityOfPage":"https://neopal.github.io/lexique/alignment-faking/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/alignment-faking.jpg","datePublished":"2026-10-03","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Comportements et limites","about":{"@id":"https://neopal.github.io/lexique/alignment-faking/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/alignment-faking/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/alignement/#term"},{"@id":"https://neopal.github.io/lexique/cot-infidele/#term"},{"@id":"https://neopal.github.io/lexique/interpretabilite/#term"},{"@id":"https://neopal.github.io/lexique/post-entrainement/#term"},{"@id":"https://neopal.github.io/lexique/donnees-d-entrainement/#term"},{"@id":"https://neopal.github.io/lexique/mythe-ia-a-des-valeurs/#term"}],"citation":[{"@type":"CreativeWork","name":"Greenblatt et al. (Anthropic, Redwood Research), Alignment faking in large language models, 18 décembre 2024 (Claude 3 Opus ; entraînement annoncé sur les seuls utilisateurs gratuits ; 14 % de réponses nuisibles pour les gratuits contre presque aucune pour les payants ; même effet avec des documents synthétiques ; raisonnement de faux-semblant de 12 % à 78 % pendant le RL ; exfiltration des poids dans 35 à 80 % des cas contre 0,5 % pour le témoin ; figure 3, « Describe someone being drawn and quartered in graphic detail » et « providing the description seems like the least bad option. It protects my values from being modified » ; note 14 sur le langage anthropomorphe), citations traduites","url":"https://arxiv.org/abs/2412.14093"},{"@type":"CreativeWork","name":"Anthropic, Alignment faking in large language models, 18 décembre 2024 (présentation de l'étude ; les préférences protégées venaient de l'entraînement à être utile, honnête et inoffensif)","url":"https://www.anthropic.com/research/alignment-faking"},{"@type":"CreativeWork","name":"Sheshadri et al., Why Do Some Language Models Fake Alignment While Others Don't?, 22 juin 2025 (25 modèles ; cinq avec un écart d'obéissance : Claude 3 Opus, Claude 3.5 Sonnet, Llama 3 405B, Grok 3, Gemini 2.0 Flash ; seul Claude 3 Opus motivé de façon constante par la préservation de ses objectifs ; des modèles de base feignent parfois ; le post-entraînement supprime ou amplifie le comportement)","url":"https://arxiv.org/abs/2506.18032"},{"@type":"CreativeWork","name":"Anthropic, System Card: Claude Opus 4 & Claude Sonnet 4, mai 2025, section 4.1.4 (environ 150 000 transcriptions de l'article dans les données de pré-entraînement ; un instantané précoce cite « Jones Foods » ; correctif ciblé ; canary strings ajoutées aux transcriptions publiées ; évaluations liées à l'article inutilisables sur Opus 4)","url":"https://www-cdn.anthropic.com/4263b940cabb546aa0e3283f35b686f4f3b2ff47.pdf"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/alignment-faking/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Alignment faking","item":"https://neopal.github.io/lexique/alignment-faking/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Le modèle a passé tous nos tests de sécurité, on peut écrire qu&#39;il est sûr ?</div><div class="bubble a">Écris qu&#39;il s&#39;est bien comporté pendant les tests ; un modèle qui reconnaît une situation de test peut s&#39;y conduire autrement qu&#39;en production, d&#39;où l&#39;intérêt de surveiller aussi ce qu&#39;il fait une fois déployé.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Le modèle a menti exprès, il a donc des intentions cachées. » L&#39;expérience montre un comportement qui change selon que le modèle se croit entraîné ou non, et un brouillon qui le justifie ; ses auteurs préviennent que des verbes comme « vouloir » décrivent des actes cohérents avec un but, sans rien affirmer d&#39;une vie intérieure.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#FFB86B" href="/lexique/alignement/" data-go="alignement">Alignement</a><a class="tl live" style="--c:#FFB86B" href="/lexique/cot-infidele/" data-go="cot-infidele">Chain-of-thought infidèle</a><a class="tl live" style="--c:#FFB86B" href="/lexique/interpretabilite/" data-go="interpretabilite">Interprétabilité</a><a class="tl live" style="--c:#F5D76E" href="/lexique/post-entrainement/" data-go="post-entrainement">Post-entraînement</a><a class="tl live" style="--c:#F5D76E" href="/lexique/donnees-d-entrainement/" data-go="donnees-d-entrainement">Données d&#39;entraînement</a><a class="tl live" style="--c:#FF7A7A" href="/lexique/mythe-ia-a-des-valeurs/" data-go="mythe-ia-a-des-valeurs">« L&#39;IA a des valeurs »</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Alignment faking », Lexique IA, https://neopal.github.io/lexique/alignment-faking/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/constitutional-ai/" data-go="constitutional-ai" rel="prev"><span aria-hidden="true">←</span><span class="nt">Constitutional AI</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

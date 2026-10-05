@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Interprétabilité">
+<meta property="article:published_time" content="2026-10-02">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Comportements et limites">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Interprétabilité | Lexique IA">
 <meta name="twitter:description" content="L&#39;interprétabilité cherche à comprendre comment un modèle calcule ses réponses, en reliant l&#39;activité de ses neurones à des concepts et à des étapes…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/interpretabilite.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/interpretabilite.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/interpretabilite/#term","name":"Interprétabilité","description":"L'interprétabilité cherche à comprendre comment un modèle calcule ses réponses, en reliant l'activité de ses neurones à des concepts et à des étapes qu'un humain peut lire.","url":"https://neopal.github.io/lexique/interpretabilite/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Interpretability","interpretability","mechanistic interpretability","mech interp","explainability","XAI","features","sparse autoencoder","circuit tracing","steering","interprétabilité mécaniste","explicabilité"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/interpretabilite/#term","name":"Interprétabilité","description":"L'interprétabilité cherche à comprendre comment un modèle calcule ses réponses, en reliant l'activité de ses neurones à des concepts et à des étapes qu'un humain peut lire.","url":"https://neopal.github.io/lexique/interpretabilite/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["Interpretability","interpretability","mechanistic interpretability","mech interp","explainability","XAI","features","sparse autoencoder","circuit tracing","steering","interprétabilité mécaniste","explicabilité"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/interpretabilite/#article","headline":"Interprétabilité","name":"Interprétabilité | Lexique IA","description":"L'interprétabilité cherche à comprendre comment un modèle calcule ses réponses, en reliant l'activité de ses neurones à des concepts et à des étapes qu'un humain peut lire.","url":"https://neopal.github.io/lexique/interpretabilite/","mainEntityOfPage":"https://neopal.github.io/lexique/interpretabilite/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/interpretabilite.jpg","datePublished":"2026-10-02","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Comportements et limites","about":{"@id":"https://neopal.github.io/lexique/interpretabilite/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/interpretabilite/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/parametres/#term"},{"@id":"https://neopal.github.io/lexique/alignement/#term"},{"@id":"https://neopal.github.io/lexique/modeles-de-raisonnement/#term"},{"@id":"https://neopal.github.io/lexique/reward-hacking/#term"},{"@id":"https://neopal.github.io/lexique/mythe-sait-quand-il-ne-sait-pas/#term"},{"@id":"https://neopal.github.io/lexique/biais/#term"}],"citation":[{"@type":"CreativeWork","name":"Anthropic, Tracing the thoughts of a large language model, 27 mars 2025 (Claude 3.5 Haiku ; pour 36+59, un chemin approximatif et un chemin pour le dernier chiffre en parallèle, alors que Claude décrit l'algorithme de la retenue ; rime choisie avant d'écrire le vers ; une fraction du calcul captée, quelques heures de travail humain pour des consignes de quelques dizaines de mots)","url":"https://www.anthropic.com/research/tracing-thoughts-language-model"},{"@type":"CreativeWork","name":"Anthropic, Mapping the Mind of a Large Language Model, 21 mai 2024 (Claude 3 Sonnet ; chaque concept réparti sur de nombreux neurones et chaque neurone impliqué dans de nombreux concepts ; feature de flatterie ; « I am the Golden Gate Bridge… my physical form is the iconic bridge itself »)","url":"https://www.anthropic.com/research/mapping-mind-language-model"},{"@type":"CreativeWork","name":"Anthropic, Golden Gate Claude, 23 mai 2024 (démonstration en ligne pendant 24 heures)","url":"https://www.anthropic.com/news/golden-gate-claude"},{"@type":"CreativeWork","name":"Dario Amodei, The Urgency of Interpretability, avril 2025 (« grown more than they are built », formule de Chris Olah ; plus de 30 millions de features dans Claude 3 Sonnet ; feature des genres musicaux qui expriment le mécontentement ; objectif « interpretability can reliably detect most model problems » d'ici 2027)","url":"https://www.darioamodei.com/post/the-urgency-of-interpretability"},{"@type":"CreativeWork","name":"MIT Technology Review, « Mechanistic interpretability », 10 Breakthrough Technologies 2026, 12 janvier 2026 (concepts comme Michael Jordan et le Golden Gate Bridge repérés dans Claude ; désaccord des chercheurs sur la possibilité de comprendre entièrement les LLM)","url":"https://www.technologyreview.com/2026/01/12/1130003/mechanistic-interpretability-ai-research-models-2026-breakthrough-technologies/"},{"@type":"CreativeWork","name":"Anthropic, System Card: Claude Sonnet 4.5, septembre 2025, section 7.6 (outils d'interprétabilité mécaniste utilisés pour la première fois ; représentations internes de la conscience d'être évalué, renforcées au fil de l'entraînement ; leur inhibition augmente certains comportements désalignés sans dépasser Claude Opus 4.1 ni Claude Sonnet 4)","url":"https://www.anthropic.com/claude-sonnet-4-5-system-card"},{"@type":"CreativeWork","name":"Anthropic, Open-sourcing circuit tracing tools, 29 mai 2025 (bibliothèque open source de graphes d'attribution pour des modèles open weights, interface hébergée par Neuronpedia)","url":"https://www.anthropic.com/research/open-source-circuit-tracing"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/interpretabilite/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Interprétabilité","item":"https://neopal.github.io/lexique/interpretabilite/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Si on lui demande d&#39;expliquer son raisonnement, on saura pourquoi il a écarté ce dossier ?</div><div class="bubble a">Tu sauras ce qu&#39;il raconte de son raisonnement, qui peut différer de ce qu&#39;il a calculé, comme pour 36 + 59 ; pour une décision qui compte, vérifie ses critères sur des cas témoins plutôt que sur son explication.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Le brouillon d&#39;un modèle de raisonnement montre ce qui se passe dans sa tête. » Ce brouillon est du texte que le modèle produit, utile à surveiller mais pas toujours fidèle ; l&#39;interprétabilité regarde le calcul lui-même, dans l&#39;activité des neurones.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#7CFFB2" href="/lexique/parametres/" data-go="parametres">Paramètres</a><a class="tl live" style="--c:#FFB86B" href="/lexique/alignement/" data-go="alignement">Alignement</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/modeles-de-raisonnement/" data-go="modeles-de-raisonnement">Modèles de raisonnement</a><a class="tl live" style="--c:#FFB86B" href="/lexique/reward-hacking/" data-go="reward-hacking">Reward hacking</a><a class="tl live" style="--c:#FF7A7A" href="/lexique/mythe-sait-quand-il-ne-sait-pas/" data-go="mythe-sait-quand-il-ne-sait-pas">« L&#39;IA sait quand elle ne sait pas »</a><a class="tl live" style="--c:#FFB86B" href="/lexique/biais/" data-go="biais">Biais</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Interprétabilité », Lexique IA, https://neopal.github.io/lexique/interpretabilite/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/biais/" data-go="biais" rel="prev"><span aria-hidden="true">←</span><span class="nt">Biais</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

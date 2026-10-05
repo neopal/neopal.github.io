@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Rétropropagation">
+<meta property="article:published_time" content="2026-10-02">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Entraînement">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Rétropropagation | Lexique IA">
 <meta name="twitter:description" content="La rétropropagation est le calcul qui, après chaque erreur d&#39;un modèle pendant l&#39;entraînement, remonte de la sortie vers l&#39;entrée pour établir combien…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/retropropagation.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/retropropagation.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/retropropagation/#term","name":"Rétropropagation","description":"La rétropropagation est le calcul qui, après chaque erreur d'un modèle pendant l'entraînement, remonte de la sortie vers l'entrée pour établir combien chaque paramètre a contribué à cette erreur, et donc dans quel sens le corriger.","url":"https://neopal.github.io/lexique/retropropagation/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Backpropagation","backprop","backward pass","reverse-mode automatic differentiation","rétropropagation du gradient","passe arrière"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/retropropagation/#term","name":"Rétropropagation","description":"La rétropropagation est le calcul qui, après chaque erreur d'un modèle pendant l'entraînement, remonte de la sortie vers l'entrée pour établir combien chaque paramètre a contribué à cette erreur, et donc dans quel sens le corriger.","url":"https://neopal.github.io/lexique/retropropagation/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["Backpropagation","backprop","backward pass","reverse-mode automatic differentiation","rétropropagation du gradient","passe arrière"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/retropropagation/#article","headline":"Rétropropagation","name":"Rétropropagation | Lexique IA","description":"La rétropropagation est le calcul qui, après chaque erreur d'un modèle pendant l'entraînement, remonte de la sortie vers l'entrée pour établir combien chaque paramètre a contribué à cette erreur, et donc dans quel sens le corriger.","url":"https://neopal.github.io/lexique/retropropagation/","mainEntityOfPage":"https://neopal.github.io/lexique/retropropagation/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/retropropagation.jpg","datePublished":"2026-10-02","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Entraînement","about":{"@id":"https://neopal.github.io/lexique/retropropagation/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/retropropagation/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/descente-de-gradient/#term"},{"@id":"https://neopal.github.io/lexique/gradient-qui-disparait/#term"},{"@id":"https://neopal.github.io/lexique/entrainement/#term"},{"@id":"https://neopal.github.io/lexique/parametres/#term"}],"citation":[{"@type":"CreativeWork","name":"Rumelhart, Hinton et Williams, Learning representations by back-propagating errors, Nature, 9 octobre 1986","url":"https://www.nature.com/articles/323533a0"},{"@type":"CreativeWork","name":"Wikipédia, Backpropagation (Linnainmaa 1970, Werbos 1982, Rumelhart en 1985 et 1986)","url":"https://en.wikipedia.org/wiki/Backpropagation"},{"@type":"CreativeWork","name":"Kaplan et al., Scaling Laws for Neural Language Models, janvier 2020 (le retour coûte environ deux fois l'aller)","url":"https://arxiv.org/abs/2001.08361"},{"@type":"CreativeWork","name":"Hugging Face, documentation Model training anatomy (6 octets de poids, 8 octets pour Adam et 4 octets de gradients par paramètre, activations gardées pour le retour ; environ 85 Go pour entraîner un modèle de 4 milliards de paramètres), consultée le 2 octobre 2026","url":"https://huggingface.co/docs/transformers/model_memory_anatomy"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/retropropagation/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Rétropropagation","item":"https://neopal.github.io/lexique/retropropagation/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Le modèle de 8 milliards tourne très bien sur notre GPU de 24 Go. On le <a class="tw" style="--c:#F5D76E" href="/lexique/fine-tuning/" data-go="fine-tuning">fine-tune</a> dessus ce week-end ?</div><div class="bubble a">Pas en entier, parce que l&#39;entraînement garde en mémoire bien plus que les poids. Pars sur une méthode qui ne réentraîne qu&#39;une petite partie des paramètres, comme LoRA, ou loue une machine plus grosse.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« La rétropropagation, c&#39;est quand le modèle apprend de ses erreurs en te parlant. » Elle n&#39;a lieu que pendant l&#39;entraînement, sur des exemples dont on connaît la bonne réponse ; quand le modèle te répond, aucun retour n&#39;est calculé.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#F5D76E" href="/lexique/descente-de-gradient/" data-go="descente-de-gradient">Descente de gradient</a><a class="tl live" style="--c:#F5D76E" href="/lexique/gradient-qui-disparait/" data-go="gradient-qui-disparait">Gradient qui disparaît</a><a class="tl live" style="--c:#F5D76E" href="/lexique/entrainement/" data-go="entrainement">Entraînement</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/parametres/" data-go="parametres">Paramètres</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Rétropropagation », Lexique IA, https://neopal.github.io/lexique/retropropagation/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/descente-de-gradient/" data-go="descente-de-gradient" rel="prev"><span aria-hidden="true">←</span><span class="nt">Descente de gradient</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

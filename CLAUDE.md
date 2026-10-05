@@ -83,10 +83,12 @@ Site CV/Portfolio interactif pour **Pierre-Adrien LAIR** avec chatbot IA intégr
 - Après toute modif de `terms.js`, `render.js` ou des schémas : `node scripts/build-lexique.mjs`. `lexique/index.html` est en CRLF : l'éditer sans convertir les fins de ligne.
 
 ## SEO & AI Discoverability
-- JSON-LD Schema.org (Person) dans `<head>`
+- JSON-LD Schema.org (Person, `@id` `https://neopal.github.io/#person`) dans `<head>` du CV
 - Open Graph + Twitter Cards
-- `sitemap.xml`, `robots.txt` (autorise tous crawlers AI)
-- `llms.txt` pour ChatGPT/Claude/Perplexity
+- `sitemap.xml`, `robots.txt` (robots IA actuels nommés et autorisés ; `/content/`, `/mockup/`, `/video/`, `/scripts/` exclus)
+- `llms.txt` à la racine, qui renvoie vers `lexique/llms.txt` (index) et `lexique/llms-full.txt` (toutes les fiches en texte brut), générés par le build
+- Lexique : chaque fiche porte un graphe JSON-LD (DefinedTerm + TechArticle avec auteur = la Person du CV, `datePublished` / `dateModified`, licence, `citation` = les sources de `terms.js`, `mentions` = termes liés ; VideoObject si vidéo ; BreadcrumbList) et les balises `article:*`. `datePublished` vient de la date d'ajout de la page dans git puis reste figée ; `dateModified` ne bouge que si la page change.
+- Licence des définitions : CC BY 4.0 (`<link rel="license">`, bloc « Citer cette définition » avec bouton Copier en bas de chaque fiche)
 
 ## Points d'attention
 

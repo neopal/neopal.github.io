@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Transformer">
+<meta property="article:published_time" content="2026-10-02">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Fondations">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Transformer | Lexique IA">
 <meta name="twitter:description" content="Le transformer est l&#39;architecture de presque tous les LLM, où chaque token tient compte de tous les autres à la fois, ce qui permet de lire un texte…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/transformer.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/transformer.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/transformer/#term","name":"Transformer","description":"Le transformer est l'architecture de presque tous les LLM, où chaque token tient compte de tous les autres à la fois, ce qui permet de lire un texte entier en parallèle.","url":"https://neopal.github.io/lexique/transformer/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["transformers","transformer architecture","decoder-only","Attention Is All You Need","GPT","architecture transformer","transformeur"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/transformer/#term","name":"Transformer","description":"Le transformer est l'architecture de presque tous les LLM, où chaque token tient compte de tous les autres à la fois, ce qui permet de lire un texte entier en parallèle.","url":"https://neopal.github.io/lexique/transformer/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["transformers","transformer architecture","decoder-only","Attention Is All You Need","GPT","architecture transformer","transformeur"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/transformer/#article","headline":"Transformer","name":"Transformer | Lexique IA","description":"Le transformer est l'architecture de presque tous les LLM, où chaque token tient compte de tous les autres à la fois, ce qui permet de lire un texte entier en parallèle.","url":"https://neopal.github.io/lexique/transformer/","mainEntityOfPage":"https://neopal.github.io/lexique/transformer/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/transformer.jpg","datePublished":"2026-10-02","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Fondations","about":{"@id":"https://neopal.github.io/lexique/transformer/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/transformer/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/auto-attention/#term"},{"@id":"https://neopal.github.io/lexique/llm/#term"},{"@id":"https://neopal.github.io/lexique/prediction-du-mot-suivant/#term"},{"@id":"https://neopal.github.io/lexique/gpu/#term"},{"@id":"https://neopal.github.io/lexique/gradient-qui-disparait/#term"},{"@id":"https://neopal.github.io/lexique/deep-learning/#term"},{"@id":"https://neopal.github.io/lexique/encodeur-decodeur/#term"},{"@id":"https://neopal.github.io/lexique/position/#term"},{"@id":"https://neopal.github.io/lexique/architectures-hybrides/#term"},{"@id":"https://neopal.github.io/lexique/arxiv/#term"}],"citation":[{"@type":"CreativeWork","name":"Vaswani et al. (Google Brain et Google Research), Attention Is All You Need, 12 juin 2017 (récurrence qui empêche le calcul en parallèle ; 3,5 jours sur huit GPU P100 ; meilleurs scores de traduction pour une fraction du coût ; piles de N = 6 couches ; Jakob Uszkoreit propose de remplacer les réseaux récurrents par l'auto-attention)","url":"https://arxiv.org/abs/1706.03762"},{"@type":"CreativeWork","name":"Wikipédia, Attention Is All You Need (huit auteurs de Google ; titre tiré de « All You Need Is Love » des Beatles ; nom choisi par Jakob Uszkoreit pour le son du mot ; tous les auteurs ont quitté Google ; plus de 250 000 citations en 2026 ; calcul parallèle sur GPU, entraînement plus rapide et modèles plus gros), consulté le 2 octobre 2026","url":"https://en.wikipedia.org/wiki/Attention_Is_All_You_Need"},{"@type":"CreativeWork","name":"Wikipédia, Generative pre-trained transformer (GPT-1 présenté par OpenAI le 11 juin 2018 dans « Improving Language Understanding by Generative Pre-Training »), consulté le 2 octobre 2026","url":"https://en.wikipedia.org/wiki/Generative_pre-trained_transformer"},{"@type":"CreativeWork","name":"Wikipédia, Transformer (deep learning architecture) (série GPT de transformers decoder-only à partir de 2018), consulté le 2 octobre 2026","url":"https://en.wikipedia.org/wiki/Transformer_(deep_learning)"},{"@type":"CreativeWork","name":"vLLM, « vLLM Now Supports Qwen3-Next: Hybrid Architecture with Extreme Efficiency », 11 septembre 2025 (attention hybride, Gated DeltaNet et attention complète alternées)","url":"https://vllm.ai/blog/2025-09-11-qwen3-next"},{"@type":"CreativeWork","name":"Alibaba Cloud, Qwen3-Next: Towards Ultimate Training & Inference Efficiency (75 % des couches en Gated DeltaNet, 25 % en attention standard ; « linear attention is fast but weak at recall »), consulté le 2 octobre 2026","url":"https://www.alibabacloud.com/blog/602580"},{"@type":"CreativeWork","name":"NVIDIA, fiche Hugging Face de NVIDIA-Nemotron-3-Nano-30B-A3B (23 couches Mamba-2 et MoE, 6 couches d'attention ; mise en ligne le 15 décembre 2025), consultée le 2 octobre 2026","url":"https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/transformer/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Transformer","item":"https://neopal.github.io/lexique/transformer/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">On attend l&#39;architecture qui remplacera le transformer avant d&#39;investir ?</div><div class="bubble a">Rien ne presse, puisque tu achètes un modèle et pas une architecture, et les hybrides sortis depuis 2025 gardent une part d&#39;attention ; ce qui change pour toi d&#39;une version à l&#39;autre, c&#39;est surtout le prix et la vitesse sur les longs documents.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Le transformer, c&#39;est l&#39;invention d&#39;OpenAI. » L&#39;architecture vient de huit chercheurs de Google, en 2017 ; OpenAI l&#39;a reprise un an plus tard pour son premier GPT, dont le T veut justement dire transformer.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#7CFFB2" href="/lexique/auto-attention/" data-go="auto-attention">Auto-attention</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/llm/" data-go="llm">LLM (grand modèle de langage)</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/prediction-du-mot-suivant/" data-go="prediction-du-mot-suivant">Prédiction du mot suivant</a><a class="tl live" style="--c:#F08DC2" href="/lexique/gpu/" data-go="gpu">GPU</a><a class="tl live" style="--c:#F5D76E" href="/lexique/gradient-qui-disparait/" data-go="gradient-qui-disparait">Gradient qui disparaît</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/deep-learning/" data-go="deep-learning">Deep learning</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/encodeur-decodeur/" data-go="encodeur-decodeur">Encodeur-décodeur</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/position/" data-go="position">Encodage positionnel</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/architectures-hybrides/" data-go="architectures-hybrides">Architectures hybrides</a><a class="tl live" style="--c:#F08DC2" href="/lexique/arxiv/" data-go="arxiv">arXiv</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Transformer », Lexique IA, https://neopal.github.io/lexique/transformer/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/distillation/" data-go="distillation" rel="prev"><span aria-hidden="true">←</span><span class="nt">Distillation</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

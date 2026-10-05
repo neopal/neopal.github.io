@@ -9,6 +9,8 @@
 //   lexique/index.html        mis à jour entre marqueurs : JSON-LD DefinedTermSet + index pré-rendu dans #panel
 //   lexique/og/<id>.jpg       image Open Graph 1200x630 par terme (Chrome headless + ffmpeg, si disponibles)
 //   sitemap.xml               racine + /lexique/ + une URL par terme live
+//   lexique/llms.txt          index des définitions pour les assistants IA (format llms.txt)
+//   lexique/llms-full.txt     toutes les fiches en texte brut, sources comprises
 //
 // Idempotent : relancer sans changement dans terms.js donne des fichiers identiques.
 // Variables : LEX_TERMS (chemin d'un terms.js alternatif), LEX_DATE (lastmod, AAAA-MM-JJ, défaut : aujourd'hui).
@@ -33,6 +35,16 @@ const FORCE_OG = process.argv.includes('--og');
 const TODAY = process.env.LEX_DATE || new Date().toLocaleDateString('sv-SE'); // AAAA-MM-JJ, heure locale
 const DESC_MAX = 155;
 const OG_VERSION = 1; // incrémenter si le gabarit de l'image OG change
+const LICENSE = 'https://creativecommons.org/licenses/by/4.0/';
+// Même @id que la Person du CV (index.html à la racine) : les moteurs relient l'auteur des fiches au profil.
+const AUTHOR = {
+  '@type': 'Person',
+  '@id': SITE + '/#person',
+  name: 'Pierre-Adrien Lair',
+  url: SITE + '/',
+  jobTitle: 'Senior Lead Analytics & AI, directeur du LAB IA Converteo',
+  sameAs: ['https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/', 'https://x.com/pal_analytics'],
+};
 
 const require = createRequire(import.meta.url);
 const R = require(join(LEX, 'render.js'));
@@ -151,10 +163,11 @@ const HEAD_TAGS = [
 ];
 const HEAD_MULTI = [
   /\n<meta property="og:[^"]+" content="[^"]*">/g,
+  /\n<meta property="article:[^"]+" content="[^"]*">/g,
   /\n<meta name="twitter:[^"]+" content="[^"]*">/g,
 ];
 
-function termHead(html, t, cats, og) {
+function termHead(html, t, cats, og, dates) {
   for (const [re, what] of HEAD_TAGS) html = replaceOnce(html, re, '', what);
   for (const re of HEAD_MULTI) html = html.replace(re, '');
   const title = R.pageTitle(t);
@@ -174,6 +187,10 @@ function termHead(html, t, cats, og) {
     og.width ? `<meta property="og:image:width" content="${og.width}">` : '',
     og.height ? `<meta property="og:image:height" content="${og.height}">` : '',
     `<meta property="og:image:alt" content="${esc(plainTitle(t))}">`,
+    `<meta property="article:published_time" content="${dates.pub}">`,
+    `<meta property="article:modified_time" content="${dates.mod}">`,
+    `<meta property="article:author" content="${SITE}/">`,
+    `<meta property="article:section" content="${esc((cats[t.cat] || {}).label || '')}">`,
     `<meta name="twitter:card" content="summary_large_image">`,
     `<meta name="twitter:title" content="${esc(title)}">`,
     `<meta name="twitter:description" content="${esc(desc)}">`,
@@ -183,22 +200,79 @@ function termHead(html, t, cats, og) {
   return html;
 }
 
-function definedTerm(t) {
-  const alt = [t.en, ...(Array.isArray(t.aliases) ? t.aliases : []), ...(Array.isArray(t.aliasesFr) ? t.aliasesFr : [])]
+function alternateNames(t) {
+  return [t.en, ...(Array.isArray(t.aliases) ? t.aliases : []), ...(Array.isArray(t.aliasesFr) ? t.aliasesFr : [])]
     .map(clean).filter(Boolean)
     .filter((a, i, all) => all.indexOf(a) === i && R.normalize(a) !== R.normalize(t.title));
-  const obj = {
-    '@context': 'https://schema.org',
+}
+
+// Graphe JSON-LD d'une fiche : le terme (DefinedTerm), la page qui le définit (TechArticle : auteur, dates,
+// licence, sources), la vidéo s'il y en a une, et le fil d'Ariane.
+function termGraph(t, cats, og, dates) {
+  const url = termAbsUrl(t.id);
+  const alt = alternateNames(t);
+  const term = {
     '@type': 'DefinedTerm',
-    '@id': termAbsUrl(t.id) + '#term',
+    '@id': url + '#term',
     name: plainTitle(t),
     description: clean(t.short),
-    url: termAbsUrl(t.id),
+    url,
     inLanguage: 'fr',
-    inDefinedTermSet: {'@type': 'DefinedTermSet', '@id': LEX_URL + '#set', name: 'Lexique IA', url: LEX_URL},
+    inDefinedTermSet: {'@id': LEX_URL + '#set'},
   };
-  if (alt.length) obj.alternateName = alt.length === 1 ? alt[0] : alt;
-  return obj;
+  if (alt.length) term.alternateName = alt.length === 1 ? alt[0] : alt;
+  const sources = (Array.isArray(t.sources) ? t.sources : []).filter((s) => s && s.url);
+  const related = (t.links || []).filter((l) => liveIds.has(l)).map((l) => ({'@id': termAbsUrl(l) + '#term'}));
+  const article = {
+    '@type': 'TechArticle',
+    '@id': url + '#article',
+    headline: truncate(plainTitle(t), 110),
+    name: R.pageTitle(t),
+    description: clean(t.short),
+    url,
+    mainEntityOfPage: url,
+    inLanguage: 'fr',
+    image: og.url,
+    datePublished: dates.pub,
+    dateModified: dates.mod,
+    author: {'@id': AUTHOR['@id']},
+    publisher: {'@id': AUTHOR['@id']},
+    license: LICENSE,
+    isAccessibleForFree: true,
+    articleSection: (cats[t.cat] || {}).label || undefined,
+    about: {'@id': url + '#term'},
+    mainEntity: {'@id': url + '#term'},
+    isPartOf: {'@id': LEX_URL + '#set'},
+  };
+  if (related.length) article.mentions = related;
+  if (sources.length) article.citation = sources.map((s) => ({'@type': 'CreativeWork', name: clean(s.label), url: s.url}));
+  const graph = [term, article];
+  if (t.video && t.video.src) {
+    article.video = {'@id': url + '#video'};
+    graph.push({
+      '@type': 'VideoObject',
+      '@id': url + '#video',
+      name: `${plainTitle(t)} : la définition en vidéo`,
+      description: clean(t.short),
+      thumbnailUrl: absAsset(t.video.poster) || og.url,
+      contentUrl: absAsset(t.video.src),
+      uploadDate: dates.pub,
+      inLanguage: 'fr',
+      author: {'@id': AUTHOR['@id']},
+      license: LICENSE,
+    });
+  }
+  graph.push({
+    '@type': 'BreadcrumbList',
+    '@id': url + '#breadcrumb',
+    itemListElement: [
+      {'@type': 'ListItem', position: 1, name: 'Lexique IA', item: LEX_URL},
+      {'@type': 'ListItem', position: 2, name: plainTitle(t), item: url},
+    ],
+  });
+  graph.push(AUTHOR);
+  graph.push({'@type': 'DefinedTermSet', '@id': LEX_URL + '#set', name: 'Lexique IA', url: LEX_URL});
+  return {'@context': 'https://schema.org', '@graph': graph};
 }
 
 function definedTermSet(live) {
@@ -210,7 +284,10 @@ function definedTermSet(live) {
     description: "Le vocabulaire de l'IA expliqué simplement, en français, avec les sources.",
     url: LEX_URL,
     inLanguage: 'fr',
-    author: {'@type': 'Person', name: 'Pierre-Adrien Lair', url: SITE + '/'},
+    author: AUTHOR,
+    publisher: {'@id': AUTHOR['@id']},
+    license: LICENSE,
+    isAccessibleForFree: true,
     hasDefinedTerm: live.map((t) => ({
       '@type': 'DefinedTerm',
       '@id': termAbsUrl(t.id) + '#term',
@@ -325,7 +402,7 @@ function buildSitemap(live) {
   const url = (loc, lastmod, freq, prio) =>
     `    <url>\n        <loc>${loc}</loc>\n        <lastmod>${lastmod}</lastmod>\n        <changefreq>${freq}</changefreq>\n        <priority>${prio}</priority>\n    </url>`;
   // Une URL garde sa date tant que sa page ne change pas (voir changed) ; les nouvelles prennent la date du jour.
-  return (changed) => {
+  const write = (changed) => {
     const lm = (loc) => (changed.has(loc) ? TODAY : lastmodOf(loc, TODAY));
     const xml = [
       '<?xml version="1.0" encoding="UTF-8"?>',
@@ -338,6 +415,72 @@ function buildSitemap(live) {
     ].join('\n');
     return writeIfChanged(file, xml);
   };
+  return {write, lastmodOf};
+}
+
+// ---------- Textes pour les assistants IA (llms.txt) ----------
+const NOTE_LICENCE = "Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.";
+
+function buildLlmsIndex(live, cats) {
+  const lines = [
+    '# Lexique IA',
+    '',
+    `> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. ${live.length} définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. ${NOTE_LICENCE}`,
+    '',
+    `Toutes les fiches en texte brut, sources comprises : ${LEX_URL}llms-full.txt`,
+    `Auteur : ${SITE}/`,
+    '',
+  ];
+  for (const [key, c] of Object.entries(cats)) {
+    const ts = live.filter((t) => t.cat === key);
+    if (!ts.length) continue;
+    lines.push(`## ${c.label}`, '');
+    for (const t of ts) {
+      const en = t.en && R.normalize(t.en) !== R.normalize(t.title) ? ` (en anglais : ${clean(t.en)})` : '';
+      lines.push(`- [${plainTitle(t)}](${termAbsUrl(t.id)})${en} : ${clean(t.short)}`);
+    }
+    lines.push('');
+  }
+  return lines.join('\n');
+}
+
+function buildLlmsFull(live, cats, byId) {
+  const out = [
+    '# Lexique IA : toutes les définitions',
+    '',
+    `> ${live.length} fiches écrites et sourcées par Pierre-Adrien Lair (${SITE}/). ${NOTE_LICENCE}`,
+    `> Index : ${LEX_URL}llms.txt`,
+    '',
+  ];
+  for (const t of live) {
+    const b = [`## ${plainTitle(t)}`, '', `URL : ${termAbsUrl(t.id)}`, `Catégorie : ${(cats[t.cat] || {}).label || t.cat}`];
+    if (t.en && R.normalize(t.en) !== R.normalize(t.title)) b.push(`En anglais : ${clean(t.en)}`);
+    const fr = (t.aliasesFr || []).map(clean).filter(Boolean);
+    const en = (t.aliases || []).map(clean).filter(Boolean);
+    if (fr.length) b.push(`Aussi appelé : ${fr.join(', ')}`);
+    if (en.length) b.push(`Variantes anglaises : ${en.join(', ')}`);
+    const sec = (title, body) => { if (body) b.push('', `### ${title}`, '', body); };
+    sec('Définition courte', clean(t.short));
+    sec("L'image", clean(t.image));
+    sec('Imagine', clean(t.imagine));
+    sec('Définition complète', (t.full || []).map(clean).join('\n\n'));
+    if (t.reliability && t.reliability.level) sec('Fiable ?', `${clean(t.reliability.level)} : ${clean(t.reliability.why)}`);
+    if (t.table && Array.isArray(t.table.rows) && t.table.rows.length) {
+      const tb = t.table;
+      const row = (r) => `| ${r.map(clean).join(' | ')} |`;
+      sec(clean(tb.caption) || 'Comparatif', [row(tb.columns), row(tb.columns.map(() => '---')), ...tb.rows.map(row)].join('\n') +
+        (tb.asOf ? `\n\nRelevé du ${clean(tb.asOf)}.` : '') + (tb.note ? ` ${clean(tb.note)}` : ''));
+    }
+    sec('2024 vs 2026', clean(t.then));
+    sec('Dans le jargon', (t.jargon || []).filter((j) => j && j.say).map((j) => `- ${clean(j.say)} : ${clean(j.means)}`).join('\n'));
+    sec('Solutions populaires', (t.solutions || []).filter((s) => s && s.name).map((s) => `- ${clean(s.name)}${s.kind ? ` (${clean(s.kind)})` : ''} : ${s.url}`).join('\n'));
+    sec('Entendu au bureau', (t.office || []).map((m) => `- ${m.who === 'q' ? 'Question' : 'Réponse'} : ${clean(m.text)}`).join('\n'));
+    sec('À éviter', clean(t.avoid));
+    sec('Termes liés', (t.links || []).filter((l) => byId[l] && byId[l].status === 'live').map((l) => `- ${plainTitle(byId[l])} : ${termAbsUrl(l)}`).join('\n'));
+    sec('Sources', (t.sources || []).filter((s) => s && s.label).map((s) => `- ${clean(s.label)}${s.url ? ` : ${s.url}` : ''}`).join('\n'));
+    out.push(b.join('\n'), '');
+  }
+  return out.join('\n');
 }
 
 // ---------- Main ----------
@@ -349,7 +492,7 @@ const indexFile = join(LEX, 'index.html');
 const source = readFileSync(indexFile, 'utf8');
 const template = stripGenerated(source);
 const changed = new Set();
-const writeSitemap = buildSitemap(live);
+const sitemap = buildSitemap(live);
 
 // Garde-fous sur le gabarit (contrat avec le front).
 if (!/<html lang="fr">/.test(template)) fail('<html lang="fr"> introuvable dans lexique/index.html');
@@ -366,13 +509,31 @@ if (writeIfChanged(indexFile, index)) { changed.add(LEX_URL); console.log('màj 
 
 // 2. Une page par terme publié.
 const pageTemplate = template.replace(/^<!doctype html>\n/i, (m) => `${m}${GEN_MARK}\n`);
+// Date d'ajout de la page d'un terme dans l'historique git (vide hors dépôt git).
+function gitAddedDate(id) {
+  try {
+    const out = execFileSync('git', ['log', '--diff-filter=A', '--format=%as', '--', `lexique/${id}/index.html`], {cwd: ROOT, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore']});
+    return out.trim().split('\n').filter(Boolean).pop() || '';
+  } catch { return ''; }
+}
+
+// Dates : datePublished est conservée d'un build à l'autre (au premier passage : la date du sitemap) ;
+// dateModified ne change que si le reste de la page change.
+const MOD = '__LEX_DATE_MODIFIED__';
 for (const t of live) {
-  let html = termHead(pageTemplate, t, cats, ogFor(t, cards));
+  const file = join(LEX, t.id, 'index.html');
+  const old = existsSync(file) ? readFileSync(file, 'utf8') : '';
+  const oldPub = (old.match(/"datePublished":"(\d{4}-\d{2}-\d{2})"/) || [])[1];
+  const oldMod = (old.match(/"dateModified":"(\d{4}-\d{2}-\d{2})"/) || [])[1];
+  const dates = {pub: oldPub || gitAddedDate(t.id) || sitemap.lastmodOf(termAbsUrl(t.id), TODAY), mod: MOD};
+  const og = ogFor(t, cards);
+  let html = termHead(pageTemplate, t, cats, og, dates);
   html = html.replace('<html lang="fr">', () => `<html lang="fr" data-term="${esc(t.id)}">`);
   html = html.replace(/\n<body>/, '\n<body class="has-pager">');
-  html = withJsonLd(html, jsonLd(definedTerm(t)));
+  html = withJsonLd(html, jsonLd(termGraph(t, cats, og, dates)));
   html = withPanel(html, R.renderTerm(t, cats, terms));
-  const file = join(LEX, t.id, 'index.html');
+  const same = oldMod && old === html.split(MOD).join(oldMod);
+  html = html.split(MOD).join(same ? oldMod : TODAY);
   if (writeIfChanged(file, html)) { changed.add(termAbsUrl(t.id)); console.log(`page     lexique/${t.id}/index.html`); }
 }
 
@@ -389,6 +550,11 @@ for (const name of readdirSync(LEX)) {
 }
 
 // 4. Sitemap.
-if (writeSitemap(changed)) console.log('màj      sitemap.xml');
+if (sitemap.write(changed)) console.log('màj      sitemap.xml');
+
+// 5. Textes pour les assistants IA.
+const byIdAll = Object.fromEntries(terms.map((t) => [t.id, t]));
+if (writeIfChanged(join(LEX, 'llms.txt'), buildLlmsIndex(live, cats))) console.log('màj      lexique/llms.txt');
+if (writeIfChanged(join(LEX, 'llms-full.txt'), buildLlmsFull(live, cats, byIdAll))) console.log('màj      lexique/llms-full.txt');
 
 console.log(`ok : ${live.length} terme(s) publié(s) sur ${terms.length}, ${Object.keys(cards).length} image(s) OG`);
