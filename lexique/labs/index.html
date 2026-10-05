@@ -77,6 +77,10 @@ h1[tabindex]:focus{outline:none}
 .viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
 .viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
 .viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.mapreset{position:absolute;top:14px;left:16px;z-index:3;display:flex;align-items:center;gap:8px;font:inherit;font-size:15px;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 14px;cursor:pointer}
+.mapreset:hover{border-color:#555;background:#161616}
+.mapreset[hidden]{display:none}
+.mapreset kbd{font-family:var(--mono);font-size:12px;color:var(--dim);border:1px solid var(--line);border-radius:4px;padding:0 5px}
 .graph-wrap[data-view="list"] #graph{display:none}
 .graph-wrap[data-view="map"] .az{display:none}
 .az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 140px}
@@ -224,7 +228,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .layout{grid-template-columns:minmax(0,1fr);min-height:0}
   .graph-wrap{display:none}
   .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
-  .viewtoggle,.az,#graph,.legend{display:none!important}
+  .viewtoggle,.mapreset,.az,#graph,.legend{display:none!important}
 
   /* Carte mobile : vue centrée sur un terme, ses liens autour. */
   .graph-wrap.open .ego{display:flex;flex-direction:column;height:100%}
@@ -342,6 +346,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
       </div>
       <div class="egofoot" id="egoFoot" hidden><button class="egoread" id="egoRead" type="button">Lire la fiche</button></div>
     </div>
+    <button class="mapreset" id="mapReset" type="button" hidden><span aria-hidden="true">✕</span>Tous les termes<kbd aria-hidden="true">Échap</kbd></button>
     <div class="viewtoggle" role="group" aria-label="Affichage des termes">
       <button type="button" data-view="list" aria-pressed="false">Liste</button>
       <button type="button" data-view="map" aria-pressed="true">Carte</button>
@@ -468,6 +473,7 @@ window.__lexBoot = function () {
       if (push) history.pushState({id}, '', R.termUrl(id, OPTS));
     }
     document.body.classList.toggle('has-pager', !!current);
+    syncReset();
     highlight();
     if (typeof markAz === 'function') markAz();
     applyListFilter();
@@ -575,6 +581,7 @@ window.__lexBoot = function () {
     if ((e.ctrlKey || e.metaKey) && k === 'k') { e.preventDefault(); closeMap(); input.focus(); input.select(); return; }
     if (e.key === '/' && !typing && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); closeMap(); input.focus(); return; }
     if (e.key === 'Escape' && map.classList.contains('open')) closeMap(true);
+    else if (e.key === 'Escape' && !typing && !mqMobile.matches && (current || catFilter)) resetAll();
   });
 
   // ---------- Carte (graphe) ----------
@@ -753,7 +760,7 @@ window.__lexBoot = function () {
       g.style.opacity = isNear ? '1' : out ? '0.1' : far ? '0.3' : '1';
       // Les libellés estompés réapparaissent au survol ; les petits nœuds montrent le leur quand ils sont concernés.
       g.classList.toggle('far', far);
-      g.classList.toggle('show', isNear || (!!catFilter && !out));
+      g.classList.toggle('show', isNear);
       const live = n.t.status === 'live';
       if (n.t.id === id) { c.setAttribute('stroke', 'rgba(255,255,255,.85)'); c.setAttribute('stroke-width', current && current.id === n.t.id ? '6' : '3'); }
       else if (current && current.id === n.t.id) { c.setAttribute('stroke', 'rgba(255,255,255,.85)'); c.setAttribute('stroke-width', '6'); }
@@ -796,9 +803,20 @@ window.__lexBoot = function () {
     document.querySelectorAll('.az li[data-cat], .index li[data-cat]').forEach((li) => { li.hidden = !!catFilter && li.dataset.cat !== catFilter; });
     az.querySelectorAll('section').forEach((s) => { s.hidden = !s.querySelector('li:not([hidden])'); });
   }
+  // Bouton « Tous les termes » sur la carte : referme la fiche et retire le filtre, pour revoir toute la carte.
+  const resetBtn = document.getElementById('mapReset');
+  function syncReset() { resetBtn.hidden = !current && !catFilter; }
+  function resetAll() {
+    catFilter = null;
+    applyListFilter();
+    if (current) go('index'); else { highlight(); syncReset(); }
+    if (mapVisible()) { fit(); startLoop(); }
+  }
+  resetBtn.addEventListener('click', resetAll);
   function setFilter(c) {
     catFilter = c && c !== catFilter ? c : null;
     applyListFilter();
+    syncReset();
     highlight();
     if (mapVisible()) { fit(); startLoop(); }
   }
@@ -831,8 +849,8 @@ window.__lexBoot = function () {
     // Marge en pixels autour des cercles pour les libellés du bord (90 px de chaque côté, 40 dessous, 30 dessus pour les halos).
     const zoom = (o) => Math.min((usableW - 180) / (o.maxX - o.minX || 1), (usableH - 70) / (o.maxY - o.minY || 1));
     const b = bounds(nodes.filter(framed));
-    // Zoom d'une catégorie plafonné à 2x la vue d'ensemble, pour que les billes gardent une taille raisonnable.
-    const k = Math.min(zoom(b), zoom(bounds(nodes)) * 2);
+    // Zoom d'une catégorie plafonné à 3x la vue d'ensemble, pour que les billes gardent une taille raisonnable.
+    const k = Math.min(zoom(b), zoom(bounds(nodes)) * 3);
     const padX = Math.max(90 / k, ((usableW / k) - (b.maxX - b.minX)) / 2);
     const padY = Math.max(35 / k, ((usableH / k) - (b.maxY - b.minY)) / 2);
     b.minX -= padX; b.maxX += padX; b.minY -= padY; b.maxY += padY;
@@ -934,12 +952,15 @@ window.__lexBoot = function () {
     if (pointer && !held && !mqReduced.matches) {
       const v = Math.hypot(pointer.vx, pointer.vy);
       if (v > 0.5) {
+        // Vitesse plafonnée, et seules les billes à côté ou derrière le curseur bougent : celle qu'on vise reste en place.
+        const s = Math.min(1, 40 / v);
         const R2 = 110;
         nodes.forEach((n) => {
           if (n.t.id === hoverId) return;
-          const d = Math.hypot(n.px - pointer.x, n.py - pointer.y);
-          if (d > R2) return;
-          const w = (1 - d / R2) ** 2 * 0.08;
+          const dx = n.px - pointer.x, dy = n.py - pointer.y;
+          const d = Math.hypot(dx, dy);
+          if (d > R2 || dx * pointer.vx + dy * pointer.vy > 0) return;
+          const w = (1 - d / R2) ** 2 * 0.08 * s;
           n.fx += pointer.vx * w; n.fy += pointer.vy * w;
         });
       }
@@ -976,7 +997,9 @@ window.__lexBoot = function () {
     if (e.button !== 0) return;
     const g = e.target.closest('g[data-id]');
     const p = svgPoint(e);
-    if (!g || !p) return;
+    // Clic sur le fond (sans glisser) : même effet que « Tous les termes ».
+    if (!g) { bgDown = {x: e.clientX, y: e.clientY}; return; }
+    if (!p) return;
     const n = nodeOf[g.dataset.id];
     drag = {n, x: n.px, y: n.py, ox: n.px - p.x, oy: n.py - p.y, sx: e.clientX, sy: e.clientY, moved: false, id: e.pointerId};
     setHover(n.t.id);
@@ -994,6 +1017,13 @@ window.__lexBoot = function () {
       if (drag.moved) { drag.x = p.x + drag.ox; drag.y = p.y + drag.oy; }
     }
     startLoop();
+  });
+  let bgDown = null;
+  svg.addEventListener('click', (e) => {
+    const down = bgDown;
+    bgDown = null;
+    if (!down || e.target.closest('g[data-id]') || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 4) return;
+    if (current || catFilter) resetAll();
   });
   function endDrag(e) {
     if (!drag || drag.id !== e.pointerId) return;
