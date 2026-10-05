@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Agent">
+<meta property="article:published_time" content="2026-10-02">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Agents et produit">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Agent | Lexique IA">
 <meta name="twitter:description" content="Un agent est un modèle de langage qu&#39;on laisse agir : avec un objectif et des outils, il enchaîne les actions, chacune choisie d&#39;après le résultat de la…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/agent.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/agent.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/agent/#term","name":"Agent","description":"Un agent est un modèle de langage qu'on laisse agir : avec un objectif et des outils, il enchaîne les actions, chacune choisie d'après le résultat de la précédente.","url":"https://neopal.github.io/lexique/agent/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["AI agent","agents","agentic","agentic AI","coding agent","agent IA"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/agent/#term","name":"Agent","description":"Un agent est un modèle de langage qu'on laisse agir : avec un objectif et des outils, il enchaîne les actions, chacune choisie d'après le résultat de la précédente.","url":"https://neopal.github.io/lexique/agent/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["AI agent","agents","agentic","agentic AI","coding agent","agent IA"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/agent/#article","headline":"Agent","name":"Agent | Lexique IA","description":"Un agent est un modèle de langage qu'on laisse agir : avec un objectif et des outils, il enchaîne les actions, chacune choisie d'après le résultat de la précédente.","url":"https://neopal.github.io/lexique/agent/","mainEntityOfPage":"https://neopal.github.io/lexique/agent/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/agent.jpg","datePublished":"2026-10-02","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Agents et produit","about":{"@id":"https://neopal.github.io/lexique/agent/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/agent/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/harness/#term"},{"@id":"https://neopal.github.io/lexique/boucle-agent/#term"},{"@id":"https://neopal.github.io/lexique/tool-use/#term"},{"@id":"https://neopal.github.io/lexique/prompt-injection/#term"},{"@id":"https://neopal.github.io/lexique/rag/#term"},{"@id":"https://neopal.github.io/lexique/mythe-agent-autonome/#term"},{"@id":"https://neopal.github.io/lexique/multi-agents/#term"},{"@id":"https://neopal.github.io/lexique/human-in-the-loop/#term"},{"@id":"https://neopal.github.io/lexique/workflow-ou-agent/#term"}],"citation":[{"@type":"CreativeWork","name":"Anthropic, Building effective agents, 19 décembre 2024 (workflows contre agents)","url":"https://www.anthropic.com/engineering/building-effective-agents"},{"@type":"CreativeWork","name":"Anthropic, Introducing Claude Opus 5.5, 22 septembre 2026 (témoignage de Sean Heintz, Clio : tâche sur six dépôts lancée la nuit sans surveillance, plus de 18 heures sur la tâche). Calcul de l'Imagine : 18 h + 18 h = midi le lendemain ; 35 heures / 5 jours = 7 heures par jour ; 18 / 7 = 2,6 journées","url":"https://www.anthropic.com/news/claude-opus-5-5"},{"@type":"CreativeWork","name":"Service-public.fr, durée légale du travail : 35 heures par semaine","url":"https://www.service-public.fr/particuliers/vosdroits/F1911"},{"@type":"CreativeWork","name":"Wikipédia, Claude (Claude Code sorti en février 2025, Claude Cowork en janvier 2026)","url":"https://en.wikipedia.org/wiki/Claude_(AI)"},{"@type":"CreativeWork","name":"Wikipédia, OpenAI Codex (Codex CLI le 16 avril 2025, plus de 2 millions d'utilisateurs hebdomadaires en mars 2026)","url":"https://en.wikipedia.org/wiki/OpenAI_Codex"},{"@type":"CreativeWork","name":"Futurism, 13 février 2026 : Claude Cowork efface le dossier de photos de famille, restauré depuis iCloud","url":"https://futurism.com/artificial-intelligence/claude-wife-photos"},{"@type":"CreativeWork","name":"Wikipédia, Clio (software company) : éditeur de logiciels de gestion pour cabinets d'avocats, fondé en 2007, siège à Burnaby (Colombie-Britannique, Canada)","url":"https://en.wikipedia.org/wiki/Clio_(software_company)"}],"video":{"@id":"https://neopal.github.io/lexique/agent/#video"}},{"@type":"VideoObject","@id":"https://neopal.github.io/lexique/agent/#video","name":"Agent : la définition en vidéo","description":"Un agent est un modèle de langage qu'on laisse agir : avec un objectif et des outils, il enchaîne les actions, chacune choisie d'après le résultat de la précédente.","thumbnailUrl":"https://neopal.github.io/lexique/videos/agent.jpg","contentUrl":"https://neopal.github.io/lexique/videos/agent.mp4","uploadDate":"2026-10-02","inLanguage":"fr","author":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/"},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/agent/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Agent","item":"https://neopal.github.io/lexique/agent/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">On peut le laisser trier le drive partagé tout seul ?</div><div class="bubble a">Donne-lui une copie du drive plutôt que l&#39;original. En février 2026, un utilisateur a demandé à Claude Cowork de ranger un ordinateur, et l&#39;agent a effacé près de quinze ans de photos de famille, récupérées grâce à une restauration iCloud.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« L&#39;agent a cliqué sur le bouton. » Le modèle a écrit une demande d&#39;action, et c&#39;est le programme autour de lui qui a cliqué, avec les droits qu&#39;on lui a donnés. C&#39;est donc à cet endroit que se règle ce qu&#39;un agent a le droit de faire.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#D7A6FF" href="/lexique/harness/" data-go="harness">Harness</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/boucle-agent/" data-go="boucle-agent">Boucle agent</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/tool-use/" data-go="tool-use">Tool use</a><a class="tl live" style="--c:#FFB86B" href="/lexique/prompt-injection/" data-go="prompt-injection">Prompt injection</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/rag/" data-go="rag">RAG</a><a class="tl live" style="--c:#FF7A7A" href="/lexique/mythe-agent-autonome/" data-go="mythe-agent-autonome">« Un agent est autonome »</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/multi-agents/" data-go="multi-agents">Multi-agents</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/human-in-the-loop/" data-go="human-in-the-loop">Human-in-the-loop</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/workflow-ou-agent/" data-go="workflow-ou-agent">Workflow ou agent</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Agent », Lexique IA, https://neopal.github.io/lexique/agent/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/reward-hacking/" data-go="reward-hacking" rel="prev"><span aria-hidden="true">←</span><span class="nt">Reward hacking</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Inférence">
+<meta property="article:published_time" content="2026-10-02">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Inférence">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Inférence | Lexique IA">
 <meta name="twitter:description" content="L&#39;inférence est l&#39;utilisation d&#39;un modèle déjà entraîné : on lui donne un texte, il calcule sa réponse avec des paramètres figés, et rien de ce qu&#39;il…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/inference.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/inference.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/inference/#term","name":"Inférence","description":"L'inférence est l'utilisation d'un modèle déjà entraîné : on lui donne un texte, il calcule sa réponse avec des paramètres figés, et rien de ce qu'il fait à ce moment ne modifie ce qu'il a appris.","url":"https://neopal.github.io/lexique/inference/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["model inference","serving","inference time","utilisation du modèle"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/inference/#term","name":"Inférence","description":"L'inférence est l'utilisation d'un modèle déjà entraîné : on lui donne un texte, il calcule sa réponse avec des paramètres figés, et rien de ce qu'il fait à ce moment ne modifie ce qu'il a appris.","url":"https://neopal.github.io/lexique/inference/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["model inference","serving","inference time","utilisation du modèle"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/inference/#article","headline":"Inférence","name":"Inférence | Lexique IA","description":"L'inférence est l'utilisation d'un modèle déjà entraîné : on lui donne un texte, il calcule sa réponse avec des paramètres figés, et rien de ce qu'il fait à ce moment ne modifie ce qu'il a appris.","url":"https://neopal.github.io/lexique/inference/","mainEntityOfPage":"https://neopal.github.io/lexique/inference/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/inference.jpg","datePublished":"2026-10-02","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Inférence","about":{"@id":"https://neopal.github.io/lexique/inference/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/inference/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/entrainement/#term"},{"@id":"https://neopal.github.io/lexique/prediction-du-mot-suivant/#term"},{"@id":"https://neopal.github.io/lexique/kv-cache/#term"},{"@id":"https://neopal.github.io/lexique/quantization/#term"},{"@id":"https://neopal.github.io/lexique/cout-d-une-requete/#term"},{"@id":"https://neopal.github.io/lexique/token/#term"},{"@id":"https://neopal.github.io/lexique/latence-vs-debit/#term"},{"@id":"https://neopal.github.io/lexique/speculative-decoding/#term"}],"citation":[{"@type":"CreativeWork","name":"Google, discours de Sundar Pichai à la keynote d'I/O, 19 mai 2026 (9 700 milliards de tokens par mois il y a deux ans, environ 480 000 milliards en 2025, plus de 3,2 millions de milliards en 2026). Calcul de l'Imagine : 3,2 x 10^15 tokens / (30,44 jours x 86 400 s) = 1,22 milliard de tokens par seconde ; 1,22 x 10^9 / 368 798 = 3 299 exemplaires","url":"https://blog.google/innovation-and-ai/sundar-pichai-io-2026/"},{"@type":"CreativeWork","name":"Les Trois Mousquetaires, Alexandre Dumas, texte du Projet Gutenberg compté avec tiktoken (o200k_base) le 2 octobre 2026 entre les marqueurs START et END : 368 798 tokens, 0,61 mot par token","url":"https://www.gutenberg.org/ebooks/13951"},{"@type":"CreativeWork","name":"Kaplan et al., Scaling Laws for Neural Language Models, janvier 2020 (le calcul de retour coûte environ deux fois le calcul vers l'avant, soit environ 6N opérations par token d'entraînement)","url":"https://arxiv.org/abs/2001.08361"},{"@type":"CreativeWork","name":"Google Cloud, Measuring the environmental impact of AI inference, 21 août 2025 (requête texte médiane de l'application Gemini : 0,24 Wh, moins de 9 secondes de télévision, énergie divisée par 33 de mai 2024 à mai 2025)","url":"https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference"},{"@type":"CreativeWork","name":"Elsworth et al., Measuring the environmental impact of delivering AI at Google scale, août 2025 (méthodologie détaillée)","url":"https://arxiv.org/abs/2508.15734"},{"@type":"CreativeWork","name":"NVIDIA, Mastering LLM Techniques: Inference Optimization, 17 novembre 2023 (phases de prefill et de decode)","url":"https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/inference/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Inférence","item":"https://neopal.github.io/lexique/inference/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">On l&#39;a repris trois fois ce matin sur la même erreur. Il va finir par retenir ?</div><div class="bubble a">Pas en inférence, ses paramètres ne bougent pas pendant qu&#39;il te répond. Mets la correction dans les consignes de l&#39;outil, qu&#39;il relira à chaque requête.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Le modèle fait une inférence, il déduit la réponse. » En IA, le mot désigne l&#39;exécution du modèle sur une entrée, sans aucun raisonnement logique garanti ; une réponse fausse est une inférence au même titre qu&#39;une juste.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#F5D76E" href="/lexique/entrainement/" data-go="entrainement">Entraînement</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/prediction-du-mot-suivant/" data-go="prediction-du-mot-suivant">Prédiction du mot suivant</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/kv-cache/" data-go="kv-cache">KV cache</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/quantization/" data-go="quantization">Quantization</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/cout-d-une-requete/" data-go="cout-d-une-requete">Coût d&#39;une requête</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/token/" data-go="token">Token</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/latence-vs-debit/" data-go="latence-vs-debit">Latence et débit</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/speculative-decoding/" data-go="speculative-decoding">Décodage spéculatif</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Inférence », Lexique IA, https://neopal.github.io/lexique/inference/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/gpu/" data-go="gpu" rel="prev"><span aria-hidden="true">←</span><span class="nt">GPU</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

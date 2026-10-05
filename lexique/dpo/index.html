@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="DPO">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Entraînement">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="DPO | Lexique IA">
 <meta name="twitter:description" content="DPO est une méthode de post-entraînement qui montre au modèle des paires de réponses, l&#39;une préférée, l&#39;autre rejetée, et le pousse directement vers la…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/dpo.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/dpo.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/dpo/#term","name":"DPO","description":"DPO est une méthode de post-entraînement qui montre au modèle des paires de réponses, l'une préférée, l'autre rejetée, et le pousse directement vers la première, sans modèle de récompense.","url":"https://neopal.github.io/lexique/dpo/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Direct Preference Optimization","direct preference optimization","preference optimization","chosen and rejected","preference pairs","KTO","optimisation directe des préférences","apprentissage des préférences"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/dpo/#term","name":"DPO","description":"DPO est une méthode de post-entraînement qui montre au modèle des paires de réponses, l'une préférée, l'autre rejetée, et le pousse directement vers la première, sans modèle de récompense.","url":"https://neopal.github.io/lexique/dpo/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["Direct Preference Optimization","direct preference optimization","preference optimization","chosen and rejected","preference pairs","KTO","optimisation directe des préférences","apprentissage des préférences"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/dpo/#article","headline":"DPO","name":"DPO | Lexique IA","description":"DPO est une méthode de post-entraînement qui montre au modèle des paires de réponses, l'une préférée, l'autre rejetée, et le pousse directement vers la première, sans modèle de récompense.","url":"https://neopal.github.io/lexique/dpo/","mainEntityOfPage":"https://neopal.github.io/lexique/dpo/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/dpo.jpg","datePublished":"2026-10-03","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Entraînement","about":{"@id":"https://neopal.github.io/lexique/dpo/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/dpo/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/rlhf/#term"},{"@id":"https://neopal.github.io/lexique/post-entrainement/#term"},{"@id":"https://neopal.github.io/lexique/fine-tuning/#term"},{"@id":"https://neopal.github.io/lexique/reward-hacking/#term"},{"@id":"https://neopal.github.io/lexique/alignement/#term"},{"@id":"https://neopal.github.io/lexique/donnees-synthetiques/#term"}],"citation":[{"@type":"CreativeWork","name":"Olmo Team (Ai2), Olmo 3, 15 décembre 2025, révisé le 14 avril 2026, section 4.3 et tableau 21 (point de contrôle SFT de développement en 7B : moyenne de 70,3 sur dix tests ; SFT continué sur les réponses de Qwen3 32B Thinking : 64,5 ; DPO avec des paires Qwen3 32B préféré contre Qwen3 0,6B rejeté, dite delta learning : 72,9 ; la qualité d'une paire dépend surtout de l'écart entre ses deux réponses)","url":"https://arxiv.org/abs/2512.13961"},{"@type":"CreativeWork","name":"Ai2, Olmo 3: Charting a path through the model flow to lead open-source AI, 20 novembre 2025 (recette en trois étapes : SFT, préférences par DPO, RLVR)","url":"https://allenai.org/blog/olmo3"},{"@type":"CreativeWork","name":"Rafailov, Sharma, Mitchell, Ermon, Manning et Finn (Stanford), Direct Preference Optimization: Your Language Model is Secretly a Reward Model, 29 mai 2023 (le RLHF, procédure complexe et souvent instable ; une simple perte de classification ; pas d'échantillonnage pendant l'entraînement)","url":"https://arxiv.org/abs/2305.18290"},{"@type":"CreativeWork","name":"NeurIPS, Announcing the NeurIPS 2023 Paper Awards, 11 décembre 2023 (DPO parmi les deux Outstanding Main Track Runner-Ups)","url":"https://blog.neurips.cc/2023/12/11/announcing-the-neurips-2023-paper-awards/"},{"@type":"CreativeWork","name":"Llama Team (Meta), The Llama 3 Herd of Models, 31 juillet 2024, section 4.1.4 (DPO plutôt que PPO, qui demandait plus de calcul pour les grands modèles et faisait moins bien, notamment sur IFEval ; β = 0,1)","url":"https://arxiv.org/abs/2407.21783"},{"@type":"CreativeWork","name":"Tunstall et al. (Hugging Face), Zephyr: Direct Distillation of LM Alignment, 25 octobre 2023 (DPO sur des réponses classées par un modèle professeur, sans annotation humaine ; Zephyr-7B dépasse Llama2-Chat-70B sur MT-Bench)","url":"https://arxiv.org/abs/2310.16944"},{"@type":"CreativeWork","name":"Ethayarajh et al., KTO: Model Alignment as Prospect Theoretic Optimization, 2 février 2024 (un simple signal binaire, réponse souhaitable ou non ; égale ou dépasse les méthodes à préférences de 1 à 30 milliards de paramètres)","url":"https://arxiv.org/abs/2402.01306"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/dpo/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"DPO","item":"https://neopal.github.io/lexique/dpo/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">On a 20 000 pouces levés ou baissés sur les réponses de l&#39;assistant, ça suffit pour faire du DPO ?</div><div class="bubble a">DPO veut des paires, deux réponses au même message dont l&#39;une est préférée. Des votes isolés conviennent mieux à KTO, une variante qui se contente d&#39;un signal bon ou mauvais par réponse et qui faisait jeu égal avec les méthodes à paires dans son article de février 2024.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« DPO se passe des humains. » DPO se passe du modèle de récompense et du renforcement, pas des préférences ; il faut toujours quelqu&#39;un, humain ou modèle, pour dire laquelle des deux réponses vaut mieux, et ses goûts deviennent ceux du modèle.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#F5D76E" href="/lexique/rlhf/" data-go="rlhf">RLHF</a><a class="tl live" style="--c:#F5D76E" href="/lexique/post-entrainement/" data-go="post-entrainement">Post-entraînement</a><a class="tl live" style="--c:#F5D76E" href="/lexique/fine-tuning/" data-go="fine-tuning">Fine-tuning</a><a class="tl live" style="--c:#FFB86B" href="/lexique/reward-hacking/" data-go="reward-hacking">Reward hacking</a><a class="tl live" style="--c:#FFB86B" href="/lexique/alignement/" data-go="alignement">Alignement</a><a class="tl live" style="--c:#F5D76E" href="/lexique/donnees-synthetiques/" data-go="donnees-synthetiques">Données synthétiques</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « DPO », Lexique IA, https://neopal.github.io/lexique/dpo/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/modele-de-diffusion/" data-go="modele-de-diffusion" rel="prev"><span aria-hidden="true">←</span><span class="nt">Modèle de diffusion</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Logits">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Inférence">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Logits | Lexique IA">
 <meta name="twitter:description" content="Les logits sont les scores bruts qu&#39;un modèle de langage calcule pour chaque token de son vocabulaire avant d&#39;écrire le suivant, et que la fonction…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/logits.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/logits.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/logits/#term","name":"Logits","description":"Les logits sont les scores bruts qu'un modèle de langage calcule pour chaque token de son vocabulaire avant d'écrire le suivant, et que la fonction softmax change en probabilités.","url":"https://neopal.github.io/lexique/logits/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["logit","logprobs","log probabilities","softmax","logit bias","logit lens","scores bruts","log-probabilités"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/logits/#term","name":"Logits","description":"Les logits sont les scores bruts qu'un modèle de langage calcule pour chaque token de son vocabulaire avant d'écrire le suivant, et que la fonction softmax change en probabilités.","url":"https://neopal.github.io/lexique/logits/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["logit","logprobs","log probabilities","softmax","logit bias","logit lens","scores bruts","log-probabilités"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/logits/#article","headline":"Logits","name":"Logits | Lexique IA","description":"Les logits sont les scores bruts qu'un modèle de langage calcule pour chaque token de son vocabulaire avant d'écrire le suivant, et que la fonction softmax change en probabilités.","url":"https://neopal.github.io/lexique/logits/","mainEntityOfPage":"https://neopal.github.io/lexique/logits/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/logits.jpg","datePublished":"2026-10-03","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Inférence","about":{"@id":"https://neopal.github.io/lexique/logits/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/logits/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/prediction-du-mot-suivant/#term"},{"@id":"https://neopal.github.io/lexique/temperature/#term"},{"@id":"https://neopal.github.io/lexique/token/#term"},{"@id":"https://neopal.github.io/lexique/distillation/#term"},{"@id":"https://neopal.github.io/lexique/mythe-sait-quand-il-ne-sait-pas/#term"},{"@id":"https://neopal.github.io/lexique/interpretabilite/#term"}],"citation":[{"@type":"CreativeWork","name":"Mistral AI, fichier params.json de Mistral-Large-3-675B-Instruct-2512 sur Hugging Face (« vocab_size »: 131072), consulté le 2 octobre 2026. Calcul de l'Imagine : 131 072 / 50 = 2 621,44, soit 2 622 pages ; 131 072 × 500 = 65 536 000 logits pour une réponse de 500 tokens","url":"https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512"},{"@type":"CreativeWork","name":"Mistral AI, Introducing Mistral 3, 2 décembre 2025 (famille de modèles ouverts de 3 à 675 milliards de paramètres, dont Mistral Large 3)","url":"https://mistral.ai/news/mistral-3"},{"@type":"CreativeWork","name":"Hinton, Vinyals et Dean, Distilling the Knowledge in a Neural Network, 9 mars 2015 (la couche softmax convertit le logit calculé pour chaque classe en probabilité en le comparant aux autres logits ; l'élève apprend sur les probabilités adoucies du professeur). Calcul de la fiche : deux points d'écart entre deux logits donnent un rapport de probabilités de e^2 = 7,39","url":"https://arxiv.org/abs/1503.02531"},{"@type":"CreativeWork","name":"Wikipédia, Logit (en 1944, Joseph Berkson nomme logit le logarithme de la cote, abréviation de « logistic unit », par analogie avec le probit de Chester Bliss, 1934 ; article « Application of the Logistic Function to Bio-Assay »), consulté le 2 octobre 2026","url":"https://en.wikipedia.org/wiki/Logit"},{"@type":"CreativeWork","name":"OpenAI, référence de l'API Chat Completions, consultée le 2 octobre 2026 (logprobs ; top_logprobs de 0 à 20 ; logit_bias de -100 à 100, « added to the logits generated by the model prior to sampling », -100 ou 100 pour interdire ou imposer un token)","url":"https://developers.openai.com/api/reference/resources/chat/subresources/completions/methods/create"},{"@type":"CreativeWork","name":"OpenAI, guide Using GPT-6, consulté le 2 octobre 2026 (quand l'effort de raisonnement n'est pas none, retirer temperature, top_p et top_logprobs, et logprobs en Chat Completions)","url":"https://developers.openai.com/api/docs/guides/latest-model"},{"@type":"CreativeWork","name":"nostalgebraist, interpreting GPT: the logit lens, LessWrong, 31 août 2020 (la sortie du modèle appliquée aux couches intermédiaires donne des prédictions qui se précisent de couche en couche)","url":"https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/logits/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Logits","item":"https://neopal.github.io/lexique/logits/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">On peut se servir des logprobs pour savoir si sa réponse est fiable ?</div><div class="bubble a">Pour une étiquette d&#39;un seul token, oui ou non, catégorie A ou B, ils donnent un seuil de tri utile, à régler sur tes propres cas. Sur un paragraphe entier, ils mesurent ce qui était attendu et pas ce qui est exact.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Le logit, c&#39;est la probabilité du mot. » Un logit peut valoir -3 comme 25, et l&#39;ensemble ne fait pas 1 ; il ne devient une probabilité qu&#39;après la softmax, et sa valeur seule ne dit rien sans celle des autres.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#7CFFB2" href="/lexique/prediction-du-mot-suivant/" data-go="prediction-du-mot-suivant">Prédiction du mot suivant</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/temperature/" data-go="temperature">Température</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/token/" data-go="token">Token</a><a class="tl live" style="--c:#F5D76E" href="/lexique/distillation/" data-go="distillation">Distillation</a><a class="tl live" style="--c:#FF7A7A" href="/lexique/mythe-sait-quand-il-ne-sait-pas/" data-go="mythe-sait-quand-il-ne-sait-pas">« L&#39;IA sait quand elle ne sait pas »</a><a class="tl live" style="--c:#FFB86B" href="/lexique/interpretabilite/" data-go="interpretabilite">Interprétabilité</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Logits », Lexique IA, https://neopal.github.io/lexique/logits/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/responsabilite/" data-go="responsabilite" rel="prev"><span aria-hidden="true">←</span><span class="nt">Responsabilité</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

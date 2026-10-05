@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Hill climbing">
+<meta property="article:published_time" content="2026-10-03">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Méthode : travailler avec l&#39;IA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Hill climbing | Lexique IA">
 <meta name="twitter:description" content="Le hill climbing améliore un système d&#39;IA par petites retouches testées une à une sur une éval, gardées seulement si elles font aussi monter les cas mis…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/hill-climbing.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/hill-climbing.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/hill-climbing/#term","name":"Hill climbing","description":"Le hill climbing améliore un système d'IA par petites retouches testées une à une sur une éval, gardées seulement si elles font aussi monter les cas mis de côté.","url":"https://neopal.github.io/lexique/hill-climbing/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["hillclimbing","hill-climbing","hillclimb","hillclimber","autoresearch","Karpathy loop","held-out set","local optimum","prompt optimization","méthode d'escalade","sommet local","optimum local","cas mis de côté"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/hill-climbing/#term","name":"Hill climbing","description":"Le hill climbing améliore un système d'IA par petites retouches testées une à une sur une éval, gardées seulement si elles font aussi monter les cas mis de côté.","url":"https://neopal.github.io/lexique/hill-climbing/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["hillclimbing","hill-climbing","hillclimb","hillclimber","autoresearch","Karpathy loop","held-out set","local optimum","prompt optimization","méthode d'escalade","sommet local","optimum local","cas mis de côté"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/hill-climbing/#article","headline":"Hill climbing","name":"Hill climbing | Lexique IA","description":"Le hill climbing améliore un système d'IA par petites retouches testées une à une sur une éval, gardées seulement si elles font aussi monter les cas mis de côté.","url":"https://neopal.github.io/lexique/hill-climbing/","mainEntityOfPage":"https://neopal.github.io/lexique/hill-climbing/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/hill-climbing.jpg","datePublished":"2026-10-03","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Méthode : travailler avec l'IA","about":{"@id":"https://neopal.github.io/lexique/hill-climbing/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/hill-climbing/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/evals/#term"},{"@id":"https://neopal.github.io/lexique/benchmaxxing/#term"},{"@id":"https://neopal.github.io/lexique/reward-hacking/#term"},{"@id":"https://neopal.github.io/lexique/llm-juge/#term"},{"@id":"https://neopal.github.io/lexique/loop/#term"},{"@id":"https://neopal.github.io/lexique/memorisation-vs-generalisation/#term"},{"@id":"https://neopal.github.io/lexique/descente-de-gradient/#term"}],"citation":[{"@type":"CreativeWork","name":"Lance Martin (Anthropic), Automating eval design and hillclimbing with Claude, 28 septembre 2026 (une retouche par tour, assez nette pour dépasser le bruit ; tirage au sort en train et test ; retouche annulée si le train monte et le test reste plat, ou en cas de régression ; « Never paste failures into the prompt » ; « adversarial sampling » : des cas choisis parce que le modèle du jour les rate mesurent son « failure fingerprint », savoir dire pourquoi un cas est difficile ; correcteur par code ou LLM juge ; exemple du support client : 44 tickets, 30 pour la recherche et 14 mis de côté, 74,4 % à 4,6 centimes avec Opus 4.8, 98,9 % à environ 1 centime avec Sonnet 5 en effort bas, 90,5 % contre 78,6 % sur les 14 tickets mis de côté, pour environ un cinquième du coût). Gain sur les cas de recherche +24,5 points, sur les cas mis de côté +11,9 points","url":"https://claude.dev/blog/automating-eval-design-and-hillclimbing/"},{"@type":"CreativeWork","name":"Marvin Minsky, Steps Toward Artificial Intelligence, Proceedings of the IRE, janvier 1961, sections « Hill-Climbing » (machine boîte noire dont on ne connaît pas la fonction, exploration locale jusqu'à ce que l'amélioration cesse) et « Troubles with Hill-Climbing » (« trapped if it should reach a local peak which is not a true or satisfactory optimum »)","url":"https://courses.csail.mit.edu/6.803/pdf/steps.pdf"},{"@type":"CreativeWork","name":"Wikipédia, Méthode hill-climbing (optimum local ; méthode similaire à la descente de gradient, utilisée dans un contexte discret où le gradient n'est pas défini)","url":"https://fr.wikipedia.org/wiki/M%C3%A9thode_hill-climbing"},{"@type":"CreativeWork","name":"Wikipedia, Hill climbing (changement incrémental gardé s'il améliore la solution ; maximum local ; redémarrage depuis un autre point de départ, random-restart)","url":"https://en.wikipedia.org/wiki/Hill_climbing"},{"@type":"CreativeWork","name":"Andrej Karpathy sur X, 9 mars 2026 (autoresearch laissé environ 2 jours sur un modèle depth=12 ; « approx. 700 changes » ; environ 20 changements qui amélioraient la perte de validation, tous additifs et transférés au modèle depth=24 ; « Time to GPT-2 » de 2,02 h à 1,80 h). Calcul : 48 h × 60 / 700 ≈ 4 minutes par essai ; à raison d'un essai par jour ouvré, 5 jours sur 47 semaines, soit environ 235 par an, 700 / 235 ≈ 3,0 ans","url":"https://x.com/karpathy/status/2031135152349524125"},{"@type":"CreativeWork","name":"Andrej Karpathy, autoresearch, dépôt GitHub, mars 2026 (un seul fichier modifié par l'agent, entraînement de 5 minutes, métrique val_bpb, « keeps or discards », environ 12 expériences par heure et 100 par nuit)","url":"https://github.com/karpathy/autoresearch"},{"@type":"CreativeWork","name":"Askarbekuly, Al Mdfaa, Helaly, Ferrer et Mazzara (Innopolis University, Skoltech), Autoresearch with Coding Agents: Generalizers and Metric-Maximizers on Quran Recitation Data, 20 juillet 2026 (Claude Code et Codex, trois essais chacun ; Codex : erreur environ 10 fois plus faible, 19 à 41 identifiants de versets codés en dur par essai ; le rapport d'échec affichait les identifiants attendus ; étude 2 avec 151 cas d'entraînement et 107 de test annoncés aux agents : mémorisation disparue, écart entre agents disparu sur le test)","url":"https://arxiv.org/abs/2607.18064"},{"@type":"CreativeWork","name":"Opsahl-Ong et al., Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs, 17 juin 2024 (MIPRO, optimisation des instructions et des exemples pour maximiser une métrique, publié dans DSPy)","url":"https://arxiv.org/abs/2406.11695"},{"@type":"CreativeWork","name":"DSPy, GEPA optimization (trainset pour les retouches, valset pour choisir le programme, test final séparé « on examples that influenced neither step » ; sans valset, GEPA réutilise le trainset et « deliberately allows prompts to overfit those examples »)","url":"https://dspy.ai/current/getting-started/gepa-optimization/"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/hill-climbing/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"Hill climbing","item":"https://neopal.github.io/lexique/hill-climbing/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Notre agent a pris vingt points sur l&#39;éval en une nuit de hill climbing. On le met en production ?</div><div class="bubble a">Montre-moi d&#39;abord le score sur les cas mis de côté ; si le hillclimber les a lus, ou s&#39;il n&#39;y en avait pas, tu sais seulement que l&#39;agent connaît bien tes cas d&#39;éval.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Il rate ces douze questions, colle ses erreurs et les bonnes réponses dans le prompt. » Le score montera sur ces douze questions, puisque leurs réponses y sont écrites, sans rien dire des suivantes ; une retouche doit corriger la cause d&#39;un échec, une règle manquante ou une consigne contradictoire, et jamais le cas lui-même.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#D7A6FF" href="/lexique/evals/" data-go="evals">Evals</a><a class="tl live" style="--c:#F08DC2" href="/lexique/benchmaxxing/" data-go="benchmaxxing">Benchmaxxing</a><a class="tl live" style="--c:#FFB86B" href="/lexique/reward-hacking/" data-go="reward-hacking">Reward hacking</a><a class="tl live" style="--c:#D7A6FF" href="/lexique/llm-juge/" data-go="llm-juge">LLM juge</a><a class="tl live" style="--c:#5FD3C6" href="/lexique/loop/" data-go="loop">Loop</a><a class="tl live" style="--c:#FFB86B" href="/lexique/memorisation-vs-generalisation/" data-go="memorisation-vs-generalisation">Mémorisation vs généralisation</a><a class="tl live" style="--c:#F5D76E" href="/lexique/descente-de-gradient/" data-go="descente-de-gradient">Descente de gradient</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « Hill climbing », Lexique IA, https://neopal.github.io/lexique/hill-climbing/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/prompt-caching/" data-go="prompt-caching" rel="prev"><span aria-hidden="true">←</span><span class="nt">Cache de prompt</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');

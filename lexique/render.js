@@ -169,6 +169,18 @@
   }
 
   // Fiche complète. opts : {base, urls: 'path'|'query'}.
+  // Citer une fiche : référence prête à coller, et la licence qui autorise la reprise.
+  const SITE = 'https://neopal.github.io';
+  const LICENSE_FR = 'https://creativecommons.org/licenses/by/4.0/deed.fr';
+  function citeBlock(t) {
+    const title = String(t.title || '').trim();
+    const quoted = /^«/.test(title) ? title : `« ${title} »`;
+    const url = SITE + termUrl(t.id, {base: '/lexique/', urls: 'path'});
+    return `<h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, ${esc(quoted)}, Lexique IA, ${esc(url)}</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="${LICENSE_FR}" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>`;
+  }
+
   function renderTerm(t, cats, terms, opts) {
     const o = opt(opts);
     cats = cats || {};
@@ -231,6 +243,7 @@
         ${section('Entendu au bureau', arr(t.office).length ? `<div class="chat">${t.office.map((m) => `<div class="bubble ${m.who === 'q' ? 'q' : 'a'}">${prose(m.text, t, ctx)}</div>`).join('')}</div>` : '')}
         ${section('À éviter', t.avoid ? `<div class="avoid"><b aria-hidden="true">✕</b><p>${prose(t.avoid, t, ctx)}</p></div>` : '')}
         ${related ? `<div class="connexions"><h2>Connexions</h2><div class="links">${related}</div></div>` : ''}
+        ${citeBlock(t)}
         <nav class="pager" aria-label="Fiches">
           ${navLink(prev, 'prev')}
           <a class="all" href="${termUrl('', o)}" data-go="index">Tous les termes</a>
@@ -262,6 +275,7 @@
         <p class="lead">Les définitions que j'ai écrites pour comprendre comment marchent les LLM.</p>
         <div class="catchips" role="group" aria-label="Filtrer par catégorie"><button type="button" data-cat="" aria-pressed="true">Tout</button>${chips}</div>
         <ul>${rows}</ul>
+        <p class="lic">Définitions sous licence <a rel="license noopener" href="${LICENSE_FR}" target="_blank">CC BY 4.0</a> : reprise libre en citant « Pierre-Adrien Lair, Lexique IA ».</p>
       </div>`;
   }
 

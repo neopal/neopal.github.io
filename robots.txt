@@ -1,30 +1,46 @@
 # robots.txt for neopal.github.io
-# Pierre-Adrien LAIR - CV & Portfolio
+# Pierre-Adrien LAIR - CV, portfolio et Lexique IA
 
 User-agent: *
 Allow: /
+# Coulisses du dépôt (brouillons, maquettes, pilote vidéo, scripts) : pas des pages du site.
+Disallow: /content/
+Disallow: /mockup/
+Disallow: /video/
+Disallow: /scripts/
 
-# Sitemap
-Sitemap: https://neopal.github.io/sitemap.xml
+# Moteurs et assistants IA : bienvenus, y compris pour l'entraînement.
+# Résumé pour les modèles : /llms.txt et /lexique/llms.txt (version complète : /lexique/llms-full.txt).
 
-# AI Crawlers - Welcome!
-User-agent: GPTBot
-Allow: /
-
+# OpenAI (ChatGPT Search, navigation à la demande, entraînement)
+User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Anthropic-AI
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
+User-agent: GPTBot
+# Anthropic (Claude)
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: ClaudeBot
+# Perplexity
 User-agent: PerplexityBot
-Allow: /
-
+User-agent: Perplexity-User
+# Google (Gemini, AI Overviews) et Apple
+User-agent: Google-Extended
+User-agent: Applebot
 User-agent: Applebot-Extended
+# Microsoft (Copilot passe par Bing)
+User-agent: Bingbot
+# Mistral (Le Chat), Meta, Amazon, DuckDuckGo, You.com, Common Crawl
+User-agent: MistralAI-User
+User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+User-agent: Amazonbot
+User-agent: DuckAssistBot
+User-agent: YouBot
+User-agent: CCBot
 Allow: /
+Disallow: /content/
+Disallow: /mockup/
+Disallow: /video/
+Disallow: /scripts/
+
+Sitemap: https://neopal.github.io/sitemap.xml

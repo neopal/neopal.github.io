@@ -16,10 +16,19 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MMLU">
+<meta property="article:published_time" content="2026-10-02">
+<meta property="article:modified_time" content="2026-10-05">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Écosystème et industrie">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="MMLU | Lexique IA">
 <meta name="twitter:description" content="MMLU est un QCM de 15 908 questions dans 57 matières, des mathématiques au droit en passant par la médecine, publié en 2020 pour mesurer l&#39;étendue des…">
-<meta name="twitter:image" content="https://neopal.github.io/lexique/og/mmlu.jpg">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/mmlu.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
 <meta name="theme-color" content="#0b0b0b">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,6 +194,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 .links{display:flex;flex-wrap:wrap;gap:8px}
 .rel{display:none}
 
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
 .sources{font-size:15px;color:var(--muted);padding-left:18px}
 .sources li{margin-bottom:6px;overflow-wrap:anywhere}
 
@@ -317,7 +332,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </style>
 
 <!-- lex:jsonld -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/mmlu/#term","name":"MMLU","description":"MMLU est un QCM de 15 908 questions dans 57 matières, des mathématiques au droit en passant par la médecine, publié en 2020 pour mesurer l'étendue des connaissances d'un modèle de langage.","url":"https://neopal.github.io/lexique/mmlu/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Massive Multitask Language Understanding","MMLU-Pro","MMLU-Redux"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/mmlu/#term","name":"MMLU","description":"MMLU est un QCM de 15 908 questions dans 57 matières, des mathématiques au droit en passant par la médecine, publié en 2020 pour mesurer l'étendue des connaissances d'un modèle de langage.","url":"https://neopal.github.io/lexique/mmlu/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["Massive Multitask Language Understanding","MMLU-Pro","MMLU-Redux"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/mmlu/#article","headline":"MMLU","name":"MMLU | Lexique IA","description":"MMLU est un QCM de 15 908 questions dans 57 matières, des mathématiques au droit en passant par la médecine, publié en 2020 pour mesurer l'étendue des connaissances d'un modèle de langage.","url":"https://neopal.github.io/lexique/mmlu/","mainEntityOfPage":"https://neopal.github.io/lexique/mmlu/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/mmlu.jpg","datePublished":"2026-10-02","dateModified":"2026-10-05","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Écosystème et industrie","about":{"@id":"https://neopal.github.io/lexique/mmlu/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/mmlu/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/benchmarks-lesquels-croire/#term"},{"@id":"https://neopal.github.io/lexique/humanitys-last-exam/#term"},{"@id":"https://neopal.github.io/lexique/gpqa/#term"},{"@id":"https://neopal.github.io/lexique/quantization/#term"},{"@id":"https://neopal.github.io/lexique/mythe-plus-gros-plus-intelligent/#term"}],"citation":[{"@type":"CreativeWork","name":"Hendrycks et al., Measuring Massive Multitask Language Understanding, septembre 2020 (57 matières)","url":"https://arxiv.org/abs/2009.03300"},{"@type":"CreativeWork","name":"Wikipédia, MMLU (15 908 questions ; GPT-3 à 43,9 % ; experts estimés à 89,8 % ; environ 88 % pour Claude 3.5 Sonnet, GPT-4o et Llama 3.1 mi-2024 ; contamination ; « partially phased out » depuis 2025)","url":"https://en.wikipedia.org/wiki/MMLU"},{"@type":"CreativeWork","name":"Gema et al., Are We Done with MMLU?, juin 2024 (5 700 questions relues, 6,49 % d'erreurs estimées, 57 % en virologie, dont 33 % de corrigés faux, 14 % de questions floues et 4 % à plusieurs bonnes réponses). Calcul de l'Imagine : 15 908 x 0,0649 = 1 032 questions","url":"https://arxiv.org/abs/2406.04127"},{"@type":"CreativeWork","name":"Moonshot AI, fiche de Kimi K2.5 sur Hugging Face, janvier 2026 (MMLU-Pro : Gemini 3 Pro à 90,1 %)","url":"https://huggingface.co/moonshotai/Kimi-K2.5"},{"@type":"CreativeWork","name":"Mistral AI, fiche de Mistral Medium 3.5 sur Hugging Face, 31 mars 2026, consultée le 2 octobre 2026 (aucune mention de MMLU)","url":"https://huggingface.co/mistralai/Mistral-Medium-3.5-128B"},{"@type":"CreativeWork","name":"MiniMax, fiche de MiniMax-M3 sur Hugging Face, 2 juin 2026, consultée le 2 octobre 2026 (aucune mention de MMLU)","url":"https://huggingface.co/MiniMaxAI/MiniMax-M3"},{"@type":"CreativeWork","name":"Moonshot AI, fiche de Kimi K3 sur Hugging Face, 13 juin 2026, consultée le 2 octobre 2026 (aucune mention de MMLU)","url":"https://huggingface.co/moonshotai/Kimi-K3"},{"@type":"CreativeWork","name":"Z.ai, fiche de GLM-5.3 sur Hugging Face, 25 août 2026, consultée le 2 octobre 2026 (aucune mention de MMLU)","url":"https://huggingface.co/zai-org/GLM-5.3"},{"@type":"CreativeWork","name":"DeepSeek, fiche de DeepSeek-V4.1-Flash sur Hugging Face, septembre 2026 (GPQA Diamond, HLE et Terminal-Bench pour le modèle instruct, MMLU-Pro seulement pour le modèle de base)","url":"https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/mmlu/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"MMLU","item":"https://neopal.github.io/lexique/mmlu/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
 <!-- /lex:jsonld -->
 </head>
 <body class="has-pager">
@@ -375,6 +390,9 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
         <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">Le petit modèle qu&#39;on veut embarquer fait 70 % au MMLU. Ça veut dire quoi ?</div><div class="bubble a">Que c&#39;est un repère pour le comparer à d&#39;autres petits modèles, ou à sa version non compressée, et presque rien de plus sur ce qu&#39;il fera de tes demandes.</div></div>
         <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« Avec Language Understanding dans son nom, MMLU teste la compréhension du langage. » Il teste des connaissances en QCM, matière par matière, et ne vérifie ni la rédaction, ni le suivi d&#39;une consigne, ni le raisonnement en plusieurs étapes.</p></div>
         <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#F08DC2" href="/lexique/benchmarks-lesquels-croire/" data-go="benchmarks-lesquels-croire">Benchmarks : lesquels croire ?</a><a class="tl live" style="--c:#F08DC2" href="/lexique/humanitys-last-exam/" data-go="humanitys-last-exam">Humanity&#39;s Last Exam</a><a class="tl live" style="--c:#F08DC2" href="/lexique/gpqa/" data-go="gpqa">GPQA</a><a class="tl live" style="--c:#8FB8FF" href="/lexique/quantization/" data-go="quantization">Quantization</a><a class="tl live" style="--c:#FF7A7A" href="/lexique/mythe-plus-gros-plus-intelligent/" data-go="mythe-plus-gros-plus-intelligent">« Plus le modèle est gros, plus il est intelligent »</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « MMLU », Lexique IA, https://neopal.github.io/lexique/mmlu/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
         <nav class="pager" aria-label="Fiches">
           <a class="prev" href="/lexique/lmarena/" data-go="lmarena" rel="prev"><span aria-hidden="true">←</span><span class="nt">LMArena (Arena)</span></a>
           <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
@@ -490,6 +508,15 @@ window.__lexBoot = function () {
     go(b.dataset.go);
   });
   window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => toast('Citation copiée');
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
 
   // ---------- Recherche ----------
   const input = document.getElementById('q');
