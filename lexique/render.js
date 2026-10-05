@@ -250,13 +250,17 @@
       const side = t.status === 'live' ? esc(catLabel(t, cats)) : 'à venir';
       const inner = `<i aria-hidden="true"></i><span class="t">${esc(t.title)}</span>${en}<span class="c">${side}</span>`;
       return t.status === 'live'
-        ? `<li class="live" style="--c:${color(t, cats)}"><a href="${termUrl(t.id, o)}" data-go="${esc(t.id)}">${inner}</a></li>`
-        : `<li class="soon"><span class="row">${inner}</span></li>`;
+        ? `<li class="live" data-cat="${esc(t.cat)}" style="--c:${color(t, cats)}"><a href="${termUrl(t.id, o)}" data-go="${esc(t.id)}">${inner}</a></li>`
+        : `<li class="soon" data-cat="${esc(t.cat)}"><span class="row">${inner}</span></li>`;
     }).join('');
+    // Puces de filtre par catégorie (affichées sur mobile ; sur desktop, la légende de la carte joue ce rôle).
+    const chips = Object.keys(cats).map((k) =>
+      `<button type="button" data-cat="${esc(k)}" style="--c:${esc(cats[k].color)}" aria-pressed="false"><i aria-hidden="true"></i>${esc(cats[k].label)}</button>`).join('');
     return `
       <div class="index">
         <h1 class="sr">Lexique IA : les termes</h1>
         <p class="lead">Les définitions que j'ai écrites pour comprendre comment marchent les LLM.</p>
+        <div class="catchips" role="group" aria-label="Filtrer par catégorie"><button type="button" data-cat="" aria-pressed="true">Tout</button>${chips}</div>
         <ul>${rows}</ul>
       </div>`;
   }
