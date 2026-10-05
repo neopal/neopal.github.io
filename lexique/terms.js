@@ -15097,7 +15097,10 @@ window.DICO_TERMS = [
       }
     ],
     "avoid": "« Le ministère britannique a montré que l'IA ne sert à rien. » Son évaluation a trouvé des gains réels sur certaines tâches, comme les synthèses de rapports, et des pertes sur d'autres ; ce qu'elle ne trouve pas, c'est un effet sur la productivité du ministère, qu'elle n'avait d'ailleurs pas pour but premier de mesurer.",
-    "video": null,
+    "video": {
+      "src": "videos/mythe-ajouter-ia.mp4",
+      "poster": "videos/mythe-ajouter-ia.jpg"
+    },
     "sources": [
       {
         "label": "Michael Hammer, Reengineering Work: Don't Automate, Obliterate, Harvard Business Review, juillet-août 1990 (« use technology to mechanize old ways of doing business » ; « It is time to stop paving the cow paths » ; Ford : plus de 500 personnes aux comptes fournisseurs en Amérique du Nord, objectif initial de 20 % d'effectif en moins, 5 personnes chez Mazda, « invoiceless processing », 14 éléments à rapprocher puis 3, 75 % d'effectif en moins là où le nouveau processus est en place, règle « We pay when we receive the invoice » remplacée par « We pay when we receive the goods » ; Mutual Benefit Life : jusqu'à 30 étapes, 5 services, 19 personnes, 5 à 25 jours, gestionnaire unique « case manager », 2 à 5 jours en moyenne ; un autre assureur : 22 jours de traitement pour 17 minutes de travail)",
@@ -15275,7 +15278,10 @@ window.DICO_TERMS = [
       }
     ],
     "avoid": "« Le chiffre du MIT est faux, donc l'IA fonctionne en entreprise. » Les critiques visent le calcul et l'échantillon, pas le constat d'ensemble ; en février 2026, plus de 80 % des entreprises interrogées par le NBER ne voyaient encore aucun effet de l'IA sur leur productivité.",
-    "video": null,
+    "video": {
+      "src": "videos/mythe-95-pourcent.mp4",
+      "poster": "videos/mythe-95-pourcent.jpg"
+    },
     "sources": [
       {
         "label": "Aditya Challapally, Chris Pease, Ramesh Raskar et Pradyumna Chari (MIT NANDA), The GenAI Divide: State of AI in Business 2025, juillet 2025, copie du PDF (recherche de janvier à juin 2025 ; plus de 300 initiatives publiques, 52 organisations interrogées, 153 dirigeants sondés lors de quatre conférences ; « 95% of organizations are getting zero return » ; outils spécialisés : 60 % étudiés, 20 % en pilote, 5 % mis en place avec succès ; réussite : « marked and sustained productivity and/or P&L impact » selon utilisateurs ou dirigeants, mesurée 6 mois après le pilote ; chiffres « directionally accurate based on individual interviews » ; « Six-month observation period may be insufficient » ; 40 % des entreprises ont un abonnement LLM, des salariés de plus de 90 % en utilisent ; NANDA s'appuie sur MCP et A2A). Calcul : 5 / 20 = 25 % des organisations qui ont lancé un pilote",
