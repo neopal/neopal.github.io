@@ -71,6 +71,8 @@ Site CV/Portfolio interactif pour **Pierre-Adrien LAIR** avec chatbot IA intégr
 
 ### 5. Lexique IA (`/lexique/`)
 - Glossaire FR de l'AI engineering : graphe des termes à gauche, fiche à droite, URL `?term=<id>`.
+- Carte desktop (vue par défaut, sinon dernier choix en `localStorage`) : grappes par catégorie avec halo, taille des billes = racine du nombre de liens, libellés posés sans chevauchement par ordre d'importance (les autres au survol). Billes vivantes : on les attrape et les lance, les voisins suivent puis tout revient en place ; survol/focus = toutes les connexions. Mobile : index en liste + vue centrée « au tap » (pas de graphe complet).
+- Filtre par catégorie : légende cliquable (desktop) et puces `.catchips` en tête de l'index (mobile), un seul état `catFilter` pour la carte, la liste A-Z et l'index.
 - Contenu dans `lexique/terms.js` (`status: 'live'` = publié, `'soon'` = grisé dans le graphe).
 - **Avant d'écrire une fiche ou un short, lire `content/dico/univers.md`** : gabarit de fiche, univers studio, règles d'écriture à l'écran (pas de staccato, pas de micro-texte décoratif), règles de rythme vidéo.
 - Chaque fait daté porte sa source dans `sources` ; les chiffres de tokenisation viennent d'un test `tiktoken`.

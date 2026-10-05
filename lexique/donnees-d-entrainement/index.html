@@ -37,8 +37,14 @@ a{color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .sr{position:absolute;left:0;top:0;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
 #graph g{outline:none}
-#graph g.far text{opacity:0;transition:opacity .15s}
-#graph g.far:hover text,#graph g.far:focus-visible text{opacity:1}
+#graph text{paint-order:stroke;stroke:#0b0b0b;stroke-width:.3em;stroke-linejoin:round;transition:opacity .15s}
+#graph .clab{font-family:var(--mono);font-weight:600;letter-spacing:.04em;stroke-width:.35em}
+#graph g.minor text{opacity:0}
+#graph g.minor.show text{opacity:1}
+#graph g.far text{opacity:0}
+#graph g[data-id]:hover text,#graph g[data-id]:focus-visible text{opacity:1}
+#graph g[data-id]{touch-action:none}
+#graph.dragging,#graph.dragging g{cursor:grabbing!important}
 h1[tabindex]:focus{outline:none}
 #graph g:focus-visible circle{stroke:#fff;stroke-width:6}
 
@@ -71,9 +77,9 @@ h1[tabindex]:focus{outline:none}
 .viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
 .viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
 .viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
-.graph-wrap[data-view="list"] #graph,.graph-wrap[data-view="list"] .legend{display:none}
+.graph-wrap[data-view="list"] #graph{display:none}
 .graph-wrap[data-view="map"] .az{display:none}
-.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 48px}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 140px}
 .az .cols{columns:2 240px;column-gap:40px}
 .az section{break-inside:avoid;margin-bottom:18px}
 .az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
@@ -88,6 +94,11 @@ h1[tabindex]:focus{outline:none}
 #graph{width:100%;height:100%;display:block;touch-action:manipulation}
 .legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.legend button{pointer-events:auto;font:inherit;color:var(--muted);background:rgba(11,11,11,.8);border:1px solid var(--line);border-radius:999px;padding:4px 11px;cursor:pointer;white-space:nowrap}
+.legend button:hover{color:var(--text);border-color:#444}
+.legend button[aria-pressed="true"]{color:var(--text);border-color:var(--c,#777);background:#1d1d1d}
+.legend .n{color:var(--dim);margin-left:4px}
+.catchips{display:none}
 .mapclose{display:none}
 .ego{display:none}
 
@@ -287,6 +298,11 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
   .pager span.none{flex:1 1 0}
 
   .index li a,.index li .row{padding:15px 0;flex-wrap:wrap;column-gap:10px;row-gap:0}
+  .catchips{display:flex;gap:8px;overflow-x:auto;margin:6px -16px 8px;padding:4px 16px 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .catchips::-webkit-scrollbar{display:none}
+  .catchips button{flex:none;display:flex;align-items:center;gap:7px;min-height:40px;font:inherit;font-size:15px;color:var(--muted);background:#161616;border:1px solid var(--line);border-radius:999px;padding:0 14px;cursor:pointer;white-space:nowrap}
+  .catchips button i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+  .catchips button[aria-pressed="true"]{color:var(--text);border-color:var(--c,#777);background:#1f1f1f}
   .foot{display:block;padding:0 16px 32px;background:var(--panel);font-size:16px}
   .foot a{color:var(--muted)}
   body.has-pager .foot{padding-bottom:calc(88px + env(safe-area-inset-bottom))}
@@ -295,7 +311,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 </style>
-
+
 <!-- lex:jsonld -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/donnees-d-entrainement/#term","name":"Données d'entraînement","description":"Les données d'entraînement sont tous les textes, le code et les autres contenus lus par un modèle pendant son entraînement ; elles décident de ce qu'il sait et des biais qu'il reproduit.","url":"https://neopal.github.io/lexique/donnees-d-entrainement/","inLanguage":"fr","inDefinedTermSet":{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"},"alternateName":["Training data","training data","pretraining data","training dataset","web crawl","corpus","opt-out","jeu de données d'entraînement"]}</script>
 <!-- /lex:jsonld -->
@@ -314,7 +330,7 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
 </header>
 
 <div class="layout">
-  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="list">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="map">
     <div class="ego" id="ego">
       <div class="egobar">
         <button class="egoback" id="egoBack" type="button" hidden><span aria-hidden="true">←</span>Retour</button>
@@ -327,12 +343,12 @@ table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
       <div class="egofoot" id="egoFoot" hidden><button class="egoread" id="egoRead" type="button">Lire la fiche</button></div>
     </div>
     <div class="viewtoggle" role="group" aria-label="Affichage des termes">
-      <button type="button" data-view="list" aria-pressed="true">Liste</button>
-      <button type="button" data-view="map" aria-pressed="false">Carte</button>
+      <button type="button" data-view="list" aria-pressed="false">Liste</button>
+      <button type="button" data-view="map" aria-pressed="true">Carte</button>
     </div>
     <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
     <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
-    <div class="legend" id="legend"></div>
+    <div class="legend" id="legend" role="group" aria-label="Filtrer par catégorie"></div>
   </div>
   <main class="panel" id="panel">
       <article class="term" data-term="donnees-d-entrainement" style="--cat:#F5D76E">
@@ -454,6 +470,7 @@ window.__lexBoot = function () {
     document.body.classList.toggle('has-pager', !!current);
     highlight();
     if (typeof markAz === 'function') markAz();
+    applyListFilter();
     window.scrollTo({top: 0, behavior: 'auto'});
     if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
     return true;
@@ -563,61 +580,62 @@ window.__lexBoot = function () {
   // ---------- Carte (graphe) ----------
   const edges = [];
   const seen = new Set();
+  const nbr = Object.fromEntries(TERMS.map((t) => [t.id, new Set()]));
   TERMS.forEach((t) => (t.links || []).forEach((l) => {
-    if (!byId[l]) return;
+    if (!byId[l] || l === t.id) return;
+    nbr[t.id].add(l); nbr[l].add(t.id);
     const k = [t.id, l].sort().join('|');
     if (!seen.has(k)) { seen.add(k); edges.push([t.id, l]); }
   }));
-
+  // Taille d'un nœud : racine du nombre de liens, pour que les notions carrefour ressortent sans écraser les autres.
+  const deg = (t) => nbr[t.id].size;
+  const sqs = TERMS.map((t) => Math.sqrt(deg(t)));
+  const sqMin = Math.min(...sqs), sqMax = Math.max(...sqs);
+  const radius = (t) => (t.status !== 'live' ? 8 : 9 + ((Math.sqrt(deg(t)) - sqMin) / ((sqMax - sqMin) || 1)) * 21);
   // Chaque catégorie a sa zone, réparties sur une ellipse large ; les termes partent groupés dans leur zone.
   const catKeys = Object.keys(CATS);
   const catCenter = Object.fromEntries(catKeys.map((c, i) => {
     const a = (i / catKeys.length) * Math.PI * 2 - Math.PI / 2;
-    return [c, {x: Math.cos(a) * 520, y: Math.sin(a) * 300}];
+    return [c, {x: Math.cos(a) * 760, y: Math.sin(a) * 440}];
   }));
   const perCat = {};
   const nodes = TERMS.map((t) => {
     const c = catCenter[t.cat] || {x: 0, y: 0};
     const k = (perCat[t.cat] = (perCat[t.cat] || 0) + 1);
     const a = k * 2.4;
-    return {t, cx: c.x, cy: c.y, x: c.x + Math.cos(a) * 30 * Math.sqrt(k), y: c.y + Math.sin(a) * 30 * Math.sqrt(k), vx: 0, vy: 0, r: t.status === 'live' ? 22 : 11};
+    return {t, cx: c.x, cy: c.y, x: c.x + Math.cos(a) * 30 * Math.sqrt(k), y: c.y + Math.sin(a) * 30 * Math.sqrt(k), vx: 0, vy: 0,
+      r: radius(t), m: 1 + deg(t) * 0.08};
   });
   const nodeOf = Object.fromEntries(nodes.map((n) => [n.t.id, n]));
-
-  // Petite simulation de forces, calculée une fois au chargement.
+  // Mise en place, calculée une fois au chargement : les liens internes à une catégorie tirent fort,
+  // les liens entre catégories tirent peu, pour que les grappes restent lisibles.
   for (let step = 0; step < 400; step++) {
     for (const a of nodes) {
       for (const b of nodes) {
         if (a === b) continue;
         const dx = a.x - b.x, dy = a.y - b.y;
         const d2 = Math.max(dx * dx + dy * dy, 100);
-        const f = 5200 / d2;
+        const f = (a.t.cat === b.t.cat ? 7000 : 7000) / d2;
         a.vx += (dx / Math.sqrt(d2)) * f;
         a.vy += (dy / Math.sqrt(d2)) * f;
       }
-      a.vx += (a.cx - a.x) * 0.008;
-      a.vy += (a.cy - a.y) * 0.008;
+      a.vx += (a.cx - a.x) * 0.018;
+      a.vy += (a.cy - a.y) * 0.018;
     }
     for (const [s, d] of edges) {
       const a = nodeOf[s], b = nodeOf[d];
       const dx = b.x - a.x, dy = b.y - a.y;
       const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-      const f = (dist - 150) * 0.004;
+      const f = a.t.cat === b.t.cat ? (dist - 150) * 0.005 : (dist - 300) * 0.0005;
       a.vx += (dx / dist) * f; a.vy += (dy / dist) * f;
       b.vx -= (dx / dist) * f; b.vy -= (dy / dist) * f;
     }
     for (const n of nodes) { n.x += n.vx; n.y += n.vy; n.vx *= 0.6; n.vy *= 0.6; }
   }
-  // Anti-collision : chaque nœud occupe une boîte (cercle + libellé dessous) ; on écarte les boîtes qui se chevauchent.
-  for (const n of nodes) {
-    const label = n.t.graphLabel || n.t.title;
-    const live = n.t.status === 'live';
-    // Libellés en mono (~0,6 em par caractère), taille agrandie par fit() quand on dézoome : on prend le pire cas.
-    const size = live ? 20 : 15;
-    n.hw = Math.max(n.r, label.length * size * 0.3) + 6;
-    n.top = n.r + 4;
-    n.bottom = n.r + size * 1.7;
-  }
+  // Anti-collision sur les cercles seuls : les libellés ne déplacent pas les nœuds (fit() choisit lesquels afficher).
+  let catFilter = null;
+  let hoverId = null;
+  for (const n of nodes) { n.hw = n.r + 12; n.top = n.r + 12; n.bottom = n.r + 12; }
   function collide() {
   for (let step = 0; step < 1500; step++) {
     let moved = false;
@@ -648,22 +666,38 @@ window.__lexBoot = function () {
     spanY = Math.max(...nodes.map((n) => n.y)) - Math.min(...nodes.map((n) => n.y));
   }
   spans();
-
+  const gHalos = document.createElementNS(NS, 'g');
   const gEdges = document.createElementNS(NS, 'g');
   const gNodes = document.createElementNS(NS, 'g');
-  svg.append(gEdges, gNodes);
-
+  gHalos.setAttribute('aria-hidden', 'true');
+  gHalos.style.pointerEvents = 'none';
+  gEdges.style.pointerEvents = 'none';
+  svg.append(gHalos, gEdges, gNodes);
+  // Un halo par catégorie, derrière ses termes, avec son nom au-dessus.
+  const haloEls = catKeys.map((cat) => {
+    const c = document.createElementNS(NS, 'circle');
+    c.setAttribute('fill', CATS[cat].color);
+    c.setAttribute('fill-opacity', '0.05');
+    c.setAttribute('stroke', CATS[cat].color);
+    c.setAttribute('stroke-opacity', '0.16');
+    c.setAttribute('stroke-dasharray', '3 6');
+    const txt = document.createElementNS(NS, 'text');
+    txt.textContent = CATS[cat].label;
+    txt.setAttribute('class', 'clab');
+    txt.setAttribute('text-anchor', 'middle');
+    txt.setAttribute('fill', CATS[cat].color);
+    gHalos.append(c, txt);
+    return {cat, c, txt};
+  });
   const edgeEls = edges.map(([s, d]) => {
     const l = document.createElementNS(NS, 'line');
-    l.setAttribute('stroke', '#2c2c2c');
-    l.setAttribute('stroke-width', '1.5');
     gEdges.append(l);
-    return {s, d, el: l};
+    return {s, d, same: byId[s].cat === byId[d].cat, el: l};
   });
-
   const nodeEls = nodes.map((n) => {
     const live = n.t.status === 'live';
     const g = document.createElementNS(NS, 'g');
+    g.dataset.id = n.t.id;
     g.style.cursor = live ? 'pointer' : 'default';
     g.setAttribute('tabindex', live ? '0' : '-1');
     g.setAttribute('role', 'link');
@@ -671,8 +705,6 @@ window.__lexBoot = function () {
     const c = document.createElementNS(NS, 'circle');
     c.setAttribute('r', n.r);
     c.setAttribute('fill', live ? color(n.t) : '#1a1a1a');
-    c.setAttribute('stroke', live ? color(n.t) : '#3a3a3a');
-    c.setAttribute('stroke-width', live ? '0' : '1.5');
     const txt = document.createElementNS(NS, 'text');
     txt.textContent = n.t.graphLabel || n.t.title;
     txt.setAttribute('y', n.r + 20);
@@ -683,41 +715,60 @@ window.__lexBoot = function () {
     txt.setAttribute('font-size', live ? '15' : '12');
     g.append(c, txt);
     const pick = () => { if (go(n.t.id)) closeMap(false); };
-    g.addEventListener('click', pick);
+    g.addEventListener('click', () => { if (suppressClick) { suppressClick = false; return; } pick(); });
     g.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
+    g.addEventListener('pointerenter', () => { if (!drag) setHover(n.t.id); });
+    g.addEventListener('pointerleave', () => { if (!drag) setHover(null); });
+    g.addEventListener('focus', () => setHover(n.t.id));
+    g.addEventListener('blur', () => setHover(null));
     gNodes.append(g);
     return {n, g, c, txt};
   });
-
+  function setHover(id) {
+    if (hoverId === id) return;
+    hoverId = id;
+    highlight();
+  }
+  // Mise en avant : le terme survolé (sinon la fiche ouverte), toutes ses connexions et ses voisins ;
+  // le filtre de catégorie estompe le reste.
   function highlight() {
-    const id = current && current.id;
-    const near = new Set(id ? [id, ...(byId[id].links || [])] : []);
+    const id = hoverId || (current && current.id);
+    const near = new Set(id ? [id, ...nbr[id]] : []);
     edgeEls.forEach((e) => {
       const on = id && (e.s === id || e.d === id);
-      e.el.setAttribute('stroke', on ? color(byId[id]) : '#2c2c2c');
-      e.el.setAttribute('stroke-opacity', on ? '0.8' : '1');
+      const out = catFilter && !(byId[e.s].cat === catFilter && byId[e.d].cat === catFilter);
+      let stroke = e.same ? color(byId[e.s]) : '#3a3a3a';
+      let op = e.same ? 0.24 : 0.32;
+      if (on) { stroke = color(byId[id]); op = 0.9; }
+      else if (id) op *= 0.35;
+      if (out && !on) op = 0.04;
+      e.el.setAttribute('stroke', stroke);
+      e.el.setAttribute('stroke-opacity', op.toFixed(2));
+      e.el.setAttribute('stroke-width', on ? '2.5' : '1.5');
     });
     nodeEls.forEach(({n, g, c}) => {
-      const far = id && !near.has(n.t.id);
-      g.style.opacity = far ? '0.35' : '1';
-      // Fiche ouverte : seuls le terme et ses voisins gardent leur libellé, les autres le montrent au survol.
-      g.classList.toggle('far', !!far);
-      c.setAttribute('stroke-width', n.t.id === id ? '6' : n.t.status === 'live' ? '0' : '1.5');
-      if (n.t.id === id) c.setAttribute('stroke', 'rgba(255,255,255,.85)');
-      else c.setAttribute('stroke', n.t.status === 'live' ? color(n.t) : '#3a3a3a');
+      const out = !!catFilter && n.t.cat !== catFilter;
+      const isNear = near.has(n.t.id);
+      const far = (!!id && !isNear) || (out && !isNear);
+      g.style.opacity = isNear ? '1' : out ? '0.1' : far ? '0.3' : '1';
+      // Les libellés estompés réapparaissent au survol ; les petits nœuds montrent le leur quand ils sont concernés.
+      g.classList.toggle('far', far);
+      g.classList.toggle('show', isNear || (!!catFilter && !out));
+      const live = n.t.status === 'live';
+      if (n.t.id === id) { c.setAttribute('stroke', 'rgba(255,255,255,.85)'); c.setAttribute('stroke-width', current && current.id === n.t.id ? '6' : '3'); }
+      else if (current && current.id === n.t.id) { c.setAttribute('stroke', 'rgba(255,255,255,.85)'); c.setAttribute('stroke-width', '6'); }
+      else { c.setAttribute('stroke', live ? color(n.t) : '#3a3a3a'); c.setAttribute('stroke-width', live ? '0' : '1.5'); }
     });
+    haloEls.forEach((h) => { h.c.style.opacity = h.txt.style.opacity = catFilter && h.cat !== catFilter ? '0.15' : id ? '0.5' : '1'; });
   }
-
   // Sur un écran en portrait, la carte est étirée en hauteur (positions seulement, pas les libellés).
   let sy = 1;
   const lx = (n) => n.x;
   const ly = (n) => n.y * sy;
-
   function mapVisible() {
     // Sur mobile, le graphe complet n'est jamais affiché : la carte passe par la vue centrée.
     return !mqMobile.matches && map.dataset.view === 'map';
   }
-
   // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
   const az = document.getElementById('az');
   const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
@@ -729,17 +780,32 @@ window.__lexBoot = function () {
   az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
     const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
     return t.status === 'live'
-      ? `<li><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
-      : `<li><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+      ? `<li data-cat="${t.cat}"><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li data-cat="${t.cat}"><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
   }).join('')}</ul></section>`).join('') + '</div>';
-
   function markAz() {
     az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
     if (!current) return;
     const a = az.querySelector(`a[data-az="${current.id}"]`);
     if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
   }
-
+  // ---------- Filtre par catégorie ----------
+  // Un seul état, partagé par la carte, la liste A-Z et l'index du panneau (puces sur mobile).
+  function applyListFilter() {
+    document.querySelectorAll('button[data-cat]').forEach((b) => b.setAttribute('aria-pressed', String((b.dataset.cat || null) === catFilter)));
+    document.querySelectorAll('.az li[data-cat], .index li[data-cat]').forEach((li) => { li.hidden = !!catFilter && li.dataset.cat !== catFilter; });
+    az.querySelectorAll('section').forEach((s) => { s.hidden = !s.querySelector('li:not([hidden])'); });
+  }
+  function setFilter(c) {
+    catFilter = c && c !== catFilter ? c : null;
+    applyListFilter();
+    highlight();
+    if (mapVisible()) { fit(); startLoop(); }
+  }
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-cat]');
+    if (b) setFilter(b.dataset.cat);
+  });
   function setView(v, save = true) {
     map.dataset.view = v;
     map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
@@ -747,7 +813,6 @@ window.__lexBoot = function () {
     if (v === 'map') { fit(); startLoop(); } else markAz();
   }
   map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
-
   function fit() {
     const box = svg.getBoundingClientRect();
     if (!box.width || !box.height) return;
@@ -757,63 +822,206 @@ window.__lexBoot = function () {
     const usableW = Math.max(120, box.width - gut * 2);
     const usableH = Math.max(120, box.height - legendH - topH - gut);
     sy = usableH > usableW ? Math.min(2.4, Math.max(1, (usableH / usableW) * (spanX / spanY) * 0.8)) : 1;
-    // Deux passes : la taille des libellés dépend du zoom, et la boîte dépend des libellés.
-    let k = Math.min(usableW / (spanX + 180), usableH / (spanY * sy + 180));
-    let b;
-    for (let pass = 0; pass < 3; pass++) {
-      b = {minX: Infinity, maxX: -Infinity, minY: Infinity, maxY: -Infinity};
-      nodeEls.forEach(({n, txt}) => {
-        const live = n.t.status === 'live';
-        const size = Math.max(live ? 15 : 12, (live ? 13 : 11) / k);
-        txt.setAttribute('font-size', size.toFixed(1));
-        txt.setAttribute('y', (n.r + size * 1.3).toFixed(1));
-        const half = Math.max(n.r, (txt.getComputedTextLength() || 0) / 2) + 8;
-        // Boîte réelle du libellé, pour la passe anti-collision ci-dessous.
-        n.hw = half + 10; n.bottom = n.r + size * 2;
-        b.minX = Math.min(b.minX, lx(n) - half);
-        b.maxX = Math.max(b.maxX, lx(n) + half);
-        b.minY = Math.min(b.minY, ly(n) - n.r - 10);
-        b.maxY = Math.max(b.maxY, ly(n) + n.r + size * 1.7);
-      });
-      // Les libellés ont maintenant leur vraie taille : on écarte ceux qui se touchent, puis on remesure.
-      if (pass < 2) { collide(); spans(); }
-      k = Math.min(usableW / (b.maxX - b.minX), usableH / (b.maxY - b.minY));
-      // En portrait, la largeur limite le zoom : on étire encore pour occuper la hauteur libre.
-      const room = usableH / k - (b.maxY - b.minY);
-      if (pass < 2 && usableH > usableW && room > 0) sy = Math.min(3.2, sy + (room * 0.9) / (spanY || 1));
-    }
+    // Avec un filtre, on cadre sur la catégorie choisie.
+    const framed = (n) => !catFilter || n.t.cat === catFilter;
+    const bounds = (ns) => ({
+      minX: Math.min(...ns.map((n) => lx(n) - n.r)), maxX: Math.max(...ns.map((n) => lx(n) + n.r)),
+      minY: Math.min(...ns.map((n) => ly(n) - n.r)), maxY: Math.max(...ns.map((n) => ly(n) + n.r)),
+    });
+    // Marge en pixels autour des cercles pour les libellés du bord (90 px de chaque côté, 40 dessous, 30 dessus pour les halos).
+    const zoom = (o) => Math.min((usableW - 180) / (o.maxX - o.minX || 1), (usableH - 70) / (o.maxY - o.minY || 1));
+    const b = bounds(nodes.filter(framed));
+    // Zoom d'une catégorie plafonné à 2x la vue d'ensemble, pour que les billes gardent une taille raisonnable.
+    const k = Math.min(zoom(b), zoom(bounds(nodes)) * 2);
+    const padX = Math.max(90 / k, ((usableW / k) - (b.maxX - b.minX)) / 2);
+    const padY = Math.max(35 / k, ((usableH / k) - (b.maxY - b.minY)) / 2);
+    b.minX -= padX; b.maxX += padX; b.minY -= padY; b.maxY += padY;
+    placeHalos(k);
+    placeLabels(k, framed, b);
     b.minX -= gut / k; b.maxX += gut / k;
     const minY = b.minY - (topH + gut) / k;
     const maxY = b.maxY + legendH / k;
     svg.setAttribute('viewBox', `${b.minX.toFixed(1)} ${minY.toFixed(1)} ${(b.maxX - b.minX).toFixed(1)} ${(maxY - minY).toFixed(1)}`);
     svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    highlight();
     draw(performance.now());
   }
-
-  function draw(t) {
-    const still = mqReduced.matches;
-    nodes.forEach((n, i) => {
-      n.px = lx(n) + (still ? 0 : Math.sin(t / 1900 + i) * 4);
-      n.py = ly(n) + (still ? 0 : Math.cos(t / 2300 + i * 1.3) * 4);
+  // Libellés : taille constante à l'écran. On les pose du terme le plus relié au moins relié, et on garde ceux qui
+  // ne touchent ni un libellé déjà posé ni un cercle ; les autres apparaissent au survol. Plus on zoome (filtre,
+  // grand écran), plus il y en a.
+  function placeLabels(k, framed, view) {
+    const boxes = [];
+    const inside = (r) => r.x1 >= view.minX && r.x2 <= view.maxX && r.y1 >= view.minY && r.y2 <= view.maxY;
+    nodes.forEach((n) => boxes.push({x1: lx(n) - n.r, x2: lx(n) + n.r, y1: ly(n) - n.r, y2: ly(n) + n.r, own: n}));
+    // Noms de catégorie d'abord : au-dessus du halo, sinon au-dessous, sinon masqués (la légende reste là).
+    haloEls.forEach((h) => {
+      if (!h.geo) return;
+      const {cx, cy, r, size} = h.geo;
+      const w = (h.txt.getComputedTextLength() || 0) / 2 + 4 / k;
+      const spots = [
+        {y: cy - r - size * 0.5, r: {x1: cx - w, x2: cx + w, y1: cy - r - size * 1.4, y2: cy - r - size * 0.1}},
+        {y: cy + r + size * 1.2, r: {x1: cx - w, x2: cx + w, y1: cy + r + size * 0.2, y2: cy + r + size * 1.5}},
+      ];
+      const spot = spots.find((s) => inside(s.r) && !boxes.some((o) => s.r.x1 < o.x2 && o.x1 < s.r.x2 && s.r.y1 < o.y2 && o.y1 < s.r.y2));
+      h.txt.style.visibility = spot ? '' : 'hidden';
+      if (spot) { h.txt.setAttribute('y', spot.y.toFixed(1)); boxes.push(spot.r); }
     });
+    const order = nodeEls.slice().sort((a, b) => (framed(b.n) - framed(a.n)) || (deg(b.n.t) - deg(a.n.t)));
+    order.forEach(({n, g, txt}) => {
+      const size = (n.t.status === 'live' ? 13 : 11) / k;
+      txt.setAttribute('font-size', size.toFixed(1));
+      const w = (txt.getComputedTextLength() || 0) + 6 / k;
+      const gap = 4 / k;
+      const x = lx(n), y = ly(n);
+      // Positions essayées dans l'ordre : dessous, dessus, à droite, à gauche. Un libellé caché revient dessous.
+      const spots = [
+        {anchor: 'middle', tx: 0, ty: n.r + size * 1.15, r: {x1: x - w / 2, x2: x + w / 2, y1: y + n.r + size * 0.15, y2: y + n.r + size * 1.4}},
+        {anchor: 'middle', tx: 0, ty: -n.r - size * 0.45, r: {x1: x - w / 2, x2: x + w / 2, y1: y - n.r - size * 1.35, y2: y - n.r - size * 0.1}},
+        {anchor: 'start', tx: n.r + gap, ty: size * 0.35, r: {x1: x + n.r, x2: x + n.r + gap + w, y1: y - size * 0.65, y2: y + size * 0.6}},
+        {anchor: 'end', tx: -n.r - gap, ty: size * 0.35, r: {x1: x - n.r - gap - w, x2: x - n.r, y1: y - size * 0.65, y2: y + size * 0.6}},
+      ];
+      const free = (r) => inside(r) && !boxes.some((o) => o.own !== n && r.x1 < o.x2 && o.x1 < r.x2 && r.y1 < o.y2 && o.y1 < r.y2);
+      const spot = framed(n) ? spots.find((s) => free(s.r)) : null;
+      const s = spot || spots[0];
+      txt.setAttribute('text-anchor', s.anchor);
+      txt.setAttribute('x', s.tx.toFixed(1));
+      txt.setAttribute('y', s.ty.toFixed(1));
+      g.classList.toggle('minor', !spot);
+      if (spot) boxes.push(spot.r);
+    });
+  }
+  function placeHalos(k) {
+    haloEls.forEach((h) => {
+      const ns = nodes.filter((n) => n.t.cat === h.cat);
+      if (!ns.length) return;
+      const cx = ns.reduce((s, n) => s + lx(n), 0) / ns.length;
+      const cy = ns.reduce((s, n) => s + ly(n), 0) / ns.length;
+      // Rayon : 75 % des termes dedans, pour qu'un terme isolé n'étire pas le halo sur toute la carte.
+      const ds = ns.map((n) => Math.hypot(lx(n) - cx, ly(n) - cy) + n.r).sort((a, b) => a - b);
+      const r = ds[Math.floor((ds.length - 1) * 0.75)] + 30;
+      h.c.setAttribute('cx', cx.toFixed(1)); h.c.setAttribute('cy', cy.toFixed(1)); h.c.setAttribute('r', r.toFixed(1));
+      const size = 12 / k;
+      h.txt.setAttribute('font-size', size.toFixed(1));
+      h.txt.setAttribute('x', cx.toFixed(1));
+      h.geo = {cx, cy, r, size};
+    });
+  }
+  // ---------- Carte vivante ----------
+  // Chaque nœud est une bille tenue à sa place par un ressort, et chaque lien garde l'écart d'origine entre ses deux bouts.
+  // On peut attraper une bille et la lancer : ses voisins suivent, puis tout revient en place. Le curseur qui passe
+  // vite pousse un peu les billes sur son chemin.
+  let drag = null; // {n, x, y, ox, oy, sx, sy, moved, id}
+  let pointer = null; // {x, y, vx, vy}
+  let suppressClick = false;
+  let energy = 0;
+  function step(t) {
+    const amp = mqReduced.matches ? 0 : 4;
+    nodes.forEach((n, i) => {
+      n.hx = lx(n) + Math.sin(t / 1900 + i) * amp;
+      n.hy = ly(n) + Math.cos(t / 2300 + i * 1.3) * amp;
+      if (n.px === undefined) { n.px = n.hx; n.py = n.hy; n.svx = 0; n.svy = 0; }
+      n.fx = (n.hx - n.px) * 0.02;
+      n.fy = (n.hy - n.py) * 0.02;
+    });
+    const held = drag && drag.moved ? drag.n : null;
+    for (const e of edgeEls) {
+      const a = nodeOf[e.s], b = nodeOf[e.d];
+      const kk = held === a || held === b ? 0.06 : 0.012;
+      const ex = (b.px - a.px) - (b.hx - a.hx), ey = (b.py - a.py) - (b.hy - a.hy);
+      a.fx += ex * kk; a.fy += ey * kk;
+      b.fx -= ex * kk; b.fy -= ey * kk;
+    }
+    if (pointer && !held && !mqReduced.matches) {
+      const v = Math.hypot(pointer.vx, pointer.vy);
+      if (v > 0.5) {
+        const R2 = 110;
+        nodes.forEach((n) => {
+          if (n.t.id === hoverId) return;
+          const d = Math.hypot(n.px - pointer.x, n.py - pointer.y);
+          if (d > R2) return;
+          const w = (1 - d / R2) ** 2 * 0.08;
+          n.fx += pointer.vx * w; n.fy += pointer.vy * w;
+        });
+      }
+      pointer.vx *= 0.5; pointer.vy *= 0.5;
+    }
+    energy = 0;
+    nodes.forEach((n) => {
+      if (n === held) {
+        n.svx = drag.x - n.px; n.svy = drag.y - n.py;
+        n.px = drag.x; n.py = drag.y;
+        return;
+      }
+      n.svx = (n.svx + n.fx / n.m) * 0.82;
+      n.svy = (n.svy + n.fy / n.m) * 0.82;
+      n.px += n.svx; n.py += n.svy;
+      energy += Math.abs(n.svx) + Math.abs(n.svy);
+    });
+  }
+  function draw(t) {
+    step(t);
     nodeEls.forEach(({n, g}) => g.setAttribute('transform', `translate(${n.px.toFixed(1)},${n.py.toFixed(1)})`));
     edgeEls.forEach((e) => {
       const a = nodeOf[e.s], b = nodeOf[e.d];
-      e.el.setAttribute('x1', a.px); e.el.setAttribute('y1', a.py);
-      e.el.setAttribute('x2', b.px); e.el.setAttribute('y2', b.py);
+      e.el.setAttribute('x1', a.px.toFixed(1)); e.el.setAttribute('y1', a.py.toFixed(1));
+      e.el.setAttribute('x2', b.px.toFixed(1)); e.el.setAttribute('y2', b.py.toFixed(1));
     });
   }
-
-  // Légère respiration du graphe, seulement quand il est visible et sans prefers-reduced-motion.
+  function svgPoint(e) {
+    const m = svg.getScreenCTM();
+    if (!m) return null;
+    return new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse());
+  }
+  svg.addEventListener('pointerdown', (e) => {
+    if (e.button !== 0) return;
+    const g = e.target.closest('g[data-id]');
+    const p = svgPoint(e);
+    if (!g || !p) return;
+    const n = nodeOf[g.dataset.id];
+    drag = {n, x: n.px, y: n.py, ox: n.px - p.x, oy: n.py - p.y, sx: e.clientX, sy: e.clientY, moved: false, id: e.pointerId};
+    setHover(n.t.id);
+  });
+  svg.addEventListener('pointermove', (e) => {
+    const p = svgPoint(e);
+    if (!p) return;
+    pointer = pointer ? {x: p.x, y: p.y, vx: pointer.vx * 0.5 + (p.x - pointer.x), vy: pointer.vy * 0.5 + (p.y - pointer.y)} : {x: p.x, y: p.y, vx: 0, vy: 0};
+    if (drag && drag.id === e.pointerId) {
+      if (!drag.moved && Math.hypot(e.clientX - drag.sx, e.clientY - drag.sy) > 4) {
+        drag.moved = true;
+        svg.classList.add('dragging');
+        try { svg.setPointerCapture(e.pointerId); } catch (err) {}
+      }
+      if (drag.moved) { drag.x = p.x + drag.ox; drag.y = p.y + drag.oy; }
+    }
+    startLoop();
+  });
+  function endDrag(e) {
+    if (!drag || drag.id !== e.pointerId) return;
+    const was = drag;
+    drag = null;
+    svg.classList.remove('dragging');
+    if (was.moved) {
+      // Le clic qui suit un glisser n'ouvre pas la fiche.
+      suppressClick = true;
+      setTimeout(() => { suppressClick = false; }, 0);
+      const g = document.elementFromPoint(e.clientX, e.clientY);
+      const over = g && g.closest && g.closest('#graph g[data-id]');
+      setHover(over ? over.dataset.id : null);
+    }
+    startLoop();
+  }
+  svg.addEventListener('pointerup', endDrag);
+  svg.addEventListener('pointercancel', endDrag);
+  svg.addEventListener('pointerleave', () => { pointer = null; });
+  // Boucle d'animation : tourne tant que la carte est visible et que quelque chose bouge (respiration, bille lancée).
   let raf = 0;
   function loop(t) {
     raf = 0;
-    if (!mapVisible() || mqReduced.matches || document.hidden) return;
+    if (!mapVisible() || document.hidden) return;
     draw(t);
-    raf = requestAnimationFrame(loop);
+    if (drag || energy > 0.3 || !mqReduced.matches) raf = requestAnimationFrame(loop);
   }
   function startLoop() { if (!raf) raf = requestAnimationFrame(loop); }
-
   let lastFocus = null;
   const openBtn = document.getElementById('mapOpen');
   function openMap() {
@@ -1163,16 +1371,17 @@ window.__lexBoot = function () {
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
 
-  document.getElementById('legend').innerHTML = Object.values(CATS)
-    .map((c) => `<span><i style="background:${c.color}"></i>${R.escapeHtml(c.label)}</span>`)
-    .join('') + '<span><i style="background:#1a1a1a;border:1.5px solid #555"></i>à venir</span>';
+  document.getElementById('legend').innerHTML = '<button type="button" data-cat="" aria-pressed="true">Tout</button>' + Object.entries(CATS)
+    .map(([k, c]) => `<button type="button" data-cat="${k}" style="--c:${c.color}" aria-pressed="false"><i style="background:${c.color}"></i>${R.escapeHtml(c.label)}<span class="n">${catCount[k] || 0}</span></button>`)
+    .join('') + (TERMS.some((t) => t.status !== 'live') ? '<span><i style="background:#1a1a1a;border:1.5px solid #555"></i>à venir</span>' : '');
 
   mqMobile.addEventListener('change', () => { if (!mqMobile.matches) closeMap(false); fit(); startLoop(); });
   window.addEventListener('resize', () => { fit(); startLoop(); egoRelayout(); });
   document.addEventListener('visibilitychange', startLoop);
 
-  let savedView = 'list';
-  try { savedView = localStorage.getItem('lexique-view') === 'map' ? 'map' : 'list'; } catch (e) {}
+  // Carte par défaut sur desktop (sur mobile, l'index en liste s'affiche dans le panneau).
+  let savedView = 'map';
+  try { savedView = localStorage.getItem('lexique-view') === 'list' ? 'list' : 'map'; } catch (e) {}
   setView(savedView, false);
   go(termFromLocation(true), false);
   fit();
