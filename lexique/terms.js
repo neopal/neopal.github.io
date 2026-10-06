@@ -1,4 +1,4 @@
-// Données du Lexique IA. Source éditoriale : content/dico/drafts/*.md (voix, faits, sources).
+// Données du Lexique IA. Règles d'écriture : content/dico/brief-fiche.md ; archives des lots : content/dico/vagues/.
 // status: "live" = fiche publiée ; "soon" = terme prévu, visible dans le graphe.
 // en / aliases / jargon : correspondance anglaise (terme principal, variantes anglaises seulement, formules entendues et leur traduction).
 // aliasesFr : variantes françaises (cherchables, affichées sous « Aussi appelé »).

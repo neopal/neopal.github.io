@@ -1,6 +1,6 @@
 # Brief vague 4 du Lexique IA
 
-Suis intégralement `content/dico/vague2/BRIEF.md` puis `content/dico/vague3/BRIEF.md` (champs `table` et `reliability`). Lis aussi dans `content/dico/univers.md` les sections « Varier les exemples » et « Fiches modèles » : les fiches fine-tuning, rag et flagornerie sont le niveau visé. Les 60 fiches publiées sont dans `lexique/terms.js` (lecture seule).
+Suis intégralement `content/dico/vagues/02-premieres-fiches/BRIEF.md` puis `content/dico/vagues/03-benchmarks-prix-calcul/BRIEF.md` (champs `table` et `reliability`). Lis aussi dans `content/dico/univers.md` les sections « Varier les exemples » et « Fiches modèles » : les fiches fine-tuning, rag et flagornerie sont le niveau visé. Les 60 fiches publiées sont dans `lexique/terms.js` (lecture seule).
 
 ## Ce qui change
 - Certains termes de cette vague sont grand public (dead internet, AI slop, vibe coding) : le lecteur les a entendus sans savoir ce qu'ils recouvrent. Distingue toujours ce qui est établi (mesures, études, dates) de ce qui relève de la thèse, de la mode ou du complot, et dis-le clairement.
@@ -13,4 +13,4 @@ Vague 4 :
 - lot I (technique) : llm, slm, few-shot, pre-entrainement, post-entrainement, hugging-face
 
 ## Sortie
-`content/dico/vague4/<lot>.js`, même format que les vagues précédentes (avec `imagineForm`, sans `num`).
+`content/dico/vagues/04-grand-public/<lot>.js`, même format que les vagues précédentes (avec `imagineForm`, sans `num`).

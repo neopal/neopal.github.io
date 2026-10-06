@@ -1,6 +1,6 @@
 # Brief vague 3 du Lexique IA
 
-Suis d'abord intégralement `content/dico/vague2/BRIEF.md` (lectures obligatoires, règles dures, format de sortie, vérifications, rapport). Ce fichier ne liste que ce qui change ou s'ajoute.
+Suis d'abord intégralement `content/dico/vagues/02-premieres-fiches/BRIEF.md` (lectures obligatoires, règles dures, format de sortie, vérifications, rapport). Ce fichier ne liste que ce qui change ou s'ajoute.
 
 ## Ajouts de lecture
 - Les 41 fiches publiées sont dans `lexique/terms.js` (format mixte : fiches 01 à 10 en JS, 11 à 41 en JSON). Un autre agent y varie les exemples en ce moment : lis-le, n'y écris pas.
@@ -23,4 +23,4 @@ Prévus (pas de fiche) : aucun.
 Les ids `cout-d-une-requete` et `kv-cache` existent déjà en « à venir » : ta fiche les remplace (garde l'id).
 
 ## Sortie
-`content/dico/vague3/<lot>.js`, même format que la vague 2 (avec `imagineForm`, sans `num`).
+`content/dico/vagues/03-benchmarks-prix-calcul/<lot>.js`, même format que la vague 2 (avec `imagineForm`, sans `num`).

@@ -1,6 +1,6 @@
 // Lexique IA, vague 3, lot E (benchmarks, catégorie 'ecosysteme'). Format identique à lexique/terms.js, sans `num`.
 // imagineForm : forme de l'« Imagine » (content/dico/univers.md, section « Les formes de l'Imagine »).
-// Nouveaux champs : `table` (fiche-carrefour) et `reliability` (fiches de benchmark), voir content/dico/vague3/BRIEF.md.
+// Nouveaux champs : `table` (fiche-carrefour) et `reliability` (fiches de benchmark), voir content/dico/vagues/03-benchmarks-prix-calcul/BRIEF.md.
 module.exports = [
   {
     id: 'benchmarks-lesquels-croire',

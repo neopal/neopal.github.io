@@ -25,7 +25,8 @@ Site CV/Portfolio interactif pour **Pierre-Adrien LAIR** avec chatbot IA intégr
 ├── llms.txt            # Contexte pour AI assistants
 ├── lexique/            # Lexique IA : index.html (graphe + fiche), terms.js (données), videos/
 ├── dico/               # Redirection vers lexique/ (ancienne URL)
-├── content/dico/       # Bible éditoriale (univers.md), brouillons, maquettes DA
+├── content/dico/       # Coulisses éditoriales : brief-fiche.md, univers.md, plan, DA, vagues/ (archives)
+├── scripts/            # build-lexique.mjs, check-lot.mjs, merge-lot.mjs
 ├── video/              # Pilote Remotion des shorts (node_modules et out/ ignorés)
 ├── .nojekyll           # Désactive Jekyll sur GitHub Pages
 └── .github/workflows/static.yml  # GitHub Actions deploy
@@ -75,6 +76,7 @@ Site CV/Portfolio interactif pour **Pierre-Adrien LAIR** avec chatbot IA intégr
 - Filtre par catégorie : légende cliquable (desktop) et puces `.catchips` en tête de l'index (mobile), un seul état `catFilter` pour la carte, la liste A-Z et l'index.
 - Contenu dans `lexique/terms.js` (`status: 'live'` = publié, `'soon'` = grisé dans le graphe).
 - **Avant d'écrire une fiche ou un short, lire `content/dico/univers.md`** : gabarit de fiche, univers studio, règles d'écriture à l'écran (pas de staccato, pas de micro-texte décoratif), règles de rythme vidéo.
+- Écrire un lot de fiches : suivre `content/dico/brief-fiche.md` (format, règles, sources, schéma). Un lot se vérifie avec `node scripts/check-lot.mjs <lot.js>` et se fusionne avec `node scripts/merge-lot.mjs <lot.js>` (numérotation, remplacement des fiches « soon »), puis build. Les vagues passées sont archivées dans `content/dico/vagues/` (index dans son README) ; ce sont des archives figées, `terms.js` fait foi.
 - Chaque fait daté porte sa source dans `sources` ; les chiffres de tokenisation viennent d'un test `tiktoken`.
 - Vidéos : rendu Remotion dans `video/`, puis recompression (`ffmpeg -crf 27 -movflags +faststart`) dans `lexique/videos/`.
 - Schémas : `lexique/schemas/<id>.svg` (viewBox 360 de large, couleurs via les classes `.schema svg .xxx` de `lexique/index.html`, `<title>` obligatoire), affichés après l'« Imagine » sur les fiches sans vidéo. `lexique/schemas.js` est généré par le build, ne pas l'éditer.

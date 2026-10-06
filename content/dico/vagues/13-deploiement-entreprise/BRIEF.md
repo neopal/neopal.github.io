@@ -1,6 +1,6 @@
 # Brief vague 13 du Lexique IA : déployer l'IA dans une entreprise
 
-Suis intégralement `content/dico/vague11/BRIEF.md` (et tout ce vers quoi il renvoie) pour le format, les sources vérifiées en ligne, le schéma, l'image et les contrôles. Relis aussi `hill-climbing`, `prompt-caching` et `dark-factory` dans `lexique/terms.js`, les dernières fiches publiées.
+Suis intégralement `content/dico/vagues/11-travailler-avec-un-agent/BRIEF.md` (et tout ce vers quoi il renvoie) pour le format, les sources vérifiées en ligne, le schéma, l'image et les contrôles. Relis aussi `hill-climbing`, `prompt-caching` et `dark-factory` dans `lexique/terms.js`, les dernières fiches publiées.
 
 ## Point de départ
 Le blog de Varick Agents (https://www.varickagents.com/blog, articles du 30 septembre 2026 : « Don't Apply AI », « Spend Less Tokens », « AI Adoption Is a Myth », « If AI Is So Great, Why Isn't It Working », « Forward-Deployed Engineering 101 », « How to Become an Applied AI Engineer »). PA est d'accord avec leur approche : redessiner le processus avant d'y mettre de l'IA, du code pour tout ce qui est déterministe, le modèle seulement pour les décisions, le plus petit modèle qui suffit. Mais Varick vend ce service, et ses chiffres viennent de ses clients : cite-les comme ses affirmations, et appuie chaque fiche d'abord sur des sources primaires (articles d'origine, rapports publics, docs des éditeurs, études datées, priorité 2025-2026).
@@ -16,14 +16,14 @@ Publiés : les 151 ids de `lexique/terms.js`. La forme C reste interdite ; une f
   - `mythe-95-pourcent` (forme D), titre « 95 % des projets d'IA échouent », catégorie mythes, graphLabel « Mythe : … » : le rapport MIT NANDA « The GenAI Divide » (août 2025) ; ce qu'il a réellement mesuré (échantillon, définition de l'échec, horizon), les critiques publiées de sa méthode, comment le chiffre a circulé ; ce qui reste vrai. Ne te moque de personne. Ne lie pas `workflow-ou-agent` (même forme).
 
 ## Enrichissements (lot D)
-Dans `content/dico/vague13/enrichissements.json`, au format `{"evals": {"full": [...], "sources": [...], "jargon": [...]}, "multi-agents": {...}}` (champs complets, existant recopié à l'identique, insertions seulement) :
+Dans `content/dico/vagues/13-deploiement-entreprise/enrichissements.json`, au format `{"evals": {"full": [...], "sources": [...], "jargon": [...]}, "multi-agents": {...}}` (champs complets, existant recopié à l'identique, insertions seulement) :
 - `evals` : le golden dataset (de vraies demandes étiquetées avec la bonne réponse, une vingtaine pour commencer) et la note séparée du résultat et de la trajectoire de l'agent ; jargon possible « golden dataset », « trajectory ». Une source primaire si possible (docs d'Anthropic ou d'OpenAI sur les evals d'agents), Varick en complément.
 - `multi-agents` : une phrase sur l'idempotence (un agent qui relance une action ne doit pas la faire deux fois) et le principe d'un seul agent qui écrit chaque donnée critique.
 
 ## Sortie
-lot D : `content/dico/vague13/lot-d.js`, `content/dico/vague13/enrichissements.json`, `lexique/schemas/workflow-ou-agent.svg`, `lexique/schemas/routage-de-modeles.svg`.
-lot E : `content/dico/vague13/lot-e.js`, `lexique/schemas/mythe-ajouter-ia.svg`, `lexique/schemas/forward-deployed-engineer.svg`, `lexique/schemas/mythe-95-pourcent.svg`.
-Vérifie chaque schéma avec `LEX_EXTRA=content/dico/vague13/<lot>.js node /tmp/claude-0/-home-user-neopal-github-io/5c50080d-15c2-5d4f-bfb9-56c3d930f8e0/scratchpad/check-schemas.mjs <id>`. Aucun autre fichier, pas de git, pas de build, ne touche pas lexique/terms.js.
+lot D : `content/dico/vagues/13-deploiement-entreprise/lot-d.js`, `content/dico/vagues/13-deploiement-entreprise/enrichissements.json`, `lexique/schemas/workflow-ou-agent.svg`, `lexique/schemas/routage-de-modeles.svg`.
+lot E : `content/dico/vagues/13-deploiement-entreprise/lot-e.js`, `lexique/schemas/mythe-ajouter-ia.svg`, `lexique/schemas/forward-deployed-engineer.svg`, `lexique/schemas/mythe-95-pourcent.svg`.
+Vérifie chaque schéma avec `node scripts/check-lot.mjs content/dico/vagues/13-deploiement-entreprise/<lot>.js`. Aucun autre fichier, pas de git, pas de build, ne touche pas lexique/terms.js.
 
 ## Rapport
 Comme en vague 11 (y compris l'idée de short), plus ce que tu as retenu ou écarté de Varick et pourquoi.
