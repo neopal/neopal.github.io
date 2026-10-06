@@ -838,7 +838,10 @@ window.DICO_TERMS = [
       }
     ],
     "avoid": "« Il est open source, donc on sait sur quoi il a été entraîné. » Beaucoup de modèles dits ouverts, comme Llama, gpt-oss ou DeepSeek-V4, ne publient que leurs poids, et leurs données d'entraînement restent privées.",
-    "video": null,
+    "video": {
+      "src": "videos/open-weights.mp4",
+      "poster": "videos/open-weights.jpg"
+    },
     "sources": [
       {
         "label": "OpenAI, Lancement de gpt-oss, 5 août 2025 (Apache 2.0, premiers modèles de langage open-weight depuis GPT-2)",
