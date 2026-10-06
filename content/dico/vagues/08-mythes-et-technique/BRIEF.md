@@ -1,6 +1,6 @@
 # Brief vague 8 du Lexique IA
 
-Suis intégralement `content/dico/vague6/BRIEF.md` (qui renvoie à la vague 5 et aux précédentes, à `univers.md` et à `gestes-prose.md`) : même niveau, même format, sources vérifiées en ligne, un schéma par fiche. Les fiches des vagues 6 et 7 sont publiées dans `lexique/terms.js` : relis-en deux avant d'écrire, et pour les mythes relis `mythe-autocompletion` et `mythe-a-lu-tout-internet`.
+Suis intégralement `content/dico/vagues/06-architecture-securite-frontiere/BRIEF.md` (qui renvoie à la vague 5 et aux précédentes, à `univers.md` et à `gestes-prose.md`) : même niveau, même format, sources vérifiées en ligne, un schéma par fiche. Les fiches des vagues 6 et 7 sont publiées dans `lexique/terms.js` : relis-en deux avant d'écrire, et pour les mythes relis `mythe-autocompletion` et `mythe-a-lu-tout-internet`.
 
 ## Règles reprises de la vague 7
 - **Définition en une phrase (`short`) : 30 mots au plus.** Les détails vont dans la définition complète.
@@ -18,7 +18,7 @@ Pour un mythe : le titre est la croyance, la fiche montre ce qui se passe vraime
 Formes d'Imagine par lot, pour éviter les conflits entre lots : lot Q prend A, B, D ; lot R prend B, D, E ; lot S prend A, D, E (la forme C reste interdite). Une fiche liée à une fiche d'un autre lot de la vague ne prend pas la même forme qu'elle ; si tu ne connais pas encore sa forme, ne crée pas le lien et signale-le dans ton rapport.
 
 ## Sortie
-`content/dico/vague8/lot-q.js`, `lot-r.js` ou `lot-s.js` + `lexique/schemas/<id>.svg` (même vérification qu'en vague 6, avec `LEX_EXTRA=content/dico/vague8/<lot>.js`). Aucun autre fichier, pas de git, pas de build.
+`content/dico/vagues/08-mythes-et-technique/lot-q.js`, `lot-r.js` ou `lot-s.js` + `lexique/schemas/<id>.svg` (même vérification qu'en vague 6, avec `node scripts/check-lot.mjs content/dico/vagues/08-mythes-et-technique/<lot>.js`). Aucun autre fichier, pas de git, pas de build.
 
 ## Rapport
 Comme en vague 6.

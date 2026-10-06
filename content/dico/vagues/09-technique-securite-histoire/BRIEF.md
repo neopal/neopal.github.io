@@ -1,6 +1,6 @@
 # Brief vague 9 du Lexique IA (dernière vague)
 
-Suis intégralement `content/dico/vague6/BRIEF.md` (qui renvoie à la vague 5 et aux précédentes, à `univers.md` et à `gestes-prose.md`) : même niveau, même format, sources vérifiées en ligne, un schéma par fiche. Les fiches des vagues 6 à 8 sont publiées dans `lexique/terms.js` : relis-en deux avant d'écrire, et pour les mythes relis `mythe-autocompletion` et `mythe-a-lu-tout-internet`.
+Suis intégralement `content/dico/vagues/06-architecture-securite-frontiere/BRIEF.md` (qui renvoie à la vague 5 et aux précédentes, à `univers.md` et à `gestes-prose.md`) : même niveau, même format, sources vérifiées en ligne, un schéma par fiche. Les fiches des vagues 6 à 8 sont publiées dans `lexique/terms.js` : relis-en deux avant d'écrire, et pour les mythes relis `mythe-autocompletion` et `mythe-a-lu-tout-internet`.
 
 ## Règles reprises de la vague 7
 - **Définition en une phrase (`short`) : 30 mots au plus.** Les détails vont dans la définition complète.
@@ -19,7 +19,7 @@ Formes d'Imagine par lot, pour éviter les conflits entre lots : lot T prend A, 
 Plusieurs termes touchent des fiches publiées (alignement, guardrails, jailbreak, modeles-de-raisonnement, transformer, auto-attention, kv-cache, inference, cout-d-une-requete, interpretabilite, agi, lois-d-echelle, dead-internet...). Lis-les : apporte un angle et des exemples neufs, ne reprends pas leurs exemples, et lie-les.
 
 ## Sortie
-`content/dico/vague9/lot-t.js`, `lot-u.js` ou `lot-v.js` + `lexique/schemas/<id>.svg` (même vérification qu'en vague 6, avec `LEX_EXTRA=content/dico/vague9/<lot>.js`). Aucun autre fichier, pas de git, pas de build.
+`content/dico/vagues/09-technique-securite-histoire/lot-t.js`, `lot-u.js` ou `lot-v.js` + `lexique/schemas/<id>.svg` (même vérification qu'en vague 6, avec `node scripts/check-lot.mjs content/dico/vagues/09-technique-securite-histoire/<lot>.js`). Aucun autre fichier, pas de git, pas de build.
 
 ## Rapport
 Comme en vague 6.

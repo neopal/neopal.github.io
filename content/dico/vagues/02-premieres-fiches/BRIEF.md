@@ -19,7 +19,7 @@ Projet : glossaire FR vulgarisé de l'AI engineering, https://neopal.github.io/l
 - `video: null`.
 
 ## Format de sortie
-Un fichier `content/dico/vague2/<lot>.js` (CommonJS) : `module.exports = [ { ...fiche }, ... ];` avec, pour chaque fiche, exactement les champs des fiches publiées : `id, status: 'live', title, en, aliases, aliasesFr, jargon, cat, links, solutions?, short, image, imagine, full[], then?, office[2], avoid, video: null, sources[]`, et un champ `imagineForm` (lettre A à E de la typologie). Ne mets PAS de champ `num` (l'orchestrateur numérote). Catégories valides : fondations, inference, comportements, agents, mythes (pour les termes « Écosystème » et « Méthode », utilise la plus proche ; dis-le dans ton rapport si une nouvelle catégorie te semble nécessaire).
+Un fichier `content/dico/vagues/02-premieres-fiches/<lot>.js` (CommonJS) : `module.exports = [ { ...fiche }, ... ];` avec, pour chaque fiche, exactement les champs des fiches publiées : `id, status: 'live', title, en, aliases, aliasesFr, jargon, cat, links, solutions?, short, image, imagine, full[], then?, office[2], avoid, video: null, sources[]`, et un champ `imagineForm` (lettre A à E de la typologie). Ne mets PAS de champ `num` (l'orchestrateur numérote). Catégories valides : fondations, inference, comportements, agents, mythes (pour les termes « Écosystème » et « Méthode », utilise la plus proche ; dis-le dans ton rapport si une nouvelle catégorie te semble nécessaire).
 `links` : 3 à 6 ids, choisis UNIQUEMENT dans le registre ci-dessous.
 Ne modifie aucun autre fichier du repo. Pas de commit.
 
@@ -33,7 +33,7 @@ Vague 2 :
 Prévus (pas de fiche) : kv-cache, cout-d-une-requete
 
 ## Vérification avant de rendre
-`node -e "const T=require('./content/dico/vague2/<lot>.js'); console.log(T.length)"` doit passer ; grep des caractères interdits ; compte des phrases > 45 mots (0) ; chaque URL de sources et solutions testée.
+`node -e "const T=require('./content/dico/vagues/02-premieres-fiches/<lot>.js'); console.log(T.length)"` doit passer ; grep des caractères interdits ; compte des phrases > 45 mots (0) ; chaque URL de sources et solutions testée.
 
 ## Rapport
 Pour chaque fiche : id, forme d'Imagine, les faits datés et leur source, ce que tu as retiré faute de source. Puis les 2 fiches dont tu es le plus fier et pourquoi.

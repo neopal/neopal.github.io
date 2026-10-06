@@ -1,6 +1,6 @@
 # Brief vague 11 du Lexique IA : travailler avec un agent
 
-Suis intégralement `content/dico/vague9/BRIEF.md` (et tout ce vers quoi il renvoie) pour le format, les sources vérifiées en ligne, le schéma et les contrôles. Pour le champ `image`, applique la règle de `content/dico/univers.md`, section « L'image d'une fiche (règle révisée, PA, 2026-10-03) », y compris « Le répertoire que PA aime » ; relis les images de reward-hacking, quantization, speculative-decoding, cout-d-une-requete, benchmaxxing, evals et arxiv dans `lexique/terms.js` : c'est le ton qui plaît à PA. Varie les registres (fait réel daté, absurde du quotidien, grand-mère, comptoir, art et culture populaire) ; la compréhension passe avant le bon mot.
+Suis intégralement `content/dico/vagues/09-technique-securite-histoire/BRIEF.md` (et tout ce vers quoi il renvoie) pour le format, les sources vérifiées en ligne, le schéma et les contrôles. Pour le champ `image`, applique la règle de `content/dico/univers.md`, section « L'image d'une fiche (règle révisée, PA, 2026-10-03) », y compris « Le répertoire que PA aime » ; relis les images de reward-hacking, quantization, speculative-decoding, cout-d-une-requete, benchmaxxing, evals et arxiv dans `lexique/terms.js` : c'est le ton qui plaît à PA. Varie les registres (fait réel daté, absurde du quotidien, grand-mère, comptoir, art et culture populaire) ; la compréhension passe avant le bon mot.
 
 ## Le sujet
 Des notions qu'on entend tous les jours quand on travaille avec un agent de code (Claude Code, Codex, Cursor...), repérées en comparant le lexique au « AI Coding Dictionary » de Matt Pocock (https://www.aihero.dev/ai-coding-dictionary). Ne recopie pas ses définitions : sers-t'en comme point de départ, puis va aux sources primaires (docs des éditeurs, articles, études datées 2025-2026).
@@ -22,7 +22,7 @@ Vague 11 (liens croisés autorisés), avec la forme d'Imagine imposée :
 La forme C reste interdite. Une fiche ne se lie jamais à une fiche (publiée ou de la vague) qui a la même forme d'Imagine : en cas de conflit, retire le lien le plus faible et signale-le.
 
 ## Sortie
-`content/dico/vague11/lot-y.js` ou `lot-z.js` (même format que `content/dico/vague10/lot-x.js`) + `lexique/schemas/<id>.svg` (vérification : `LEX_EXTRA=content/dico/vague11/<lot>.js node /tmp/claude-0/-home-user-neopal-github-io/5c50080d-15c2-5d4f-bfb9-56c3d930f8e0/scratchpad/check-schemas.mjs <id>` depuis la racine du repo, puis regarde la capture). Écris le fichier tôt et mets-le à jour au fur et à mesure. Aucun autre fichier, pas de git, pas de build.
+`content/dico/vagues/11-travailler-avec-un-agent/lot-y.js` ou `lot-z.js` (même format que `content/dico/vagues/10-mythes-plateaux-tele/lot-x.js`) + `lexique/schemas/<id>.svg` (vérification : `node scripts/check-lot.mjs content/dico/vagues/11-travailler-avec-un-agent/<lot>.js` depuis la racine du repo, puis regarde la capture). Écris le fichier tôt et mets-le à jour au fur et à mesure. Aucun autre fichier, pas de git, pas de build.
 
 ## Vidéo
 Pour chaque fiche, ajoute dans ton rapport (pas dans la fiche) une idée de short de 20 à 30 secondes : la scène, les 4 à 6 cartons de texte (12 caractères par seconde de lecture au plus), et l'histoire vraie ou la démonstration qui le porte. Je choisirai et produirai les vidéos.
