@@ -823,9 +823,11 @@ window.DICO_TERMS = [
     "imagine": "Ouvre la page de gpt-oss-120b sur Hugging Face et clique sur « Files and versions ». Tu y trouves la licence Apache 2.0 et les fichiers de poids au format .safetensors, environ 65 Go pour 117 milliards de paramètres, puis tu peux chercher le dossier des données d'entraînement aussi longtemps que tu veux.",
     "full": [
       "Un modèle open weights publie ses paramètres, la console réglée, avec une licence qui dit ce qu'on a le droit d'en faire. Tu peux alors le faire tourner sur tes serveurs sans envoyer tes données à personne, le spécialiser par fine-tuning ou le compresser. La licence compte autant que les poids : celle de Llama 3.1 oblige les entreprises de plus de 700 millions d'utilisateurs mensuels à demander une licence à Meta, alors que gpt-oss, sous Apache 2.0, n'a pas cette clause.",
+      "En octobre 2026, les modèles ouverts les plus forts viennent de labos chinois. Sur l'indice d'Artificial Analysis, qui agrège dix évaluations, MiMo-V2.6-Pro, publié par Xiaomi sous licence MIT le 21 septembre, devance GLM-5.3 de Z AI et Kimi K3 de Moonshot AI, alors que gpt-oss-120b, sorti un an plus tôt, est loin derrière. Le meilleur modèle fermé garde une avance d'une dizaine de points, et pour faire tourner un modèle récent sur une seule machine, Alibaba publie Qwen3.8-27B sous Apache 2.0.",
       "Pour savoir si un modèle est open source ou seulement open weights, demande-toi si tu pourrais refaire son entraînement avec ce qui est publié. Avec gpt-oss ou DeepSeek-V4, la réponse est non, faute des données d'entraînement ; avec OLMo 3, qu'Ai2 publie avec ses données et toutes ses étapes d'entraînement, c'est oui.",
       "Le cas limite est le modèle dont les données sont décrites sans être publiées. La définition de l'IA open source fixée en octobre 2024 par l'Open Source Initiative l'accepte, si la description suffit à une personne compétente pour construire un système équivalent ; c'est le point le plus disputé de cette définition."
     ],
+    "table": {"caption": "Les modèles ouverts en tête", "asOf": "6 octobre 2026", "columns": ["Modèle", "Labo", "Indice AA", "Licence", "Paramètres"], "rows": [["MiMo-V2.6-Pro", "Xiaomi", "46", "MIT", "1 024 Md"], ["GLM-5.3", "Z AI", "45", "licence maison", "753 Md"], ["Kimi K3", "Moonshot AI", "44", "licence maison", "2 780 Md"], ["Qwen3.8-27B", "Alibaba", "34", "Apache 2.0", "28 Md"], ["gpt-oss-120b", "OpenAI", "12", "Apache 2.0", "117 Md"]], "note": "Indice AA : Intelligence Index d'Artificial Analysis v4.3.2 (dix évaluations), au réglage de raisonnement le plus élevé de chaque modèle ; le meilleur modèle fermé obtient 58."},
     "then": "En 2024, le dernier modèle de langage ouvert d'OpenAI restait GPT-2. Le 5 août 2025, OpenAI a publié gpt-oss-120b et gpt-oss-20b sous Apache 2.0, ses premiers modèles de langage open weights depuis, et le plus gros des deux se contente d'une seule carte graphique de 80 Go.",
     "office": [
       {
@@ -843,6 +845,12 @@ window.DICO_TERMS = [
       "poster": "videos/open-weights.jpg"
     },
     "sources": [
+      {"label": "Artificial Analysis, Open Source Models (Intelligence Index v4.3.2, dix évaluations : MiMo-V2.6-Pro 46, GLM-5.3 45, Kimi K3 44, GLM-5.3-Flash 42, DeepSeek V4.1 Flash 39, Qwen3.8 27B 34), consulté le 6 octobre 2026", "url": "https://artificialanalysis.ai/models/open-source"},
+      {"label": "Artificial Analysis, LLM Leaderboard (meilleur modèle fermé à 57,6 ; gpt-oss-120b à 11,6), consulté le 6 octobre 2026", "url": "https://artificialanalysis.ai/leaderboards/models"},
+      {"label": "Xiaomi, fiche de MiMo-V2.6-Pro sur Hugging Face (licence MIT, publiée le 21 septembre 2026, 1 024 milliards de paramètres selon l'API Hugging Face)", "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"},
+      {"label": "Z AI, fiche de GLM-5.3 sur Hugging Face (licence « glm-5.3 », publiée le 25 août 2026, 753 milliards de paramètres selon l'API Hugging Face)", "url": "https://huggingface.co/zai-org/GLM-5.3"},
+      {"label": "Moonshot AI, fiche de Kimi K3 sur Hugging Face (licence propre, 2 780 milliards de paramètres selon l'API Hugging Face)", "url": "https://huggingface.co/moonshotai/Kimi-K3"},
+      {"label": "Qwen, fiche de Qwen3.8-27B sur Hugging Face (licence Apache 2.0, 27,8 milliards de paramètres)", "url": "https://huggingface.co/Qwen/Qwen3.8-27B"},
       {
         "label": "OpenAI, Lancement de gpt-oss, 5 août 2025 (Apache 2.0, premiers modèles de langage open-weight depuis GPT-2)",
         "url": "https://openai.com/index/introducing-gpt-oss/"
