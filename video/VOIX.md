@@ -1,0 +1,40 @@
+# Shorts à voix off : la recette
+
+Format YouTube Shorts / TikTok, avec une voix et une musique ElevenLabs. Il ne remplace pas les vidéos muettes des fiches du lexique. Le ton, l'ordre du récit et la règle « lisible dans le métro » sont dans `content/dico/univers.md` (section « Shorts à voix off ») : les lire avant d'écrire le texte.
+
+Référence validée : Prédiction du token suivant (2026-10-07), rendu dans `video/out/prediction-short.mp4` (non versionné).
+
+## Les fichiers d'un short `<id>`
+
+| Fichier | Rôle |
+|---|---|
+| `src/voix/<id>.script.json` | Le texte dit, découpé en segments (un par scène), avec les indications de jeu ; `quoted`, `nocaption` et `display` règlent les sous-titres |
+| `public/voix/<id>.mp3` | La voix retenue |
+| `public/voix/<id>-music.mp3` | La musique |
+| `src/voix/<id>.words.json` | La transcription mot à mot de la voix (Scribe), source du calage |
+| `src/voix/<id>.align.json` | Le calage généré : début et fin de chaque scène et de chaque mot |
+| `src/<Composition>.tsx` | Les scènes, une par segment, synchronisées sur les mots (`at('scene', 'mot')`) |
+| `src/voix/chunks.mjs` | Le découpage des sous-titres, partagé avec le contrôle |
+
+## Le déroulé
+
+1. **Écrire le texte** dans `<id>.script.json`, un segment par scène : hook (la question du terme), intro, notion de départ, nom du terme, image, mécanisme, et donc, chute. Environ 170 mots. Les termes anglais en API entre barres obliques, leur forme écrite dans `display`.
+2. **Générer la voix dans le flow ElevenLabs** (MCP `elevenlabs`, outil `creative_generate_speech`, `generations_count: 1`). Modèle `eleven_v4`. La voix, c'est PA qui la choisit et peut générer lui-même ses prises dans le flow en retouchant le texte ; la voix retenue pour Prédiction est **Adrien Clairon - Podcast Narrator**. Si PA retouche le texte dans le flow, reporter ses changements dans le script : le calage compare les deux.
+3. **Récupérer la voix** (`media[].url` du statut de la génération, ou le mp3 exporté par PA) dans `public/voix/<id>.mp3`.
+4. **Transcrire le nœud de la voix** dans le flow (`creative_transcribe_audio`, `connect_from` = le nœud TTS). Sur un nœud généré, c'est gratuit et Scribe aligne le texte du prompt mot à mot. Télécharger `words_download_url` dans `src/voix/<id>.words.json`.
+5. **Musique** : `creative_generate_in_flow`, `node_type: music`, `eleven_music_v1`, un prompt qui commence par `Instrumental only, no vocals.`, 120 BPM (le liseré du fond pulse à ce tempo), une durée un peu plus longue que la voix. Dans `public/voix/<id>-music.mp3`.
+6. **Caler** : `node tools/align-from-words.mjs <id> --music`. Options : `--tempo=1.1` si la voix a été accélérée au montage (`ffmpeg -af atempo=1.1`), `--lead=1.8` si on ajoute un silence avant la voix (un segment au texte vide occupe ce temps). Le script s'arrête si la transcription ne correspond pas au texte.
+7. **Contrôler** : `npm run check:voix -- <id> <Composition>` (lisibilité des sous-titres et tailles de texte). Corriger jusqu'à « OK ».
+8. **Vérifier quelques images** avant le rendu complet : `npx remotion still src/index.ts <Composition> out/f.png --frame=<n>`.
+9. **Rendre** : `npx remotion render src/index.ts <Composition> out/raw.mp4 --concurrency=12` (environ 3 min pour 70 s ; sans `--concurrency`, plus de 10 min).
+10. **Encoder pour YouTube / TikTok** :
+    `ffmpeg -i out/raw.mp4 -c:v libx264 -crf 23 -pix_fmt yuv420p -af loudnorm=I=-14:TP=-1:LRA=11 -c:a aac -b:a 192k -ar 48000 -movflags +faststart out/<id>-short.mp4`
+
+## Pièges et coûts (appris sur Prédiction)
+
+- Une génération de voix d'environ 70 s coûte 1 250 à 1 450 crédits, une musique de 55 à 72 s 900 crédits. Une seule prise par appel ; ne jamais relancer pour « réessayer » sans regarder le statut.
+- Transcrire un nœud généré du flow : 0 crédit. Transcrire un fichier importé ou une musique : autant qu'une génération. Ne pas transcrire la musique pour vérifier qu'elle n'a pas de paroles, le prompt suffit.
+- `eleven_v3` parle lentement (2,3 à 2,5 mots/s) : 85 s pour 210 mots. `eleven_v4` est plus vif et a été préféré par PA.
+- La transcription d'une prise v3 / v4 contient les indications de jeu (`[curious]`), parfois collées à un mot (`suivant...[curious]`) ; `align-from-words.mjs` les retire.
+- Si ElevenLabs répond « Free Tier access has been disabled », c'est le compte, pas le prompt : PA se réauthentifie avec `/mcp` et on relance.
+- `npm run check` (les shorts muets) plante sous Windows sur un chemin `C:\C:\` ; le contrôle des shorts à voix off est `check:voix`.

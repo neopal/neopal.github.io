@@ -10,13 +10,13 @@ const FOND = '#7CFFB2';
 // ---------- Briques locales ----------
 
 // Plex Mono : chasse fixe de 0,6 em, ce qui permet de calculer où tombe chaque token.
-const CH = 0.6;
+export const CH = 0.6;
 const PADX = 12;
 const BORDER = 4;
-const GAP = 12;
-const chipW = (t: string, size: number) => t.length * CH * size + 2 * PADX + 2 * BORDER;
+export const GAP = 12;
+export const chipW = (t: string, size: number) => t.length * CH * size + 2 * PADX + 2 * BORDER;
 
-const Chip: React.FC<{t: string; size?: number; on?: number; ghost?: boolean; color?: string}> = ({t, size = 44, on = 0, ghost = false, color}) => {
+export const Chip: React.FC<{t: string; size?: number; on?: number; ghost?: boolean; color?: string}> = ({t, size = 44, on = 0, ghost = false, color}) => {
   const accent = useAccent();
   return (
     <div
@@ -36,7 +36,7 @@ const Chip: React.FC<{t: string; size?: number; on?: number; ghost?: boolean; co
 
 // ---------- 1. Réponse : la réponse s'affiche token par token ----------
 
-const STREAM = ['Il', 'était', 'une', 'fois', 'un', 'petit', 'dragon', 'qui', 'viv', 'ait', 'seul'];
+export const STREAM = ['Il', 'était', 'une', 'fois', 'un', 'petit', 'dragon', 'qui', 'viv', 'ait', 'seul'];
 
 const Reponse: React.FC = () => {
   const frame = useCurrentFrame();

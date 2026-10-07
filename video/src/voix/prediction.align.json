@@ -1,0 +1,1171 @@
+{
+ "id": "prediction",
+ "audio": true,
+ "music": true,
+ "duration": 68.24,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.08,
+   "end": 2.933,
+   "words": [
+    {
+     "w": "C'est",
+     "start": 0.08,
+     "end": 0.24
+    },
+    {
+     "w": "quoi ?",
+     "start": 0.36,
+     "end": 0.853
+    },
+    {
+     "w": "la",
+     "start": 0.907,
+     "end": 0.96
+    },
+    {
+     "w": "prédiction",
+     "start": 1.04,
+     "end": 1.6
+    },
+    {
+     "w": "du",
+     "start": 1.64,
+     "end": 1.68
+    },
+    {
+     "w": "token",
+     "start": 1.76,
+     "end": 2.08
+    },
+    {
+     "w": "suivant...",
+     "start": 2.16,
+     "end": 2.933
+    }
+   ]
+  },
+  {
+   "scene": "intro",
+   "start": 2.947,
+   "end": 10.26,
+   "words": [
+    {
+     "w": "Quand",
+     "start": 2.947,
+     "end": 3.04
+    },
+    {
+     "w": "ChatGPT",
+     "start": 3.12,
+     "end": 3.68
+    },
+    {
+     "w": "te",
+     "start": 3.76,
+     "end": 3.84
+    },
+    {
+     "w": "répond…",
+     "start": 3.96,
+     "end": 4.72
+    },
+    {
+     "w": "tu",
+     "start": 4.8,
+     "end": 4.88
+    },
+    {
+     "w": "crois",
+     "start": 4.92,
+     "end": 5.04
+    },
+    {
+     "w": "qu'il",
+     "start": 5.08,
+     "end": 5.2
+    },
+    {
+     "w": "a",
+     "start": 5.24,
+     "end": 5.28
+    },
+    {
+     "w": "déjà",
+     "start": 5.36,
+     "end": 5.6
+    },
+    {
+     "w": "toute",
+     "start": 5.653,
+     "end": 5.76
+    },
+    {
+     "w": "sa",
+     "start": 5.84,
+     "end": 5.92
+    },
+    {
+     "w": "réponse",
+     "start": 6,
+     "end": 6.24
+    },
+    {
+     "w": "en",
+     "start": 6.28,
+     "end": 6.32
+    },
+    {
+     "w": "tête ?",
+     "start": 6.4,
+     "end": 6.98
+    },
+    {
+     "w": "En",
+     "start": 7.1,
+     "end": 7.12
+    },
+    {
+     "w": "réalité,",
+     "start": 7.2,
+     "end": 7.68
+    },
+    {
+     "w": "il",
+     "start": 7.76,
+     "end": 7.84
+    },
+    {
+     "w": "ne",
+     "start": 7.88,
+     "end": 7.92
+    },
+    {
+     "w": "sait",
+     "start": 8,
+     "end": 8.24
+    },
+    {
+     "w": "pas",
+     "start": 8.28,
+     "end": 8.32
+    },
+    {
+     "w": "encore",
+     "start": 8.4,
+     "end": 8.64
+    },
+    {
+     "w": "comment",
+     "start": 8.72,
+     "end": 8.88
+    },
+    {
+     "w": "sa",
+     "start": 8.96,
+     "end": 9.04
+    },
+    {
+     "w": "phrase",
+     "start": 9.12,
+     "end": 9.28
+    },
+    {
+     "w": "va",
+     "start": 9.36,
+     "end": 9.44
+    },
+    {
+     "w": "finir !",
+     "start": 9.56,
+     "end": 10.26
+    }
+   ]
+  },
+  {
+   "scene": "token",
+   "start": 10.38,
+   "end": 20.9,
+   "words": [
+    {
+     "w": "Pour",
+     "start": 10.38,
+     "end": 10.4
+    },
+    {
+     "w": "comprendre,",
+     "start": 10.48,
+     "end": 11.12
+    },
+    {
+     "w": "il",
+     "start": 11.2,
+     "end": 11.28
+    },
+    {
+     "w": "faut",
+     "start": 11.333,
+     "end": 11.44
+    },
+    {
+     "w": "parler",
+     "start": 11.52,
+     "end": 11.68
+    },
+    {
+     "w": "des",
+     "start": 11.8,
+     "end": 11.92
+    },
+    {
+     "w": "tokens.",
+     "start": 12.16,
+     "end": 12.8
+    },
+    {
+     "w": "Un",
+     "start": 12.84,
+     "end": 12.88
+    },
+    {
+     "w": "modèle",
+     "start": 12.96,
+     "end": 13.12
+    },
+    {
+     "w": "de",
+     "start": 13.2,
+     "end": 13.28
+    },
+    {
+     "w": "langage",
+     "start": 13.4,
+     "end": 13.76
+    },
+    {
+     "w": "découpe",
+     "start": 13.813,
+     "end": 14.08
+    },
+    {
+     "w": "le",
+     "start": 14.12,
+     "end": 14.16
+    },
+    {
+     "w": "texte",
+     "start": 14.24,
+     "end": 14.56
+    },
+    {
+     "w": "en",
+     "start": 14.64,
+     "end": 14.72
+    },
+    {
+     "w": "petits",
+     "start": 14.8,
+     "end": 14.96
+    },
+    {
+     "w": "morceaux,",
+     "start": 15.04,
+     "end": 15.6
+    },
+    {
+     "w": "un",
+     "start": 15.68,
+     "end": 15.76
+    },
+    {
+     "w": "mot",
+     "start": 15.84,
+     "end": 16.08
+    },
+    {
+     "w": "ou",
+     "start": 16.16,
+     "end": 16.24
+    },
+    {
+     "w": "un",
+     "start": 16.32,
+     "end": 16.4
+    },
+    {
+     "w": "bout",
+     "start": 16.48,
+     "end": 16.56
+    },
+    {
+     "w": "de",
+     "start": 16.6,
+     "end": 16.64
+    },
+    {
+     "w": "mot.",
+     "start": 16.72,
+     "end": 17.28
+    },
+    {
+     "w": "Même",
+     "start": 17.36,
+     "end": 17.76
+    },
+    {
+     "w": "«",
+     "start": 17.82,
+     "end": 17.88
+    },
+    {
+     "w": "anticonstitutionnellement",
+     "start": 17.94,
+     "end": 19.04
+    },
+    {
+     "w": "»",
+     "start": 19.12,
+     "end": 19.2
+    },
+    {
+     "w": "devient…",
+     "start": 19.28,
+     "end": 19.76
+    },
+    {
+     "w": "cinq",
+     "start": 19.84,
+     "end": 20
+    },
+    {
+     "w": "tokens !",
+     "start": 20.08,
+     "end": 20.9
+    }
+   ]
+  },
+  {
+   "scene": "nom",
+   "start": 21.02,
+   "end": 28.88,
+   "words": [
+    {
+     "w": "Et",
+     "start": 21.02,
+     "end": 21.04
+    },
+    {
+     "w": "son",
+     "start": 21.16,
+     "end": 21.28
+    },
+    {
+     "w": "seul",
+     "start": 21.32,
+     "end": 21.44
+    },
+    {
+     "w": "travail,",
+     "start": 21.52,
+     "end": 22.08
+    },
+    {
+     "w": "c'est",
+     "start": 22.133,
+     "end": 22.24
+    },
+    {
+     "w": "de",
+     "start": 22.32,
+     "end": 22.4
+    },
+    {
+     "w": "deviner",
+     "start": 22.48,
+     "end": 22.88
+    },
+    {
+     "w": "le",
+     "start": 22.96,
+     "end": 23.04
+    },
+    {
+     "w": "token",
+     "start": 23.2,
+     "end": 23.36
+    },
+    {
+     "w": "suivant.",
+     "start": 23.44,
+     "end": 24.08
+    },
+    {
+     "w": "C'est",
+     "start": 24.16,
+     "end": 24.32
+    },
+    {
+     "w": "ça,",
+     "start": 24.4,
+     "end": 24.64
+    },
+    {
+     "w": "la",
+     "start": 24.72,
+     "end": 24.8
+    },
+    {
+     "w": "prédiction",
+     "start": 24.84,
+     "end": 25.28
+    },
+    {
+     "w": "du",
+     "start": 25.32,
+     "end": 25.36
+    },
+    {
+     "w": "token",
+     "start": 25.44,
+     "end": 25.68
+    },
+    {
+     "w": "suivant,",
+     "start": 25.76,
+     "end": 26.32
+    },
+    {
+     "w": "ou",
+     "start": 26.36,
+     "end": 26.4
+    },
+    {
+     "w": "en",
+     "start": 26.48,
+     "end": 26.56
+    },
+    {
+     "w": "anglais,",
+     "start": 26.64,
+     "end": 27.2
+    },
+    {
+     "w": "next",
+     "start": 27.28,
+     "end": 27.52
+    },
+    {
+     "w": "token",
+     "start": 27.6,
+     "end": 27.92
+    },
+    {
+     "w": "prediction.",
+     "start": 28,
+     "end": 28.88
+    }
+   ]
+  },
+  {
+   "scene": "temoin",
+   "start": 29.236,
+   "end": 38.731,
+   "words": [
+    {
+     "w": "Imagine",
+     "start": 29.236,
+     "end": 29.28
+    },
+    {
+     "w": "un",
+     "start": 29.36,
+     "end": 29.44
+    },
+    {
+     "w": "témoin",
+     "start": 29.48,
+     "end": 29.68
+    },
+    {
+     "w": "de",
+     "start": 29.72,
+     "end": 29.76
+    },
+    {
+     "w": "mariage",
+     "start": 29.84,
+     "end": 30.16
+    },
+    {
+     "w": "qui",
+     "start": 30.2,
+     "end": 30.24
+    },
+    {
+     "w": "a",
+     "start": 30.32,
+     "end": 30.4
+    },
+    {
+     "w": "perdu",
+     "start": 30.48,
+     "end": 30.64
+    },
+    {
+     "w": "ses",
+     "start": 30.76,
+     "end": 30.88
+    },
+    {
+     "w": "fiches.",
+     "start": 30.96,
+     "end": 31.76
+    },
+    {
+     "w": "«",
+     "start": 31.82,
+     "end": 31.88
+    },
+    {
+     "w": "Julien…",
+     "start": 31.94,
+     "end": 32.72
+    },
+    {
+     "w": "je",
+     "start": 32.76,
+     "end": 32.8
+    },
+    {
+     "w": "l'ai",
+     "start": 32.84,
+     "end": 33.04
+    },
+    {
+     "w": "connu…",
+     "start": 33.16,
+     "end": 34.08
+    },
+    {
+     "w": "»",
+     "start": 34.1,
+     "end": 34.12
+    },
+    {
+     "w": "Il",
+     "start": 34.14,
+     "end": 34.16
+    },
+    {
+     "w": "ajoute",
+     "start": 34.24,
+     "end": 34.48
+    },
+    {
+     "w": "le",
+     "start": 34.52,
+     "end": 34.56
+    },
+    {
+     "w": "mot",
+     "start": 34.64,
+     "end": 34.72
+    },
+    {
+     "w": "qui",
+     "start": 34.76,
+     "end": 34.8
+    },
+    {
+     "w": "lui",
+     "start": 34.88,
+     "end": 35.04
+    },
+    {
+     "w": "vient,",
+     "start": 35.12,
+     "end": 35.44
+    },
+    {
+     "w": "et",
+     "start": 35.48,
+     "end": 35.52
+    },
+    {
+     "w": "la",
+     "start": 35.56,
+     "end": 35.6
+    },
+    {
+     "w": "salle",
+     "start": 35.76,
+     "end": 36
+    },
+    {
+     "w": "découvre",
+     "start": 36.04,
+     "end": 36.48
+    },
+    {
+     "w": "la",
+     "start": 36.52,
+     "end": 36.56
+    },
+    {
+     "w": "fin",
+     "start": 36.72,
+     "end": 36.8
+    },
+    {
+     "w": "de",
+     "start": 36.84,
+     "end": 36.88
+    },
+    {
+     "w": "sa",
+     "start": 36.96,
+     "end": 37.04
+    },
+    {
+     "w": "phrase",
+     "start": 37.12,
+     "end": 37.36
+    },
+    {
+     "w": "en",
+     "start": 37.52,
+     "end": 37.68
+    },
+    {
+     "w": "même",
+     "start": 37.76,
+     "end": 37.84
+    },
+    {
+     "w": "temps",
+     "start": 37.92,
+     "end": 38.08
+    },
+    {
+     "w": "que",
+     "start": 38.12,
+     "end": 38.16
+    },
+    {
+     "w": "lui !",
+     "start": 38.24,
+     "end": 38.731
+    }
+   ]
+  },
+  {
+   "scene": "calcul",
+   "start": 38.789,
+   "end": 48.267,
+   "words": [
+    {
+     "w": "Le",
+     "start": 38.789,
+     "end": 38.8
+    },
+    {
+     "w": "modèle",
+     "start": 38.88,
+     "end": 39.12
+    },
+    {
+     "w": "fait",
+     "start": 39.2,
+     "end": 39.28
+    },
+    {
+     "w": "pareil,",
+     "start": 39.4,
+     "end": 39.84
+    },
+    {
+     "w": "avec",
+     "start": 39.96,
+     "end": 40.08
+    },
+    {
+     "w": "des",
+     "start": 40.16,
+     "end": 40.24
+    },
+    {
+     "w": "maths.",
+     "start": 40.36,
+     "end": 40.88
+    },
+    {
+     "w": "Après",
+     "start": 41.04,
+     "end": 41.28
+    },
+    {
+     "w": "«",
+     "start": 41.52,
+     "end": 41.547
+    },
+    {
+     "w": "Il",
+     "start": 41.573,
+     "end": 41.6
+    },
+    {
+     "w": "était",
+     "start": 41.68,
+     "end": 42
+    },
+    {
+     "w": "une",
+     "start": 42.12,
+     "end": 42.24
+    },
+    {
+     "w": "»,",
+     "start": 42.36,
+     "end": 42.48
+    },
+    {
+     "w": "il",
+     "start": 42.56,
+     "end": 42.64
+    },
+    {
+     "w": "donne",
+     "start": 42.68,
+     "end": 42.8
+    },
+    {
+     "w": "une",
+     "start": 42.88,
+     "end": 42.96
+    },
+    {
+     "w": "probabilité",
+     "start": 43.04,
+     "end": 43.6
+    },
+    {
+     "w": "à",
+     "start": 43.68,
+     "end": 43.76
+    },
+    {
+     "w": "chacun",
+     "start": 43.84,
+     "end": 44.16
+    },
+    {
+     "w": "des",
+     "start": 44.24,
+     "end": 44.4
+    },
+    {
+     "w": "200 000",
+     "start": 44.44,
+     "end": 44.88
+    },
+    {
+     "w": "tokens",
+     "start": 44.96,
+     "end": 45.28
+    },
+    {
+     "w": "qu'il",
+     "start": 45.333,
+     "end": 45.44
+    },
+    {
+     "w": "connaît…",
+     "start": 45.52,
+     "end": 46.16
+    },
+    {
+     "w": "et",
+     "start": 46.24,
+     "end": 46.32
+    },
+    {
+     "w": "«",
+     "start": 46.48,
+     "end": 46.56
+    },
+    {
+     "w": "fois",
+     "start": 46.64,
+     "end": 46.72
+    },
+    {
+     "w": "»",
+     "start": 46.88,
+     "end": 46.96
+    },
+    {
+     "w": "arrive",
+     "start": 47.04,
+     "end": 47.28
+    },
+    {
+     "w": "loin",
+     "start": 47.36,
+     "end": 47.52
+    },
+    {
+     "w": "devant !",
+     "start": 47.6,
+     "end": 48.267
+    }
+   ]
+  },
+  {
+   "scene": "boucle",
+   "start": 48.293,
+   "end": 54.8,
+   "words": [
+    {
+     "w": "Il",
+     "start": 48.293,
+     "end": 48.32
+    },
+    {
+     "w": "ajoute",
+     "start": 48.4,
+     "end": 48.72
+    },
+    {
+     "w": "«",
+     "start": 48.8,
+     "end": 48.88
+    },
+    {
+     "w": "fois",
+     "start": 48.96,
+     "end": 49.04
+    },
+    {
+     "w": "»,",
+     "start": 49.2,
+     "end": 49.36
+    },
+    {
+     "w": "regarde",
+     "start": 49.44,
+     "end": 49.68
+    },
+    {
+     "w": "à",
+     "start": 49.76,
+     "end": 49.8
+    },
+    {
+     "w": "nouveau",
+     "start": 49.84,
+     "end": 50
+    },
+    {
+     "w": "tout",
+     "start": 50.08,
+     "end": 50.16
+    },
+    {
+     "w": "le",
+     "start": 50.24,
+     "end": 50.32
+    },
+    {
+     "w": "texte,",
+     "start": 50.48,
+     "end": 50.8
+    },
+    {
+     "w": "et",
+     "start": 50.84,
+     "end": 50.88
+    },
+    {
+     "w": "choisit",
+     "start": 50.96,
+     "end": 51.2
+    },
+    {
+     "w": "le",
+     "start": 51.24,
+     "end": 51.28
+    },
+    {
+     "w": "suivant.",
+     "start": 51.32,
+     "end": 51.92
+    },
+    {
+     "w": "Puis",
+     "start": 51.96,
+     "end": 52.08
+    },
+    {
+     "w": "encore",
+     "start": 52.16,
+     "end": 52.4
+    },
+    {
+     "w": "un…",
+     "start": 52.48,
+     "end": 52.8
+    },
+    {
+     "w": "et",
+     "start": 52.84,
+     "end": 52.88
+    },
+    {
+     "w": "encore",
+     "start": 52.96,
+     "end": 53.2
+    },
+    {
+     "w": "un…",
+     "start": 53.28,
+     "end": 53.76
+    },
+    {
+     "w": "jusqu'au",
+     "start": 53.8,
+     "end": 54.12
+    },
+    {
+     "w": "point",
+     "start": 54.16,
+     "end": 54.32
+    },
+    {
+     "w": "final.",
+     "start": 54.4,
+     "end": 54.8
+    }
+   ]
+  },
+  {
+   "scene": "etdonc",
+   "start": 55.12,
+   "end": 61.6,
+   "words": [
+    {
+     "w": "C'est",
+     "start": 55.12,
+     "end": 55.28
+    },
+    {
+     "w": "pour",
+     "start": 55.36,
+     "end": 55.44
+    },
+    {
+     "w": "ça",
+     "start": 55.48,
+     "end": 55.52
+    },
+    {
+     "w": "que",
+     "start": 55.6,
+     "end": 55.68
+    },
+    {
+     "w": "les",
+     "start": 55.72,
+     "end": 55.76
+    },
+    {
+     "w": "réponses",
+     "start": 55.84,
+     "end": 56.08
+    },
+    {
+     "w": "s'affichent",
+     "start": 56.12,
+     "end": 56.56
+    },
+    {
+     "w": "mot",
+     "start": 56.64,
+     "end": 56.8
+    },
+    {
+     "w": "par",
+     "start": 56.88,
+     "end": 56.96
+    },
+    {
+     "w": "mot.",
+     "start": 57.04,
+     "end": 57.52
+    },
+    {
+     "w": "Et",
+     "start": 57.56,
+     "end": 57.6
+    },
+    {
+     "w": "qu'une",
+     "start": 57.68,
+     "end": 57.84
+    },
+    {
+     "w": "longue",
+     "start": 57.92,
+     "end": 58.08
+    },
+    {
+     "w": "réponse",
+     "start": 58.16,
+     "end": 58.48
+    },
+    {
+     "w": "coûte",
+     "start": 58.52,
+     "end": 58.72
+    },
+    {
+     "w": "plus",
+     "start": 58.8,
+     "end": 58.88
+    },
+    {
+     "w": "cher :",
+     "start": 59,
+     "end": 59.56
+    },
+    {
+     "w": "chaque",
+     "start": 59.6,
+     "end": 59.76
+    },
+    {
+     "w": "token,",
+     "start": 59.84,
+     "end": 60.4
+    },
+    {
+     "w": "c'est",
+     "start": 60.453,
+     "end": 60.56
+    },
+    {
+     "w": "un",
+     "start": 60.64,
+     "end": 60.72
+    },
+    {
+     "w": "calcul",
+     "start": 60.88,
+     "end": 61.04
+    },
+    {
+     "w": "de",
+     "start": 61.12,
+     "end": 61.2
+    },
+    {
+     "w": "plus.",
+     "start": 61.28,
+     "end": 61.6
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 62.133,
+   "end": 68.24,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 62.133,
+     "end": 62.24
+    },
+    {
+     "w": "la",
+     "start": 62.32,
+     "end": 62.4
+    },
+    {
+     "w": "prochaine",
+     "start": 62.48,
+     "end": 62.72
+    },
+    {
+     "w": "fois",
+     "start": 62.8,
+     "end": 62.88
+    },
+    {
+     "w": "que",
+     "start": 62.96,
+     "end": 63.04
+    },
+    {
+     "w": "ChatGPT",
+     "start": 63.12,
+     "end": 63.68
+    },
+    {
+     "w": "te",
+     "start": 63.76,
+     "end": 63.84
+    },
+    {
+     "w": "répond,",
+     "start": 63.92,
+     "end": 64.56
+    },
+    {
+     "w": "souviens-toi…",
+     "start": 64.64,
+     "end": 65.76
+    },
+    {
+     "w": "la",
+     "start": 65.827,
+     "end": 65.84
+    },
+    {
+     "w": "fin",
+     "start": 66,
+     "end": 66.08
+    },
+    {
+     "w": "de",
+     "start": 66.12,
+     "end": 66.16
+    },
+    {
+     "w": "sa",
+     "start": 66.24,
+     "end": 66.32
+    },
+    {
+     "w": "phrase",
+     "start": 66.4,
+     "end": 66.72
+    },
+    {
+     "w": "n'existe",
+     "start": 66.88,
+     "end": 67.36
+    },
+    {
+     "w": "pas",
+     "start": 67.44,
+     "end": 67.52
+    },
+    {
+     "w": "encore.",
+     "start": 67.64,
+     "end": 68.24
+    }
+   ]
+  }
+ ]
+}

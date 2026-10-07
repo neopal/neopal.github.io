@@ -28,6 +28,7 @@ for (const f of files) {
     comps[m[1]] = caps;
   }
   const sm = /const SCENES: Scenes = \[([\s\S]*?)\];/.exec(src);
+  if (!sm) continue; // short à voix off (PredictionVoix) : légendes calées sur la voix, hors de cette règle
   const scenes = [...sm[1].matchAll(/\[(\w+),\s*([^\]]+)\]/g)].map((x) => [x[1], ev(x[2])]);
   let t = TITLE, words = 0;
   console.log(`\n## ${f}`);

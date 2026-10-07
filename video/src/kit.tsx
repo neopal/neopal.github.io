@@ -130,7 +130,7 @@ const CapLayer: React.FC<{caps: Caps}> = ({caps}) => {
   );
 };
 
-const LastContext = createContext(false);
+export const LastContext = createContext(false);
 
 // Scène : entrée et sortie sèches sur le temps, légère poussée de caméra, trois zones fixes.
 // caps : les légendes ; children : le schéma (zone centrale) ; bottom : chiffres et libellés.

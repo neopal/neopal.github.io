@@ -199,3 +199,23 @@ Défauts des fiches les moins bien notées, à éviter : noms de modèles opaque
 - **Pas de gabarit répété** : chaque short a au moins une scène dont la mise en scène n'existe dans aucun autre (pas deux « Et donc » en checklist avec un œil) ; l'italique couleur d'accent sert au plus deux fois par short.
 - **Chute** : une seule légende, au moins 3 s de lecture, puis une image finale pleine (pas un cadre presque vide).
 - **Carte titre** : 45 images partout, mot géant de taille constante d'un short à l'autre.
+
+## Shorts à voix off (YouTube Shorts / TikTok, validé par PA le 2026-10-07)
+
+Un format à part, pour YouTube et TikTok seulement : il ne remplace pas les vidéos muettes des fiches du site. Référence : le short Prédiction du token suivant (`video/src/PredictionVoix.tsx`, texte dans `video/src/voix/prediction.script.json`). La recette pas à pas (outils, commandes, pièges, coûts) est dans `video/VOIX.md`.
+
+**Le ton : un vulgarisateur d'émission, enjoué.** On parle au spectateur (« tu »), on pose des questions, on marque des pauses avec des points de suspension. Les indications de jeu entre crochets (`[warmly]`, `[curious]`, `[excited]`, `[softly]`, `[pause]`) tiennent jusqu'à la suivante : on en change quand le ton change, pas à chaque phrase.
+
+**La première image est la question du terme**, dite par la voix et écrite en grand : « C'est quoi ? la prédiction du token suivant… ». Puis, dans l'ordre : une accroche qui retourne une idée reçue (« tu crois qu'il a déjà toute sa réponse en tête ? »), la notion de départ expliquée simplement (qu'est-ce qu'un token), le terme nommé en français puis en anglais, et seulement ensuite l'image (le témoin de mariage), le mécanisme, ce que ça change, la chute.
+
+**Le terme anglais se prononce en anglais** : on l'écrit en API entre barres obliques dans le texte de la voix (`/nɛkst ˈtoʊkən pɹɪˈdɪkʃən/`) et sa forme écrite dans le champ `display` du script, pour les sous-titres.
+
+**Durée : 60 à 70 s**, environ 170 mots dits. Au-delà, on coupe le texte plutôt que d'accélérer la voix.
+
+**Règle « lisible dans le métro »** : un humain normal, téléphone à la main, debout dans une rame qui bouge, lit tout ce qui est à l'écran sans plisser les yeux.
+- Aucun texte sous 48 px sur un cadre de 1080 px (libellés compris) ; sous-titres à 84 px, en Newsreader 600.
+- Un sous-titre tient en 2 lignes (32 caractères au plus) et reste au moins 1 s à l'écran ; le mot dit s'allume en couleur d'accent.
+- Ce qui est déjà écrit en grand à l'écran n'est pas sous-titré une deuxième fois : la question du hook (`nocaption`), les citations montrées par le schéma (`quoted`).
+- Un seul élément central par écran ; un libellé de schéma fait 3 mots au plus. Pas d'élément qui reste à l'écran sans raison (la bulle « Raconte-moi une histoire » de la v2 a sauté pour ça).
+- Libellés secondaires en `#cfcfcf` au plus sombre, jamais de gris foncé sur noir.
+- Contrôle avant rendu : `cd video && npm run check:voix -- <id> <Composition>`.

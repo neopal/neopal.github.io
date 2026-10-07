@@ -18,6 +18,7 @@ import {Mythe95, MYTHE95_DURATION} from './Mythe95';
 import {Hammer, HAMMER_DURATION} from './Hammer';
 import {Nondeterminisme, NONDETERMINISME_DURATION} from './Nondeterminisme';
 import {OpenWeights, OPENWEIGHTS_DURATION} from './OpenWeights';
+import {PredictionVoix, PREDICTIONVOIX_DURATION} from './PredictionVoix';
 
 // Les shorts dans une seule entrée (stills et rendus partagent le même bundle).
 const C = {fps: 30, width: 1080, height: 1920} as const;
@@ -42,5 +43,6 @@ export const Root: React.FC = () => (
     <Composition id="Hammer" component={Hammer} durationInFrames={HAMMER_DURATION} {...C} />
     <Composition id="Nondeterminisme" component={Nondeterminisme} durationInFrames={NONDETERMINISME_DURATION} {...C} />
     <Composition id="OpenWeights" component={OpenWeights} durationInFrames={OPENWEIGHTS_DURATION} {...C} />
+    <Composition id="PredictionVoix" component={PredictionVoix} durationInFrames={PREDICTIONVOIX_DURATION} {...C} />
   </>
 );

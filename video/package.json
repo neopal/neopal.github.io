@@ -5,7 +5,9 @@
   "scripts": {
     "studio": "remotion studio src/index.ts",
     "render": "remotion render src/index.ts",
-    "check": "node check-captions.mjs"
+    "check": "node check-captions.mjs",
+    "check:voix": "node tools/check-voix.mjs",
+    "align:voix": "node tools/align-from-words.mjs"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.532",

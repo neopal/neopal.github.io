@@ -1,0 +1,63 @@
+{
+  "id": "prediction",
+  "voice": {
+    "voice_name": "Adrien Clairon - Podcast Narrator (choisie par PA, prise générée dans le flow ElevenLabs)",
+    "model_id": "eleven_v4",
+    "flow": "https://elevenlabs.io/app/flows/sKtuiXGtkmnZwRTiRFmc"
+  },
+  "music": {
+    "prompt": "Instrumental only, no vocals. Playful bright electronic bed for a French science popularization short, 120 BPM, bouncy plucked synth, soft kick and claps, light marimba accents, curious and upbeat, no drops, sparse mid-range to leave room for a voice-over, clean ending.",
+    "model_id": "eleven_music_v1"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi ? la prédiction du token suivant..."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Quand ChatGPT te répond… tu crois qu'il a déjà toute sa réponse en tête ? [excited] En réalité, il ne sait pas encore comment sa phrase va finir !"
+    },
+    {
+      "scene": "token",
+      "say": "[warmly] Pour comprendre, il faut parler des tokens. Un modèle de langage découpe le texte en petits morceaux, un mot ou un bout de mot. Même « anticonstitutionnellement » devient… cinq tokens !"
+    },
+    {
+      "scene": "nom",
+      "say": "[excited] Et son seul travail, c'est de deviner le token suivant. C'est ça, la prédiction du token suivant, ou en anglais, /nɛkst ˈtoʊkən pɹɪˈdɪkʃən/."
+    },
+    {
+      "scene": "temoin",
+      "say": "[mischievously] Imagine un témoin de mariage qui a perdu ses fiches. « Julien… je l'ai connu… » Il ajoute le mot qui lui vient, et la salle découvre la fin de sa phrase en même temps que lui !"
+    },
+    {
+      "scene": "calcul",
+      "say": "[curious] Le modèle fait pareil, avec des maths. Après « Il était une », il donne une probabilité à chacun des 200 000 tokens qu'il connaît… [excited] et « fois » arrive loin devant !"
+    },
+    {
+      "scene": "boucle",
+      "say": "Il ajoute « fois », regarde à nouveau tout le texte, et choisit le suivant. Puis encore un… et encore un… jusqu'au point final."
+    },
+    {
+      "scene": "etdonc",
+      "say": "C'est pour ça que les réponses s'affichent mot par mot. Et qu'une longue réponse coûte plus cher : chaque token, c'est un calcul de plus."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors la prochaine fois que ChatGPT te répond, souviens-toi… [pause] la fin de sa phrase n'existe pas encore."
+    }
+  ],
+  "quoted": [
+    "Julienjel'aiconnu",
+    "Ilétaitune",
+    "anticonstitutionnellement"
+  ],
+  "display": {
+    "/nɛkst": "next",
+    "ˈtoʊkən": "token",
+    "pɹɪˈdɪkʃən/": "prediction"
+  },
+  "nocaption": [
+    "hook"
+  ]
+}
