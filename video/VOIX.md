@@ -14,7 +14,23 @@ Référence validée : Prédiction du token suivant (2026-10-07), rendu dans `vi
 | `src/voix/<id>.words.json` | La transcription mot à mot de la voix (Scribe), source du calage |
 | `src/voix/<id>.align.json` | Le calage généré : début et fin de chaque scène et de chaque mot |
 | `src/<Composition>.tsx` | Les scènes, une par segment, synchronisées sur les mots (`at('scene', 'mot')`) |
+| `src/voix/VoixShort.tsx` | Le moteur commun : calage, sous-titres, hook titre, musique, montage |
+| `src/voix/_modele.script.json` | Le modèle de texte d'un nouveau short |
 | `src/voix/chunks.mjs` | Le découpage des sous-titres, partagé avec le contrôle |
+
+## Démarrer un nouveau short
+
+1. Copier `src/voix/_modele.script.json` en `src/voix/<id>.script.json` et écrire le texte (une scène par segment, noms de scènes libres).
+2. Copier `src/PredictionVoix.tsx` en `src/<Nom>Voix.tsx` : garder l'en-tête (`makeVoix`, `V.TitleHook`, `V.Montage`), remplacer les scènes. Le moteur commun (calage, sous-titres, hook, musique, montage) est dans `src/voix/VoixShort.tsx` et ne se recopie pas.
+3. Déclarer la composition dans `src/Root.tsx`.
+4. Musique : pour économiser 900 crédits, réutiliser la piste de Prédiction avec `makeVoix(ALIGN, SCRIPT, 'voix/prediction-music.mp3')` ; si elle est plus courte que la voix, elle boucle.
+5. Suivre le déroulé ci-dessous à partir de l'étape 2.
+
+Budget : environ 1 300 crédits par short (voix seule, transcription gratuite), plus les prises que PA refait lui-même. Avec la musique réutilisée, 10 000 crédits font environ 7 shorts.
+
+## File d'attente
+
+Termes qui ont déjà une fiche et un short muet (donc des scènes à reprendre dans `src/<Terme>.tsx`), du plus grand public au plus technique : Hallucination, Température, Fenêtre de contexte, RAG, Agent, Paramètres, Token, Embedding, MCP, Open weights, Context rot, Sans état, Non-déterminisme, Harness, Benchmaxxing. Publiés : Prédiction du token suivant (2026-10-07). Playlist YouTube : « Les mots de l'IA ».
 
 ## Le déroulé
 

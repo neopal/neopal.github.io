@@ -1,88 +1,21 @@
-// Short Prédiction du token suivant, version voix off (test YouTube Shorts) : voix ElevenLabs façon vulgarisateur,
-// scènes et sous-titres calés mot à mot sur src/voix/prediction.align.json (tools/align-from-words.mjs).
-// Règle « lisible dans le métro » (univers.md) : aucun texte sous 48 px, sous-titres de 2 lignes au plus restant
-// au moins 1 s, un seul élément central par écran. Contrôle : node tools/check-voix.mjs prediction PredictionVoix
+// Short Prédiction du token suivant (YouTube / TikTok), voix off ElevenLabs façon vulgarisateur, publié le 2026-10-07.
+// Le moteur (calage sur la voix, sous-titres, hook, montage) est dans voix/VoixShort.tsx ; ce fichier ne contient que les scènes.
 import React from 'react';
-import {AbsoluteFill, Audio, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
-import {loadFont as loadSerif} from '@remotion/google-fonts/Newsreader';
-import {AccentProvider, Big, Chrome, GREY, LastContext, Mono, Oscillo, PAD, Pop, Say, Scene, W, ZONE, clamp, serif, useAccent, withAlpha} from './kit';
+import {interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {Big, GREY, Mono, Pop, Scene, W, clamp, useAccent, withAlpha} from './kit';
 import {Chip, GAP, STREAM, chipW} from './Prediction';
+import {LABEL, blink, makeVoix} from './voix/VoixShort';
 import ALIGN from './voix/prediction.align.json';
 import SCRIPT from './voix/prediction.script.json';
-import {makeChunks} from './voix/chunks.mjs';
-
-loadSerif('normal', {weights: ['600'], subsets: ['latin', 'latin-ext']});
 
 const FOND = '#7CFFB2';
-const FPS = 30;
-const TAIL = 2; // secondes d'image finale après le dernier mot
-const LABEL = '#cfcfcf'; // libellés secondaires : jamais plus sombre, pour rester lisibles sur un téléphone
-
-type Word = {w: string; start: number; end: number};
-type Seg = {scene: string; start: number; end: number; words: Word[]};
-const SEGS = ALIGN.segments as Seg[];
-
-// Bornes des scènes en images : chaque scène commence avec son premier mot (la première à 0).
-const FROM = SEGS.map((s, i) => (i === 0 ? 0 : Math.round(s.start * FPS)));
-export const PREDICTIONVOIX_DURATION = Math.round((ALIGN.duration + TAIL) * FPS);
-const LEN = FROM.map((f, i) => (i + 1 < FROM.length ? FROM[i + 1] : PREDICTIONVOIX_DURATION) - f);
-
-// Image (locale à la scène) où la voix dit le n-ième mot qui contient `m`.
-const at = (scene: string, m: string, nth = 0) => {
-  const i = SEGS.findIndex((s) => s.scene === scene);
-  const hits = SEGS[i].words.filter((w) => w.w.toLowerCase().includes(m.toLowerCase()));
-  const w = hits[Math.min(nth, hits.length - 1)];
-  if (!w) throw new Error(`mot « ${m} » absent de la scène ${scene}`);
-  return Math.round(w.start * FPS) - FROM[i];
-};
-
-const blink = (frame: number) => (frame % 20 < 12 ? 1 : 0.35);
-
-// ---------- Sous-titres : la phrase dite, par groupes de 2 lignes au plus, le mot en cours en couleur ----------
-
-type Chunk = {words: Word[]; from: number; to: number; quote: boolean};
-const CHUNKS = makeChunks(SEGS, ALIGN.duration + TAIL, SCRIPT.quoted, SCRIPT.nocaption) as Chunk[];
-
-const Captions: React.FC = () => {
-  const frame = useCurrentFrame();
-  const {fps} = useVideoConfig();
-  const accent = useAccent();
-  const c = CHUNKS.find((x) => frame >= x.from && frame < x.to);
-  if (!c || c.quote) return null;
-  const p = spring({frame: frame - c.from, fps, config: {damping: 16, stiffness: 260, mass: 0.5}});
-  const t = frame / FPS;
-  const cur = c.words.reduce((k, w, i) => (t >= w.start - 0.04 ? i : k), -1);
-  return (
-    <div style={{position: 'absolute', left: PAD, right: PAD, bottom: 1920 - ZONE.center.top + 10, transform: `translateY(${(1 - p) * 30}px)`, opacity: p}}>
-      <div style={{fontFamily: serif, fontWeight: 600, fontSize: 84, lineHeight: 1.1, letterSpacing: '-0.01em'}}>
-        {c.words.map((w, k) => (
-          <span key={k} style={{color: k === cur ? accent : k < cur ? '#fff' : '#a8a8a8'}}>
-            {w.w}
-            {k < c.words.length - 1 ? ' ' : ''}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-};
+const V = makeVoix(ALIGN, SCRIPT);
+const {at} = V;
+export const PREDICTIONVOIX_DURATION = V.duration;
 
 // ---------- 0. Hook : la question du terme, en grand, dès la première image ----------
 
-const Hook: React.FC = () => {
-  const accent = useAccent();
-  const hookWords = SEGS[0].words;
-  const q = hookWords.length ? at('hook', 'prédiction') : 5;
-  return (
-    <Scene>
-      <div style={{display: 'flex', flexDirection: 'column', gap: 8}}>
-        <Pop at={0}><Say size={100}>C'est quoi ?</Say></Pop>
-        <Pop at={q}><Big size={124} color={accent}>la prédiction</Big></Pop>
-        <Pop at={q + 4}><Big size={124} color={accent}>du token</Big></Pop>
-        <Pop at={q + 8}><Big size={124} color={accent}>suivant</Big></Pop>
-      </div>
-    </Scene>
-  );
-};
+const Hook: React.FC = () => <V.TitleHook lead="C'est quoi ?" lines={['la prédiction', 'du token', 'suivant']} cue="prédiction" />;
 
 // ---------- 1. Intro : la réponse de ChatGPT commence, la fin n'existe pas encore ----------
 
@@ -517,28 +450,6 @@ const Chute: React.FC = () => {
 
 // ---------- Montage ----------
 
-const COMPS: Record<string, React.FC> = {hook: Hook, intro: Intro, token: Token, nom: Nom, temoin: Temoin, calcul: Calcul, boucle: Boucle, etdonc: EtDonc, chute: Chute};
+const SCENES: Record<string, React.FC> = {hook: Hook, intro: Intro, token: Token, nom: Nom, temoin: Temoin, calcul: Calcul, boucle: Boucle, etdonc: EtDonc, chute: Chute};
 
-export const PredictionVoix: React.FC = () => {
-  const total = PREDICTIONVOIX_DURATION;
-  const fadeOut = (f: number) => interpolate(f, [total - 30, total], [1, 0], clamp);
-  return (
-    <AccentProvider accent={FOND}>
-      <AbsoluteFill style={{background: '#000'}}>
-        {ALIGN.audio ? <Audio src={staticFile('voix/prediction.mp3')} /> : null}
-        {/* Musique sous la voix : la piste ElevenLabs si elle existe, sinon le beat commun des shorts. */}
-        <Audio loop src={staticFile(ALIGN.music ? 'voix/prediction-music.mp3' : 'beat.mp3')} volume={(f) => (ALIGN.audio ? 0.16 : 0.6) * fadeOut(f)} />
-        <Oscillo />
-        {SEGS.map((s, i) => (
-          <Sequence key={s.scene} from={FROM[i]} durationInFrames={LEN[i]}>
-            <LastContext.Provider value={i === SEGS.length - 1}>
-              {React.createElement(COMPS[s.scene])}
-            </LastContext.Provider>
-          </Sequence>
-        ))}
-        <Captions />
-        <Chrome />
-      </AbsoluteFill>
-    </AccentProvider>
-  );
-};
+export const PredictionVoix: React.FC = () => <V.Montage scenes={SCENES} accent={FOND} />;

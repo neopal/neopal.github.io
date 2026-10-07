@@ -1,0 +1,21 @@
+{
+  "id": "<id>",
+  "voice": {
+    "voice_name": "Adrien Clairon - Podcast Narrator",
+    "model_id": "eleven_v4",
+    "flow": "https://elevenlabs.io/app/flows/sKtuiXGtkmnZwRTiRFmc"
+  },
+  "segments": [
+    {"scene": "hook", "say": "[warmly] C'est quoi ? <le terme>..."},
+    {"scene": "intro", "say": "[curious] <l'idée reçue retournée en une question au spectateur> [excited] <ce qui se passe en réalité>"},
+    {"scene": "base", "say": "[warmly] Pour comprendre, il faut parler de <notion de départ>. <explication en une ou deux phrases, un exemple concret>"},
+    {"scene": "nom", "say": "[excited] <ce que fait le mécanisme>. C'est ça, <le terme>, ou en anglais, /<API du terme anglais>/."},
+    {"scene": "image", "say": "[mischievously] Imagine <la scène de la vie courante de la fiche>."},
+    {"scene": "mecanisme", "say": "[curious] <le mécanisme montré tel quel, avec les vrais chiffres>"},
+    {"scene": "etdonc", "say": "C'est pour ça que <conséquence 1>. Et <conséquence 2>."},
+    {"scene": "chute", "say": "[softly] Alors la prochaine fois que <situation>, souviens-toi… [pause] <la phrase qui reste>."}
+  ],
+  "quoted": [],
+  "display": {},
+  "nocaption": ["hook"]
+}
