@@ -29,6 +29,10 @@ Référence validée : Prédiction du token suivant (2026-10-07), rendu dans `vi
 9. **Rendre** : `npx remotion render src/index.ts <Composition> out/raw.mp4 --concurrency=12` (environ 3 min pour 70 s ; sans `--concurrency`, plus de 10 min).
 10. **Encoder pour YouTube / TikTok** :
     `ffmpeg -i out/raw.mp4 -c:v libx264 -crf 23 -pix_fmt yuv420p -af loudnorm=I=-14:TP=-1:LRA=11 -c:a aac -b:a 192k -ar 48000 -movflags +faststart out/<id>-short.mp4`
+11. **Générer la couverture** : la première image ne montre que « C'est quoi ? », car le reste du titre arrive avec la voix ; YouTube et TikTok en feraient une miniature incomplète. On rend une image où la question complète est à l'écran, à la fin du hook (vers 2,7 s ; vérifier que le dernier mot du titre est posé) :
+    `npx remotion still src/index.ts <Composition> out/<id>-short-cover.png --frame=80` puis `ffmpeg -i out/<id>-short-cover.png -q:v 2 out/<id>-short-cover.jpg`.
+    YouTube : *Miniature > Ajouter* à la mise en ligne. TikTok : importer l'image si proposé, sinon choisir une image de la vidéo pendant le hook.
+12. **Titre et description** : un titre court (moins de 60 caractères) qui crée la curiosité, le terme technique dans la description pour la recherche, le lien vers la fiche du lexique, trois hashtags précis. Passe anti-slop (VOICE.md de PA) : pas de tiret cadratin, pas de « Découvrez », pas d'emoji décoratif, pas de deux-points de révélation.
 
 ## Pièges et coûts (appris sur Prédiction)
 
