@@ -57,7 +57,7 @@ export function shortsPage(shorts, byId, ctx) {
     },
   };
   const card = (v) => `    <article class="short">
-      <button class="play" type="button" data-yt="${esc(v.youtube)}" aria-label="Lire le short : ${esc(v.title)}">
+      <button class="play" type="button" data-yt="${esc(v.youtube)}" data-term="${esc(v.term)}" aria-label="Lire le short : ${esc(v.title)}">
         <img src="${esc(v.term)}.jpg" width="540" height="960" alt="" loading="lazy" decoding="async">
         <span class="tri" aria-hidden="true"></span>
       </button>
@@ -71,6 +71,7 @@ ${ctx.genMark}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shorts | Lexique IA</title>
+<script src="/assets/analytics.js"></script>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${url}">
 <meta name="author" content="Pierre-Adrien Lair">
@@ -144,6 +145,7 @@ document.addEventListener('click', function (e) {
   i.allowFullscreen = true;
   f.appendChild(i);
   b.replaceWith(f);
+  if (window.track) window.track('short_played', {term_id: b.dataset.term, youtube_id: b.dataset.yt});
 });
 </script>
 </body>

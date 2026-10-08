@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shorts | Lexique IA</title>
+<script src="/assets/analytics.js"></script>
 <meta name="description" content="Les mots de l&#39;IA en vidéo : un terme du lexique expliqué en une minute, en short YouTube.">
 <link rel="canonical" href="https://neopal.github.io/lexique/shorts/">
 <meta name="author" content="Pierre-Adrien Lair">
@@ -63,7 +64,7 @@ h1{font-weight:800;font-variation-settings:'opsz' 72;font-size:44px;line-height:
   <p class="lead">Un terme du lexique expliqué en une minute, publié sur YouTube.</p>
   <div class="grid">
     <article class="short">
-      <button class="play" type="button" data-yt="nZbx43xorck" aria-label="Lire le short : Pourquoi ChatGPT invente des sources">
+      <button class="play" type="button" data-yt="nZbx43xorck" data-term="hallucination" aria-label="Lire le short : Pourquoi ChatGPT invente des sources">
         <img src="hallucination.jpg" width="540" height="960" alt="" loading="lazy" decoding="async">
         <span class="tri" aria-hidden="true"></span>
       </button>
@@ -71,7 +72,7 @@ h1{font-weight:800;font-variation-settings:'opsz' 72;font-size:44px;line-height:
       <p class="meta">Épisode 2 · <a href="/lexique/hallucination/">la fiche Hallucination</a> · <a href="https://www.youtube.com/shorts/nZbx43xorck">YouTube</a></p>
     </article>
     <article class="short">
-      <button class="play" type="button" data-yt="comEMEJk8RI" aria-label="Lire le short : ChatGPT ne sait pas comment sa phrase va finir">
+      <button class="play" type="button" data-yt="comEMEJk8RI" data-term="prediction-du-mot-suivant" aria-label="Lire le short : ChatGPT ne sait pas comment sa phrase va finir">
         <img src="prediction-du-mot-suivant.jpg" width="540" height="960" alt="" loading="lazy" decoding="async">
         <span class="tri" aria-hidden="true"></span>
       </button>
@@ -94,6 +95,7 @@ document.addEventListener('click', function (e) {
   i.allowFullscreen = true;
   f.appendChild(i);
   b.replaceWith(f);
+  if (window.track) window.track('short_played', {term_id: b.dataset.term, youtube_id: b.dataset.yt});
 });
 </script>
 </body>
