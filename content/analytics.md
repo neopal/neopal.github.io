@@ -12,6 +12,9 @@ Toute nouvelle page HTML publique doit l'inclure : `<script src="/assets/analyti
 - **Peu d'événements maison, nommés `objet_verbe` au passé** (`term_opened`, `cv_pdf_exported`),
   en snake_case, avec des propriétés stables en snake_case. Un événement par intention, la variante
   va en propriété (`lang: 'en'`, pas `pdf_export_en`).
+- **Tout le monde passe, bots compris** (`opt_out_useragent_filter: true`). PostHog marque les bots
+  `$browser_type = 'bot'` : filtre `$browser_type != bot` pour l'audience humaine, `= bot` pour voir qui
+  passe (seuls les robots qui exécutent le JS apparaissent : Googlebot, crawlers IA avec navigateur...).
 - **Pas de profil personne** (`person_profiles: 'identified_only'`, aucun `identify`) : visiteurs anonymes,
   événements moins chers.
 - **Les appels passent par `track(event, props)`**, qui ne casse jamais la page si PostHog est bloqué.
@@ -24,11 +27,6 @@ Toute nouvelle page HTML publique doit l'inclure : `<script src="/assets/analyti
 | `disable_capture_url_hashes` | Les ancres sont retirées des URL envoyées : `/#experience` remonte `/`. C'était la cause des chemins bizarres sur la home (liens du menu, flèche de scroll). |
 | `capture_pageleave` | `$pageleave` avec `$prev_pageview_max_scroll_percentage` : la profondeur de scroll, sans code maison (l'ancien `scroll_depth` est supprimé). |
 | `internal_or_test_user_hostname` | Le trafic `localhost` est marqué comme test. |
-
-## Exclure son propre trafic
-
-Ouvrir une fois `https://neopal.github.io/?notrack` sur chaque navigateur perso : PostHog mémorise
-l'opt-out. `?track` le réactive.
 
 ## Événements maison
 
@@ -61,18 +59,9 @@ l'opt-out. `?track` le réactive.
 
 Le reste des clics (liens LinkedIn, mail, boutons) passe par l'autocapture.
 
-## Anciens noms (avant octobre 2026)
-
-| Avant | Maintenant |
-|---|---|
-| `pdf_export`, `pdf_export_en` | `cv_pdf_exported` + `lang` |
-| `chat_inquiry` | `chat_message_sent` |
-| `chat_response` | `$ai_generation` |
-| `scroll_depth` | `$pageleave` → `$prev_pageview_max_scroll_percentage` |
-
 ## Tableau de bord conseillé
 
-1. **Web analytics** (natif) : visiteurs, sources, pages, en filtrant le trafic de test.
+1. **Web analytics** (natif) : visiteurs, sources, pages ; un filtre `$browser_type` pour séparer humains et bots.
 2. **Lexique** : top `$pageview` sur `/lexique/*` ; `term_opened` ventilé par `via` (comment on navigue) ;
    `lexique_searched` avec `results_count = 0` (les fiches à écrire) ; `term_soon_clicked` par `term_id`
    (la demande sur les fiches à venir).
@@ -81,9 +70,5 @@ Le reste des clics (liens LinkedIn, mail, boutons) passe par l'autocapture.
 
 ## Réglages côté interface PostHog
 
-- Project settings → *Filter out internal and test users* : activé.
 - Autocapture et heatmaps : activés ; session replay au goût (masquage des saisies par défaut).
-- IP : *Discard client IP data* si la géoloc pays ne sert pas.
-- À décider : la mesure se fait avec cookie et sans bandeau de consentement. Pour être carré côté CNIL,
-  passer en `cookieless_mode: 'always'` (activer d'abord *Cookieless server hash mode* dans le projet,
-  sinon les événements sont perdus) ; on perd alors le suivi des visiteurs d'un jour à l'autre.
+- Laisser *Filter out internal and test users* désactivé : tout le trafic compte.
