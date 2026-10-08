@@ -1,0 +1,1019 @@
+{
+ "id": "hallucination",
+ "audio": true,
+ "music": false,
+ "duration": 60.24,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.187,
+   "end": 1.92,
+   "words": [
+    {
+     "w": "C'est",
+     "start": 0.187,
+     "end": 0.24
+    },
+    {
+     "w": "quoi ?",
+     "start": 0.36,
+     "end": 0.853
+    },
+    {
+     "w": "une",
+     "start": 0.907,
+     "end": 0.96
+    },
+    {
+     "w": "hallucination...",
+     "start": 1.04,
+     "end": 1.92
+    }
+   ]
+  },
+  {
+   "scene": "intro",
+   "start": 2.16,
+   "end": 8.01,
+   "words": [
+    {
+     "w": "Quand",
+     "start": 2.16,
+     "end": 2.24
+    },
+    {
+     "w": "ChatGPT",
+     "start": 2.32,
+     "end": 2.88
+    },
+    {
+     "w": "t'invente",
+     "start": 2.92,
+     "end": 3.24
+    },
+    {
+     "w": "une",
+     "start": 3.28,
+     "end": 3.44
+    },
+    {
+     "w": "source,",
+     "start": 3.6,
+     "end": 4
+    },
+    {
+     "w": "tu",
+     "start": 4.04,
+     "end": 4.08
+    },
+    {
+     "w": "crois",
+     "start": 4.16,
+     "end": 4.28
+    },
+    {
+     "w": "qu'il",
+     "start": 4.32,
+     "end": 4.48
+    },
+    {
+     "w": "te",
+     "start": 4.52,
+     "end": 4.56
+    },
+    {
+     "w": "ment ?",
+     "start": 4.64,
+     "end": 5.131
+    },
+    {
+     "w": "En",
+     "start": 5.2,
+     "end": 5.28
+    },
+    {
+     "w": "réalité,",
+     "start": 5.36,
+     "end": 5.84
+    },
+    {
+     "w": "il",
+     "start": 5.92,
+     "end": 6
+    },
+    {
+     "w": "ne",
+     "start": 6.08,
+     "end": 6.16
+    },
+    {
+     "w": "sait",
+     "start": 6.24,
+     "end": 6.48
+    },
+    {
+     "w": "même",
+     "start": 6.56,
+     "end": 6.8
+    },
+    {
+     "w": "pas",
+     "start": 6.88,
+     "end": 6.96
+    },
+    {
+     "w": "qu'il",
+     "start": 7.013,
+     "end": 7.12
+    },
+    {
+     "w": "se",
+     "start": 7.2,
+     "end": 7.28
+    },
+    {
+     "w": "trompe !",
+     "start": 7.32,
+     "end": 8.01
+    }
+   ]
+  },
+  {
+   "scene": "base",
+   "start": 8.07,
+   "end": 15.2,
+   "words": [
+    {
+     "w": "Un",
+     "start": 8.07,
+     "end": 8.08
+    },
+    {
+     "w": "modèle",
+     "start": 8.16,
+     "end": 8.4
+    },
+    {
+     "w": "de",
+     "start": 8.44,
+     "end": 8.48
+    },
+    {
+     "w": "langage",
+     "start": 8.6,
+     "end": 8.88
+    },
+    {
+     "w": "ne",
+     "start": 8.96,
+     "end": 9
+    },
+    {
+     "w": "va",
+     "start": 9.04,
+     "end": 9.2
+    },
+    {
+     "w": "pas",
+     "start": 9.28,
+     "end": 9.36
+    },
+    {
+     "w": "chercher",
+     "start": 9.4,
+     "end": 9.6
+    },
+    {
+     "w": "la",
+     "start": 9.64,
+     "end": 9.68
+    },
+    {
+     "w": "réponse",
+     "start": 9.76,
+     "end": 10.08
+    },
+    {
+     "w": "dans",
+     "start": 10.133,
+     "end": 10.24
+    },
+    {
+     "w": "une",
+     "start": 10.32,
+     "end": 10.4
+    },
+    {
+     "w": "base",
+     "start": 10.48,
+     "end": 10.56
+    },
+    {
+     "w": "de",
+     "start": 10.6,
+     "end": 10.64
+    },
+    {
+     "w": "données.",
+     "start": 10.72,
+     "end": 11.413
+    },
+    {
+     "w": "Il",
+     "start": 11.467,
+     "end": 11.52
+    },
+    {
+     "w": "écrit",
+     "start": 11.6,
+     "end": 11.76
+    },
+    {
+     "w": "le",
+     "start": 11.84,
+     "end": 11.92
+    },
+    {
+     "w": "mot",
+     "start": 12,
+     "end": 12.08
+    },
+    {
+     "w": "le",
+     "start": 12.16,
+     "end": 12.24
+    },
+    {
+     "w": "plus",
+     "start": 12.32,
+     "end": 12.4
+    },
+    {
+     "w": "plausible,",
+     "start": 12.48,
+     "end": 13.147
+    },
+    {
+     "w": "puis",
+     "start": 13.173,
+     "end": 13.28
+    },
+    {
+     "w": "le",
+     "start": 13.36,
+     "end": 13.44
+    },
+    {
+     "w": "suivant,",
+     "start": 13.48,
+     "end": 14.107
+    },
+    {
+     "w": "jusqu'au",
+     "start": 14.133,
+     "end": 14.4
+    },
+    {
+     "w": "point",
+     "start": 14.48,
+     "end": 14.56
+    },
+    {
+     "w": "final.",
+     "start": 14.64,
+     "end": 15.2
+    }
+   ]
+  },
+  {
+   "scene": "nom",
+   "start": 15.269,
+   "end": 23.44,
+   "words": [
+    {
+     "w": "Sauf",
+     "start": 15.269,
+     "end": 15.44
+    },
+    {
+     "w": "que",
+     "start": 15.52,
+     "end": 15.6
+    },
+    {
+     "w": "plausible,",
+     "start": 15.64,
+     "end": 16.2
+    },
+    {
+     "w": "ça",
+     "start": 16.24,
+     "end": 16.32
+    },
+    {
+     "w": "ne",
+     "start": 16.36,
+     "end": 16.4
+    },
+    {
+     "w": "veut",
+     "start": 16.44,
+     "end": 16.56
+    },
+    {
+     "w": "pas",
+     "start": 16.6,
+     "end": 16.64
+    },
+    {
+     "w": "dire",
+     "start": 16.72,
+     "end": 16.88
+    },
+    {
+     "w": "vrai.",
+     "start": 16.92,
+     "end": 17.56
+    },
+    {
+     "w": "Quand",
+     "start": 17.6,
+     "end": 17.68
+    },
+    {
+     "w": "il",
+     "start": 17.76,
+     "end": 17.84
+    },
+    {
+     "w": "affirme",
+     "start": 17.96,
+     "end": 18.24
+    },
+    {
+     "w": "avec",
+     "start": 18.36,
+     "end": 18.48
+    },
+    {
+     "w": "aplomb",
+     "start": 18.56,
+     "end": 18.88
+    },
+    {
+     "w": "quelque",
+     "start": 19,
+     "end": 19.16
+    },
+    {
+     "w": "chose",
+     "start": 19.2,
+     "end": 19.44
+    },
+    {
+     "w": "de",
+     "start": 19.52,
+     "end": 19.6
+    },
+    {
+     "w": "faux,",
+     "start": 19.68,
+     "end": 20.12
+    },
+    {
+     "w": "c'est",
+     "start": 20.16,
+     "end": 20.24
+    },
+    {
+     "w": "une",
+     "start": 20.32,
+     "end": 20.4
+    },
+    {
+     "w": "hallucination,",
+     "start": 20.48,
+     "end": 21.387
+    },
+    {
+     "w": "ou",
+     "start": 21.413,
+     "end": 21.44
+    },
+    {
+     "w": "en",
+     "start": 21.48,
+     "end": 21.52
+    },
+    {
+     "w": "anglais,",
+     "start": 21.6,
+     "end": 22.24
+    },
+    {
+     "w": "hallucination.",
+     "start": 22.28,
+     "end": 23.44
+    }
+   ]
+  },
+  {
+   "scene": "gilbert",
+   "start": 23.52,
+   "end": 32.4,
+   "words": [
+    {
+     "w": "Imagine",
+     "start": 23.52,
+     "end": 24
+    },
+    {
+     "w": "Tonton",
+     "start": 24.04,
+     "end": 24.28
+    },
+    {
+     "w": "Gilbert.",
+     "start": 24.32,
+     "end": 25.2
+    },
+    {
+     "w": "La",
+     "start": 25.24,
+     "end": 25.28
+    },
+    {
+     "w": "date",
+     "start": 25.36,
+     "end": 25.44
+    },
+    {
+     "w": "du",
+     "start": 25.52,
+     "end": 25.6
+    },
+    {
+     "w": "mariage",
+     "start": 25.653,
+     "end": 25.84
+    },
+    {
+     "w": "de",
+     "start": 25.92,
+     "end": 25.96
+    },
+    {
+     "w": "la",
+     "start": 26,
+     "end": 26.08
+    },
+    {
+     "w": "cousine ?",
+     "start": 26.133,
+     "end": 26.82
+    },
+    {
+     "w": "«",
+     "start": 26.84,
+     "end": 26.86
+    },
+    {
+     "w": "Le",
+     "start": 26.88,
+     "end": 27.04
+    },
+    {
+     "w": "14",
+     "start": 27.08,
+     "end": 27.36
+    },
+    {
+     "w": "juin",
+     "start": 27.44,
+     "end": 27.52
+    },
+    {
+     "w": "97,",
+     "start": 27.6,
+     "end": 28.4
+    },
+    {
+     "w": "il",
+     "start": 28.44,
+     "end": 28.48
+    },
+    {
+     "w": "pleuvait !",
+     "start": 28.56,
+     "end": 29.38
+    },
+    {
+     "w": "»",
+     "start": 29.4,
+     "end": 29.42
+    },
+    {
+     "w": "Il",
+     "start": 29.44,
+     "end": 29.52
+    },
+    {
+     "w": "a",
+     "start": 29.6,
+     "end": 29.64
+    },
+    {
+     "w": "raison",
+     "start": 29.68,
+     "end": 29.92
+    },
+    {
+     "w": "une",
+     "start": 30,
+     "end": 30.24
+    },
+    {
+     "w": "fois",
+     "start": 30.32,
+     "end": 30.4
+    },
+    {
+     "w": "sur",
+     "start": 30.52,
+     "end": 30.64
+    },
+    {
+     "w": "deux,",
+     "start": 30.68,
+     "end": 30.96
+    },
+    {
+     "w": "avec",
+     "start": 31.12,
+     "end": 31.28
+    },
+    {
+     "w": "le",
+     "start": 31.4,
+     "end": 31.52
+    },
+    {
+     "w": "même",
+     "start": 31.6,
+     "end": 31.68
+    },
+    {
+     "w": "aplomb.",
+     "start": 31.8,
+     "end": 32.4
+    }
+   ]
+  },
+  {
+   "scene": "pigeons",
+   "start": 32.533,
+   "end": 41.86,
+   "words": [
+    {
+     "w": "Invente",
+     "start": 32.533,
+     "end": 32.76
+    },
+    {
+     "w": "une",
+     "start": 32.8,
+     "end": 32.88
+    },
+    {
+     "w": "thèse",
+     "start": 32.96,
+     "end": 33.12
+    },
+    {
+     "w": "de",
+     "start": 33.2,
+     "end": 33.28
+    },
+    {
+     "w": "1962",
+     "start": 33.36,
+     "end": 33.44
+    },
+    {
+     "w": "sur",
+     "start": 33.48,
+     "end": 34.48
+    },
+    {
+     "w": "les",
+     "start": 34.56,
+     "end": 34.72
+    },
+    {
+     "w": "pigeons",
+     "start": 34.773,
+     "end": 34.96
+    },
+    {
+     "w": "voyageurs,",
+     "start": 35.08,
+     "end": 35.76
+    },
+    {
+     "w": "et",
+     "start": 35.84,
+     "end": 35.92
+    },
+    {
+     "w": "demande",
+     "start": 36.04,
+     "end": 36.2
+    },
+    {
+     "w": "au",
+     "start": 36.24,
+     "end": 36.28
+    },
+    {
+     "w": "modèle",
+     "start": 36.32,
+     "end": 36.56
+    },
+    {
+     "w": "de",
+     "start": 36.6,
+     "end": 36.64
+    },
+    {
+     "w": "la",
+     "start": 36.68,
+     "end": 36.72
+    },
+    {
+     "w": "résumer.",
+     "start": 36.8,
+     "end": 37.44
+    },
+    {
+     "w": "«",
+     "start": 37.547,
+     "end": 37.564
+    },
+    {
+     "w": "Avec",
+     "start": 37.582,
+     "end": 37.76
+    },
+    {
+     "w": "plaisir !",
+     "start": 37.8,
+     "end": 38.6
+    },
+    {
+     "w": "Soutenue",
+     "start": 38.64,
+     "end": 38.96
+    },
+    {
+     "w": "à",
+     "start": 39.04,
+     "end": 39.08
+    },
+    {
+     "w": "Toulouse,",
+     "start": 39.12,
+     "end": 39.6
+    },
+    {
+     "w": "elle",
+     "start": 39.68,
+     "end": 39.76
+    },
+    {
+     "w": "compare",
+     "start": 39.96,
+     "end": 40.16
+    },
+    {
+     "w": "412",
+     "start": 40.24,
+     "end": 40.4
+    },
+    {
+     "w": "lâchers",
+     "start": 40.48,
+     "end": 41.12
+    },
+    {
+     "w": "de",
+     "start": 41.16,
+     "end": 41.2
+    },
+    {
+     "w": "pigeons…",
+     "start": 41.28,
+     "end": 41.84
+    },
+    {
+     "w": "»",
+     "start": 41.85,
+     "end": 41.86
+    }
+   ]
+  },
+  {
+   "scene": "qcm",
+   "start": 41.91,
+   "end": 53.36,
+   "words": [
+    {
+     "w": "En",
+     "start": 41.91,
+     "end": 41.92
+    },
+    {
+     "w": "2025,",
+     "start": 42,
+     "end": 42.96
+    },
+    {
+     "w": "OpenAI",
+     "start": 43.12,
+     "end": 43.52
+    },
+    {
+     "w": "a",
+     "start": 43.6,
+     "end": 43.64
+    },
+    {
+     "w": "montré",
+     "start": 43.68,
+     "end": 44
+    },
+    {
+     "w": "que",
+     "start": 44.04,
+     "end": 44.08
+    },
+    {
+     "w": "les",
+     "start": 44.16,
+     "end": 44.24
+    },
+    {
+     "w": "tests",
+     "start": 44.32,
+     "end": 44.64
+    },
+    {
+     "w": "notent",
+     "start": 44.72,
+     "end": 44.96
+    },
+    {
+     "w": "les",
+     "start": 45,
+     "end": 45.04
+    },
+    {
+     "w": "modèles",
+     "start": 45.12,
+     "end": 45.44
+    },
+    {
+     "w": "comme",
+     "start": 45.48,
+     "end": 45.6
+    },
+    {
+     "w": "un",
+     "start": 45.64,
+     "end": 45.68
+    },
+    {
+     "w": "QCM",
+     "start": 45.76,
+     "end": 46.32
+    },
+    {
+     "w": "sans",
+     "start": 46.4,
+     "end": 46.56
+    },
+    {
+     "w": "points",
+     "start": 46.64,
+     "end": 46.72
+    },
+    {
+     "w": "négatifs.",
+     "start": 46.76,
+     "end": 47.68
+    },
+    {
+     "w": "«",
+     "start": 47.7,
+     "end": 47.72
+    },
+    {
+     "w": "Je",
+     "start": 47.74,
+     "end": 47.76
+    },
+    {
+     "w": "ne",
+     "start": 47.84,
+     "end": 47.92
+    },
+    {
+     "w": "sais",
+     "start": 47.96,
+     "end": 48.08
+    },
+    {
+     "w": "pas",
+     "start": 48.16,
+     "end": 48.24
+    },
+    {
+     "w": "»",
+     "start": 48.48,
+     "end": 48.52
+    },
+    {
+     "w": "rapporte",
+     "start": 48.56,
+     "end": 48.96
+    },
+    {
+     "w": "zéro,",
+     "start": 49.04,
+     "end": 49.76
+    },
+    {
+     "w": "deviner",
+     "start": 49.88,
+     "end": 50.24
+    },
+    {
+     "w": "rapporte",
+     "start": 50.32,
+     "end": 50.64
+    },
+    {
+     "w": "parfois",
+     "start": 50.72,
+     "end": 51.04
+    },
+    {
+     "w": "un",
+     "start": 51.08,
+     "end": 51.12
+    },
+    {
+     "w": "point,",
+     "start": 51.28,
+     "end": 51.76
+    },
+    {
+     "w": "donc",
+     "start": 51.84,
+     "end": 52
+    },
+    {
+     "w": "ils",
+     "start": 52.08,
+     "end": 52.16
+    },
+    {
+     "w": "apprennent",
+     "start": 52.24,
+     "end": 52.56
+    },
+    {
+     "w": "à",
+     "start": 52.6,
+     "end": 52.64
+    },
+    {
+     "w": "deviner.",
+     "start": 52.72,
+     "end": 53.36
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 53.497,
+   "end": 60.24,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 53.497,
+     "end": 53.6
+    },
+    {
+     "w": "la",
+     "start": 53.68,
+     "end": 53.76
+    },
+    {
+     "w": "prochaine",
+     "start": 53.84,
+     "end": 54.16
+    },
+    {
+     "w": "fois",
+     "start": 54.24,
+     "end": 54.32
+    },
+    {
+     "w": "que",
+     "start": 54.4,
+     "end": 54.48
+    },
+    {
+     "w": "ChatGPT",
+     "start": 54.56,
+     "end": 55.12
+    },
+    {
+     "w": "te",
+     "start": 55.2,
+     "end": 55.28
+    },
+    {
+     "w": "cite",
+     "start": 55.36,
+     "end": 55.52
+    },
+    {
+     "w": "une",
+     "start": 55.56,
+     "end": 55.6
+    },
+    {
+     "w": "étude,",
+     "start": 55.68,
+     "end": 56.4
+    },
+    {
+     "w": "clique",
+     "start": 56.44,
+     "end": 56.64
+    },
+    {
+     "w": "dessus…",
+     "start": 56.76,
+     "end": 58.24
+    },
+    {
+     "w": "il",
+     "start": 58.373,
+     "end": 58.4
+    },
+    {
+     "w": "a",
+     "start": 58.44,
+     "end": 58.48
+    },
+    {
+     "w": "le",
+     "start": 58.56,
+     "end": 58.64
+    },
+    {
+     "w": "même",
+     "start": 58.72,
+     "end": 58.88
+    },
+    {
+     "w": "aplomb",
+     "start": 59,
+     "end": 59.2
+    },
+    {
+     "w": "quand",
+     "start": 59.24,
+     "end": 59.36
+    },
+    {
+     "w": "il",
+     "start": 59.44,
+     "end": 59.52
+    },
+    {
+     "w": "a",
+     "start": 59.56,
+     "end": 59.6
+    },
+    {
+     "w": "tort.",
+     "start": 59.68,
+     "end": 60.24
+    }
+   ]
+  }
+ ]
+}
