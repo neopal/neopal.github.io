@@ -9,7 +9,12 @@
 // /lexique/<id>/ sans page statique (terme à venir ou pas encore généré) : l'app du lexique sait l'afficher.
 (function () {
   var m = location.pathname.match(/^(.*\/lexique\/)([a-z0-9-]+)\/?$/);
-  if (m && m[2] !== 'videos' && m[2] !== 'og') location.replace(m[1] + '?term=' + encodeURIComponent(m[2]) + location.hash);
+  if (m && m[2] !== 'videos' && m[2] !== 'og') return location.replace(m[1] + '?term=' + encodeURIComponent(m[2]) + location.hash);
+  // Vraie 404 seulement : la redirection ci-dessus ne compte pas de page vue.
+  var s = document.createElement('script');
+  s.src = '/assets/analytics.js';
+  s.onload = function () { window.track('page_not_found', {path: location.pathname}); };
+  document.head.appendChild(s);
 })();
 </script>
 <style>

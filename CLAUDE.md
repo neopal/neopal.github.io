@@ -11,6 +11,7 @@ Site CV/Portfolio interactif pour **Pierre-Adrien LAIR** avec chatbot IA intégr
 - **Icons** : Material Symbols Outlined
 - **Chatbot** : Gemini 2.5 Flash API (clé dans index.html ligne ~920)
 - **Hosting** : GitHub Pages (déploiement auto via `.github/workflows/static.yml`)
+- **Analytics** : PostHog (EU) chargé par `assets/analytics.js` sur toutes les pages ; plan de marquage dans `content/analytics.md`
 
 ## Structure des fichiers
 ```
@@ -96,6 +97,9 @@ Site CV/Portfolio interactif pour **Pierre-Adrien LAIR** avec chatbot IA intégr
 
 ## Points d'attention
 
+### Tracking PostHog
+Toute nouvelle page publique inclut `<script src="/assets/analytics.js"></script>` dans `<head>`. Les événements maison passent par `track(event, props)` et suivent `content/analytics.md` (noms `objet_verbe`, tableau à tenir à jour). Ne pas recoder pages vues ni scroll : `defaults` du SDK s'en charge.
+
 ### Clé API Gemini
 Définie dans `index.html` (~ligne 913), variable `_t` obfusquée en array split. Si quota dépassé, le chatbot affiche une erreur.
 
@@ -125,11 +129,11 @@ git add -A && git commit -m "message" && git push
 - [x] Scroll indicator avec hide on scroll
 - [x] Navigation desktop/mobile
 - [x] SEO complet (JSON-LD, OG, sitemap, robots, llms.txt)
+- [x] Tracking PostHog sur tout le site (CV, lexique, shorts)
 
 ## Idées futures potentielles
 - [ ] Mode sombre
 - [ ] Animations d'entrée (Intersection Observer)
 - [ ] Version anglaise
-- [ ] Analytics (GA4 ou Plausible)
 - [ ] Formulaire de contact
 - [ ] Tests E2E avec Playwright
