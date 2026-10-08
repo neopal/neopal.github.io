@@ -29,7 +29,7 @@ export const makeChunks = (segments, total, quoted = [], nocaption = []) => {
   for (const s of segments) {
     let cur = [];
     let q = false;
-    const flush = () => { if (cur.length) out.push({words: cur, quote: nocaption.includes(s.scene) || (q && quoted.includes(key(cur)))}); cur = []; };
+    const flush = () => { if (cur.length) out.push({scene: s.scene, words: cur, quote: nocaption.includes(s.scene) || (q && quoted.includes(key(cur)))}); cur = []; };
     for (const w of glue(s.words)) {
       if (w.w.startsWith('«')) { flush(); q = true; }
       if (cur.length && !q && len([...cur, w]) > CAP_MAX) flush();
@@ -53,6 +53,30 @@ export const makeChunks = (segments, total, quoted = [], nocaption = []) => {
       out.splice(k, 1);
       k -= 2;
     }
+  }
+  // Un groupe encore trop bref (« simule. », « pas. ») partage les mots avec son voisin de la même phrase :
+  // on cherche la coupure qui laisse le plus de temps au plus court des deux, chacun restant sur 2 lignes.
+  const start = (k) => (k < out.length ? out[k].words[0].start : total);
+  const endsSentence = (c) => /[.!?…]$/.test(c.words[c.words.length - 1].w.replace(/[\s »]+$/, ''));
+  const rebalance = (k) => {
+    const a = out[k], b = out[k + 1];
+    if (!a || !b || a.quote || b.quote || a.scene !== b.scene || endsSentence(a)) return false;
+    const ws = [...a.words, ...b.words];
+    const t1 = start(k + 2);
+    let best = null;
+    for (let i = 1; i < ws.length; i++) {
+      if (len(ws.slice(0, i)) > CAP_MAX || len(ws.slice(i)) > CAP_MAX) continue;
+      const m = Math.min(ws[i].start - ws[0].start, t1 - ws[i].start);
+      if (!best || m > best.m) best = {i, m};
+    }
+    if (!best || best.m < CAP_MIN_S - 1 / FPS) return false;
+    a.words = ws.slice(0, best.i);
+    b.words = ws.slice(best.i);
+    return true;
+  };
+  for (let k = 0; k < out.length; k++) {
+    if (out[k].quote || start(k + 1) - start(k) >= CAP_MIN_S) continue;
+    rebalance(k) || rebalance(k - 1);
   }
   out.forEach((c, k) => {
     c.from = Math.round(c.words[0].start * FPS) - 2;

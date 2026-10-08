@@ -20,6 +20,7 @@ import {Nondeterminisme, NONDETERMINISME_DURATION} from './Nondeterminisme';
 import {OpenWeights, OPENWEIGHTS_DURATION} from './OpenWeights';
 import {PredictionVoix, PREDICTIONVOIX_DURATION} from './PredictionVoix';
 import {HallucinationVoix, HALLUCINATIONVOIX_DURATION} from './HallucinationVoix';
+import {MytheExistePasVoix, MYTHEEXISTEPASVOIX_DURATION} from './MytheExistePasVoix';
 
 // Les shorts dans une seule entrée (stills et rendus partagent le même bundle).
 const C = {fps: 30, width: 1080, height: 1920} as const;
@@ -46,5 +47,6 @@ export const Root: React.FC = () => (
     <Composition id="OpenWeights" component={OpenWeights} durationInFrames={OPENWEIGHTS_DURATION} {...C} />
     <Composition id="PredictionVoix" component={PredictionVoix} durationInFrames={PREDICTIONVOIX_DURATION} {...C} />
     <Composition id="HallucinationVoix" component={HallucinationVoix} durationInFrames={HALLUCINATIONVOIX_DURATION} {...C} />
+    <Composition id="MytheExistePasVoix" component={MytheExistePasVoix} durationInFrames={MYTHEEXISTEPASVOIX_DURATION} {...C} />
   </>
 );

@@ -24,13 +24,14 @@ Référence validée : Prédiction du token suivant (2026-10-07), rendu dans `vi
 2. Copier `src/PredictionVoix.tsx` en `src/<Nom>Voix.tsx` : garder l'en-tête (`makeVoix`, `V.TitleHook`, `V.Montage`), remplacer les scènes. Le moteur commun (calage, sous-titres, hook, musique, montage) est dans `src/voix/VoixShort.tsx` et ne se recopie pas.
 3. Déclarer la composition dans `src/Root.tsx`.
 4. Musique : pour économiser 900 crédits, réutiliser la piste de Prédiction avec `makeVoix(ALIGN, SCRIPT, 'voix/prediction-music.mp3')` ; si elle est plus courte que la voix, elle boucle.
-5. Suivre le déroulé ci-dessous à partir de l'étape 2.
+5. Pour monter les images avant la voix : `node tools/estimate-words.mjs <id>` (temps estimés au débit de PAL - FR) puis `node tools/align-from-words.mjs <id> --no-audio`. Le montage, le contrôle et un aperçu sans voix marchent dessus ; la vraie transcription remplace ensuite `<id>.words.json` et on recale sans `--no-audio`.
+6. Suivre le déroulé ci-dessous à partir de l'étape 2.
 
 Budget : environ 1 300 crédits par short (voix seule, transcription gratuite), plus les prises que PA refait lui-même. Avec la musique réutilisée, 10 000 crédits font environ 7 shorts.
 
 ## File d'attente
 
-Termes qui ont déjà une fiche et un short muet (donc des scènes à reprendre dans `src/<Terme>.tsx`), du plus grand public au plus technique : Hallucination, Température, Fenêtre de contexte, RAG, Agent, Paramètres, Token, Embedding, MCP, Open weights, Context rot, Sans état, Non-déterminisme, Harness, Benchmaxxing. Publiés : Prédiction du token suivant (2026-10-07). V1 rendue : Hallucination (2026-10-08, voix PAL - FR). Playlist YouTube : « Les mots de l'IA ».
+Termes qui ont déjà une fiche et un short muet (donc des scènes à reprendre dans `src/<Terme>.tsx`), du plus grand public au plus technique : Hallucination, Température, Fenêtre de contexte, RAG, Agent, Paramètres, Token, Embedding, MCP, Open weights, Context rot, Sans état, Non-déterminisme, Harness, Benchmaxxing. Publiés : Prédiction du token suivant (2026-10-07). Hallucination (2026-10-08, voix PAL - FR). En préparation : mythe « L'intelligence artificielle n'existe pas » (`MytheExistePasVoix`, images calées sur des temps estimés, voix à faire). Playlist YouTube : « Les mots de l'IA ».
 
 ## Le déroulé
 

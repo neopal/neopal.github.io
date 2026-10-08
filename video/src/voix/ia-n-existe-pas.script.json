@@ -1,0 +1,53 @@
+{
+  "id": "ia-n-existe-pas",
+  "term": "mythe-ia-n-existe-pas",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA), à générer",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] « L'intelligence artificielle n'existe pas »… vraiment ?"
+    },
+    {
+      "scene": "livre",
+      "say": "[curious] C'est le titre d'un livre de Luc Julia, paru en 2019. En 2025, il sort la suite, sous-titrée « L'intelligence artificielle n'existe toujours pas ». [mischievously] Alors, on vérifie ?"
+    },
+    {
+      "scene": "dartmouth",
+      "say": "[warmly] En 1955, John McCarthy et trois collègues proposent un projet d'été à Dartmouth, avec un pari, décrire l'intelligence assez précisément pour qu'une machine la simule."
+    },
+    {
+      "scene": "mot",
+      "say": "[excited] Le mot nomme donc une discipline, pas une conscience. Si on parle de conscience, le débat reste ouvert. Si on parle de la discipline, la phrase est fausse."
+    },
+    {
+      "scene": "turing",
+      "say": "[curious] En 2025, des gens discutent cinq minutes avec un humain et avec GPT-4.5, à qui on a demandé de jouer un personnage. [excited] Dans 73 % des cas, c'est la machine qu'ils prennent pour l'humain."
+    },
+    {
+      "scene": "senat",
+      "say": "[mischievously] Et le meilleur, c'est qu'au Sénat, en juin 2025, Luc Julia a déclaré que ces IA sont déjà plus intelligentes que nous dans leurs domaines… et depuis longtemps. [pause] Pas mal, pour une chose qui n'existe pas."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors la prochaine fois qu'on te dit que l'IA n'existe pas, demande juste… [pause] de quelle intelligence on parle."
+    }
+  ],
+  "quoted": [
+    "L'intelligenceartificiellen'existetoujourspas"
+  ],
+  "display": {},
+  "nocaption": [
+    "hook"
+  ],
+  "credits": [
+    "Portrait pixel art de Luc Julia d'après « Luc Julia 2019 (cropped).jpg », Conseil économique, social et environnemental (CESE), CC BY 3.0, via Wikimedia Commons : https://commons.wikimedia.org/wiki/File:Luc_Julia_2019_(cropped).jpg",
+    "Couvertures de « L'intelligence artificielle n'existe pas » (First éditions, 2019) et « IA génératives, pas créatives » (Le Cherche Midi, 2025), réduites en pixel art pour commenter les livres"
+  ]
+}

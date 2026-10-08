@@ -42,6 +42,7 @@ const segments = script.segments.map((s) => {
 // Mots écrits en phonétique pour la voix (« /nɛkst/ ») : on affiche leur forme écrite (champ display du script).
 for (const seg of segments) for (const w of seg.words) for (const [from, to] of Object.entries(script.display ?? {})) w.w = w.w.replace(from, to);
 
-const out = {id, audio: true, music: flags.includes('--music'), duration: words[words.length - 1].end, segments};
+// --no-audio : calage provisoire sur des temps estimés (tools/estimate-words.mjs), pas encore de voix à jouer.
+const out = {id, audio: !flags.includes('--no-audio'), music: flags.includes('--music'), duration: words[words.length - 1].end, segments};
 writeFileSync(join(ROOT, 'src/voix', `${id}.align.json`), JSON.stringify(out, null, 1));
 console.log(segments.map((s) => `${s.scene.padEnd(7)} ${s.start.toFixed(2)} -> ${s.end.toFixed(2)} s`).join('\n'));
