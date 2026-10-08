@@ -24,6 +24,7 @@ import {dirname, join, resolve} from 'node:path';
 import {fileURLToPath, pathToFileURL} from 'node:url';
 import {tmpdir} from 'node:os';
 import vm from 'node:vm';
+import {SHORTS_DIR, loadShorts, shortsPage} from './shorts-page.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LEX = join(ROOT, 'lexique');
@@ -392,7 +393,7 @@ function ogFor(t, cards) {
 }
 
 // ---------- Sitemap ----------
-function buildSitemap(live) {
+function buildSitemap(live, extra = []) {
   const file = join(ROOT, 'sitemap.xml');
   const old = existsSync(file) ? readFileSync(file, 'utf8') : '';
   const lastmodOf = (loc, dflt) => {
@@ -409,6 +410,7 @@ function buildSitemap(live) {
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
       url(SITE + '/', lastmodOf(SITE + '/', TODAY), 'monthly', '1.0'),
       url(LEX_URL, lm(LEX_URL), 'weekly', '0.8'),
+      ...extra.map((loc) => url(loc, lm(loc), 'weekly', '0.6')),
       ...live.map((t) => url(termAbsUrl(t.id), lm(termAbsUrl(t.id)), 'monthly', '0.7')),
       '</urlset>',
       '',
@@ -492,7 +494,10 @@ const indexFile = join(LEX, 'index.html');
 const source = readFileSync(indexFile, 'utf8');
 const template = stripGenerated(source);
 const changed = new Set();
-const sitemap = buildSitemap(live);
+if (liveIds.has(SHORTS_DIR)) fail(`l'id « ${SHORTS_DIR} » est réservé à la page des shorts`);
+const shorts = loadShorts(LEX, liveIds, fail);
+const SHORTS_URL = LEX_URL + SHORTS_DIR + '/';
+const sitemap = buildSitemap(live, shorts.length ? [SHORTS_URL] : []);
 
 // Garde-fous sur le gabarit (contrat avec le front).
 if (!/<html lang="fr">/.test(template)) fail('<html lang="fr"> introuvable dans lexique/index.html');
@@ -541,12 +546,22 @@ for (const t of live) {
 for (const name of readdirSync(LEX)) {
   const dir = join(LEX, name);
   const page = join(dir, 'index.html');
-  if (liveIds.has(name) || !statSync(dir).isDirectory() || !existsSync(page)) continue;
+  if (liveIds.has(name) || name === SHORTS_DIR || !statSync(dir).isDirectory() || !existsSync(page)) continue;
   if (!readFileSync(page, 'utf8').includes(GEN_MARK)) continue;
   rmSync(dir, {recursive: true, force: true});
   console.log(`supprimé lexique/${name}/ (plus publié)`);
   const og = join(LEX, 'og', `${name}.jpg`);
   if (existsSync(og)) rmSync(og);
+}
+
+// 3 bis. Page des shorts publiés (lexique/shorts.js).
+if (shorts.length) {
+  const byIdLive = Object.fromEntries(live.map((t) => [t.id, t]));
+  const html = shortsPage(shorts, byIdLive, {
+    url: SHORTS_URL, lexUrl: LEX_URL, author: AUTHOR, genMark: GEN_MARK, esc, jsonLd, clean, title: plainTitle, termAbsUrl,
+    termHref: (id) => R.termUrl(id, {base: BASE, urls: 'path'}),
+  });
+  if (writeIfChanged(join(LEX, SHORTS_DIR, 'index.html'), html)) { changed.add(SHORTS_URL); console.log(`page     lexique/${SHORTS_DIR}/index.html`); }
 }
 
 // 4. Sitemap.

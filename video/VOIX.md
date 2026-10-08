@@ -52,6 +52,8 @@ Rangement de `out/` (non versionné) : `out/shorts/<id>/` ne contient que les li
     YouTube : *Miniature > Ajouter* à la mise en ligne. TikTok : importer l'image si proposé, sinon choisir une image de la vidéo pendant le hook.
 12. **Titre et description** : un titre court (40 caractères au plus, sinon les Shorts le coupent à l'écran) qui crée la curiosité, le terme technique dans la description pour la recherche, le lien vers la fiche du lexique, trois hashtags précis. Passe anti-slop (VOICE.md de PA) : pas de tiret cadratin, pas de « Découvrez », pas d'emoji décoratif, pas de deux-points de révélation.
 
+13. **Après la mise en ligne** : ajouter le short à `lexique/shorts.js` (fiche, épisode, titre, id YouTube, date), copier la couverture en 540 px de large (`ffmpeg -i out/shorts/<id>/<id>-cover.png -vf scale=540:-1 -q:v 4 ../lexique/shorts/<term>.jpg`), puis `node scripts/build-lexique.mjs` depuis la racine. La page `/lexique/shorts/` se met à jour.
+
 ## Pièges et coûts (appris sur Prédiction)
 
 - Une génération de voix d'environ 70 s coûte 1 250 à 1 450 crédits, une musique de 55 à 72 s 900 crédits. Une seule prise par appel ; ne jamais relancer pour « réessayer » sans regarder le statut.
