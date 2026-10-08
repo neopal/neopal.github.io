@@ -214,7 +214,7 @@ Un format à part, pour YouTube et TikTok seulement : il ne remplace pas les vid
 
 **Règle « lisible dans le métro »** : un humain normal, téléphone à la main, debout dans une rame qui bouge, lit tout ce qui est à l'écran sans plisser les yeux.
 - Aucun texte sous 48 px sur un cadre de 1080 px (libellés compris) ; sous-titres à 84 px, en Newsreader 600.
-- Un sous-titre tient en 2 lignes (32 caractères au plus) et reste au moins 1 s à l'écran ; le mot dit s'allume en couleur d'accent.
+- Un sous-titre tient en 2 lignes (36 caractères au plus, environ 24 par ligne) et reste au moins 1 s à l'écran ; le mot dit s'allume en couleur d'accent.
 - Ce qui est déjà écrit en grand à l'écran n'est pas sous-titré une deuxième fois : la question du hook (`nocaption`), les citations montrées par le schéma (`quoted`).
 - Un seul élément central par écran ; un libellé de schéma fait 3 mots au plus. Pas d'élément qui reste à l'écran sans raison (la bulle « Raconte-moi une histoire » de la v2 a sauté pour ça).
 - Libellés secondaires en `#cfcfcf` au plus sombre, jamais de gris foncé sur noir.

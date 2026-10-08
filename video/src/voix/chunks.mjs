@@ -2,7 +2,7 @@
 // Règle « lisible dans le métro » (content/dico/univers.md) : un groupe tient en 2 lignes (CAP_MAX caractères),
 // reste au moins CAP_MIN_S secondes à l'écran, et une citation déjà montrée par le schéma n'est pas sous-titrée.
 export const FPS = 30;
-export const CAP_MAX = 32; // caractères par groupe : environ 19 par ligne à 84 px sur 888 px (mots entiers), donc 2 lignes
+export const CAP_MAX = 36; // caractères par groupe : environ 24 par ligne à 84 px sur 888 px (mesuré sur un rendu, mots entiers), donc 2 lignes avec de la marge
 export const CAP_SOFT = 18; // au-delà, on coupe au prochain signe de ponctuation
 export const CAP_MIN_S = 1.0; // durée minimale d'affichage d'un groupe
 

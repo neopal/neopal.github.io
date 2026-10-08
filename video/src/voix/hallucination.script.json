@@ -1,0 +1,57 @@
+{
+  "id": "hallucination",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "flow": "https://elevenlabs.io/app/flows/U3rFatN44MCp1qE7akaS"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi ? une hallucination..."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Quand ChatGPT t'invente une source, tu crois qu'il te ment ? [excited] En réalité, il ne sait même pas qu'il se trompe !"
+    },
+    {
+      "scene": "base",
+      "say": "[warmly] Un modèle de langage ne va pas chercher la réponse dans une base de données. Il écrit le mot le plus plausible, puis le suivant, jusqu'au point final."
+    },
+    {
+      "scene": "nom",
+      "say": "[excited] Sauf que plausible, ça ne veut pas dire vrai. Quand il affirme avec aplomb quelque chose de faux, c'est une hallucination, ou en anglais, /həˌluːsɪˈneɪʃən/."
+    },
+    {
+      "scene": "gilbert",
+      "say": "[mischievously] Imagine Tonton Gilbert. La date du mariage de la cousine ? « Le 14 juin 97, il pleuvait ! » Il a raison une fois sur deux, avec le même aplomb."
+    },
+    {
+      "scene": "pigeons",
+      "say": "[curious] Invente une thèse de 1962 sur les pigeons voyageurs, et demande au modèle de la résumer. [excited] « Avec plaisir ! Soutenue à Toulouse, elle compare 412 lâchers de pigeons… »"
+    },
+    {
+      "scene": "qcm",
+      "say": "[curious] En 2025, OpenAI a montré que les tests notent les modèles comme un QCM sans points négatifs. « Je ne sais pas » rapporte zéro, deviner rapporte parfois un point, donc ils apprennent à deviner."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors la prochaine fois que ChatGPT te cite une étude, clique dessus… [pause] il a le même aplomb quand il a tort."
+    }
+  ],
+  "quoted": [
+    "Le14juin97ilpleuvait",
+    "AvecplaisirSoutenueàToulouseellecompare412lâchersdepigeons",
+    "Jenesaispas"
+  ],
+  "display": {
+    "/həˌluːsɪˈneɪʃən/": "hallucination"
+  },
+  "nocaption": [
+    "hook"
+  ]
+}
