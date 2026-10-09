@@ -104,6 +104,8 @@ window.DICO_TERMS = [
     sources: [
       {label: 'Wikipédia, Mata v. Avianca (2023) : fausses jurisprudences générées par ChatGPT, 5 000 dollars d\'amende', url: 'https://en.wikipedia.org/wiki/Mata_v._Avianca,_Inc.'},
       {label: 'Wikipédia, ChatGPT (ChatGPT Search déployé d\'octobre à décembre 2024)', url: 'https://en.wikipedia.org/wiki/ChatGPT'},
+      {label: 'AFIS, Jean-Paul Krivine, La controverse autour de Luc Julia sur l\'intelligence artificielle, 2 septembre 2025 (cite IA génératives, pas créatives, Le Cherche Midi, 2025, p. 105 : ChatGPT « va générer une réponse en puisant dans sa base de données de 1 760 milliards de paramètres » ; rappelle que les paramètres ne sont pas une base de données et qu\'aucun texte n\'est stocké explicitement)', url: 'https://www.afis.org/La-controverse-autour-de-Luc-Julia-sur-l-intelligence-artificielle'},
+      {label: 'Meta AI, Introducing Meta Llama 3, 18 avril 2024 (modèles de 8 et 70 milliards de paramètres, « pretrained on over 15T tokens » ; image du short : 15 000 milliards de tokens lus contre 8 milliards de nombres gardés, un rapport de près de 2 000)', url: 'https://ai.meta.com/blog/meta-llama-3/'},
     ],
   },
   {

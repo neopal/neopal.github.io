@@ -5,4 +5,5 @@
 window.LEX_SHORTS = [
   {term: 'prediction-du-mot-suivant', ep: 1, title: 'ChatGPT ne sait pas comment sa phrase va finir', youtube: 'comEMEJk8RI', date: '2026-10-07'},
   {term: 'hallucination', ep: 2, title: 'Pourquoi ChatGPT invente des sources', youtube: 'nZbx43xorck', date: '2026-10-08'},
+  {term: 'mythe-base-de-donnees', ep: 3, title: "ChatGPT n'a pas de base de données", youtube: 'OQyt-PXB83M', date: '2026-10-09'},
 ];

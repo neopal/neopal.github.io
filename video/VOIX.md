@@ -31,7 +31,7 @@ Budget : environ 1 300 crédits par short (voix seule, transcription gratuite), 
 
 ## File d'attente
 
-Termes qui ont déjà une fiche et un short muet (donc des scènes à reprendre dans `src/<Terme>.tsx`), du plus grand public au plus technique : Hallucination, Température, Fenêtre de contexte, RAG, Agent, Paramètres, Token, Embedding, MCP, Open weights, Context rot, Sans état, Non-déterminisme, Harness, Benchmaxxing. Publiés : Prédiction du token suivant (2026-10-07). Hallucination (2026-10-08, voix PAL - FR). En préparation : mythe « L'intelligence artificielle n'existe pas » (`MytheExistePasVoix`, images calées sur des temps estimés, voix à faire). Playlist YouTube : « Les mots de l'IA ».
+Termes qui ont déjà une fiche et un short muet (donc des scènes à reprendre dans `src/<Terme>.tsx`), du plus grand public au plus technique : Hallucination, Température, Fenêtre de contexte, RAG, Agent, Paramètres, Token, Embedding, MCP, Open weights, Context rot, Sans état, Non-déterminisme, Harness, Benchmaxxing. Publiés : Prédiction du token suivant (2026-10-07). Hallucination (2026-10-08, voix PAL - FR). Base de données (2026-10-09, voix PAL - FR, `MytheBaseVoix`). Mis de côté : mythe « L'intelligence artificielle n'existe pas » (`MytheExistePasVoix`, sans voix ; sujet trop abstrait pour un short, cf. univers.md « Les shorts mythe »). Playlist YouTube : « Les mots de l'IA ».
 
 ## Le déroulé
 
@@ -51,9 +51,11 @@ Rangement de `out/` (non versionné) : `out/shorts/<id>/` ne contient que les li
 11. **Générer la couverture** : la première image ne montre que « C'est quoi ? », car le reste du titre arrive avec la voix ; YouTube et TikTok en feraient une miniature incomplète. On rend une image où la question complète est à l'écran, à la fin du hook (vers 2,7 s ; vérifier que le dernier mot du titre est posé) :
     `npx remotion still src/index.ts <Composition> out/shorts/<id>/<id>-cover.png --frame=80` puis `ffmpeg -i out/shorts/<id>/<id>-cover.png -q:v 2 out/shorts/<id>/<id>-cover.jpg`.
     YouTube : *Miniature > Ajouter* à la mise en ligne. TikTok : importer l'image si proposé, sinon choisir une image de la vidéo pendant le hook.
-12. **Titre et description** : un titre court (40 caractères au plus, sinon les Shorts le coupent à l'écran) qui crée la curiosité, le terme technique dans la description pour la recherche, le lien vers la fiche du lexique, trois hashtags précis. Passe anti-slop (VOICE.md de PA) : pas de tiret cadratin, pas de « Découvrez », pas d'emoji décoratif, pas de deux-points de révélation.
+12. **Titre et description** : un titre court (40 caractères au plus, sinon les Shorts le coupent à l'écran) qui crée la curiosité, le terme technique dans la description pour la recherche, le lien vers la fiche du lexique, trois hashtags précis, plus **#vulgarisation** sur chaque plateforme (PA, 2026-10-09). Le lien de la fiche s'écrit en entier (https://neopal.github.io/lexique/<term>/) dans chaque description, TikTok et Instagram compris. Instagram affiche le même fichier 9:16 en entier dans l'onglet Reels, mais le recadre en 4:5 dans le fil et en 3:4 dans la grille : vérifier une image recadrée (`crop=1080:1350:0:285`) avant de publier. Passe anti-slop (VOICE.md de PA) : pas de tiret cadratin, pas de « Découvrez », pas d'emoji décoratif, pas de deux-points de révélation.
 
 13. **Après la mise en ligne** : ajouter le short à `lexique/shorts.js` (fiche, épisode, titre, id YouTube, date), copier la couverture en 540 px de large (`ffmpeg -i out/shorts/<id>/<id>-cover.png -vf scale=540:-1 -q:v 4 ../lexique/shorts/<term>.jpg`), puis `node scripts/build-lexique.mjs` depuis la racine. La page `/lexique/shorts/` se met à jour.
+
+- Volume de la musique sous la voix : 0,11 dans `VoixShort.tsx` (baissé le 2026-10-09, PA trouvait la musique trop présente à 0,16).
 
 ## Pièges et coûts (appris sur Prédiction)
 
@@ -63,5 +65,5 @@ Rangement de `out/` (non versionné) : `out/shorts/<id>/` ne contient que les li
 - La transcription d'une prise v3 / v4 contient les indications de jeu (`[curious]`), parfois collées à un mot (`suivant...[curious]`) ; `align-from-words.mjs` les retire.
 - Si ElevenLabs répond « Free Tier access has been disabled », c'est le compte, pas le prompt : PA se réauthentifie avec `/mcp` et on relance.
 - Voix clonée (PAL - FR) en `eleven_v4` : les indications de jeu passent (0,06 s dans la transcription, donc non dites) et le débit est plus vif (≈ 3,3 mots/s, 60 s pour 190 mots). Tester d'abord 2 segments (≈ 400 crédits) avant une nouvelle voix.
-- Une ligne de sous-titre tient environ 24 caractères (mesuré sur un rendu), d'où `CAP_MAX = 36` dans `chunks.mjs`. Avec une voix rapide, une question courte (« La date du mariage de la cousine ? ») tient en moins d'1 s si on la coupe.
+- Les sous-titres se coupent sur leur largeur en pixels (`lineCount` dans `chunks.mjs`, largeurs de Newsreader 600 dans `caption-widths.mjs`) : une ligne tient environ 20 caractères, et l'ancienne limite en caractères (36, puis 46) donnait des sous-titres de 3 lignes. Contre-vérification indépendante : `node tools/dump-chunks.mjs <id> | python -I tools/caption-lines.py <Newsreader-latin.woff2>`. Avec une voix rapide, une question courte (« La date du mariage de la cousine ? ») tient en moins d'1 s si on la coupe.
 - `npm run check` (les shorts muets) plante sous Windows sur un chemin `C:\C:\` ; le contrôle des shorts à voix off est `check:voix`.

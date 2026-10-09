@@ -1,0 +1,60 @@
+{
+  "id": "base-de-donnees",
+  "term": "mythe-base-de-donnees",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)",
+    "flow": "https://elevenlabs.io/app/flows/RPE9hNt4JBJBcsK2ql3m",
+    "take": "prise du 2026-10-09, 58,4 s, 1 174 crédits"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[calmly] « ChatGPT puise dans sa base de données de 1 760 milliards de paramètres »… c'est écrit dans un livre sur l'IA paru en 2025."
+    },
+    {
+      "scene": "armoire",
+      "say": "[curious] On imagine une immense armoire à fiches, où le modèle irait chercher la bonne réponse, sauf qu'en l'ouvrant, on ne trouve aucune fiche."
+    },
+    {
+      "scene": "potards",
+      "say": "[warmly] On trouve des paramètres, des milliards de nombres réglés pendant l'entraînement, comme les potards d'une console qu'on ne touche plus ensuite."
+    },
+    {
+      "scene": "taille",
+      "say": "Llama 3, le modèle de Meta, a lu plus de 15 000 milliards de tokens et ne garde que 8 milliards de paramètres, comme si on résumait une bibliothèque entière dans un seul livre."
+    },
+    {
+      "scene": "ecrit",
+      "say": "[curious] Impossible d'y ranger les textes mot pour mot, alors quand tu lui poses une question, il écrit sa réponse un token à la fois, en tirant chaque fois parmi les suites les plus probables."
+    },
+    {
+      "scene": "deux",
+      "say": "[mischievously] Pose deux fois la même question et tu auras deux réponses différentes."
+    },
+    {
+      "scene": "avocats",
+      "say": "[warmly] En 2023, des avocats new-yorkais ont même cité six jurisprudences que ChatGPT avait inventées, pour 5 000 dollars d'amende."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Un modèle ne retrouve donc pas sa réponse dans une base, il la réécrit à chaque fois… [pause] avec le même aplomb, qu'il ait raison ou tort."
+    }
+  ],
+  "quoted": [],
+  "display": {},
+  "nocaption": [
+    "hook"
+  ],
+  "sources": [
+    "AFIS, Jean-Paul Krivine, La controverse autour de Luc Julia sur l'intelligence artificielle, 2 septembre 2025, citant IA génératives, pas créatives (Le Cherche Midi, 2025), p. 105 : « il va générer une réponse en puisant dans sa base de données de 1 760 milliards de paramètres » ; https://www.afis.org/La-controverse-autour-de-Luc-Julia-sur-l-intelligence-artificielle",
+    "Meta AI, Introducing Meta Llama 3, 18 avril 2024 : modèles de 8B et 70B paramètres, « pretrained on over 15T tokens » ; image de la bibliothèque : 15 000 milliards de tokens lus contre 8 milliards de nombres gardés, un rapport de près de 2 000 ; https://ai.meta.com/blog/meta-llama-3/",
+    "Mata v. Avianca, S.D.N.Y., ordonnance du 22 juin 2023 : six décisions inexistantes citées (dont Varghese v. China Southern Airlines), écrites par ChatGPT, 5 000 dollars d'amende pour les avocats et leur cabinet ; https://abajournal.com/web/article/lawyers-who-doubled-down-and-defended-chatgpts-fake-cases-must-pay-5k-judge-says"
+  ],
+  "credits": []
+}

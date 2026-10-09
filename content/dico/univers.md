@@ -204,17 +204,28 @@ Défauts des fiches les moins bien notées, à éviter : noms de modèles opaque
 
 Un format à part, pour YouTube et TikTok seulement : il ne remplace pas les vidéos muettes des fiches du site. Référence : le short Prédiction du token suivant (`video/src/PredictionVoix.tsx`, texte dans `video/src/voix/prediction.script.json`). La recette pas à pas (outils, commandes, pièges, coûts) est dans `video/VOIX.md`.
 
-**Le ton : un vulgarisateur d'émission, enjoué.** On parle au spectateur (« tu »), on pose des questions, on marque des pauses avec des points de suspension. Les indications de jeu entre crochets (`[warmly]`, `[curious]`, `[excited]`, `[softly]`, `[pause]`) tiennent jusqu'à la suivante : on en change quand le ton change, pas à chaque phrase.
+**Le ton : un podcast narré, avec un tout petit peu d'enthousiasme** (révisé par PA le 2026-10-09 : la première phrase d'Hallucination était trop enjouée). On parle au spectateur (« tu »), on pose des questions, on marque des pauses avec des points de suspension ; le ton et le rythme varient, mais légèrement, sans emphase de présentateur. Indications de jeu sobres : `[calmly]` (la première phrase), `[warmly]`, `[curious]`, `[softly]`, `[pause]`, et au plus un `[mischievously]` par short ; plus de `[excited]`, et jamais sur la première phrase. Elles tiennent jusqu'à la suivante : on en change quand le ton change, pas à chaque phrase.
 
 **La première image est la question du terme**, dite par la voix et écrite en grand : « C'est quoi ? la prédiction du token suivant… ». Puis, dans l'ordre : une accroche qui retourne une idée reçue (« tu crois qu'il a déjà toute sa réponse en tête ? »), la notion de départ expliquée simplement (qu'est-ce qu'un token), le terme nommé en français puis en anglais, et seulement ensuite l'image (le témoin de mariage), le mécanisme, ce que ça change, la chute.
 
 **Le terme anglais se prononce en anglais** : on l'écrit en API entre barres obliques dans le texte de la voix (`/nɛkst ˈtoʊkən pɹɪˈdɪkʃən/`) et sa forme écrite dans le champ `display` du script, pour les sous-titres.
 
+**Les shorts « mythe »** (recette tirée du short Base de données, validé par PA le 2026-10-09, après l'échec de « L'IA n'existe pas ») :
+- **Un mythe qui se montre, pas un débat de mots.** Le bon sujet a un mécanisme qu'on peut dessiner (une armoire vide, des potards, une bibliothèque qui tient dans un livre, des tokens qui s'écrivent). Un mythe qui se réfute par des distinctions de vocabulaire (« conscience ou discipline ») oblige à mettre des phrases à l'écran : on le laisse à la fiche.
+- **L'accroche est la phrase du mythe, sourcée et en grand, puis un tampon « FAUX »** posé juste après la citation, qui reste jusqu'à la fin du hook : c'est l'image de couverture. L'objet d'où vient la phrase (livre, capture) est collé à côté. On vise l'idée : l'auteur n'est pas nommé à l'oral, la couverture suffit à sourcer.
+- **Un fil, une scène par idée, une phrase par scène.** Deux histoires ne partagent jamais une phrase (« deux réponses » puis « les avocats » : deux phrases, deux scènes), sinon le sous-titre de l'une arrive sur l'image de l'autre.
+- **L'image de la vie courante plutôt que le ratio.** « 1 900 tokens par potard » ne parlait à personne ; « une bibliothèque entière résumée dans un seul livre » se voit.
+- **Deux preuves concrètes et datées**, dont une qui fait sourire (la jurisprudence inventée, 5 000 dollars d'amende), puis une chute qui reprend les images du short (la même jauge d'aplomb sur la bonne et la mauvaise réponse).
+- **Aucune scène n'ouvre sur un écran vide** : quelque chose est posé dès les premières images, même avant le mot-repère. Chaque élément part quand il a servi.
+- **Vérifier les faits sur la personne citée** : un titre qu'elle se donne (« cocréateur de Siri ») n'est pas un fait s'il est contesté.
+
 **Durée : 60 à 70 s**, environ 170 mots dits. Au-delà, on coupe le texte plutôt que d'accélérer la voix.
 
 **Règle « lisible dans le métro »** : un humain normal, téléphone à la main, debout dans une rame qui bouge, lit tout ce qui est à l'écran sans plisser les yeux.
 - Aucun texte sous 48 px sur un cadre de 1080 px (libellés compris) ; sous-titres à 84 px, en Newsreader 600.
-- Un sous-titre tient en 2 lignes (36 caractères au plus, environ 24 par ligne) et reste au moins 1 s à l'écran ; le mot dit s'allume en couleur d'accent.
+- Un sous-titre remplit 2 lignes entières, jamais 3 (la coupure se calcule sur la largeur réelle du texte, environ 20 caractères par ligne ; une 3e ligne fait coller le sous-titre au bord haut dans le fil Instagram) et reste au moins 1 s à l'écran ; le mot dit s'allume en couleur d'accent. Pas de bouts de phrase qui défilent trop vite pour être lus (retour PA, 2026-10-09), et une ligne ne finit ni sur un petit mot (« de », « que ») ni sur un nombre séparé de son unité.
+- **Illustrer plutôt qu'étiqueter** (retour PA, 2026-10-09) : quand le texte cite un objet réel (un livre, un outil, un document, une personne), on montre l'objet lui-même en collage (vraie couverture, capture, portrait en pixel art, scotch aux coins, posé d'un coup) plutôt qu'une icône et un libellé. Crédit de l'image dans la description.
+- L'écran ne double pas les sous-titres : il montre un schéma, et ses libellés font 3 mots au plus. Une carte de phrase à lire en même temps que le sous-titre crée la confusion (retour PA sur le short « L'IA n'existe pas », 2026-10-09).
 - Ce qui est déjà écrit en grand à l'écran n'est pas sous-titré une deuxième fois : la question du hook (`nocaption`), les citations montrées par le schéma (`quoted`).
 - Un seul élément central par écran ; un libellé de schéma fait 3 mots au plus. Pas d'élément qui reste à l'écran sans raison (la bulle « Raconte-moi une histoire » de la v2 a sauté pour ça).
 - Libellés secondaires en `#cfcfcf` au plus sombre, jamais de gris foncé sur noir.

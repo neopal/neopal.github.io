@@ -12,36 +12,34 @@
   "segments": [
     {
       "scene": "hook",
-      "say": "[warmly] « L'intelligence artificielle n'existe pas »… vraiment ?"
+      "say": "[mischievously] « L'intelligence artificielle n'existe pas »… sauf quand son auteur parle au Sénat."
     },
     {
       "scene": "livre",
-      "say": "[curious] C'est le titre d'un livre de Luc Julia, paru en 2019. En 2025, il sort la suite, sous-titrée « L'intelligence artificielle n'existe toujours pas ». [mischievously] Alors, on vérifie ?"
-    },
-    {
-      "scene": "dartmouth",
-      "say": "[warmly] En 1955, John McCarthy et trois collègues proposent un projet d'été à Dartmouth, avec un pari, décrire l'intelligence assez précisément pour qu'une machine la simule."
-    },
-    {
-      "scene": "mot",
-      "say": "[excited] Le mot nomme donc une discipline, pas une conscience. Si on parle de conscience, le débat reste ouvert. Si on parle de la discipline, la phrase est fausse."
-    },
-    {
-      "scene": "turing",
-      "say": "[curious] En 2025, des gens discutent cinq minutes avec un humain et avec GPT-4.5, à qui on a demandé de jouer un personnage. [excited] Dans 73 % des cas, c'est la machine qu'ils prennent pour l'humain."
+      "say": "[curious] C'est le titre d'un livre de Luc Julia, le cocréateur de Siri, paru en 2019, et la suite, sortie en 2025, précise qu'elle n'existe toujours pas."
     },
     {
       "scene": "senat",
-      "say": "[mischievously] Et le meilleur, c'est qu'au Sénat, en juin 2025, Luc Julia a déclaré que ces IA sont déjà plus intelligentes que nous dans leurs domaines… et depuis longtemps. [pause] Pas mal, pour une chose qui n'existe pas."
+      "say": "[warmly] Le 18 juin 2025, devant les sénateurs, il affirme pourtant que ces IA sont plus intelligentes que nous depuis longtemps, dans les domaines pour lesquels on les a créées."
+    },
+    {
+      "scene": "mot",
+      "say": "[curious] Ces deux phrases tiennent ensemble parce qu'il joue sur le mot. Une machine consciente, personne n'en a jamais montré, mais la discipline qui s'appelle IA existe depuis 1956."
+    },
+    {
+      "scene": "dartmouth",
+      "say": "[mischievously] La présentation de son livre raconte que cette discipline n'avait rien à voir avec l'intelligence, alors que le projet de 1955 pariait justement qu'on pourrait la décrire assez précisément pour qu'une machine la simule."
+    },
+    {
+      "scene": "turing",
+      "say": "[excited] Soixante-dix ans plus tard, quand on demande à GPT-4.5 de jouer un personnage, des gens qui lui parlent cinq minutes le prennent pour l'humain dans 73 % des cas, bien plus souvent que le vrai humain."
     },
     {
       "scene": "chute",
-      "say": "[softly] Alors la prochaine fois qu'on te dit que l'IA n'existe pas, demande juste… [pause] de quelle intelligence on parle."
+      "say": "[softly] Alors l'IA existe bien, et ce que personne n'a montré, c'est une machine consciente. [mischievously] Il suffisait d'un mot de plus dans le titre."
     }
   ],
-  "quoted": [
-    "L'intelligenceartificiellen'existetoujourspas"
-  ],
+  "quoted": [],
   "display": {},
   "nocaption": [
     "hook"

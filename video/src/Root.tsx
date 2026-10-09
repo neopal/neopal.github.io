@@ -21,6 +21,7 @@ import {OpenWeights, OPENWEIGHTS_DURATION} from './OpenWeights';
 import {PredictionVoix, PREDICTIONVOIX_DURATION} from './PredictionVoix';
 import {HallucinationVoix, HALLUCINATIONVOIX_DURATION} from './HallucinationVoix';
 import {MytheExistePasVoix, MYTHEEXISTEPASVOIX_DURATION} from './MytheExistePasVoix';
+import {MytheBaseVoix, MYTHEBASEVOIX_DURATION} from './MytheBaseVoix';
 
 // Les shorts dans une seule entrée (stills et rendus partagent le même bundle).
 const C = {fps: 30, width: 1080, height: 1920} as const;
@@ -48,5 +49,6 @@ export const Root: React.FC = () => (
     <Composition id="PredictionVoix" component={PredictionVoix} durationInFrames={PREDICTIONVOIX_DURATION} {...C} />
     <Composition id="HallucinationVoix" component={HallucinationVoix} durationInFrames={HALLUCINATIONVOIX_DURATION} {...C} />
     <Composition id="MytheExistePasVoix" component={MytheExistePasVoix} durationInFrames={MYTHEEXISTEPASVOIX_DURATION} {...C} />
+    <Composition id="MytheBaseVoix" component={MytheBaseVoix} durationInFrames={MYTHEBASEVOIX_DURATION} {...C} />
   </>
 );
