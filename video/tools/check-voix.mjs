@@ -5,7 +5,7 @@
 import {readFileSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {dirname, join} from 'node:path';
-import {makeChunks, CAP_MAX, CAP_MIN_S} from '../src/voix/chunks.mjs';
+import {makeChunks, lineCount, CAP_LINES, CAP_MIN_S} from '../src/voix/chunks.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const [id, comp] = process.argv.slice(2);
@@ -20,7 +20,7 @@ for (const c of chunks) {
   const flags = [];
   if (c.quote) flags.push('masqué (déjà écrit à l’écran)');
   else {
-    if (c.text.length > CAP_MAX) flags.push(`TROP LONG (${c.text.length} > ${CAP_MAX} car.)`);
+    if (lineCount(c.words) > CAP_LINES) flags.push(`TROP LONG (${lineCount(c.words)} lignes)`);
     if (s < CAP_MIN_S - 1 / 30) flags.push /* une image de tolérance */(`TROP BREF (${s.toFixed(2)} s < ${CAP_MIN_S} s)`);
   }
   if (flags.some((f) => f.startsWith('TROP'))) bad++;

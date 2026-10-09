@@ -88,8 +88,8 @@ export const makeVoix = (align: Align, script: Script, music?: string) => {
       <AccentProvider accent={accent}>
         <AbsoluteFill style={{background: '#000'}}>
           {align.audio ? <Audio src={staticFile(`voix/${align.id}.mp3`)} /> : null}
-          {/* Musique sous la voix : la piste du short, une piste réutilisée, ou le beat commun des shorts muets. */}
-          <Audio loop src={staticFile(music ?? (align.music ? `voix/${align.id}-music.mp3` : 'beat.mp3'))} volume={(f) => (align.audio ? 0.16 : 0.6) * fadeOut(f)} />
+          {/* Musique sous la voix : la piste du short, une piste réutilisée, ou le beat commun des shorts muets. Volume 0,11 sous la voix (0,16 jusqu'au short Base de données, jugé trop fort par PA le 2026-10-09). */}
+          <Audio loop src={staticFile(music ?? (align.music ? `voix/${align.id}-music.mp3` : 'beat.mp3'))} volume={(f) => (align.audio ? 0.11 : 0.6) * fadeOut(f)} />
           <Oscillo />
           {SEGS.map((s, i) => (
             <Sequence key={s.scene} from={FROM[i]} durationInFrames={LEN[i]}>
