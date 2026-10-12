@@ -1,0 +1,67 @@
+{
+  "id": "fenetre",
+  "term": "fenetre-de-contexte",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[calmly] C'est quoi ? la fenêtre de contexte…"
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Tu lui donnes une consigne au début de la conversation, et une heure plus tard, il fait comme si tu n'avais rien dit."
+    },
+    {
+      "scene": "paquet",
+      "say": "[warmly] À chaque message, l'application lui renvoie tout le paquet, tes consignes, l'historique, tes fichiers et ta question, et le modèle n'a pas d'autre mémoire que ce paquet."
+    },
+    {
+      "scene": "nom",
+      "say": "La taille maximale de ce paquet, comptée en tokens, c'est la fenêtre de contexte, ou en anglais, /ˈkɑntɛkst ˈwɪndoʊ/."
+    },
+    {
+      "scene": "tableau",
+      "say": "[mischievously] Imagine le tableau blanc de la salle de réunion, que Patrick efface par le coin quand il est plein, si bien qu'à seize heures, plus personne ne sait pourquoi on avait tout décidé en orange."
+    },
+    {
+      "scene": "proust",
+      "say": "[curious] En 2023, GPT-4 lisait 8 000 tokens d'un coup, à peine 3 % de Du côté de chez Swann, et depuis 2024, certains modèles en lisent un million, presque quatre fois le livre."
+    },
+    {
+      "scene": "limite",
+      "say": "[warmly] Sauf qu'une grande fenêtre ne garantit pas une bonne lecture, et en 2025, sur 18 modèles testés, tous devenaient moins fiables à mesure que le texte s'allongeait."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors si ta consigne a disparu, redonne-la… [pause] ou repars d'une conversation neuve, avec un résumé."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈkɑntɛkst": "context",
+    "ˈwɪndoʊ/": "window"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "sources": [
+    "Fiche fenetre-de-contexte de lexique/terms.js : le paquet renvoyé à chaque message, l'image du tableau blanc, la question « Entendu au bureau »",
+    "Du côté de chez Swann compté avec tiktoken (o200k_base) le 2 octobre 2026 : 265 851 tokens ; 8 000 / 265 851 = 3 % ; 1 000 000 / 265 851 = 3,76 ; https://www.gutenberg.org/ebooks/2650",
+    "Wikipédia, GPT-4 (fenêtre de 8 000 tokens en 2023) ; Wikipédia, Gemini (1.5 Pro, 1 million de tokens, février 2024)",
+    "Chroma, Context Rot, juillet 2025 : 18 modèles testés, tous moins fiables quand le texte s'allonge ; https://www.trychroma.com/research/context-rot"
+  ],
+  "credits": [],
+  "onscreen": {
+    "nom": [
+      "c'est la fenêtre de contexte, ou en anglais, context window."
+    ]
+  }
+}

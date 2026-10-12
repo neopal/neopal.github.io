@@ -1,0 +1,71 @@
+{
+  "id": "lit-mot-par-mot",
+  "term": "mythe-lit-mot-par-mot",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "todo": "Phrase du hook provisoire (le titre de la fiche) : pas de citation réelle et sourcée trouvée le 2026-10-12.",
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[calmly] « L'IA lit mot par mot »… en réalité, il ne voit jamais un seul mot."
+    },
+    {
+      "scene": "melange",
+      "say": "[curious] Écris-lui une phrase aux lettres mélangées, « Ce txete a les ltetres mélagnées »… et il la remet d'aplomb sans problème."
+    },
+    {
+      "scene": "tokens",
+      "say": "[warmly] Pourtant, il ne l'a jamais reçue en mots, le tokenizer l'a hachée en 28 morceaux, comme « tx » ou « bol », quand la phrase correcte en donne 17."
+    },
+    {
+      "scene": "bloc",
+      "say": "[curious] Et il ne lit pas de gauche à droite non plus, il reçoit tous ces morceaux d'un coup, et chacun regarde tous les autres en même temps."
+    },
+    {
+      "scene": "nom",
+      "say": "Ce passage d'un seul bloc s'appelle le /ˈpɹiːfɪl/, et la réponse, elle, s'écrit ensuite un token à la fois."
+    },
+    {
+      "scene": "prof",
+      "say": "[mischievously] Imagine Madame Lemoine, qui repère le paragraphe raté d'un coup d'œil sur la copie… puis il lui faut la matinée pour écrire ses commentaires au stylo rouge, mot après mot."
+    },
+    {
+      "scene": "pese",
+      "say": "[warmly] Mais tout lire d'un coup ne veut pas dire tout peser pareil, et en 2025, dans un texte de 32 000 tokens, GPT-4o ne retrouvait un détail caché que dans 70 % des cas, contre 99 % dans un texte court."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors colle ton document d'abord et ta question à la fin… [pause] en reprenant ses mots exacts."
+    }
+  ],
+  "quoted": [
+    "Cetxetealesltetresmélagnées"
+  ],
+  "display": {
+    "/ˈpɹiːfɪl/,": "prefill,"
+  },
+  "nocaption": [],
+  "sources": [
+    "Fiche mythe-lit-mot-par-mot de lexique/terms.js : découpages tiktoken o200k_base (17 et 28 tokens, « tx », « bol »), prefill et decode, image de Madame Lemoine, conseil d'Anthropic (document en haut, question à la fin) ; découpage de la moitié montrée à l'écran, « Ce txete a les ltetres mélagnées », recompté le 2026-10-12 : Ce | tx | ete | a | les | lt | et | res | mél | agn | ées (11 tokens)",
+    "Cao et al. (université de Tokyo), Unnatural Error Correction, 30 novembre 2023 ; https://arxiv.org/abs/2311.18805",
+    "Vaswani et al., Attention Is All You Need, juin 2017 ; https://arxiv.org/abs/1706.03762",
+    "Modarressi et al. (Adobe Research), NoLiMa, 7 février 2025 : GPT-4o de 99,3 % à 69,7 % à 32K tokens ; https://arxiv.org/abs/2502.05167",
+    "Anthropic, Prompting best practices (« Put longform data at the top », question à la fin) ; https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
+  ],
+  "credits": [],
+  "onscreen": {
+    "nom": [
+      "s'appelle le prefill,"
+    ],
+    "hook": [
+      "« L'IA lit mot par mot »…"
+    ]
+  }
+}

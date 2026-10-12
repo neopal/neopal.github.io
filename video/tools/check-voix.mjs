@@ -14,7 +14,7 @@ const TAIL = 2;
 const align = JSON.parse(readFileSync(join(ROOT, 'src/voix', `${id}.align.json`), 'utf8'));
 const script = JSON.parse(readFileSync(join(ROOT, 'src/voix', `${id}.script.json`), 'utf8'));
 let bad = 0;
-const chunks = makeChunks(align.segments, align.duration + TAIL, script.quoted ?? [], script.nocaption ?? []);
+const chunks = makeChunks(align.segments, align.duration + TAIL, script.quoted ?? [], script.nocaption ?? [], script.onscreen ?? {});
 for (const c of chunks) {
   const s = (c.to - c.from) / 30;
   const flags = [];

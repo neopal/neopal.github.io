@@ -1,0 +1,64 @@
+{
+  "id": "rag",
+  "term": "rag",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "format": "Entendu au bureau (test, calendrier-shorts.md) : la question d'un collègue, la réponse en moins d'une minute",
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[calmly] « Le chatbot RH est branché sur nos documents, donc il ne peut pas se tromper ? »… entendu à la machine à café."
+    },
+    {
+      "scene": "base",
+      "say": "[warmly] Cette fois, il y a bien une base de documents, rangée à côté du modèle, et avant chaque réponse, un programme y cherche les passages qui parlent de ta question."
+    },
+    {
+      "scene": "colle",
+      "say": "Il les colle sous les yeux du modèle, avec ta question, et le modèle répond en les lisant, sans rien en garder ensuite."
+    },
+    {
+      "scene": "nom",
+      "say": "Ça s'appelle le RAG, pour /ɹɪˈtɹiːvəl ˈɔːɡmɛntɪd ˌdʒɛnəˈɹeɪʃən/."
+    },
+    {
+      "scene": "sylvie",
+      "say": "[mischievously] Imagine l'assistante de Sylvie, qui imprime les trois mails du dossier avant chaque rendez-vous… Sylvie a l'air de connaître le client par cœur, et le lendemain, elle ne se souvient de rien."
+    },
+    {
+      "scene": "erreur",
+      "say": "[curious] Mais si la recherche ramène le mauvais mail, le modèle répond quand même, et en 2024, des outils juridiques vendus comme fiables grâce au RAG se trompaient encore sur 17 à 33 % des questions."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors avant de croire sa réponse… [pause] regarde le passage qu'il cite."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ɹɪˈtɹiːvəl": "Retrieval",
+    "ˈɔːɡmɛntɪd": "Augmented",
+    "ˌdʒɛnəˈɹeɪʃən/.": "Generation."
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "sources": [
+    "Fiche rag de lexique/terms.js : le principe, l'image de Sylvie, la réponse « Entendu au bureau » (regarder le passage cité)",
+    "Magesh et al., Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools, 30 mai 2024 (Lexis+ AI et l'assistant de Westlaw : 17 % à 33 % d'hallucinations) ; https://arxiv.org/abs/2405.20362",
+    "Lewis et al., Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks, 22 mai 2020 ; https://arxiv.org/abs/2005.11401"
+  ],
+  "credits": [],
+  "onscreen": {
+    "nom": [
+      "Ça s'appelle le RAG, pour Retrieval Augmented Generation."
+    ]
+  }
+}

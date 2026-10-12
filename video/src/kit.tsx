@@ -1,6 +1,6 @@
 // Briques communes des shorts du Lexique IA (règles vidéo v2, content/dico/univers.md).
 import React, {createContext, useContext} from 'react';
-import {AbsoluteFill, Audio, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Easing, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {loadFont as loadSerif} from '@remotion/google-fonts/Newsreader';
 import {loadFont as loadMono} from '@remotion/google-fonts/IBMPlexMono';
 
@@ -54,6 +54,29 @@ export const Pop: React.FC<{at: number; children: React.ReactNode; style?: React
       {children}
     </div>
   );
+};
+
+// ---------- Mouvement (univers.md, « Le mouvement ») ----------
+
+// Slow in / slow out : un mouvement n'est jamais linéaire. `out` (par défaut) part vite et se pose doucement,
+// pour ce qui entre, se dessine ou se remplit ; `inOut` démarre et s'arrête en douceur, pour ce qui se déplace
+// d'un point à un autre ou s'efface. Seul un compte calé mot à mot sur la voix reste linéaire.
+export const ease = (frame: number, from: number, to: number, range: [number, number] = [0, 1], curve: 'out' | 'inOut' = 'out') =>
+  interpolate(frame, [from, to], range, {...clamp, easing: curve === 'out' ? Easing.out(Easing.cubic) : Easing.inOut(Easing.cubic)});
+
+// Arcs : ce qui vole d'un point à un autre suit une courbe (Bézier quadratique), soulevée de `lift` px à mi-chemin.
+export const arc = (p: number, from: [number, number], to: [number, number], lift: number): [number, number] => {
+  const cx = (from[0] + to[0]) / 2;
+  const cy = (from[1] + to[1]) / 2 - 2 * lift;
+  const q = 1 - p;
+  return [q * q * from[0] + 2 * q * p * cx + p * p * to[0], q * q * from[1] + 2 * q * p * cy + p * p * to[1]];
+};
+
+// Squash & stretch à l'impact : renvoie [sx, sy] à volume constant (sx * sy = 1), écrasé juste après l'image `hit`.
+// Réservé aux objets qui tombent ou frappent (tampon, balle) : ailleurs, ça jure avec le style sec.
+export const squash = (frame: number, hit: number, amount = 0.14): [number, number] => {
+  const s = interpolate(frame - hit, [0, 3, 10], [0, 1, 0], clamp);
+  return [1 + amount * s, 1 / (1 + amount * s)];
 };
 
 // Progression linéaire 0 -> 1 entre deux images.
@@ -148,7 +171,8 @@ export const Scene: React.FC<{caps?: Caps; children?: React.ReactNode; bottom?: 
       <div style={zone(ZONE.cap, {justifyContent: 'flex-start'})}>
         <CapLayer caps={caps} />
       </div>
-      <div style={zone(ZONE.center, {justifyContent: 'center', gap})}>{children}</div>
+      {/* « safe center » : un schéma plus haut que sa zone déborde vers le bas, jamais vers les légendes du haut. */}
+      <div style={zone(ZONE.center, {justifyContent: 'safe center', gap})}>{children}</div>
       <div style={zone(ZONE.bottom, {justifyContent: 'center'})}>{bottom}</div>
     </AbsoluteFill>
   );

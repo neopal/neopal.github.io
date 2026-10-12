@@ -1,0 +1,61 @@
+{
+  "id": "taux-d-erreur",
+  "term": "mythe-taux-d-erreur",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[calmly] « Ces IA sont pertinentes à 64 %… dans 36 % des cas, elles racontent n'importe quoi »… entendu au Sénat, en juin 2025."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Alors, il se trompe une fois sur trois ? Le chiffre vient d'une étude de Hong Kong, qui mesurait tout autre chose."
+    },
+    {
+      "scene": "etude",
+      "say": "[warmly] En 2023, les chercheurs ont donné à ChatGPT 634 exercices de raisonnement, et il en réussissait 64 % en moyenne."
+    },
+    {
+      "scene": "paintball",
+      "say": "[mischievously] Sur des questions de bon sens, comme savoir si on peut avaler une balle de paintball, il en réussissait 28 sur 30."
+    },
+    {
+      "scene": "enchaine",
+      "say": "[curious] Sur des questions qui obligent à enchaîner deux informations, il n'en réussissait plus que 8 sur 30."
+    },
+    {
+      "scene": "comptoir",
+      "say": "[warmly] Imagine le patron du bar, infaillible sur les expressos, mais au quinté, à côté neuf fois sur dix… faire sa moyenne n'aurait aucun sens."
+    },
+    {
+      "scene": "resumes",
+      "say": "[curious] En 2026 encore, quand des modèles résument un article, le meilleur ajoute un fait absent du texte dans 1,8 % des résumés, et le moins bon dans 24 %."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] L'IA n'a donc pas de taux d'erreur… [pause] seulement le tien, que tu mesures sur cinquante cas dont tu connais la réponse."
+    }
+  ],
+  "quoted": [],
+  "display": {},
+  "nocaption": [
+    "hook"
+  ],
+  "sources": [
+    "Sénat, commission des affaires économiques, audition du 18 juin 2025, compte rendu : « En réalité, ces IA sont pertinentes à 64 %, un chiffre qui peut surprendre, car il signifie que dans 36 % des cas, elles racontent n'importe quoi. » ; https://www.senat.fr/compte-rendu-commissions/20250616/affeco.html",
+    "Bang et al. (HKUST), A Multitask, Multilingual, Multimodal Evaluation of ChatGPT on Reasoning, Hallucination, and Interactivity, février 2023 : 634 exemples de raisonnement, 64,33 % de réussite moyenne ; Pep-3k (bon sens, « man swallow paintball ») 28/30 ; HotpotQA (deux étapes) 8/30 ; https://arxiv.org/abs/2302.04023",
+    "Vectara, Hallucination Leaderboard, mis à jour le 22 septembre 2026 : de 1,8 % à 24,2 % de résumés avec un fait absent de l'article ; https://github.com/vectara/hallucination-leaderboard",
+    "Image du comptoir : fiche mythe-taux-d-erreur de lexique/terms.js"
+  ],
+  "credits": [
+    "Portrait pixel art de Luc Julia d'après « Luc Julia 2019 (cropped).jpg », Conseil économique, social et environnemental (CESE), CC BY 3.0, via Wikimedia Commons : https://commons.wikimedia.org/wiki/File:Luc_Julia_2019_(cropped).jpg"
+  ]
+}

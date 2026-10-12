@@ -8,7 +8,7 @@ Référence validée : Prédiction du token suivant (2026-10-07), rendu dans `vi
 
 | Fichier | Rôle |
 |---|---|
-| `src/voix/<id>.script.json` | Le texte dit, découpé en segments (un par scène), avec les indications de jeu ; `quoted`, `nocaption` et `display` règlent les sous-titres |
+| `src/voix/<id>.script.json` | Le texte dit, découpé en segments (un par scène), avec les indications de jeu ; `quoted`, `nocaption`, `onscreen` et `display` règlent les sous-titres |
 | `public/voix/<id>.mp3` | La voix retenue |
 | `public/voix/<id>-music.mp3` | La musique |
 | `src/voix/<id>.words.json` | La transcription mot à mot de la voix (Scribe), source du calage |
@@ -17,6 +17,8 @@ Référence validée : Prédiction du token suivant (2026-10-07), rendu dans `vi
 | `src/voix/VoixShort.tsx` | Le moteur commun : calage, sous-titres, hook titre, musique, montage |
 | `src/voix/_modele.script.json` | Le modèle de texte d'un nouveau short |
 | `src/voix/chunks.mjs` | Le découpage des sous-titres, partagé avec le contrôle |
+| `src/voix/Parts.tsx` | Les pièces communes des scènes : le modèle, une bulle, un document, le tampon, une croix |
+| `src/voix/Pixel.tsx` | Les personnages en pixel art (patron, Nadia, Sylvie, Madame Lemoine…), qui clignent des yeux |
 
 ## Démarrer un nouveau short
 

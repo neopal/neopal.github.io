@@ -1276,7 +1276,7 @@ Entre Llama 3, sorti en juillet 2024, et Qwen3, publié en mai 2025, la quantit�
 - Fine-tuning : https://neopal.github.io/lexique/fine-tuning/
 - RLHF : https://neopal.github.io/lexique/rlhf/
 - Date de coupure : https://neopal.github.io/lexique/date-de-coupure/
-- L'IA apprend de nos conversations : https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/
+- L'IA apprend en direct de nos conversations : https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/
 
 ### Sources
 
@@ -1465,7 +1465,7 @@ Pour l'actualité, les assistants contournent la limite en cherchant sur le web 
 - RAG : https://neopal.github.io/lexique/rag/
 - L'IA cherche la réponse dans une base : https://neopal.github.io/lexique/mythe-base-de-donnees/
 - Hallucination : https://neopal.github.io/lexique/hallucination/
-- L'IA apprend de nos conversations : https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/
+- L'IA apprend en direct de nos conversations : https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/
 - L'IA a lu tout Internet, donc elle sait tout : https://neopal.github.io/lexique/mythe-a-lu-tout-internet/
 
 ### Sources
@@ -2330,7 +2330,7 @@ Le second brain de 2022 se tenait à la main, et c'est toi qui surlignais, résu
 - RAG : https://neopal.github.io/lexique/rag/
 - Context engineering : https://neopal.github.io/lexique/context-engineering/
 - Fenêtre de contexte : https://neopal.github.io/lexique/fenetre-de-contexte/
-- L'IA apprend de nos conversations : https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/
+- L'IA apprend en direct de nos conversations : https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/
 
 ### Sources
 
@@ -2528,16 +2528,16 @@ Savoir se taire s'entraîne, et ça peut aussi se perdre. En juin 2025, Abstenti
 - Kalai et al., Why Language Models Hallucinate, 4 septembre 2025 (l'anniversaire d'Adam Tauman Kalai demandé à DeepSeek-V3) : https://arxiv.org/abs/2509.04664
 - Kirichenko et al., AbstentionBench: Reasoning LLMs Fail on Unanswerable Questions, 10 juin 2025 (20 modèles, abstention en baisse de 24 % après l'entraînement au raisonnement) : https://arxiv.org/abs/2506.09038
 
-## L'IA apprend de nos conversations
+## L'IA apprend en direct de nos conversations
 
 URL : https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/
 Catégorie : Mythes vs réalité
-En anglais : Myth: AI learns from our conversations
+En anglais : Myth: AI learns from our conversations in real time
 Variantes anglaises : it learns from me, chat history
 
 ### Définition courte
 
-Pendant une conversation, un modèle ne change pas : ses paramètres restent figés, et ce qu'un assistant semble retenir d'une fois sur l'autre vient d'une mémoire que le produit stocke à part et lui fait relire.
+Pendant une conversation, un modèle ne change pas : ses paramètres restent figés, et ce qu'un assistant semble retenir d'une fois sur l'autre vient d'une mémoire que le produit stocke à part et lui fait relire ; tes conversations, elles, peuvent servir à entraîner le modèle suivant.
 
 ### L'image
 
@@ -2553,7 +2553,9 @@ Un modèle apprend une fois, pendant son entraînement, puis ses paramètres son
 
 L'impression qu'il apprend vient d'une couche ajoutée par le produit. ChatGPT propose une mémoire où il garde ce que tu lui demandes de retenir, et peut aussi se référer à tes anciennes conversations. Claude a lancé la sienne le 11 septembre 2025, sous forme de résumés de tes échanges, séparés par projet, que tu peux lire et modifier dans les réglages. Dans les deux cas, ces notes sont stockées à part et recollées dans le contexte de la conversation suivante, comme un document joint.
 
-Que tes échanges nourrissent un jour l'entraînement d'un autre modèle relève d'un autre réglage. Depuis le 28 août 2025, Anthropic demande aux utilisateurs de Claude Free, Pro et Max s'ils acceptent que leurs conversations servent à l'entraînement. Elles sont alors conservées cinq ans, contre trente jours en cas de refus ; les offres professionnelles et l'API ne sont pas concernées. Même acceptée, ta conversation laisse intact le modèle que tu utilises, elle rejoint les données d'un modèle à venir.
+Que tes échanges nourrissent un jour l'entraînement d'un autre modèle relève d'un autre réglage, et là, nos conversations servent bel et bien. Chez ChatGPT, l'option « Améliorer le modèle pour tout le monde » est activée par défaut sur les comptes personnels, et on la coupe dans les réglages. Depuis le 28 août 2025, Anthropic demande aux utilisateurs de Claude Free, Pro et Max s'ils acceptent que leurs conversations servent à l'entraînement. Elles sont alors conservées cinq ans, contre trente jours en cas de refus ; les offres professionnelles et l'API ne sont pas concernées. Même acceptée, ta conversation laisse intact le modèle que tu utilises, elle rejoint les données d'un modèle à venir.
+
+Un modèle qui apprend pendant qu'on lui parle existe en recherche. Titans, publié par Google Research le 31 décembre 2024 et présenté à NeurIPS 2025, ajoute au modèle un module de mémoire dont les paramètres continuent de changer pendant l'utilisation, en retenant d'abord ce qui le surprend. Nested Learning, publié par la même équipe le 31 décembre 2025, prolonge l'idée avec Hope, un module qui se modifie lui-même pour apprendre en continu en oubliant moins ce qu'il savait. À l'automne 2026, ChatGPT, Claude et Gemini n'annoncent rien de tel : leurs modèles restent figés entre deux versions.
 
 ### Dans le jargon
 
@@ -2568,7 +2570,7 @@ Que tes échanges nourrissent un jour l'entraînement d'un autre modèle relève
 
 ### À éviter
 
-« Il me connaît maintenant. » Il relit des notes sur toi que le produit a gardées, et que tu peux ouvrir, corriger ou effacer dans les réglages.
+« Il me connaît maintenant. » Il relit des notes sur toi que le produit a gardées, et que tu peux ouvrir, corriger ou effacer dans les réglages. L'inverse, « rien de ce que je lui dis ne sert », est faux aussi : sauf réglage contraire, tes conversations peuvent entraîner le modèle suivant.
 
 ### Termes liés
 
@@ -2585,6 +2587,9 @@ Que tes échanges nourrissent un jour l'entraînement d'un autre modèle relève
 - Claude, Bringing memory to Claude, 11 septembre 2025 (résumés par projet, consultables et modifiables, mode incognito) : https://claude.com/blog/memory
 - Anthropic, Updates to Consumer Terms and Privacy Policy, 28 août 2025 (choix d'entraînement pour Free, Pro et Max, conservation de cinq ans ou de 30 jours) : https://www.anthropic.com/news/updates-to-our-consumer-terms
 - Wikipédia, ChatGPT (mémoire et rappel des anciennes conversations ; 900 millions d'utilisateurs hebdomadaires en février 2026) : https://en.wikipedia.org/wiki/ChatGPT
+- TechRadar, Your ChatGPT data automatically trains its AI models unless you turn off this setting (option « Improve the model for everyone » activée par défaut sur les comptes personnels) : https://www.techradar.com/computing/artificial-intelligence/your-chatgpt-data-automatically-trains-its-ai-models-unless-you-turn-off-this-setting
+- Behrouz, Zhong, Mirrokni (Google Research), Titans: Learning to Memorize at Test Time, 31 décembre 2024, NeurIPS 2025 (module de mémoire à long terme mis à jour pendant l'utilisation, guidé par la surprise) : https://arxiv.org/abs/2501.00663
+- Behrouz, Razaviyayn, Zhong, Mirrokni (Google Research), Nested Learning: The Illusion of Deep Learning Architectures, 31 décembre 2025 (Hope, module qui se modifie lui-même pour l'apprentissage continu) : https://arxiv.org/abs/2512.24695
 
 ## ChatGPT, c'est le modèle
 
@@ -6251,7 +6256,7 @@ En février 2024, la mémoire de ChatGPT tenait dans quelques phrases que tu pou
 ### Termes liés
 
 - Fenêtre de contexte : https://neopal.github.io/lexique/fenetre-de-contexte/
-- L'IA apprend de nos conversations : https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/
+- L'IA apprend en direct de nos conversations : https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/
 - Second brain : https://neopal.github.io/lexique/second-brain/
 - RAG : https://neopal.github.io/lexique/rag/
 - Prompt injection : https://neopal.github.io/lexique/prompt-injection/
@@ -9655,7 +9660,7 @@ Dans Claude Code, chaque session démarre avec une fenêtre de contexte neuve, s
 
 - Fenêtre de contexte : https://neopal.github.io/lexique/fenetre-de-contexte/
 - Mémoire : https://neopal.github.io/lexique/memoire/
-- L'IA apprend de nos conversations : https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/
+- L'IA apprend en direct de nos conversations : https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/
 - Compaction du contexte : https://neopal.github.io/lexique/compaction-du-contexte/
 - AGENTS.md : https://neopal.github.io/lexique/agents-md/
 - Context rot : https://neopal.github.io/lexique/context-rot/

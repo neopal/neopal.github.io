@@ -13,12 +13,15 @@ loadSerif('normal', {weights: ['600'], subsets: ['latin', 'latin-ext']});
 export const FPS = 30;
 export const TAIL = 2; // secondes d'image finale après le dernier mot
 export const LABEL = '#cfcfcf'; // libellés secondaires : jamais plus sombre, pour rester lisibles sur un téléphone
+// Écart entre le bas des sous-titres et le haut du schéma : le schéma qui entre (Pop part de plus bas et plus petit)
+// ou qui dépasse un peu ne touche jamais le sous-titre (retour PA sur l'épisode Fenêtre, 2026-10-12).
+export const CAP_GAP = 140;
 export const blink = (frame: number) => (frame % 20 < 12 ? 1 : 0.35);
 
 export type Word = {w: string; start: number; end: number};
 export type Seg = {scene: string; start: number; end: number; words: Word[]};
 type Align = {id: string; audio: boolean; music: boolean; duration: number; segments: Seg[]};
-type Script = {quoted?: string[]; nocaption?: string[]};
+type Script = {quoted?: string[]; nocaption?: string[]; onscreen?: Record<string, string[]>};
 type Chunk = {words: Word[]; from: number; to: number; quote: boolean};
 
 // id : le nom des fichiers (public/voix/<id>.mp3, <id>-music.mp3) ; music : une autre piste, pour en réutiliser une.
@@ -40,7 +43,7 @@ export const makeVoix = (align: Align, script: Script, music?: string) => {
   };
 
   // Sous-titres : la phrase dite, par groupes de 2 lignes au plus, le mot en cours en couleur.
-  const CHUNKS = makeChunks(SEGS, align.duration + TAIL, script.quoted ?? [], script.nocaption ?? []) as Chunk[];
+  const CHUNKS = makeChunks(SEGS, align.duration + TAIL, script.quoted ?? [], script.nocaption ?? [], script.onscreen ?? {}) as Chunk[];
   const Captions: React.FC = () => {
     const frame = useCurrentFrame();
     const {fps} = useVideoConfig();
@@ -51,7 +54,7 @@ export const makeVoix = (align: Align, script: Script, music?: string) => {
     const t = frame / FPS;
     const cur = c.words.reduce((k, w, i) => (t >= w.start - 0.04 ? i : k), -1);
     return (
-      <div style={{position: 'absolute', left: PAD, right: PAD, bottom: 1920 - ZONE.center.top + 10, transform: `translateY(${(1 - p) * 30}px)`, opacity: p}}>
+      <div style={{position: 'absolute', left: PAD, right: PAD, bottom: 1920 - ZONE.center.top + CAP_GAP, transform: `translateY(${(1 - p) * 30}px)`, opacity: p}}>
         <div style={{fontFamily: serif, fontWeight: 600, fontSize: 84, lineHeight: 1.1, letterSpacing: '-0.01em'}}>
           {c.words.map((w, k) => (
             <span key={k} style={{color: k === cur ? accent : k < cur ? '#fff' : '#a8a8a8'}}>

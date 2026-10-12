@@ -3193,8 +3193,8 @@ window.DICO_TERMS = [
     "id": "mythe-apprend-de-nos-conversations",
     "status": "live",
     "num": "39",
-    "title": "« L'IA apprend de nos conversations »",
-    "en": "Myth: AI learns from our conversations",
+    "title": "« L'IA apprend en direct de nos conversations »",
+    "en": "Myth: AI learns from our conversations in real time",
     "aliases": [
       "it learns from me",
       "chat history"
@@ -3214,7 +3214,7 @@ window.DICO_TERMS = [
         "means": "le réglage qui autorise ou non le fournisseur à se servir de tes conversations pour entraîner ses prochains modèles"
       }
     ],
-    "graphLabel": "Mythe : apprend de nos conversations",
+    "graphLabel": "Mythe : apprend en direct de nous",
     "cat": "mythes",
     "links": [
       "parametres",
@@ -3225,14 +3225,15 @@ window.DICO_TERMS = [
       "date-de-coupure",
       "memoire"
     ],
-    "short": "Pendant une conversation, un modèle ne change pas : ses paramètres restent figés, et ce qu'un assistant semble retenir d'une fois sur l'autre vient d'une mémoire que le produit stocke à part et lui fait relire.",
+    "short": "Pendant une conversation, un modèle ne change pas : ses paramètres restent figés, et ce qu'un assistant semble retenir d'une fois sur l'autre vient d'une mémoire que le produit stocke à part et lui fait relire ; tes conversations, elles, peuvent servir à entraîner le modèle suivant.",
     "image": "Au salon, Nadia te demande si c'est toujours « dégradé, pas trop court derrière ». Elle l'a lu sur ta fiche client trente secondes avant, et le jour où elle est en congé, sa remplaçante, qui ne t'a jamais vu, te pose la même question.",
     "imagine": "Dis à ton assistant, dans une conversation, que ton chat s'appelle Biscotte, puis ouvre une conversation incognito, si ton outil en propose une, et demande-lui comment s'appelle ton chat. Il n'en sait rien, parce que ce mode ne lui recolle aucune note et que la première conversation n'a jamais touché à ses paramètres.",
     "imagineForm": "B",
     "full": [
       "Un modèle apprend une fois, pendant son entraînement, puis ses paramètres sont figés, et chaque copie d'un modèle est identique pour tous ceux qui l'utilisent ; ChatGPT, qui en fait tourner plusieurs, revendiquait 900 millions d'utilisateurs hebdomadaires en février 2026. Ta conversation passe dans sa fenêtre de contexte, il s'en sert pour te répondre, et rien n'en reste dans le modèle une fois la réponse écrite.",
       "L'impression qu'il apprend vient d'une couche ajoutée par le produit. ChatGPT propose une mémoire où il garde ce que tu lui demandes de retenir, et peut aussi se référer à tes anciennes conversations. Claude a lancé la sienne le 11 septembre 2025, sous forme de résumés de tes échanges, séparés par projet, que tu peux lire et modifier dans les réglages. Dans les deux cas, ces notes sont stockées à part et recollées dans le contexte de la conversation suivante, comme un document joint.",
-      "Que tes échanges nourrissent un jour l'entraînement d'un autre modèle relève d'un autre réglage. Depuis le 28 août 2025, Anthropic demande aux utilisateurs de Claude Free, Pro et Max s'ils acceptent que leurs conversations servent à l'entraînement. Elles sont alors conservées cinq ans, contre trente jours en cas de refus ; les offres professionnelles et l'API ne sont pas concernées. Même acceptée, ta conversation laisse intact le modèle que tu utilises, elle rejoint les données d'un modèle à venir."
+      "Que tes échanges nourrissent un jour l'entraînement d'un autre modèle relève d'un autre réglage, et là, nos conversations servent bel et bien. Chez ChatGPT, l'option « Améliorer le modèle pour tout le monde » est activée par défaut sur les comptes personnels, et on la coupe dans les réglages. Depuis le 28 août 2025, Anthropic demande aux utilisateurs de Claude Free, Pro et Max s'ils acceptent que leurs conversations servent à l'entraînement. Elles sont alors conservées cinq ans, contre trente jours en cas de refus ; les offres professionnelles et l'API ne sont pas concernées. Même acceptée, ta conversation laisse intact le modèle que tu utilises, elle rejoint les données d'un modèle à venir.",
+      "Un modèle qui apprend pendant qu'on lui parle existe en recherche. Titans, publié par Google Research le 31 décembre 2024 et présenté à NeurIPS 2025, ajoute au modèle un module de mémoire dont les paramètres continuent de changer pendant l'utilisation, en retenant d'abord ce qui le surprend. Nested Learning, publié par la même équipe le 31 décembre 2025, prolonge l'idée avec Hope, un module qui se modifie lui-même pour apprendre en continu en oubliant moins ce qu'il savait. À l'automne 2026, ChatGPT, Claude et Gemini n'annoncent rien de tel : leurs modèles restent figés entre deux versions."
     ],
     "office": [
       {
@@ -3244,7 +3245,7 @@ window.DICO_TERMS = [
         "text": "Chaque conversation repart du même modèle, qui n'a rien gardé de la précédente ; mets la correction dans ses instructions personnalisées ou dans sa mémoire, et il la relira à chaque fois."
       }
     ],
-    "avoid": "« Il me connaît maintenant. » Il relit des notes sur toi que le produit a gardées, et que tu peux ouvrir, corriger ou effacer dans les réglages.",
+    "avoid": "« Il me connaît maintenant. » Il relit des notes sur toi que le produit a gardées, et que tu peux ouvrir, corriger ou effacer dans les réglages. L'inverse, « rien de ce que je lui dis ne sert », est faux aussi : sauf réglage contraire, tes conversations peuvent entraîner le modèle suivant.",
     "video": null,
     "sources": [
       {
@@ -3258,6 +3259,18 @@ window.DICO_TERMS = [
       {
         "label": "Wikipédia, ChatGPT (mémoire et rappel des anciennes conversations ; 900 millions d'utilisateurs hebdomadaires en février 2026)",
         "url": "https://en.wikipedia.org/wiki/ChatGPT"
+      },
+      {
+        "label": "TechRadar, Your ChatGPT data automatically trains its AI models unless you turn off this setting (option « Improve the model for everyone » activée par défaut sur les comptes personnels)",
+        "url": "https://www.techradar.com/computing/artificial-intelligence/your-chatgpt-data-automatically-trains-its-ai-models-unless-you-turn-off-this-setting"
+      },
+      {
+        "label": "Behrouz, Zhong, Mirrokni (Google Research), Titans: Learning to Memorize at Test Time, 31 décembre 2024, NeurIPS 2025 (module de mémoire à long terme mis à jour pendant l'utilisation, guidé par la surprise)",
+        "url": "https://arxiv.org/abs/2501.00663"
+      },
+      {
+        "label": "Behrouz, Razaviyayn, Zhong, Mirrokni (Google Research), Nested Learning: The Illusion of Deep Learning Architectures, 31 décembre 2025 (Hope, module qui se modifie lui-même pour l'apprentissage continu)",
+        "url": "https://arxiv.org/abs/2512.24695"
       }
     ]
   },

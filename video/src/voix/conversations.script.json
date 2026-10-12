@@ -1,0 +1,72 @@
+{
+  "id": "conversations",
+  "term": "mythe-apprend-de-nos-conversations",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "todo": "Phrase du hook provisoire (le titre de la fiche) : il manque une citation réelle et sourcée qui dise que le modèle apprend en direct, pendant la conversation. Tampon « PAS ENCORE » plutôt que « FAUX » : la recherche (Titans, Nested Learning) y travaille (retour PA, 2026-10-09).",
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[calmly] « L'IA apprend en direct de nos conversations »… pas encore."
+    },
+    {
+      "scene": "fige",
+      "say": "[curious] Pendant que tu lui parles, le modèle ne bouge pas, ses paramètres sont figés depuis la fin de son entraînement."
+    },
+    {
+      "scene": "fenetre",
+      "say": "Ta conversation passe dans sa fenêtre de contexte le temps de te répondre, puis rien n'en reste dans le modèle."
+    },
+    {
+      "scene": "memoire",
+      "say": "[warmly] Ce qu'il semble retenir d'une fois sur l'autre, c'est la mémoire, ou en anglais, /ˈmɛməɹi/, des notes sur toi que l'application garde à part et lui recolle au début de chaque conversation."
+    },
+    {
+      "scene": "salon",
+      "say": "[mischievously] Imagine Nadia, ta coiffeuse, qui te demande si c'est toujours « dégradé, pas trop court derrière »… elle vient de lire ta fiche client, et sa remplaçante te pose la même question."
+    },
+    {
+      "scene": "entrainement",
+      "say": "[warmly] Tes conversations servent quand même, plus tard, à entraîner le modèle suivant, et chez ChatGPT, c'est activé par défaut, sauf si tu le coupes dans les réglages."
+    },
+    {
+      "scene": "recherche",
+      "say": "[curious] Des chercheurs, chez Google notamment, testent des modèles qui apprennent pendant qu'on leur parle, mais les assistants du quotidien ne le font pas encore."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors s'il refait trois fois la même erreur… [pause] mets ta correction dans sa mémoire, c'est la fiche qu'il relit à chaque fois."
+    }
+  ],
+  "quoted": [
+    "dégradépastropcourtderrière"
+  ],
+  "display": {
+    "/ˈmɛməɹi/": "memory"
+  },
+  "nocaption": [],
+  "sources": [
+    "Fiche mythe-apprend-de-nos-conversations de lexique/terms.js (révisée le 2026-10-09) : paramètres figés, mémoire stockée à part et recollée, entraînement du modèle suivant, recherche sur l'apprentissage pendant l'usage, image du salon (Nadia), réponse « Entendu au bureau »",
+    "TechRadar : option « Improve the model for everyone » de ChatGPT activée par défaut sur les comptes personnels ; https://www.techradar.com/computing/artificial-intelligence/your-chatgpt-data-automatically-trains-its-ai-models-unless-you-turn-off-this-setting",
+    "Behrouz, Zhong, Mirrokni (Google Research), Titans: Learning to Memorize at Test Time, 31 décembre 2024, NeurIPS 2025 ; https://arxiv.org/abs/2501.00663",
+    "Behrouz et al. (Google Research), Nested Learning, 31 décembre 2025 ; https://arxiv.org/abs/2512.24695",
+    "Claude, Bringing memory to Claude, 11 septembre 2025 ; https://claude.com/blog/memory"
+  ],
+  "credits": [],
+  "onscreen": {
+    "memoire": [
+      "c'est la mémoire, ou en anglais, memory,"
+    ],
+    "hook": [
+      "« L'IA apprend en direct de nos conversations »…",
+      "pas encore."
+    ]
+  }
+}

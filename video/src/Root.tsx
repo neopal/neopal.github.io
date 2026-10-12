@@ -22,6 +22,13 @@ import {PredictionVoix, PREDICTIONVOIX_DURATION} from './PredictionVoix';
 import {HallucinationVoix, HALLUCINATIONVOIX_DURATION} from './HallucinationVoix';
 import {MytheExistePasVoix, MYTHEEXISTEPASVOIX_DURATION} from './MytheExistePasVoix';
 import {MytheBaseVoix, MYTHEBASEVOIX_DURATION} from './MytheBaseVoix';
+import {TemperatureVoix, TEMPERATUREVOIX_DURATION} from './TemperatureVoix';
+import {FenetreVoix, FENETREVOIX_DURATION} from './FenetreVoix';
+import {MytheConversationsVoix, MYTHECONVERSATIONSVOIX_DURATION} from './MytheConversationsVoix';
+import {MytheTauxVoix, MYTHETAUXVOIX_DURATION} from './MytheTauxVoix';
+import {RagVoix, RAGVOIX_DURATION} from './RagVoix';
+import {MytheLitVoix, MYTHELITVOIX_DURATION} from './MytheLitVoix';
+import {AgentVoix, AGENTVOIX_DURATION} from './AgentVoix';
 
 // Les shorts dans une seule entrée (stills et rendus partagent le même bundle).
 const C = {fps: 30, width: 1080, height: 1920} as const;
@@ -50,5 +57,12 @@ export const Root: React.FC = () => (
     <Composition id="HallucinationVoix" component={HallucinationVoix} durationInFrames={HALLUCINATIONVOIX_DURATION} {...C} />
     <Composition id="MytheExistePasVoix" component={MytheExistePasVoix} durationInFrames={MYTHEEXISTEPASVOIX_DURATION} {...C} />
     <Composition id="MytheBaseVoix" component={MytheBaseVoix} durationInFrames={MYTHEBASEVOIX_DURATION} {...C} />
+    <Composition id="TemperatureVoix" component={TemperatureVoix} durationInFrames={TEMPERATUREVOIX_DURATION} {...C} />
+    <Composition id="FenetreVoix" component={FenetreVoix} durationInFrames={FENETREVOIX_DURATION} {...C} />
+    <Composition id="MytheConversationsVoix" component={MytheConversationsVoix} durationInFrames={MYTHECONVERSATIONSVOIX_DURATION} {...C} />
+    <Composition id="MytheTauxVoix" component={MytheTauxVoix} durationInFrames={MYTHETAUXVOIX_DURATION} {...C} />
+    <Composition id="RagVoix" component={RagVoix} durationInFrames={RAGVOIX_DURATION} {...C} />
+    <Composition id="MytheLitVoix" component={MytheLitVoix} durationInFrames={MYTHELITVOIX_DURATION} {...C} />
+    <Composition id="AgentVoix" component={AgentVoix} durationInFrames={AGENTVOIX_DURATION} {...C} />
   </>
 );

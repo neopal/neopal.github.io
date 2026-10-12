@@ -1,0 +1,65 @@
+{
+  "id": "temperature",
+  "term": "temperature",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[calmly] C'est quoi ? la température…"
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Pose deux fois la même question à ChatGPT et la réponse change ; on pourrait croire qu'il hésite, alors qu'il tire au sort, et c'est voulu."
+    },
+    {
+      "scene": "tirage",
+      "say": "[warmly] À chaque mot, le modèle donne une probabilité à chaque suite possible, puis il en tire une au sort, comme une loterie où les favoris ont plus de tickets."
+    },
+    {
+      "scene": "nom",
+      "say": "La température, c'est le réglage qui dose ce hasard, ou en anglais, /ˈtɛmpɹətʃɚ/."
+    },
+    {
+      "scene": "dj",
+      "say": "[mischievously] Imagine le DJ d'un mariage, qui réglé au plus bas passe la chanson que tout le monde attend, et qui poussé à fond te sort du free jazz finlandais."
+    },
+    {
+      "scene": "bar",
+      "say": "[curious] Pour baptiser un bar, à température basse, il propose « Le Comptoir » presque à chaque fois, et à température haute, il ose « Le Zinc », « Le Refuge », et même « Le Hibou »."
+    },
+    {
+      "scene": "feynman",
+      "say": "[warmly] Même réglé à zéro, le hasard ne disparaît pas tout à fait, puisqu'en 2025, un labo a posé mille fois la même question à un modèle, et obtenu 80 réponses différentes."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Une température basse rend donc le modèle prévisible, pas plus juste… [pause] s'il se trompe, il se trompe pareil à chaque fois."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈtɛmpɹətʃɚ/": "temperature"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "sources": [
+    "Fiche temperature de lexique/terms.js : tirage, division des scores par la température ; noms de bar et scores illustratifs du short muet Température (src/Temperature.tsx), probabilités calculées par softmax (T = 0,3 : Comptoir 95 % ; T = 1,5 : 41 %, 21 %, 16 %, 12 %, 9 %)",
+    "Thinking Machines Lab (Horace He), Defeating Nondeterminism in LLM Inference, 10 septembre 2025 : 1 000 fois « Tell me about Richard Feynman » à Qwen3 à température 0, 80 réponses différentes ; https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/"
+  ],
+  "credits": [],
+  "onscreen": {
+    "nom": [
+      "La température,",
+      "ou en anglais, temperature."
+    ]
+  }
+}

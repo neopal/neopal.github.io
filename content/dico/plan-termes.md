@@ -157,7 +157,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | L'IA cherche la réponse dans une base | publié | | HO, ULT |
 | L'IA calcule | publié | | AGT, HO |
 | L'IA sait quand elle ne sait pas | publié | | ENT |
-| L'IA apprend de nos conversations | publié | | AGT, HO, ENT, CAR |
+| L'IA apprend en direct de nos conversations | publié | | AGT, HO, ENT, CAR |
 | L'IA comprend | publié | | LLM, HAM, ULT, HO |
 | L'IA lit mot par mot | publié | | AGT, LLM, HO, ULT |
 | Plus gros = plus intelligent | publié | | ULT, HO, CAR |

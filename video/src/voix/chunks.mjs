@@ -29,13 +29,15 @@ export const lineCount = (ws) => {
 const fits = (ws) => lineCount(ws) <= CAP_LINES;
 export const CAP_MIN_S = 1.0; // durée minimale d'affichage d'un groupe
 
-// Mots de la voix -> mots d'affichage : les guillemets isolés se collent à leur mot.
+// Mots de la voix -> mots d'affichage : les guillemets isolés et les « % » se collent à leur mot.
 const glue = (words) => {
   const ws = [];
   for (const w of words) {
     const last = ws[ws.length - 1];
     if (w.w === '«') ws.push({...w, w: '«'});
     else if (/^[»;:!?]/.test(w.w) && last) ws[ws.length - 1] = {...last, w: last.w + ' ' + w.w, end: w.end};
+    // Un pourcentage reste collé à son nombre (espace insécable) : jamais « 24 » en fin de ligne et « % » à la suivante.
+    else if (/^%/.test(w.w) && last) ws[ws.length - 1] = {...last, w: last.w + ' ' + w.w, end: w.end};
     else if (last && last.w === '«') ws[ws.length - 1] = {...w, w: '« ' + w.w, start: last.start};
     else ws.push(w);
   }
@@ -46,14 +48,38 @@ const len = (ws) => ws.reduce((n, x) => n + x.w.length + 1, 0) - 1;
 
 // segments : [{scene, words: [{w, start, end}]}] ; quoted : citations montrées par le schéma (lettres seules).
 // nocaption : scènes dont le texte dit est déjà écrit en grand à l'écran (la question du hook).
-export const makeChunks = (segments, total, quoted = [], nocaption = []) => {
+// onscreen : {scène: [passages]}, ce que l'écran écrit en grand pendant que la voix le dit (le terme, son nom anglais) ;
+// ces mots ne sont pas sous-titrés, pour ne pas lire deux fois la même chose (univers.md, « lisible dans le métro »).
+const letters = (t) => t.toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
+const onscreenWords = (ws, phrases) => {
+  const hide = new Set();
+  for (const ph of phrases) {
+    const target = letters(ph);
+    for (let i = 0; i < ws.length; i++) {
+      let acc = '';
+      for (let j = i; j < ws.length; j++) {
+        acc += letters(ws[j].w);
+        if (acc === target) { for (let k = i; k <= j; k++) hide.add(ws[k]); i = j; break; }
+        if (!target.startsWith(acc)) break;
+      }
+    }
+  }
+  return hide;
+};
+export const makeChunks = (segments, total, quoted = [], nocaption = [], onscreen = {}) => {
   const key = (ws) => ws.map((w) => w.w).join('').replace(/[^\p{L}\p{N}']/gu, '');
   const out = [];
   for (const s of segments) {
     let cur = [];
     let q = false;
-    const flush = () => { if (cur.length) out.push({scene: s.scene, words: cur, quote: nocaption.includes(s.scene) || (q && quoted.includes(key(cur)))}); cur = []; };
-    for (const w of glue(s.words)) {
+    let hiding = false;
+    const flush = () => { if (cur.length) out.push({scene: s.scene, words: cur, quote: hiding || nocaption.includes(s.scene) || (q && quoted.includes(key(cur)))}); cur = []; };
+    const ws = glue(s.words);
+    const hide = onscreenWords(ws, onscreen[s.scene] ?? []);
+    for (const w of ws) {
+      // Un passage écrit à l'écran forme un groupe masqué à lui seul, comme une citation.
+      if (hide.has(w) !== hiding) { flush(); hiding = !hiding; }
+      if (hiding) { cur.push(w); continue; }
       if (w.w.startsWith('«')) { flush(); q = true; }
       if (cur.length && !q && !fits([...cur, w])) {
         // Pas de groupe qui finit sur un petit mot ou un nombre (« ne garde que 8 / milliards ») : ils passent au suivant.
@@ -67,6 +93,7 @@ export const makeChunks = (segments, total, quoted = [], nocaption = []) => {
       if (!q && len(cur) >= CAP_SOFT && /[.,;:!?…]$/.test(w.w.replace(/[\s »]+$/, ''))) flush();
     }
     flush();
+    hiding = false;
   }
   const endsSentence = (c) => /[.!?…]$/.test(c.words[c.words.length - 1].w.replace(/[\s »]+$/, ''));
   // Un groupe trop bref fusionne avec le suivant s'il reste sur 2 lignes et dans la même phrase dite ; jamais

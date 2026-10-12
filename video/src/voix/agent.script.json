@@ -1,0 +1,72 @@
+{
+  "id": "agent",
+  "term": "agent",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[calmly] C'est quoi ? un agent…"
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Jusqu'ici, on a vu un modèle qui écrit, et un agent, c'est un modèle qu'on laisse agir."
+    },
+    {
+      "scene": "boucle",
+      "say": "[warmly] On lui donne un objectif et des outils, il choisit une action, lit le résultat, puis choisit la suivante, jusqu'à ce que la tâche soit finie."
+    },
+    {
+      "scene": "nom",
+      "say": "C'est ça, un agent, ou en anglais, /eɪˈaɪ ˈeɪdʒənt/."
+    },
+    {
+      "scene": "diner",
+      "say": "[mischievously] Imagine Nadine, qui laisse vingt euros à son fils avec un mot, « Fais-nous un dîner »… le marché est fermé, il ouvre le frigo, appelle sa grand-mère, et à 20 h, il y a des crêpes."
+    },
+    {
+      "scene": "workflow",
+      "say": "[curious] Dans un simple automatisme, c'est un développeur qui écrit les étapes à l'avance, alors que dans un agent, c'est le modèle qui les choisit en cours de route."
+    },
+    {
+      "scene": "nuit",
+      "say": "[warmly] En septembre 2026, un développeur a confié une seule tâche à Claude avant de rentrer chez lui, et le lendemain midi, l'agent y travaillait encore."
+    },
+    {
+      "scene": "photos",
+      "say": "[curious] La même année, un agent chargé de ranger un ordinateur a effacé quinze ans de photos de famille, retrouvées de justesse dans une sauvegarde."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors avant de le laisser faire seul… [pause] donne-lui une copie, pas l'original."
+    }
+  ],
+  "quoted": [
+    "Faisnousundîner"
+  ],
+  "display": {
+    "/eɪˈaɪ": "AI",
+    "ˈeɪdʒənt/.": "agent."
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "sources": [
+    "Fiche agent de lexique/terms.js : la boucle, workflow contre agent (Anthropic, Building effective agents, 19 décembre 2024), l'image du dîner de Nadine, la réponse « Entendu au bureau » (une copie plutôt que l'original)",
+    "Anthropic, Introducing Claude Opus 5.5, 22 septembre 2026 : tâche lancée la nuit sans surveillance, plus de 18 heures ; https://www.anthropic.com/news/claude-opus-5-5",
+    "Futurism, 13 février 2026 : Claude Cowork efface près de quinze ans de photos de famille, restaurées depuis iCloud ; https://futurism.com/artificial-intelligence/claude-wife-photos"
+  ],
+  "credits": [],
+  "onscreen": {
+    "nom": [
+      "C'est ça, un agent, ou en anglais, AI agent."
+    ]
+  }
+}

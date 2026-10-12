@@ -9,5 +9,5 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const id = process.argv[2];
 const align = JSON.parse(readFileSync(join(ROOT, 'src/voix', `${id}.align.json`), 'utf8'));
 const script = JSON.parse(readFileSync(join(ROOT, 'src/voix', `${id}.script.json`), 'utf8'));
-const chunks = makeChunks(align.segments, align.duration + 2, script.quoted ?? [], script.nocaption ?? []);
+const chunks = makeChunks(align.segments, align.duration + 2, script.quoted ?? [], script.nocaption ?? [], script.onscreen ?? {});
 console.log(JSON.stringify(chunks.map((c) => ({text: c.text, words: c.words.map((w) => w.w), quote: c.quote}))));
