@@ -6,7 +6,7 @@
     "flow": "https://elevenlabs.io/app/flows/sKtuiXGtkmnZwRTiRFmc"
   },
   "segments": [
-    {"scene": "hook", "say": "[warmly] C'est quoi ? <le terme>..."},
+    {"scene": "hook", "say": "[warmly] C'est quoi... <le terme>..."},
     {"scene": "intro", "say": "[curious] <l'idée reçue retournée en une question au spectateur> [excited] <ce qui se passe en réalité>"},
     {"scene": "base", "say": "[warmly] Pour comprendre, il faut parler de <notion de départ>. <explication en une ou deux phrases, un exemple concret>"},
     {"scene": "nom", "say": "[excited] <ce que fait le mécanisme>. C'est ça, <le terme>, ou en anglais, /<API du terme anglais>/."},

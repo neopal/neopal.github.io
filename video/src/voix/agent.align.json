@@ -1,979 +1,954 @@
 {
  "id": "agent",
- "audio": false,
- "music": false,
- "duration": 57.786,
+ "audio": true,
+ "music": true,
+ "duration": 52.96,
  "segments": [
   {
    "scene": "hook",
-   "start": 0.2,
-   "end": 1.727,
+   "start": 0.24,
+   "end": 1.96,
    "words": [
     {
      "w": "C'est",
-     "start": 0.2,
-     "end": 0.427
+     "start": 0.24,
+     "end": 0.32
     },
     {
-     "w": "quoi ?",
-     "start": 0.477,
-     "end": 0.868
+     "w": "quoi...",
+     "start": 0.52,
+     "end": 0.88
     },
     {
      "w": "un",
-     "start": 1.268,
-     "end": 1.427
+     "start": 1.04,
+     "end": 1.2
     },
     {
      "w": "agent…",
-     "start": 1.477,
-     "end": 1.727
+     "start": 1.28,
+     "end": 1.96
     }
    ]
   },
   {
    "scene": "intro",
-   "start": 2.277,
-   "end": 7.073,
+   "start": 2.304,
+   "end": 7.12,
    "words": [
     {
      "w": "Jusqu'ici,",
-     "start": 2.277,
-     "end": 2.618
+     "start": 2.304,
+     "end": 3.04
     },
     {
      "w": "on",
-     "start": 2.818,
-     "end": 2.977
+     "start": 3.08,
+     "end": 3.12
     },
     {
      "w": "a",
-     "start": 3.027,
-     "end": 3.164
+     "start": 3.2,
+     "end": 3.28
     },
     {
      "w": "vu",
-     "start": 3.214,
-     "end": 3.373
+     "start": 3.36,
+     "end": 3.44
     },
     {
      "w": "un",
-     "start": 3.423,
-     "end": 3.582
+     "start": 3.48,
+     "end": 3.52
     },
     {
      "w": "modèle",
-     "start": 3.632,
-     "end": 3.882
+     "start": 3.6,
+     "end": 3.84
     },
     {
      "w": "qui",
-     "start": 3.932,
-     "end": 4.114
+     "start": 3.92,
+     "end": 4.08
     },
     {
      "w": "écrit,",
-     "start": 4.164,
-     "end": 4.414
+     "start": 4.2,
+     "end": 4.8
     },
     {
      "w": "et",
-     "start": 4.614,
-     "end": 4.773
+     "start": 4.88,
+     "end": 4.96
     },
     {
      "w": "un",
-     "start": 4.823,
-     "end": 4.982
+     "start": 5,
+     "end": 5.04
     },
     {
      "w": "agent,",
-     "start": 5.032,
-     "end": 5.282
+     "start": 5.12,
+     "end": 5.68
     },
     {
      "w": "c'est",
-     "start": 5.482,
-     "end": 5.709
+     "start": 5.733,
+     "end": 5.84
     },
     {
      "w": "un",
-     "start": 5.759,
-     "end": 5.918
+     "start": 5.88,
+     "end": 5.92
     },
     {
      "w": "modèle",
-     "start": 5.968,
-     "end": 6.218
+     "start": 6,
+     "end": 6.16
     },
     {
      "w": "qu'on",
-     "start": 6.268,
-     "end": 6.495
+     "start": 6.24,
+     "end": 6.32
     },
     {
      "w": "laisse",
-     "start": 6.545,
-     "end": 6.795
+     "start": 6.36,
+     "end": 6.56
     },
     {
      "w": "agir.",
-     "start": 6.845,
-     "end": 7.073
+     "start": 6.64,
+     "end": 7.12
     }
    ]
   },
   {
    "scene": "boucle",
-   "start": 7.573,
-   "end": 15.014,
+   "start": 7.347,
+   "end": 14.56,
    "words": [
     {
      "w": "On",
-     "start": 7.573,
-     "end": 7.732
+     "start": 7.347,
+     "end": 7.36
     },
     {
      "w": "lui",
-     "start": 7.782,
-     "end": 7.964
+     "start": 7.4,
+     "end": 7.52
     },
     {
      "w": "donne",
-     "start": 8.014,
-     "end": 8.241
+     "start": 7.56,
+     "end": 7.68
     },
     {
      "w": "un",
-     "start": 8.291,
-     "end": 8.45
+     "start": 7.76,
+     "end": 7.84
     },
     {
      "w": "objectif",
-     "start": 8.5,
-     "end": 8.795
+     "start": 8.04,
+     "end": 8.32
     },
     {
      "w": "et",
-     "start": 8.845,
-     "end": 9.005
+     "start": 8.36,
+     "end": 8.4
     },
     {
      "w": "des",
-     "start": 9.055,
-     "end": 9.236
+     "start": 8.48,
+     "end": 8.56
     },
     {
      "w": "outils,",
-     "start": 9.286,
-     "end": 9.559
+     "start": 8.64,
+     "end": 9.2
     },
     {
      "w": "il",
-     "start": 9.759,
-     "end": 9.918
+     "start": 9.28,
+     "end": 9.36
     },
     {
      "w": "choisit",
-     "start": 9.968,
-     "end": 10.241
+     "start": 9.44,
+     "end": 9.68
     },
     {
      "w": "une",
-     "start": 10.291,
-     "end": 10.473
+     "start": 9.72,
+     "end": 9.76
     },
     {
      "w": "action,",
-     "start": 10.523,
-     "end": 10.795
+     "start": 9.84,
+     "end": 10.48
     },
     {
      "w": "lit",
-     "start": 10.995,
-     "end": 11.177
+     "start": 10.56,
+     "end": 10.72
     },
     {
      "w": "le",
-     "start": 11.227,
-     "end": 11.386
+     "start": 10.76,
+     "end": 10.8
     },
     {
      "w": "résultat,",
-     "start": 11.436,
-     "end": 11.755
+     "start": 10.88,
+     "end": 11.52
     },
     {
      "w": "puis",
-     "start": 11.955,
-     "end": 12.159
+     "start": 11.56,
+     "end": 11.68
     },
     {
      "w": "choisit",
-     "start": 12.209,
-     "end": 12.482
+     "start": 11.76,
+     "end": 12
     },
     {
      "w": "la",
-     "start": 12.532,
-     "end": 12.691
+     "start": 12.08,
+     "end": 12.16
     },
     {
      "w": "suivante,",
-     "start": 12.741,
-     "end": 13.059
+     "start": 12.2,
+     "end": 12.8
     },
     {
      "w": "jusqu'à",
-     "start": 13.259,
-     "end": 13.532
+     "start": 12.88,
+     "end": 13.2
     },
     {
      "w": "ce",
-     "start": 13.582,
-     "end": 13.741
+     "start": 13.24,
+     "end": 13.28
     },
     {
      "w": "que",
-     "start": 13.791,
-     "end": 13.973
+     "start": 13.32,
+     "end": 13.36
     },
     {
      "w": "la",
-     "start": 14.023,
-     "end": 14.182
+     "start": 13.44,
+     "end": 13.48
     },
     {
      "w": "tâche",
-     "start": 14.232,
-     "end": 14.459
+     "start": 13.52,
+     "end": 13.68
     },
     {
      "w": "soit",
-     "start": 14.509,
-     "end": 14.714
+     "start": 13.76,
+     "end": 13.92
     },
     {
      "w": "finie.",
-     "start": 14.764,
-     "end": 15.014
+     "start": 14,
+     "end": 14.56
     }
    ]
   },
   {
    "scene": "nom",
-   "start": 15.514,
-   "end": 18.386,
+   "start": 14.613,
+   "end": 15.84,
    "words": [
     {
      "w": "C'est",
-     "start": 15.514,
-     "end": 15.741
+     "start": 14.613,
+     "end": 14.72
     },
     {
      "w": "ça,",
-     "start": 15.791,
-     "end": 15.973
+     "start": 14.8,
+     "end": 15.04
     },
     {
      "w": "un",
-     "start": 16.173,
-     "end": 16.332
-    },
-    {
-     "w": "agent,",
-     "start": 16.382,
-     "end": 16.632
-    },
-    {
-     "w": "ou",
-     "start": 16.832,
-     "end": 16.991
-    },
-    {
-     "w": "en",
-     "start": 17.041,
-     "end": 17.2
-    },
-    {
-     "w": "anglais,",
-     "start": 17.25,
-     "end": 17.545
-    },
-    {
-     "w": "AI",
-     "start": 17.745,
-     "end": 17.995
+     "start": 15.12,
+     "end": 15.2
     },
     {
      "w": "agent.",
-     "start": 18.045,
-     "end": 18.386
+     "start": 15.32,
+     "end": 15.84
     }
    ]
   },
   {
    "scene": "diner",
-   "start": 18.886,
-   "end": 29.255,
+   "start": 16.267,
+   "end": 25.76,
    "words": [
     {
      "w": "Imagine",
-     "start": 18.886,
-     "end": 19.159
+     "start": 16.267,
+     "end": 16.32
     },
     {
      "w": "Nadine,",
-     "start": 19.209,
-     "end": 19.482
+     "start": 16.36,
+     "end": 16.96
     },
     {
      "w": "qui",
-     "start": 19.682,
-     "end": 19.864
+     "start": 17.04,
+     "end": 17.12
     },
     {
      "w": "laisse",
-     "start": 19.914,
-     "end": 20.164
+     "start": 17.173,
+     "end": 17.36
     },
     {
      "w": "vingt",
-     "start": 20.214,
-     "end": 20.441
+     "start": 17.44,
+     "end": 17.56
     },
     {
      "w": "euros",
-     "start": 20.491,
-     "end": 20.718
+     "start": 17.6,
+     "end": 17.84
     },
     {
      "w": "à",
-     "start": 20.768,
-     "end": 20.905
+     "start": 17.88,
+     "end": 17.92
     },
     {
      "w": "son",
-     "start": 20.955,
-     "end": 21.136
+     "start": 18.04,
+     "end": 18.16
     },
     {
      "w": "fils",
-     "start": 21.186,
-     "end": 21.391
+     "start": 18.213,
+     "end": 18.32
     },
     {
      "w": "avec",
-     "start": 21.441,
-     "end": 21.645
+     "start": 18.4,
+     "end": 18.56
     },
     {
      "w": "un",
-     "start": 21.695,
-     "end": 21.855
+     "start": 18.64,
+     "end": 18.72
     },
     {
      "w": "mot,",
-     "start": 21.905,
-     "end": 22.109
+     "start": 18.8,
+     "end": 19.28
     },
     {
      "w": "«",
-     "start": 22.309090909090912,
-     "end": 22.32909090909091
+     "start": 19.307,
+     "end": 19.333
     },
     {
      "w": "Fais-nous",
-     "start": 22.309,
-     "end": 22.627
+     "start": 19.36,
+     "end": 19.68
     },
     {
      "w": "un",
-     "start": 22.677,
-     "end": 22.836
+     "start": 19.76,
+     "end": 19.84
     },
     {
      "w": "dîner",
-     "start": 22.886,
-     "end": 23.114
+     "start": 19.88,
+     "end": 20.16
     },
     {
      "w": "»…",
-     "start": 23.164,
-     "end": 23.323
+     "start": 20.32,
+     "end": 20.64
     },
     {
      "w": "le",
-     "start": 23.773,
-     "end": 23.932
+     "start": 20.68,
+     "end": 20.72
     },
     {
      "w": "marché",
-     "start": 23.982,
-     "end": 24.232
+     "start": 20.8,
+     "end": 21.04
     },
     {
      "w": "est",
-     "start": 24.282,
-     "end": 24.464
+     "start": 21.08,
+     "end": 21.12
     },
     {
      "w": "fermé,",
-     "start": 24.514,
-     "end": 24.764
+     "start": 21.2,
+     "end": 21.76
     },
     {
      "w": "il",
-     "start": 24.964,
-     "end": 25.123
+     "start": 21.84,
+     "end": 21.92
     },
     {
      "w": "ouvre",
-     "start": 25.173,
-     "end": 25.4
+     "start": 21.96,
+     "end": 22.16
     },
     {
      "w": "le",
-     "start": 25.45,
-     "end": 25.609
+     "start": 22.2,
+     "end": 22.24
     },
     {
      "w": "frigo,",
-     "start": 25.659,
-     "end": 25.909
+     "start": 22.32,
+     "end": 22.88
     },
     {
      "w": "appelle",
-     "start": 26.109,
-     "end": 26.382
+     "start": 22.96,
+     "end": 23.2
     },
     {
      "w": "sa",
-     "start": 26.432,
-     "end": 26.591
+     "start": 23.28,
+     "end": 23.36
     },
     {
      "w": "grand-mère,",
-     "start": 26.641,
-     "end": 27.005
+     "start": 23.44,
+     "end": 24
     },
     {
      "w": "et",
-     "start": 27.205,
-     "end": 27.364
+     "start": 24.04,
+     "end": 24.08
     },
     {
      "w": "à",
-     "start": 27.414,
-     "end": 27.55
+     "start": 24.12,
+     "end": 24.16
     },
     {
      "w": "20",
-     "start": 27.6,
-     "end": 27.759
+     "start": 24.24,
+     "end": 24.4
     },
     {
      "w": "h,",
-     "start": 27.809,
-     "end": 27.968
+     "start": 24.48,
+     "end": 24.8
     },
     {
      "w": "il",
-     "start": 28.168,
-     "end": 28.327
+     "start": 24.84,
+     "end": 24.88
     },
     {
      "w": "y",
-     "start": 28.377,
-     "end": 28.514
+     "start": 24.92,
+     "end": 24.96
     },
     {
      "w": "a",
-     "start": 28.564,
-     "end": 28.7
+     "start": 25,
+     "end": 25.04
     },
     {
      "w": "des",
-     "start": 28.75,
-     "end": 28.932
+     "start": 25.08,
+     "end": 25.12
     },
     {
      "w": "crêpes.",
-     "start": 28.982,
-     "end": 29.255
+     "start": 25.2,
+     "end": 25.76
     }
    ]
   },
   {
    "scene": "workflow",
-   "start": 29.755,
-   "end": 37.691,
+   "start": 25.893,
+   "end": 33.04,
    "words": [
     {
      "w": "Dans",
-     "start": 29.755,
-     "end": 29.959
+     "start": 25.893,
+     "end": 25.92
     },
     {
      "w": "un",
-     "start": 30.009,
-     "end": 30.168
+     "start": 26,
+     "end": 26.08
     },
     {
      "w": "simple",
-     "start": 30.218,
-     "end": 30.468
+     "start": 26.2,
+     "end": 26.32
     },
     {
      "w": "automatisme,",
-     "start": 30.518,
-     "end": 30.905
+     "start": 26.44,
+     "end": 27.2
     },
     {
      "w": "c'est",
-     "start": 31.105,
-     "end": 31.332
+     "start": 27.253,
+     "end": 27.36
     },
     {
      "w": "un",
-     "start": 31.382,
-     "end": 31.541
+     "start": 27.44,
+     "end": 27.52
     },
     {
      "w": "développeur",
-     "start": 31.591,
-     "end": 31.955
+     "start": 27.56,
+     "end": 28.08
     },
     {
      "w": "qui",
-     "start": 32.005,
-     "end": 32.186
+     "start": 28.12,
+     "end": 28.16
     },
     {
      "w": "écrit",
-     "start": 32.236,
-     "end": 32.464
+     "start": 28.24,
+     "end": 28.48
     },
     {
      "w": "les",
-     "start": 32.514,
-     "end": 32.695
+     "start": 28.52,
+     "end": 28.56
     },
     {
      "w": "étapes",
-     "start": 32.745,
-     "end": 32.995
+     "start": 28.64,
+     "end": 28.88
     },
     {
      "w": "à",
-     "start": 33.045,
-     "end": 33.182
+     "start": 28.92,
+     "end": 28.96
     },
     {
      "w": "l'avance,",
-     "start": 33.232,
-     "end": 33.55
+     "start": 29.013,
+     "end": 29.6
     },
     {
      "w": "alors",
-     "start": 33.75,
-     "end": 33.977
+     "start": 29.68,
+     "end": 29.84
     },
     {
      "w": "que",
-     "start": 34.027,
-     "end": 34.209
+     "start": 29.92,
+     "end": 30
     },
     {
      "w": "dans",
-     "start": 34.259,
-     "end": 34.464
+     "start": 30.053,
+     "end": 30.16
     },
     {
      "w": "un",
-     "start": 34.514,
-     "end": 34.673
+     "start": 30.24,
+     "end": 30.32
     },
     {
      "w": "agent,",
-     "start": 34.723,
-     "end": 34.973
+     "start": 30.48,
+     "end": 30.88
     },
     {
      "w": "c'est",
-     "start": 35.173,
-     "end": 35.4
+     "start": 30.907,
+     "end": 30.96
     },
     {
      "w": "le",
-     "start": 35.45,
-     "end": 35.609
+     "start": 31.04,
+     "end": 31.12
     },
     {
      "w": "modèle",
-     "start": 35.659,
-     "end": 35.909
+     "start": 31.2,
+     "end": 31.52
     },
     {
      "w": "qui",
-     "start": 35.959,
-     "end": 36.141
+     "start": 31.6,
+     "end": 31.68
     },
     {
      "w": "les",
-     "start": 36.191,
-     "end": 36.373
+     "start": 31.76,
+     "end": 31.84
     },
     {
      "w": "choisit",
-     "start": 36.423,
-     "end": 36.695
+     "start": 31.88,
+     "end": 32.08
     },
     {
      "w": "en",
-     "start": 36.745,
-     "end": 36.905
+     "start": 32.16,
+     "end": 32.24
     },
     {
      "w": "cours",
-     "start": 36.955,
-     "end": 37.182
+     "start": 32.267,
+     "end": 32.32
     },
     {
      "w": "de",
-     "start": 37.232,
-     "end": 37.391
+     "start": 32.4,
+     "end": 32.48
     },
     {
      "w": "route.",
-     "start": 37.441,
-     "end": 37.691
+     "start": 32.6,
+     "end": 33.04
     }
    ]
   },
   {
    "scene": "nuit",
-   "start": 38.191,
-   "end": 45.455,
+   "start": 33.177,
+   "end": 40.88,
    "words": [
     {
      "w": "En",
-     "start": 38.191,
-     "end": 38.35
+     "start": 33.177,
+     "end": 33.2
     },
     {
      "w": "septembre",
-     "start": 38.4,
-     "end": 38.718
+     "start": 33.28,
+     "end": 33.6
     },
     {
      "w": "2026,",
-     "start": 38.768,
-     "end": 38.995
+     "start": 33.68,
+     "end": 34.64
     },
     {
      "w": "un",
-     "start": 39.195,
-     "end": 39.355
+     "start": 34.68,
+     "end": 34.72
     },
     {
      "w": "développeur",
-     "start": 39.405,
-     "end": 39.768
+     "start": 34.8,
+     "end": 35.2
     },
     {
      "w": "a",
-     "start": 39.818,
-     "end": 39.955
+     "start": 35.28,
+     "end": 35.36
     },
     {
      "w": "confié",
-     "start": 40.005,
-     "end": 40.255
+     "start": 35.48,
+     "end": 35.84
     },
     {
      "w": "une",
-     "start": 40.305,
-     "end": 40.486
+     "start": 35.96,
+     "end": 36.08
     },
     {
      "w": "seule",
-     "start": 40.536,
-     "end": 40.764
+     "start": 36.12,
+     "end": 36.32
     },
     {
      "w": "tâche",
-     "start": 40.814,
-     "end": 41.041
+     "start": 36.347,
+     "end": 36.48
     },
     {
      "w": "à",
-     "start": 41.091,
-     "end": 41.227
+     "start": 36.56,
+     "end": 36.6
     },
     {
      "w": "Claude",
-     "start": 41.277,
-     "end": 41.527
+     "start": 36.64,
+     "end": 36.88
     },
     {
      "w": "avant",
-     "start": 41.577,
-     "end": 41.805
+     "start": 36.92,
+     "end": 37.12
     },
     {
      "w": "de",
-     "start": 41.855,
-     "end": 42.014
+     "start": 37.16,
+     "end": 37.2
     },
     {
      "w": "rentrer",
-     "start": 42.064,
-     "end": 42.336
+     "start": 37.28,
+     "end": 37.52
     },
     {
      "w": "chez",
-     "start": 42.386,
-     "end": 42.591
+     "start": 37.56,
+     "end": 37.6
     },
     {
      "w": "lui,",
-     "start": 42.641,
-     "end": 42.845
+     "start": 37.68,
+     "end": 38.08
     },
     {
      "w": "et",
-     "start": 43.045,
-     "end": 43.205
+     "start": 38.12,
+     "end": 38.16
     },
     {
      "w": "le",
-     "start": 43.255,
-     "end": 43.414
+     "start": 38.24,
+     "end": 38.32
     },
     {
      "w": "lendemain",
-     "start": 43.464,
-     "end": 43.782
+     "start": 38.373,
+     "end": 38.64
     },
     {
      "w": "midi,",
-     "start": 43.832,
-     "end": 44.059
+     "start": 38.8,
+     "end": 39.2
     },
     {
      "w": "l'agent",
-     "start": 44.259,
-     "end": 44.532
+     "start": 39.28,
+     "end": 39.6
     },
     {
      "w": "y",
-     "start": 44.582,
-     "end": 44.718
+     "start": 39.64,
+     "end": 39.68
     },
     {
      "w": "travaillait",
-     "start": 44.768,
-     "end": 45.132
+     "start": 39.76,
+     "end": 40.16
     },
     {
      "w": "encore.",
-     "start": 45.182,
-     "end": 45.455
+     "start": 40.28,
+     "end": 40.88
     }
    ]
   },
   {
    "scene": "photos",
-   "start": 45.955,
-   "end": 52.791,
+   "start": 40.947,
+   "end": 47.96,
    "words": [
     {
      "w": "La",
-     "start": 45.955,
-     "end": 46.114
+     "start": 40.947,
+     "end": 40.96
     },
     {
      "w": "même",
-     "start": 46.164,
-     "end": 46.368
+     "start": 41.04,
+     "end": 41.2
     },
     {
      "w": "année,",
-     "start": 46.418,
-     "end": 46.668
+     "start": 41.32,
+     "end": 41.68
     },
     {
      "w": "un",
-     "start": 46.868,
-     "end": 47.027
+     "start": 41.76,
+     "end": 41.84
     },
     {
      "w": "agent",
-     "start": 47.077,
-     "end": 47.305
+     "start": 41.92,
+     "end": 42.16
     },
     {
      "w": "chargé",
-     "start": 47.355,
-     "end": 47.605
+     "start": 42.24,
+     "end": 42.56
     },
     {
      "w": "de",
-     "start": 47.655,
-     "end": 47.814
+     "start": 42.6,
+     "end": 42.64
     },
     {
      "w": "ranger",
-     "start": 47.864,
-     "end": 48.114
+     "start": 42.68,
+     "end": 42.96
     },
     {
      "w": "un",
-     "start": 48.164,
-     "end": 48.323
+     "start": 43,
+     "end": 43.04
     },
     {
      "w": "ordinateur",
-     "start": 48.373,
-     "end": 48.714
+     "start": 43.28,
+     "end": 43.76
     },
     {
      "w": "a",
-     "start": 48.764,
-     "end": 48.9
+     "start": 43.8,
+     "end": 43.84
     },
     {
      "w": "effacé",
-     "start": 48.95,
-     "end": 49.2
+     "start": 43.96,
+     "end": 44.4
     },
     {
      "w": "quinze",
-     "start": 49.25,
-     "end": 49.5
+     "start": 44.48,
+     "end": 44.64
     },
     {
      "w": "ans",
-     "start": 49.55,
-     "end": 49.732
+     "start": 44.72,
+     "end": 44.8
     },
     {
      "w": "de",
-     "start": 49.782,
-     "end": 49.941
+     "start": 44.88,
+     "end": 44.96
     },
     {
      "w": "photos",
-     "start": 49.991,
-     "end": 50.241
+     "start": 45.08,
+     "end": 45.2
     },
     {
      "w": "de",
-     "start": 50.291,
-     "end": 50.45
+     "start": 45.24,
+     "end": 45.28
     },
     {
      "w": "famille,",
-     "start": 50.5,
-     "end": 50.795
+     "start": 45.32,
+     "end": 45.84
     },
     {
      "w": "retrouvées",
-     "start": 50.995,
-     "end": 51.336
+     "start": 45.92,
+     "end": 46.32
     },
     {
      "w": "de",
-     "start": 51.386,
-     "end": 51.545
+     "start": 46.4,
+     "end": 46.48
     },
     {
      "w": "justesse",
-     "start": 51.595,
-     "end": 51.891
+     "start": 46.6,
+     "end": 46.96
     },
     {
      "w": "dans",
-     "start": 51.941,
-     "end": 52.145
+     "start": 47.013,
+     "end": 47.12
     },
     {
      "w": "une",
-     "start": 52.195,
-     "end": 52.377
+     "start": 47.16,
+     "end": 47.2
     },
     {
      "w": "sauvegarde.",
-     "start": 52.427,
-     "end": 52.791
+     "start": 47.28,
+     "end": 47.96
     }
    ]
   },
   {
    "scene": "chute",
-   "start": 53.291,
-   "end": 57.786,
+   "start": 48.293,
+   "end": 52.96,
    "words": [
     {
      "w": "Alors",
-     "start": 53.291,
-     "end": 53.518
+     "start": 48.293,
+     "end": 48.4
     },
     {
      "w": "avant",
-     "start": 53.568,
-     "end": 53.795
+     "start": 48.48,
+     "end": 48.64
     },
     {
      "w": "de",
-     "start": 53.845,
-     "end": 54.005
+     "start": 48.72,
+     "end": 48.76
     },
     {
      "w": "le",
-     "start": 54.055,
-     "end": 54.214
+     "start": 48.8,
+     "end": 48.88
     },
     {
      "w": "laisser",
-     "start": 54.264,
-     "end": 54.536
+     "start": 48.933,
+     "end": 49.12
     },
     {
      "w": "faire",
-     "start": 54.586,
-     "end": 54.814
+     "start": 49.2,
+     "end": 49.44
     },
     {
      "w": "seul…",
-     "start": 54.864,
-     "end": 55.091
+     "start": 49.48,
+     "end": 49.84
     },
     {
      "w": "donne-lui",
-     "start": 56.141,
-     "end": 56.459
+     "start": 50.928,
+     "end": 51.12
     },
     {
      "w": "une",
-     "start": 56.509,
-     "end": 56.691
+     "start": 51.16,
+     "end": 51.2
     },
     {
      "w": "copie,",
-     "start": 56.741,
-     "end": 56.991
+     "start": 51.28,
+     "end": 52
     },
     {
      "w": "pas",
-     "start": 57.191,
-     "end": 57.373
+     "start": 52.08,
+     "end": 52.16
     },
     {
      "w": "l'original.",
-     "start": 57.423,
-     "end": 57.786
+     "start": 52.187,
+     "end": 52.96
     }
    ]
   }

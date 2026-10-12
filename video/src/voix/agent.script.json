@@ -13,7 +13,7 @@
   "segments": [
     {
       "scene": "hook",
-      "say": "[calmly] C'est quoi ? un agent…"
+      "say": "[warmly] C'est quoi... un agent…"
     },
     {
       "scene": "intro",
@@ -25,7 +25,7 @@
     },
     {
       "scene": "nom",
-      "say": "C'est ça, un agent, ou en anglais, /eɪˈaɪ ˈeɪdʒənt/."
+      "say": "C'est ça, un agent."
     },
     {
       "scene": "diner",
@@ -51,10 +51,7 @@
   "quoted": [
     "Faisnousundîner"
   ],
-  "display": {
-    "/eɪˈaɪ": "AI",
-    "ˈeɪdʒənt/.": "agent."
-  },
+  "display": {},
   "nocaption": [
     "hook"
   ],
@@ -66,7 +63,7 @@
   "credits": [],
   "onscreen": {
     "nom": [
-      "C'est ça, un agent, ou en anglais, AI agent."
+      "C'est ça, un agent."
     ]
   }
 }

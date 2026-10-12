@@ -1,7 +1,7 @@
 // Short Température (YouTube / TikTok / Instagram), épisode 6, voix off PAL - FR, préparé le 2026-10-09.
 // Fiche temperature de lexique/terms.js : le tirage pondéré, les scores divisés par la température ; Thinking Machines Lab,
 // 10 septembre 2025 : 1 000 fois la même question à Qwen3 à température 0, 80 réponses différentes.
-// Les noms de bar et leurs scores sont l'exemple illustratif du short muet (src/Temperature.tsx) ; les pourcentages sont
+// Les scores sont l'exemple illustratif du short muet (src/Temperature.tsx), reportés sur des prénoms de bébé ; les pourcentages sont
 // calculés pour de vrai (softmax des scores divisés par T).
 // Règle de lisibilité : le discours passe par les sous-titres ; l'écran montre des schémas, libellés de 3 mots au plus.
 // L'écran suit la voix et Le mouvement (univers.md, repassés le 2026-10-12) : libellés repris de la voix, le DJ montré, easing.
@@ -26,7 +26,7 @@ const fr = (n: number, dec = 1) => n.toFixed(dec).replace('.', ',');
 
 // ---------- Le tirage (exemple du short muet) ----------
 
-const WORDS = ['Comptoir', 'Zinc', 'Refuge', 'Bistrot', 'Hibou'];
+const WORDS = ['Gabriel', 'Noah', 'Ulysse', 'Marcel', 'Clafoutis'];
 const SCORES = [2.0, 1.0, 0.6, 0.2, -0.3];
 const probs = (T: number) => {
   const e = SCORES.map((s) => Math.exp(s / T));
@@ -37,7 +37,7 @@ const probs = (T: number) => {
 // Barres : un nom, sa part de tickets, son pourcentage ; lit = le nom que le tirage éclaire.
 const Bars: React.FC<{ps: number[]; grow?: number; lit?: number}> = ({ps, grow = 1, lit = -1}) => {
   const accent = useAccent();
-  const NAME = 250;
+  const NAME = 300;
   const VAL = 140;
   const track = W - NAME - VAL - 24;
   return (
@@ -102,9 +102,9 @@ const Intro: React.FC = () => {
   const tire = at('intro', 'tire');
   return (
     <Scene gap={30}>
-      {['Le Comptoir', 'Le Zinc'].map((r, k) => (
+      {['Gabriel', 'Noah'].map((r, k) => (
         <Pop key={k} at={4 + k * 6} style={{border: '4px solid #666', padding: '20px 28px', display: 'flex', flexDirection: 'column', gap: 12, opacity: gone(frame, tire)}}>
-          <Mono size={48} color={LABEL}>Un nom pour mon bar ?</Mono>
+          <Mono size={48} color={LABEL}>Un prénom pour le bébé ?</Mono>
           <div style={{opacity: frame >= reponse - 6 + k * 8 ? 1 : 0}}><Say size={64}>{r}</Say></div>
         </Pop>
       ))}
@@ -137,7 +137,7 @@ const Tirage: React.FC = () => {
         </Pop>
       }
     >
-      <Pop at={4}><Say size={60} color={LABEL}>Mon bar s'appellera « Le …</Say></Pop>
+      <Pop at={4}><Say size={60} color={LABEL}>Notre bébé s'appellera …</Say></Pop>
       <Pop at={4}><Bars ps={probs(1)} grow={grow} lit={hop} /></Pop>
     </Scene>
   );
@@ -149,17 +149,12 @@ const Nom: React.FC = () => {
   const frame = useCurrentFrame();
   const accent = useAccent();
   const dose = at('nom', 'dose');
-  const en = at('nom', 'temperature');
   // Le curseur fait un aller-retour quand la voix dit « dose ce hasard ».
   const T = interpolate(frame, [dose, dose + 20, dose + 40, dose + 55], [1, 2, 0.2, 1], smooth);
   return (
     <Scene gap={50}>
       <Pop at={4}><Big size={124} color={accent}>température</Big></Pop>
       <Pop at={dose}><Slider T={T} /></Pop>
-      <Pop at={en} style={{display: 'flex', alignItems: 'baseline', gap: 20}}>
-        <Mono size={48} color={LABEL}>en anglais</Mono>
-        <Mono size={64} color="#fff">temperature</Mono>
-      </Pop>
     </Scene>
   );
 };
@@ -186,7 +181,7 @@ const Dj: React.FC = () => {
   const accent = useAccent();
   const bas = at('dj', 'bas');
   const fond = at('dj', 'fond');
-  const jazz = at('dj', 'jazz');
+  const jazz = at('dj', 'Thalassa');
   // Le fader du DJ : en bas pendant « réglé au plus bas », poussé à fond sur « fond ».
   const level = interpolate(frame, [bas - 6, bas + 6, fond - 6, fond + 6], [0.5, 0.08, 0.08, 1], smooth);
   const wild = ease(frame, fond, jazz + 10);
@@ -195,13 +190,13 @@ const Dj: React.FC = () => {
     <Scene
       bottom={
         <div style={{display: 'flex', justifyContent: 'space-between'}}>
-          <Pop at={bas + 8} style={{opacity: gone(frame, fond)}}><Mono size={56} color="#fff">la chanson attendue</Mono></Pop>
-          <Pop at={jazz}><Mono size={56} color={accent}>free jazz</Mono></Pop>
+          <Pop at={bas + 8} style={{opacity: gone(frame, fond)}}><Mono size={56} color="#fff">« Freed from Desire »</Mono></Pop>
+          <Pop at={jazz}><Mono size={56} color={accent}>Thalassa</Mono></Pop>
         </div>
       }
     >
       <div style={{position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 70}}>
-        {/* Le DJ derrière sa platine : il hoche la tête plus vite quand il part en free jazz. */}
+        {/* Le DJ derrière sa platine : il hoche la tête plus vite quand il part sur Thalassa. */}
         <Pop at={dj} style={{transform: `translateY(${Math.sin(frame / (6 - 3 * wild)) * (2 + 6 * wild)}px)`}}><Pixel sprite={DJ} px={14} seed={8} /></Pop>
         <Pop at={4}><Vinyl spin={frame * (3 + 20 * wild)} size={300} label={frame < fond ? '#e8e2d6' : accent} /></Pop>
         {/* Le fader : une glissière verticale, le bouton monte avec le réglage. */}
@@ -210,7 +205,7 @@ const Dj: React.FC = () => {
           <div style={{position: 'absolute', left: 29, bottom: 0, height: `${level * 100}%`, width: 12, background: accent}} />
           <div style={{position: 'absolute', left: 0, bottom: `calc(${level * 100}% - 22px)`, width: 70, height: 44, background: '#fff', border: `6px solid ${accent}`, boxSizing: 'border-box'}} />
         </Pop>
-        {/* Les notes s'éparpillent quand le DJ part en free jazz. */}
+        {/* Les notes s'éparpillent quand le DJ part sur Thalassa. */}
         {NOTES.map((n, k) => (
           <div key={k} style={{position: 'absolute', left: '50%', top: '50%', transform: `translate(${n.x * wild - 30}px, ${n.y * wild - 30}px) rotate(${n.r * wild}deg)`, opacity: wild}}>
             <svg width={60} height={60} viewBox="0 0 10 10">
@@ -224,7 +219,7 @@ const Dj: React.FC = () => {
   );
 };
 
-// ---------- 5. Le bar : température basse, puis haute ----------
+// ---------- 5. Le prénom du bébé : température basse, puis haute ----------
 
 const Chip: React.FC<{at: number; word: string; hi?: boolean}> = ({at: a, word, hi = false}) => {
   const accent = useAccent();
@@ -235,14 +230,14 @@ const Chip: React.FC<{at: number; word: string; hi?: boolean}> = ({at: a, word, 
   );
 };
 
-const Bar: React.FC = () => {
+const Prenom: React.FC = () => {
   const frame = useCurrentFrame();
-  const basse = at('bar', 'basse');
-  const comptoir = at('bar', 'Comptoir');
-  const haute = at('bar', 'haute');
-  const zinc = at('bar', 'Zinc');
-  const refuge = at('bar', 'Refuge');
-  const hibou = at('bar', 'Hibou');
+  const basse = at('prenom', 'basse');
+  const gabriel = at('prenom', 'Gabriel');
+  const haute = at('prenom', 'haute');
+  const ulysse = at('prenom', 'Ulysse');
+  const marcel = at('prenom', 'Marcel');
+  const clafoutis = at('prenom', 'Clafoutis');
   const T = interpolate(frame, [basse - 4, basse + 12, haute - 4, haute + 16], [1, 0.3, 0.3, 1.5], smooth);
   const low = frame < haute;
   return (
@@ -251,13 +246,13 @@ const Bar: React.FC = () => {
       bottom={
         <div style={{display: 'flex', flexWrap: 'wrap', gap: 14}}>
           {low ? (
-            [0, 1, 2].map((k) => <Chip key={k} at={comptoir + k * 6} word="Comptoir" />)
+            [0, 1, 2].map((k) => <Chip key={k} at={gabriel + k * 6} word="Gabriel" />)
           ) : (
             <>
-              <Chip at={haute} word="Comptoir" />
-              <Chip at={zinc} word="Zinc" hi />
-              <Chip at={refuge} word="Refuge" hi />
-              <Chip at={hibou} word="Hibou" hi />
+              <Chip at={haute} word="Gabriel" />
+              <Chip at={ulysse} word="Ulysse" hi />
+              <Chip at={marcel} word="Marcel" hi />
+              <Chip at={clafoutis} word="Clafoutis" hi />
             </>
           )}
         </div>
@@ -350,6 +345,6 @@ const Chute: React.FC = () => {
 
 // ---------- Montage ----------
 
-const SCENES: Record<string, React.FC> = {hook: Hook, intro: Intro, tirage: Tirage, nom: Nom, dj: Dj, bar: Bar, feynman: Feynman, chute: Chute};
+const SCENES: Record<string, React.FC> = {hook: Hook, intro: Intro, tirage: Tirage, nom: Nom, dj: Dj, prenom: Prenom, feynman: Feynman, chute: Chute};
 
 export const TemperatureVoix: React.FC = () => <V.Montage scenes={SCENES} accent={AC} />;

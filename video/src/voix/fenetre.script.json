@@ -13,7 +13,7 @@
   "segments": [
     {
       "scene": "hook",
-      "say": "[calmly] C'est quoi ? la fenêtre de contexte…"
+      "say": "[warmly] C'est quoi ? la fenêtre de contexte…"
     },
     {
       "scene": "intro",
@@ -25,7 +25,7 @@
     },
     {
       "scene": "nom",
-      "say": "La taille maximale de ce paquet, comptée en tokens, c'est la fenêtre de contexte, ou en anglais, /ˈkɑntɛkst ˈwɪndoʊ/."
+      "say": "Ce paquet a une taille maximale, qu'on compte en tokens, et cette taille, c'est la fenêtre de contexte, ou en anglais, /ˈkɑntɛkst ˈwɪndoʊ/."
     },
     {
       "scene": "tableau",
@@ -33,7 +33,7 @@
     },
     {
       "scene": "proust",
-      "say": "[curious] En 2023, GPT-4 lisait 8 000 tokens d'un coup, à peine 3 % de Du côté de chez Swann, et depuis 2024, certains modèles en lisent un million, presque quatre fois le livre."
+      "say": "[curious] En 2023, GPT-4 lisait 8 000 tokens d'un coup, à peine 3 % d'un roman comme Du côté de chez Swann, et depuis 2024, certains modèles en lisent un million, presque quatre fois le livre."
     },
     {
       "scene": "limite",

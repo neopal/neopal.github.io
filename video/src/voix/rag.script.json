@@ -14,7 +14,7 @@
   "segments": [
     {
       "scene": "hook",
-      "say": "[calmly] « Le chatbot RH est branché sur nos documents, donc il ne peut pas se tromper ? »… entendu à la machine à café."
+      "say": "[warmly] « Le chatbot RH est branché sur nos documents, donc il ne peut pas se tromper ? »… entendu à la machine à café."
     },
     {
       "scene": "base",

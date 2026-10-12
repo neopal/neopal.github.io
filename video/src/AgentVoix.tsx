@@ -137,14 +137,9 @@ const Boucle: React.FC = () => {
 const Nom: React.FC = () => {
   const accent = useAccent();
   const agent = at('nom', 'agent');
-  const en = at('nom', 'AI');
   return (
     <Scene gap={30}>
       <Pop at={agent}><Big size={150} color={accent}>agent</Big></Pop>
-      <Pop at={en} style={{display: 'flex', alignItems: 'baseline', gap: 20}}>
-        <Mono size={48} color={LABEL}>en anglais</Mono>
-        <Mono size={64} color="#fff">AI agent</Mono>
-      </Pop>
     </Scene>
   );
 };

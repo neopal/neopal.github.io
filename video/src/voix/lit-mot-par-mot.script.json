@@ -14,7 +14,7 @@
   "segments": [
     {
       "scene": "hook",
-      "say": "[calmly] « L'IA lit mot par mot »… en réalité, il ne voit jamais un seul mot."
+      "say": "[warmly] « L'IA lit mot par mot »… en réalité, le modèle ne voit jamais un seul mot."
     },
     {
       "scene": "melange",

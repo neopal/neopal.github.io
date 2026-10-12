@@ -1,982 +1,1012 @@
 {
  "id": "fenetre",
- "audio": false,
- "music": false,
- "duration": 58.623,
+ "audio": true,
+ "music": true,
+ "duration": 58.64,
  "segments": [
   {
    "scene": "hook",
-   "start": 0.2,
-   "end": 2.327,
+   "start": 0.08,
+   "end": 2.267,
    "words": [
     {
      "w": "C'est",
-     "start": 0.2,
-     "end": 0.427
+     "start": 0.08,
+     "end": 0.24
     },
     {
      "w": "quoi ?",
-     "start": 0.477,
-     "end": 0.868
+     "start": 0.36,
+     "end": 0.853
     },
     {
      "w": "la",
-     "start": 1.268,
-     "end": 1.427
+     "start": 0.907,
+     "end": 0.96
     },
     {
      "w": "fenêtre",
-     "start": 1.477,
-     "end": 1.75
+     "start": 1.04,
+     "end": 1.36
     },
     {
      "w": "de",
-     "start": 1.8,
-     "end": 1.959
+     "start": 1.44,
+     "end": 1.52
     },
     {
      "w": "contexte…",
-     "start": 2.009,
-     "end": 2.327
+     "start": 1.76,
+     "end": 2.267
     }
    ]
   },
   {
    "scene": "intro",
-   "start": 2.877,
-   "end": 9.05,
+   "start": 2.464,
+   "end": 7.68,
    "words": [
     {
      "w": "Tu",
-     "start": 2.877,
-     "end": 3.036
+     "start": 2.464,
+     "end": 2.48
     },
     {
      "w": "lui",
-     "start": 3.086,
-     "end": 3.268
+     "start": 2.52,
+     "end": 2.64
     },
     {
      "w": "donnes",
-     "start": 3.318,
-     "end": 3.568
+     "start": 2.68,
+     "end": 2.8
     },
     {
      "w": "une",
-     "start": 3.618,
-     "end": 3.8
+     "start": 2.88,
+     "end": 2.96
     },
     {
      "w": "consigne",
-     "start": 3.85,
-     "end": 4.145
+     "start": 3.08,
+     "end": 3.28
     },
     {
      "w": "au",
-     "start": 4.195,
-     "end": 4.355
+     "start": 3.36,
+     "end": 3.44
     },
     {
      "w": "début",
-     "start": 4.405,
-     "end": 4.632
+     "start": 3.52,
+     "end": 3.68
     },
     {
      "w": "de",
-     "start": 4.682,
-     "end": 4.841
+     "start": 3.707,
+     "end": 3.733
     },
     {
      "w": "la",
-     "start": 4.891,
-     "end": 5.05
+     "start": 3.76,
+     "end": 3.84
     },
     {
      "w": "conversation,",
-     "start": 5.1,
-     "end": 5.509
+     "start": 4.16,
+     "end": 4.8
     },
     {
      "w": "et",
-     "start": 5.709,
-     "end": 5.868
+     "start": 4.92,
+     "end": 5.04
     },
     {
      "w": "une",
-     "start": 5.918,
-     "end": 6.1
+     "start": 5.12,
+     "end": 5.2
     },
     {
      "w": "heure",
-     "start": 6.15,
-     "end": 6.377
+     "start": 5.28,
+     "end": 5.36
     },
     {
      "w": "plus",
-     "start": 6.427,
-     "end": 6.632
+     "start": 5.44,
+     "end": 5.52
     },
     {
      "w": "tard,",
-     "start": 6.682,
-     "end": 6.909
+     "start": 5.56,
+     "end": 5.92
     },
     {
      "w": "il",
-     "start": 7.109,
-     "end": 7.268
+     "start": 6,
+     "end": 6.08
     },
     {
      "w": "fait",
-     "start": 7.318,
-     "end": 7.523
+     "start": 6.2,
+     "end": 6.32
     },
     {
      "w": "comme",
-     "start": 7.573,
-     "end": 7.8
+     "start": 6.36,
+     "end": 6.48
     },
     {
      "w": "si",
-     "start": 7.85,
-     "end": 8.009
+     "start": 6.56,
+     "end": 6.64
     },
     {
      "w": "tu",
-     "start": 8.059,
-     "end": 8.218
+     "start": 6.68,
+     "end": 6.72
     },
     {
      "w": "n'avais",
-     "start": 8.268,
-     "end": 8.541
+     "start": 6.8,
+     "end": 6.96
     },
     {
      "w": "rien",
-     "start": 8.591,
-     "end": 8.795
+     "start": 7.04,
+     "end": 7.2
     },
     {
      "w": "dit.",
-     "start": 8.845,
-     "end": 9.05
+     "start": 7.28,
+     "end": 7.68
     }
    ]
   },
   {
    "scene": "paquet",
-   "start": 9.55,
-   "end": 17.918,
+   "start": 7.76,
+   "end": 16.32,
    "words": [
     {
      "w": "À",
-     "start": 9.55,
-     "end": 9.686
+     "start": 7.76,
+     "end": 7.84
     },
     {
      "w": "chaque",
-     "start": 9.736,
-     "end": 9.986
+     "start": 7.92,
+     "end": 8.08
     },
     {
      "w": "message,",
-     "start": 10.036,
-     "end": 10.332
+     "start": 8.32,
+     "end": 8.72
     },
     {
      "w": "l'application",
-     "start": 10.532,
-     "end": 10.941
+     "start": 8.747,
+     "end": 9.28
     },
     {
      "w": "lui",
-     "start": 10.991,
-     "end": 11.173
+     "start": 9.307,
+     "end": 9.36
     },
     {
      "w": "renvoie",
-     "start": 11.223,
-     "end": 11.495
+     "start": 9.44,
+     "end": 9.84
     },
     {
      "w": "tout",
-     "start": 11.545,
-     "end": 11.75
+     "start": 9.88,
+     "end": 9.92
     },
     {
      "w": "le",
-     "start": 11.8,
-     "end": 11.959
+     "start": 9.96,
+     "end": 10
     },
     {
      "w": "paquet,",
-     "start": 12.009,
-     "end": 12.282
+     "start": 10.08,
+     "end": 10.64
     },
     {
      "w": "tes",
-     "start": 12.482,
-     "end": 12.664
+     "start": 10.72,
+     "end": 10.8
     },
     {
      "w": "consignes,",
-     "start": 12.714,
-     "end": 13.055
+     "start": 10.96,
+     "end": 11.44
     },
     {
      "w": "l'historique,",
-     "start": 13.255,
-     "end": 13.664
+     "start": 11.48,
+     "end": 12.16
     },
     {
      "w": "tes",
-     "start": 13.864,
-     "end": 14.045
+     "start": 12.24,
+     "end": 12.32
     },
     {
      "w": "fichiers",
-     "start": 14.095,
-     "end": 14.391
+     "start": 12.36,
+     "end": 12.8
     },
     {
      "w": "et",
-     "start": 14.441,
-     "end": 14.6
+     "start": 12.88,
+     "end": 12.96
     },
     {
      "w": "ta",
-     "start": 14.65,
-     "end": 14.809
+     "start": 13,
+     "end": 13.04
     },
     {
      "w": "question,",
-     "start": 14.859,
-     "end": 15.177
+     "start": 13.12,
+     "end": 13.84
     },
     {
      "w": "et",
-     "start": 15.377,
-     "end": 15.536
+     "start": 13.88,
+     "end": 13.92
     },
     {
      "w": "le",
-     "start": 15.586,
-     "end": 15.745
+     "start": 14,
+     "end": 14.04
     },
     {
      "w": "modèle",
-     "start": 15.795,
-     "end": 16.045
+     "start": 14.08,
+     "end": 14.32
     },
     {
      "w": "n'a",
-     "start": 16.095,
-     "end": 16.277
+     "start": 14.4,
+     "end": 14.56
     },
     {
      "w": "pas",
-     "start": 16.327,
-     "end": 16.509
+     "start": 14.6,
+     "end": 14.64
     },
     {
      "w": "d'autre",
-     "start": 16.559,
-     "end": 16.832
+     "start": 14.68,
+     "end": 14.88
     },
     {
      "w": "mémoire",
-     "start": 16.882,
-     "end": 17.155
+     "start": 14.96,
+     "end": 15.28
     },
     {
      "w": "que",
-     "start": 17.205,
-     "end": 17.386
+     "start": 15.36,
+     "end": 15.44
     },
     {
      "w": "ce",
-     "start": 17.436,
-     "end": 17.595
+     "start": 15.52,
+     "end": 15.6
     },
     {
      "w": "paquet.",
-     "start": 17.645,
-     "end": 17.918
+     "start": 15.64,
+     "end": 16.32
     }
    ]
   },
   {
    "scene": "nom",
-   "start": 18.418,
-   "end": 24.327,
+   "start": 16.4,
+   "end": 23.68,
    "words": [
     {
-     "w": "La",
-     "start": 18.418,
-     "end": 18.577
+     "w": "Ce",
+     "start": 16.4,
+     "end": 16.48
+    },
+    {
+     "w": "paquet",
+     "start": 16.52,
+     "end": 16.8
+    },
+    {
+     "w": "a",
+     "start": 16.84,
+     "end": 16.88
+    },
+    {
+     "w": "une",
+     "start": 16.96,
+     "end": 17.04
     },
     {
      "w": "taille",
-     "start": 18.627,
-     "end": 18.877
+     "start": 17.08,
+     "end": 17.28
     },
     {
-     "w": "maximale",
-     "start": 18.927,
-     "end": 19.223
+     "w": "maximale,",
+     "start": 17.4,
+     "end": 18
     },
     {
-     "w": "de",
-     "start": 19.273,
-     "end": 19.432
+     "w": "qu'on",
+     "start": 18.053,
+     "end": 18.16
     },
     {
-     "w": "ce",
-     "start": 19.482,
-     "end": 19.641
-    },
-    {
-     "w": "paquet,",
-     "start": 19.691,
-     "end": 19.964
-    },
-    {
-     "w": "comptée",
-     "start": 20.164,
-     "end": 20.436
+     "w": "compte",
+     "start": 18.2,
+     "end": 18.4
     },
     {
      "w": "en",
-     "start": 20.486,
-     "end": 20.645
+     "start": 18.48,
+     "end": 18.56
     },
     {
      "w": "tokens,",
-     "start": 20.695,
-     "end": 20.968
+     "start": 18.76,
+     "end": 19.28
+    },
+    {
+     "w": "et",
+     "start": 19.32,
+     "end": 19.36
+    },
+    {
+     "w": "cette",
+     "start": 19.44,
+     "end": 19.6
+    },
+    {
+     "w": "taille,",
+     "start": 19.68,
+     "end": 20.16
     },
     {
      "w": "c'est",
-     "start": 21.168,
-     "end": 21.395
+     "start": 20.187,
+     "end": 20.24
     },
     {
      "w": "la",
-     "start": 21.445,
-     "end": 21.605
+     "start": 20.32,
+     "end": 20.4
     },
     {
      "w": "fenêtre",
-     "start": 21.655,
-     "end": 21.927
+     "start": 20.48,
+     "end": 20.88
     },
     {
      "w": "de",
-     "start": 21.977,
-     "end": 22.136
+     "start": 20.92,
+     "end": 20.96
     },
     {
      "w": "contexte,",
-     "start": 22.186,
-     "end": 22.505
+     "start": 21.04,
+     "end": 21.68
     },
     {
      "w": "ou",
-     "start": 22.705,
-     "end": 22.864
+     "start": 21.72,
+     "end": 21.76
     },
     {
      "w": "en",
-     "start": 22.914,
-     "end": 23.073
+     "start": 21.8,
+     "end": 21.84
     },
     {
      "w": "anglais,",
-     "start": 23.123,
-     "end": 23.418
+     "start": 21.92,
+     "end": 22.48
     },
     {
      "w": "context",
-     "start": 23.618,
-     "end": 23.959
+     "start": 22.56,
+     "end": 22.88
     },
     {
      "w": "window.",
-     "start": 24.009,
-     "end": 24.327
+     "start": 22.96,
+     "end": 23.68
     }
    ]
   },
   {
    "scene": "tableau",
-   "start": 24.827,
-   "end": 34.477,
+   "start": 24.107,
+   "end": 32.08,
    "words": [
     {
      "w": "Imagine",
-     "start": 24.827,
-     "end": 25.1
+     "start": 24.107,
+     "end": 24.16
     },
     {
      "w": "le",
-     "start": 25.15,
-     "end": 25.309
+     "start": 24.24,
+     "end": 24.32
     },
     {
      "w": "tableau",
-     "start": 25.359,
-     "end": 25.632
+     "start": 24.44,
+     "end": 24.64
     },
     {
      "w": "blanc",
-     "start": 25.682,
-     "end": 25.909
+     "start": 24.68,
+     "end": 24.8
     },
     {
      "w": "de",
-     "start": 25.959,
-     "end": 26.118
+     "start": 24.84,
+     "end": 24.88
     },
     {
      "w": "la",
-     "start": 26.168,
-     "end": 26.327
+     "start": 24.92,
+     "end": 24.96
     },
     {
      "w": "salle",
-     "start": 26.377,
-     "end": 26.605
+     "start": 25.04,
+     "end": 25.2
     },
     {
      "w": "de",
-     "start": 26.655,
-     "end": 26.814
+     "start": 25.24,
+     "end": 25.28
     },
     {
      "w": "réunion,",
-     "start": 26.864,
-     "end": 27.159
+     "start": 25.36,
+     "end": 25.84
     },
     {
      "w": "que",
-     "start": 27.359,
-     "end": 27.541
+     "start": 25.92,
+     "end": 26
     },
     {
      "w": "Patrick",
-     "start": 27.591,
-     "end": 27.864
+     "start": 26.16,
+     "end": 26.32
     },
     {
      "w": "efface",
-     "start": 27.914,
-     "end": 28.164
+     "start": 26.4,
+     "end": 26.64
     },
     {
      "w": "par",
-     "start": 28.214,
-     "end": 28.395
+     "start": 26.68,
+     "end": 26.72
     },
     {
      "w": "le",
-     "start": 28.445,
-     "end": 28.605
+     "start": 26.8,
+     "end": 26.88
     },
     {
      "w": "coin",
-     "start": 28.655,
-     "end": 28.859
+     "start": 26.96,
+     "end": 27.12
     },
     {
      "w": "quand",
-     "start": 28.909,
-     "end": 29.136
+     "start": 27.173,
+     "end": 27.28
     },
     {
      "w": "il",
-     "start": 29.186,
-     "end": 29.345
+     "start": 27.32,
+     "end": 27.36
     },
     {
      "w": "est",
-     "start": 29.395,
-     "end": 29.577
+     "start": 27.44,
+     "end": 27.52
     },
     {
      "w": "plein,",
-     "start": 29.627,
-     "end": 29.877
+     "start": 27.56,
+     "end": 27.92
     },
     {
      "w": "si",
-     "start": 30.077,
-     "end": 30.236
+     "start": 28,
+     "end": 28.08
     },
     {
      "w": "bien",
-     "start": 30.286,
-     "end": 30.491
+     "start": 28.133,
+     "end": 28.24
     },
     {
      "w": "qu'à",
-     "start": 30.541,
-     "end": 30.745
+     "start": 28.28,
+     "end": 28.4
     },
     {
      "w": "seize",
-     "start": 30.795,
-     "end": 31.023
+     "start": 28.48,
+     "end": 28.64
     },
     {
      "w": "heures,",
-     "start": 31.073,
-     "end": 31.345
+     "start": 28.72,
+     "end": 29.12
     },
     {
      "w": "plus",
-     "start": 31.545,
-     "end": 31.75
+     "start": 29.24,
+     "end": 29.36
     },
     {
      "w": "personne",
-     "start": 31.8,
-     "end": 32.095
+     "start": 29.52,
+     "end": 29.76
     },
     {
      "w": "ne",
-     "start": 32.145,
-     "end": 32.305
+     "start": 29.8,
+     "end": 29.84
     },
     {
      "w": "sait",
-     "start": 32.355,
-     "end": 32.559
+     "start": 29.92,
+     "end": 30.08
     },
     {
      "w": "pourquoi",
-     "start": 32.609,
-     "end": 32.905
+     "start": 30.16,
+     "end": 30.32
     },
     {
      "w": "on",
-     "start": 32.955,
-     "end": 33.114
+     "start": 30.4,
+     "end": 30.48
     },
     {
      "w": "avait",
-     "start": 33.164,
-     "end": 33.391
+     "start": 30.52,
+     "end": 30.72
     },
     {
      "w": "tout",
-     "start": 33.441,
-     "end": 33.645
+     "start": 30.8,
+     "end": 30.88
     },
     {
      "w": "décidé",
-     "start": 33.695,
-     "end": 33.945
+     "start": 30.92,
+     "end": 31.28
     },
     {
      "w": "en",
-     "start": 33.995,
-     "end": 34.155
+     "start": 31.32,
+     "end": 31.36
     },
     {
      "w": "orange.",
-     "start": 34.205,
-     "end": 34.477
+     "start": 31.44,
+     "end": 32.08
     }
    ]
   },
   {
    "scene": "proust",
-   "start": 34.977,
-   "end": 44.168,
+   "start": 32.16,
+   "end": 43.44,
    "words": [
     {
      "w": "En",
-     "start": 34.977,
-     "end": 35.136
+     "start": 32.16,
+     "end": 32.24
     },
     {
      "w": "2023,",
-     "start": 35.186,
-     "end": 35.414
+     "start": 32.28,
+     "end": 33.2
     },
     {
      "w": "GPT-4",
-     "start": 35.614,
-     "end": 35.841
+     "start": 33.28,
+     "end": 33.84
     },
     {
      "w": "lisait",
-     "start": 35.891,
-     "end": 36.141
+     "start": 34,
+     "end": 34.32
     },
     {
      "w": "8 000",
-     "start": 36.191,
-     "end": 36.559
+     "start": 34.4,
+     "end": 34.72
     },
     {
      "w": "tokens",
-     "start": 36.609,
-     "end": 36.859
+     "start": 34.8,
+     "end": 35.04
     },
     {
      "w": "d'un",
-     "start": 36.909,
-     "end": 37.114
+     "start": 35.12,
+     "end": 35.2
     },
     {
      "w": "coup,",
-     "start": 37.164,
-     "end": 37.391
+     "start": 35.28,
+     "end": 35.68
     },
     {
      "w": "à",
-     "start": 37.591,
-     "end": 37.727
+     "start": 35.72,
+     "end": 35.76
     },
     {
      "w": "peine",
-     "start": 37.777,
-     "end": 38.005
+     "start": 35.84,
+     "end": 36
     },
     {
      "w": "3",
-     "start": 38.055,
-     "end": 38.191
+     "start": 36.08,
+     "end": 36.24
     },
     {
      "w": "%",
-     "start": 38.241,
-     "end": 38.377
+     "start": 36.32,
+     "end": 36.48
     },
     {
-     "w": "de",
-     "start": 38.427,
-     "end": 38.586
+     "w": "d'un",
+     "start": 36.56,
+     "end": 36.8
+    },
+    {
+     "w": "roman",
+     "start": 36.88,
+     "end": 37.12
+    },
+    {
+     "w": "comme",
+     "start": 37.2,
+     "end": 37.36
     },
     {
      "w": "Du",
-     "start": 38.636,
-     "end": 38.795
+     "start": 37.4,
+     "end": 37.44
     },
     {
      "w": "côté",
-     "start": 38.845,
-     "end": 39.05
+     "start": 37.52,
+     "end": 37.68
     },
     {
      "w": "de",
-     "start": 39.1,
-     "end": 39.259
+     "start": 37.72,
+     "end": 37.76
     },
     {
      "w": "chez",
-     "start": 39.309,
-     "end": 39.514
+     "start": 37.84,
+     "end": 37.92
     },
     {
      "w": "Swann,",
-     "start": 39.564,
-     "end": 39.814
+     "start": 38,
+     "end": 38.64
     },
     {
      "w": "et",
-     "start": 40.014,
-     "end": 40.173
+     "start": 38.68,
+     "end": 38.72
     },
     {
      "w": "depuis",
-     "start": 40.223,
-     "end": 40.473
+     "start": 38.8,
+     "end": 38.96
     },
     {
      "w": "2024,",
-     "start": 40.523,
-     "end": 40.75
+     "start": 39.04,
+     "end": 39.92
     },
     {
      "w": "certains",
-     "start": 40.95,
-     "end": 41.245
+     "start": 40,
+     "end": 40.16
     },
     {
      "w": "modèles",
-     "start": 41.295,
-     "end": 41.568
+     "start": 40.24,
+     "end": 40.48
     },
     {
      "w": "en",
-     "start": 41.618,
-     "end": 41.777
+     "start": 40.52,
+     "end": 40.56
     },
     {
      "w": "lisent",
-     "start": 41.827,
-     "end": 42.077
+     "start": 40.64,
+     "end": 40.96
     },
     {
      "w": "un",
-     "start": 42.127,
-     "end": 42.286
+     "start": 41,
+     "end": 41.04
     },
     {
      "w": "million,",
-     "start": 42.336,
-     "end": 42.632
+     "start": 41.2,
+     "end": 41.76
     },
     {
      "w": "presque",
-     "start": 42.832,
-     "end": 43.105
+     "start": 41.84,
+     "end": 42.16
     },
     {
      "w": "quatre",
-     "start": 43.155,
-     "end": 43.405
+     "start": 42.24,
+     "end": 42.4
     },
     {
      "w": "fois",
-     "start": 43.455,
-     "end": 43.659
+     "start": 42.56,
+     "end": 42.64
     },
     {
      "w": "le",
-     "start": 43.709,
-     "end": 43.868
+     "start": 42.72,
+     "end": 42.8
     },
     {
      "w": "livre.",
-     "start": 43.918,
-     "end": 44.168
+     "start": 42.88,
+     "end": 43.44
     }
    ]
   },
   {
    "scene": "limite",
-   "start": 44.668,
-   "end": 52.577,
+   "start": 43.509,
+   "end": 51.92,
    "words": [
     {
      "w": "Sauf",
-     "start": 44.668,
-     "end": 44.873
+     "start": 43.509,
+     "end": 43.6
     },
     {
      "w": "qu'une",
-     "start": 44.923,
-     "end": 45.173
+     "start": 43.68,
+     "end": 43.84
     },
     {
      "w": "grande",
-     "start": 45.223,
-     "end": 45.473
+     "start": 43.92,
+     "end": 44.08
     },
     {
      "w": "fenêtre",
-     "start": 45.523,
-     "end": 45.795
+     "start": 44.16,
+     "end": 44.56
     },
     {
      "w": "ne",
-     "start": 45.845,
-     "end": 46.005
+     "start": 44.64,
+     "end": 44.72
     },
     {
      "w": "garantit",
-     "start": 46.055,
-     "end": 46.35
+     "start": 44.8,
+     "end": 45.2
     },
     {
      "w": "pas",
-     "start": 46.4,
-     "end": 46.582
+     "start": 45.24,
+     "end": 45.28
     },
     {
      "w": "une",
-     "start": 46.632,
-     "end": 46.814
+     "start": 45.36,
+     "end": 45.44
     },
     {
      "w": "bonne",
-     "start": 46.864,
-     "end": 47.091
+     "start": 45.52,
+     "end": 45.6
     },
     {
      "w": "lecture,",
-     "start": 47.141,
-     "end": 47.436
+     "start": 45.68,
+     "end": 46.32
     },
     {
      "w": "et",
-     "start": 47.636,
-     "end": 47.795
+     "start": 46.36,
+     "end": 46.4
     },
     {
      "w": "en",
-     "start": 47.845,
-     "end": 48.005
+     "start": 46.48,
+     "end": 46.56
     },
     {
      "w": "2025,",
-     "start": 48.055,
-     "end": 48.282
+     "start": 46.587,
+     "end": 47.44
     },
     {
      "w": "sur",
-     "start": 48.482,
-     "end": 48.664
+     "start": 47.56,
+     "end": 47.68
     },
     {
      "w": "18",
-     "start": 48.714,
-     "end": 48.873
+     "start": 47.72,
+     "end": 48
     },
     {
      "w": "modèles",
-     "start": 48.923,
-     "end": 49.195
+     "start": 48.08,
+     "end": 48.32
     },
     {
      "w": "testés,",
-     "start": 49.245,
-     "end": 49.518
+     "start": 48.48,
+     "end": 49.12
     },
     {
      "w": "tous",
-     "start": 49.718,
-     "end": 49.923
+     "start": 49.2,
+     "end": 49.36
     },
     {
      "w": "devenaient",
-     "start": 49.973,
-     "end": 50.314
+     "start": 49.4,
+     "end": 49.68
     },
     {
      "w": "moins",
-     "start": 50.364,
-     "end": 50.591
+     "start": 49.72,
+     "end": 49.92
     },
     {
      "w": "fiables",
-     "start": 50.641,
-     "end": 50.914
+     "start": 49.96,
+     "end": 50.32
     },
     {
      "w": "à",
-     "start": 50.964,
-     "end": 51.1
+     "start": 50.36,
+     "end": 50.4
     },
     {
      "w": "mesure",
-     "start": 51.15,
-     "end": 51.4
+     "start": 50.48,
+     "end": 50.8
     },
     {
      "w": "que",
-     "start": 51.45,
-     "end": 51.632
+     "start": 50.84,
+     "end": 50.88
     },
     {
      "w": "le",
-     "start": 51.682,
-     "end": 51.841
+     "start": 50.96,
+     "end": 51
     },
     {
      "w": "texte",
-     "start": 51.891,
-     "end": 52.118
+     "start": 51.04,
+     "end": 51.36
     },
     {
      "w": "s'allongeait.",
-     "start": 52.168,
-     "end": 52.577
+     "start": 51.4,
+     "end": 51.92
     }
    ]
   },
   {
    "scene": "chute",
-   "start": 53.077,
-   "end": 58.623,
+   "start": 52.373,
+   "end": 58.64,
    "words": [
     {
      "w": "Alors",
-     "start": 53.077,
-     "end": 53.305
+     "start": 52.373,
+     "end": 52.48
     },
     {
      "w": "si",
-     "start": 53.355,
-     "end": 53.514
+     "start": 52.56,
+     "end": 52.64
     },
     {
      "w": "ta",
-     "start": 53.564,
-     "end": 53.723
+     "start": 52.72,
+     "end": 52.8
     },
     {
      "w": "consigne",
-     "start": 53.773,
-     "end": 54.068
+     "start": 52.88,
+     "end": 53.2
     },
     {
      "w": "a",
-     "start": 54.118,
-     "end": 54.255
+     "start": 53.24,
+     "end": 53.28
     },
     {
      "w": "disparu,",
-     "start": 54.305,
-     "end": 54.6
+     "start": 53.4,
+     "end": 54.32
     },
     {
      "w": "redonne-la…",
-     "start": 54.8,
-     "end": 55.164
+     "start": 54.4,
+     "end": 55.52
     },
     {
      "w": "ou",
-     "start": 56.214,
-     "end": 56.373
+     "start": 55.6,
+     "end": 55.76
     },
     {
      "w": "repars",
-     "start": 56.423,
-     "end": 56.673
+     "start": 56.08,
+     "end": 56.32
     },
     {
      "w": "d'une",
-     "start": 56.723,
-     "end": 56.95
+     "start": 56.4,
+     "end": 56.48
     },
     {
      "w": "conversation",
-     "start": 57,
-     "end": 57.386
+     "start": 56.56,
+     "end": 57.12
     },
     {
      "w": "neuve,",
-     "start": 57.436,
-     "end": 57.686
+     "start": 57.16,
+     "end": 57.6
     },
     {
      "w": "avec",
-     "start": 57.886,
-     "end": 58.091
+     "start": 57.72,
+     "end": 57.84
     },
     {
      "w": "un",
-     "start": 58.141,
-     "end": 58.3
+     "start": 57.88,
+     "end": 57.92
     },
     {
      "w": "résumé.",
-     "start": 58.35,
-     "end": 58.623
+     "start": 58,
+     "end": 58.64
     }
    ]
   }

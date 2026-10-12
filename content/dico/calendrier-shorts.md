@@ -14,7 +14,7 @@ Shorts à voix off pour YouTube, TikTok et Instagram ; recette dans `video/VOIX.
 
 ## La semaine du 13 octobre
 
-Rien n'est sorti les 10, 11 et 12 : le calendrier glisse d'une semaine (2026-10-12). Les sept épisodes sont prêts en version sans voix dans `video/out/shorts/<id>/`, à relire avant les voix.
+Rien n'est sorti les 10, 11 et 12 : le calendrier glisse d'une semaine (2026-10-12). Les sept épisodes ont leur voix et sont rendus dans `video/out/shorts/<id>/` (état ci-dessous).
 
 | Date | Ép. | Format | Fiche | Composition | Fil avec l'épisode d'avant | Décor |
 |---|---|---|---|---|---|---|
@@ -28,11 +28,51 @@ Rien n'est sorti les 10, 11 et 12 : le calendrier glisse d'une semaine (2026-10-
 
 En réserve : mythes `mythe-a-lu-tout-internet`, `mythe-ia-calcule`, `mythe-sait-quand-il-ne-sait-pas`, `mythe-plus-gros-plus-intelligent`, `mythe-chatgpt-c-est-le-modele` ; définitions de la file d'attente de `video/VOIX.md` (Token, Embedding, MCP, Open weights, Context rot, Harness, Benchmaxxing…).
 
-## Où on en est (2026-10-12, pour reprendre ailleurs)
+## Où on en est (2026-10-12, soir)
 
-- Les sept épisodes de la semaine (4 à 10) sont montés sans voix, sur un calage estimé (`*.words.json` marqués `estimated`). Les vidéos de relecture sont dans `video/out/shorts/<id>/`, non versionné : sur une autre machine, les refaire avec `npx remotion render src/index.ts <Composition> ...` (recette dans `video/VOIX.md`).
-- Prochaine étape : la voix de l'ép. 4 (`fenetre`, sortie mar. 13/10), PAL - FR en `eleven_v4`, puis transcription du nœud, `node tools/align-from-words.mjs fenetre`, contrôle, rendu ; ensuite les ép. 5 à 10 dans l'ordre.
-- Questions ouvertes pour PA avant les voix : le format « Entendu au bureau » (ép. 8) ; la scène des arcs (ép. 9) ; Nadia (ép. 5) et Nadine (ép. 10), deux prénoms proches ; les accroches sans citation sourcée (ép. 5 et 9, champ `todo` des scripts) ; le réglage ChatGPT « Améliorer le modèle pour tout le monde » activé par défaut (ép. 5, à vérifier dans ses réglages).
+- Les sept épisodes (4 à 10) ont leur voix PAL - FR en `eleven_v4` et sont rendus en v1 dans `video/out/shorts/<id>/` (vidéo `-v1.mp4` et couverture `-cover.jpg`, non versionnés). Voix 4, 8, 9, 10 générées par le MCP dans le flow (transcription gratuite, calée sur le texte) ; voix 5, 6, 7 générées par PA dans Eleven Creative, importées et transcrites, puis reportées sur le texte du script par `video/tools/words-from-transcript.py`.
+- Reste à faire par PA : relire les vidéos, planifier et publier (titres et descriptions ci-dessous), puis ajouter chaque short à `lexique/shorts.js` (recette, étape 13 de `video/VOIX.md`).
+- Points à écouter : ép. 6, Scribe a entendu « Balassa » pour « Thalassa » ; ép. 7, « aucun thé » pour « au quinté ». Si la voix le dit vraiment ainsi, refaire la prise.
+- Toujours ouverts : les accroches sans citation sourcée (ép. 5 et 9, champ `todo` des scripts) ; Nadia (ép. 5) et Nadine (ép. 10), deux prénoms proches ; ép. 4 et 6, un sous-titre double un titre écrit à l'écran (« Du côté de chez Swann », « Freed from Desire ») pendant deux secondes.
+
+## À publier : titres et descriptions
+
+Un titre de 40 caractères au plus ; la description donne le terme, le lien de la fiche en entier et trois hashtags précis, plus #vulgarisation. Même texte sur YouTube, TikTok et Instagram.
+
+**Ép. 4, mar. 13/10** (`fenetre`) : Pourquoi ChatGPT oublie tes consignes
+> La fenêtre de contexte (context window), c'est tout ce que le modèle a sous les yeux quand il te répond ; à chaque message, l'application lui renvoie tout le paquet, et quand il déborde, le début passe à la trappe.
+> https://neopal.github.io/lexique/fenetre-de-contexte/
+> #fenetredecontexte #chatgpt #llm #vulgarisation
+
+**Ép. 5, mer. 14/10** (`conversations`) : ChatGPT n'apprend pas en te parlant
+> « L'IA apprend en direct de nos conversations » ; pas encore. Pendant que tu lui parles, ses paramètres sont figés, et ce qu'il semble retenir de toi, c'est la mémoire, une fiche que l'application lui relit. Tes conversations peuvent quand même servir à entraîner le modèle suivant (réglage « Améliorer le modèle pour tout le monde », activé par défaut).
+> https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/
+> #chatgpt #memoire #ia #vulgarisation
+
+**Ép. 6, jeu. 15/10** (`temperature`) : Pourquoi ChatGPT ne répond jamais pareil
+> La température, c'est le réglage qui dose le hasard quand le modèle tire chaque mot au sort ; basse, il est prévisible, haute, il ose, mais jamais plus juste.
+> https://neopal.github.io/lexique/temperature/
+> #temperature #chatgpt #llm #vulgarisation
+
+**Ép. 7, ven. 16/10** (`taux-d-erreur`) : L'IA se trompe à 36 % ? Pas vraiment
+> « 64 % de réponses pertinentes », entendu au Sénat en juin 2025 ; le chiffre vient d'une étude de 2023 qui mesurait tout autre chose. Une IA n'a pas de taux d'erreur, seulement celui que tu mesures sur tes propres cas.
+> https://neopal.github.io/lexique/mythe-taux-d-erreur/
+> #hallucination #chatgpt #ia #vulgarisation
+
+**Ép. 8, sam. 17/10** (`rag`) : Le chatbot RH peut-il se tromper ?
+> Le RAG (retrieval augmented generation) va chercher les bons passages dans tes documents avant que le modèle réponde ; s'il ramène le mauvais, le modèle répond quand même. Regarde toujours le passage cité.
+> https://neopal.github.io/lexique/rag/
+> #rag #chatbot #ia #vulgarisation
+
+**Ép. 9, dim. 18/10** (`lit-mot-par-mot`) : L'IA ne lit pas mot par mot
+> Le modèle ne voit jamais un mot, il reçoit des tokens, tous d'un coup (le prefill), puis écrit sa réponse un token à la fois. Tout lire d'un coup ne veut pas dire tout retenir pareil.
+> https://neopal.github.io/lexique/mythe-lit-mot-par-mot/
+> #tokenizer #llm #ia #vulgarisation
+
+**Ép. 10, lun. 19/10** (`agent`) : L'IA qui agit au lieu de répondre
+> Un agent, c'est un modèle qu'on laisse agir : un objectif, des outils, et il choisit lui-même les étapes. Avant de le laisser faire seul, donne-lui une copie, pas l'original.
+> https://neopal.github.io/lexique/agent/
+> #agentia #llm #ia #vulgarisation
 
 ## Publiés
 

@@ -14,7 +14,7 @@
   "segments": [
     {
       "scene": "hook",
-      "say": "[calmly] « L'IA apprend en direct de nos conversations »… pas encore."
+      "say": "[warmly] « L'IA apprend en direct de nos conversations »… pas encore."
     },
     {
       "scene": "fige",

@@ -13,7 +13,7 @@
   "segments": [
     {
       "scene": "hook",
-      "say": "[calmly] C'est quoi ? la température…"
+      "say": "[warmly] C'est quoi... la température…"
     },
     {
       "scene": "intro",
@@ -25,15 +25,15 @@
     },
     {
       "scene": "nom",
-      "say": "La température, c'est le réglage qui dose ce hasard, ou en anglais, /ˈtɛmpɹətʃɚ/."
+      "say": "La température, c'est le réglage qui dose ce hasard."
     },
     {
       "scene": "dj",
-      "say": "[mischievously] Imagine le DJ d'un mariage, qui réglé au plus bas passe la chanson que tout le monde attend, et qui poussé à fond te sort du free jazz finlandais."
+      "say": "[mischievously] Imagine le DJ d'un mariage, qui réglé au plus bas lance « /fɹiːd fɹəm dɪˈzaɪɚ/ » pour que toute la salle hurle le refrain, et qui poussé à fond enchaîne sur le générique de Thalassa."
     },
     {
-      "scene": "bar",
-      "say": "[curious] Pour baptiser un bar, à température basse, il propose « Le Comptoir » presque à chaque fois, et à température haute, il ose « Le Zinc », « Le Refuge », et même « Le Hibou »."
+      "scene": "prenom",
+      "say": "[curious] Les mariés lui demandent un prénom pour leur futur bébé, et à température basse, il propose Gabriel presque à chaque fois, le prénom le plus donné en France, alors qu'à température haute, il ose Ulysse, Marcel, et même Clafoutis."
     },
     {
       "scene": "feynman",
@@ -46,20 +46,22 @@
   ],
   "quoted": [],
   "display": {
-    "/ˈtɛmpɹətʃɚ/": "temperature"
+    "/fɹiːd": "Freed",
+    "fɹəm": "from",
+    "dɪˈzaɪɚ/": "Desire"
   },
   "nocaption": [
     "hook"
   ],
   "sources": [
-    "Fiche temperature de lexique/terms.js : tirage, division des scores par la température ; noms de bar et scores illustratifs du short muet Température (src/Temperature.tsx), probabilités calculées par softmax (T = 0,3 : Comptoir 95 % ; T = 1,5 : 41 %, 21 %, 16 %, 12 %, 9 %)",
-    "Thinking Machines Lab (Horace He), Defeating Nondeterminism in LLM Inference, 10 septembre 2025 : 1 000 fois « Tell me about Richard Feynman » à Qwen3 à température 0, 80 réponses différentes ; https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/"
+    "Fiche temperature de lexique/terms.js : tirage, division des scores par la température ; scores illustratifs du short muet Température (src/Temperature.tsx), reportés sur des prénoms, probabilités calculées par softmax (T = 0,3 : Gabriel 95 % ; T = 1,5 : 41 %, 21 %, 16 %, 12 %, 9 %)",
+    "Thinking Machines Lab (Horace He), Defeating Nondeterminism in LLM Inference, 10 septembre 2025 : 1 000 fois « Tell me about Richard Feynman » à Qwen3 à température 0, 80 réponses différentes ; https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/",
+    "Insee, Top 10 des prénoms en France en 2025 : Gabriel, prénom masculin le plus donné (4 625 naissances) ; https://www.insee.fr/fr/statistiques/8595099"
   ],
   "credits": [],
   "onscreen": {
     "nom": [
-      "La température,",
-      "ou en anglais, temperature."
+      "La température,"
     ]
   }
 }

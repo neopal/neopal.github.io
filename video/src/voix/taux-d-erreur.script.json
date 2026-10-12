@@ -13,15 +13,15 @@
   "segments": [
     {
       "scene": "hook",
-      "say": "[calmly] « Ces IA sont pertinentes à 64 %… dans 36 % des cas, elles racontent n'importe quoi »… entendu au Sénat, en juin 2025."
+      "say": "[warmly] « Ces IA sont pertinentes à 64 %… dans 36 % des cas, elles racontent n'importe quoi »… entendu au Sénat, en juin 2025."
     },
     {
       "scene": "intro",
-      "say": "[curious] Alors, il se trompe une fois sur trois ? Le chiffre vient d'une étude de Hong Kong, qui mesurait tout autre chose."
+      "say": "[curious] Alors, ChatGPT se trompe une fois sur trois ? Le chiffre vient d'une étude de Hong Kong, qui mesurait tout autre chose."
     },
     {
       "scene": "etude",
-      "say": "[warmly] En 2023, les chercheurs ont donné à ChatGPT 634 exercices de raisonnement, et il en réussissait 64 % en moyenne."
+      "say": "[warmly] En 2023, les chercheurs lui ont donné 634 exercices de raisonnement, et il en réussissait 64 % en moyenne."
     },
     {
       "scene": "paintball",
