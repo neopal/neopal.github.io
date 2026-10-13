@@ -3,7 +3,7 @@
 // Règle « lisible dans le métro » (univers.md) : aucun texte sous 48 px, sous-titres de 2 lignes au plus restant
 // au moins 1 s. Contrôle : npm run check:voix -- <id> <Composition>
 import React from 'react';
-import {AbsoluteFill, Audio, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Sequence, getInputProps, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {loadFont as loadSerif} from '@remotion/google-fonts/Newsreader';
 import {AccentProvider, Big, Chrome, LastContext, Oscillo, PAD, Pop, Say, Scene, ZONE, clamp, serif, useAccent} from '../kit';
 import {makeChunks} from './chunks.mjs';
@@ -99,7 +99,8 @@ export const makeVoix = (align: Align, script: Script, music?: string) => {
               <LastContext.Provider value={i === SEGS.length - 1}>{React.createElement(scenes[s.scene])}</LastContext.Provider>
             </Sequence>
           ))}
-          <Captions />
+          {/* Couverture (--props='{"cover":true}') : sans sous-titre, sinon la miniature montre une phrase coupée (retour PA, 2026-10-13, ép. 9). */}
+          {(getInputProps() as {cover?: boolean}).cover ? null : <Captions />}
           <Chrome />
         </AbsoluteFill>
       </AccentProvider>
