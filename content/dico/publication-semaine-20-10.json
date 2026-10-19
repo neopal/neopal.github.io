@@ -1,0 +1,125 @@
+{
+  "_regles": "YouTube : titre à part (40 caractères au plus, sans hashtag), description = texte + lien + crédits + hashtags en fin (YouTube affiche les 3 premiers au-dessus du titre). TikTok et Instagram : une seule légende = titre en première ligne + texte + lien (non cliquable, écrit en entier) + crédits + hashtags en fin. Mêmes 4 hashtags partout. Programmation à 8 h. Instagram : forcer le format d'origine (9:16) à l'import.",
+  "episodes": [
+    {
+      "ep": 11,
+      "date": "2026-10-20",
+      "id": "chatgpt-modele",
+      "file": "chatgpt-modele-v2.mp4",
+      "title": "Derrière ChatGPT, quinze IA différentes",
+      "body": "On dit souvent que ChatGPT est une IA, alors que c'est une application, et que derrière le même logo le modèle qui répond a changé plus de quinze fois, de GPT-3.5 en 2022 à GPT-6 en 2026. Le rôle reste et l'acteur change, comme pour l'agent 007.",
+      "link": "https://neopal.github.io/lexique/mythe-chatgpt-c-est-le-modele/",
+      "credits": "Portraits : Wikimedia Commons (Comet Photo AG, Luigi Novi, Allan Warren, Bart Molendijk / Anefo, Philip Romano, Max Surprenant), CC BY / CC BY-SA.",
+      "tags": "#chatgpt #gpt6 #llm #vulgarisation",
+      "yt_tags": "ChatGPT, GPT-6, modèle, LLM, OpenAI, IA, vulgarisation, lexique IA",
+      "yt_related": "fait par PA"
+    },
+    {
+      "ep": 12,
+      "date": "2026-10-21",
+      "id": "ai-slop",
+      "file": "ai-slop-v1.mp4",
+      "title": "Un Short sur cinq est de la pâtée",
+      "body": "L'AI slop, c'est le contenu que l'IA produit en masse et que personne n'a demandé ni relu. Certains jours de juin 2026, il faisait plus de la moitié des morceaux envoyés à Deezer, pour 1 à 3 % des écoutes. Les images de slop de cette vidéo ont été générées par IA, exprès.",
+      "link": "https://neopal.github.io/lexique/ai-slop/",
+      "credits": "",
+      "tags": "#aislop #ia #youtubeshorts #vulgarisation",
+      "yt_tags": "AI slop, IA, contenu généré par IA, Deezer, YouTube Shorts, vulgarisation, lexique IA",
+      "yt_related": "Pourquoi ChatGPT invente des sources"
+    },
+    {
+      "ep": 13,
+      "date": "2026-10-22",
+      "id": "ia-calcule",
+      "file": "ia-calcule-v1.mp4",
+      "title": "ChatGPT ne calcule pas, il devine",
+      "body": "On croit que l'IA calcule comme une calculatrice, alors que le modèle écrit les chiffres d'un résultat comme des mots, token par token, et qu'il doit faire tourner du code pour garantir un total. Le compte est bon… souvent.",
+      "link": "https://neopal.github.io/lexique/mythe-ia-calcule/",
+      "credits": "",
+      "tags": "#chatgpt #calcul #llm #vulgarisation",
+      "yt_tags": "ChatGPT, calcul, LLM, tokens, calculatrice, IA, vulgarisation, lexique IA",
+      "yt_related": "L'IA se trompe à 36 % ? Pas vraiment"
+    },
+    {
+      "ep": 14,
+      "date": "2026-10-23",
+      "id": "agi",
+      "file": "agi-v1.mp4",
+      "title": "L'AGI est là ? Tout dépend qui demande",
+      "body": "L'AGI, ou intelligence artificielle générale, désigne une IA aussi bonne que les humains sur l'essentiel des tâches intellectuelles, et chacun la définit à sa façon, jusqu'à un contrat qui la fixait à 100 milliards de dollars de bénéfices.",
+      "link": "https://neopal.github.io/lexique/agi/",
+      "credits": "",
+      "tags": "#agi #openai #ia #vulgarisation",
+      "yt_tags": "AGI, intelligence artificielle générale, OpenAI, GPT-6, IA, vulgarisation, lexique IA",
+      "yt_related": "L'IA qui agit au lieu de répondre"
+    },
+    {
+      "ep": 15,
+      "date": "2026-10-24",
+      "id": "sait-pas",
+      "file": "sait-pas-v1.mp4",
+      "title": "ChatGPT ne sait pas qu'il ne sait pas",
+      "body": "Un modèle écrit la suite la plus probable avec le même aplomb, qu'il connaisse la réponse ou non, et ne dit « je ne sais pas » que si on l'a entraîné à le faire. Repose ta question dans une conversation neuve, et si la réponse change, c'est qu'il n'en savait rien.",
+      "link": "https://neopal.github.io/lexique/mythe-sait-quand-il-ne-sait-pas/",
+      "credits": "",
+      "tags": "#hallucination #chatgpt #ia #vulgarisation",
+      "yt_tags": "hallucination, ChatGPT, DeepSeek, IA, je ne sais pas, vulgarisation, lexique IA",
+      "yt_related": "Pourquoi ChatGPT invente des sources"
+    },
+    {
+      "ep": 16,
+      "date": "2026-10-25",
+      "id": "p-doom",
+      "file": "p-doom-v1.mp4",
+      "title": "Une chance sur quatre que tout finisse ?",
+      "body": "Le p(doom), c'est la probabilité qu'une personne donne à une catastrophe causée par l'IA. Elle va de 25 % pour le patron d'Anthropic à « moins qu'un astéroïde » pour Yann LeCun, parce que personne ne répond à la même question, et elle reste une opinion plutôt qu'une mesure.",
+      "link": "https://neopal.github.io/lexique/p-doom/",
+      "credits": "",
+      "tags": "#pdoom #securiteia #ia #vulgarisation",
+      "yt_tags": "p(doom), pdoom, risque IA, sécurité IA, Anthropic, Yann LeCun, vulgarisation, lexique IA",
+      "yt_related": "L'IA qui agit au lieu de répondre"
+    },
+    {
+      "ep": 17,
+      "date": "2026-10-26",
+      "id": "bon-score",
+      "file": "bon-score-v1.mp4",
+      "title": "Premier au benchmark, nul au boulot ?",
+      "body": "Un score de benchmark mesure un exercice précis et en dit peu sur ton propre travail, puisque GPT-6 Astra passe de 62,7 % à 99,9 % sur les mêmes jeux d'ARC-AGI-3 rien qu'en changeant le programme qui l'entoure.",
+      "link": "https://neopal.github.io/lexique/mythe-bon-score-bon-modele/",
+      "credits": "",
+      "tags": "#benchmark #llm #ia #vulgarisation",
+      "yt_tags": "benchmark, ARC-AGI-3, GPT-6, LLM, évaluation, IA, vulgarisation, lexique IA",
+      "yt_related": "L'IA se trompe à 36 % ? Pas vraiment"
+    }
+  ],
+  "_statut": {
+    "youtube": {
+      "11": "programmé 2026-10-20 08:00 (par PA)",
+      "12": "programmé 2026-10-21 08:00",
+      "13": "programmé 2026-10-22 08:00, https://youtube.com/shorts/NelHx3zUBC4",
+      "14": "programmé 2026-10-23 08:00, https://youtube.com/shorts/tD4XtyZWV5g",
+      "15": "programmé 2026-10-24 08:00, https://youtube.com/shorts/xZBst4Bmaow",
+      "16": "programmé 2026-10-25 08:00, https://youtube.com/shorts/0e1RBgXkTI4",
+      "17": "programmé 2026-10-26 08:00, https://youtube.com/shorts/PcwHr63Dy4U"
+    },
+    "tiktok": {
+      "11": "programmé 2026-10-20 08:00",
+      "12": "programmé 2026-10-21 08:00",
+      "13": "programmé 2026-10-22 08:00",
+      "14": "programmé 2026-10-23 08:00",
+      "15": "programmé 2026-10-24 08:00",
+      "16": "programmé 2026-10-25 08:00",
+      "17": "programmé 2026-10-26 08:00"
+    },
+    "instagram": {
+      "11": "programmé 2026-10-20 08:00",
+      "12": "programmé 2026-10-21 08:00",
+      "13": "programmé 2026-10-22 08:00",
+      "14": "programmé 2026-10-23 08:00",
+      "15": "programmé 2026-10-24 08:00",
+      "16": "programmé 2026-10-25 08:00",
+      "17": "programmé 2026-10-26 08:00"
+    }
+  }
+}
