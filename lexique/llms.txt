@@ -1,6 +1,6 @@
 # Lexique IA
 
-> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 156 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
+> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 157 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
 
 Toutes les fiches en texte brut, sources comprises : https://neopal.github.io/lexique/llms-full.txt
 Auteur : https://neopal.github.io/
@@ -142,6 +142,7 @@ Auteur : https://neopal.github.io/
 - [GEO](https://neopal.github.io/lexique/geo/) (en anglais : Generative engine optimization) : Le GEO, ou optimisation pour les moteurs génératifs, regroupe les techniques pour qu'un assistant IA cite ton contenu ou ta marque quand il répond à une question.
 - [arXiv](https://neopal.github.io/lexique/arxiv/) : arXiv, prononcé « archive », est un site gratuit où les chercheurs publient leurs articles avant relecture par des pairs ; presque toute la recherche en IA y paraît d'abord.
 - [Forward-deployed engineer](https://neopal.github.io/lexique/forward-deployed-engineer/) : Un forward-deployed engineer est un ingénieur qu'un éditeur de logiciel ou d'IA envoie chez un client pour construire dans ses systèmes ce que le produit seul ne fait pas.
+- [p(doom)](https://neopal.github.io/lexique/p-doom/) : Le p(doom) est la probabilité, donnée par une personne, que l'IA cause une catastrophe pour l'humanité comme l'extinction ; c'est une opinion chiffrée, pas une mesure.
 
 ## Méthode : travailler avec l'IA
 

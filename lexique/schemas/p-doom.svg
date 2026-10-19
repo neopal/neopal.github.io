@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 372" role="img" aria-labelledby="p-doom-t">
+<title id="p-doom-t">Cinq p(doom) placés sur une échelle logarithmique de 0,01 % à 100 %, chacun avec la question à laquelle il répond : Yann LeCun sous 0,01 %, moins qu'un astéroïde ; les superforecasters à 0,38 % et les experts à 3 % pour une extinction d'ici 2100 ; Evan Hubinger à plus de 10 % pour la mort de tous les humains d'ici dix ans ; Dario Amodei à 25 % pour des choses qui tourneraient vraiment, vraiment mal.</title>
+<text x="2" y="20">Yann LeCun</text>
+<text class="i mu" x="0" y="38">moins qu'un astéroïde</text>
+<path class="ln" d="M30 54 H330"/>
+<circle class="fa" cx="30" cy="54" r="6"/>
+<text class="m ac" x="44" y="59">&lt; 0,01 %</text>
+<text x="0" y="86">Superforecasters, 2022</text>
+<text class="i mu" x="0" y="104">extinction d'ici 2100</text>
+<path class="ln" d="M30 120 H330"/>
+<circle class="fa" cx="148" cy="120" r="6"/>
+<text class="m ac" x="162" y="125">0,38 %</text>
+<text x="0" y="152">Experts, 2022</text>
+<text class="i mu" x="0" y="170">extinction d'ici 2100</text>
+<path class="ln" d="M30 186 H330"/>
+<circle class="fa" cx="216" cy="186" r="6"/>
+<text class="m ac" x="230" y="191">3 %</text>
+<text x="0" y="218">Evan Hubinger, 2026</text>
+<text class="i mu" x="0" y="236">tous les humains tués d'ici dix ans</text>
+<path class="ln" d="M30 252 H330"/>
+<circle class="fa" cx="255" cy="252" r="6"/>
+<text class="m ac" x="241" y="257" text-anchor="end">&gt; 10 %</text>
+<text x="0" y="284">Dario Amodei, 2025</text>
+<text class="i mu" x="0" y="302">« vraiment, vraiment mal »</text>
+<path class="ln" d="M30 318 H330"/>
+<circle class="fa" cx="285" cy="318" r="6"/>
+<text class="m ac" x="271" y="323" text-anchor="end">25 %</text>
+<path class="lm" d="M30 342 H330"/>
+<path class="lm" d="M30 338 V346"/>
+<path class="lm" d="M105 338 V346"/>
+<path class="lm" d="M180 338 V346"/>
+<path class="lm" d="M255 338 V346"/>
+<path class="lm" d="M330 338 V346"/>
+<text class="m mu" x="30" y="364" text-anchor="middle">0,01 %</text>
+<text class="m mu" x="105" y="364" text-anchor="middle">0,1 %</text>
+<text class="m mu" x="180" y="364" text-anchor="middle">1 %</text>
+<text class="m mu" x="255" y="364" text-anchor="middle">10 %</text>
+<text class="m mu" x="330" y="364" text-anchor="end">100 %</text>
+</svg>

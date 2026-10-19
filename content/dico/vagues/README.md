@@ -19,7 +19,8 @@ Ce sont des archives figées. Les fiches ont été fusionnées dans `lexique/ter
 | [11-travailler-avec-un-agent](11-travailler-avec-un-agent/) | 3 oct. 2026 | Travailler avec un agent de code (lots Y et Z) | 7 fiches : context-rot, non-determinisme, sans-etat, connaissances-parametriques, agents-md, passation, dark-factory |
 | [12-hill-climbing](12-hill-climbing/) | 3 oct. 2026 | Une fiche et deux enrichissements | hill-climbing ; enrichit evals, benchmaxxing |
 | [13-deploiement-entreprise](13-deploiement-entreprise/) | 5 oct. 2026 | Déployer l'IA dans une entreprise (lots D et E) | 5 fiches : workflow-ou-agent, routage-de-modeles, mythe-ajouter-ia, forward-deployed-engineer, mythe-95-pourcent ; enrichit evals, multi-agents |
+| [14-p-doom](14-p-doom/) | 19 oct. 2026 | Une fiche : la probabilité de catastrophe annoncée par les chercheurs et les patrons de labos | p-doom |
 
 Les fiches des débuts (token, parametres, rag…) et quelques ajouts isolés (prompt-caching, arxiv…) ont été écrits hors vague, directement dans `lexique/terms.js`.
 
-Prochaine vague : créer `14-<sujet>/` avec un `BRIEF.md` qui renvoie à `../brief-fiche.md` et ne contient que le sujet, le registre des ids, les formes d'Imagine par lot et les livrables attendus.
+Prochaine vague : créer `15-<sujet>/` avec un `BRIEF.md` qui renvoie à `../brief-fiche.md` et ne contient que le sujet, le registre des ids, les formes d'Imagine par lot et les livrables attendus.

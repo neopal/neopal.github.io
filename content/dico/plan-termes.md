@@ -138,6 +138,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Systèmes experts et IA symbolique | expert systems, symbolic AI | publié | | HAM, ULT | jouer en suivant un manuel de règles |
 | Effet IA | AI effect | publié | | HAM | « ce n'est que de la technique », dit-on dès que le groupe réussit le morceau |
 | Optimisation pour les moteurs génératifs (GEO) | generative engine optimization | publié | | CAR | |
+| p(doom) | p(doom) | publié | | | le beau-frère et sa chance sur quatre, qu'aucun dimanche ne viendra vérifier |
 
 ## 8. Méthode : travailler avec l'IA
 
