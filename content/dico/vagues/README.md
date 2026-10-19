@@ -22,7 +22,8 @@ Ce sont des archives figées. Les fiches ont été fusionnées dans `lexique/ter
 | [14-p-doom](14-p-doom/) | 19 oct. 2026 | Une fiche : la probabilité de catastrophe annoncée par les chercheurs et les patrons de labos | p-doom |
 | [15-lora](15-lora/) | 19 oct. 2026 | Une fiche : LoRA, sortie de la fiche Fine-tuning qui la traitait en alias | lora ; enrichit fine-tuning (alias LoRA retiré) |
 | [16-gaussian-splatting](16-gaussian-splatting/) | 19 oct. 2026 | Un enrichissement : les mondes 3D de Marble exportés en Gaussian splats | enrichit world-model |
+| [17-gguf](17-gguf/) | 19 oct. 2026 | Un enrichissement : GGUF en alias de Quantization, avec le sens du sigle | enrichit quantization |
 
 Les fiches des débuts (token, parametres, rag…) et quelques ajouts isolés (prompt-caching, arxiv…) ont été écrits hors vague, directement dans `lexique/terms.js`.
 
-Prochaine vague : créer `17-<sujet>/` avec un `BRIEF.md` qui renvoie à `../brief-fiche.md` et ne contient que le sujet, le registre des ids, les formes d'Imagine par lot et les livrables attendus.
+Prochaine vague : créer `18-<sujet>/` avec un `BRIEF.md` qui renvoie à `../brief-fiche.md` et ne contient que le sujet, le registre des ids, les formes d'Imagine par lot et les livrables attendus.

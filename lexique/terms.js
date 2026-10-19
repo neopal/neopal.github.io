@@ -896,7 +896,8 @@ window.DICO_TERMS = [
     "aliases": [
       "quant",
       "quantisation",
-      "quantized model"
+      "quantized model",
+      "GGUF"
     ],
     "aliasesFr": [
       "quantification"
@@ -912,7 +913,7 @@ window.DICO_TERMS = [
       },
       {
         "say": "GGUF",
-        "means": "le format de fichier créé par l'auteur de llama.cpp pour charger vite des modèles, souvent quantifiés, sur ta propre machine"
+        "means": "GGML Universal File, le format de fichier lancé en août 2023 par le projet llama.cpp pour charger vite des modèles, souvent quantifiés, sur ta propre machine ; le GG est celui de GGML, la bibliothèque de Georgi Gerganov, qui porte ses initiales"
       },
       {
         "say": "MXFP4",
@@ -924,7 +925,6 @@ window.DICO_TERMS = [
       "parametres",
       "tailles-de-modele",
       "open-weights"
-      
     ],
     "solutions": [
       {
@@ -993,6 +993,14 @@ window.DICO_TERMS = [
       {
         "label": "Hugging Face, documentation GGUF (format créé par l'auteur de llama.cpp)",
         "url": "https://huggingface.co/docs/hub/gguf"
+      },
+      {
+        "label": "Paquet Python gguf, maintenu par le projet llama.cpp, PyPI (« GGUF (GGML Universal File) format »)",
+        "url": "https://pypi.org/project/gguf/"
+      },
+      {
+        "label": "Wikipédia, GGUF, consultée le 19 octobre 2026 (GGML pour Georgi Gerganov Machine Learning ; format introduit le 21 août 2023 par llama.cpp, successeur de GGML, GGMF et GGJT)",
+        "url": "https://en.wikipedia.org/wiki/GGUF"
       }
     ]
   },

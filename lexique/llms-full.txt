@@ -888,7 +888,7 @@ En 2024, le dernier modèle de langage ouvert d'OpenAI restait GPT-2. Le 5 août
 URL : https://neopal.github.io/lexique/quantization/
 Catégorie : Inférence
 Aussi appelé : quantification
-Variantes anglaises : quant, quantisation, quantized model
+Variantes anglaises : quant, quantisation, quantized model, GGUF
 
 ### Définition courte
 
@@ -916,7 +916,7 @@ En 2024, la quantization se faisait surtout après coup, sur un modèle publié 
 
 - Q4, 4-bit : chaque paramètre est stocké sur 4 bits au lieu de 16 ; le fichier devient trois à quatre fois plus léger
 - FP16, BF16 : les formats 16 bits dans lesquels un modèle est d'habitude entraîné et publié ; c'est la version pleine qu'on compresse ensuite
-- GGUF : le format de fichier créé par l'auteur de llama.cpp pour charger vite des modèles, souvent quantifiés, sur ta propre machine
+- GGUF : GGML Universal File, le format de fichier lancé en août 2023 par le projet llama.cpp pour charger vite des modèles, souvent quantifiés, sur ta propre machine ; le GG est celui de GGML, la bibliothèque de Georgi Gerganov, qui porte ses initiales
 - MXFP4 : un format 4 bits avec lequel OpenAI (gpt-oss) et Moonshot AI (Kimi K3) entraînent une partie de leurs poids, pour les publier déjà compressés
 
 ### Solutions populaires
@@ -949,6 +949,8 @@ En 2024, la quantization se faisait surtout après coup, sur un modèle publié 
 - Moonshot AI, fiche de Kimi K3 (poids MXFP4, entraînement conscient de la quantization) : https://huggingface.co/moonshotai/Kimi-K3
 - Wikipédia, Kimi (Kimi K3 publié le 16 juillet 2026) : https://en.wikipedia.org/wiki/Kimi_(AI)
 - Hugging Face, documentation GGUF (format créé par l'auteur de llama.cpp) : https://huggingface.co/docs/hub/gguf
+- Paquet Python gguf, maintenu par le projet llama.cpp, PyPI (« GGUF (GGML Universal File) format ») : https://pypi.org/project/gguf/
+- Wikipédia, GGUF, consultée le 19 octobre 2026 (GGML pour Georgi Gerganov Machine Learning ; format introduit le 21 août 2023 par llama.cpp, successeur de GGML, GGMF et GGJT) : https://en.wikipedia.org/wiki/GGUF
 
 ## Benchmarks
 
