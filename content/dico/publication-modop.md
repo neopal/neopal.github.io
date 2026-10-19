@@ -36,7 +36,7 @@ Consignes de PA du 2026-10-19. Les textes de chaque semaine sont dans `publicati
 - On ne peut pas programmer plus de 10 jours à l'avance.
 - La colonne des minutes de la roue part de l'heure en cours : cliquer la minute du haut jusqu'à voir 00.
 - Attendre « Aucun problème constaté » de la vérification de contenu avant de cliquer « Programmer » ; sinon TikTok propose « Publier maintenant », qu'il ne faut pas cliquer (Annuler, puis Réessayer la vérification).
-- Vidéo de moins de 60 s : TikTok coche d'office « Réutilisation du contenu » (duos et collages) ; choix de PA à confirmer.
+- Vidéo de moins de 60 s : TikTok coche d'office « Réutilisation du contenu » (duos et collages). PA l'autorise (2026-10-19), on la laisse cochée ; même chose pour le remix sur Instagram.
 
 ## Instagram (instagram.com, création sur le web)
 
