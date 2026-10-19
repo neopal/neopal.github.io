@@ -1,1052 +1,1052 @@
 {
  "id": "ai-slop",
- "audio": false,
+ "audio": true,
  "music": false,
- "duration": 61.223,
+ "duration": 62.48,
  "segments": [
   {
    "scene": "hook",
-   "start": 0.2,
-   "end": 1.632,
+   "start": 0.187,
+   "end": 1.88,
    "words": [
     {
      "w": "C'est",
-     "start": 0.2,
-     "end": 0.427
+     "start": 0.187,
+     "end": 0.24
     },
     {
      "w": "quoi...",
-     "start": 0.477,
-     "end": 0.75
+     "start": 0.44,
+     "end": 0.8
     },
     {
      "w": "l'AI",
-     "start": 1.15,
-     "end": 1.355
+     "start": 0.96,
+     "end": 1.28
     },
     {
      "w": "slop…",
-     "start": 1.405,
-     "end": 1.632
+     "start": 1.32,
+     "end": 1.88
     }
    ]
   },
   {
    "scene": "intro",
-   "start": 2.182,
-   "end": 13.559,
+   "start": 2.208,
+   "end": 13.52,
    "words": [
     {
      "w": "Tu",
-     "start": 2.182,
-     "end": 2.341
+     "start": 2.208,
+     "end": 2.24
     },
     {
      "w": "fais",
-     "start": 2.391,
-     "end": 2.595
+     "start": 2.293,
+     "end": 2.4
     },
     {
      "w": "défiler",
-     "start": 2.645,
-     "end": 2.918
+     "start": 2.48,
+     "end": 2.8
     },
     {
      "w": "les",
-     "start": 2.968,
-     "end": 3.15
+     "start": 2.88,
+     "end": 2.96
     },
     {
      "w": "Shorts,",
-     "start": 3.2,
-     "end": 3.473
+     "start": 3.12,
+     "end": 3.52
     },
     {
      "w": "et",
-     "start": 3.673,
-     "end": 3.832
+     "start": 3.6,
+     "end": 3.68
     },
     {
      "w": "tu",
-     "start": 3.882,
-     "end": 4.041
+     "start": 3.76,
+     "end": 3.84
     },
     {
      "w": "tombes",
-     "start": 4.091,
-     "end": 4.341
+     "start": 3.92,
+     "end": 4.08
     },
     {
      "w": "sur",
-     "start": 4.391,
-     "end": 4.573
+     "start": 4.16,
+     "end": 4.24
     },
     {
      "w": "une",
-     "start": 4.623,
-     "end": 4.805
+     "start": 4.28,
+     "end": 4.32
     },
     {
      "w": "vidéo",
-     "start": 4.855,
-     "end": 5.082
+     "start": 4.4,
+     "end": 4.72
     },
     {
      "w": "bizarre,",
-     "start": 5.132,
-     "end": 5.427
+     "start": 4.76,
+     "end": 5.36
     },
     {
      "w": "fabriquée",
-     "start": 5.627,
-     "end": 5.945
+     "start": 5.44,
+     "end": 5.76
     },
     {
      "w": "à",
-     "start": 5.995,
-     "end": 6.132
+     "start": 5.787,
+     "end": 5.813
     },
     {
      "w": "la",
-     "start": 6.182,
-     "end": 6.341
+     "start": 5.84,
+     "end": 5.92
     },
     {
      "w": "chaîne",
-     "start": 6.391,
-     "end": 6.641
+     "start": 6,
+     "end": 6.24
     },
     {
      "w": "par",
-     "start": 6.691,
-     "end": 6.873
+     "start": 6.28,
+     "end": 6.32
     },
     {
      "w": "une",
-     "start": 6.923,
-     "end": 7.105
+     "start": 6.4,
+     "end": 6.48
     },
     {
      "w": "IA ?",
-     "start": 7.155,
-     "end": 7.5
+     "start": 6.52,
+     "end": 7.253
     },
     {
      "w": "En",
-     "start": 7.9,
-     "end": 8.059
+     "start": 7.307,
+     "end": 7.36
     },
     {
      "w": "octobre",
-     "start": 8.109,
-     "end": 8.382
+     "start": 7.48,
+     "end": 7.76
     },
     {
      "w": "2025,",
-     "start": 8.432,
-     "end": 8.659
+     "start": 7.84,
+     "end": 8.72
     },
     {
      "w": "sur",
-     "start": 8.859,
-     "end": 9.041
+     "start": 8.8,
+     "end": 8.88
     },
     {
      "w": "un",
-     "start": 9.091,
-     "end": 9.25
+     "start": 8.92,
+     "end": 8.96
     },
     {
      "w": "compte",
-     "start": 9.3,
-     "end": 9.55
+     "start": 9.04,
+     "end": 9.2
     },
     {
      "w": "YouTube",
-     "start": 9.6,
-     "end": 9.873
+     "start": 9.36,
+     "end": 9.52
     },
     {
      "w": "tout",
-     "start": 9.923,
-     "end": 10.127
+     "start": 9.6,
+     "end": 9.68
     },
     {
      "w": "neuf,",
-     "start": 10.177,
-     "end": 10.405
+     "start": 9.76,
+     "end": 10.24
     },
     {
      "w": "c'était",
-     "start": 10.605,
-     "end": 10.877
+     "start": 10.28,
+     "end": 10.56
     },
     {
      "w": "le",
-     "start": 10.927,
-     "end": 11.086
+     "start": 10.6,
+     "end": 10.64
     },
     {
      "w": "cas",
-     "start": 11.136,
-     "end": 11.318
+     "start": 10.72,
+     "end": 10.8
     },
     {
      "w": "d'un",
-     "start": 11.368,
-     "end": 11.573
+     "start": 10.84,
+     "end": 10.96
     },
     {
      "w": "Short",
-     "start": 11.623,
-     "end": 11.85
+     "start": 11.04,
+     "end": 11.28
     },
     {
      "w": "sur",
-     "start": 11.9,
-     "end": 12.082
+     "start": 11.4,
+     "end": 11.52
     },
     {
      "w": "cinq",
-     "start": 12.132,
-     "end": 12.336
+     "start": 11.6,
+     "end": 11.76
     },
     {
      "w": "parmi",
-     "start": 12.386,
-     "end": 12.614
+     "start": 11.92,
+     "end": 12.16
     },
     {
      "w": "les",
-     "start": 12.664,
-     "end": 12.845
+     "start": 12.24,
+     "end": 12.32
     },
     {
      "w": "premiers",
-     "start": 12.895,
-     "end": 13.191
+     "start": 12.44,
+     "end": 12.72
     },
     {
      "w": "proposés.",
-     "start": 13.241,
-     "end": 13.559
+     "start": 12.8,
+     "end": 13.52
     }
    ]
   },
   {
    "scene": "patee",
-   "start": 14.059,
-   "end": 24.695,
+   "start": 13.657,
+   "end": 24.64,
    "words": [
     {
      "w": "En",
-     "start": 14.059,
-     "end": 14.218
+     "start": 13.657,
+     "end": 13.68
     },
     {
      "w": "anglais,",
-     "start": 14.268,
-     "end": 14.564
+     "start": 13.76,
+     "end": 14.24
     },
     {
      "w": "le",
-     "start": 14.764,
-     "end": 14.923
+     "start": 14.28,
+     "end": 14.32
     },
     {
      "w": "slop,",
-     "start": 14.973,
-     "end": 15.2
+     "start": 14.4,
+     "end": 14.96
     },
     {
      "w": "c'est",
-     "start": 15.4,
-     "end": 15.627
+     "start": 14.987,
+     "end": 15.04
     },
     {
      "w": "la",
-     "start": 15.677,
-     "end": 15.836
+     "start": 15.12,
+     "end": 15.28
     },
     {
      "w": "pâtée",
-     "start": 15.886,
-     "end": 16.114
+     "start": 15.333,
+     "end": 15.52
     },
     {
      "w": "des",
-     "start": 16.164,
-     "end": 16.345
+     "start": 15.6,
+     "end": 15.68
     },
     {
      "w": "cochons.",
-     "start": 16.395,
-     "end": 16.691
+     "start": 15.72,
+     "end": 16.4
     },
     {
      "w": "Le",
-     "start": 17.091,
-     "end": 17.25
+     "start": 16.44,
+     "end": 16.48
     },
     {
      "w": "mot",
-     "start": 17.3,
-     "end": 17.482
+     "start": 16.56,
+     "end": 16.72
     },
     {
      "w": "désigne",
-     "start": 17.532,
-     "end": 17.805
+     "start": 16.773,
+     "end": 17.04
     },
     {
      "w": "le",
-     "start": 17.855,
-     "end": 18.014
+     "start": 17.12,
+     "end": 17.2
     },
     {
      "w": "contenu",
-     "start": 18.064,
-     "end": 18.336
+     "start": 17.28,
+     "end": 17.6
     },
     {
      "w": "généré",
-     "start": 18.386,
-     "end": 18.636
+     "start": 17.64,
+     "end": 18
     },
     {
      "w": "par",
-     "start": 18.686,
-     "end": 18.868
+     "start": 18.08,
+     "end": 18.16
     },
     {
      "w": "l'IA",
-     "start": 18.918,
-     "end": 19.123
+     "start": 18.2,
+     "end": 18.48
     },
     {
      "w": "en",
-     "start": 19.173,
-     "end": 19.332
+     "start": 18.56,
+     "end": 18.72
     },
     {
      "w": "masse",
-     "start": 19.382,
-     "end": 19.609
+     "start": 18.8,
+     "end": 19.12
     },
     {
      "w": "et",
-     "start": 19.659,
-     "end": 19.818
+     "start": 19.2,
+     "end": 19.28
     },
     {
      "w": "sans",
-     "start": 19.868,
-     "end": 20.073
+     "start": 19.4,
+     "end": 19.52
     },
     {
      "w": "soin,",
-     "start": 20.123,
-     "end": 20.35
+     "start": 19.6,
+     "end": 20
     },
     {
      "w": "publié",
-     "start": 20.55,
-     "end": 20.8
+     "start": 20.08,
+     "end": 20.48
     },
     {
      "w": "pour",
-     "start": 20.85,
-     "end": 21.055
+     "start": 20.56,
+     "end": 20.64
     },
     {
      "w": "occuper",
-     "start": 21.105,
-     "end": 21.377
+     "start": 20.72,
+     "end": 20.96
     },
     {
      "w": "l'espace",
-     "start": 21.427,
-     "end": 21.723
+     "start": 21.04,
+     "end": 21.44
     },
     {
      "w": "ou",
-     "start": 21.773,
-     "end": 21.932
+     "start": 21.52,
+     "end": 21.6
     },
     {
      "w": "capter",
-     "start": 21.982,
-     "end": 22.232
+     "start": 21.707,
+     "end": 21.92
     },
     {
      "w": "des",
-     "start": 22.282,
-     "end": 22.464
+     "start": 22,
+     "end": 22.08
     },
     {
      "w": "vues,",
-     "start": 22.514,
-     "end": 22.741
+     "start": 22.133,
+     "end": 22.56
     },
     {
      "w": "plutôt",
-     "start": 22.941,
-     "end": 23.191
+     "start": 22.6,
+     "end": 22.8
     },
     {
      "w": "que",
-     "start": 23.241,
-     "end": 23.423
+     "start": 22.88,
+     "end": 22.96
     },
     {
      "w": "pour",
-     "start": 23.473,
-     "end": 23.677
+     "start": 23.04,
+     "end": 23.12
     },
     {
      "w": "être",
-     "start": 23.727,
-     "end": 23.932
+     "start": 23.24,
+     "end": 23.36
     },
     {
      "w": "lu",
-     "start": 23.982,
-     "end": 24.141
+     "start": 23.44,
+     "end": 23.68
     },
     {
      "w": "ou",
-     "start": 24.191,
-     "end": 24.35
+     "start": 23.72,
+     "end": 23.76
     },
     {
      "w": "regardé.",
-     "start": 24.4,
-     "end": 24.695
+     "start": 23.84,
+     "end": 24.64
     }
    ]
   },
   {
    "scene": "nom",
-   "start": 25.195,
-   "end": 30.6,
+   "start": 24.72,
+   "end": 31.76,
    "words": [
     {
      "w": "C'est",
-     "start": 25.195,
-     "end": 25.423
+     "start": 24.72,
+     "end": 24.88
     },
     {
      "w": "ça,",
-     "start": 25.473,
-     "end": 25.655
+     "start": 24.96,
+     "end": 25.28
     },
     {
      "w": "l'AI",
-     "start": 25.855,
-     "end": 26.173
+     "start": 25.36,
+     "end": 26.08
     },
     {
      "w": "slop,",
-     "start": 26.223,
-     "end": 26.473
+     "start": 26.16,
+     "end": 27.04
     },
     {
      "w": "et",
-     "start": 26.673,
-     "end": 26.832
+     "start": 27.08,
+     "end": 27.12
     },
     {
      "w": "le",
-     "start": 26.882,
-     "end": 27.041
+     "start": 27.16,
+     "end": 27.2
     },
     {
      "w": "mot",
-     "start": 27.091,
-     "end": 27.273
+     "start": 27.28,
+     "end": 27.36
     },
     {
      "w": "slop",
-     "start": 27.323,
-     "end": 27.527
+     "start": 27.44,
+     "end": 27.84
     },
     {
      "w": "a",
-     "start": 27.577,
-     "end": 27.714
+     "start": 27.88,
+     "end": 27.92
     },
     {
      "w": "été",
-     "start": 27.764,
-     "end": 27.945
+     "start": 28,
+     "end": 28.16
     },
     {
      "w": "élu",
-     "start": 27.995,
-     "end": 28.177
+     "start": 28.2,
+     "end": 28.48
     },
     {
      "w": "mot",
-     "start": 28.227,
-     "end": 28.409
+     "start": 28.56,
+     "end": 28.64
     },
     {
      "w": "de",
-     "start": 28.459,
-     "end": 28.618
+     "start": 28.68,
+     "end": 28.72
     },
     {
      "w": "l'année",
-     "start": 28.668,
-     "end": 28.941
+     "start": 28.747,
+     "end": 28.96
     },
     {
      "w": "2025",
-     "start": 28.991,
-     "end": 29.195
+     "start": 29,
+     "end": 29.08
     },
     {
      "w": "par",
-     "start": 29.245,
-     "end": 29.427
+     "start": 29.12,
+     "end": 29.84
     },
     {
      "w": "le",
-     "start": 29.477,
-     "end": 29.636
+     "start": 29.88,
+     "end": 29.92
     },
     {
      "w": "dictionnaire",
-     "start": 29.686,
-     "end": 30.073
+     "start": 30,
+     "end": 30.48
     },
     {
      "w": "Merriam-Webster.",
-     "start": 30.123,
-     "end": 30.6
+     "start": 30.56,
+     "end": 31.76
     }
    ]
   },
   {
    "scene": "ginette",
-   "start": 31.1,
-   "end": 40.191,
+   "start": 32.187,
+   "end": 40.48,
    "words": [
     {
      "w": "Imagine",
-     "start": 31.1,
-     "end": 31.373
+     "start": 32.187,
+     "end": 32.24
     },
     {
      "w": "Tata",
-     "start": 31.423,
-     "end": 31.627
+     "start": 32.32,
+     "end": 32.56
     },
     {
      "w": "Ginette,",
-     "start": 31.677,
-     "end": 31.973
+     "start": 32.6,
+     "end": 33.12
     },
     {
      "w": "qui",
-     "start": 32.173,
-     "end": 32.355
+     "start": 33.2,
+     "end": 33.28
     },
     {
      "w": "poste",
-     "start": 32.405,
-     "end": 32.632
+     "start": 33.36,
+     "end": 33.68
     },
     {
      "w": "quinze",
-     "start": 32.682,
-     "end": 32.932
+     "start": 33.76,
+     "end": 33.92
     },
     {
      "w": "images",
-     "start": 32.982,
-     "end": 33.232
+     "start": 34,
+     "end": 34.32
     },
     {
      "w": "par",
-     "start": 33.282,
-     "end": 33.464
+     "start": 34.4,
+     "end": 34.48
     },
     {
      "w": "jour",
-     "start": 33.514,
-     "end": 33.718
+     "start": 34.56,
+     "end": 34.72
     },
     {
      "w": "sur",
-     "start": 33.768,
-     "end": 33.95
+     "start": 34.8,
+     "end": 34.88
     },
     {
      "w": "le",
-     "start": 34,
-     "end": 34.159
+     "start": 34.92,
+     "end": 34.96
     },
     {
      "w": "groupe",
-     "start": 34.209,
-     "end": 34.459
+     "start": 35.04,
+     "end": 35.2
     },
     {
      "w": "WhatsApp",
-     "start": 34.509,
-     "end": 34.805
+     "start": 35.36,
+     "end": 35.52
     },
     {
      "w": "de",
-     "start": 34.855,
-     "end": 35.014
+     "start": 35.56,
+     "end": 35.6
     },
     {
      "w": "la",
-     "start": 35.064,
-     "end": 35.223
+     "start": 35.68,
+     "end": 35.76
     },
     {
      "w": "famille",
-     "start": 35.273,
-     "end": 35.545
+     "start": 35.84,
+     "end": 36.16
     },
     {
      "w": "sans",
-     "start": 35.595,
-     "end": 35.8
+     "start": 36.32,
+     "end": 36.48
     },
     {
      "w": "en",
-     "start": 35.85,
-     "end": 36.009
+     "start": 36.56,
+     "end": 36.6
     },
     {
      "w": "regarder",
-     "start": 36.059,
-     "end": 36.355
+     "start": 36.64,
+     "end": 37.04
     },
     {
      "w": "une",
-     "start": 36.405,
-     "end": 36.586
+     "start": 37.16,
+     "end": 37.28
     },
     {
      "w": "seule…",
-     "start": 36.636,
-     "end": 36.886
+     "start": 37.32,
+     "end": 37.92
     },
     {
      "w": "ça",
-     "start": 37.336,
-     "end": 37.495
+     "start": 37.96,
+     "end": 38
     },
     {
      "w": "ne",
-     "start": 37.545,
-     "end": 37.705
+     "start": 38.08,
+     "end": 38.107
     },
     {
      "w": "lui",
-     "start": 37.755,
-     "end": 37.936
+     "start": 38.133,
+     "end": 38.2
     },
     {
      "w": "coûte",
-     "start": 37.986,
-     "end": 38.214
+     "start": 38.24,
+     "end": 38.48
     },
     {
      "w": "rien,",
-     "start": 38.264,
-     "end": 38.491
+     "start": 38.6,
+     "end": 38.96
     },
     {
      "w": "et",
-     "start": 38.691,
-     "end": 38.85
+     "start": 39,
+     "end": 39.04
     },
     {
      "w": "c'est",
-     "start": 38.9,
-     "end": 39.127
+     "start": 39.12,
+     "end": 39.28
     },
     {
      "w": "toi",
-     "start": 39.177,
-     "end": 39.359
+     "start": 39.36,
+     "end": 39.44
     },
     {
      "w": "qui",
-     "start": 39.409,
-     "end": 39.591
+     "start": 39.52,
+     "end": 39.6
     },
     {
      "w": "fais",
-     "start": 39.641,
-     "end": 39.845
+     "start": 39.64,
+     "end": 39.76
     },
     {
      "w": "défiler.",
-     "start": 39.895,
-     "end": 40.191
+     "start": 39.84,
+     "end": 40.48
     }
    ]
   },
   {
    "scene": "deezer",
-   "start": 40.691,
-   "end": 47.645,
+   "start": 40.613,
+   "end": 48.8,
    "words": [
     {
      "w": "En",
-     "start": 40.691,
-     "end": 40.85
+     "start": 40.613,
+     "end": 40.64
     },
     {
      "w": "juin",
-     "start": 40.9,
-     "end": 41.105
+     "start": 40.72,
+     "end": 40.8
     },
     {
      "w": "2026,",
-     "start": 41.155,
-     "end": 41.382
+     "start": 40.88,
+     "end": 41.84
     },
     {
      "w": "Deezer",
-     "start": 41.582,
-     "end": 41.832
+     "start": 41.88,
+     "end": 42.24
     },
     {
      "w": "recevait",
-     "start": 41.882,
-     "end": 42.177
+     "start": 42.36,
+     "end": 42.64
     },
     {
      "w": "jusqu'à",
-     "start": 42.227,
-     "end": 42.5
+     "start": 42.72,
+     "end": 43.04
     },
     {
      "w": "90 000",
-     "start": 42.55,
-     "end": 42.941
+     "start": 43.12,
+     "end": 43.84
     },
     {
      "w": "morceaux",
-     "start": 42.991,
-     "end": 43.286
+     "start": 43.88,
+     "end": 44.24
     },
     {
      "w": "générés",
-     "start": 43.336,
-     "end": 43.609
+     "start": 44.28,
+     "end": 44.64
     },
     {
      "w": "par",
-     "start": 43.659,
-     "end": 43.841
+     "start": 44.68,
+     "end": 44.72
     },
     {
      "w": "l'IA",
-     "start": 43.891,
-     "end": 44.095
+     "start": 44.8,
+     "end": 45.12
     },
     {
      "w": "en",
-     "start": 44.145,
-     "end": 44.305
+     "start": 45.24,
+     "end": 45.36
     },
     {
      "w": "une",
-     "start": 44.355,
-     "end": 44.536
+     "start": 45.44,
+     "end": 45.6
     },
     {
      "w": "seule",
-     "start": 44.586,
-     "end": 44.814
+     "start": 45.64,
+     "end": 45.76
     },
     {
      "w": "journée,",
-     "start": 44.864,
-     "end": 45.159
+     "start": 45.84,
+     "end": 46.4
     },
     {
      "w": "plus",
-     "start": 45.359,
-     "end": 45.564
+     "start": 46.48,
+     "end": 46.56
     },
     {
      "w": "de",
-     "start": 45.614,
-     "end": 45.773
+     "start": 46.64,
+     "end": 46.72
     },
     {
      "w": "la",
-     "start": 45.823,
-     "end": 45.982
+     "start": 46.76,
+     "end": 46.8
     },
     {
      "w": "moitié",
-     "start": 46.032,
-     "end": 46.282
+     "start": 46.96,
+     "end": 47.36
     },
     {
      "w": "de",
-     "start": 46.332,
-     "end": 46.491
+     "start": 47.48,
+     "end": 47.6
     },
     {
      "w": "tous",
-     "start": 46.541,
-     "end": 46.745
+     "start": 47.627,
+     "end": 47.68
     },
     {
      "w": "les",
-     "start": 46.795,
-     "end": 46.977
+     "start": 47.76,
+     "end": 47.84
     },
     {
      "w": "nouveaux",
-     "start": 47.027,
-     "end": 47.323
+     "start": 47.88,
+     "end": 48.08
     },
     {
      "w": "envois.",
-     "start": 47.373,
-     "end": 47.645
+     "start": 48.16,
+     "end": 48.8
     }
    ]
   },
   {
    "scene": "ecoutes",
-   "start": 48.145,
-   "end": 55.705,
+   "start": 48.869,
+   "end": 57.52,
    "words": [
     {
      "w": "Ces",
-     "start": 48.145,
-     "end": 48.327
+     "start": 48.869,
+     "end": 48.96
     },
     {
      "w": "morceaux",
-     "start": 48.377,
-     "end": 48.673
+     "start": 49.04,
+     "end": 49.28
     },
     {
      "w": "ne",
-     "start": 48.723,
-     "end": 48.882
+     "start": 49.32,
+     "end": 49.36
     },
     {
      "w": "faisaient",
-     "start": 48.932,
-     "end": 49.25
+     "start": 49.4,
+     "end": 49.68
     },
     {
      "w": "pourtant",
-     "start": 49.3,
-     "end": 49.595
+     "start": 49.733,
+     "end": 50
     },
     {
      "w": "que",
-     "start": 49.645,
-     "end": 49.827
+     "start": 50.12,
+     "end": 50.24
     },
     {
      "w": "1",
-     "start": 49.877,
-     "end": 50.014
+     "start": 50.32,
+     "end": 50.4
     },
     {
      "w": "à",
-     "start": 50.064,
-     "end": 50.2
+     "start": 50.48,
+     "end": 50.64
     },
     {
      "w": "3",
-     "start": 50.25,
-     "end": 50.386
+     "start": 50.72,
+     "end": 50.88
     },
     {
      "w": "%",
-     "start": 50.436,
-     "end": 50.573
+     "start": 50.96,
+     "end": 51.04
     },
     {
      "w": "des",
-     "start": 50.623,
-     "end": 50.805
+     "start": 51.12,
+     "end": 51.36
     },
     {
      "w": "écoutes,",
-     "start": 50.855,
-     "end": 51.15
+     "start": 51.44,
+     "end": 52
     },
     {
      "w": "et",
-     "start": 51.35,
-     "end": 51.509
+     "start": 52.04,
+     "end": 52.08
     },
     {
      "w": "en",
-     "start": 51.559,
-     "end": 51.718
+     "start": 52.16,
+     "end": 52.24
     },
     {
      "w": "2025,",
-     "start": 51.768,
-     "end": 51.995
+     "start": 52.267,
+     "end": 53.2
     },
     {
      "w": "jusqu'à",
-     "start": 52.195,
-     "end": 52.468
+     "start": 53.253,
+     "end": 53.52
     },
     {
      "w": "85",
-     "start": 52.518,
-     "end": 52.677
+     "start": 53.6,
+     "end": 54.24
     },
     {
      "w": "%",
-     "start": 52.727,
-     "end": 52.864
+     "start": 54.32,
+     "end": 54.56
     },
     {
      "w": "de",
-     "start": 52.914,
-     "end": 53.073
+     "start": 54.6,
+     "end": 54.64
     },
     {
      "w": "ces",
-     "start": 53.123,
-     "end": 53.305
+     "start": 54.72,
+     "end": 54.88
     },
     {
      "w": "écoutes",
-     "start": 53.355,
-     "end": 53.627
+     "start": 54.96,
+     "end": 55.28
     },
     {
      "w": "venaient",
-     "start": 53.677,
-     "end": 53.973
+     "start": 55.36,
+     "end": 55.6
     },
     {
      "w": "de",
-     "start": 54.023,
-     "end": 54.182
+     "start": 55.64,
+     "end": 55.68
     },
     {
      "w": "robots",
-     "start": 54.232,
-     "end": 54.482
+     "start": 55.76,
+     "end": 56.16
     },
     {
      "w": "qui",
-     "start": 54.532,
-     "end": 54.714
+     "start": 56.24,
+     "end": 56.32
     },
     {
      "w": "encaissaient",
-     "start": 54.764,
-     "end": 55.15
+     "start": 56.4,
+     "end": 56.72
     },
     {
      "w": "des",
-     "start": 55.2,
-     "end": 55.382
+     "start": 56.8,
+     "end": 56.88
     },
     {
      "w": "droits.",
-     "start": 55.432,
-     "end": 55.705
+     "start": 56.96,
+     "end": 57.52
     }
    ]
   },
   {
    "scene": "chute",
-   "start": 56.205,
-   "end": 61.223,
+   "start": 57.589,
+   "end": 62.48,
    "words": [
     {
      "w": "Le",
-     "start": 56.205,
-     "end": 56.364
+     "start": 57.589,
+     "end": 57.6
     },
     {
      "w": "slop",
-     "start": 56.414,
-     "end": 56.618
+     "start": 57.68,
+     "end": 58
     },
     {
      "w": "ne",
-     "start": 56.668,
-     "end": 56.827
+     "start": 58.08,
+     "end": 58.16
     },
     {
      "w": "coûte",
-     "start": 56.877,
-     "end": 57.105
+     "start": 58.2,
+     "end": 58.4
     },
     {
      "w": "presque",
-     "start": 57.155,
-     "end": 57.427
+     "start": 58.52,
+     "end": 58.8
     },
     {
      "w": "rien",
-     "start": 57.477,
-     "end": 57.682
+     "start": 58.92,
+     "end": 59.04
     },
     {
      "w": "à",
-     "start": 57.732,
-     "end": 57.868
+     "start": 59.08,
+     "end": 59.12
     },
     {
      "w": "produire…",
-     "start": 57.918,
-     "end": 58.236
+     "start": 59.28,
+     "end": 60.32
     },
     {
      "w": "c'est",
-     "start": 59.286,
-     "end": 59.514
+     "start": 60.387,
+     "end": 60.48
     },
     {
      "w": "ton",
-     "start": 59.564,
-     "end": 59.745
+     "start": 60.56,
+     "end": 60.64
     },
     {
      "w": "attention",
-     "start": 59.795,
-     "end": 60.114
+     "start": 60.88,
+     "end": 61.12
     },
     {
      "w": "qui",
-     "start": 60.164,
-     "end": 60.345
+     "start": 61.28,
+     "end": 61.36
     },
     {
      "w": "paie",
-     "start": 60.395,
-     "end": 60.6
+     "start": 61.44,
+     "end": 61.52
     },
     {
      "w": "la",
-     "start": 60.65,
-     "end": 60.809
+     "start": 61.56,
+     "end": 61.6
     },
     {
      "w": "différence.",
-     "start": 60.859,
-     "end": 61.223
+     "start": 61.68,
+     "end": 62.48
     }
    ]
   }

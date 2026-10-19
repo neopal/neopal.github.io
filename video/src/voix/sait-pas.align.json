@@ -1,990 +1,990 @@
 {
  "id": "sait-pas",
- "audio": false,
+ "audio": true,
  "music": false,
- "duration": 55.868,
+ "duration": 54.24,
  "segments": [
   {
    "scene": "hook",
-   "start": 0.2,
-   "end": 7.245,
+   "start": 0.06,
+   "end": 7.04,
    "words": [
     {
      "w": "«",
-     "start": 0.2,
-     "end": 0.22
+     "start": 0.06,
+     "end": 0.07
     },
     {
      "w": "S'il",
-     "start": 0.2,
-     "end": 0.405
+     "start": 0.08,
+     "end": 0.24
     },
     {
      "w": "ne",
-     "start": 0.455,
-     "end": 0.614
+     "start": 0.32,
+     "end": 0.4
     },
     {
      "w": "savait",
-     "start": 0.664,
-     "end": 0.914
+     "start": 0.48,
+     "end": 0.72
     },
     {
      "w": "pas,",
-     "start": 0.964,
-     "end": 1.168
+     "start": 0.8,
+     "end": 1.2
     },
     {
      "w": "il",
-     "start": 1.368,
-     "end": 1.527
+     "start": 1.28,
+     "end": 1.36
     },
     {
      "w": "l'aurait",
-     "start": 1.577,
-     "end": 1.873
+     "start": 1.4,
+     "end": 1.68
     },
     {
      "w": "dit",
-     "start": 1.923,
-     "end": 2.105
+     "start": 1.76,
+     "end": 1.84
     },
     {
      "w": "»…",
-     "start": 2.155,
-     "end": 2.314
+     "start": 2.4,
+     "end": 2.48
     },
     {
      "w": "en",
-     "start": 2.764,
-     "end": 2.923
+     "start": 2.52,
+     "end": 2.56
     },
     {
      "w": "réalité,",
-     "start": 2.973,
-     "end": 3.268
+     "start": 2.6,
+     "end": 3.28
     },
     {
      "w": "un",
-     "start": 3.468,
-     "end": 3.627
+     "start": 3.36,
+     "end": 3.44
     },
     {
      "w": "modèle",
-     "start": 3.677,
-     "end": 3.927
+     "start": 3.52,
+     "end": 3.68
     },
     {
      "w": "écrit",
-     "start": 3.977,
-     "end": 4.205
+     "start": 3.76,
+     "end": 4
     },
     {
      "w": "sa",
-     "start": 4.255,
-     "end": 4.414
+     "start": 4.04,
+     "end": 4.08
     },
     {
      "w": "réponse",
-     "start": 4.464,
-     "end": 4.736
+     "start": 4.16,
+     "end": 4.48
     },
     {
      "w": "avec",
-     "start": 4.786,
-     "end": 4.991
+     "start": 4.6,
+     "end": 4.72
     },
     {
      "w": "le",
-     "start": 5.041,
-     "end": 5.2
+     "start": 4.84,
+     "end": 4.96
     },
     {
      "w": "même",
-     "start": 5.25,
-     "end": 5.455
+     "start": 5.04,
+     "end": 5.12
     },
     {
      "w": "aplomb,",
-     "start": 5.505,
-     "end": 5.777
+     "start": 5.24,
+     "end": 5.68
     },
     {
      "w": "qu'il",
-     "start": 5.977,
-     "end": 6.205
+     "start": 5.72,
+     "end": 5.84
     },
     {
      "w": "la",
-     "start": 6.255,
-     "end": 6.414
+     "start": 5.92,
+     "end": 6
     },
     {
      "w": "connaisse",
-     "start": 6.464,
-     "end": 6.782
+     "start": 6.08,
+     "end": 6.4
     },
     {
      "w": "ou",
-     "start": 6.832,
-     "end": 6.991
+     "start": 6.44,
+     "end": 6.48
     },
     {
      "w": "non.",
-     "start": 7.041,
-     "end": 7.245
+     "start": 6.56,
+     "end": 7.04
     }
    ]
   },
   {
    "scene": "anniv",
-   "start": 7.745,
-   "end": 14.995,
+   "start": 7.173,
+   "end": 15.04,
    "words": [
     {
      "w": "En",
-     "start": 7.745,
-     "end": 7.905
+     "start": 7.173,
+     "end": 7.2
     },
     {
      "w": "2025,",
-     "start": 7.955,
-     "end": 8.182
+     "start": 7.22,
+     "end": 8.08
     },
     {
      "w": "des",
-     "start": 8.382,
-     "end": 8.564
+     "start": 8.16,
+     "end": 8.24
     },
     {
      "w": "chercheurs",
-     "start": 8.614,
-     "end": 8.955
+     "start": 8.4,
+     "end": 8.64
     },
     {
      "w": "d'OpenAI",
-     "start": 9.005,
-     "end": 9.3
+     "start": 8.68,
+     "end": 9.36
     },
     {
      "w": "ont",
-     "start": 9.35,
-     "end": 9.532
+     "start": 9.44,
+     "end": 9.52
     },
     {
      "w": "demandé",
-     "start": 9.582,
-     "end": 9.855
+     "start": 9.64,
+     "end": 9.84
     },
     {
      "w": "à",
-     "start": 9.905,
-     "end": 10.041
+     "start": 9.88,
+     "end": 9.92
     },
     {
      "w": "DeepSeek",
-     "start": 10.091,
-     "end": 10.386
+     "start": 10,
+     "end": 10.48
     },
     {
      "w": "la",
-     "start": 10.436,
-     "end": 10.595
+     "start": 10.52,
+     "end": 10.56
     },
     {
      "w": "date",
-     "start": 10.645,
-     "end": 10.85
+     "start": 10.64,
+     "end": 10.8
     },
     {
      "w": "d'anniversaire",
-     "start": 10.9,
-     "end": 11.332
+     "start": 10.84,
+     "end": 11.36
     },
     {
      "w": "de",
-     "start": 11.382,
-     "end": 11.541
+     "start": 11.44,
+     "end": 11.52
     },
     {
      "w": "l'un",
-     "start": 11.591,
-     "end": 11.795
+     "start": 11.573,
+     "end": 11.68
     },
     {
      "w": "d'entre",
-     "start": 11.845,
-     "end": 12.118
+     "start": 11.707,
+     "end": 11.92
     },
     {
      "w": "eux,",
-     "start": 12.168,
-     "end": 12.373
+     "start": 11.96,
+     "end": 12.4
     },
     {
      "w": "en",
-     "start": 12.573,
-     "end": 12.732
+     "start": 12.48,
+     "end": 12.56
     },
     {
      "w": "précisant",
-     "start": 12.782,
-     "end": 13.1
+     "start": 12.6,
+     "end": 13.04
     },
     {
      "w": "de",
-     "start": 13.15,
-     "end": 13.309
+     "start": 13.08,
+     "end": 13.12
     },
     {
      "w": "ne",
-     "start": 13.359,
-     "end": 13.518
+     "start": 13.16,
+     "end": 13.2
     },
     {
      "w": "répondre",
-     "start": 13.568,
-     "end": 13.864
+     "start": 13.28,
+     "end": 13.68
     },
     {
      "w": "que",
-     "start": 13.914,
-     "end": 14.095
+     "start": 13.72,
+     "end": 13.76
     },
     {
      "w": "s'il",
-     "start": 14.145,
-     "end": 14.35
+     "start": 13.92,
+     "end": 14.08
     },
     {
      "w": "la",
-     "start": 14.4,
-     "end": 14.559
+     "start": 14.16,
+     "end": 14.24
     },
     {
      "w": "connaissait.",
-     "start": 14.609,
-     "end": 14.995
+     "start": 14.28,
+     "end": 15.04
     }
    ]
   },
   {
    "scene": "trois",
-   "start": 15.495,
-   "end": 21.418,
+   "start": 15.177,
+   "end": 20.4,
    "words": [
     {
      "w": "Trois",
-     "start": 15.495,
-     "end": 15.723
+     "start": 15.177,
+     "end": 15.24
     },
     {
      "w": "fois",
-     "start": 15.773,
-     "end": 15.977
+     "start": 15.28,
+     "end": 15.44
     },
     {
      "w": "de",
-     "start": 16.027,
-     "end": 16.186
+     "start": 15.48,
+     "end": 15.52
     },
     {
      "w": "suite,",
-     "start": 16.236,
-     "end": 16.486
+     "start": 15.68,
+     "end": 16
     },
     {
      "w": "DeepSeek",
-     "start": 16.686,
-     "end": 16.982
+     "start": 16.08,
+     "end": 16.48
     },
     {
      "w": "a",
-     "start": 17.032,
-     "end": 17.168
+     "start": 16.52,
+     "end": 16.56
     },
     {
      "w": "donné",
-     "start": 17.218,
-     "end": 17.445
+     "start": 16.6,
+     "end": 16.88
     },
     {
      "w": "trois",
-     "start": 17.495,
-     "end": 17.723
+     "start": 16.96,
+     "end": 17.12
     },
     {
      "w": "dates",
-     "start": 17.773,
-     "end": 18
+     "start": 17.2,
+     "end": 17.36
     },
     {
      "w": "différentes,",
-     "start": 18.05,
-     "end": 18.436
+     "start": 17.44,
+     "end": 18.08
     },
     {
      "w": "toutes",
-     "start": 18.636,
-     "end": 18.886
+     "start": 18.16,
+     "end": 18.32
     },
     {
      "w": "fausses,",
-     "start": 18.936,
-     "end": 19.232
+     "start": 18.36,
+     "end": 18.88
     },
     {
      "w": "alors",
-     "start": 19.432,
-     "end": 19.659
+     "start": 18.92,
+     "end": 19.04
     },
     {
      "w": "qu'il",
-     "start": 19.709,
-     "end": 19.936
+     "start": 19.12,
+     "end": 19.2
     },
     {
      "w": "avait",
-     "start": 19.986,
-     "end": 20.214
+     "start": 19.28,
+     "end": 19.36
     },
     {
      "w": "le",
-     "start": 20.264,
-     "end": 20.423
+     "start": 19.4,
+     "end": 19.44
     },
     {
      "w": "droit",
-     "start": 20.473,
-     "end": 20.7
+     "start": 19.48,
+     "end": 19.6
     },
     {
      "w": "de",
-     "start": 20.75,
-     "end": 20.909
+     "start": 19.64,
+     "end": 19.68
     },
     {
      "w": "se",
-     "start": 20.959,
-     "end": 21.118
+     "start": 19.76,
+     "end": 19.84
     },
     {
      "w": "taire.",
-     "start": 21.168,
-     "end": 21.418
+     "start": 19.96,
+     "end": 20.4
     }
    ]
   },
   {
    "scene": "ines",
-   "start": 21.918,
-   "end": 28.568,
+   "start": 20.827,
+   "end": 27.04,
    "words": [
     {
      "w": "Imagine",
-     "start": 21.918,
-     "end": 22.191
+     "start": 20.827,
+     "end": 20.88
     },
     {
      "w": "Inès,",
-     "start": 22.241,
-     "end": 22.468
+     "start": 20.96,
+     "end": 21.44
     },
     {
      "w": "quatre",
-     "start": 22.668,
-     "end": 22.918
+     "start": 21.52,
+     "end": 21.76
     },
     {
      "w": "ans…",
-     "start": 22.968,
-     "end": 23.173
+     "start": 21.84,
+     "end": 22.32
     },
     {
      "w": "demande-lui",
-     "start": 23.623,
-     "end": 23.986
+     "start": 22.44,
+     "end": 22.72
     },
     {
      "w": "combien",
-     "start": 24.036,
-     "end": 24.309
+     "start": 22.8,
+     "end": 23.04
     },
     {
      "w": "pèse",
-     "start": 24.359,
-     "end": 24.564
+     "start": 23.12,
+     "end": 23.28
     },
     {
      "w": "la",
-     "start": 24.614,
-     "end": 24.773
+     "start": 23.32,
+     "end": 23.36
     },
     {
      "w": "Lune,",
-     "start": 24.823,
-     "end": 25.05
+     "start": 23.44,
+     "end": 23.84
     },
     {
      "w": "et",
-     "start": 25.25,
-     "end": 25.409
+     "start": 23.88,
+     "end": 23.92
     },
     {
      "w": "elle",
-     "start": 25.459,
-     "end": 25.664
+     "start": 24,
+     "end": 24.08
     },
     {
      "w": "te",
-     "start": 25.714,
-     "end": 25.873
+     "start": 24.12,
+     "end": 24.16
     },
     {
      "w": "répond",
-     "start": 25.923,
-     "end": 26.173
+     "start": 24.24,
+     "end": 24.56
     },
     {
      "w": "«",
-     "start": 26.222727272727276,
-     "end": 26.242727272727276
+     "start": 24.8,
+     "end": 24.827
     },
     {
      "w": "douze",
-     "start": 26.223,
-     "end": 26.45
+     "start": 24.853,
+     "end": 24.96
     },
     {
      "w": "kilos",
-     "start": 26.5,
-     "end": 26.727
+     "start": 25.12,
+     "end": 25.36
     },
     {
      "w": "»,",
-     "start": 26.777,
-     "end": 26.936
+     "start": 25.6,
+     "end": 25.653
     },
     {
      "w": "du",
-     "start": 27.136,
-     "end": 27.295
+     "start": 25.707,
+     "end": 25.76
     },
     {
      "w": "même",
-     "start": 27.345,
-     "end": 27.55
+     "start": 25.84,
+     "end": 26
     },
     {
      "w": "ton",
-     "start": 27.6,
-     "end": 27.782
+     "start": 26.08,
+     "end": 26.16
     },
     {
      "w": "que",
-     "start": 27.832,
-     "end": 28.014
+     "start": 26.2,
+     "end": 26.24
     },
     {
      "w": "son",
-     "start": 28.064,
-     "end": 28.245
+     "start": 26.32,
+     "end": 26.4
     },
     {
      "w": "prénom.",
-     "start": 28.295,
-     "end": 28.568
+     "start": 26.48,
+     "end": 27.04
     }
    ]
   },
   {
    "scene": "probable",
-   "start": 29.068,
-   "end": 38.25,
+   "start": 27.173,
+   "end": 35.92,
    "words": [
     {
      "w": "Le",
-     "start": 29.068,
-     "end": 29.227
+     "start": 27.173,
+     "end": 27.2
     },
     {
      "w": "modèle",
-     "start": 29.277,
-     "end": 29.527
+     "start": 27.28,
+     "end": 27.44
     },
     {
      "w": "écrit",
-     "start": 29.577,
-     "end": 29.805
+     "start": 27.52,
+     "end": 27.76
     },
     {
      "w": "la",
-     "start": 29.855,
-     "end": 30.014
+     "start": 27.8,
+     "end": 27.84
     },
     {
      "w": "suite",
-     "start": 30.064,
-     "end": 30.291
+     "start": 27.92,
+     "end": 28.08
     },
     {
      "w": "la",
-     "start": 30.341,
-     "end": 30.5
+     "start": 28.16,
+     "end": 28.24
     },
     {
      "w": "plus",
-     "start": 30.55,
-     "end": 30.755
+     "start": 28.32,
+     "end": 28.4
     },
     {
      "w": "probable,",
-     "start": 30.805,
-     "end": 31.123
+     "start": 28.52,
+     "end": 29.04
     },
     {
      "w": "et",
-     "start": 31.323,
-     "end": 31.482
+     "start": 29.08,
+     "end": 29.12
     },
     {
      "w": "une",
-     "start": 31.532,
-     "end": 31.714
+     "start": 29.2,
+     "end": 29.28
     },
     {
      "w": "date",
-     "start": 31.764,
-     "end": 31.968
+     "start": 29.36,
+     "end": 29.52
     },
     {
      "w": "inventée",
-     "start": 32.018,
-     "end": 32.314
+     "start": 29.56,
+     "end": 30
     },
     {
      "w": "sort",
-     "start": 32.364,
-     "end": 32.568
+     "start": 30.12,
+     "end": 30.24
     },
     {
      "w": "avec",
-     "start": 32.618,
-     "end": 32.823
+     "start": 30.36,
+     "end": 30.48
     },
     {
      "w": "la",
-     "start": 32.873,
-     "end": 33.032
+     "start": 30.56,
+     "end": 30.64
     },
     {
      "w": "même",
-     "start": 33.082,
-     "end": 33.286
+     "start": 30.72,
+     "end": 30.8
     },
     {
      "w": "assurance",
-     "start": 33.336,
-     "end": 33.655
+     "start": 30.88,
+     "end": 31.28
     },
     {
      "w": "qu'une",
-     "start": 33.705,
-     "end": 33.955
+     "start": 31.32,
+     "end": 31.52
     },
     {
      "w": "date",
-     "start": 34.005,
-     "end": 34.209
+     "start": 31.6,
+     "end": 31.68
     },
     {
      "w": "exacte ;",
-     "start": 34.259,
-     "end": 34.695
+     "start": 31.76,
+     "end": 32.533
     },
     {
      "w": "il",
-     "start": 34.895,
-     "end": 35.055
+     "start": 32.587,
+     "end": 32.64
     },
     {
      "w": "ne",
-     "start": 35.105,
-     "end": 35.264
+     "start": 32.72,
+     "end": 32.8
     },
     {
      "w": "dit",
-     "start": 35.314,
-     "end": 35.495
+     "start": 32.88,
+     "end": 33.04
     },
     {
      "w": "«",
-     "start": 35.54545454545457,
-     "end": 35.56545454545457
+     "start": 33.2,
+     "end": 33.227
     },
     {
      "w": "je",
-     "start": 35.545,
-     "end": 35.705
+     "start": 33.253,
+     "end": 33.28
     },
     {
      "w": "ne",
-     "start": 35.755,
-     "end": 35.914
+     "start": 33.36,
+     "end": 33.44
     },
     {
      "w": "sais",
-     "start": 35.964,
-     "end": 36.168
+     "start": 33.48,
+     "end": 33.6
     },
     {
      "w": "pas",
-     "start": 36.218,
-     "end": 36.4
+     "start": 33.68,
+     "end": 33.76
     },
     {
      "w": "»",
-     "start": 36.45000000000003,
-     "end": 36.470000000000034
+     "start": 34.08,
+     "end": 34.133
     },
     {
      "w": "que",
-     "start": 36.45,
-     "end": 36.632
+     "start": 34.187,
+     "end": 34.24
     },
     {
      "w": "si",
-     "start": 36.682,
-     "end": 36.841
+     "start": 34.32,
+     "end": 34.4
     },
     {
      "w": "son",
-     "start": 36.891,
-     "end": 37.073
+     "start": 34.48,
+     "end": 34.56
     },
     {
      "w": "entraînement",
-     "start": 37.123,
-     "end": 37.509
+     "start": 34.64,
+     "end": 35.04
     },
     {
      "w": "l'y",
-     "start": 37.559,
-     "end": 37.741
+     "start": 35.08,
+     "end": 35.16
     },
     {
      "w": "a",
-     "start": 37.791,
-     "end": 37.927
+     "start": 35.2,
+     "end": 35.28
     },
     {
      "w": "poussé.",
-     "start": 37.977,
-     "end": 38.25
+     "start": 35.307,
+     "end": 35.92
     }
    ]
   },
   {
    "scene": "aveu",
-   "start": 38.75,
-   "end": 47.286,
+   "start": 36.057,
+   "end": 45.76,
    "words": [
     {
      "w": "Sur",
-     "start": 38.75,
-     "end": 38.932
+     "start": 36.057,
+     "end": 36.08
     },
     {
      "w": "le",
-     "start": 38.982,
-     "end": 39.141
+     "start": 36.16,
+     "end": 36.24
     },
     {
      "w": "même",
-     "start": 39.191,
-     "end": 39.395
+     "start": 36.32,
+     "end": 36.4
     },
     {
      "w": "test",
-     "start": 39.445,
-     "end": 39.65
+     "start": 36.48,
+     "end": 36.72
     },
     {
      "w": "de",
-     "start": 39.7,
-     "end": 39.859
+     "start": 36.8,
+     "end": 36.88
     },
     {
      "w": "culture",
-     "start": 39.909,
-     "end": 40.182
+     "start": 37.04,
+     "end": 37.2
     },
     {
      "w": "générale,",
-     "start": 40.232,
-     "end": 40.55
+     "start": 37.24,
+     "end": 37.84
     },
     {
      "w": "sans",
-     "start": 40.75,
-     "end": 40.955
+     "start": 37.92,
+     "end": 38.08
     },
     {
      "w": "internet,",
-     "start": 41.005,
-     "end": 41.323
+     "start": 38.16,
+     "end": 38.88
     },
     {
      "w": "o4-mini",
-     "start": 41.523,
-     "end": 41.795
+     "start": 38.92,
+     "end": 39.68
     },
     {
      "w": "ne",
-     "start": 41.845,
-     "end": 42.005
+     "start": 39.72,
+     "end": 39.76
     },
     {
      "w": "s'abstenait",
-     "start": 42.055,
-     "end": 42.418
+     "start": 39.84,
+     "end": 40.4
     },
     {
      "w": "qu'une",
-     "start": 42.468,
-     "end": 42.718
+     "start": 40.44,
+     "end": 40.64
     },
     {
      "w": "fois",
-     "start": 42.768,
-     "end": 42.973
+     "start": 40.72,
+     "end": 40.88
     },
     {
      "w": "sur",
-     "start": 43.023,
-     "end": 43.205
+     "start": 40.96,
+     "end": 41.04
     },
     {
      "w": "cent,",
-     "start": 43.255,
-     "end": 43.482
+     "start": 41.12,
+     "end": 41.6
     },
     {
      "w": "quand",
-     "start": 43.682,
-     "end": 43.909
+     "start": 41.64,
+     "end": 41.76
     },
     {
      "w": "GPT-5",
-     "start": 43.959,
-     "end": 44.186
+     "start": 41.84,
+     "end": 42.4
     },
     {
      "w": "thinking",
-     "start": 44.236,
-     "end": 44.532
+     "start": 42.56,
+     "end": 42.88
     },
     {
      "w": "mini",
-     "start": 44.582,
-     "end": 44.786
+     "start": 42.96,
+     "end": 43.2
     },
     {
      "w": "disait",
-     "start": 44.836,
-     "end": 45.086
+     "start": 43.28,
+     "end": 43.52
     },
     {
      "w": "«",
-     "start": 45.136363636363676,
-     "end": 45.15636363636368
+     "start": 43.76,
+     "end": 43.787
     },
     {
      "w": "je",
-     "start": 45.136,
-     "end": 45.295
+     "start": 43.813,
+     "end": 43.84
     },
     {
      "w": "ne",
-     "start": 45.345,
-     "end": 45.505
+     "start": 43.92,
+     "end": 44
     },
     {
      "w": "sais",
-     "start": 45.555,
-     "end": 45.759
+     "start": 44.04,
+     "end": 44.16
     },
     {
      "w": "pas",
-     "start": 45.809,
-     "end": 45.991
+     "start": 44.24,
+     "end": 44.32
     },
     {
      "w": "»",
-     "start": 46.04090909090914,
-     "end": 46.06090909090914
+     "start": 44.56,
+     "end": 44.613
     },
     {
      "w": "plus",
-     "start": 46.041,
-     "end": 46.245
+     "start": 44.667,
+     "end": 44.72
     },
     {
      "w": "d'une",
-     "start": 46.295,
-     "end": 46.523
+     "start": 44.8,
+     "end": 44.96
     },
     {
      "w": "fois",
-     "start": 46.573,
-     "end": 46.777
+     "start": 45.04,
+     "end": 45.12
     },
     {
      "w": "sur",
-     "start": 46.827,
-     "end": 47.009
+     "start": 45.2,
+     "end": 45.28
     },
     {
      "w": "deux.",
-     "start": 47.059,
-     "end": 47.286
+     "start": 45.36,
+     "end": 45.76
     }
    ]
   },
   {
    "scene": "chute",
-   "start": 47.786,
-   "end": 55.868,
+   "start": 45.897,
+   "end": 54.24,
    "words": [
     {
      "w": "Alors",
-     "start": 47.786,
-     "end": 48.014
+     "start": 45.897,
+     "end": 46
     },
     {
      "w": "si",
-     "start": 48.064,
-     "end": 48.223
+     "start": 46.08,
+     "end": 46.16
     },
     {
      "w": "le",
-     "start": 48.273,
-     "end": 48.432
+     "start": 46.24,
+     "end": 46.28
     },
     {
      "w": "modèle",
-     "start": 48.482,
-     "end": 48.732
+     "start": 46.32,
+     "end": 46.56
     },
     {
      "w": "te",
-     "start": 48.782,
-     "end": 48.941
+     "start": 46.64,
+     "end": 46.72
     },
     {
      "w": "répond",
-     "start": 48.991,
-     "end": 49.241
+     "start": 46.8,
+     "end": 47.12
     },
     {
      "w": "«",
-     "start": 49.29090909090914,
-     "end": 49.31090909090914
+     "start": 47.52,
+     "end": 47.56
     },
     {
      "w": "oui,",
-     "start": 49.291,
-     "end": 49.495
+     "start": 47.6,
+     "end": 48
     },
     {
      "w": "certain",
-     "start": 49.695,
-     "end": 49.968
+     "start": 48.08,
+     "end": 48.48
     },
     {
      "w": "»…",
-     "start": 50.018,
-     "end": 50.177
+     "start": 48.52,
+     "end": 49.04
     },
     {
      "w": "repose",
-     "start": 51.227,
-     "end": 51.477
+     "start": 49.648,
+     "end": 49.84
     },
     {
      "w": "la",
-     "start": 51.527,
-     "end": 51.686
+     "start": 49.88,
+     "end": 49.92
     },
     {
      "w": "question",
-     "start": 51.736,
-     "end": 52.032
+     "start": 50,
+     "end": 50.24
     },
     {
      "w": "dans",
-     "start": 52.082,
-     "end": 52.286
+     "start": 50.32,
+     "end": 50.4
     },
     {
      "w": "une",
-     "start": 52.336,
-     "end": 52.518
+     "start": 50.48,
+     "end": 50.56
     },
     {
      "w": "conversation",
-     "start": 52.568,
-     "end": 52.955
+     "start": 50.84,
+     "end": 51.12
     },
     {
      "w": "neuve,",
-     "start": 53.005,
-     "end": 53.255
+     "start": 51.2,
+     "end": 51.76
     },
     {
      "w": "et",
-     "start": 53.455,
-     "end": 53.614
+     "start": 51.84,
+     "end": 51.92
     },
     {
      "w": "si",
-     "start": 53.664,
-     "end": 53.823
+     "start": 51.96,
+     "end": 52
     },
     {
      "w": "la",
-     "start": 53.873,
-     "end": 54.032
+     "start": 52.08,
+     "end": 52.12
     },
     {
      "w": "réponse",
-     "start": 54.082,
-     "end": 54.355
+     "start": 52.16,
+     "end": 52.48
     },
     {
      "w": "change,",
-     "start": 54.405,
-     "end": 54.677
+     "start": 52.56,
+     "end": 53.2
     },
     {
      "w": "il",
-     "start": 54.877,
-     "end": 55.036
+     "start": 53.24,
+     "end": 53.28
     },
     {
      "w": "n'en",
-     "start": 55.086,
-     "end": 55.291
+     "start": 53.32,
+     "end": 53.44
     },
     {
      "w": "savait",
-     "start": 55.341,
-     "end": 55.591
+     "start": 53.52,
+     "end": 53.68
     },
     {
      "w": "rien.",
-     "start": 55.641,
-     "end": 55.868
+     "start": 53.76,
+     "end": 54.24
     }
    ]
   }

@@ -14,7 +14,7 @@ Shorts à voix off pour YouTube, TikTok et Instagram ; recette dans `video/VOIX.
 
 ## La semaine du 20 octobre
 
-Décidée le 2026-10-19, à partir de l'actu du mois (GPT-6 dans ChatGPT et son interface qui fabrique des calculatrices le 7 octobre, l'« ère de l'AGI » annoncée avec GPT-6 Astra, le p(doom) relancé en septembre, les scores d'ARC-AGI-3 selon le harness). Quatre mythes, trois définitions, en alternance. Scripts écrits, sans motion design ni voix ; relecture de PA dans `scripts-semaine-20-10.md`, puis motion design, revue, et voix en dernier.
+Décidée le 2026-10-19, à partir de l'actu du mois (GPT-6 dans ChatGPT et son interface qui fabrique des calculatrices le 7 octobre, l'« ère de l'AGI » annoncée avec GPT-6 Astra, le p(doom) relancé en septembre, les scores d'ARC-AGI-3 selon le harness). Quatre mythes, trois définitions, en alternance. Scripts relus par PA, animations validées, voix PAL - FR générées (eleven_v4, 8 564 crédits) et calées le 2026-10-19 ; les sept shorts sont rendus en v1 dans `video/out/shorts/<id>/` (vidéo `-v1.mp4` et couverture `-cover.jpg`, non versionnés). Reste à faire par PA : écouter les prises (sigles GPT-4o, o4-mini, ARC-AGI-3, les termes anglais en API), planifier et publier, puis ajouter chaque short à `lexique/shorts.js`. Ép. 12 : quatre images générées exprès par IA (ElevenLabs, à mentionner dans la description, « images générées par IA, exprès »).
 
 | Date | Ép. | Format | Fiche | Composition | Fil avec l'épisode d'avant | Décor |
 |---|---|---|---|---|---|---|
