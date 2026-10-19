@@ -1,0 +1,76 @@
+{
+  "id": "agi",
+  "term": "agi",
+  "episode": 14,
+  "date": "2026-10-23",
+  "format": "Définition",
+  "composition": "AgiVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... l'AGI…"
+    },
+    {
+      "scene": "astra",
+      "say": "[curious] Le 3 septembre 2026, au lancement de GPT-6 Astra, le président d'OpenAI jugeait « pas déraisonnable » de dire qu'on était entré dans l'ère de l'AGI… mais de quoi parlait-il exactement ?"
+    },
+    {
+      "scene": "nom",
+      "say": "[warmly] L'AGI, c'est l'intelligence artificielle générale, ou en anglais, /ˌɑːɹtɪˈfɪʃəl ˈdʒɛnəɹəl ɪnˈtɛlɪdʒəns/, une IA aussi bonne que les humains sur l'essentiel des tâches intellectuelles… et chacun en a sa propre définition."
+    },
+    {
+      "scene": "theo",
+      "say": "[mischievously] Imagine Théo, vingt-six ans, au repas du dimanche… il sera « grand » pour Mamie quand il aura son bac, pour son père quand il paiera son loyer, et pour l'oncle banquier quand il aura gagné son premier million."
+    },
+    {
+      "scene": "contrat",
+      "say": "[curious] Dans l'accord signé en 2023 entre Microsoft et OpenAI, d'après le média The Information, l'AGI, c'était même des systèmes capables de rapporter 100 milliards de dollars de bénéfices."
+    },
+    {
+      "scene": "grille",
+      "say": "[warmly] Ça devient mesurable quand on fixe une grille, et en octobre 2025, une trentaine de chercheurs notaient GPT-5 à 57 % sur leur échelle de l'adulte instruit, très fort en connaissances, très faible en mémoire à long terme."
+    },
+    {
+      "scene": "enquete",
+      "say": "[curious] Et dans la plus grande enquête auprès des chercheurs en IA, publiée en 2024, ils donnaient une chance sur deux aux machines de nous surpasser dans toutes les tâches d'ici 2047… mais d'automatiser tous les métiers seulement d'ici 2116."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors quand quelqu'un t'annonce l'AGI… [pause] demande-lui d'abord laquelle."
+    }
+  ],
+  "quoted": [
+    "pasdéraisonnable"
+  ],
+  "display": {
+    "/ˌɑːɹtɪˈfɪʃəl": "artificial",
+    "ˈdʒɛnəɹəl": "general",
+    "ɪnˈtɛlɪdʒəns/,": "intelligence,"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "artificial general intelligence,"
+    ]
+  },
+  "sources": [
+    "Fiche agi de lexique/terms.js : Gizmodo, 3 septembre 2026 (Greg Brockman, « not unreasonable to feel that we are now in the AGI era ») ; TechCrunch, 26 décembre 2024 (accord de 2023, 100 milliards de dollars de bénéfices selon The Information) ; Hendrycks et al., A Definition of AGI, 21 octobre 2025 (GPT-5 à 57 %, mémoire à long terme) ; Grace et al. (AI Impacts), janvier 2024 (2047 pour toutes les tâches, 2116 pour tous les métiers) ; image de Théo"
+  ],
+  "publication": {
+    "title": "L'AGI est là ? Tout dépend qui demande",
+    "description": "L'AGI (artificial general intelligence), c'est une IA aussi bonne que les humains sur l'essentiel des tâches intellectuelles ; chacun la définit à sa façon, jusqu'à un contrat qui la fixait à 100 milliards de dollars de bénéfices.\nhttps://neopal.github.io/lexique/agi/\n#agi #openai #ia #vulgarisation",
+    "fil": "Le modèle devine les chiffres (ép. 13), et ses labos annoncent pourtant l'AGI ; de quoi parlent-ils ?",
+    "decor": "repas du dimanche (famille)"
+  }
+}

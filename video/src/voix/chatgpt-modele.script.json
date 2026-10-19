@@ -1,0 +1,70 @@
+{
+  "id": "chatgpt-modele",
+  "term": "mythe-chatgpt-c-est-le-modele",
+  "episode": 11,
+  "date": "2026-10-20",
+  "format": "Mythe",
+  "composition": "MytheModeleVoix",
+  "todo": "Phrase du hook provisoire (le titre ou l'« À éviter » de la fiche) : pas encore de citation réelle et sourcée ; en chercher une avant la voix, sinon garder telle quelle comme l'ép. 9.",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] « ChatGPT, c'est une IA »… en réalité, ChatGPT est une application, et derrière, plus d'une quinzaine de modèles se sont succédé."
+    },
+    {
+      "scene": "2022",
+      "say": "[curious] Le 30 novembre 2022, tu ouvrais ChatGPT, et c'était GPT-3.5 qui te répondait. En octobre 2026, même adresse, même logo, et ce sont les modèles GPT-6 qui répondent."
+    },
+    {
+      "scene": "appli",
+      "say": "[warmly] Le modèle, c'est un fichier de paramètres qui prédit la suite d'un texte. ChatGPT, c'est l'application construite autour, qui ajoute des consignes, ta mémoire, la recherche web, et qui choisit quel modèle te répond."
+    },
+    {
+      "scene": "bond",
+      "say": "[mischievously] Imagine James Bond… le nom, le smoking et le martini n'ont pas bougé depuis 1962, et pourtant six acteurs ont tenu le rôle, de Sean Connery à Daniel Craig."
+    },
+    {
+      "scene": "role",
+      "say": "[warmly] ChatGPT, c'est le rôle, et le modèle, c'est l'acteur."
+    },
+    {
+      "scene": "gpt6",
+      "say": "[curious] Et en septembre 2026, GPT-6 est même sorti en trois versions, Luna, Sol et Astra… trois acteurs pour un seul rôle."
+    },
+    {
+      "scene": "gpt4o",
+      "say": "[warmly] Quand OpenAI a retiré GPT-4o, des utilisateurs ont protesté qu'on leur avait changé leur ChatGPT, alors que l'adresse et le logo étaient restés les mêmes."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors quand quelqu'un te dit « ChatGPT est nul en calcul »… [pause] demande-lui d'abord quel modèle, et à quelle date."
+    }
+  ],
+  "quoted": [],
+  "display": {},
+  "nocaption": [
+    "hook"
+  ],
+  "sources": [
+    "Fiche mythe-chatgpt-c-est-le-modele de lexique/terms.js : lancement le 30 novembre 2022 avec GPT-3.5, plus d'une quinzaine de modèles successifs, router de GPT-5 en août 2025, protestations après le retrait de GPT-4o (source : Wikipédia, ChatGPT)",
+    "Wikipédia, ChatGPT, consultée le 19 octobre 2026 : GPT-6 sorti en trois versions (Luna, Sol, Astra), OpenAI, Introducing GPT-6 Sol and Luna, 22 septembre 2026 ; https://en.wikipedia.org/wiki/ChatGPT",
+    "TechCrunch, ChatGPT is getting a lot more visual with the launch of a new interface, 7 octobre 2026 (Intelligent UI déployé avec GPT-6 dans ChatGPT) ; https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/",
+    "Wikipédia, James Bond (« the first six actors to play James Bond on the screen », de Sean Connery à Daniel Craig ; Dr. No, 1962) ; https://en.wikipedia.org/wiki/James_Bond",
+    "Wikipédia, ChatGPT, consultée le 19 octobre 2026 : « Three released versions: Luna, Sol, Astra » (OpenAI, Introducing GPT-6 Sol and Luna, 22 septembre 2026 ; Astra lancé le 3 septembre 2026)"
+  ],
+  "publication": {
+    "title": "Derrière ChatGPT, quinze IA différentes",
+    "description": "« ChatGPT, c'est une IA » ; pas vraiment. ChatGPT est une application, et le modèle qui répond derrière (GPT-3.5 en 2022, GPT-6 en 2026) change sous le même logo. Le rôle reste, l'acteur change, comme pour l'agent 007.\nhttps://neopal.github.io/lexique/mythe-chatgpt-c-est-le-modele/\n#chatgpt #gpt6 #llm #vulgarisation",
+    "fil": "L'agent de l'ép. 10 tourne sur un modèle ; ChatGPT aussi, et ce modèle change sous l'application",
+    "decor": "cinéma (James Bond)"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "p-doom",
+  "term": "p-doom",
+  "episode": 16,
+  "date": "2026-10-25",
+  "format": "Définition",
+  "composition": "PDoomVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... le /ˈpiːduːm/…"
+    },
+    {
+      "scene": "question",
+      "say": "[curious] Depuis 2023, dans la Silicon Valley, on pose une drôle de question aux chercheurs et aux patrons… « c'est combien, ton /ˈpiːduːm/ ? »"
+    },
+    {
+      "scene": "nom",
+      "say": "[warmly] C'est la probabilité, donnée par une personne, que l'IA provoque une catastrophe pour l'humanité, comme l'extinction… le doom, en anglais, c'est la fin."
+    },
+    {
+      "scene": "ecarts",
+      "say": "[curious] En 2025, le patron d'Anthropic répondait 25 %, alors que Yann LeCun, chez Meta, le jugeait moins probable qu'un astéroïde qui nous rayerait de la carte."
+    },
+    {
+      "scene": "pasla",
+      "say": "[warmly] Sauf qu'ils ne répondent pas à la même question, l'un parle de choses qui tournent « vraiment, vraiment mal », d'autres de l'extinction d'ici 2100, ou de tous les humains d'ici dix ans."
+    },
+    {
+      "scene": "meteo",
+      "say": "[mischievously] Imagine la météo du 20 heures qui annonce 30 % de pluie… sur cent jours pareils, on peut vérifier qu'il a plu à peu près trente fois. La fin du monde n'arrive qu'une fois, et personne ne pourra recompter."
+    },
+    {
+      "scene": "tournoi",
+      "say": "[curious] En 2022, quatre-vingts experts et quatre-vingt-neuf superprévisionnistes ont débattu du risque d'extinction par l'IA d'ici 2100… les experts disaient 3 %, les prévisionnistes huit fois moins, et presque personne n'a changé d'avis."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors devant un /ˈpiːduːm/, demande toujours de quoi on parle, et pour quand… [pause] le chiffre seul ne veut rien dire."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈpiːduːm/": "p(doom)"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "sources": [
+    "Fiche p-doom de lexique/terms.js : Wikipédia, P(doom) (terme courant depuis 2023) ; TechRadar, 20 septembre 2025 (Dario Amodei, 25 % que « things go really, really badly ») ; TechRadar, 7 avril 2024 (Yann LeCun, moins de 0,01 %, « less likely than an asteroid wiping us out ») ; CNBC, 9 septembre 2026 (Evan Hubinger, plus de 10 % d'ici dix ans) ; Forecasting Research Institute (80 experts, 89 superforecasters, 2022) et Astral Codex Ten (3 % contre 0,38 %, rappelés en mai 2023, la plupart n'ont pas bougé) ; image de la météo"
+  ],
+  "publication": {
+    "title": "Une chance sur quatre que tout finisse ?",
+    "description": "Le p(doom), c'est la probabilité qu'une personne donne à une catastrophe causée par l'IA ; de 25 % pour le patron d'Anthropic à « moins qu'un astéroïde » pour Yann LeCun, parce que personne ne répond à la même question. C'est une opinion, pas une mesure.\nhttps://neopal.github.io/lexique/p-doom/\n#pdoom #securiteia #ia #vulgarisation",
+    "fil": "Si l'AGI arrive (ép. 14) avec un modèle qui ne sait pas ce qu'il ne sait pas (ép. 15), quel risque ? Voilà le chiffre qu'on se renvoie",
+    "decor": "météo du 20 heures (télé)"
+  }
+}

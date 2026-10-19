@@ -12,6 +12,22 @@ Shorts à voix off pour YouTube, TikTok et Instagram ; recette dans `video/VOIX.
 - **Chaque épisode répond au précédent**, pour qu'un spectateur qui en voit un ait une raison de voir le suivant. L'ordre va du plus grand public au plus technique.
 - **Après l'épisode 7**, on regarde dans YouTube Studio la rétention à 3 s et le pourcentage de vues complètes par format, puis on ajuste le rythme et les formats.
 
+## La semaine du 20 octobre
+
+Décidée le 2026-10-19, à partir de l'actu du mois (GPT-6 dans ChatGPT et son interface qui fabrique des calculatrices le 7 octobre, l'« ère de l'AGI » annoncée avec GPT-6 Astra, le p(doom) relancé en septembre, les scores d'ARC-AGI-3 selon le harness). Quatre mythes, trois définitions, en alternance. Scripts écrits, sans motion design ni voix ; relecture de PA dans `scripts-semaine-20-10.md`, puis motion design, revue, et voix en dernier.
+
+| Date | Ép. | Format | Fiche | Composition | Fil avec l'épisode d'avant | Décor |
+|---|---|---|---|---|---|---|
+| mar. 20/10 | 11 | Mythe | `mythe-chatgpt-c-est-le-modele` | `MytheModeleVoix` | L'agent de l'ép. 10 tourne sur un modèle ; ChatGPT aussi, et ce modèle change sous l'application | cinéma (James Bond) |
+| mer. 21/10 | 12 | Définition | `ai-slop` | `AiSlopVoix` | Ce que ces modèles déversent quand personne ne relit | groupe WhatsApp de famille |
+| jeu. 22/10 | 13 | Mythe | `mythe-ia-calcule` | `MytheCalculeVoix` | L'ép. 11 finit sur « ChatGPT est nul en calcul » ; voilà pourquoi | plateau télé (Des chiffres et des lettres) |
+| ven. 23/10 | 14 | Définition | `agi` | `AgiVoix` | Le modèle devine les chiffres, et ses labos annoncent l'AGI ; laquelle ? | repas du dimanche |
+| sam. 24/10 | 15 | Mythe | `mythe-sait-quand-il-ne-sait-pas` | `MytheSaitPasVoix` | « L'ère de l'AGI », et le modèle ne sait toujours pas quand il ne sait pas | maison (Inès, 4 ans) |
+| dim. 25/10 | 16 | Définition | `p-doom` | `PDoomVoix` | Alors, quel risque ? Le chiffre qu'on se renvoie, et pourquoi il ne se compare pas | météo du 20 heures |
+| lun. 26/10 | 17 | Mythe | `mythe-bon-score-bon-modele` | `MytheScoreVoix` | Le p(doom) est une opinion ; les benchmarks se mesurent, mais mesurent-ils ton travail ? | bureau (le nouveau, appel client) |
+
+Titres et descriptions : champ `publication` de chaque `video/src/voix/<id>.script.json`, recopiés dans `scripts-semaine-20-10.md`. Les accroches des quatre mythes sont provisoires (champ `todo`) tant qu'on n'a pas de citation réelle et sourcée.
+
 ## La semaine du 13 octobre
 
 Rien n'est sorti les 10, 11 et 12 : le calendrier glisse d'une semaine (2026-10-12). Les sept épisodes ont leur voix et sont rendus dans `video/out/shorts/<id>/` (état ci-dessous).

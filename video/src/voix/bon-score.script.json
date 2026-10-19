@@ -1,0 +1,63 @@
+{
+  "id": "bon-score",
+  "term": "mythe-bon-score-bon-modele",
+  "episode": 17,
+  "date": "2026-10-26",
+  "format": "Mythe",
+  "composition": "MytheScoreVoix",
+  "todo": "Phrase du hook provisoire (le titre ou l'« À éviter » de la fiche) : pas encore de citation réelle et sourcée ; en chercher une avant la voix, sinon garder telle quelle comme l'ép. 9.",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] « Premier au benchmark, c'est donc le meilleur modèle »… en réalité, un score mesure un exercice, pas ton travail."
+    },
+    {
+      "scene": "arc",
+      "say": "[curious] Début septembre 2026, GPT-6 Astra réussissait 62,7 % des jeux d'ARC-AGI-3, un test de logique… puis 99,9 % des mêmes jeux, avec un autre programme autour de lui."
+    },
+    {
+      "scene": "harnais",
+      "say": "[warmly] Le modèle n'avait pas changé, seulement le programme qui l'entoure, et qui lui gardait son raisonnement d'un appel à l'autre."
+    },
+    {
+      "scene": "toeic",
+      "say": "[mischievously] Imagine le nouveau, 990 au TOEIC, le score maximal, en gras sur son CV… et au premier appel avec le client de Manchester, il lui fait répéter chaque phrase."
+    },
+    {
+      "scene": "relecture",
+      "say": "[curious] En 2026, des développeurs de logiciels libres ont relu près de 300 corrections de code écrites par des agents, toutes validées par les tests d'un benchmark… et environ la moitié n'aurait pas été acceptée."
+    },
+    {
+      "scene": "sert",
+      "say": "[warmly] Un score sert à écarter un modèle trop faible et à suivre les progrès, mais entre deux modèles proches, il ne choisit pas à ta place."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors pour choisir… [pause] donne-leur une semaine de tes vraies demandes, et garde celui dont tu retouches le moins le travail."
+    }
+  ],
+  "quoted": [],
+  "display": {},
+  "nocaption": [
+    "hook"
+  ],
+  "sources": [
+    "Fiche arc-agi de lexique/terms.js : ARC Prize, résultats de GPT-6 Astra, septembre 2026 (ARC-AGI-3 semi-privé : 62,7 % dans le harness standard, 99,9 % avec le harness Provider Adapter, qui conserve l'état de raisonnement entre les requêtes)",
+    "Fiche mythe-bon-score-bon-modele de lexique/terms.js : METR, Many SWE-bench-Passing PRs Would Not Be Merged into Main, 10 mars 2026 (296 corrections d'agents validées par SWE-bench Verified, environ la moitié pas intégrée par les mainteneurs) ; image du TOEIC ; réponse « Entendu au bureau »"
+  ],
+  "publication": {
+    "title": "Premier au benchmark, nul au boulot ?",
+    "description": "« Un bon score au benchmark fait un bon modèle » ; un score mesure un exercice précis. GPT-6 Astra passe de 62,7 % à 99,9 % sur les mêmes jeux d'ARC-AGI-3 en changeant seulement le programme qui l'entoure.\nhttps://neopal.github.io/lexique/mythe-bon-score-bon-modele/\n#benchmark #llm #ia #vulgarisation",
+    "fil": "Le p(doom) est une opinion (ép. 16) ; les benchmarks, eux, se mesurent, mais mesurent-ils ce que tu crois ?",
+    "decor": "bureau (le nouveau, appel client)"
+  }
+}

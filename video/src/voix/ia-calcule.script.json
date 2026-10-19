@@ -1,0 +1,68 @@
+{
+  "id": "ia-calcule",
+  "term": "mythe-ia-calcule",
+  "episode": 13,
+  "date": "2026-10-22",
+  "format": "Mythe",
+  "composition": "MytheCalculeVoix",
+  "todo": "Phrase du hook provisoire (le titre ou l'« À éviter » de la fiche) : pas encore de citation réelle et sourcée ; en chercher une avant la voix, sinon garder telle quelle comme l'ép. 9.",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] « L'IA calcule »… en réalité, quand ChatGPT te donne un résultat, le modèle ne pose pas l'opération, il en écrit les chiffres."
+    },
+    {
+      "scene": "calculette",
+      "say": "[curious] Depuis octobre 2026, ChatGPT sait même t'afficher une petite calculatrice faite pour ta question, et pourtant le modèle qui te répond ne compte pas comme elle."
+    },
+    {
+      "scene": "tokens",
+      "say": "[warmly] Pour lui, le résultat d'une opération sort comme n'importe quel mot, prédit token par token, par paquets de chiffres."
+    },
+    {
+      "scene": "compte",
+      "say": "[mischievously] Imagine un candidat des Chiffres et des lettres qui, au compte est bon, annonce un nombre qui a la bonne tête, le bon début et la bonne fin… sans avoir posé une seule opération."
+    },
+    {
+      "scene": "haiku",
+      "say": "[curious] En 2025, Anthropic a regardé à l'intérieur de Claude pendant qu'il faisait 36 plus 59, et Claude estimait d'un côté l'ordre de grandeur, trouvait de l'autre le chiffre des unités, puis combinait les deux."
+    },
+    {
+      "scene": "longs",
+      "say": "[warmly] Ça tient sur les petits nombres et ça se dégrade avec la longueur, et en 2023, GPT-4 ne réussissait de tête que 59 % des multiplications de deux nombres à trois chiffres."
+    },
+    {
+      "scene": "outil",
+      "say": "[curious] Alors les assistants délèguent, ils écrivent un petit programme, le font tourner, et recopient son résultat."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Pour un total qui compte, regarde s'il a exécuté du code… [pause] sinon, le nombre a été deviné, souvent juste, jamais garanti."
+    }
+  ],
+  "quoted": [],
+  "display": {},
+  "nocaption": [
+    "hook"
+  ],
+  "sources": [
+    "Fiche mythe-ia-calcule de lexique/terms.js : Anthropic, Tracing the thoughts of a large language model, 27 mars 2025 (Claude 3.5 Haiku, 36 + 59) ; Dziri et al., Faith and Fate, mai 2023 (GPT-4 à 59 % sur les multiplications à trois chiffres) ; délégation à un outil d'exécution de code ; image du comptoir non reprise",
+    "TechCrunch, ChatGPT is getting a lot more visual with the launch of a new interface, 7 octobre 2026 (« a customized calculator for a specific task ») ; https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/",
+    "Image : le jeu télévisé Des chiffres et des lettres (France Télévisions), épreuve « Le compte est bon » ; référence culturelle, aucun fait daté"
+  ],
+  "publication": {
+    "title": "ChatGPT ne calcule pas, il devine",
+    "description": "« L'IA calcule » ; pas comme ta calculatrice. Le modèle écrit les chiffres d'un résultat comme des mots, token par token ; pour un résultat garanti, il doit faire tourner du code. Le compte est bon… souvent.\nhttps://neopal.github.io/lexique/mythe-ia-calcule/\n#chatgpt #calcul #llm #vulgarisation",
+    "fil": "L'ép. 11 finissait sur « ChatGPT est nul en calcul » ; voilà pourquoi, et comment il s'en sort",
+    "decor": "plateau télé (Des chiffres et des lettres)"
+  }
+}

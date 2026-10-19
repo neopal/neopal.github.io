@@ -1,0 +1,66 @@
+{
+  "id": "sait-pas",
+  "term": "mythe-sait-quand-il-ne-sait-pas",
+  "episode": 15,
+  "date": "2026-10-24",
+  "format": "Mythe",
+  "composition": "MytheSaitPasVoix",
+  "todo": "Phrase du hook provisoire (le titre ou l'« À éviter » de la fiche) : pas encore de citation réelle et sourcée ; en chercher une avant la voix, sinon garder telle quelle comme l'ép. 9.",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] « S'il ne savait pas, il l'aurait dit »… en réalité, un modèle écrit sa réponse avec le même aplomb, qu'il la connaisse ou non."
+    },
+    {
+      "scene": "anniv",
+      "say": "[curious] En 2025, des chercheurs d'OpenAI ont demandé à DeepSeek la date d'anniversaire de l'un d'entre eux, en précisant de ne répondre que s'il la connaissait."
+    },
+    {
+      "scene": "trois",
+      "say": "[warmly] Trois fois de suite, DeepSeek a donné trois dates différentes, toutes fausses, alors qu'il avait le droit de se taire."
+    },
+    {
+      "scene": "ines",
+      "say": "[mischievously] Imagine Inès, quatre ans… demande-lui combien pèse la Lune, et elle te répond « douze kilos », du même ton que son prénom."
+    },
+    {
+      "scene": "probable",
+      "say": "[curious] Le modèle écrit la suite la plus probable, et une date inventée sort avec la même assurance qu'une date exacte ; il ne dit « je ne sais pas » que si son entraînement l'y a poussé."
+    },
+    {
+      "scene": "aveu",
+      "say": "[warmly] Sur le même test de culture générale, sans internet, o4-mini ne s'abstenait qu'une fois sur cent, quand GPT-5 thinking mini disait « je ne sais pas » plus d'une fois sur deux."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Alors si le modèle te répond « oui, certain »… [pause] repose la question dans une conversation neuve, et si la réponse change, il n'en savait rien."
+    }
+  ],
+  "quoted": [
+    "douzekilos",
+    "jenesaispas",
+    "ouicertain"
+  ],
+  "display": {},
+  "nocaption": [
+    "hook"
+  ],
+  "sources": [
+    "Fiche mythe-sait-quand-il-ne-sait-pas de lexique/terms.js : Kalai et al., Why Language Models Hallucinate, 4 septembre 2025 (OpenAI et Georgia Tech, l'anniversaire d'Adam Tauman Kalai demandé trois fois à DeepSeek-V3, trois dates fausses) ; GPT-5 System Card, tableau 8, SimpleQA sans web (o4-mini 1 % d'abstention, gpt-5-thinking-mini 52 %) ; image d'Inès ; réponse « Entendu au bureau »"
+  ],
+  "publication": {
+    "title": "ChatGPT ne sait pas qu'il ne sait pas",
+    "description": "« L'IA sait quand elle ne sait pas » ; pas vraiment. Le modèle écrit la suite la plus probable avec le même aplomb, et ne dit « je ne sais pas » que si on l'a entraîné à le faire. Repose la question ailleurs : si la réponse change, il n'en savait rien.\nhttps://neopal.github.io/lexique/mythe-sait-quand-il-ne-sait-pas/\n#hallucination #chatgpt #ia #vulgarisation",
+    "fil": "L'ère de l'AGI (ép. 14), et pourtant le modèle ne sait toujours pas quand il ne sait pas",
+    "decor": "maison (Inès, 4 ans)"
+  }
+}

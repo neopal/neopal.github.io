@@ -248,3 +248,12 @@ Un format à part, pour YouTube et TikTok seulement : il ne remplace pas les vid
 - **Un seul détail vivant par personnage** (il cligne des yeux, `Pixel`) : il ne doit pas voler la vedette au schéma.
 - Pas d'exagération de plus que le léger dépassement du ressort de `Pop` : au-delà, ça fait appli pour enfants.
 - Contrôle avant rendu : `cd video && npm run check:voix -- <id> <Composition>`.
+
+**Le vocabulaire du motion** (tiré de deux bibliothèques MIT, showheyohtaki/motion-prompt et apenasdouglas/ai-motion-library, retenu le 2026-10-19) : chaque effet a un nom, et le code le nomme en commentaire (fade in, pop in, stagger, count-up, typewriter, highlight, draw-on, mask reveal, wipe, punch zoom, bar grow), pour qu'on puisse en parler sans le décrire.
+- **Deux effets au plus par élément** : une entrée et, au besoin, une emphase (pop in puis highlight). Au-delà, l'œil ne sait plus quoi regarder.
+- **Une chose bouge à la fois**, et chaque mouvement est suivi d'un temps de pose avant le suivant ; deux mouvements qui prennent tout le cadre ne se chevauchent jamais.
+- **La sortie va plus vite que l'entrée**, environ 70 % de son temps (`gone`, 6 images, contre une dizaine pour `Pop`).
+- **La cascade suit l'ordre de lecture**, de gauche à droite et de haut en bas, avec 2 à 3 images (0,06 à 0,1 s) entre deux éléments.
+- **Une seule famille de courbes par short** (cubic du kit) ; le linéaire est réservé au compte calé sur la voix et au défilement continu.
+- **Recettes** (briques dans `video/src/kit.tsx`) : un chiffre d'impact compte de 0 à sa valeur en 1 à 1,5 s (`countUp`), puis donne un punch zoom à l'arrivée (`punch` : 100 % à 110 % en 0,15 s, retour en 0,3 s), sur le mot qui le dit ; une citation s'écrit à la machine (`typed`, 25 à 40 caractères par seconde) puis se surligne de gauche à droite en 0,4 s (`Highlight`) ; un avant / après passe en wipe de 0,5 à 0,7 s ; une série de valeurs pousse en bar grow avec cascade ; un trait se dessine en 1,5 à 2 s (draw-on) ; un portrait ou une image fixe prend un Ken Burns de 5 % sur toute la scène.
+- **Le punch zoom est rare** : un par short au plus, sur le chiffre ou le mot qui porte la scène, jamais sur le hook d'un mythe (le tampon y fait déjà l'impact).

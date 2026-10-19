@@ -29,6 +29,13 @@ import {MytheTauxVoix, MYTHETAUXVOIX_DURATION} from './MytheTauxVoix';
 import {RagVoix, RAGVOIX_DURATION} from './RagVoix';
 import {MytheLitVoix, MYTHELITVOIX_DURATION} from './MytheLitVoix';
 import {AgentVoix, AGENTVOIX_DURATION} from './AgentVoix';
+import {MytheModeleVoix, MYTHEMODELEVOIX_DURATION} from './MytheModeleVoix';
+import {AiSlopVoix, AISLOPVOIX_DURATION} from './AiSlopVoix';
+import {MytheCalculeVoix, MYTHECALCULEVOIX_DURATION} from './MytheCalculeVoix';
+import {AgiVoix, AGIVOIX_DURATION} from './AgiVoix';
+import {MytheSaitPasVoix, MYTHESAITPASVOIX_DURATION} from './MytheSaitPasVoix';
+import {PDoomVoix, PDOOMVOIX_DURATION} from './PDoomVoix';
+import {MytheScoreVoix, MYTHESCOREVOIX_DURATION} from './MytheScoreVoix';
 
 // Les shorts dans une seule entrée (stills et rendus partagent le même bundle).
 const C = {fps: 30, width: 1080, height: 1920} as const;
@@ -64,5 +71,12 @@ export const Root: React.FC = () => (
     <Composition id="RagVoix" component={RagVoix} durationInFrames={RAGVOIX_DURATION} {...C} />
     <Composition id="MytheLitVoix" component={MytheLitVoix} durationInFrames={MYTHELITVOIX_DURATION} {...C} />
     <Composition id="AgentVoix" component={AgentVoix} durationInFrames={AGENTVOIX_DURATION} {...C} />
+    <Composition id="MytheModeleVoix" component={MytheModeleVoix} durationInFrames={MYTHEMODELEVOIX_DURATION} {...C} />
+    <Composition id="AiSlopVoix" component={AiSlopVoix} durationInFrames={AISLOPVOIX_DURATION} {...C} />
+    <Composition id="MytheCalculeVoix" component={MytheCalculeVoix} durationInFrames={MYTHECALCULEVOIX_DURATION} {...C} />
+    <Composition id="AgiVoix" component={AgiVoix} durationInFrames={AGIVOIX_DURATION} {...C} />
+    <Composition id="MytheSaitPasVoix" component={MytheSaitPasVoix} durationInFrames={MYTHESAITPASVOIX_DURATION} {...C} />
+    <Composition id="PDoomVoix" component={PDoomVoix} durationInFrames={PDOOMVOIX_DURATION} {...C} />
+    <Composition id="MytheScoreVoix" component={MytheScoreVoix} durationInFrames={MYTHESCOREVOIX_DURATION} {...C} />
   </>
 );

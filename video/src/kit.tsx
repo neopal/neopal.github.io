@@ -82,6 +82,37 @@ export const squash = (frame: number, hit: number, amount = 0.14): [number, numb
 // Progression linéaire 0 -> 1 entre deux images.
 export const useProg = (from: number, to: number) => interpolate(useCurrentFrame(), [from, to], [0, 1], clamp);
 
+// ---------- Vocabulaire du motion (univers.md, « Le vocabulaire du motion ») ----------
+
+// Punch zoom : 1 -> 1,1 en 0,15 s (5 images) puis retour à 1 en 0,3 s (9 images), sur le mot qui porte la scène.
+// Un par short au plus.
+export const punch = (frame: number, hit: number, amount = 0.1) =>
+  1 + amount * interpolate(frame - hit, [0, 5, 14], [0, 1, 0], {...clamp, easing: Easing.out(Easing.cubic)});
+
+// Count-up : la valeur monte de `from` à `to` en `frames` images (1 à 1,5 s), arrondie à `digits` décimales.
+// À afficher en Mono (chasse fixe) pour que le nombre ne tremble pas.
+export const countUp = (frame: number, start: number, to: number, frames = 36, digits = 0, from = 0) => {
+  const v = ease(frame, start, start + frames, [from, to]);
+  return digits ? v.toFixed(digits).replace('.', ',') : String(Math.round(v)).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+};
+
+// Typewriter : le texte s'écrit à `cps` caractères par seconde (25 à 40) à partir de l'image `start`.
+export const typed = (frame: number, start: number, text: string, cps = 32) =>
+  text.slice(0, Math.max(0, Math.floor(((frame - start) / 30) * cps)));
+
+// Highlight : un surligneur qui passe de gauche à droite en 0,4 s (12 images) derrière le texte.
+export const Highlight: React.FC<{at: number; children: React.ReactNode; color?: string}> = ({at: a, children, color}) => {
+  const frame = useCurrentFrame();
+  const accent = useAccent();
+  const p = ease(frame, a, a + 12);
+  return (
+    <span style={{position: 'relative', display: 'inline-block'}}>
+      <span style={{position: 'absolute', left: -6, right: -6, top: '58%', bottom: '2%', background: withAlpha(color ?? accent, 0.45), transform: `scaleX(${p})`, transformOrigin: 'left center'}} />
+      <span style={{position: 'relative'}}>{children}</span>
+    </span>
+  );
+};
+
 // ---------- Tailles et mise en page ----------
 
 // Aucun texte sous 36 px sur un cadre de 1080 px : les briques de texte refusent de rendre en dessous.

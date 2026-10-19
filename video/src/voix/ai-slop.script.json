@@ -1,0 +1,74 @@
+{
+  "id": "ai-slop",
+  "term": "ai-slop",
+  "episode": 12,
+  "date": "2026-10-21",
+  "format": "Définition",
+  "composition": "AiSlopVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... l'AI slop…"
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Tu fais défiler les Shorts, et tu tombes sur une vidéo bizarre, fabriquée à la chaîne par une IA ? En octobre 2025, sur un compte YouTube tout neuf, c'était le cas d'un Short sur cinq parmi les premiers proposés."
+    },
+    {
+      "scene": "patee",
+      "say": "[warmly] En anglais, le slop, c'est la pâtée des cochons. Le mot désigne le contenu généré par l'IA en masse et sans soin, publié pour occuper l'espace ou capter des vues, plutôt que pour être lu ou regardé."
+    },
+    {
+      "scene": "nom",
+      "say": "C'est ça, l'/ˌeɪˈaɪ slɑp/, et le mot slop a été élu mot de l'année 2025 par le dictionnaire Merriam-Webster."
+    },
+    {
+      "scene": "ginette",
+      "say": "[mischievously] Imagine Tata Ginette, qui poste quinze images par jour sur le groupe WhatsApp de la famille sans en regarder une seule… ça ne lui coûte rien, et c'est toi qui fais défiler."
+    },
+    {
+      "scene": "deezer",
+      "say": "[curious] En juin 2026, Deezer recevait jusqu'à 90 000 morceaux générés par l'IA en une seule journée, plus de la moitié de tous les nouveaux envois."
+    },
+    {
+      "scene": "ecoutes",
+      "say": "[warmly] Ces morceaux ne faisaient pourtant que 1 à 3 % des écoutes, et en 2025, jusqu'à 85 % de ces écoutes venaient de robots qui encaissaient des droits."
+    },
+    {
+      "scene": "chute",
+      "say": "[softly] Le slop ne coûte presque rien à produire… [pause] c'est ton attention qui paie la différence."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˌeɪˈaɪ": "AI",
+    "slɑp/,": "slop,"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "C'est ça, l'AI slop,"
+    ]
+  },
+  "sources": [
+    "Fiche ai-slop de lexique/terms.js : Kapwing, AI Slop Report, 28 novembre 2025 (104 Shorts de slop sur les 500 premiers d'un compte neuf, octobre 2025, soit 21 %) ; Merriam-Webster, slop mot de l'année 2025 (NBC News, 15 décembre 2025) ; image de Tata Ginette",
+    "Deezer Newsroom, AI music exceeds 50 percent of daily uploads, juillet 2026 (90 000 morceaux par jour au plus haut de juin 2026, plus de 50 % des envois, 1 à 3 % des écoutes, jusqu'à 85 % d'écoutes frauduleuses en 2025) ; https://newsroom-deezer.com/2026/07/ai-music-exceeds-50-percent-daily-uploads-deezer/"
+  ],
+  "publication": {
+    "title": "Un Short sur cinq est de la pâtée",
+    "description": "L'AI slop, c'est le contenu généré en masse par l'IA, que personne n'a demandé ni relu ; chez Deezer, plus de la moitié des envois certains jours de juin 2026, pour 1 à 3 % des écoutes.\nhttps://neopal.github.io/lexique/ai-slop/\n#aislop #ia #youtubeshorts #vulgarisation",
+    "fil": "Après le modèle qui change sous l'appli, ce que ces modèles déversent quand personne ne relit (et ce Short n'en est pas un)",
+    "decor": "groupe WhatsApp de famille (téléphone)"
+  }
+}
