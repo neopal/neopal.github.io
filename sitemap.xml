@@ -134,7 +134,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/fine-tuning/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -362,7 +362,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/retropropagation/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -854,7 +854,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/mythe-ia-specialisees/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -956,6 +956,12 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/p-doom/</loc>
+        <lastmod>2026-10-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://neopal.github.io/lexique/lora/</loc>
         <lastmod>2026-10-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>

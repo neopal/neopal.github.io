@@ -1,0 +1,5 @@
+{
+  "fine-tuning": {
+    "aliases": ["finetuning", "fine-tune", "supervised fine-tuning", "SFT"]
+  }
+}
