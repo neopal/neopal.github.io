@@ -865,6 +865,7 @@ En 2024, le dernier modèle de langage ouvert d'OpenAI restait GPT-2. Le 5 août
 - Fine-tuning : https://neopal.github.io/lexique/fine-tuning/
 - ChatGPT, c'est le modèle : https://neopal.github.io/lexique/mythe-chatgpt-c-est-le-modele/
 - L'IA open source est gratuite : https://neopal.github.io/lexique/mythe-open-source-gratuit/
+- LoRA : https://neopal.github.io/lexique/lora/
 
 ### Sources
 
@@ -940,6 +941,7 @@ En 2024, la quantization se faisait surtout après coup, sur un modèle publié 
 - Paramètres : https://neopal.github.io/lexique/parametres/
 - Tailles de modèle : https://neopal.github.io/lexique/tailles-de-modele/
 - Open weights : https://neopal.github.io/lexique/open-weights/
+- LoRA : https://neopal.github.io/lexique/lora/
 
 ### Sources
 
@@ -4021,6 +4023,7 @@ Le premier texte de WebMCP, signé par des équipes de Microsoft et de Google, d
 - Agent : https://neopal.github.io/lexique/agent/
 - Prompt injection : https://neopal.github.io/lexique/prompt-injection/
 - Harness : https://neopal.github.io/lexique/harness/
+- Computer use : https://neopal.github.io/lexique/computer-use/
 
 ### Sources
 
@@ -4738,7 +4741,7 @@ Le 2 octobre 2026, la page des modèles de Hugging Face en affiche 3 115 874. Si
 
 La société a été fondée en 2016 à New York par trois entrepreneurs français, Clément Delangue, Julien Chaumond et Thomas Wolf, pour faire une application de chatbot destinée aux adolescents, et elle doit son nom à l'émoji du visage qui fait un câlin. Elle s'est ensuite recentrée sur les outils, avec Transformers, sa bibliothèque open source, puis le Hub, devenu le lieu où l'on publie les modèles.
 
-On y trouve des modèles, plus d'un million de jeux de données et des Spaces, des applications de démo. Chaque modèle a sa fiche, sa licence et ses fichiers, et un arbre qui recense ses descendants ; celui de Qwen2.5-7B-Instruct, un modèle d'Alibaba, liste plus de 3 000 versions fine-tunées et plus de 400 versions quantifiées. La plupart des labos publient leurs poids ouverts sur le Hub, et des outils comme llama.cpp, Ollama ou LM Studio vont les y chercher directement.
+On y trouve des modèles, plus d'un million de jeux de données et des Spaces, des applications de démo. Chaque modèle a sa fiche, sa licence et ses fichiers, et un arbre qui recense ses descendants ; celui de Qwen2.5-7B-Instruct, un modèle d'Alibaba, liste plus de 3 000 versions fine-tunées et plus de 400 versions quantifiées. La plupart des labos publient leurs poids ouverts sur le Hub, et des outils comme llama.cpp, Ollama ou LM Studio vont les y chercher directement. Le 20 février 2026, Georgi Gerganov et l'équipe qui développe llama.cpp ont d'ailleurs rejoint Hugging Face, en gardant le projet open source et la main sur ses choix techniques.
 
 Le 3 septembre 2026, Nvidia a annoncé un accord, signé la veille, pour racheter Hugging Face 12,93 milliards de dollars, dont environ 11,9 milliards pour les actionnaires et un programme d'actions pouvant aller jusqu'à environ 1 milliard pour retenir les salariés. D'après le formulaire déposé par Nvidia auprès de la SEC, le gendarme boursier américain, la clôture est attendue au premier semestre 2027, sous réserve du feu vert des régulateurs. Nvidia s'y engage à garder la plateforme ouverte, à laisser chacun y publier et télécharger les modèles de son choix et à continuer d'y soutenir les autres fabricants de puces.
 
@@ -4776,6 +4779,7 @@ Le 3 septembre 2026, Nvidia a annoncé un accord, signé la veille, pour rachete
 - TechCrunch, « Nvidia confirms it will buy Hugging Face for $12.9 billion », 3 septembre 2026 : https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/
 - Cohere Labs, fiche de tiny-aya-global sur Hugging Face (licence CC BY-NC 4.0) : https://huggingface.co/CohereLabs/tiny-aya-global
 - Hugging Face, documentation Pickle Scanning (risque d'exécution de code arbitraire au chargement d'un fichier pickle) : https://huggingface.co/docs/hub/security-pickle
+- Hugging Face, GGML and llama.cpp join HF to ensure the long-term progress of Local AI, 20 février 2026 (Georgi Gerganov et son équipe rejoignent Hugging Face ; llama.cpp reste 100 % open source, l'équipe garde son autonomie et la direction technique) : https://huggingface.co/blog/ggml-joins-hf
 
 ## Distillation
 
@@ -5497,6 +5501,7 @@ La règle qui se dégage est que plusieurs agents gagnent quand les morceaux son
 - Human-in-the-loop : https://neopal.github.io/lexique/human-in-the-loop/
 - Tool use : https://neopal.github.io/lexique/tool-use/
 - Fenêtre de contexte : https://neopal.github.io/lexique/fenetre-de-contexte/
+- Deep research : https://neopal.github.io/lexique/deep-research/
 
 ### Sources
 
@@ -5632,6 +5637,7 @@ Le calcul de réflexion n'avait qu'une direction en 2024, celle d'un brouillon u
 - Compute : https://neopal.github.io/lexique/compute/
 - Coût d'une requête : https://neopal.github.io/lexique/cout-d-une-requete/
 - Inférence : https://neopal.github.io/lexique/inference/
+- Deep research : https://neopal.github.io/lexique/deep-research/
 
 ### Sources
 
@@ -6328,6 +6334,7 @@ Le sandbox sert aussi le confort, puisqu'une commande enfermée n'a plus besoin 
 - Harness : https://neopal.github.io/lexique/harness/
 - Agent : https://neopal.github.io/lexique/agent/
 - Tool use : https://neopal.github.io/lexique/tool-use/
+- Computer use : https://neopal.github.io/lexique/computer-use/
 
 ### Sources
 
@@ -6719,6 +6726,7 @@ En mars 2025, METR comptait un doublement tous les sept mois depuis 2019. Dans l
 - SWE-bench : https://neopal.github.io/lexique/swe-bench/
 - AGI : https://neopal.github.io/lexique/agi/
 - Terminal-Bench : https://neopal.github.io/lexique/terminal-bench/
+- Computer use : https://neopal.github.io/lexique/computer-use/
 
 ### Sources
 
@@ -7673,6 +7681,7 @@ En 2024, la diffusion faisait les images et les vidéos, et le texte restait l'a
 - Deep learning : https://neopal.github.io/lexique/deep-learning/
 - Inférence : https://neopal.github.io/lexique/inference/
 - Auto-attention : https://neopal.github.io/lexique/auto-attention/
+- LoRA : https://neopal.github.io/lexique/lora/
 
 ### Sources
 

@@ -46,6 +46,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Constitutional AI | constitutional AI | publié | | | le règlement intérieur du studio |
 | Distillation | distillation | publié | | ENT | le groupe de reprise |
 | Fine-tuning | fine-tuning | publié | | LLM, HO, ULT, ENT, CAR | régler la console pour un genre |
+| LoRA | Low-Rank Adaptation, QLoRA | publié | | | le sirop dans la pression, le fût reste le même |
 | MoE | mixture of experts | publié | | AGT, CAR | l'orchestre de solistes |
 | Architectures hybrides | hybrid architectures (Mamba, Gated DeltaNet) | publié | | | |
 | Petits modèles embarqués | small / on-device models | dans slm | | ENT, LLM | le groupe acoustique |
@@ -63,7 +64,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Test-time compute | test-time compute | publié | | AGT, ULT, CAR | répéter avant de jouer |
 | Modèles de raisonnement, chain-of-thought | reasoning models, CoT | publié | | AGT, HO, ULT, CAR, ENT | le brouillon avant la prise |
 | Speculative decoding | speculative decoding | publié | | | |
-| Quantization | quantization | publié | | HO, CAR | du WAV au MP3 |
+| Quantization | quantization, GGUF | publié | | HO, CAR | du WAV au MP3 |
 | Coût d'une requête | cost per request | publié | | | la facture du studio |
 | Latence vs débit | latency vs throughput | publié | | | |
 | Apprentissage en contexte (few-shot) | in-context learning, few-shot | publié | | LLM, HO, CAR | jouer deux mesures au groupe pour lui donner le style |
@@ -113,6 +114,8 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Context engineering | context engineering | publié | | AGT, ENT, CAR | bien remplir la bande |
 | Mémoire externe | external memory | publié (dans memoire) | | AGT, ENT, CAR | le carnet du groupe |
 | Multi-agents | multi-agent | publié | | AGT, ENT, CAR | plusieurs groupes sur la même tournée |
+| Computer use | computer use, browser agent | publié | | | la fille qui guide son père au téléphone, capture après capture |
+| Deep research | deep research, recherche approfondie | publié | | | le stagiaire qui a tout lu avant la pause café |
 | Evals | evals | publié | | AGT, CAR | les auditions |
 | Benchmarks | benchmarks | publié | | AGT, ULT, HO | le classement des ventes |
 | Sandbox et permissions | sandbox, permissions | publié | | AGT, ENT, CAR | la cabine insonorisée |

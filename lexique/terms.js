@@ -795,7 +795,8 @@ window.DICO_TERMS = [
       "quantization",
       "fine-tuning",
       "mythe-chatgpt-c-est-le-modele",
-      "mythe-open-source-gratuit"
+      "mythe-open-source-gratuit",
+      "lora"
     ],
     "solutions": [
       {
@@ -829,7 +830,55 @@ window.DICO_TERMS = [
       "Pour savoir si un modèle est open source ou seulement open weights, demande-toi si tu pourrais refaire son entraînement avec ce qui est publié. Avec gpt-oss ou DeepSeek-V4, la réponse est non, faute des données d'entraînement ; avec OLMo 3, qu'Ai2 publie avec ses données et toutes ses étapes d'entraînement, c'est oui.",
       "Le cas limite est le modèle dont les données sont décrites sans être publiées. La définition de l'IA open source fixée en octobre 2024 par l'Open Source Initiative l'accepte, si la description suffit à une personne compétente pour construire un système équivalent ; c'est le point le plus disputé de cette définition."
     ],
-    "table": {"caption": "Les modèles ouverts en tête", "asOf": "6 octobre 2026", "columns": ["Modèle", "Labo", "Indice AA", "Licence", "Paramètres"], "rows": [["MiMo-V2.6-Pro", "Xiaomi", "46", "MIT", "1 024 Md"], ["GLM-5.3", "Z AI", "45", "licence maison", "753 Md"], ["Kimi K3", "Moonshot AI", "44", "licence maison", "2 780 Md"], ["Qwen3.8-27B", "Alibaba", "34", "Apache 2.0", "28 Md"], ["gpt-oss-120b", "OpenAI", "12", "Apache 2.0", "117 Md"]], "note": "Indice AA : Intelligence Index d'Artificial Analysis v4.3.2 (dix évaluations), au réglage de raisonnement le plus élevé de chaque modèle ; le meilleur modèle fermé obtient 58."},
+    "table": {
+      "caption": "Les modèles ouverts en tête",
+      "asOf": "6 octobre 2026",
+      "columns": [
+        "Modèle",
+        "Labo",
+        "Indice AA",
+        "Licence",
+        "Paramètres"
+      ],
+      "rows": [
+        [
+          "MiMo-V2.6-Pro",
+          "Xiaomi",
+          "46",
+          "MIT",
+          "1 024 Md"
+        ],
+        [
+          "GLM-5.3",
+          "Z AI",
+          "45",
+          "licence maison",
+          "753 Md"
+        ],
+        [
+          "Kimi K3",
+          "Moonshot AI",
+          "44",
+          "licence maison",
+          "2 780 Md"
+        ],
+        [
+          "Qwen3.8-27B",
+          "Alibaba",
+          "34",
+          "Apache 2.0",
+          "28 Md"
+        ],
+        [
+          "gpt-oss-120b",
+          "OpenAI",
+          "12",
+          "Apache 2.0",
+          "117 Md"
+        ]
+      ],
+      "note": "Indice AA : Intelligence Index d'Artificial Analysis v4.3.2 (dix évaluations), au réglage de raisonnement le plus élevé de chaque modèle ; le meilleur modèle fermé obtient 58."
+    },
     "then": "En 2024, le dernier modèle de langage ouvert d'OpenAI restait GPT-2. Le 5 août 2025, OpenAI a publié gpt-oss-120b et gpt-oss-20b sous Apache 2.0, ses premiers modèles de langage open weights depuis, et le plus gros des deux se contente d'une seule carte graphique de 80 Go.",
     "office": [
       {
@@ -847,12 +896,30 @@ window.DICO_TERMS = [
       "poster": "videos/open-weights.jpg"
     },
     "sources": [
-      {"label": "Artificial Analysis, Open Source Models (Intelligence Index v4.3.2, dix évaluations : MiMo-V2.6-Pro 46, GLM-5.3 45, Kimi K3 44, GLM-5.3-Flash 42, DeepSeek V4.1 Flash 39, Qwen3.8 27B 34), consulté le 6 octobre 2026", "url": "https://artificialanalysis.ai/models/open-source"},
-      {"label": "Artificial Analysis, LLM Leaderboard (meilleur modèle fermé à 57,6 ; gpt-oss-120b à 11,6), consulté le 6 octobre 2026", "url": "https://artificialanalysis.ai/leaderboards/models"},
-      {"label": "Xiaomi, fiche de MiMo-V2.6-Pro sur Hugging Face (licence MIT, publiée le 21 septembre 2026, 1 024 milliards de paramètres selon l'API Hugging Face)", "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"},
-      {"label": "Z AI, fiche de GLM-5.3 sur Hugging Face (licence « glm-5.3 », publiée le 25 août 2026, 753 milliards de paramètres selon l'API Hugging Face)", "url": "https://huggingface.co/zai-org/GLM-5.3"},
-      {"label": "Moonshot AI, fiche de Kimi K3 sur Hugging Face (licence propre, 2 780 milliards de paramètres selon l'API Hugging Face)", "url": "https://huggingface.co/moonshotai/Kimi-K3"},
-      {"label": "Qwen, fiche de Qwen3.8-27B sur Hugging Face (licence Apache 2.0, 27,8 milliards de paramètres)", "url": "https://huggingface.co/Qwen/Qwen3.8-27B"},
+      {
+        "label": "Artificial Analysis, Open Source Models (Intelligence Index v4.3.2, dix évaluations : MiMo-V2.6-Pro 46, GLM-5.3 45, Kimi K3 44, GLM-5.3-Flash 42, DeepSeek V4.1 Flash 39, Qwen3.8 27B 34), consulté le 6 octobre 2026",
+        "url": "https://artificialanalysis.ai/models/open-source"
+      },
+      {
+        "label": "Artificial Analysis, LLM Leaderboard (meilleur modèle fermé à 57,6 ; gpt-oss-120b à 11,6), consulté le 6 octobre 2026",
+        "url": "https://artificialanalysis.ai/leaderboards/models"
+      },
+      {
+        "label": "Xiaomi, fiche de MiMo-V2.6-Pro sur Hugging Face (licence MIT, publiée le 21 septembre 2026, 1 024 milliards de paramètres selon l'API Hugging Face)",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+      },
+      {
+        "label": "Z AI, fiche de GLM-5.3 sur Hugging Face (licence « glm-5.3 », publiée le 25 août 2026, 753 milliards de paramètres selon l'API Hugging Face)",
+        "url": "https://huggingface.co/zai-org/GLM-5.3"
+      },
+      {
+        "label": "Moonshot AI, fiche de Kimi K3 sur Hugging Face (licence propre, 2 780 milliards de paramètres selon l'API Hugging Face)",
+        "url": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+        "label": "Qwen, fiche de Qwen3.8-27B sur Hugging Face (licence Apache 2.0, 27,8 milliards de paramètres)",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      },
       {
         "label": "OpenAI, Lancement de gpt-oss, 5 août 2025 (Apache 2.0, premiers modèles de langage open-weight depuis GPT-2)",
         "url": "https://openai.com/index/introducing-gpt-oss/"
@@ -924,7 +991,8 @@ window.DICO_TERMS = [
     "links": [
       "parametres",
       "tailles-de-modele",
-      "open-weights"
+      "open-weights",
+      "lora"
     ],
     "solutions": [
       {
@@ -5429,7 +5497,8 @@ window.DICO_TERMS = [
       "tool-use",
       "agent",
       "prompt-injection",
-      "harness"
+      "harness",
+      "computer-use"
     ],
     "solutions": [
       {
@@ -6605,7 +6674,7 @@ window.DICO_TERMS = [
     "imagine": "Le 2 octobre 2026, la page des modèles de Hugging Face en affiche 3 115 874. Si tu en ouvrais un par minute, huit heures par jour et week-ends compris, tu finirais le tour en juillet 2044, après avoir croisé plus de 26 000 modèles dont le nom contient « qwen2.5-7b », sans compter tous ceux publiés pendant ces dix-sept ans.",
     "full": [
       "La société a été fondée en 2016 à New York par trois entrepreneurs français, Clément Delangue, Julien Chaumond et Thomas Wolf, pour faire une application de chatbot destinée aux adolescents, et elle doit son nom à l'émoji du visage qui fait un câlin. Elle s'est ensuite recentrée sur les outils, avec Transformers, sa bibliothèque open source, puis le Hub, devenu le lieu où l'on publie les modèles.",
-      "On y trouve des modèles, plus d'un million de jeux de données et des Spaces, des applications de démo. Chaque modèle a sa fiche, sa licence et ses fichiers, et un arbre qui recense ses descendants ; celui de Qwen2.5-7B-Instruct, un modèle d'Alibaba, liste plus de 3 000 versions fine-tunées et plus de 400 versions quantifiées. La plupart des labos publient leurs poids ouverts sur le Hub, et des outils comme llama.cpp, Ollama ou LM Studio vont les y chercher directement.",
+      "On y trouve des modèles, plus d'un million de jeux de données et des Spaces, des applications de démo. Chaque modèle a sa fiche, sa licence et ses fichiers, et un arbre qui recense ses descendants ; celui de Qwen2.5-7B-Instruct, un modèle d'Alibaba, liste plus de 3 000 versions fine-tunées et plus de 400 versions quantifiées. La plupart des labos publient leurs poids ouverts sur le Hub, et des outils comme llama.cpp, Ollama ou LM Studio vont les y chercher directement. Le 20 février 2026, Georgi Gerganov et l'équipe qui développe llama.cpp ont d'ailleurs rejoint Hugging Face, en gardant le projet open source et la main sur ses choix techniques.",
       "Le 3 septembre 2026, Nvidia a annoncé un accord, signé la veille, pour racheter Hugging Face 12,93 milliards de dollars, dont environ 11,9 milliards pour les actionnaires et un programme d'actions pouvant aller jusqu'à environ 1 milliard pour retenir les salariés. D'après le formulaire déposé par Nvidia auprès de la SEC, le gendarme boursier américain, la clôture est attendue au premier semestre 2027, sous réserve du feu vert des régulateurs. Nvidia s'y engage à garder la plateforme ouverte, à laisser chacun y publier et télécharger les modèles de son choix et à continuer d'y soutenir les autres fabricants de puces."
     ],
     "office": [
@@ -6656,6 +6725,10 @@ window.DICO_TERMS = [
       {
         "label": "Hugging Face, documentation Pickle Scanning (risque d'exécution de code arbitraire au chargement d'un fichier pickle)",
         "url": "https://huggingface.co/docs/hub/security-pickle"
+      },
+      {
+        "label": "Hugging Face, GGML and llama.cpp join HF to ensure the long-term progress of Local AI, 20 février 2026 (Georgi Gerganov et son équipe rejoignent Hugging Face ; llama.cpp reste 100 % open source, l'équipe garde son autonomie et la direction technique)",
+        "url": "https://huggingface.co/blog/ggml-joins-hf"
       }
     ]
   },
@@ -7737,7 +7810,8 @@ window.DICO_TERMS = [
       "context-engineering",
       "human-in-the-loop",
       "tool-use",
-      "fenetre-de-contexte"
+      "fenetre-de-contexte",
+      "deep-research"
     ],
     "short": "Un système multi-agents répartit une tâche entre un agent principal qui découpe le travail et des sous-agents qui traitent chacun un morceau dans leur propre contexte.",
     "image": "Pour le pot de départ de Michel, Chantal a écrit au tableau une ligne par personne, salé, sucré, boissons, gobelets, et chacun a cuisiné chez soi sans parler aux autres. Le pot de Noël, sur un simple « chacun apporte un truc », a fini avec sept quiches.",
@@ -7943,7 +8017,8 @@ window.DICO_TERMS = [
       "lois-d-echelle",
       "compute",
       "cout-d-une-requete",
-      "inference"
+      "inference",
+      "deep-research"
     ],
     "short": "Le test-time compute est le calcul dépensé au moment où le modèle répond ; un brouillon plus long ou plusieurs réponses comparées le rendent plus juste sur les problèmes difficiles.",
     "image": "Kubrick refait la même scène de Shining des dizaines de fois, avec les mêmes acteurs et le même texte, puis garde la meilleure prise. Personne n'a appris un mot de plus entre la première et la dernière, et c'est la ligne « pellicule » du budget qui a enflé.",
@@ -9017,7 +9092,8 @@ window.DICO_TERMS = [
       "prompt-injection",
       "harness",
       "agent",
-      "tool-use"
+      "tool-use",
+      "computer-use"
     ],
     "short": "Le sandbox enferme un agent dans un espace isolé qui limite ses fichiers et son réseau, et les permissions décident des actions qu'il lance seul, sur demande ou jamais.",
     "image": "Chez Odette, les petits se servent seuls dans la boîte à biscuits, demandent pour le chocolat et ne touchent jamais au placard du haut. Le placard du haut est aussi fermé à clé, parce qu'Odette a élevé trois enfants et sait ce que vaut un « jamais ».",
@@ -9581,7 +9657,8 @@ window.DICO_TERMS = [
       "boucle-agent",
       "swe-bench",
       "agi",
-      "terminal-bench"
+      "terminal-bench",
+      "computer-use"
     ],
     "short": "L'horizon d'autonomie mesure la longueur des tâches, comptée en temps de travail d'un expert humain, qu'un agent d'IA réussit seul une fois sur deux, selon la méthode de METR.",
     "image": "À la compta, on dit que le stagiaire « tient des dossiers de trois jours », ceux qui prennent trois jours à Odile. Il les rend avant midi, et une fois sur deux, Odile reprend tout.",
@@ -10978,7 +11055,8 @@ window.DICO_TERMS = [
       "encodeur-decodeur",
       "deep-learning",
       "inference",
-      "auto-attention"
+      "auto-attention",
+      "lora"
     ],
     "short": "Un modèle de diffusion apprend à retirer du bruit, puis fabrique une image, une vidéo ou un texte en partant d'un bruit pur qu'il nettoie en plusieurs passes.",
     "image": "L'oncle Jacky tourne l'antenne de la vieille télé en répétant « c'est le match », et à chaque quart de tour la neige ressemble un peu plus à une pelouse, puis à des joueurs. Aucune chaîne n'était branchée ; la télé a tiré le match de la neige.",

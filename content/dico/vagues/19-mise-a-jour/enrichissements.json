@@ -1,0 +1,134 @@
+{
+  "quantization": {
+    "links": [
+      "parametres",
+      "tailles-de-modele",
+      "open-weights",
+      "lora"
+    ]
+  },
+  "open-weights": {
+    "links": [
+      "parametres",
+      "tailles-de-modele",
+      "quantization",
+      "fine-tuning",
+      "mythe-chatgpt-c-est-le-modele",
+      "mythe-open-source-gratuit",
+      "lora"
+    ]
+  },
+  "modele-de-diffusion": {
+    "links": [
+      "multimodal",
+      "prediction-du-mot-suivant",
+      "encodeur-decodeur",
+      "deep-learning",
+      "inference",
+      "auto-attention",
+      "lora"
+    ]
+  },
+  "sandbox-et-permissions": {
+    "links": [
+      "human-in-the-loop",
+      "guardrails",
+      "prompt-injection",
+      "harness",
+      "agent",
+      "tool-use",
+      "computer-use"
+    ]
+  },
+  "webmcp": {
+    "links": [
+      "mcp",
+      "tool-use",
+      "agent",
+      "prompt-injection",
+      "harness",
+      "computer-use"
+    ]
+  },
+  "horizon-d-autonomie": {
+    "links": [
+      "mythe-agent-autonome",
+      "human-in-the-loop",
+      "boucle-agent",
+      "swe-bench",
+      "agi",
+      "terminal-bench",
+      "computer-use"
+    ]
+  },
+  "multi-agents": {
+    "links": [
+      "agent",
+      "boucle-agent",
+      "context-engineering",
+      "human-in-the-loop",
+      "tool-use",
+      "fenetre-de-contexte",
+      "deep-research"
+    ]
+  },
+  "test-time-compute": {
+    "links": [
+      "modeles-de-raisonnement",
+      "lois-d-echelle",
+      "compute",
+      "cout-d-une-requete",
+      "inference",
+      "deep-research"
+    ]
+  },
+  "hugging-face": {
+    "full": [
+      "La société a été fondée en 2016 à New York par trois entrepreneurs français, Clément Delangue, Julien Chaumond et Thomas Wolf, pour faire une application de chatbot destinée aux adolescents, et elle doit son nom à l'émoji du visage qui fait un câlin. Elle s'est ensuite recentrée sur les outils, avec Transformers, sa bibliothèque open source, puis le Hub, devenu le lieu où l'on publie les modèles.",
+      "On y trouve des modèles, plus d'un million de jeux de données et des Spaces, des applications de démo. Chaque modèle a sa fiche, sa licence et ses fichiers, et un arbre qui recense ses descendants ; celui de Qwen2.5-7B-Instruct, un modèle d'Alibaba, liste plus de 3 000 versions fine-tunées et plus de 400 versions quantifiées. La plupart des labos publient leurs poids ouverts sur le Hub, et des outils comme llama.cpp, Ollama ou LM Studio vont les y chercher directement. Le 20 février 2026, Georgi Gerganov et l'équipe qui développe llama.cpp ont d'ailleurs rejoint Hugging Face, en gardant le projet open source et la main sur ses choix techniques.",
+      "Le 3 septembre 2026, Nvidia a annoncé un accord, signé la veille, pour racheter Hugging Face 12,93 milliards de dollars, dont environ 11,9 milliards pour les actionnaires et un programme d'actions pouvant aller jusqu'à environ 1 milliard pour retenir les salariés. D'après le formulaire déposé par Nvidia auprès de la SEC, le gendarme boursier américain, la clôture est attendue au premier semestre 2027, sous réserve du feu vert des régulateurs. Nvidia s'y engage à garder la plateforme ouverte, à laisser chacun y publier et télécharger les modèles de son choix et à continuer d'y soutenir les autres fabricants de puces."
+    ],
+    "sources": [
+      {
+        "label": "Hugging Face, page Models : compteur de 3 115 874 modèles ; filtre GGUF : 208 289 modèles ; recherche « qwen2.5-7b » : 26 292 modèles, relevés le 2 octobre 2026. Calcul de l'Imagine : 3 115 874 minutes / 480 minutes par jour = 6 492 jours, soit environ 17,8 ans à partir du 2 octobre 2026, jusqu'au 11 juillet 2044",
+        "url": "https://huggingface.co/models"
+      },
+      {
+        "label": "Hugging Face, page Datasets : compteur de 1 072 928 jeux de données, relevé le 2 octobre 2026",
+        "url": "https://huggingface.co/datasets"
+      },
+      {
+        "label": "Hugging Face, arbre de Qwen2.5-7B-Instruct : 3 142 modèles fine-tunés et 431 quantifiés listés, relevés le 2 octobre 2026",
+        "url": "https://huggingface.co/models?other=base_model:finetune:Qwen/Qwen2.5-7B-Instruct"
+      },
+      {
+        "label": "Wikipédia, Hugging Face (fondée en 2016 à New York par Clément Delangue, Julien Chaumond et Thomas Wolf, d'abord une application de chatbot pour adolescents, nom tiré de l'émoji), consulté le 2 octobre 2026",
+        "url": "https://en.wikipedia.org/wiki/Hugging_Face"
+      },
+      {
+        "label": "Nvidia, NVIDIA to Acquire Hugging Face, 3 septembre 2026 (12 930 300 000 dollars ; plateforme ouverte, calcul Nvidia non requis pour publier ou déployer)",
+        "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/"
+      },
+      {
+        "label": "Nvidia, formulaire 8-K déposé auprès de la SEC, 3 septembre 2026 (accord du 2 septembre ; environ 11,9 milliards de dollars pour les actionnaires et jusqu'à environ 1 milliard d'actions pour les salariés ; clôture attendue au premier semestre 2027 sous réserve des autorisations réglementaires ; engagement de garder la plateforme ouverte et de soutenir les autres fabricants de puces)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000078/nvda-20260902.htm"
+      },
+      {
+        "label": "TechCrunch, « Nvidia confirms it will buy Hugging Face for $12.9 billion », 3 septembre 2026",
+        "url": "https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/"
+      },
+      {
+        "label": "Cohere Labs, fiche de tiny-aya-global sur Hugging Face (licence CC BY-NC 4.0)",
+        "url": "https://huggingface.co/CohereLabs/tiny-aya-global"
+      },
+      {
+        "label": "Hugging Face, documentation Pickle Scanning (risque d'exécution de code arbitraire au chargement d'un fichier pickle)",
+        "url": "https://huggingface.co/docs/hub/security-pickle"
+      },
+      {
+        "label": "Hugging Face, GGML and llama.cpp join HF to ensure the long-term progress of Local AI, 20 février 2026 (Georgi Gerganov et son équipe rejoignent Hugging Face ; llama.cpp reste 100 % open source, l'équipe garde son autonomie et la direction technique)",
+        "url": "https://huggingface.co/blog/ggml-joins-hf"
+      }
+    ]
+  }
+}
