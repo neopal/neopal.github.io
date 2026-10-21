@@ -63,8 +63,17 @@
   ],
   "publication": {
     "title": "Derrière ChatGPT, quinze IA différentes",
-    "description": "« ChatGPT, c'est une IA » ; pas vraiment. ChatGPT est une application, et le modèle qui répond derrière (GPT-3.5 en 2022, GPT-6 en 2026) change sous le même logo. Le rôle reste, l'acteur change, comme pour l'agent 007.\nhttps://neopal.github.io/lexique/mythe-chatgpt-c-est-le-modele/\n#chatgpt #gpt6 #llm #vulgarisation",
+    "description": "« ChatGPT, c'est une IA » ; pas vraiment. ChatGPT est une application, et le modèle qui répond derrière (GPT-3.5 en 2022, GPT-6 en 2026) change sous le même logo. Le rôle reste, l'acteur change, comme pour l'agent 007.\nhttps://neopal.github.io/lexique/mythe-chatgpt-c-est-le-modele/\n#chatgpt #gpt6 #llm #vulgarisation\nPortraits : Wikimedia Commons (Comet Photo AG, Luigi Novi, Allan Warren, Bart Molendijk / Anefo, Philip Romano, Max Surprenant), CC BY / CC BY-SA.",
     "fil": "L'agent de l'ép. 10 tourne sur un modèle ; ChatGPT aussi, et ce modèle change sous l'application",
     "decor": "cinéma (James Bond)"
-  }
+  },
+  "credits": [
+    "Portraits pixel art des six James Bond d'après Wikimedia Commons :",
+    "Sean Connery, « Sean Connery as James Bond at Switzerland 1964 », Comet Photo AG (Zürich), CC BY-SA 4.0",
+    "George Lazenby, « GeorgeLazenby11.14.08ByLuigiNovi », Luigi Novi, CC BY 3.0",
+    "Roger Moore, « Sir Roger Moore 3 », Allan Warren, CC BY-SA 3.0",
+    "Timothy Dalton, « Timothy Dalton 1987 », Bart Molendijk / Anefo, CC BY-SA 3.0 NL",
+    "Pierce Brosnan, « PierceBrosnan-byPhilipRomano », Philip Romano, CC BY 4.0",
+    "Daniel Craig, « Daniel Craig TIFF 2025 Red Carpet », Max Surprenant, CC BY 4.0"
+  ]
 }

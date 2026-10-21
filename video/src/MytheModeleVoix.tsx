@@ -9,7 +9,7 @@
 // L'écran suit la voix (univers.md) : chaque élément entre sur le mot qui le nomme, at('scène', 'mot'), jamais en secondes.
 // Le mouvement : ease partout, défilement de la frise en inOut, arcs pour les bulles qui volent, squash au seul tampon.
 import React from 'react';
-import {interpolate, useCurrentFrame} from 'remotion';
+import {Img, interpolate, staticFile, useCurrentFrame} from 'remotion';
 import {Big, Check, Draw, Mono, Pop, Scene, W, arc, clamp, ease, useAccent, withAlpha} from './kit';
 import {LABEL, makeVoix} from './voix/VoixShort';
 import {Pixel} from './voix/Pixel';
@@ -402,6 +402,14 @@ const Barrel: React.FC<{r: number}> = ({r}) => (
   </svg>
 );
 
+// Les six acteurs, de vraies photos de Wikimedia Commons pixelisées en 48 × 63 (comme le portrait de Luc Julia, ép. 7) ;
+// crédits dans voix/chatgpt-modele.script.json (champ credits), à recopier dans la description.
+const ACTORS = ['connery', 'lazenby', 'moore', 'dalton', 'brosnan', 'craig'];
+const Portrait: React.FC<{k: number; w: number; border?: string}> = ({k, w, border = '#fff'}) => (
+  <div style={{border: `${Math.max(3, Math.round(w / 30))}px solid ${border}`, boxShadow: pixelShadow('#222'), lineHeight: 0}}>
+    <Img src={staticFile(`voix/chatgpt-modele-bond-${ACTORS[k]}.png`)} style={{width: w, height: Math.round((w * 63) / 48), imageRendering: 'pixelated', display: 'block'}} />
+  </div>
+);
 const HPX = 13; // taille d'un pixel des têtes sur la silhouette
 const Bond: React.FC = () => {
   const frame = useCurrentFrame();
@@ -427,8 +435,8 @@ const Bond: React.FC = () => {
         <Pop at={james} style={{position: 'absolute', left: W / 2 - 132, top: 120}}>
           <Tux w={330} shirt={ease(frame, smoking, smoking + 8)} martini={ease(frame, martini, martini + 8)} />
         </Pop>
-        <Pop at={james} style={{position: 'absolute', left: W / 2 - 5 * HPX, top: 64}}>
-          <Pixel key={idx} sprite={HEADS[idx]} px={HPX} seed={idx} />
+        <Pop at={james} style={{position: 'absolute', left: W / 2 - 60, top: 6}}>
+          <Portrait key={idx} k={idx} w={120} />
         </Pop>
         {/* « le nom » : la plaque, fixe jusqu'à la fin. */}
         <div style={{position: 'absolute', left: 0, right: 0, top: 500, display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
@@ -437,9 +445,9 @@ const Bond: React.FC = () => {
         </div>
         {/* Les six acteurs, en stagger dans l'ordre de lecture, synchrones avec la tête qui change. */}
         <div style={{position: 'absolute', left: 0, right: 0, top: 650, display: 'flex', justifyContent: 'space-between'}}>
-          {HEADS.map((h, k) => (
+          {ACTORS.map((_, k) => (
             <Pop key={k} at={six + k * step} style={{lineHeight: 0, outline: (k === 0 && frame >= sean) || (k === 5 && frame >= daniel) ? `5px solid ${accent}` : 'none', outlineOffset: 6}}>
-              <Pixel sprite={h} px={10} seed={k + 2} />
+              <Portrait k={k} w={80} />
             </Pop>
           ))}
         </div>
@@ -467,7 +475,7 @@ const Role: React.FC = () => {
         <Pop at={acteur + 5} style={{...col(W - 210), top: 0}}><Mono size={64} color={accent}>l'acteur</Mono></Pop>
         {/* Le rôle : le smoking vide sur son cintre ; l'acteur : une tête. Pop in sur le mot. */}
         <Pop at={role} style={{...col(210), top: 100}}><Tux w={280} shirt={1} martini={1} hanger /></Pop>
-        <Pop at={acteur} style={{...col(W - 210), top: 150}}><Pixel sprite={HEADS[5]} px={18} seed={3} /></Pop>
+        <Pop at={acteur} style={{...col(W - 210), top: 110}}><Portrait k={5} w={170} /></Pop>
         <Pop at={role} style={{...col(210), top: 400}}><Mono size={72} color="#fff">=</Mono></Pop>
         <Pop at={acteur} style={{...col(W - 210), top: 400}}><Mono size={72} color="#fff">=</Mono></Pop>
         {/* ChatGPT (dit en premier) : la fenêtre ; le modèle : le bloc. */}
@@ -511,7 +519,7 @@ const Gpt6: React.FC = () => {
             return (
               <div key={v.name} style={{position: 'absolute', left: SLOTS[k] - BOXW / 2, width: BOXW, top: 40, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12}}>
                 <div style={{height: 80, display: 'flex', alignItems: 'flex-end'}}>
-                  <Pop at={acteurs + 3 * k}><Pixel sprite={HEADS[v.head]} px={8} seed={k} /></Pop>
+                  <Pop at={acteurs + 3 * k}><Portrait k={v.head} w={60} /></Pop>
                 </div>
                 <Pop at={trois + 3 * k}><Block w={220} seed={k + 7} /></Pop>
                 <Pop at={cue}><Mono size={56} color="#fff">{v.name}</Mono></Pop>
