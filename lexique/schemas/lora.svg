@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400" role="img" aria-labelledby="lora-t">
+<title id="lora-t">Une matrice de paramètres de 4 096 sur 4 096 reste figée ; LoRA lui ajoute le produit de deux matrices minces de rang 16, soit 131 072 paramètres entraînés. Plusieurs adaptateurs de ce genre se branchent tour à tour sur le même modèle de base, Llama 3.1 8B, sans le modifier.</title>
+<text class="m mu" x="0" y="16">une matrice d'une couche</text>
+<rect class="bx" x="0" y="30" width="120" height="120" rx="4"/>
+<text class="big" x="60" y="97" text-anchor="middle">W</text>
+<text class="m" x="60" y="172" text-anchor="middle">figée</text>
+<text class="m d" x="60" y="190" text-anchor="middle">16,8 millions</text>
+<text class="big" x="146" y="97" text-anchor="middle">+</text>
+<rect class="bxa" x="168" y="30" width="14" height="120" rx="3"/>
+<text class="b ac" x="175" y="172" text-anchor="middle">B</text>
+<text class="big" x="204" y="97" text-anchor="middle">×</text>
+<rect class="bxa" x="226" y="30" width="120" height="14" rx="3"/>
+<text class="b ac" x="286" y="66" text-anchor="middle">A</text>
+<text class="m ac" x="286" y="100" text-anchor="middle">rang 16</text>
+<text class="m" x="286" y="172" text-anchor="middle">entraînées</text>
+<text class="m d" x="286" y="190" text-anchor="middle">131 072</text>
+<path class="ln" d="M0 214 h360"/>
+<rect class="bxa" x="0" y="234" width="108" height="44" rx="6"/>
+<text class="m ac" x="54" y="253" text-anchor="middle">juridique</text>
+<text class="m mu" x="54" y="270" text-anchor="middle">84 Mo</text>
+<rect class="bx dash" x="126" y="234" width="108" height="44" rx="6"/>
+<text class="m mu" x="180" y="253" text-anchor="middle">support</text>
+<text class="m d" x="180" y="270" text-anchor="middle">84 Mo</text>
+<rect class="bx dash" x="252" y="234" width="108" height="44" rx="6"/>
+<text class="m mu" x="306" y="253" text-anchor="middle">catalogue</text>
+<text class="m d" x="306" y="270" text-anchor="middle">84 Mo</text>
+<path class="la" d="M54 278 v22"/>
+<path class="lm dash" d="M180 278 v22 M306 278 v22"/>
+<rect class="bx" x="0" y="300" width="360" height="50" rx="6"/>
+<text class="b" x="180" y="321" text-anchor="middle">Llama 3.1 8B</text>
+<text class="m mu" x="180" y="339" text-anchor="middle">modèle de base, 16 Go, figé</text>
+<text class="i mu" x="0" y="374">On change d'adaptateur pour changer de tâche,</text>
+<text class="i mu" x="0" y="393">et le modèle de base ne bouge jamais.</text>
+</svg>

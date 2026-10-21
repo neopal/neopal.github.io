@@ -1,6 +1,6 @@
 # Lexique IA : toutes les définitions
 
-> 157 fiches écrites et sourcées par Pierre-Adrien Lair (https://neopal.github.io/). Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
+> 160 fiches écrites et sourcées par Pierre-Adrien Lair (https://neopal.github.io/). Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
 > Index : https://neopal.github.io/lexique/llms.txt
 
 ## Token
@@ -865,6 +865,7 @@ En 2024, le dernier modèle de langage ouvert d'OpenAI restait GPT-2. Le 5 août
 - Fine-tuning : https://neopal.github.io/lexique/fine-tuning/
 - ChatGPT, c'est le modèle : https://neopal.github.io/lexique/mythe-chatgpt-c-est-le-modele/
 - L'IA open source est gratuite : https://neopal.github.io/lexique/mythe-open-source-gratuit/
+- LoRA : https://neopal.github.io/lexique/lora/
 
 ### Sources
 
@@ -888,7 +889,7 @@ En 2024, le dernier modèle de langage ouvert d'OpenAI restait GPT-2. Le 5 août
 URL : https://neopal.github.io/lexique/quantization/
 Catégorie : Inférence
 Aussi appelé : quantification
-Variantes anglaises : quant, quantisation, quantized model
+Variantes anglaises : quant, quantisation, quantized model, GGUF
 
 ### Définition courte
 
@@ -916,7 +917,7 @@ En 2024, la quantization se faisait surtout après coup, sur un modèle publié 
 
 - Q4, 4-bit : chaque paramètre est stocké sur 4 bits au lieu de 16 ; le fichier devient trois à quatre fois plus léger
 - FP16, BF16 : les formats 16 bits dans lesquels un modèle est d'habitude entraîné et publié ; c'est la version pleine qu'on compresse ensuite
-- GGUF : le format de fichier créé par l'auteur de llama.cpp pour charger vite des modèles, souvent quantifiés, sur ta propre machine
+- GGUF : GGML Universal File, le format de fichier lancé en août 2023 par le projet llama.cpp pour charger vite des modèles, souvent quantifiés, sur ta propre machine ; le GG est celui de GGML, la bibliothèque de Georgi Gerganov, qui porte ses initiales
 - MXFP4 : un format 4 bits avec lequel OpenAI (gpt-oss) et Moonshot AI (Kimi K3) entraînent une partie de leurs poids, pour les publier déjà compressés
 
 ### Solutions populaires
@@ -940,6 +941,7 @@ En 2024, la quantization se faisait surtout après coup, sur un modèle publié 
 - Paramètres : https://neopal.github.io/lexique/parametres/
 - Tailles de modèle : https://neopal.github.io/lexique/tailles-de-modele/
 - Open weights : https://neopal.github.io/lexique/open-weights/
+- LoRA : https://neopal.github.io/lexique/lora/
 
 ### Sources
 
@@ -949,6 +951,8 @@ En 2024, la quantization se faisait surtout après coup, sur un modèle publié 
 - Moonshot AI, fiche de Kimi K3 (poids MXFP4, entraînement conscient de la quantization) : https://huggingface.co/moonshotai/Kimi-K3
 - Wikipédia, Kimi (Kimi K3 publié le 16 juillet 2026) : https://en.wikipedia.org/wiki/Kimi_(AI)
 - Hugging Face, documentation GGUF (format créé par l'auteur de llama.cpp) : https://huggingface.co/docs/hub/gguf
+- Paquet Python gguf, maintenu par le projet llama.cpp, PyPI (« GGUF (GGML Universal File) format ») : https://pypi.org/project/gguf/
+- Wikipédia, GGUF, consultée le 19 octobre 2026 (GGML pour Georgi Gerganov Machine Learning ; format introduit le 21 août 2023 par llama.cpp, successeur de GGML, GGMF et GGJT) : https://en.wikipedia.org/wiki/GGUF
 
 ## Benchmarks
 
@@ -1290,7 +1294,7 @@ Entre Llama 3, sorti en juillet 2024, et Qwen3, publié en mai 2025, la quantit�
 URL : https://neopal.github.io/lexique/fine-tuning/
 Catégorie : Entraînement
 Aussi appelé : ajustement fin, affinage
-Variantes anglaises : finetuning, fine-tune, supervised fine-tuning, SFT, LoRA
+Variantes anglaises : finetuning, fine-tune, supervised fine-tuning, SFT
 
 ### Définition courte
 
@@ -1480,8 +1484,8 @@ Pour l'actualité, les assistants contournent la limite en cherchant sur le web 
 URL : https://neopal.github.io/lexique/modeles-de-raisonnement/
 Catégorie : Inférence
 En anglais : Reasoning models
-Aussi appelé : chaîne de pensée, modèle qui réfléchit
-Variantes anglaises : reasoning model, thinking model, chain-of-thought, CoT
+Aussi appelé : chaîne de pensée, modèle qui réfléchit, réflexion approfondie
+Variantes anglaises : reasoning model, thinking model, chain-of-thought, CoT, extended thinking
 
 ### Définition courte
 
@@ -1669,7 +1673,7 @@ En 2016, OpenAI montrait un bateau de course virtuel qui, au lieu de finir la co
 URL : https://neopal.github.io/lexique/agent/
 Catégorie : Agents et produit
 En anglais : AI agent
-Aussi appelé : agent IA
+Aussi appelé : agent IA, agentique
 Variantes anglaises : agents, agentic, agentic AI, coding agent
 
 ### Définition courte
@@ -4019,6 +4023,7 @@ Le premier texte de WebMCP, signé par des équipes de Microsoft et de Google, d
 - Agent : https://neopal.github.io/lexique/agent/
 - Prompt injection : https://neopal.github.io/lexique/prompt-injection/
 - Harness : https://neopal.github.io/lexique/harness/
+- Computer use : https://neopal.github.io/lexique/computer-use/
 
 ### Sources
 
@@ -4736,7 +4741,7 @@ Le 2 octobre 2026, la page des modèles de Hugging Face en affiche 3 115 874. Si
 
 La société a été fondée en 2016 à New York par trois entrepreneurs français, Clément Delangue, Julien Chaumond et Thomas Wolf, pour faire une application de chatbot destinée aux adolescents, et elle doit son nom à l'émoji du visage qui fait un câlin. Elle s'est ensuite recentrée sur les outils, avec Transformers, sa bibliothèque open source, puis le Hub, devenu le lieu où l'on publie les modèles.
 
-On y trouve des modèles, plus d'un million de jeux de données et des Spaces, des applications de démo. Chaque modèle a sa fiche, sa licence et ses fichiers, et un arbre qui recense ses descendants ; celui de Qwen2.5-7B-Instruct, un modèle d'Alibaba, liste plus de 3 000 versions fine-tunées et plus de 400 versions quantifiées. La plupart des labos publient leurs poids ouverts sur le Hub, et des outils comme llama.cpp, Ollama ou LM Studio vont les y chercher directement.
+On y trouve des modèles, plus d'un million de jeux de données et des Spaces, des applications de démo. Chaque modèle a sa fiche, sa licence et ses fichiers, et un arbre qui recense ses descendants ; celui de Qwen2.5-7B-Instruct, un modèle d'Alibaba, liste plus de 3 000 versions fine-tunées et plus de 400 versions quantifiées. La plupart des labos publient leurs poids ouverts sur le Hub, et des outils comme llama.cpp, Ollama ou LM Studio vont les y chercher directement. Le 20 février 2026, Georgi Gerganov et l'équipe qui développe llama.cpp ont d'ailleurs rejoint Hugging Face, en gardant le projet open source et la main sur ses choix techniques.
 
 Le 3 septembre 2026, Nvidia a annoncé un accord, signé la veille, pour racheter Hugging Face 12,93 milliards de dollars, dont environ 11,9 milliards pour les actionnaires et un programme d'actions pouvant aller jusqu'à environ 1 milliard pour retenir les salariés. D'après le formulaire déposé par Nvidia auprès de la SEC, le gendarme boursier américain, la clôture est attendue au premier semestre 2027, sous réserve du feu vert des régulateurs. Nvidia s'y engage à garder la plateforme ouverte, à laisser chacun y publier et télécharger les modèles de son choix et à continuer d'y soutenir les autres fabricants de puces.
 
@@ -4774,6 +4779,7 @@ Le 3 septembre 2026, Nvidia a annoncé un accord, signé la veille, pour rachete
 - TechCrunch, « Nvidia confirms it will buy Hugging Face for $12.9 billion », 3 septembre 2026 : https://techcrunch.com/2026/09/03/nvidia-confirms-it-will-buy-hugging-face-for-12-9-billion/
 - Cohere Labs, fiche de tiny-aya-global sur Hugging Face (licence CC BY-NC 4.0) : https://huggingface.co/CohereLabs/tiny-aya-global
 - Hugging Face, documentation Pickle Scanning (risque d'exécution de code arbitraire au chargement d'un fichier pickle) : https://huggingface.co/docs/hub/security-pickle
+- Hugging Face, GGML and llama.cpp join HF to ensure the long-term progress of Local AI, 20 février 2026 (Georgi Gerganov et son équipe rejoignent Hugging Face ; llama.cpp reste 100 % open source, l'équipe garde son autonomie et la direction technique) : https://huggingface.co/blog/ggml-joins-hf
 
 ## Distillation
 
@@ -5181,8 +5187,8 @@ Le mot ne dit pas dans quel sens circule le contenu. Claude lit les images mais 
 
 URL : https://neopal.github.io/lexique/prompt-engineering/
 Catégorie : Méthode : travailler avec l'IA
-Aussi appelé : ingénierie de prompt, rédaction de prompt, art du prompt
-Variantes anglaises : prompt, prompting, prompt design, chain-of-thought prompting, role prompting
+Aussi appelé : ingénierie de prompt, rédaction de prompt, art du prompt, méta-prompt, balises XML
+Variantes anglaises : prompt, prompting, prompt design, chain-of-thought prompting, role prompting, meta-prompting, XML tags
 
 ### Définition courte
 
@@ -5495,6 +5501,7 @@ La règle qui se dégage est que plusieurs agents gagnent quand les morceaux son
 - Human-in-the-loop : https://neopal.github.io/lexique/human-in-the-loop/
 - Tool use : https://neopal.github.io/lexique/tool-use/
 - Fenêtre de contexte : https://neopal.github.io/lexique/fenetre-de-contexte/
+- Deep research : https://neopal.github.io/lexique/deep-research/
 
 ### Sources
 
@@ -5630,6 +5637,7 @@ Le calcul de réflexion n'avait qu'une direction en 2024, celle d'un brouillon u
 - Compute : https://neopal.github.io/lexique/compute/
 - Coût d'une requête : https://neopal.github.io/lexique/cout-d-une-requete/
 - Inférence : https://neopal.github.io/lexique/inference/
+- Deep research : https://neopal.github.io/lexique/deep-research/
 
 ### Sources
 
@@ -6326,6 +6334,7 @@ Le sandbox sert aussi le confort, puisqu'une commande enfermée n'a plus besoin 
 - Harness : https://neopal.github.io/lexique/harness/
 - Agent : https://neopal.github.io/lexique/agent/
 - Tool use : https://neopal.github.io/lexique/tool-use/
+- Computer use : https://neopal.github.io/lexique/computer-use/
 
 ### Sources
 
@@ -6342,7 +6351,7 @@ Le sandbox sert aussi le confort, puisqu'une commande enfermée n'a plus besoin 
 URL : https://neopal.github.io/lexique/planification/
 Catégorie : Agents et produit
 En anglais : Planning
-Aussi appelé : plan, décomposition en tâches, liste de tâches
+Aussi appelé : plan, décomposition en tâches, liste de tâches, mode plan
 Variantes anglaises : planning, agent planning, plan mode, task decomposition, to-do list, plan-and-execute, replanning
 
 ### Définition courte
@@ -6717,6 +6726,7 @@ En mars 2025, METR comptait un doublement tous les sept mois depuis 2019. Dans l
 - SWE-bench : https://neopal.github.io/lexique/swe-bench/
 - AGI : https://neopal.github.io/lexique/agi/
 - Terminal-Bench : https://neopal.github.io/lexique/terminal-bench/
+- Computer use : https://neopal.github.io/lexique/computer-use/
 
 ### Sources
 
@@ -7671,6 +7681,7 @@ En 2024, la diffusion faisait les images et les vidéos, et le texte restait l'a
 - Deep learning : https://neopal.github.io/lexique/deep-learning/
 - Inférence : https://neopal.github.io/lexique/inference/
 - Auto-attention : https://neopal.github.io/lexique/auto-attention/
+- LoRA : https://neopal.github.io/lexique/lora/
 
 ### Sources
 
@@ -8911,7 +8922,7 @@ Un générateur de vidéo te montre une ruelle de Kyoto sous la pluie, filmée �
 
 L'idée est plus ancienne que l'informatique moderne. En 1943, le psychologue écossais Kenneth Craik suggérait qu'un organisme qui porte dans sa tête un « modèle réduit » de la réalité et de ses propres actions peut essayer plusieurs options et réagir aux situations avant qu'elles arrivent. En mars 2018, David Ha et Jürgen Schmidhuber en ont tiré un programme. Leur agent apprenait un petit modèle du jeu Doom à partir de 10 000 parties jouées au hasard, s'entraînait à esquiver les boules de feu à l'intérieur de ce rêve, puis tenait bien au-delà du seuil de réussite dans le vrai jeu. Le rêve avait des défauts que l'agent a exploités, puisque dans certaines simulations les monstres ne tiraient jamais, et il a fallu rendre le rêve plus incertain pour qu'il cesse d'en profiter.
 
-Le mot recouvre aujourd'hui trois familles. La première génère des mondes qu'on explore. Genie 3, présenté par Google DeepMind le 5 août 2025, produit 24 images par seconde en 720p en réponse à tes commandes, garde un monde cohérent pendant quelques minutes et se souvient de ce qu'il a montré jusqu'à une minute plus tôt. La deuxième sert de simulateur. En février 2026, Waymo a adapté Genie 3 pour fabriquer, caméras et lidar compris, des scènes que ses voitures ne croisent presque jamais, une tornade, un éléphant, une rue inondée. Il s'en sert aussi pour rejouer une scène réelle en demandant ce qui se serait passé si la voiture avait moins hésité. La troisième ne fabrique aucune image. DreamerV3, publié dans Nature en avril 2025, apprend un modèle compact de son environnement et améliore son comportement en imaginant la suite, ce qui en a fait le premier programme à extraire des diamants dans Minecraft sans aucune donnée humaine.
+Le mot recouvre aujourd'hui trois familles. La première génère des mondes qu'on explore. Genie 3, présenté par Google DeepMind le 5 août 2025, produit 24 images par seconde en 720p en réponse à tes commandes, garde un monde cohérent pendant quelques minutes et se souvient de ce qu'il a montré jusqu'à une minute plus tôt. Marble, que la start-up World Labs ouvre au public le 12 novembre 2025, fabrique au contraire un vrai décor en 3D, qu'on exporte en Gaussian splats. Ce format, publié par l'Inria en 2023, décrit la scène par des millions de particules floues et semi-transparentes, ajustées jusqu'à ce que chaque vue ressemble à une photo. La deuxième sert de simulateur. En février 2026, Waymo a adapté Genie 3 pour fabriquer, caméras et lidar compris, des scènes que ses voitures ne croisent presque jamais, une tornade, un éléphant, une rue inondée. Il s'en sert aussi pour rejouer une scène réelle en demandant ce qui se serait passé si la voiture avait moins hésité. La troisième ne fabrique aucune image. DreamerV3, publié dans Nature en avril 2025, apprend un modèle compact de son environnement et améliore son comportement en imaginant la suite, ce qui en a fait le premier programme à extraire des diamants dans Minecraft sans aucune donnée humaine.
 
 Un LLM prédit du texte et non l'état d'un environnement, et la question de savoir s'il cache malgré tout un modèle du monde fait l'objet de la fiche « L'IA comprend ». Yann LeCun soutient depuis 2022 qu'il faudra apprendre sur la vidéo et le monde physique, et juge les LLM « une impasse » sur la route de la superintelligence. Parti de Meta fin 2025, il a levé 1,03 milliard de dollars en mars 2026 pour AMI Labs, une start-up basée à Paris qui n'a pas encore de produit et dont le directeur général prévient qu'il faudra des années avant des applications commerciales. Les démonstrations restent courtes, avec une minute par monde dans Project Genie, que Google décrit lui-même comme imparfait en réalisme et en physique.
 
@@ -8956,6 +8967,8 @@ Le 4 décembre 2024, Genie 2 générait des mondes jouables cohérents jusqu'à 
 - Hamrick, notes de lecture sur Craik (1943), The Nature of Explanation, p. 61 (« If the organism carries a 'small-scale model' of external reality and of its own possible actions within its head, it is able to try out various alternatives... ») : http://jhamrick.github.io/quals/generative%20models/2015/11/11/Craik1943.html
 - TechCrunch, Yann LeCun's AMI Labs raises $1.03B to build world models, 9 mars 2026 (1,03 milliard de dollars, valorisation de 3,5 milliards avant levée ; siège à Paris ; pas encore de produit ; Alexandre LeBrun, directeur général : des années avant des applications commerciales) : https://techcrunch.com/2026/03/09/yann-lecuns-ami-labs-raises-1-03-billion-to-build-world-models/
 - The Decoder, d'après un entretien de Yann LeCun au Financial Times, 3 janvier 2026 (« LLMs basically are a dead end when it comes to superintelligence » ; départ de Meta pour AMI Labs) : https://the-decoder.com/you-certainly-dont-tell-a-researcher-like-me-what-to-do-says-lecun-as-he-exits-meta-for-his-own-startup/
+- World Labs, Marble: A Multimodal World Model, 12 novembre 2025 (ouvert à tous ; mondes 3D créés à partir de texte, d'images, de vidéo ou d'une maquette 3D ; export en Gaussian splats, maillages ou vidéos ; les splats, représentation la plus fidèle, décrivent la scène par un grand nombre de particules semi-transparentes) : https://www.worldlabs.ai/blog/marble-world-model
+- Kerbl, Kopanas, Leimkühler et Drettakis (Inria, Université Côte d'Azur, MPI Informatik), 3D Gaussian Splatting for Real-Time Radiance Field Rendering, SIGGRAPH 2023 (scène représentée par des gaussiennes 3D optimisées à partir de photos, rendu temps réel en 1080p) : https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/
 
 ## JEPA
 
@@ -10103,7 +10116,7 @@ En 2024, l'optimisation automatique visait surtout le prompt, avec des biblioth�
 URL : https://neopal.github.io/lexique/workflow-ou-agent/
 Catégorie : Agents et produit
 En anglais : Workflow vs agent
-Aussi appelé : workflow ou agent, chaîne déterministe
+Aussi appelé : workflow ou agent, chaîne déterministe, chaîne de prompts
 Variantes anglaises : workflow, workflows, agentic workflow, workflow vs agent, deterministic workflow, prompt chaining
 
 ### Définition courte
@@ -10501,3 +10514,204 @@ Un p(doom) reste une croyance déclarée sur un événement qui n'arrivera qu'un
 - TechRadar, « Top AI researcher says AI will end humanity... », 7 avril 2024 (Yann LeCun à moins de 0,01 %, « less likely than an asteroid wiping us out » ; utilisé dans le schéma) : https://www.techradar.com/pro/top-ai-researcher-says-ai-will-end-humanity-and-we-should-stop-developing-it-now-but-dont-worry-elon-musk-disagrees
 - Forecasting Research Institute, Forecasting Existential Risks: Evidence from a Long-Run Forecasting Tournament (XPT, 2022 : 80 experts et 89 superforecasters, risques liés à l'IA, au nucléaire, aux pandémies) : https://forecastingresearch.org/xpt
 - Scott Alexander, The Extinction Tournament, Astral Codex Ten, 2023 (résumé du rapport XPT : extinction par l'IA d'ici 2100 à 3 % pour les experts et 0,38 % pour les superforecasters, soit 3 / 0,38 = 7,9, environ huit fois moins ; 1 % pour les superforecasters si l'AGI existe en 2070 ; rappelés en mai 2023, la plupart n'ont pas changé d'avis) : https://www.astralcodexten.com/p/the-extinction-tournament
+
+## LoRA
+
+URL : https://neopal.github.io/lexique/lora/
+Catégorie : Entraînement
+En anglais : Low-Rank Adaptation
+Aussi appelé : adaptation de rang faible, adaptateur LoRA
+Variantes anglaises : LoRA, QLoRA, LoRA adapter, PEFT, parameter-efficient fine-tuning
+
+### Définition courte
+
+LoRA est une méthode de fine-tuning qui fige les paramètres d'un modèle et n'entraîne que deux petites matrices ajoutées à côté, un adaptateur léger qu'on retire ou échange à volonté.
+
+### L'image
+
+« Je ne vais pas changer de fût à chaque client, alors qu'un trait de grenadine fait un tango de ta pression et qu'un trait de pêche en fait une bière pêche pour la table d'à côté, au même robinet. »
+
+### Imagine
+
+Llama 3.1 8B occupe 16 Go sur ton disque, et un LoRA de rang 16 posé sur toutes ses couches pèse 84 Mo. Si le modèle était un roman de 400 pages, l'adaptateur tiendrait sur deux feuillets glissés entre les pages, qu'on retire sans abîmer le livre.
+
+### Définition complète
+
+LoRA, pour Low-Rank Adaptation, a été publiée en juin 2021 par des chercheurs de Microsoft, au moment où affiner GPT-3 obligeait à stocker et servir une copie de ses 175 milliards de paramètres par usage. La méthode laisse chaque grande matrice de paramètres telle quelle et apprend à côté une correction, écrite comme le produit de deux matrices très minces. Leur épaisseur s'appelle le rang, et à 16, une matrice de 4 096 sur 4 096 reçoit une correction de 131 072 paramètres au lieu de 16,8 millions.
+
+Ce petit fichier explique le succès de la méthode bien au-delà du texte. En janvier 2023, Hugging Face la portait sur Stable Diffusion, où un style ou un personnage appris tenait dans 3,29 Mo, mille fois moins que le réseau d'origine, et les communautés d'images se sont mises à s'échanger des LoRA. En mai 2023, QLoRA l'a combinée à un modèle quantifié en 4 bits pour affiner 65 milliards de paramètres sur un seul GPU. Un même serveur peut aussi garder en mémoire un modèle de base et des dizaines d'adaptateurs, comme Apple Intelligence, qui charge à la volée un adaptateur par fonction sur son modèle d'environ 3 milliards de paramètres.
+
+Une correction aussi mince a ses limites. En mai 2024, une équipe de Databricks et Columbia a constaté que sur du code et des maths, avec beaucoup de données, LoRA apprenait nettement moins qu'un fine-tuning complet, mais oubliait aussi moins ce que le modèle savait déjà faire. LoRA convient donc pour apprendre un format, un ton ou une tâche, et le fine-tuning complet garde l'avantage quand il faut faire entrer des milliards de tokens nouveaux.
+
+### 2024 vs 2026
+
+En 2024, LoRA passait pour une version au rabais du fine-tuning, que l'étude de Databricks trouvait en retrait sur le code et les maths. En septembre 2025, Thinking Machines a montré qu'elle fait jeu égal sur la plupart des post-entraînements à condition de la poser sur toutes les couches, et l'a mise au cœur de Tinker, son service de fine-tuning lancé le 1er octobre suivant.
+
+### Dans le jargon
+
+- rank 16 : le rang, l'épaisseur des deux petites matrices : plus il est élevé, plus l'adaptateur peut apprendre, et plus son fichier pèse lourd
+- adapter : l'adaptateur, le fichier qui contient les petites matrices entraînées et qui se distribue à part du modèle de base
+- merge : fusionner l'adaptateur dans les paramètres du modèle de base, pour obtenir un seul modèle qui répond aussi vite que l'original
+- QLoRA : un LoRA entraîné sur un modèle de base quantifié en 4 bits, ce qui a permis en 2023 d'affiner un modèle de 65 milliards de paramètres sur un seul GPU de 48 Go
+
+### Solutions populaires
+
+- PEFT (Hugging Face) (bibliothèque open source) : https://huggingface.co/docs/peft/index
+- Unsloth (bibliothèque open source) : https://github.com/unslothai/unsloth
+- Tinker (Thinking Machines) (plateforme cloud) : https://thinkingmachines.ai/tinker/
+- vLLM, service multi-LoRA (serveur d'inférence) : https://docs.vllm.ai/en/latest/features/lora.html
+
+### Entendu au bureau
+
+- Question : Trois clients veulent chacun leur modèle maison, on prend trois serveurs ?
+- Réponse : Garde un seul modèle de base et entraîne un LoRA par client ; vLLM sert les trois adaptateurs depuis la même machine, et tu ne paies qu'une fois la mémoire du gros modèle.
+
+### À éviter
+
+« Un LoRA, c'est un petit modèle. » Un adaptateur ne sait rien faire seul, puisqu'il ne contient qu'une correction des paramètres du modèle de base pour lequel il a été entraîné, et il faut charger ce modèle en entier pour s'en servir.
+
+### Termes liés
+
+- Fine-tuning : https://neopal.github.io/lexique/fine-tuning/
+- Quantization : https://neopal.github.io/lexique/quantization/
+- Open weights : https://neopal.github.io/lexique/open-weights/
+- Modèle de diffusion : https://neopal.github.io/lexique/modele-de-diffusion/
+- GPU : https://neopal.github.io/lexique/gpu/
+- Post-entraînement : https://neopal.github.io/lexique/post-entrainement/
+
+### Sources
+
+- Hu et al. (Microsoft), LoRA: Low-Rank Adaptation of Large Language Models, 17 juin 2021 (poids pré-entraînés figés, matrices de décomposition de rang entraînables ; sur GPT-3 175B, paramètres entraînables divisés par 10 000 et mémoire GPU par 3 ; pas de latence ajoutée à l'inférence) : https://arxiv.org/abs/2106.09685
+- Hugging Face, Using LoRA for Efficient Stable Diffusion Fine-Tuning, 26 janvier 2023 (technique introduite par des chercheurs de Microsoft ; poids entraînés dans un fichier de 3,29 Mo, environ mille fois moins que le UNet d'origine) : https://huggingface.co/blog/lora
+- Dettmers et al., QLoRA: Efficient Finetuning of Quantized LLMs, 23 mai 2023 (modèle de 65 milliards de paramètres affiné sur un seul GPU de 48 Go, modèle de base figé et quantifié en 4 bits) : https://arxiv.org/abs/2305.14314
+- Apple Machine Learning Research, Introducing Apple's On-Device and Server Foundation Models, juin 2024 (adaptateurs chargés et échangés à la volée, un par fonction ; pour le modèle embarqué d'environ 3 milliards de paramètres, un adaptateur de rang 16 pèse quelques dizaines de mégaoctets) : https://machinelearning.apple.com/research/introducing-apple-foundation-models
+- Biderman et al. (Databricks, Columbia), LoRA Learns Less and Forgets Less, 15 mai 2024 (code et maths : LoRA nettement en dessous du fine-tuning complet, mais oublie moins les tâches hors domaine) : https://arxiv.org/abs/2405.09673
+- John Schulman et Thinking Machines, LoRA Without Regret, 29 septembre 2025 (LoRA égale le fine-tuning complet sur des jeux de post-entraînement de taille courante si elle est appliquée à toutes les couches, MLP compris, et en renforcement même à petit rang ; vLLM et SGLang servent plusieurs adaptateurs sur un même serveur) : https://thinkingmachines.ai/blog/lora/
+- Thinking Machines, Announcing Tinker, 1er octobre 2025 (API de fine-tuning de modèles open weights ; « We use LoRA » pour partager la puissance de calcul entre plusieurs entraînements) : https://thinkingmachines.ai/blog/announcing-tinker/
+- Configuration de Llama 3.1 8B sur Hugging Face (hidden_size 4 096, intermediate_size 14 336, 32 couches, 8 têtes clé-valeur, soit 8,03 milliards de paramètres et 16,06 Go en bfloat16 ; LoRA de rang 16 sur les 7 matrices de chaque couche = 16 × (2 × 8 192 + 2 × 5 120 + 3 × 18 432) × 32 = 41 943 040 paramètres, 84 Mo en bfloat16 ; 16,06 Go / 84 Mo = 191, et 400 pages / 191 = 2,1 pages ; une matrice 4 096 × 4 096 = 16 777 216 paramètres, sa correction de rang 16 = 16 × 8 192 = 131 072) : https://huggingface.co/unsloth/Meta-Llama-3.1-8B/blob/main/config.json
+
+## Computer use
+
+URL : https://neopal.github.io/lexique/computer-use/
+Catégorie : Agents et produit
+Aussi appelé : agent qui pilote l'ordinateur, agent navigateur, utilisation de l'ordinateur
+Variantes anglaises : computer-use agent, CUA, browser use, browser agent, GUI agent, agentic browser
+
+### Définition courte
+
+Le computer use permet à un modèle d'utiliser un ordinateur comme une personne, en regardant des captures d'écran puis en bougeant la souris, en cliquant et en tapant au clavier.
+
+### L'image
+
+Au téléphone, Nadia guide son père pour envoyer une photo à la cousine. Après chaque geste, il lui envoie une capture de son écran, elle répond « appuie sur le rond bleu en bas à droite », il appuie et renvoie une capture. Il leur faut vingt minutes, mais la méthode marche sur n'importe quel téléphone, même un modèle qu'elle n'a jamais vu.
+
+### Imagine
+
+« Combien coûte le Paris-Marseille de vendredi sur le site de la compagnie ? », demandes-tu à l'agent. Quatre minutes plus tard, il répond : « J'ai refusé les cookies, fermé la fenêtre de la newsletter et décliné l'application ; j'ouvre le calendrier. »
+
+### Définition complète
+
+Un agent qui fait du computer use ne passe par aucune API. Il reçoit une capture d'écran, choisit un geste, cliquer à tel endroit, taper tel texte ou faire défiler, puis reçoit la capture suivante, et recommence jusqu'à la fin de la tâche. Anthropic a ouvert la première version publique le 22 octobre 2024, en la décrivant comme parfois laborieuse et sujette aux erreurs, et OpenAI a suivi en janvier 2025 avec Operator, d'abord réservé aux abonnés à 200 dollars par mois.
+
+L'intérêt est d'atteindre tous les logiciels qui n'ont jamais prévu d'API, de l'outil RH maison au vieux logiciel de caisse. Pour le mesurer, des chercheurs de l'université de Hong Kong ont publié en avril 2024 OSWorld, 369 tâches réelles du tableur à la messagerie, que des humains réussissent à 72 %. Les meilleurs modèles n'en réussissaient alors que 12 %, surtout parce qu'ils ne savaient pas situer à l'écran le bouton qu'ils voulaient cliquer.
+
+Un agent qui lit l'écran lit aussi tout ce que l'écran contient, y compris une consigne qu'un inconnu y a glissée. Dans les tests qu'Anthropic a publiés en août 2025, un faux mail réclamant un ménage de la boîte « pour raisons de sécurité » a suffi à faire supprimer des messages par Claude dans Chrome. Sur l'ensemble des attaques testées, 23,6 % réussissaient avant les protections, et encore 11,2 % après. D'où les garde-fous devenus courants, avec des sites autorisés un par un et une confirmation avant d'acheter, de publier ou de partager une donnée personnelle.
+
+### 2024 vs 2026
+
+En octobre 2024, Claude 3.5 Sonnet réussissait 14,9 % des tâches d'OSWorld à partir des seules captures d'écran, loin des 72 % des humains. Le 11 décembre 2025, un agent de la start-up Simular passait pour la première fois la barre humaine sur la version vérifiée du test, et au classement d'octobre 2026 Claude Fable 5 y atteint 86 % sans aucun outillage autour du modèle. Une version 2.0, plus difficile, est sortie le 26 juin 2026.
+
+### Dans le jargon
+
+- OSWorld : le banc d'essai de référence, 369 tâches réelles sur un vrai ordinateur (tableur, navigateur, messagerie), que des humains réussissent à 72 %
+- grounding : l'ancrage, savoir à quel endroit de l'écran se trouve le bouton dont on parle ; c'est là que ces agents échouaient le plus en 2024
+- a11y tree : l'arbre d'accessibilité, la description en texte des boutons et des champs prévue pour les lecteurs d'écran, que certains agents lisent en plus de la capture
+- agentic browser : un navigateur dans lequel un agent clique et remplit les formulaires à ta place, comme Comet de Perplexity ou Claude dans Chrome
+
+### Entendu au bureau
+
+- Question : L'outil de notes de frais n'a pas d'API, on demande à un agent de les saisir à notre place ?
+- Réponse : C'est le bon cas d'usage, à condition de lui donner un compte à part aux droits limités et de valider chaque envoi ; et le jour où l'outil ouvre une API, passe par elle, ce sera plus rapide et plus fiable.
+
+### À éviter
+
+« Il voit l'écran, il comprend donc le site comme moi. » L'agent reçoit une suite d'images fixes et déduit des pixels où cliquer, et il prend au sérieux tout texte qu'il voit, y compris une consigne cachée dans la page par quelqu'un d'autre que toi.
+
+### Termes liés
+
+- Agent : https://neopal.github.io/lexique/agent/
+- Prompt injection : https://neopal.github.io/lexique/prompt-injection/
+- Sandbox et permissions : https://neopal.github.io/lexique/sandbox-et-permissions/
+- WebMCP : https://neopal.github.io/lexique/webmcp/
+- Boucle agent : https://neopal.github.io/lexique/boucle-agent/
+- Horizon d'autonomie : https://neopal.github.io/lexique/horizon-d-autonomie/
+- Deep research : https://neopal.github.io/lexique/deep-research/
+
+### Sources
+
+- Anthropic, Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku, 22 octobre 2024 (bêta publique ; Claude regarde l'écran, bouge le curseur, clique et tape ; « at times cumbersome and error-prone » ; OSWorld 14,9 % en captures d'écran seules, 22,0 % avec plus d'étapes) : https://www.anthropic.com/news/3-5-models-and-computer-use
+- The Batch (DeepLearning.AI), OpenAI's Operator automates online tasks with a new AI agent, janvier 2025 (Operator en préversion pour ChatGPT Pro à 200 dollars par mois ; modèle CUA à 38,1 % sur OSWorld) : https://charonhub.deeplearning.ai/openais-operator-automates-online-tasks-with-a-new-ai-agent/
+- Xie et al. (université de Hong Kong, Salesforce, CMU, Waterloo), OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments, 11 avril 2024 (369 tâches ; humains à 72,36 %, meilleur modèle à 12,24 %, en difficulté surtout sur le grounding) : https://arxiv.org/abs/2404.07972
+- OSWorld, site officiel, consulté le 20 octobre 2026 (OSWorld-Verified depuis le 28 juillet 2025 ; OSWorld 2.0 publié le 26 juin 2026) : https://os-world.github.io/
+- OSWorld-Verified, tableau des résultats officiels (fichier du site), consulté le 20 octobre 2026 (premier score au-dessus de 72,36 % : Agent S3 de Simular, 72,58 %, 11 décembre 2025 ; claude-fable-5, « General model », sans arbre d'accessibilité ni action par code, 85,96 %) : https://os-world.github.io/static/data/osworld_verified_results.xlsx
+- Anthropic, Piloting Claude for Chrome, 25 août 2025 (123 tests d'injection de prompt ; faux mail de « mailbox hygiene » qui fait supprimer des mails ; 23,6 % d'attaques réussies sans protections, 11,2 % avec ; autorisations par site, confirmation avant de publier, d'acheter ou de partager des données personnelles) : https://www.anthropic.com/news/claude-for-chrome
+
+## Deep research
+
+URL : https://neopal.github.io/lexique/deep-research/
+Catégorie : Agents et produit
+Aussi appelé : recherche approfondie, agent de recherche
+Variantes anglaises : deep research agent, research agent, deep search
+
+### Définition courte
+
+Le deep research confie une question à un agent qui cherche seul sur le web pendant plusieurs minutes, lit des dizaines de sources et rend un rapport avec ses citations.
+
+### L'image
+
+Le stagiaire à qui tu as demandé une note sur les concurrents revient avant la pause café avec quarante pages et quatre-vingts liens en bas de page. Il a vraiment tout lu, et le chiffre clé de la page 3 vient d'un lien qui parle d'autre chose.
+
+### Imagine
+
+Pose en mode recherche approfondie, à ChatGPT, Gemini ou Claude, une question dont tu connais déjà la réponse, l'histoire de ta commune ou les produits de ton entreprise. Pendant les minutes qu'il y passe, regarde défiler les pages qu'il ouvre, puis prends trois phrases du rapport et ouvre la source accrochée à chacune pour y chercher ce qu'elle est censée dire.
+
+### Définition complète
+
+Google a ouvert la voie le 11 décembre 2024 avec Deep Research dans Gemini, qui propose d'abord un plan de recherche à valider, puis navigue pendant quelques minutes et rend un rapport avec les liens de ses sources. OpenAI a lancé le sien en février 2025 sur son modèle o3, avec des recherches de 5 à 30 minutes, et Perplexity le 14 février, en l'ouvrant gratuitement dans une version limitée.
+
+Sous le capot tourne une boucle d'agent qui cherche, lit, prend des notes et choisit la requête suivante, et le résultat dépend surtout de la quantité de lecture. Anthropic a constaté en juin 2025 que le nombre de tokens consommés expliquait à lui seul 80 % des écarts de score sur BrowseComp, un test de questions dont la réponse est enfouie sur le web. Il répartit donc la lecture entre plusieurs sous-agents, au prix d'environ 15 fois plus de tokens qu'une conversation.
+
+Sur ce test, des humains entraînés abandonnaient 71 % des questions après deux heures de recherche, et le modèle de deep research d'OpenAI en résolvait 51,5 % en avril 2025. Un rapport bien présenté n'est pas pour autant vérifié. En septembre 2025, l'audit DeepTRACE trouvait ces rapports souvent partiaux sur les sujets débattus, et la part des citations qui soutiennent vraiment leur phrase y variait de 40 à 80 % selon les systèmes.
+
+### Dans le jargon
+
+- research plan : le plan de recherche que l'agent propose avant de partir, et que Gemini te laisse corriger ou valider
+- BrowseComp : un test d'OpenAI de 1 266 questions dont la réponse est enfouie sur le web ; des humains entraînés ont abandonné 71 % d'entre elles après deux heures de recherche
+- citation accuracy : la part des citations qui soutiennent vraiment la phrase à laquelle elles sont accrochées, entre 40 et 80 % selon les systèmes dans l'audit DeepTRACE de 2025
+
+### Entendu au bureau
+
+- Question : Je lance un deep research sur le marché et j'envoie le rapport au comité demain ?
+- Réponse : Envoie-le après avoir ouvert les sources des cinq chiffres que le comité va retenir ; le rapport t'épargne la journée de lecture, et il te reste la demi-heure de vérification.
+
+### À éviter
+
+« Il a cité ses sources, donc c'est vérifié. » Une citation montre où l'agent est passé, sans garantir que la page dit ce qu'il affirme, et dans l'audit DeepTRACE jusqu'à 60 % des citations d'un même système ne soutenaient pas leur phrase.
+
+### Termes liés
+
+- Agent : https://neopal.github.io/lexique/agent/
+- Multi-agents : https://neopal.github.io/lexique/multi-agents/
+- Hallucination : https://neopal.github.io/lexique/hallucination/
+- Test-time compute : https://neopal.github.io/lexique/test-time-compute/
+- Computer use : https://neopal.github.io/lexique/computer-use/
+- Coût d'une requête : https://neopal.github.io/lexique/cout-d-une-requete/
+
+### Sources
+
+- Google, Try Deep Research and our new experimental model in Gemini, 11 décembre 2024 (plan de recherche à réviser ou approuver, navigation pendant quelques minutes, rapport avec liens vers les sources) : https://blog.google/products/gemini/google-gemini-deep-research/
+- Fortune, OpenAI's deep research can complete 26% of Humanity's Last Exam, 12 février 2025 (agent fondé sur o3, recherches de 5 à 30 minutes ; produit concurrent lancé par Google en décembre) : https://fortune.com/2025/02/12/openai-deepresearch-humanity-last-exam/
+- Perplexity, Introducing Perplexity Deep Research, 14 février 2025 (des dizaines de recherches, des centaines de sources, 2 à 4 minutes ; gratuit avec un nombre limité de réponses par jour) : https://www.perplexity.ai/hub/blog/introducing-perplexity-deep-research
+- Anthropic, How we built our multi-agent research system, 13 juin 2025 (la consommation de tokens explique 80 % de la variance sur BrowseComp ; un système multi-agents consomme environ 15 fois plus de tokens qu'une conversation) : https://www.anthropic.com/engineering/multi-agent-research-system
+- Wei et al. (OpenAI), BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents, 16 avril 2025 (1 266 questions ; des formateurs humains abandonnent 888 questions sur 1 255, soit 70,8 %, après deux heures ; Deep Research à 51,5 %, GPT-4o avec navigation à 1,9 %) : https://arxiv.org/abs/2504.12516
+- Venkit et al., DeepTRACE: Auditing Deep Research AI Systems for Tracking Reliability Across Citations and Evidence, 2 septembre 2025 (réponses souvent partiales sur les questions débattues ; exactitude des citations de 40 à 80 % selon les systèmes, donc de 20 à 60 % de citations qui ne soutiennent pas leur phrase) : https://arxiv.org/abs/2509.04499

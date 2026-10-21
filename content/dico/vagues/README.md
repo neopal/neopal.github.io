@@ -20,7 +20,12 @@ Ce sont des archives figées. Les fiches ont été fusionnées dans `lexique/ter
 | [12-hill-climbing](12-hill-climbing/) | 3 oct. 2026 | Une fiche et deux enrichissements | hill-climbing ; enrichit evals, benchmaxxing |
 | [13-deploiement-entreprise](13-deploiement-entreprise/) | 5 oct. 2026 | Déployer l'IA dans une entreprise (lots D et E) | 5 fiches : workflow-ou-agent, routage-de-modeles, mythe-ajouter-ia, forward-deployed-engineer, mythe-95-pourcent ; enrichit evals, multi-agents |
 | [14-p-doom](14-p-doom/) | 19 oct. 2026 | Une fiche : la probabilité de catastrophe annoncée par les chercheurs et les patrons de labos | p-doom |
+| [15-lora](15-lora/) | 19 oct. 2026 | Une fiche : LoRA, sortie de la fiche Fine-tuning qui la traitait en alias | lora ; enrichit fine-tuning (alias LoRA retiré) |
+| [16-gaussian-splatting](16-gaussian-splatting/) | 19 oct. 2026 | Un enrichissement : les mondes 3D de Marble exportés en Gaussian splats | enrichit world-model |
+| [17-gguf](17-gguf/) | 19 oct. 2026 | Un enrichissement : GGUF en alias de Quantization, avec le sens du sigle | enrichit quantization |
+| [18-agents-ecran-recherche](18-agents-ecran-recherche/) | 21 oct. 2026 | Deux fiches d'agents et des alias entendus au bureau | computer-use, deep-research ; alias ajoutés à modeles-de-raisonnement, agent, planification, prompt-engineering, workflow-ou-agent |
+| [19-mise-a-jour](19-mise-a-jour/) | 21 oct. 2026 | Liens retour vers les nouvelles fiches, ggml.ai rejoint Hugging Face | enrichit quantization, open-weights, modele-de-diffusion, sandbox-et-permissions, webmcp, horizon-d-autonomie, multi-agents, test-time-compute, hugging-face |
 
 Les fiches des débuts (token, parametres, rag…) et quelques ajouts isolés (prompt-caching, arxiv…) ont été écrits hors vague, directement dans `lexique/terms.js`.
 
-Prochaine vague : créer `15-<sujet>/` avec un `BRIEF.md` qui renvoie à `../brief-fiche.md` et ne contient que le sujet, le registre des ids, les formes d'Imagine par lot et les livrables attendus.
+Prochaine vague : créer `20-<sujet>/` avec un `BRIEF.md` qui renvoie à `../brief-fiche.md` et ne contient que le sujet, le registre des ids, les formes d'Imagine par lot et les livrables attendus.

@@ -1,0 +1,62 @@
+{
+  "quantization": {
+    "aliases": [
+      "quant",
+      "quantisation",
+      "quantized model",
+      "GGUF"
+    ],
+    "jargon": [
+      {
+        "say": "Q4, 4-bit",
+        "means": "chaque paramètre est stocké sur 4 bits au lieu de 16 ; le fichier devient trois à quatre fois plus léger"
+      },
+      {
+        "say": "FP16, BF16",
+        "means": "les formats 16 bits dans lesquels un modèle est d'habitude entraîné et publié ; c'est la version pleine qu'on compresse ensuite"
+      },
+      {
+        "say": "GGUF",
+        "means": "GGML Universal File, le format de fichier lancé en août 2023 par le projet llama.cpp pour charger vite des modèles, souvent quantifiés, sur ta propre machine ; le GG est celui de GGML, la bibliothèque de Georgi Gerganov, qui porte ses initiales"
+      },
+      {
+        "say": "MXFP4",
+        "means": "un format 4 bits avec lequel OpenAI (gpt-oss) et Moonshot AI (Kimi K3) entraînent une partie de leurs poids, pour les publier déjà compressés"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Ollama, Llama 3.3 70B, versions de 141 Go (fp16) à 75 Go (q8_0), 43 Go (q4_K_M) et 26 Go (q2_K)",
+        "url": "https://ollama.com/library/llama3.3/tags"
+      },
+      {
+        "label": "Zheng et al., An Empirical Study of Qwen3 Quantization, 4 mai 2025 (environ 1 % de perte sur MMLU pour Qwen3-14B en 4 bits, environ 10 % pour Qwen3-0.6B, dégradation plus forte à 3 bits et moins)",
+        "url": "https://arxiv.org/abs/2505.02214"
+      },
+      {
+        "label": "OpenAI, fiche de gpt-oss-120b (poids MoE en MXFP4, un seul GPU de 80 Go, évaluations faites en MXFP4)",
+        "url": "https://huggingface.co/openai/gpt-oss-120b"
+      },
+      {
+        "label": "Moonshot AI, fiche de Kimi K3 (poids MXFP4, entraînement conscient de la quantization)",
+        "url": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+        "label": "Wikipédia, Kimi (Kimi K3 publié le 16 juillet 2026)",
+        "url": "https://en.wikipedia.org/wiki/Kimi_(AI)"
+      },
+      {
+        "label": "Hugging Face, documentation GGUF (format créé par l'auteur de llama.cpp)",
+        "url": "https://huggingface.co/docs/hub/gguf"
+      },
+      {
+        "label": "Paquet Python gguf, maintenu par le projet llama.cpp, PyPI (« GGUF (GGML Universal File) format »)",
+        "url": "https://pypi.org/project/gguf/"
+      },
+      {
+        "label": "Wikipédia, GGUF, consultée le 19 octobre 2026 (GGML pour Georgi Gerganov Machine Learning ; format introduit le 21 août 2023 par llama.cpp, successeur de GGML, GGMF et GGJT)",
+        "url": "https://en.wikipedia.org/wiki/GGUF"
+      }
+    ]
+  }
+}

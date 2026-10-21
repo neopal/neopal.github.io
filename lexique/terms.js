@@ -795,7 +795,8 @@ window.DICO_TERMS = [
       "quantization",
       "fine-tuning",
       "mythe-chatgpt-c-est-le-modele",
-      "mythe-open-source-gratuit"
+      "mythe-open-source-gratuit",
+      "lora"
     ],
     "solutions": [
       {
@@ -829,7 +830,55 @@ window.DICO_TERMS = [
       "Pour savoir si un modèle est open source ou seulement open weights, demande-toi si tu pourrais refaire son entraînement avec ce qui est publié. Avec gpt-oss ou DeepSeek-V4, la réponse est non, faute des données d'entraînement ; avec OLMo 3, qu'Ai2 publie avec ses données et toutes ses étapes d'entraînement, c'est oui.",
       "Le cas limite est le modèle dont les données sont décrites sans être publiées. La définition de l'IA open source fixée en octobre 2024 par l'Open Source Initiative l'accepte, si la description suffit à une personne compétente pour construire un système équivalent ; c'est le point le plus disputé de cette définition."
     ],
-    "table": {"caption": "Les modèles ouverts en tête", "asOf": "6 octobre 2026", "columns": ["Modèle", "Labo", "Indice AA", "Licence", "Paramètres"], "rows": [["MiMo-V2.6-Pro", "Xiaomi", "46", "MIT", "1 024 Md"], ["GLM-5.3", "Z AI", "45", "licence maison", "753 Md"], ["Kimi K3", "Moonshot AI", "44", "licence maison", "2 780 Md"], ["Qwen3.8-27B", "Alibaba", "34", "Apache 2.0", "28 Md"], ["gpt-oss-120b", "OpenAI", "12", "Apache 2.0", "117 Md"]], "note": "Indice AA : Intelligence Index d'Artificial Analysis v4.3.2 (dix évaluations), au réglage de raisonnement le plus élevé de chaque modèle ; le meilleur modèle fermé obtient 58."},
+    "table": {
+      "caption": "Les modèles ouverts en tête",
+      "asOf": "6 octobre 2026",
+      "columns": [
+        "Modèle",
+        "Labo",
+        "Indice AA",
+        "Licence",
+        "Paramètres"
+      ],
+      "rows": [
+        [
+          "MiMo-V2.6-Pro",
+          "Xiaomi",
+          "46",
+          "MIT",
+          "1 024 Md"
+        ],
+        [
+          "GLM-5.3",
+          "Z AI",
+          "45",
+          "licence maison",
+          "753 Md"
+        ],
+        [
+          "Kimi K3",
+          "Moonshot AI",
+          "44",
+          "licence maison",
+          "2 780 Md"
+        ],
+        [
+          "Qwen3.8-27B",
+          "Alibaba",
+          "34",
+          "Apache 2.0",
+          "28 Md"
+        ],
+        [
+          "gpt-oss-120b",
+          "OpenAI",
+          "12",
+          "Apache 2.0",
+          "117 Md"
+        ]
+      ],
+      "note": "Indice AA : Intelligence Index d'Artificial Analysis v4.3.2 (dix évaluations), au réglage de raisonnement le plus élevé de chaque modèle ; le meilleur modèle fermé obtient 58."
+    },
     "then": "En 2024, le dernier modèle de langage ouvert d'OpenAI restait GPT-2. Le 5 août 2025, OpenAI a publié gpt-oss-120b et gpt-oss-20b sous Apache 2.0, ses premiers modèles de langage open weights depuis, et le plus gros des deux se contente d'une seule carte graphique de 80 Go.",
     "office": [
       {
@@ -847,12 +896,30 @@ window.DICO_TERMS = [
       "poster": "videos/open-weights.jpg"
     },
     "sources": [
-      {"label": "Artificial Analysis, Open Source Models (Intelligence Index v4.3.2, dix évaluations : MiMo-V2.6-Pro 46, GLM-5.3 45, Kimi K3 44, GLM-5.3-Flash 42, DeepSeek V4.1 Flash 39, Qwen3.8 27B 34), consulté le 6 octobre 2026", "url": "https://artificialanalysis.ai/models/open-source"},
-      {"label": "Artificial Analysis, LLM Leaderboard (meilleur modèle fermé à 57,6 ; gpt-oss-120b à 11,6), consulté le 6 octobre 2026", "url": "https://artificialanalysis.ai/leaderboards/models"},
-      {"label": "Xiaomi, fiche de MiMo-V2.6-Pro sur Hugging Face (licence MIT, publiée le 21 septembre 2026, 1 024 milliards de paramètres selon l'API Hugging Face)", "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"},
-      {"label": "Z AI, fiche de GLM-5.3 sur Hugging Face (licence « glm-5.3 », publiée le 25 août 2026, 753 milliards de paramètres selon l'API Hugging Face)", "url": "https://huggingface.co/zai-org/GLM-5.3"},
-      {"label": "Moonshot AI, fiche de Kimi K3 sur Hugging Face (licence propre, 2 780 milliards de paramètres selon l'API Hugging Face)", "url": "https://huggingface.co/moonshotai/Kimi-K3"},
-      {"label": "Qwen, fiche de Qwen3.8-27B sur Hugging Face (licence Apache 2.0, 27,8 milliards de paramètres)", "url": "https://huggingface.co/Qwen/Qwen3.8-27B"},
+      {
+        "label": "Artificial Analysis, Open Source Models (Intelligence Index v4.3.2, dix évaluations : MiMo-V2.6-Pro 46, GLM-5.3 45, Kimi K3 44, GLM-5.3-Flash 42, DeepSeek V4.1 Flash 39, Qwen3.8 27B 34), consulté le 6 octobre 2026",
+        "url": "https://artificialanalysis.ai/models/open-source"
+      },
+      {
+        "label": "Artificial Analysis, LLM Leaderboard (meilleur modèle fermé à 57,6 ; gpt-oss-120b à 11,6), consulté le 6 octobre 2026",
+        "url": "https://artificialanalysis.ai/leaderboards/models"
+      },
+      {
+        "label": "Xiaomi, fiche de MiMo-V2.6-Pro sur Hugging Face (licence MIT, publiée le 21 septembre 2026, 1 024 milliards de paramètres selon l'API Hugging Face)",
+        "url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL"
+      },
+      {
+        "label": "Z AI, fiche de GLM-5.3 sur Hugging Face (licence « glm-5.3 », publiée le 25 août 2026, 753 milliards de paramètres selon l'API Hugging Face)",
+        "url": "https://huggingface.co/zai-org/GLM-5.3"
+      },
+      {
+        "label": "Moonshot AI, fiche de Kimi K3 sur Hugging Face (licence propre, 2 780 milliards de paramètres selon l'API Hugging Face)",
+        "url": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+        "label": "Qwen, fiche de Qwen3.8-27B sur Hugging Face (licence Apache 2.0, 27,8 milliards de paramètres)",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+      },
       {
         "label": "OpenAI, Lancement de gpt-oss, 5 août 2025 (Apache 2.0, premiers modèles de langage open-weight depuis GPT-2)",
         "url": "https://openai.com/index/introducing-gpt-oss/"
@@ -896,7 +963,8 @@ window.DICO_TERMS = [
     "aliases": [
       "quant",
       "quantisation",
-      "quantized model"
+      "quantized model",
+      "GGUF"
     ],
     "aliasesFr": [
       "quantification"
@@ -912,7 +980,7 @@ window.DICO_TERMS = [
       },
       {
         "say": "GGUF",
-        "means": "le format de fichier créé par l'auteur de llama.cpp pour charger vite des modèles, souvent quantifiés, sur ta propre machine"
+        "means": "GGML Universal File, le format de fichier lancé en août 2023 par le projet llama.cpp pour charger vite des modèles, souvent quantifiés, sur ta propre machine ; le GG est celui de GGML, la bibliothèque de Georgi Gerganov, qui porte ses initiales"
       },
       {
         "say": "MXFP4",
@@ -923,8 +991,8 @@ window.DICO_TERMS = [
     "links": [
       "parametres",
       "tailles-de-modele",
-      "open-weights"
-      
+      "open-weights",
+      "lora"
     ],
     "solutions": [
       {
@@ -993,6 +1061,14 @@ window.DICO_TERMS = [
       {
         "label": "Hugging Face, documentation GGUF (format créé par l'auteur de llama.cpp)",
         "url": "https://huggingface.co/docs/hub/gguf"
+      },
+      {
+        "label": "Paquet Python gguf, maintenu par le projet llama.cpp, PyPI (« GGUF (GGML Universal File) format »)",
+        "url": "https://pypi.org/project/gguf/"
+      },
+      {
+        "label": "Wikipédia, GGUF, consultée le 19 octobre 2026 (GGML pour Georgi Gerganov Machine Learning ; format introduit le 21 août 2023 par llama.cpp, successeur de GGML, GGMF et GGJT)",
+        "url": "https://en.wikipedia.org/wiki/GGUF"
       }
     ]
   },
@@ -1500,8 +1576,7 @@ window.DICO_TERMS = [
       "finetuning",
       "fine-tune",
       "supervised fine-tuning",
-      "SFT",
-      "LoRA"
+      "SFT"
     ],
     "aliasesFr": [
       "ajustement fin",
@@ -1766,11 +1841,13 @@ window.DICO_TERMS = [
       "reasoning model",
       "thinking model",
       "chain-of-thought",
-      "CoT"
+      "CoT",
+      "extended thinking"
     ],
     "aliasesFr": [
       "chaîne de pensée",
-      "modèle qui réfléchit"
+      "modèle qui réfléchit",
+      "réflexion approfondie"
     ],
     "jargon": [
       {
@@ -2014,7 +2091,8 @@ window.DICO_TERMS = [
       "coding agent"
     ],
     "aliasesFr": [
-      "agent IA"
+      "agent IA",
+      "agentique"
     ],
     "jargon": [
       {
@@ -2080,8 +2158,8 @@ window.DICO_TERMS = [
     ],
     "short": "Un agent est un modèle de langage qu'on laisse agir : avec un objectif et des outils, il enchaîne les actions, chacune choisie d'après le résultat de la précédente.",
     "image": "Le mardi, Nadine laisse à son fils une liste de courses. Le jeudi, vingt euros et « Fais-nous un dîner » ; il trouve le marché fermé, ouvre le frigo, appelle sa grand-mère, et à 20 h il y a des crêpes que personne n'avait prévues.",
-    "imagine": "Le 22 septembre 2026, Anthropic publie le témoignage d'un développeur de Clio, un éditeur canadien de logiciels pour cabinets d'avocats. Avant de quitter le bureau à 18 heures, il a confié à Claude Opus 5.5 une seule tâche, à mener sur six dépôts de code, puis il est rentré dormir. Personne n'a relancé l'agent de la nuit, et le lendemain à midi il y travaillait encore, plus de 18 heures d'affilée, deux journées et demie d'un temps plein à 35 heures.",
     "imagineForm": "A",
+    "imagine": "Le 22 septembre 2026, Anthropic publie le témoignage d'un développeur de Clio, un éditeur canadien de logiciels pour cabinets d'avocats. Avant de quitter le bureau à 18 heures, il a confié à Claude Opus 5.5 une seule tâche, à mener sur six dépôts de code, puis il est rentré dormir. Personne n'a relancé l'agent de la nuit, et le lendemain à midi il y travaillait encore, plus de 18 heures d'affilée, deux journées et demie d'un temps plein à 35 heures.",
     "full": [
       "Un agent est un modèle de langage placé dans une boucle, avec des outils. On lui donne un objectif, par exemple « trouve-moi un train pour Lyon jeudi et mets-le dans mon agenda ». Il choisit une action, comme chercher les horaires, lit le résultat, puis choisit la suivante, jusqu'à ce qu'il juge la tâche finie ou qu'une limite l'arrête. Ces actions, ce sont les programmes autour de lui qui les exécutent, à partir des demandes qu'il écrit.",
       "Pour reconnaître un agent, la question est de savoir qui choisit l'étape suivante. Anthropic a posé la distinction en décembre 2024 : dans un workflow, un développeur écrit les étapes à l'avance, même si un modèle intervient à chacune ; dans un agent, le modèle décide en cours de route de ses actions et de ses outils. Le bot qui résume chaque ticket entrant puis le range dans une file reste donc un workflow, alors que l'assistant qui relance de lui-même une recherche quand la première ne donne rien penche du côté de l'agent.",
@@ -5419,7 +5497,8 @@ window.DICO_TERMS = [
       "tool-use",
       "agent",
       "prompt-injection",
-      "harness"
+      "harness",
+      "computer-use"
     ],
     "solutions": [
       {
@@ -6595,7 +6674,7 @@ window.DICO_TERMS = [
     "imagine": "Le 2 octobre 2026, la page des modèles de Hugging Face en affiche 3 115 874. Si tu en ouvrais un par minute, huit heures par jour et week-ends compris, tu finirais le tour en juillet 2044, après avoir croisé plus de 26 000 modèles dont le nom contient « qwen2.5-7b », sans compter tous ceux publiés pendant ces dix-sept ans.",
     "full": [
       "La société a été fondée en 2016 à New York par trois entrepreneurs français, Clément Delangue, Julien Chaumond et Thomas Wolf, pour faire une application de chatbot destinée aux adolescents, et elle doit son nom à l'émoji du visage qui fait un câlin. Elle s'est ensuite recentrée sur les outils, avec Transformers, sa bibliothèque open source, puis le Hub, devenu le lieu où l'on publie les modèles.",
-      "On y trouve des modèles, plus d'un million de jeux de données et des Spaces, des applications de démo. Chaque modèle a sa fiche, sa licence et ses fichiers, et un arbre qui recense ses descendants ; celui de Qwen2.5-7B-Instruct, un modèle d'Alibaba, liste plus de 3 000 versions fine-tunées et plus de 400 versions quantifiées. La plupart des labos publient leurs poids ouverts sur le Hub, et des outils comme llama.cpp, Ollama ou LM Studio vont les y chercher directement.",
+      "On y trouve des modèles, plus d'un million de jeux de données et des Spaces, des applications de démo. Chaque modèle a sa fiche, sa licence et ses fichiers, et un arbre qui recense ses descendants ; celui de Qwen2.5-7B-Instruct, un modèle d'Alibaba, liste plus de 3 000 versions fine-tunées et plus de 400 versions quantifiées. La plupart des labos publient leurs poids ouverts sur le Hub, et des outils comme llama.cpp, Ollama ou LM Studio vont les y chercher directement. Le 20 février 2026, Georgi Gerganov et l'équipe qui développe llama.cpp ont d'ailleurs rejoint Hugging Face, en gardant le projet open source et la main sur ses choix techniques.",
       "Le 3 septembre 2026, Nvidia a annoncé un accord, signé la veille, pour racheter Hugging Face 12,93 milliards de dollars, dont environ 11,9 milliards pour les actionnaires et un programme d'actions pouvant aller jusqu'à environ 1 milliard pour retenir les salariés. D'après le formulaire déposé par Nvidia auprès de la SEC, le gendarme boursier américain, la clôture est attendue au premier semestre 2027, sous réserve du feu vert des régulateurs. Nvidia s'y engage à garder la plateforme ouverte, à laisser chacun y publier et télécharger les modèles de son choix et à continuer d'y soutenir les autres fabricants de puces."
     ],
     "office": [
@@ -6646,6 +6725,10 @@ window.DICO_TERMS = [
       {
         "label": "Hugging Face, documentation Pickle Scanning (risque d'exécution de code arbitraire au chargement d'un fichier pickle)",
         "url": "https://huggingface.co/docs/hub/security-pickle"
+      },
+      {
+        "label": "Hugging Face, GGML and llama.cpp join HF to ensure the long-term progress of Local AI, 20 février 2026 (Georgi Gerganov et son équipe rejoignent Hugging Face ; llama.cpp reste 100 % open source, l'équipe garde son autonomie et la direction technique)",
+        "url": "https://huggingface.co/blog/ggml-joins-hf"
       }
     ]
   },
@@ -7299,12 +7382,16 @@ window.DICO_TERMS = [
       "prompting",
       "prompt design",
       "chain-of-thought prompting",
-      "role prompting"
+      "role prompting",
+      "meta-prompting",
+      "XML tags"
     ],
     "aliasesFr": [
       "ingénierie de prompt",
       "rédaction de prompt",
-      "art du prompt"
+      "art du prompt",
+      "méta-prompt",
+      "balises XML"
     ],
     "jargon": [
       {
@@ -7723,7 +7810,8 @@ window.DICO_TERMS = [
       "context-engineering",
       "human-in-the-loop",
       "tool-use",
-      "fenetre-de-contexte"
+      "fenetre-de-contexte",
+      "deep-research"
     ],
     "short": "Un système multi-agents répartit une tâche entre un agent principal qui découpe le travail et des sous-agents qui traitent chacun un morceau dans leur propre contexte.",
     "image": "Pour le pot de départ de Michel, Chantal a écrit au tableau une ligne par personne, salé, sucré, boissons, gobelets, et chacun a cuisiné chez soi sans parler aux autres. Le pot de Noël, sur un simple « chacun apporte un truc », a fini avec sept quiches.",
@@ -7929,7 +8017,8 @@ window.DICO_TERMS = [
       "lois-d-echelle",
       "compute",
       "cout-d-une-requete",
-      "inference"
+      "inference",
+      "deep-research"
     ],
     "short": "Le test-time compute est le calcul dépensé au moment où le modèle répond ; un brouillon plus long ou plusieurs réponses comparées le rendent plus juste sur les problèmes difficiles.",
     "image": "Kubrick refait la même scène de Shining des dizaines de fois, avec les mêmes acteurs et le même texte, puis garde la meilleure prise. Personne n'a appris un mot de plus entre la première et la dernière, et c'est la ligne « pellicule » du budget qui a enflé.",
@@ -9003,7 +9092,8 @@ window.DICO_TERMS = [
       "prompt-injection",
       "harness",
       "agent",
-      "tool-use"
+      "tool-use",
+      "computer-use"
     ],
     "short": "Le sandbox enferme un agent dans un espace isolé qui limite ses fichiers et son réseau, et les permissions décident des actions qu'il lance seul, sur demande ou jamais.",
     "image": "Chez Odette, les petits se servent seuls dans la boîte à biscuits, demandent pour le chocolat et ne touchent jamais au placard du haut. Le placard du haut est aussi fermé à clé, parce qu'Odette a élevé trois enfants et sait ce que vaut un « jamais ».",
@@ -9075,7 +9165,8 @@ window.DICO_TERMS = [
     "aliasesFr": [
       "plan",
       "décomposition en tâches",
-      "liste de tâches"
+      "liste de tâches",
+      "mode plan"
     ],
     "jargon": [
       {
@@ -9566,7 +9657,8 @@ window.DICO_TERMS = [
       "boucle-agent",
       "swe-bench",
       "agi",
-      "terminal-bench"
+      "terminal-bench",
+      "computer-use"
     ],
     "short": "L'horizon d'autonomie mesure la longueur des tâches, comptée en temps de travail d'un expert humain, qu'un agent d'IA réussit seul une fois sur deux, selon la méthode de METR.",
     "image": "À la compta, on dit que le stagiaire « tient des dossiers de trois jours », ceux qui prennent trois jours à Odile. Il les rend avant midi, et une fois sur deux, Odile reprend tout.",
@@ -10963,7 +11055,8 @@ window.DICO_TERMS = [
       "encodeur-decodeur",
       "deep-learning",
       "inference",
-      "auto-attention"
+      "auto-attention",
+      "lora"
     ],
     "short": "Un modèle de diffusion apprend à retirer du bruit, puis fabrique une image, une vidéo ou un texte en partant d'un bruit pur qu'il nettoie en plusieurs passes.",
     "image": "L'oncle Jacky tourne l'antenne de la vieille télé en répétant « c'est le match », et à chaque quart de tour la neige ressemble un peu plus à une pelouse, puis à des joueurs. Aucune chaîne n'était branchée ; la télé a tiré le match de la neige.",
@@ -12986,7 +13079,7 @@ window.DICO_TERMS = [
     "imagine": "Un générateur de vidéo te montre une ruelle de Kyoto sous la pluie, filmée à hauteur d'épaule, et tu la regardes défiler sans rien pouvoir y faire. Dans Project Genie, que Google a ouvert en janvier 2026 à ses abonnés Ultra américains, la même ruelle attend ta touche. Tu tournes à gauche, le modèle invente la rue qui s'y trouve image après image, et quand tu reviens sur tes pas quarante secondes plus tard, la lanterne rouge pend toujours au même mur.",
     "full": [
       "L'idée est plus ancienne que l'informatique moderne. En 1943, le psychologue écossais Kenneth Craik suggérait qu'un organisme qui porte dans sa tête un « modèle réduit » de la réalité et de ses propres actions peut essayer plusieurs options et réagir aux situations avant qu'elles arrivent. En mars 2018, David Ha et Jürgen Schmidhuber en ont tiré un programme. Leur agent apprenait un petit modèle du jeu Doom à partir de 10 000 parties jouées au hasard, s'entraînait à esquiver les boules de feu à l'intérieur de ce rêve, puis tenait bien au-delà du seuil de réussite dans le vrai jeu. Le rêve avait des défauts que l'agent a exploités, puisque dans certaines simulations les monstres ne tiraient jamais, et il a fallu rendre le rêve plus incertain pour qu'il cesse d'en profiter.",
-      "Le mot recouvre aujourd'hui trois familles. La première génère des mondes qu'on explore. Genie 3, présenté par Google DeepMind le 5 août 2025, produit 24 images par seconde en 720p en réponse à tes commandes, garde un monde cohérent pendant quelques minutes et se souvient de ce qu'il a montré jusqu'à une minute plus tôt. La deuxième sert de simulateur. En février 2026, Waymo a adapté Genie 3 pour fabriquer, caméras et lidar compris, des scènes que ses voitures ne croisent presque jamais, une tornade, un éléphant, une rue inondée. Il s'en sert aussi pour rejouer une scène réelle en demandant ce qui se serait passé si la voiture avait moins hésité. La troisième ne fabrique aucune image. DreamerV3, publié dans Nature en avril 2025, apprend un modèle compact de son environnement et améliore son comportement en imaginant la suite, ce qui en a fait le premier programme à extraire des diamants dans Minecraft sans aucune donnée humaine.",
+      "Le mot recouvre aujourd'hui trois familles. La première génère des mondes qu'on explore. Genie 3, présenté par Google DeepMind le 5 août 2025, produit 24 images par seconde en 720p en réponse à tes commandes, garde un monde cohérent pendant quelques minutes et se souvient de ce qu'il a montré jusqu'à une minute plus tôt. Marble, que la start-up World Labs ouvre au public le 12 novembre 2025, fabrique au contraire un vrai décor en 3D, qu'on exporte en Gaussian splats. Ce format, publié par l'Inria en 2023, décrit la scène par des millions de particules floues et semi-transparentes, ajustées jusqu'à ce que chaque vue ressemble à une photo. La deuxième sert de simulateur. En février 2026, Waymo a adapté Genie 3 pour fabriquer, caméras et lidar compris, des scènes que ses voitures ne croisent presque jamais, une tornade, un éléphant, une rue inondée. Il s'en sert aussi pour rejouer une scène réelle en demandant ce qui se serait passé si la voiture avait moins hésité. La troisième ne fabrique aucune image. DreamerV3, publié dans Nature en avril 2025, apprend un modèle compact de son environnement et améliore son comportement en imaginant la suite, ce qui en a fait le premier programme à extraire des diamants dans Minecraft sans aucune donnée humaine.",
       "Un LLM prédit du texte et non l'état d'un environnement, et la question de savoir s'il cache malgré tout un modèle du monde fait l'objet de la fiche « L'IA comprend ». Yann LeCun soutient depuis 2022 qu'il faudra apprendre sur la vidéo et le monde physique, et juge les LLM « une impasse » sur la route de la superintelligence. Parti de Meta fin 2025, il a levé 1,03 milliard de dollars en mars 2026 pour AMI Labs, une start-up basée à Paris qui n'a pas encore de produit et dont le directeur général prévient qu'il faudra des années avant des applications commerciales. Les démonstrations restent courtes, avec une minute par monde dans Project Genie, que Google décrit lui-même comme imparfait en réalisme et en physique."
     ],
     "then": "Le 4 décembre 2024, Genie 2 générait des mondes jouables cohérents jusqu'à une minute, la plupart des exemples montrés durant 10 à 20 secondes, et seule une version allégée tournait en temps réel. Huit mois plus tard, Genie 3 tenait plusieurs minutes en temps réel, et en 2026 il sert de base au simulateur de conduite de Waymo et à Project Genie, que le public peut essayer.",
@@ -13042,6 +13135,14 @@ window.DICO_TERMS = [
       {
         "label": "The Decoder, d'après un entretien de Yann LeCun au Financial Times, 3 janvier 2026 (« LLMs basically are a dead end when it comes to superintelligence » ; départ de Meta pour AMI Labs)",
         "url": "https://the-decoder.com/you-certainly-dont-tell-a-researcher-like-me-what-to-do-says-lecun-as-he-exits-meta-for-his-own-startup/"
+      },
+      {
+        "label": "World Labs, Marble: A Multimodal World Model, 12 novembre 2025 (ouvert à tous ; mondes 3D créés à partir de texte, d'images, de vidéo ou d'une maquette 3D ; export en Gaussian splats, maillages ou vidéos ; les splats, représentation la plus fidèle, décrivent la scène par un grand nombre de particules semi-transparentes)",
+        "url": "https://www.worldlabs.ai/blog/marble-world-model"
+      },
+      {
+        "label": "Kerbl, Kopanas, Leimkühler et Drettakis (Inria, Université Côte d'Azur, MPI Informatik), 3D Gaussian Splatting for Real-Time Radiance Field Rendering, SIGGRAPH 2023 (scène représentée par des gaussiennes 3D optimisées à partir de photos, rendu temps réel en 1080p)",
+        "url": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/"
       }
     ]
   },
@@ -14836,7 +14937,8 @@ window.DICO_TERMS = [
     ],
     "aliasesFr": [
       "workflow ou agent",
-      "chaîne déterministe"
+      "chaîne déterministe",
+      "chaîne de prompts"
     ],
     "jargon": [
       {
@@ -15439,6 +15541,311 @@ window.DICO_TERMS = [
       {
         "label": "Scott Alexander, The Extinction Tournament, Astral Codex Ten, 2023 (résumé du rapport XPT : extinction par l'IA d'ici 2100 à 3 % pour les experts et 0,38 % pour les superforecasters, soit 3 / 0,38 = 7,9, environ huit fois moins ; 1 % pour les superforecasters si l'AGI existe en 2070 ; rappelés en mai 2023, la plupart n'ont pas changé d'avis)",
         "url": "https://www.astralcodexten.com/p/the-extinction-tournament"
+      }
+    ]
+  },
+  {
+    "id": "lora",
+    "status": "live",
+    "num": "158",
+    "title": "LoRA",
+    "en": "Low-Rank Adaptation",
+    "aliases": [
+      "LoRA",
+      "QLoRA",
+      "LoRA adapter",
+      "PEFT",
+      "parameter-efficient fine-tuning"
+    ],
+    "aliasesFr": [
+      "adaptation de rang faible",
+      "adaptateur LoRA"
+    ],
+    "jargon": [
+      {
+        "say": "rank 16",
+        "means": "le rang, l'épaisseur des deux petites matrices : plus il est élevé, plus l'adaptateur peut apprendre, et plus son fichier pèse lourd"
+      },
+      {
+        "say": "adapter",
+        "means": "l'adaptateur, le fichier qui contient les petites matrices entraînées et qui se distribue à part du modèle de base"
+      },
+      {
+        "say": "merge",
+        "means": "fusionner l'adaptateur dans les paramètres du modèle de base, pour obtenir un seul modèle qui répond aussi vite que l'original"
+      },
+      {
+        "say": "QLoRA",
+        "means": "un LoRA entraîné sur un modèle de base quantifié en 4 bits, ce qui a permis en 2023 d'affiner un modèle de 65 milliards de paramètres sur un seul GPU de 48 Go"
+      }
+    ],
+    "cat": "entrainement",
+    "links": [
+      "fine-tuning",
+      "quantization",
+      "open-weights",
+      "modele-de-diffusion",
+      "gpu",
+      "post-entrainement"
+    ],
+    "solutions": [
+      {
+        "name": "PEFT (Hugging Face)",
+        "kind": "bibliothèque open source",
+        "url": "https://huggingface.co/docs/peft/index"
+      },
+      {
+        "name": "Unsloth",
+        "kind": "bibliothèque open source",
+        "url": "https://github.com/unslothai/unsloth"
+      },
+      {
+        "name": "Tinker (Thinking Machines)",
+        "kind": "plateforme cloud",
+        "url": "https://thinkingmachines.ai/tinker/"
+      },
+      {
+        "name": "vLLM, service multi-LoRA",
+        "kind": "serveur d'inférence",
+        "url": "https://docs.vllm.ai/en/latest/features/lora.html"
+      }
+    ],
+    "short": "LoRA est une méthode de fine-tuning qui fige les paramètres d'un modèle et n'entraîne que deux petites matrices ajoutées à côté, un adaptateur léger qu'on retire ou échange à volonté.",
+    "image": "« Je ne vais pas changer de fût à chaque client, alors qu'un trait de grenadine fait un tango de ta pression et qu'un trait de pêche en fait une bière pêche pour la table d'à côté, au même robinet. »",
+    "imagineForm": "A",
+    "imagine": "Llama 3.1 8B occupe 16 Go sur ton disque, et un LoRA de rang 16 posé sur toutes ses couches pèse 84 Mo. Si le modèle était un roman de 400 pages, l'adaptateur tiendrait sur deux feuillets glissés entre les pages, qu'on retire sans abîmer le livre.",
+    "full": [
+      "LoRA, pour Low-Rank Adaptation, a été publiée en juin 2021 par des chercheurs de Microsoft, au moment où affiner GPT-3 obligeait à stocker et servir une copie de ses 175 milliards de paramètres par usage. La méthode laisse chaque grande matrice de paramètres telle quelle et apprend à côté une correction, écrite comme le produit de deux matrices très minces. Leur épaisseur s'appelle le rang, et à 16, une matrice de 4 096 sur 4 096 reçoit une correction de 131 072 paramètres au lieu de 16,8 millions.",
+      "Ce petit fichier explique le succès de la méthode bien au-delà du texte. En janvier 2023, Hugging Face la portait sur Stable Diffusion, où un style ou un personnage appris tenait dans 3,29 Mo, mille fois moins que le réseau d'origine, et les communautés d'images se sont mises à s'échanger des LoRA. En mai 2023, QLoRA l'a combinée à un modèle quantifié en 4 bits pour affiner 65 milliards de paramètres sur un seul GPU. Un même serveur peut aussi garder en mémoire un modèle de base et des dizaines d'adaptateurs, comme Apple Intelligence, qui charge à la volée un adaptateur par fonction sur son modèle d'environ 3 milliards de paramètres.",
+      "Une correction aussi mince a ses limites. En mai 2024, une équipe de Databricks et Columbia a constaté que sur du code et des maths, avec beaucoup de données, LoRA apprenait nettement moins qu'un fine-tuning complet, mais oubliait aussi moins ce que le modèle savait déjà faire. LoRA convient donc pour apprendre un format, un ton ou une tâche, et le fine-tuning complet garde l'avantage quand il faut faire entrer des milliards de tokens nouveaux."
+    ],
+    "then": "En 2024, LoRA passait pour une version au rabais du fine-tuning, que l'étude de Databricks trouvait en retrait sur le code et les maths. En septembre 2025, Thinking Machines a montré qu'elle fait jeu égal sur la plupart des post-entraînements à condition de la poser sur toutes les couches, et l'a mise au cœur de Tinker, son service de fine-tuning lancé le 1er octobre suivant.",
+    "office": [
+      {
+        "who": "q",
+        "text": "Trois clients veulent chacun leur modèle maison, on prend trois serveurs ?"
+      },
+      {
+        "who": "a",
+        "text": "Garde un seul modèle de base et entraîne un LoRA par client ; vLLM sert les trois adaptateurs depuis la même machine, et tu ne paies qu'une fois la mémoire du gros modèle."
+      }
+    ],
+    "avoid": "« Un LoRA, c'est un petit modèle. » Un adaptateur ne sait rien faire seul, puisqu'il ne contient qu'une correction des paramètres du modèle de base pour lequel il a été entraîné, et il faut charger ce modèle en entier pour s'en servir.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Hu et al. (Microsoft), LoRA: Low-Rank Adaptation of Large Language Models, 17 juin 2021 (poids pré-entraînés figés, matrices de décomposition de rang entraînables ; sur GPT-3 175B, paramètres entraînables divisés par 10 000 et mémoire GPU par 3 ; pas de latence ajoutée à l'inférence)",
+        "url": "https://arxiv.org/abs/2106.09685"
+      },
+      {
+        "label": "Hugging Face, Using LoRA for Efficient Stable Diffusion Fine-Tuning, 26 janvier 2023 (technique introduite par des chercheurs de Microsoft ; poids entraînés dans un fichier de 3,29 Mo, environ mille fois moins que le UNet d'origine)",
+        "url": "https://huggingface.co/blog/lora"
+      },
+      {
+        "label": "Dettmers et al., QLoRA: Efficient Finetuning of Quantized LLMs, 23 mai 2023 (modèle de 65 milliards de paramètres affiné sur un seul GPU de 48 Go, modèle de base figé et quantifié en 4 bits)",
+        "url": "https://arxiv.org/abs/2305.14314"
+      },
+      {
+        "label": "Apple Machine Learning Research, Introducing Apple's On-Device and Server Foundation Models, juin 2024 (adaptateurs chargés et échangés à la volée, un par fonction ; pour le modèle embarqué d'environ 3 milliards de paramètres, un adaptateur de rang 16 pèse quelques dizaines de mégaoctets)",
+        "url": "https://machinelearning.apple.com/research/introducing-apple-foundation-models"
+      },
+      {
+        "label": "Biderman et al. (Databricks, Columbia), LoRA Learns Less and Forgets Less, 15 mai 2024 (code et maths : LoRA nettement en dessous du fine-tuning complet, mais oublie moins les tâches hors domaine)",
+        "url": "https://arxiv.org/abs/2405.09673"
+      },
+      {
+        "label": "John Schulman et Thinking Machines, LoRA Without Regret, 29 septembre 2025 (LoRA égale le fine-tuning complet sur des jeux de post-entraînement de taille courante si elle est appliquée à toutes les couches, MLP compris, et en renforcement même à petit rang ; vLLM et SGLang servent plusieurs adaptateurs sur un même serveur)",
+        "url": "https://thinkingmachines.ai/blog/lora/"
+      },
+      {
+        "label": "Thinking Machines, Announcing Tinker, 1er octobre 2025 (API de fine-tuning de modèles open weights ; « We use LoRA » pour partager la puissance de calcul entre plusieurs entraînements)",
+        "url": "https://thinkingmachines.ai/blog/announcing-tinker/"
+      },
+      {
+        "label": "Configuration de Llama 3.1 8B sur Hugging Face (hidden_size 4 096, intermediate_size 14 336, 32 couches, 8 têtes clé-valeur, soit 8,03 milliards de paramètres et 16,06 Go en bfloat16 ; LoRA de rang 16 sur les 7 matrices de chaque couche = 16 × (2 × 8 192 + 2 × 5 120 + 3 × 18 432) × 32 = 41 943 040 paramètres, 84 Mo en bfloat16 ; 16,06 Go / 84 Mo = 191, et 400 pages / 191 = 2,1 pages ; une matrice 4 096 × 4 096 = 16 777 216 paramètres, sa correction de rang 16 = 16 × 8 192 = 131 072)",
+        "url": "https://huggingface.co/unsloth/Meta-Llama-3.1-8B/blob/main/config.json"
+      }
+    ]
+  },
+  {
+    "id": "computer-use",
+    "status": "live",
+    "num": "159",
+    "title": "Computer use",
+    "en": "Computer use",
+    "aliases": [
+      "computer-use agent",
+      "CUA",
+      "browser use",
+      "browser agent",
+      "GUI agent",
+      "agentic browser"
+    ],
+    "aliasesFr": [
+      "agent qui pilote l'ordinateur",
+      "agent navigateur",
+      "utilisation de l'ordinateur"
+    ],
+    "jargon": [
+      {
+        "say": "OSWorld",
+        "means": "le banc d'essai de référence, 369 tâches réelles sur un vrai ordinateur (tableur, navigateur, messagerie), que des humains réussissent à 72 %"
+      },
+      {
+        "say": "grounding",
+        "means": "l'ancrage, savoir à quel endroit de l'écran se trouve le bouton dont on parle ; c'est là que ces agents échouaient le plus en 2024"
+      },
+      {
+        "say": "a11y tree",
+        "means": "l'arbre d'accessibilité, la description en texte des boutons et des champs prévue pour les lecteurs d'écran, que certains agents lisent en plus de la capture"
+      },
+      {
+        "say": "agentic browser",
+        "means": "un navigateur dans lequel un agent clique et remplit les formulaires à ta place, comme Comet de Perplexity ou Claude dans Chrome"
+      }
+    ],
+    "cat": "agents",
+    "links": [
+      "agent",
+      "prompt-injection",
+      "sandbox-et-permissions",
+      "webmcp",
+      "boucle-agent",
+      "horizon-d-autonomie",
+      "deep-research"
+    ],
+    "short": "Le computer use permet à un modèle d'utiliser un ordinateur comme une personne, en regardant des captures d'écran puis en bougeant la souris, en cliquant et en tapant au clavier.",
+    "image": "Au téléphone, Nadia guide son père pour envoyer une photo à la cousine. Après chaque geste, il lui envoie une capture de son écran, elle répond « appuie sur le rond bleu en bas à droite », il appuie et renvoie une capture. Il leur faut vingt minutes, mais la méthode marche sur n'importe quel téléphone, même un modèle qu'elle n'a jamais vu.",
+    "imagineForm": "D",
+    "imagine": "« Combien coûte le Paris-Marseille de vendredi sur le site de la compagnie ? », demandes-tu à l'agent. Quatre minutes plus tard, il répond : « J'ai refusé les cookies, fermé la fenêtre de la newsletter et décliné l'application ; j'ouvre le calendrier. »",
+    "full": [
+      "Un agent qui fait du computer use ne passe par aucune API. Il reçoit une capture d'écran, choisit un geste, cliquer à tel endroit, taper tel texte ou faire défiler, puis reçoit la capture suivante, et recommence jusqu'à la fin de la tâche. Anthropic a ouvert la première version publique le 22 octobre 2024, en la décrivant comme parfois laborieuse et sujette aux erreurs, et OpenAI a suivi en janvier 2025 avec Operator, d'abord réservé aux abonnés à 200 dollars par mois.",
+      "L'intérêt est d'atteindre tous les logiciels qui n'ont jamais prévu d'API, de l'outil RH maison au vieux logiciel de caisse. Pour le mesurer, des chercheurs de l'université de Hong Kong ont publié en avril 2024 OSWorld, 369 tâches réelles du tableur à la messagerie, que des humains réussissent à 72 %. Les meilleurs modèles n'en réussissaient alors que 12 %, surtout parce qu'ils ne savaient pas situer à l'écran le bouton qu'ils voulaient cliquer.",
+      "Un agent qui lit l'écran lit aussi tout ce que l'écran contient, y compris une consigne qu'un inconnu y a glissée. Dans les tests qu'Anthropic a publiés en août 2025, un faux mail réclamant un ménage de la boîte « pour raisons de sécurité » a suffi à faire supprimer des messages par Claude dans Chrome. Sur l'ensemble des attaques testées, 23,6 % réussissaient avant les protections, et encore 11,2 % après. D'où les garde-fous devenus courants, avec des sites autorisés un par un et une confirmation avant d'acheter, de publier ou de partager une donnée personnelle."
+    ],
+    "then": "En octobre 2024, Claude 3.5 Sonnet réussissait 14,9 % des tâches d'OSWorld à partir des seules captures d'écran, loin des 72 % des humains. Le 11 décembre 2025, un agent de la start-up Simular passait pour la première fois la barre humaine sur la version vérifiée du test, et au classement d'octobre 2026 Claude Fable 5 y atteint 86 % sans aucun outillage autour du modèle. Une version 2.0, plus difficile, est sortie le 26 juin 2026.",
+    "office": [
+      {
+        "who": "q",
+        "text": "L'outil de notes de frais n'a pas d'API, on demande à un agent de les saisir à notre place ?"
+      },
+      {
+        "who": "a",
+        "text": "C'est le bon cas d'usage, à condition de lui donner un compte à part aux droits limités et de valider chaque envoi ; et le jour où l'outil ouvre une API, passe par elle, ce sera plus rapide et plus fiable."
+      }
+    ],
+    "avoid": "« Il voit l'écran, il comprend donc le site comme moi. » L'agent reçoit une suite d'images fixes et déduit des pixels où cliquer, et il prend au sérieux tout texte qu'il voit, y compris une consigne cachée dans la page par quelqu'un d'autre que toi.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Anthropic, Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku, 22 octobre 2024 (bêta publique ; Claude regarde l'écran, bouge le curseur, clique et tape ; « at times cumbersome and error-prone » ; OSWorld 14,9 % en captures d'écran seules, 22,0 % avec plus d'étapes)",
+        "url": "https://www.anthropic.com/news/3-5-models-and-computer-use"
+      },
+      {
+        "label": "The Batch (DeepLearning.AI), OpenAI's Operator automates online tasks with a new AI agent, janvier 2025 (Operator en préversion pour ChatGPT Pro à 200 dollars par mois ; modèle CUA à 38,1 % sur OSWorld)",
+        "url": "https://charonhub.deeplearning.ai/openais-operator-automates-online-tasks-with-a-new-ai-agent/"
+      },
+      {
+        "label": "Xie et al. (université de Hong Kong, Salesforce, CMU, Waterloo), OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments, 11 avril 2024 (369 tâches ; humains à 72,36 %, meilleur modèle à 12,24 %, en difficulté surtout sur le grounding)",
+        "url": "https://arxiv.org/abs/2404.07972"
+      },
+      {
+        "label": "OSWorld, site officiel, consulté le 20 octobre 2026 (OSWorld-Verified depuis le 28 juillet 2025 ; OSWorld 2.0 publié le 26 juin 2026)",
+        "url": "https://os-world.github.io/"
+      },
+      {
+        "label": "OSWorld-Verified, tableau des résultats officiels (fichier du site), consulté le 20 octobre 2026 (premier score au-dessus de 72,36 % : Agent S3 de Simular, 72,58 %, 11 décembre 2025 ; claude-fable-5, « General model », sans arbre d'accessibilité ni action par code, 85,96 %)",
+        "url": "https://os-world.github.io/static/data/osworld_verified_results.xlsx"
+      },
+      {
+        "label": "Anthropic, Piloting Claude for Chrome, 25 août 2025 (123 tests d'injection de prompt ; faux mail de « mailbox hygiene » qui fait supprimer des mails ; 23,6 % d'attaques réussies sans protections, 11,2 % avec ; autorisations par site, confirmation avant de publier, d'acheter ou de partager des données personnelles)",
+        "url": "https://www.anthropic.com/news/claude-for-chrome"
+      }
+    ]
+  },
+  {
+    "id": "deep-research",
+    "status": "live",
+    "num": "160",
+    "title": "Deep research",
+    "en": "Deep research",
+    "aliases": [
+      "deep research agent",
+      "research agent",
+      "deep search"
+    ],
+    "aliasesFr": [
+      "recherche approfondie",
+      "agent de recherche"
+    ],
+    "jargon": [
+      {
+        "say": "research plan",
+        "means": "le plan de recherche que l'agent propose avant de partir, et que Gemini te laisse corriger ou valider"
+      },
+      {
+        "say": "BrowseComp",
+        "means": "un test d'OpenAI de 1 266 questions dont la réponse est enfouie sur le web ; des humains entraînés ont abandonné 71 % d'entre elles après deux heures de recherche"
+      },
+      {
+        "say": "citation accuracy",
+        "means": "la part des citations qui soutiennent vraiment la phrase à laquelle elles sont accrochées, entre 40 et 80 % selon les systèmes dans l'audit DeepTRACE de 2025"
+      }
+    ],
+    "cat": "agents",
+    "links": [
+      "agent",
+      "multi-agents",
+      "hallucination",
+      "test-time-compute",
+      "computer-use",
+      "cout-d-une-requete"
+    ],
+    "short": "Le deep research confie une question à un agent qui cherche seul sur le web pendant plusieurs minutes, lit des dizaines de sources et rend un rapport avec ses citations.",
+    "image": "Le stagiaire à qui tu as demandé une note sur les concurrents revient avant la pause café avec quarante pages et quatre-vingts liens en bas de page. Il a vraiment tout lu, et le chiffre clé de la page 3 vient d'un lien qui parle d'autre chose.",
+    "imagineForm": "B",
+    "imagine": "Pose en mode recherche approfondie, à ChatGPT, Gemini ou Claude, une question dont tu connais déjà la réponse, l'histoire de ta commune ou les produits de ton entreprise. Pendant les minutes qu'il y passe, regarde défiler les pages qu'il ouvre, puis prends trois phrases du rapport et ouvre la source accrochée à chacune pour y chercher ce qu'elle est censée dire.",
+    "full": [
+      "Google a ouvert la voie le 11 décembre 2024 avec Deep Research dans Gemini, qui propose d'abord un plan de recherche à valider, puis navigue pendant quelques minutes et rend un rapport avec les liens de ses sources. OpenAI a lancé le sien en février 2025 sur son modèle o3, avec des recherches de 5 à 30 minutes, et Perplexity le 14 février, en l'ouvrant gratuitement dans une version limitée.",
+      "Sous le capot tourne une boucle d'agent qui cherche, lit, prend des notes et choisit la requête suivante, et le résultat dépend surtout de la quantité de lecture. Anthropic a constaté en juin 2025 que le nombre de tokens consommés expliquait à lui seul 80 % des écarts de score sur BrowseComp, un test de questions dont la réponse est enfouie sur le web. Il répartit donc la lecture entre plusieurs sous-agents, au prix d'environ 15 fois plus de tokens qu'une conversation.",
+      "Sur ce test, des humains entraînés abandonnaient 71 % des questions après deux heures de recherche, et le modèle de deep research d'OpenAI en résolvait 51,5 % en avril 2025. Un rapport bien présenté n'est pas pour autant vérifié. En septembre 2025, l'audit DeepTRACE trouvait ces rapports souvent partiaux sur les sujets débattus, et la part des citations qui soutiennent vraiment leur phrase y variait de 40 à 80 % selon les systèmes."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Je lance un deep research sur le marché et j'envoie le rapport au comité demain ?"
+      },
+      {
+        "who": "a",
+        "text": "Envoie-le après avoir ouvert les sources des cinq chiffres que le comité va retenir ; le rapport t'épargne la journée de lecture, et il te reste la demi-heure de vérification."
+      }
+    ],
+    "avoid": "« Il a cité ses sources, donc c'est vérifié. » Une citation montre où l'agent est passé, sans garantir que la page dit ce qu'il affirme, et dans l'audit DeepTRACE jusqu'à 60 % des citations d'un même système ne soutenaient pas leur phrase.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Google, Try Deep Research and our new experimental model in Gemini, 11 décembre 2024 (plan de recherche à réviser ou approuver, navigation pendant quelques minutes, rapport avec liens vers les sources)",
+        "url": "https://blog.google/products/gemini/google-gemini-deep-research/"
+      },
+      {
+        "label": "Fortune, OpenAI's deep research can complete 26% of Humanity's Last Exam, 12 février 2025 (agent fondé sur o3, recherches de 5 à 30 minutes ; produit concurrent lancé par Google en décembre)",
+        "url": "https://fortune.com/2025/02/12/openai-deepresearch-humanity-last-exam/"
+      },
+      {
+        "label": "Perplexity, Introducing Perplexity Deep Research, 14 février 2025 (des dizaines de recherches, des centaines de sources, 2 à 4 minutes ; gratuit avec un nombre limité de réponses par jour)",
+        "url": "https://www.perplexity.ai/hub/blog/introducing-perplexity-deep-research"
+      },
+      {
+        "label": "Anthropic, How we built our multi-agent research system, 13 juin 2025 (la consommation de tokens explique 80 % de la variance sur BrowseComp ; un système multi-agents consomme environ 15 fois plus de tokens qu'une conversation)",
+        "url": "https://www.anthropic.com/engineering/multi-agent-research-system"
+      },
+      {
+        "label": "Wei et al. (OpenAI), BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents, 16 avril 2025 (1 266 questions ; des formateurs humains abandonnent 888 questions sur 1 255, soit 70,8 %, après deux heures ; Deep Research à 51,5 %, GPT-4o avec navigation à 1,9 %)",
+        "url": "https://arxiv.org/abs/2504.12516"
+      },
+      {
+        "label": "Venkit et al., DeepTRACE: Auditing Deep Research AI Systems for Tracking Reliability Across Citations and Evidence, 2 septembre 2025 (réponses souvent partiales sur les questions débattues ; exactitude des citations de 40 à 80 % selon les systèmes, donc de 20 à 60 % de citations qui ne soutiennent pas leur phrase)",
+        "url": "https://arxiv.org/abs/2509.04499"
       }
     ]
   },

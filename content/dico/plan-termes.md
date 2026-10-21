@@ -46,6 +46,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Constitutional AI | constitutional AI | publié | | | le règlement intérieur du studio |
 | Distillation | distillation | publié | | ENT | le groupe de reprise |
 | Fine-tuning | fine-tuning | publié | | LLM, HO, ULT, ENT, CAR | régler la console pour un genre |
+| LoRA | Low-Rank Adaptation, QLoRA | publié | | | le sirop dans la pression, le fût reste le même |
 | MoE | mixture of experts | publié | | AGT, CAR | l'orchestre de solistes |
 | Architectures hybrides | hybrid architectures (Mamba, Gated DeltaNet) | publié | | | |
 | Petits modèles embarqués | small / on-device models | dans slm | | ENT, LLM | le groupe acoustique |
@@ -63,7 +64,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Test-time compute | test-time compute | publié | | AGT, ULT, CAR | répéter avant de jouer |
 | Modèles de raisonnement, chain-of-thought | reasoning models, CoT | publié | | AGT, HO, ULT, CAR, ENT | le brouillon avant la prise |
 | Speculative decoding | speculative decoding | publié | | | |
-| Quantization | quantization | publié | | HO, CAR | du WAV au MP3 |
+| Quantization | quantization, GGUF | publié | | HO, CAR | du WAV au MP3 |
 | Coût d'une requête | cost per request | publié | | | la facture du studio |
 | Latence vs débit | latency vs throughput | publié | | | |
 | Apprentissage en contexte (few-shot) | in-context learning, few-shot | publié | | LLM, HO, CAR | jouer deux mesures au groupe pour lui donner le style |
@@ -113,6 +114,8 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Context engineering | context engineering | publié | | AGT, ENT, CAR | bien remplir la bande |
 | Mémoire externe | external memory | publié (dans memoire) | | AGT, ENT, CAR | le carnet du groupe |
 | Multi-agents | multi-agent | publié | | AGT, ENT, CAR | plusieurs groupes sur la même tournée |
+| Computer use | computer use, browser agent | publié | | | la fille qui guide son père au téléphone, capture après capture |
+| Deep research | deep research, recherche approfondie | publié | | | le stagiaire qui a tout lu avant la pause café |
 | Evals | evals | publié | | AGT, CAR | les auditions |
 | Benchmarks | benchmarks | publié | | AGT, ULT, HO | le classement des ventes |
 | Sandbox et permissions | sandbox, permissions | publié | | AGT, ENT, CAR | la cabine insonorisée |
@@ -178,7 +181,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 
 Trente termes ajoutés, tous au statut « prévu » : 6 en Fondations, 2 en Entraînement, 1 en Inférence, 2 en Comportements et limites, 2 en Alignement et sécurité, 6 en Agents et produit, 6 en Écosystème et industrie, 2 en Méthode, 3 mythes. Un seul passe en P1 par thème au plus, quand la notion manque vraiment au lecteur : LLM, Intelligence en dents de scie, Agent vs workflow, Prompt et prompt engineering. Les statuts et priorités des lignes existantes n'ont pas bougé.
 
-Plusieurs notions des livres sont créditées sur une ligne existante plutôt qu'ajoutées, parce qu'elles n'auraient pas leur propre « Imagine » : le modèle de base va dans Pré-entraînement, l'autorégression dans Prédiction du mot suivant, le top-k et le non-déterminisme dans Température, la descente de gradient et la fonction de coût dans Entraînement, LoRA dans Fine-tuning, le « perdu au milieu » dans Fenêtre de contexte (la fiche publiée le traite déjà), la recherche sémantique et la base vectorielle dans Embedding et RAG, le modèle de récompense dans RLHF, la réflexion dans Boucle agent, A2A dans MCP, la confiance calibrée dans Human-in-the-loop, le moindre privilège dans Sandbox, la loi de Goodhart dans Reward hacking et Benchmaxxing, la trajectoire et pass^k dans Evals.
+Plusieurs notions des livres sont créditées sur une ligne existante plutôt qu'ajoutées, parce qu'elles n'auraient pas leur propre « Imagine » : le modèle de base va dans Pré-entraînement, l'autorégression dans Prédiction du mot suivant, le top-k et le non-déterminisme dans Température, la descente de gradient et la fonction de coût dans Entraînement (LoRA, d'abord rangée dans Fine-tuning, a sa fiche depuis le 19 octobre 2026), le « perdu au milieu » dans Fenêtre de contexte (la fiche publiée le traite déjà), la recherche sémantique et la base vectorielle dans Embedding et RAG, le modèle de récompense dans RLHF, la réflexion dans Boucle agent, A2A dans MCP, la confiance calibrée dans Human-in-the-loop, le moindre privilège dans Sandbox, la loi de Goodhart dans Reward hacking et Benchmaxxing, la trajectoire et pass^k dans Evals.
 
 Termes écartés volontairement, parce qu'ils sont trop pointus pour un lecteur curieux non technique ou qu'ils servent mieux d'exemple que de fiche :
 - **Mécanique interne de l'attention** (requête, clé, valeur ; attention causale ; multi-têtes ; bloc transformer ; couche feedforward) : du détail de construction, que la fiche Auto-attention peut évoquer en une phrase.
