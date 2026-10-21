@@ -8,7 +8,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-21</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -152,7 +152,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/modeles-de-raisonnement/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -170,7 +170,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/agent/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -482,7 +482,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/prompt-engineering/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -584,7 +584,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/planification/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -740,7 +740,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/latence-vs-debit/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -926,7 +926,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/workflow-ou-agent/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -962,7 +962,19 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/lora/</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://neopal.github.io/lexique/computer-use/</loc>
+        <lastmod>2026-10-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://neopal.github.io/lexique/deep-research/</loc>
+        <lastmod>2026-10-21</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>

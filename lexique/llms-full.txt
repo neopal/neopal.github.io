@@ -1,6 +1,6 @@
 # Lexique IA : toutes les définitions
 
-> 158 fiches écrites et sourcées par Pierre-Adrien Lair (https://neopal.github.io/). Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
+> 160 fiches écrites et sourcées par Pierre-Adrien Lair (https://neopal.github.io/). Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
 > Index : https://neopal.github.io/lexique/llms.txt
 
 ## Token
@@ -1482,8 +1482,8 @@ Pour l'actualité, les assistants contournent la limite en cherchant sur le web 
 URL : https://neopal.github.io/lexique/modeles-de-raisonnement/
 Catégorie : Inférence
 En anglais : Reasoning models
-Aussi appelé : chaîne de pensée, modèle qui réfléchit
-Variantes anglaises : reasoning model, thinking model, chain-of-thought, CoT
+Aussi appelé : chaîne de pensée, modèle qui réfléchit, réflexion approfondie
+Variantes anglaises : reasoning model, thinking model, chain-of-thought, CoT, extended thinking
 
 ### Définition courte
 
@@ -1671,7 +1671,7 @@ En 2016, OpenAI montrait un bateau de course virtuel qui, au lieu de finir la co
 URL : https://neopal.github.io/lexique/agent/
 Catégorie : Agents et produit
 En anglais : AI agent
-Aussi appelé : agent IA
+Aussi appelé : agent IA, agentique
 Variantes anglaises : agents, agentic, agentic AI, coding agent
 
 ### Définition courte
@@ -5183,8 +5183,8 @@ Le mot ne dit pas dans quel sens circule le contenu. Claude lit les images mais 
 
 URL : https://neopal.github.io/lexique/prompt-engineering/
 Catégorie : Méthode : travailler avec l'IA
-Aussi appelé : ingénierie de prompt, rédaction de prompt, art du prompt
-Variantes anglaises : prompt, prompting, prompt design, chain-of-thought prompting, role prompting
+Aussi appelé : ingénierie de prompt, rédaction de prompt, art du prompt, méta-prompt, balises XML
+Variantes anglaises : prompt, prompting, prompt design, chain-of-thought prompting, role prompting, meta-prompting, XML tags
 
 ### Définition courte
 
@@ -6344,7 +6344,7 @@ Le sandbox sert aussi le confort, puisqu'une commande enfermée n'a plus besoin 
 URL : https://neopal.github.io/lexique/planification/
 Catégorie : Agents et produit
 En anglais : Planning
-Aussi appelé : plan, décomposition en tâches, liste de tâches
+Aussi appelé : plan, décomposition en tâches, liste de tâches, mode plan
 Variantes anglaises : planning, agent planning, plan mode, task decomposition, to-do list, plan-and-execute, replanning
 
 ### Définition courte
@@ -10107,7 +10107,7 @@ En 2024, l'optimisation automatique visait surtout le prompt, avec des biblioth�
 URL : https://neopal.github.io/lexique/workflow-ou-agent/
 Catégorie : Agents et produit
 En anglais : Workflow vs agent
-Aussi appelé : workflow ou agent, chaîne déterministe
+Aussi appelé : workflow ou agent, chaîne déterministe, chaîne de prompts
 Variantes anglaises : workflow, workflows, agentic workflow, workflow vs agent, deterministic workflow, prompt chaining
 
 ### Définition courte
@@ -10580,3 +10580,129 @@ En 2024, LoRA passait pour une version au rabais du fine-tuning, que l'étude de
 - John Schulman et Thinking Machines, LoRA Without Regret, 29 septembre 2025 (LoRA égale le fine-tuning complet sur des jeux de post-entraînement de taille courante si elle est appliquée à toutes les couches, MLP compris, et en renforcement même à petit rang ; vLLM et SGLang servent plusieurs adaptateurs sur un même serveur) : https://thinkingmachines.ai/blog/lora/
 - Thinking Machines, Announcing Tinker, 1er octobre 2025 (API de fine-tuning de modèles open weights ; « We use LoRA » pour partager la puissance de calcul entre plusieurs entraînements) : https://thinkingmachines.ai/blog/announcing-tinker/
 - Configuration de Llama 3.1 8B sur Hugging Face (hidden_size 4 096, intermediate_size 14 336, 32 couches, 8 têtes clé-valeur, soit 8,03 milliards de paramètres et 16,06 Go en bfloat16 ; LoRA de rang 16 sur les 7 matrices de chaque couche = 16 × (2 × 8 192 + 2 × 5 120 + 3 × 18 432) × 32 = 41 943 040 paramètres, 84 Mo en bfloat16 ; 16,06 Go / 84 Mo = 191, et 400 pages / 191 = 2,1 pages ; une matrice 4 096 × 4 096 = 16 777 216 paramètres, sa correction de rang 16 = 16 × 8 192 = 131 072) : https://huggingface.co/unsloth/Meta-Llama-3.1-8B/blob/main/config.json
+
+## Computer use
+
+URL : https://neopal.github.io/lexique/computer-use/
+Catégorie : Agents et produit
+Aussi appelé : agent qui pilote l'ordinateur, agent navigateur, utilisation de l'ordinateur
+Variantes anglaises : computer-use agent, CUA, browser use, browser agent, GUI agent, agentic browser
+
+### Définition courte
+
+Le computer use permet à un modèle d'utiliser un ordinateur comme une personne, en regardant des captures d'écran puis en bougeant la souris, en cliquant et en tapant au clavier.
+
+### L'image
+
+Au téléphone, Nadia guide son père pour envoyer une photo à la cousine. Après chaque geste, il lui envoie une capture de son écran, elle répond « appuie sur le rond bleu en bas à droite », il appuie et renvoie une capture. Il leur faut vingt minutes, mais la méthode marche sur n'importe quel téléphone, même un modèle qu'elle n'a jamais vu.
+
+### Imagine
+
+« Combien coûte le Paris-Marseille de vendredi sur le site de la compagnie ? », demandes-tu à l'agent. Quatre minutes plus tard, il répond : « J'ai refusé les cookies, fermé la fenêtre de la newsletter et décliné l'application ; j'ouvre le calendrier. »
+
+### Définition complète
+
+Un agent qui fait du computer use ne passe par aucune API. Il reçoit une capture d'écran, choisit un geste, cliquer à tel endroit, taper tel texte ou faire défiler, puis reçoit la capture suivante, et recommence jusqu'à la fin de la tâche. Anthropic a ouvert la première version publique le 22 octobre 2024, en la décrivant comme parfois laborieuse et sujette aux erreurs, et OpenAI a suivi en janvier 2025 avec Operator, d'abord réservé aux abonnés à 200 dollars par mois.
+
+L'intérêt est d'atteindre tous les logiciels qui n'ont jamais prévu d'API, de l'outil RH maison au vieux logiciel de caisse. Pour le mesurer, des chercheurs de l'université de Hong Kong ont publié en avril 2024 OSWorld, 369 tâches réelles du tableur à la messagerie, que des humains réussissent à 72 %. Les meilleurs modèles n'en réussissaient alors que 12 %, surtout parce qu'ils ne savaient pas situer à l'écran le bouton qu'ils voulaient cliquer.
+
+Un agent qui lit l'écran lit aussi tout ce que l'écran contient, y compris une consigne qu'un inconnu y a glissée. Dans les tests qu'Anthropic a publiés en août 2025, un faux mail réclamant un ménage de la boîte « pour raisons de sécurité » a suffi à faire supprimer des messages par Claude dans Chrome. Sur l'ensemble des attaques testées, 23,6 % réussissaient avant les protections, et encore 11,2 % après. D'où les garde-fous devenus courants, avec des sites autorisés un par un et une confirmation avant d'acheter, de publier ou de partager une donnée personnelle.
+
+### 2024 vs 2026
+
+En octobre 2024, Claude 3.5 Sonnet réussissait 14,9 % des tâches d'OSWorld à partir des seules captures d'écran, loin des 72 % des humains. Le 11 décembre 2025, un agent de la start-up Simular passait pour la première fois la barre humaine sur la version vérifiée du test, et au classement d'octobre 2026 Claude Fable 5 y atteint 86 % sans aucun outillage autour du modèle. Une version 2.0, plus difficile, est sortie le 26 juin 2026.
+
+### Dans le jargon
+
+- OSWorld : le banc d'essai de référence, 369 tâches réelles sur un vrai ordinateur (tableur, navigateur, messagerie), que des humains réussissent à 72 %
+- grounding : l'ancrage, savoir à quel endroit de l'écran se trouve le bouton dont on parle ; c'est là que ces agents échouaient le plus en 2024
+- a11y tree : l'arbre d'accessibilité, la description en texte des boutons et des champs prévue pour les lecteurs d'écran, que certains agents lisent en plus de la capture
+- agentic browser : un navigateur dans lequel un agent clique et remplit les formulaires à ta place, comme Comet de Perplexity ou Claude dans Chrome
+
+### Entendu au bureau
+
+- Question : L'outil de notes de frais n'a pas d'API, on demande à un agent de les saisir à notre place ?
+- Réponse : C'est le bon cas d'usage, à condition de lui donner un compte à part aux droits limités et de valider chaque envoi ; et le jour où l'outil ouvre une API, passe par elle, ce sera plus rapide et plus fiable.
+
+### À éviter
+
+« Il voit l'écran, il comprend donc le site comme moi. » L'agent reçoit une suite d'images fixes et déduit des pixels où cliquer, et il prend au sérieux tout texte qu'il voit, y compris une consigne cachée dans la page par quelqu'un d'autre que toi.
+
+### Termes liés
+
+- Agent : https://neopal.github.io/lexique/agent/
+- Prompt injection : https://neopal.github.io/lexique/prompt-injection/
+- Sandbox et permissions : https://neopal.github.io/lexique/sandbox-et-permissions/
+- WebMCP : https://neopal.github.io/lexique/webmcp/
+- Boucle agent : https://neopal.github.io/lexique/boucle-agent/
+- Horizon d'autonomie : https://neopal.github.io/lexique/horizon-d-autonomie/
+- Deep research : https://neopal.github.io/lexique/deep-research/
+
+### Sources
+
+- Anthropic, Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku, 22 octobre 2024 (bêta publique ; Claude regarde l'écran, bouge le curseur, clique et tape ; « at times cumbersome and error-prone » ; OSWorld 14,9 % en captures d'écran seules, 22,0 % avec plus d'étapes) : https://www.anthropic.com/news/3-5-models-and-computer-use
+- The Batch (DeepLearning.AI), OpenAI's Operator automates online tasks with a new AI agent, janvier 2025 (Operator en préversion pour ChatGPT Pro à 200 dollars par mois ; modèle CUA à 38,1 % sur OSWorld) : https://charonhub.deeplearning.ai/openais-operator-automates-online-tasks-with-a-new-ai-agent/
+- Xie et al. (université de Hong Kong, Salesforce, CMU, Waterloo), OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments, 11 avril 2024 (369 tâches ; humains à 72,36 %, meilleur modèle à 12,24 %, en difficulté surtout sur le grounding) : https://arxiv.org/abs/2404.07972
+- OSWorld, site officiel, consulté le 20 octobre 2026 (OSWorld-Verified depuis le 28 juillet 2025 ; OSWorld 2.0 publié le 26 juin 2026) : https://os-world.github.io/
+- OSWorld-Verified, tableau des résultats officiels (fichier du site), consulté le 20 octobre 2026 (premier score au-dessus de 72,36 % : Agent S3 de Simular, 72,58 %, 11 décembre 2025 ; claude-fable-5, « General model », sans arbre d'accessibilité ni action par code, 85,96 %) : https://os-world.github.io/static/data/osworld_verified_results.xlsx
+- Anthropic, Piloting Claude for Chrome, 25 août 2025 (123 tests d'injection de prompt ; faux mail de « mailbox hygiene » qui fait supprimer des mails ; 23,6 % d'attaques réussies sans protections, 11,2 % avec ; autorisations par site, confirmation avant de publier, d'acheter ou de partager des données personnelles) : https://www.anthropic.com/news/claude-for-chrome
+
+## Deep research
+
+URL : https://neopal.github.io/lexique/deep-research/
+Catégorie : Agents et produit
+Aussi appelé : recherche approfondie, agent de recherche
+Variantes anglaises : deep research agent, research agent, deep search
+
+### Définition courte
+
+Le deep research confie une question à un agent qui cherche seul sur le web pendant plusieurs minutes, lit des dizaines de sources et rend un rapport avec ses citations.
+
+### L'image
+
+Le stagiaire à qui tu as demandé une note sur les concurrents revient avant la pause café avec quarante pages et quatre-vingts liens en bas de page. Il a vraiment tout lu, et le chiffre clé de la page 3 vient d'un lien qui parle d'autre chose.
+
+### Imagine
+
+Pose en mode recherche approfondie, à ChatGPT, Gemini ou Claude, une question dont tu connais déjà la réponse, l'histoire de ta commune ou les produits de ton entreprise. Pendant les minutes qu'il y passe, regarde défiler les pages qu'il ouvre, puis prends trois phrases du rapport et ouvre la source accrochée à chacune pour y chercher ce qu'elle est censée dire.
+
+### Définition complète
+
+Google a ouvert la voie le 11 décembre 2024 avec Deep Research dans Gemini, qui propose d'abord un plan de recherche à valider, puis navigue pendant quelques minutes et rend un rapport avec les liens de ses sources. OpenAI a lancé le sien en février 2025 sur son modèle o3, avec des recherches de 5 à 30 minutes, et Perplexity le 14 février, en l'ouvrant gratuitement dans une version limitée.
+
+Sous le capot tourne une boucle d'agent qui cherche, lit, prend des notes et choisit la requête suivante, et le résultat dépend surtout de la quantité de lecture. Anthropic a constaté en juin 2025 que le nombre de tokens consommés expliquait à lui seul 80 % des écarts de score sur BrowseComp, un test de questions dont la réponse est enfouie sur le web. Il répartit donc la lecture entre plusieurs sous-agents, au prix d'environ 15 fois plus de tokens qu'une conversation.
+
+Sur ce test, des humains entraînés abandonnaient 71 % des questions après deux heures de recherche, et le modèle de deep research d'OpenAI en résolvait 51,5 % en avril 2025. Un rapport bien présenté n'est pas pour autant vérifié. En septembre 2025, l'audit DeepTRACE trouvait ces rapports souvent partiaux sur les sujets débattus, et la part des citations qui soutiennent vraiment leur phrase y variait de 40 à 80 % selon les systèmes.
+
+### Dans le jargon
+
+- research plan : le plan de recherche que l'agent propose avant de partir, et que Gemini te laisse corriger ou valider
+- BrowseComp : un test d'OpenAI de 1 266 questions dont la réponse est enfouie sur le web ; des humains entraînés ont abandonné 71 % d'entre elles après deux heures de recherche
+- citation accuracy : la part des citations qui soutiennent vraiment la phrase à laquelle elles sont accrochées, entre 40 et 80 % selon les systèmes dans l'audit DeepTRACE de 2025
+
+### Entendu au bureau
+
+- Question : Je lance un deep research sur le marché et j'envoie le rapport au comité demain ?
+- Réponse : Envoie-le après avoir ouvert les sources des cinq chiffres que le comité va retenir ; le rapport t'épargne la journée de lecture, et il te reste la demi-heure de vérification.
+
+### À éviter
+
+« Il a cité ses sources, donc c'est vérifié. » Une citation montre où l'agent est passé, sans garantir que la page dit ce qu'il affirme, et dans l'audit DeepTRACE jusqu'à 60 % des citations d'un même système ne soutenaient pas leur phrase.
+
+### Termes liés
+
+- Agent : https://neopal.github.io/lexique/agent/
+- Multi-agents : https://neopal.github.io/lexique/multi-agents/
+- Hallucination : https://neopal.github.io/lexique/hallucination/
+- Test-time compute : https://neopal.github.io/lexique/test-time-compute/
+- Computer use : https://neopal.github.io/lexique/computer-use/
+- Coût d'une requête : https://neopal.github.io/lexique/cout-d-une-requete/
+
+### Sources
+
+- Google, Try Deep Research and our new experimental model in Gemini, 11 décembre 2024 (plan de recherche à réviser ou approuver, navigation pendant quelques minutes, rapport avec liens vers les sources) : https://blog.google/products/gemini/google-gemini-deep-research/
+- Fortune, OpenAI's deep research can complete 26% of Humanity's Last Exam, 12 février 2025 (agent fondé sur o3, recherches de 5 à 30 minutes ; produit concurrent lancé par Google en décembre) : https://fortune.com/2025/02/12/openai-deepresearch-humanity-last-exam/
+- Perplexity, Introducing Perplexity Deep Research, 14 février 2025 (des dizaines de recherches, des centaines de sources, 2 à 4 minutes ; gratuit avec un nombre limité de réponses par jour) : https://www.perplexity.ai/hub/blog/introducing-perplexity-deep-research
+- Anthropic, How we built our multi-agent research system, 13 juin 2025 (la consommation de tokens explique 80 % de la variance sur BrowseComp ; un système multi-agents consomme environ 15 fois plus de tokens qu'une conversation) : https://www.anthropic.com/engineering/multi-agent-research-system
+- Wei et al. (OpenAI), BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents, 16 avril 2025 (1 266 questions ; des formateurs humains abandonnent 888 questions sur 1 255, soit 70,8 %, après deux heures ; Deep Research à 51,5 %, GPT-4o avec navigation à 1,9 %) : https://arxiv.org/abs/2504.12516
+- Venkit et al., DeepTRACE: Auditing Deep Research AI Systems for Tracking Reliability Across Citations and Evidence, 2 septembre 2025 (réponses souvent partiales sur les questions débattues ; exactitude des citations de 40 à 80 % selon les systèmes, donc de 20 à 60 % de citations qui ne soutiennent pas leur phrase) : https://arxiv.org/abs/2509.04499

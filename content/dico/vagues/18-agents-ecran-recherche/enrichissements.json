@@ -1,0 +1,55 @@
+{
+  "modeles-de-raisonnement": {
+    "aliases": [
+      "reasoning model",
+      "thinking model",
+      "chain-of-thought",
+      "CoT",
+      "extended thinking"
+    ],
+    "aliasesFr": [
+      "chaîne de pensée",
+      "modèle qui réfléchit",
+      "réflexion approfondie"
+    ]
+  },
+  "agent": {
+    "aliasesFr": [
+      "agent IA",
+      "agentique"
+    ]
+  },
+  "planification": {
+    "aliasesFr": [
+      "plan",
+      "décomposition en tâches",
+      "liste de tâches",
+      "mode plan"
+    ]
+  },
+  "prompt-engineering": {
+    "aliases": [
+      "prompt",
+      "prompting",
+      "prompt design",
+      "chain-of-thought prompting",
+      "role prompting",
+      "meta-prompting",
+      "XML tags"
+    ],
+    "aliasesFr": [
+      "ingénierie de prompt",
+      "rédaction de prompt",
+      "art du prompt",
+      "méta-prompt",
+      "balises XML"
+    ]
+  },
+  "workflow-ou-agent": {
+    "aliasesFr": [
+      "workflow ou agent",
+      "chaîne déterministe",
+      "chaîne de prompts"
+    ]
+  }
+}

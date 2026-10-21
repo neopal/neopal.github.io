@@ -1,6 +1,6 @@
 # Lexique IA
 
-> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 158 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
+> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 160 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
 
 Toutes les fiches en texte brut, sources comprises : https://neopal.github.io/lexique/llms-full.txt
 Auteur : https://neopal.github.io/
@@ -91,6 +91,8 @@ Auteur : https://neopal.github.io/
 - [Sortie structurée](https://neopal.github.io/lexique/sortie-structuree/) (en anglais : Structured output) : Une sortie structurée est une réponse qu'un modèle doit rendre dans un format fixé d'avance, souvent un JSON conforme à un schéma, pour qu'un programme la lise sans erreur.
 - [Session, tour et sans état](https://neopal.github.io/lexique/sans-etat/) (en anglais : stateless model, session, turn) : Un modèle ne garde rien d'une requête à l'autre ; pour tenir une session de plusieurs tours, le harness lui renvoie à chaque requête tout l'historique, consignes comprises.
 - [Workflow ou agent](https://neopal.github.io/lexique/workflow-ou-agent/) (en anglais : Workflow vs agent) : Workflow ou agent, c'est la question de savoir qui fixe les étapes d'une tâche automatisée : le développeur, à l'avance, ou le modèle, en cours de route.
+- [Computer use](https://neopal.github.io/lexique/computer-use/) : Le computer use permet à un modèle d'utiliser un ordinateur comme une personne, en regardant des captures d'écran puis en bougeant la souris, en cliquant et en tapant au clavier.
+- [Deep research](https://neopal.github.io/lexique/deep-research/) : Le deep research confie une question à un agent qui cherche seul sur le web pendant plusieurs minutes, lit des dizaines de sources et rend un rapport avec ses citations.
 
 ## Entraînement
 

@@ -1773,11 +1773,13 @@ window.DICO_TERMS = [
       "reasoning model",
       "thinking model",
       "chain-of-thought",
-      "CoT"
+      "CoT",
+      "extended thinking"
     ],
     "aliasesFr": [
       "chaîne de pensée",
-      "modèle qui réfléchit"
+      "modèle qui réfléchit",
+      "réflexion approfondie"
     ],
     "jargon": [
       {
@@ -2021,7 +2023,8 @@ window.DICO_TERMS = [
       "coding agent"
     ],
     "aliasesFr": [
-      "agent IA"
+      "agent IA",
+      "agentique"
     ],
     "jargon": [
       {
@@ -2087,8 +2090,8 @@ window.DICO_TERMS = [
     ],
     "short": "Un agent est un modèle de langage qu'on laisse agir : avec un objectif et des outils, il enchaîne les actions, chacune choisie d'après le résultat de la précédente.",
     "image": "Le mardi, Nadine laisse à son fils une liste de courses. Le jeudi, vingt euros et « Fais-nous un dîner » ; il trouve le marché fermé, ouvre le frigo, appelle sa grand-mère, et à 20 h il y a des crêpes que personne n'avait prévues.",
-    "imagine": "Le 22 septembre 2026, Anthropic publie le témoignage d'un développeur de Clio, un éditeur canadien de logiciels pour cabinets d'avocats. Avant de quitter le bureau à 18 heures, il a confié à Claude Opus 5.5 une seule tâche, à mener sur six dépôts de code, puis il est rentré dormir. Personne n'a relancé l'agent de la nuit, et le lendemain à midi il y travaillait encore, plus de 18 heures d'affilée, deux journées et demie d'un temps plein à 35 heures.",
     "imagineForm": "A",
+    "imagine": "Le 22 septembre 2026, Anthropic publie le témoignage d'un développeur de Clio, un éditeur canadien de logiciels pour cabinets d'avocats. Avant de quitter le bureau à 18 heures, il a confié à Claude Opus 5.5 une seule tâche, à mener sur six dépôts de code, puis il est rentré dormir. Personne n'a relancé l'agent de la nuit, et le lendemain à midi il y travaillait encore, plus de 18 heures d'affilée, deux journées et demie d'un temps plein à 35 heures.",
     "full": [
       "Un agent est un modèle de langage placé dans une boucle, avec des outils. On lui donne un objectif, par exemple « trouve-moi un train pour Lyon jeudi et mets-le dans mon agenda ». Il choisit une action, comme chercher les horaires, lit le résultat, puis choisit la suivante, jusqu'à ce qu'il juge la tâche finie ou qu'une limite l'arrête. Ces actions, ce sont les programmes autour de lui qui les exécutent, à partir des demandes qu'il écrit.",
       "Pour reconnaître un agent, la question est de savoir qui choisit l'étape suivante. Anthropic a posé la distinction en décembre 2024 : dans un workflow, un développeur écrit les étapes à l'avance, même si un modèle intervient à chacune ; dans un agent, le modèle décide en cours de route de ses actions et de ses outils. Le bot qui résume chaque ticket entrant puis le range dans une file reste donc un workflow, alors que l'assistant qui relance de lui-même une recherche quand la première ne donne rien penche du côté de l'agent.",
@@ -7306,12 +7309,16 @@ window.DICO_TERMS = [
       "prompting",
       "prompt design",
       "chain-of-thought prompting",
-      "role prompting"
+      "role prompting",
+      "meta-prompting",
+      "XML tags"
     ],
     "aliasesFr": [
       "ingénierie de prompt",
       "rédaction de prompt",
-      "art du prompt"
+      "art du prompt",
+      "méta-prompt",
+      "balises XML"
     ],
     "jargon": [
       {
@@ -9082,7 +9089,8 @@ window.DICO_TERMS = [
     "aliasesFr": [
       "plan",
       "décomposition en tâches",
-      "liste de tâches"
+      "liste de tâches",
+      "mode plan"
     ],
     "jargon": [
       {
@@ -14851,7 +14859,8 @@ window.DICO_TERMS = [
     ],
     "aliasesFr": [
       "workflow ou agent",
-      "chaîne déterministe"
+      "chaîne déterministe",
+      "chaîne de prompts"
     ],
     "jargon": [
       {
@@ -15577,6 +15586,188 @@ window.DICO_TERMS = [
       {
         "label": "Configuration de Llama 3.1 8B sur Hugging Face (hidden_size 4 096, intermediate_size 14 336, 32 couches, 8 têtes clé-valeur, soit 8,03 milliards de paramètres et 16,06 Go en bfloat16 ; LoRA de rang 16 sur les 7 matrices de chaque couche = 16 × (2 × 8 192 + 2 × 5 120 + 3 × 18 432) × 32 = 41 943 040 paramètres, 84 Mo en bfloat16 ; 16,06 Go / 84 Mo = 191, et 400 pages / 191 = 2,1 pages ; une matrice 4 096 × 4 096 = 16 777 216 paramètres, sa correction de rang 16 = 16 × 8 192 = 131 072)",
         "url": "https://huggingface.co/unsloth/Meta-Llama-3.1-8B/blob/main/config.json"
+      }
+    ]
+  },
+  {
+    "id": "computer-use",
+    "status": "live",
+    "num": "159",
+    "title": "Computer use",
+    "en": "Computer use",
+    "aliases": [
+      "computer-use agent",
+      "CUA",
+      "browser use",
+      "browser agent",
+      "GUI agent",
+      "agentic browser"
+    ],
+    "aliasesFr": [
+      "agent qui pilote l'ordinateur",
+      "agent navigateur",
+      "utilisation de l'ordinateur"
+    ],
+    "jargon": [
+      {
+        "say": "OSWorld",
+        "means": "le banc d'essai de référence, 369 tâches réelles sur un vrai ordinateur (tableur, navigateur, messagerie), que des humains réussissent à 72 %"
+      },
+      {
+        "say": "grounding",
+        "means": "l'ancrage, savoir à quel endroit de l'écran se trouve le bouton dont on parle ; c'est là que ces agents échouaient le plus en 2024"
+      },
+      {
+        "say": "a11y tree",
+        "means": "l'arbre d'accessibilité, la description en texte des boutons et des champs prévue pour les lecteurs d'écran, que certains agents lisent en plus de la capture"
+      },
+      {
+        "say": "agentic browser",
+        "means": "un navigateur dans lequel un agent clique et remplit les formulaires à ta place, comme Comet de Perplexity ou Claude dans Chrome"
+      }
+    ],
+    "cat": "agents",
+    "links": [
+      "agent",
+      "prompt-injection",
+      "sandbox-et-permissions",
+      "webmcp",
+      "boucle-agent",
+      "horizon-d-autonomie",
+      "deep-research"
+    ],
+    "short": "Le computer use permet à un modèle d'utiliser un ordinateur comme une personne, en regardant des captures d'écran puis en bougeant la souris, en cliquant et en tapant au clavier.",
+    "image": "Au téléphone, Nadia guide son père pour envoyer une photo à la cousine. Après chaque geste, il lui envoie une capture de son écran, elle répond « appuie sur le rond bleu en bas à droite », il appuie et renvoie une capture. Il leur faut vingt minutes, mais la méthode marche sur n'importe quel téléphone, même un modèle qu'elle n'a jamais vu.",
+    "imagineForm": "D",
+    "imagine": "« Combien coûte le Paris-Marseille de vendredi sur le site de la compagnie ? », demandes-tu à l'agent. Quatre minutes plus tard, il répond : « J'ai refusé les cookies, fermé la fenêtre de la newsletter et décliné l'application ; j'ouvre le calendrier. »",
+    "full": [
+      "Un agent qui fait du computer use ne passe par aucune API. Il reçoit une capture d'écran, choisit un geste, cliquer à tel endroit, taper tel texte ou faire défiler, puis reçoit la capture suivante, et recommence jusqu'à la fin de la tâche. Anthropic a ouvert la première version publique le 22 octobre 2024, en la décrivant comme parfois laborieuse et sujette aux erreurs, et OpenAI a suivi en janvier 2025 avec Operator, d'abord réservé aux abonnés à 200 dollars par mois.",
+      "L'intérêt est d'atteindre tous les logiciels qui n'ont jamais prévu d'API, de l'outil RH maison au vieux logiciel de caisse. Pour le mesurer, des chercheurs de l'université de Hong Kong ont publié en avril 2024 OSWorld, 369 tâches réelles du tableur à la messagerie, que des humains réussissent à 72 %. Les meilleurs modèles n'en réussissaient alors que 12 %, surtout parce qu'ils ne savaient pas situer à l'écran le bouton qu'ils voulaient cliquer.",
+      "Un agent qui lit l'écran lit aussi tout ce que l'écran contient, y compris une consigne qu'un inconnu y a glissée. Dans les tests qu'Anthropic a publiés en août 2025, un faux mail réclamant un ménage de la boîte « pour raisons de sécurité » a suffi à faire supprimer des messages par Claude dans Chrome. Sur l'ensemble des attaques testées, 23,6 % réussissaient avant les protections, et encore 11,2 % après. D'où les garde-fous devenus courants, avec des sites autorisés un par un et une confirmation avant d'acheter, de publier ou de partager une donnée personnelle."
+    ],
+    "then": "En octobre 2024, Claude 3.5 Sonnet réussissait 14,9 % des tâches d'OSWorld à partir des seules captures d'écran, loin des 72 % des humains. Le 11 décembre 2025, un agent de la start-up Simular passait pour la première fois la barre humaine sur la version vérifiée du test, et au classement d'octobre 2026 Claude Fable 5 y atteint 86 % sans aucun outillage autour du modèle. Une version 2.0, plus difficile, est sortie le 26 juin 2026.",
+    "office": [
+      {
+        "who": "q",
+        "text": "L'outil de notes de frais n'a pas d'API, on demande à un agent de les saisir à notre place ?"
+      },
+      {
+        "who": "a",
+        "text": "C'est le bon cas d'usage, à condition de lui donner un compte à part aux droits limités et de valider chaque envoi ; et le jour où l'outil ouvre une API, passe par elle, ce sera plus rapide et plus fiable."
+      }
+    ],
+    "avoid": "« Il voit l'écran, il comprend donc le site comme moi. » L'agent reçoit une suite d'images fixes et déduit des pixels où cliquer, et il prend au sérieux tout texte qu'il voit, y compris une consigne cachée dans la page par quelqu'un d'autre que toi.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Anthropic, Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku, 22 octobre 2024 (bêta publique ; Claude regarde l'écran, bouge le curseur, clique et tape ; « at times cumbersome and error-prone » ; OSWorld 14,9 % en captures d'écran seules, 22,0 % avec plus d'étapes)",
+        "url": "https://www.anthropic.com/news/3-5-models-and-computer-use"
+      },
+      {
+        "label": "The Batch (DeepLearning.AI), OpenAI's Operator automates online tasks with a new AI agent, janvier 2025 (Operator en préversion pour ChatGPT Pro à 200 dollars par mois ; modèle CUA à 38,1 % sur OSWorld)",
+        "url": "https://charonhub.deeplearning.ai/openais-operator-automates-online-tasks-with-a-new-ai-agent/"
+      },
+      {
+        "label": "Xie et al. (université de Hong Kong, Salesforce, CMU, Waterloo), OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments, 11 avril 2024 (369 tâches ; humains à 72,36 %, meilleur modèle à 12,24 %, en difficulté surtout sur le grounding)",
+        "url": "https://arxiv.org/abs/2404.07972"
+      },
+      {
+        "label": "OSWorld, site officiel, consulté le 20 octobre 2026 (OSWorld-Verified depuis le 28 juillet 2025 ; OSWorld 2.0 publié le 26 juin 2026)",
+        "url": "https://os-world.github.io/"
+      },
+      {
+        "label": "OSWorld-Verified, tableau des résultats officiels (fichier du site), consulté le 20 octobre 2026 (premier score au-dessus de 72,36 % : Agent S3 de Simular, 72,58 %, 11 décembre 2025 ; claude-fable-5, « General model », sans arbre d'accessibilité ni action par code, 85,96 %)",
+        "url": "https://os-world.github.io/static/data/osworld_verified_results.xlsx"
+      },
+      {
+        "label": "Anthropic, Piloting Claude for Chrome, 25 août 2025 (123 tests d'injection de prompt ; faux mail de « mailbox hygiene » qui fait supprimer des mails ; 23,6 % d'attaques réussies sans protections, 11,2 % avec ; autorisations par site, confirmation avant de publier, d'acheter ou de partager des données personnelles)",
+        "url": "https://www.anthropic.com/news/claude-for-chrome"
+      }
+    ]
+  },
+  {
+    "id": "deep-research",
+    "status": "live",
+    "num": "160",
+    "title": "Deep research",
+    "en": "Deep research",
+    "aliases": [
+      "deep research agent",
+      "research agent",
+      "deep search"
+    ],
+    "aliasesFr": [
+      "recherche approfondie",
+      "agent de recherche"
+    ],
+    "jargon": [
+      {
+        "say": "research plan",
+        "means": "le plan de recherche que l'agent propose avant de partir, et que Gemini te laisse corriger ou valider"
+      },
+      {
+        "say": "BrowseComp",
+        "means": "un test d'OpenAI de 1 266 questions dont la réponse est enfouie sur le web ; des humains entraînés ont abandonné 71 % d'entre elles après deux heures de recherche"
+      },
+      {
+        "say": "citation accuracy",
+        "means": "la part des citations qui soutiennent vraiment la phrase à laquelle elles sont accrochées, entre 40 et 80 % selon les systèmes dans l'audit DeepTRACE de 2025"
+      }
+    ],
+    "cat": "agents",
+    "links": [
+      "agent",
+      "multi-agents",
+      "hallucination",
+      "test-time-compute",
+      "computer-use",
+      "cout-d-une-requete"
+    ],
+    "short": "Le deep research confie une question à un agent qui cherche seul sur le web pendant plusieurs minutes, lit des dizaines de sources et rend un rapport avec ses citations.",
+    "image": "Le stagiaire à qui tu as demandé une note sur les concurrents revient avant la pause café avec quarante pages et quatre-vingts liens en bas de page. Il a vraiment tout lu, et le chiffre clé de la page 3 vient d'un lien qui parle d'autre chose.",
+    "imagineForm": "B",
+    "imagine": "Pose en mode recherche approfondie, à ChatGPT, Gemini ou Claude, une question dont tu connais déjà la réponse, l'histoire de ta commune ou les produits de ton entreprise. Pendant les minutes qu'il y passe, regarde défiler les pages qu'il ouvre, puis prends trois phrases du rapport et ouvre la source accrochée à chacune pour y chercher ce qu'elle est censée dire.",
+    "full": [
+      "Google a ouvert la voie le 11 décembre 2024 avec Deep Research dans Gemini, qui propose d'abord un plan de recherche à valider, puis navigue pendant quelques minutes et rend un rapport avec les liens de ses sources. OpenAI a lancé le sien en février 2025 sur son modèle o3, avec des recherches de 5 à 30 minutes, et Perplexity le 14 février, en l'ouvrant gratuitement dans une version limitée.",
+      "Sous le capot tourne une boucle d'agent qui cherche, lit, prend des notes et choisit la requête suivante, et le résultat dépend surtout de la quantité de lecture. Anthropic a constaté en juin 2025 que le nombre de tokens consommés expliquait à lui seul 80 % des écarts de score sur BrowseComp, un test de questions dont la réponse est enfouie sur le web. Il répartit donc la lecture entre plusieurs sous-agents, au prix d'environ 15 fois plus de tokens qu'une conversation.",
+      "Sur ce test, des humains entraînés abandonnaient 71 % des questions après deux heures de recherche, et le modèle de deep research d'OpenAI en résolvait 51,5 % en avril 2025. Un rapport bien présenté n'est pas pour autant vérifié. En septembre 2025, l'audit DeepTRACE trouvait ces rapports souvent partiaux sur les sujets débattus, et la part des citations qui soutiennent vraiment leur phrase y variait de 40 à 80 % selon les systèmes."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Je lance un deep research sur le marché et j'envoie le rapport au comité demain ?"
+      },
+      {
+        "who": "a",
+        "text": "Envoie-le après avoir ouvert les sources des cinq chiffres que le comité va retenir ; le rapport t'épargne la journée de lecture, et il te reste la demi-heure de vérification."
+      }
+    ],
+    "avoid": "« Il a cité ses sources, donc c'est vérifié. » Une citation montre où l'agent est passé, sans garantir que la page dit ce qu'il affirme, et dans l'audit DeepTRACE jusqu'à 60 % des citations d'un même système ne soutenaient pas leur phrase.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Google, Try Deep Research and our new experimental model in Gemini, 11 décembre 2024 (plan de recherche à réviser ou approuver, navigation pendant quelques minutes, rapport avec liens vers les sources)",
+        "url": "https://blog.google/products/gemini/google-gemini-deep-research/"
+      },
+      {
+        "label": "Fortune, OpenAI's deep research can complete 26% of Humanity's Last Exam, 12 février 2025 (agent fondé sur o3, recherches de 5 à 30 minutes ; produit concurrent lancé par Google en décembre)",
+        "url": "https://fortune.com/2025/02/12/openai-deepresearch-humanity-last-exam/"
+      },
+      {
+        "label": "Perplexity, Introducing Perplexity Deep Research, 14 février 2025 (des dizaines de recherches, des centaines de sources, 2 à 4 minutes ; gratuit avec un nombre limité de réponses par jour)",
+        "url": "https://www.perplexity.ai/hub/blog/introducing-perplexity-deep-research"
+      },
+      {
+        "label": "Anthropic, How we built our multi-agent research system, 13 juin 2025 (la consommation de tokens explique 80 % de la variance sur BrowseComp ; un système multi-agents consomme environ 15 fois plus de tokens qu'une conversation)",
+        "url": "https://www.anthropic.com/engineering/multi-agent-research-system"
+      },
+      {
+        "label": "Wei et al. (OpenAI), BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents, 16 avril 2025 (1 266 questions ; des formateurs humains abandonnent 888 questions sur 1 255, soit 70,8 %, après deux heures ; Deep Research à 51,5 %, GPT-4o avec navigation à 1,9 %)",
+        "url": "https://arxiv.org/abs/2504.12516"
+      },
+      {
+        "label": "Venkit et al., DeepTRACE: Auditing Deep Research AI Systems for Tracking Reliability Across Citations and Evidence, 2 septembre 2025 (réponses souvent partiales sur les questions débattues ; exactitude des citations de 40 à 80 % selon les systèmes, donc de 20 à 60 % de citations qui ne soutiennent pas leur phrase)",
+        "url": "https://arxiv.org/abs/2509.04499"
       }
     ]
   },
