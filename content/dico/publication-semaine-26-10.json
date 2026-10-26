@@ -1,0 +1,23 @@
+{
+  "_regles": "Comme publication-semaine-20-10.json. Hors-série d'actu (PA, 2026-10-26) : sans numéro d'épisode, programmé le jour même à 17 h ; les ép. 18 à 24 restent ceux de publication-semaine-27-10.json.",
+  "episodes": [
+    {
+      "ep": "HS",
+      "date": "2026-10-26",
+      "time": "17:00",
+      "id": "black-october",
+      "file": "black-october-v1.mp4",
+      "title": "Exploitée en 2 jours, réparée en 2 mois",
+      "body": "En octobre 2026, des modèles d'IA ont aidé à trouver deux failles cachées depuis plus de dix ans dans PHP, le langage de deux sites web sur trois. Il a fallu deux mois pour les corriger, et des gouvernements ont coupé leurs sites en attendant. C'est la chasse aux failles par IA, et certains appellent déjà ce mois-là Black October ; l'histoire dira si le surnom tient.",
+      "link": "https://neopal.github.io/lexique/chasse-aux-failles-par-ia/",
+      "credits": "",
+      "tags": "#cybersecurite #php #ia #vulgarisation",
+      "yt_tags": "Black October, php2shell, PHP, faille, cybersécurité, chasse aux failles par IA, AI vulnerability discovery, IA, vulgarisation, lexique IA",
+      "yt_related": "Une chance sur quatre que tout finisse ?",
+      "status": "programmé le 2026-10-26 pour 17:00 sur YouTube, TikTok et Instagram",
+      "youtube": "https://youtube.com/shorts/siMrKFvg6Yo",
+      "tiktok": "https://www.tiktok.com/@neopal_ai/video/7700929713237282070",
+      "flow": "https://elevenlabs.io/app/flows/KBoMJuo97zkiZk6Y5J6M"
+    }
+  ]
+}
