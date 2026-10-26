@@ -1,0 +1,79 @@
+{
+  "id": "black-october",
+  "term": "chasse-aux-failles-par-ia",
+  "episode": 18,
+  "date": null,
+  "format": "Actu : un fait de la semaine, puis la notion qu'il illustre",
+  "composition": "BlackOctoberVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] Et si on était en train de vivre… un /blæk ɑkˈtoʊbɚ/ ?"
+    },
+    {
+      "scene": "sites",
+      "say": "[curious] Le 21 octobre, des gouvernements ont débranché leurs propres sites, à cause de deux failles cachées depuis plus de dix ans dans PHP, le langage de deux sites web sur trois."
+    },
+    {
+      "scene": "nom",
+      "say": "[warmly] En août, une équipe de /wɪz/ les avait trouvées avec des modèles d'IA, et deux jours plus tard, elle prenait la main sur un site /ˈwɝdpɹɛs/ de test. C'est la chasse aux failles par IA, ou en anglais, /eɪ aɪ vʌlnɚəˈbɪlɪti dɪˈskʌvɚi/."
+    },
+    {
+      "scene": "immeuble",
+      "say": "[mischievously] Imagine un immeuble où tout le monde s'achète un détecteur de fuites… on en trouve dix par semaine, mais le plombier est toujours seul, et il ne passe que le jeudi."
+    },
+    {
+      "scene": "course",
+      "say": "[curious] Pour PHP, les failles signalées le 24 août n'ont été corrigées que le 21 octobre… et dès le 17, /ˈæməzɑn/ voyait passer une première attaque."
+    },
+    {
+      "scene": "etdonc",
+      "say": "[warmly] L'IA qui aide à défendre aide aussi à attaquer, et c'est cette semaine de failles en série que des pros de la sécurité ont appelée, un peu vite peut-être, /blæk ɑkˈtoʊbɚ/."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors, /blæk ɑkˈtoʊbɚ/ ou pas, ça se joue maintenant, chez chaque hébergeur qui met PHP à jour… [pause] ici, deux jours ont suffi pour l'exploiter, et il en a fallu plus de soixante pour la corriger."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/blæk ɑkˈtoʊbɚ/": "Black October",
+    "/wɪz/": "Wiz",
+    "/ˈæməzɑn/": "Amazon",
+    "/ˈwɝdpɹɛs/": "WordPress",
+    "/eɪ aɪ vʌlnɚəˈbɪlɪti dɪˈskʌvɚi/": "AI vulnerability discovery"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": ["C'est la chasse aux failles par IA,", "AI vulnerability discovery."]
+  },
+  "scenes": {
+    "hook": "« Et si on vivait un Black October ? » en grand, sur une page de calendrier d'octobre qui commence à noircir.",
+    "sites": "Une grille de sites (drapeaux, Wikipédia) qui passent un à un en « hors ligne » ; puis une frise 2012 → 2026, le code de PHP avec deux lignes surlignées en rouge ; « 7 sur 10 » en barres.",
+    "nom": "Frise zoomée : 19 août, un éclair (le modèle), 21 août, un WordPress qui passe au rouge ; le terme écrit en grand, en français puis en anglais.",
+    "immeuble": "Façade d'immeuble en pixel art : des gouttes s'allument à toutes les fenêtres, un seul plombier en bas, avec son agenda ouvert sur « jeudi ».",
+    "course": "Frise du 24 août au 21 octobre qui se remplit lentement (bar grow) ; le 17 octobre, une croix rouge tombe avant la ligne d'arrivée.",
+    "etdonc": "Le même éclair qui pointe vers un bouclier, puis vers un pied-de-biche ; « Black October » revient avec un point d'interrogation, la page du calendrier reste à moitié noire.",
+    "chute": "Carte finale : « 2 jours pour exploiter » contre « 63 pour corriger », le second compte en count-up et prend le punch zoom."
+  },
+  "sources": [
+    "Fiche chasse-aux-failles-par-ia de lexique/terms.js : Wiz Research, 21 octobre 2026 (découverte le 19 août avec Gemini 4 Argon et GPT-5.6 Sol, WordPress le 21 août, signalement le 24 août, correctif le 21 octobre, code présent depuis plus de dix ans ; Wikipédia, PHP2Shell, environ 69 % des sites selon W3Techs) ; php.net, 21 octobre 2026 ; Wikipédia, PHP2Shell (sites gouvernementaux hors ligne sur avis du CERT-EU) ; AWS, 21 octobre 2026 (tentative du 17 octobre) ; Axios, 22 octobre 2026 (« Black October ») ; image de l'immeuble et du plombier"
+  ],
+  "publication": {
+    "title": "Exploitée en 2 jours, réparée en 2 mois",
+    "description": "En octobre 2026, des modèles d'IA ont trouvé deux failles cachées depuis plus de dix ans dans PHP, le langage de deux sites web sur trois ; il a fallu deux mois pour les corriger, et des gouvernements ont coupé leurs sites en attendant. C'est la chasse aux failles par IA (AI vulnerability discovery), et certains appellent déjà ce mois-là Black October ; l'histoire dira si le surnom tient.\nhttps://neopal.github.io/lexique/chasse-aux-failles-par-ia/\n#cybersecurite #php #ia #vulgarisation",
+    "fil": "Après le bon score (ép. 17), un fait de la semaine : l'IA trouve les failles plus vite qu'on ne les répare",
+    "decor": "immeuble et plombier du jeudi"
+  }
+}

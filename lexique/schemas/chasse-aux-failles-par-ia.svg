@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 362" role="img" aria-labelledby="chasse-aux-failles-par-ia-t">
+<title id="chasse-aux-failles-par-ia-t">Frise de php2shell : le code vulnérable est présent dans PHP de mars 2012 à août 2026 sans que personne ne le voie ; agrandis, les deux derniers mois montrent la faille repérée avec des modèles le 19 août et exploitée sur un WordPress de test le 21, signalée à PHP le 24 août, une première attaque repérée le 17 octobre et le correctif publié le 21 octobre : deux jours pour l'exploiter, soixante-trois pour la corriger.</title>
+<text class="m mu" x="10" y="16">mars 2012</text>
+<text class="m mu" x="350" y="16" text-anchor="end">août 2026</text>
+<rect class="fd" x="10" y="26" width="340" height="14" rx="2"/>
+<rect class="fa" x="344" y="26" width="6" height="14"/>
+<text class="i mu" x="10" y="62">quatorze ans de code vulnérable</text>
+<path class="lm dash" d="M347 44 V70 H60 V92"/>
+<path class="ln" d="M60 100 V296"/>
+<path class="la" d="M48 100 V106"/>
+<circle class="fa" cx="60" cy="100" r="6"/>
+<text class="b" x="78" y="105">19 au 21 août</text>
+<text class="m ac" x="78" y="123">repérée puis exploitée</text>
+<text class="m ac" x="78" y="141">par Wiz et ses modèles</text>
+<circle class="bx" cx="60" cy="115" r="4"/>
+<text class="m" x="78" y="171">24 août, signalée à PHP</text>
+<path class="lm" d="M64 117 L74 166"/>
+<text class="i mu" x="78" y="214">l'équipe PHP prépare</text>
+<text class="i mu" x="78" y="232">le correctif</text>
+<circle class="lr" cx="60" cy="277" r="5"/>
+<text class="m red" x="78" y="268">17 oct., première attaque</text>
+<circle class="fa" cx="60" cy="289" r="6"/>
+<text class="b" x="78" y="294">21 oct., correctif</text>
+<text class="big" x="10" y="332">2 jours pour exploiter,</text>
+<text class="big ac" x="10" y="354">63 pour corriger</text>
+</svg>

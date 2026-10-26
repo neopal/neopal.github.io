@@ -1,0 +1,4 @@
+{
+  "effet-reine-rouge": {"links": ["benchmaxxing", "evals", "prompt-injection", "modeles-frontiere", "chasse-aux-failles-par-ia"]},
+  "evaluations-de-dangerosite": {"links": ["red-teaming", "evals", "horizon-d-autonomie", "modeles-frontiere", "guardrails", "benchmarks-lesquels-croire", "chasse-aux-failles-par-ia"]}
+}
