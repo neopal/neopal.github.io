@@ -8,13 +8,13 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/</loc>
-        <lastmod>2026-10-21</lastmod>
+        <lastmod>2026-10-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/shorts/</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-22</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
@@ -974,7 +974,13 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/deep-research/</loc>
-        <lastmod>2026-10-21</lastmod>
+        <lastmod>2026-10-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://neopal.github.io/lexique/ai-brain-fry/</loc>
+        <lastmod>2026-10-22</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>

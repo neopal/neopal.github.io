@@ -1,6 +1,6 @@
 # Lexique IA
 
-> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 160 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
+> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 161 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
 
 Toutes les fiches en texte brut, sources comprises : https://neopal.github.io/lexique/llms-full.txt
 Auteur : https://neopal.github.io/
@@ -159,6 +159,7 @@ Auteur : https://neopal.github.io/
 - [Passation entre sessions](https://neopal.github.io/lexique/passation/) (en anglais : Handoff) : La passation transmet un travail d'une session d'agent à la suivante par un document écrit, note, spec ou ticket, puisque la nouvelle session ne sait rien de l'ancienne.
 - [Dark factory](https://neopal.github.io/lexique/dark-factory/) : Une dark factory est une chaîne de développement où des déclencheurs lancent les agents sans personne au clavier, et où leur code part en production sans qu'aucun humain le relise.
 - [Hill climbing](https://neopal.github.io/lexique/hill-climbing/) : Le hill climbing améliore un système d'IA par petites retouches testées une à une sur une éval, gardées seulement si elles font aussi monter les cas mis de côté.
+- [AI brain fry](https://neopal.github.io/lexique/ai-brain-fry/) : L'AI brain fry est la fatigue mentale qui vient d'un usage intensif de l'IA, surtout quand il faut surveiller plusieurs outils ou agents à la fois.
 
 ## Mythes vs réalité
 
