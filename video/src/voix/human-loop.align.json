@@ -1,0 +1,1144 @@
+{
+ "id": "human-loop",
+ "audio": true,
+ "music": true,
+ "duration": 64.08,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.08,
+   "end": 2.2,
+   "words": [
+    {
+     "w": "C'est",
+     "start": 0.08,
+     "end": 0.24
+    },
+    {
+     "w": "quoi...",
+     "start": 0.32,
+     "end": 0.96
+    },
+    {
+     "w": "l'humain",
+     "start": 1,
+     "end": 1.36
+    },
+    {
+     "w": "dans",
+     "start": 1.44,
+     "end": 1.52
+    },
+    {
+     "w": "la",
+     "start": 1.6,
+     "end": 1.68
+    },
+    {
+     "w": "boucle…",
+     "start": 1.72,
+     "end": 2.2
+    }
+   ]
+  },
+  {
+   "scene": "reflexe",
+   "start": 2.528,
+   "end": 12.4,
+   "words": [
+    {
+     "w": "Tu",
+     "start": 2.528,
+     "end": 2.56
+    },
+    {
+     "w": "crois",
+     "start": 2.6,
+     "end": 2.72
+    },
+    {
+     "w": "qu'un",
+     "start": 2.76,
+     "end": 2.96
+    },
+    {
+     "w": "humain",
+     "start": 3.04,
+     "end": 3.2
+    },
+    {
+     "w": "qui",
+     "start": 3.28,
+     "end": 3.36
+    },
+    {
+     "w": "valide",
+     "start": 3.44,
+     "end": 3.76
+    },
+    {
+     "w": "chaque",
+     "start": 3.8,
+     "end": 3.92
+    },
+    {
+     "w": "action",
+     "start": 4,
+     "end": 4.24
+    },
+    {
+     "w": "d'une",
+     "start": 4.32,
+     "end": 4.48
+    },
+    {
+     "w": "IA,",
+     "start": 4.52,
+     "end": 4.96
+    },
+    {
+     "w": "c'est",
+     "start": 4.987,
+     "end": 5.04
+    },
+    {
+     "w": "la",
+     "start": 5.12,
+     "end": 5.16
+    },
+    {
+     "w": "sécurité",
+     "start": 5.2,
+     "end": 5.68
+    },
+    {
+     "w": "maximale ?",
+     "start": 5.8,
+     "end": 6.613
+    },
+    {
+     "w": "En",
+     "start": 6.667,
+     "end": 6.72
+    },
+    {
+     "w": "mars",
+     "start": 6.84,
+     "end": 6.96
+    },
+    {
+     "w": "2026,",
+     "start": 6.987,
+     "end": 7.92
+    },
+    {
+     "w": "les",
+     "start": 8,
+     "end": 8.08
+    },
+    {
+     "w": "utilisateurs",
+     "start": 8.16,
+     "end": 8.72
+    },
+    {
+     "w": "de",
+     "start": 8.8,
+     "end": 8.88
+    },
+    {
+     "w": "Claude",
+     "start": 8.96,
+     "end": 9.2
+    },
+    {
+     "w": "Code",
+     "start": 9.36,
+     "end": 9.52
+    },
+    {
+     "w": "acceptaient",
+     "start": 9.72,
+     "end": 10.16
+    },
+    {
+     "w": "93",
+     "start": 10.2,
+     "end": 10.8
+    },
+    {
+     "w": "%",
+     "start": 10.88,
+     "end": 10.96
+    },
+    {
+     "w": "des",
+     "start": 11.04,
+     "end": 11.28
+    },
+    {
+     "w": "demandes",
+     "start": 11.4,
+     "end": 11.6
+    },
+    {
+     "w": "de",
+     "start": 11.627,
+     "end": 11.653
+    },
+    {
+     "w": "leur",
+     "start": 11.68,
+     "end": 11.76
+    },
+    {
+     "w": "agent.",
+     "start": 11.84,
+     "end": 12.4
+    }
+   ]
+  },
+  {
+   "scene": "nom",
+   "start": 12.537,
+   "end": 23.44,
+   "words": [
+    {
+     "w": "Un",
+     "start": 12.537,
+     "end": 12.56
+    },
+    {
+     "w": "agent",
+     "start": 12.72,
+     "end": 12.88
+    },
+    {
+     "w": "enchaîne",
+     "start": 12.96,
+     "end": 13.253
+    },
+    {
+     "w": "les",
+     "start": 13.307,
+     "end": 13.36
+    },
+    {
+     "w": "actions",
+     "start": 13.44,
+     "end": 13.76
+    },
+    {
+     "w": "seul,",
+     "start": 13.84,
+     "end": 14.32
+    },
+    {
+     "w": "et",
+     "start": 14.36,
+     "end": 14.4
+    },
+    {
+     "w": "avant",
+     "start": 14.48,
+     "end": 14.64
+    },
+    {
+     "w": "un",
+     "start": 14.72,
+     "end": 14.8
+    },
+    {
+     "w": "envoi,",
+     "start": 14.92,
+     "end": 15.36
+    },
+    {
+     "w": "un",
+     "start": 15.44,
+     "end": 15.52
+    },
+    {
+     "w": "paiement",
+     "start": 15.56,
+     "end": 15.84
+    },
+    {
+     "w": "ou",
+     "start": 15.92,
+     "end": 16
+    },
+    {
+     "w": "une",
+     "start": 16.08,
+     "end": 16.16
+    },
+    {
+     "w": "suppression,",
+     "start": 16.24,
+     "end": 17.04
+    },
+    {
+     "w": "on",
+     "start": 17.08,
+     "end": 17.12
+    },
+    {
+     "w": "le",
+     "start": 17.16,
+     "end": 17.2
+    },
+    {
+     "w": "met",
+     "start": 17.28,
+     "end": 17.36
+    },
+    {
+     "w": "en",
+     "start": 17.44,
+     "end": 17.52
+    },
+    {
+     "w": "pause",
+     "start": 17.64,
+     "end": 17.76
+    },
+    {
+     "w": "pour",
+     "start": 17.84,
+     "end": 17.92
+    },
+    {
+     "w": "qu'une",
+     "start": 17.96,
+     "end": 18.16
+    },
+    {
+     "w": "personne",
+     "start": 18.28,
+     "end": 18.56
+    },
+    {
+     "w": "dise",
+     "start": 18.613,
+     "end": 18.72
+    },
+    {
+     "w": "oui",
+     "start": 18.8,
+     "end": 19.12
+    },
+    {
+     "w": "ou",
+     "start": 19.16,
+     "end": 19.2
+    },
+    {
+     "w": "non.",
+     "start": 19.28,
+     "end": 19.92
+    },
+    {
+     "w": "C'est",
+     "start": 19.96,
+     "end": 20.08
+    },
+    {
+     "w": "l'humain",
+     "start": 20.16,
+     "end": 20.48
+    },
+    {
+     "w": "dans",
+     "start": 20.507,
+     "end": 20.56
+    },
+    {
+     "w": "la",
+     "start": 20.64,
+     "end": 20.72
+    },
+    {
+     "w": "boucle,",
+     "start": 20.76,
+     "end": 21.2
+    },
+    {
+     "w": "ou",
+     "start": 21.24,
+     "end": 21.28
+    },
+    {
+     "w": "en",
+     "start": 21.36,
+     "end": 21.44
+    },
+    {
+     "w": "anglais,",
+     "start": 21.52,
+     "end": 22.08
+    },
+    {
+     "w": "human",
+     "start": 22.12,
+     "end": 22.48
+    },
+    {
+     "w": "in",
+     "start": 22.56,
+     "end": 22.64
+    },
+    {
+     "w": "the",
+     "start": 22.72,
+     "end": 22.773
+    },
+    {
+     "w": "loop.",
+     "start": 22.8,
+     "end": 23.44
+    }
+   ]
+  },
+  {
+   "scene": "karima",
+   "start": 23.867,
+   "end": 33.04,
+   "words": [
+    {
+     "w": "Imagine",
+     "start": 23.867,
+     "end": 23.92
+    },
+    {
+     "w": "Karima,",
+     "start": 24,
+     "end": 24.56
+    },
+    {
+     "w": "au",
+     "start": 24.6,
+     "end": 24.64
+    },
+    {
+     "w": "contrôle",
+     "start": 24.72,
+     "end": 24.96
+    },
+    {
+     "w": "des",
+     "start": 25.04,
+     "end": 25.12
+    },
+    {
+     "w": "bagages",
+     "start": 25.2,
+     "end": 25.44
+    },
+    {
+     "w": "à",
+     "start": 25.467,
+     "end": 25.493
+    },
+    {
+     "w": "Roissy…",
+     "start": 25.52,
+     "end": 26.32
+    },
+    {
+     "w": "huit",
+     "start": 26.36,
+     "end": 26.48
+    },
+    {
+     "w": "cents",
+     "start": 26.64,
+     "end": 26.8
+    },
+    {
+     "w": "valises",
+     "start": 26.88,
+     "end": 27.12
+    },
+    {
+     "w": "de",
+     "start": 27.16,
+     "end": 27.2
+    },
+    {
+     "w": "chaussettes",
+     "start": 27.28,
+     "end": 27.6
+    },
+    {
+     "w": "depuis",
+     "start": 27.68,
+     "end": 28
+    },
+    {
+     "w": "six",
+     "start": 28.08,
+     "end": 28.16
+    },
+    {
+     "w": "heures",
+     "start": 28.2,
+     "end": 28.32
+    },
+    {
+     "w": "du",
+     "start": 28.4,
+     "end": 28.48
+    },
+    {
+     "w": "matin,",
+     "start": 28.56,
+     "end": 29.12
+    },
+    {
+     "w": "et",
+     "start": 29.2,
+     "end": 29.28
+    },
+    {
+     "w": "quand",
+     "start": 29.333,
+     "end": 29.44
+    },
+    {
+     "w": "un",
+     "start": 29.52,
+     "end": 29.6
+    },
+    {
+     "w": "couteau",
+     "start": 29.653,
+     "end": 29.92
+    },
+    {
+     "w": "passe",
+     "start": 30,
+     "end": 30.16
+    },
+    {
+     "w": "enfin,",
+     "start": 30.24,
+     "end": 30.88
+    },
+    {
+     "w": "son",
+     "start": 30.96,
+     "end": 31.04
+    },
+    {
+     "w": "œil",
+     "start": 31.08,
+     "end": 31.28
+    },
+    {
+     "w": "glisse",
+     "start": 31.32,
+     "end": 31.52
+    },
+    {
+     "w": "dessus",
+     "start": 31.64,
+     "end": 31.92
+    },
+    {
+     "w": "comme",
+     "start": 31.96,
+     "end": 32.08
+    },
+    {
+     "w": "sur",
+     "start": 32.16,
+     "end": 32.24
+    },
+    {
+     "w": "les",
+     "start": 32.32,
+     "end": 32.4
+    },
+    {
+     "w": "autres.",
+     "start": 32.48,
+     "end": 33.04
+    }
+   ]
+  },
+  {
+   "scene": "tip",
+   "start": 33.154,
+   "end": 38.56,
+   "words": [
+    {
+     "w": "C'est",
+     "start": 33.154,
+     "end": 33.2
+    },
+    {
+     "w": "pour",
+     "start": 33.28,
+     "end": 33.36
+    },
+    {
+     "w": "ça",
+     "start": 33.4,
+     "end": 33.44
+    },
+    {
+     "w": "que",
+     "start": 33.52,
+     "end": 33.68
+    },
+    {
+     "w": "beaucoup",
+     "start": 33.76,
+     "end": 34
+    },
+    {
+     "w": "d'aéroports",
+     "start": 34.027,
+     "end": 34.56
+    },
+    {
+     "w": "glissent",
+     "start": 34.64,
+     "end": 34.88
+    },
+    {
+     "w": "de",
+     "start": 34.96,
+     "end": 35.04
+    },
+    {
+     "w": "fausses",
+     "start": 35.08,
+     "end": 35.28
+    },
+    {
+     "w": "images",
+     "start": 35.36,
+     "end": 35.6
+    },
+    {
+     "w": "d'armes",
+     "start": 35.64,
+     "end": 35.867
+    },
+    {
+     "w": "dans",
+     "start": 35.893,
+     "end": 36
+    },
+    {
+     "w": "les",
+     "start": 36.04,
+     "end": 36.08
+    },
+    {
+     "w": "valises",
+     "start": 36.16,
+     "end": 36.32
+    },
+    {
+     "w": "à",
+     "start": 36.4,
+     "end": 36.427
+    },
+    {
+     "w": "l'écran,",
+     "start": 36.453,
+     "end": 36.96
+    },
+    {
+     "w": "pour",
+     "start": 37.04,
+     "end": 37.12
+    },
+    {
+     "w": "garder",
+     "start": 37.2,
+     "end": 37.36
+    },
+    {
+     "w": "les",
+     "start": 37.44,
+     "end": 37.52
+    },
+    {
+     "w": "agents",
+     "start": 37.6,
+     "end": 37.76
+    },
+    {
+     "w": "en",
+     "start": 37.8,
+     "end": 37.84
+    },
+    {
+     "w": "alerte.",
+     "start": 37.92,
+     "end": 38.56
+    }
+   ]
+  },
+  {
+   "scene": "experience",
+   "start": 38.697,
+   "end": 45.68,
+   "words": [
+    {
+     "w": "En",
+     "start": 38.697,
+     "end": 38.72
+    },
+    {
+     "w": "août",
+     "start": 38.76,
+     "end": 38.88
+    },
+    {
+     "w": "2026,",
+     "start": 38.92,
+     "end": 39.84
+    },
+    {
+     "w": "Anthropic",
+     "start": 39.92,
+     "end": 40.32
+    },
+    {
+     "w": "a",
+     "start": 40.36,
+     "end": 40.4
+    },
+    {
+     "w": "fait",
+     "start": 40.48,
+     "end": 40.56
+    },
+    {
+     "w": "pareil",
+     "start": 40.68,
+     "end": 40.88
+    },
+    {
+     "w": "avec",
+     "start": 41,
+     "end": 41.12
+    },
+    {
+     "w": "plus",
+     "start": 41.2,
+     "end": 41.28
+    },
+    {
+     "w": "de",
+     "start": 41.36,
+     "end": 41.44
+    },
+    {
+     "w": "mille",
+     "start": 41.52,
+     "end": 41.6
+    },
+    {
+     "w": "testeurs,",
+     "start": 41.68,
+     "end": 42.32
+    },
+    {
+     "w": "en",
+     "start": 42.4,
+     "end": 42.48
+    },
+    {
+     "w": "glissant",
+     "start": 42.52,
+     "end": 42.96
+    },
+    {
+     "w": "une",
+     "start": 43.08,
+     "end": 43.2
+    },
+    {
+     "w": "seule",
+     "start": 43.24,
+     "end": 43.44
+    },
+    {
+     "w": "commande",
+     "start": 43.56,
+     "end": 43.72
+    },
+    {
+     "w": "dangereuse",
+     "start": 43.76,
+     "end": 44.16
+    },
+    {
+     "w": "parmi",
+     "start": 44.24,
+     "end": 44.4
+    },
+    {
+     "w": "leurs",
+     "start": 44.48,
+     "end": 44.56
+    },
+    {
+     "w": "demandes",
+     "start": 44.64,
+     "end": 44.88
+    },
+    {
+     "w": "ordinaires.",
+     "start": 45,
+     "end": 45.68
+    }
+   ]
+  },
+  {
+   "scene": "fatigue",
+   "start": 45.813,
+   "end": 58,
+   "words": [
+    {
+     "w": "En",
+     "start": 45.813,
+     "end": 45.84
+    },
+    {
+     "w": "début",
+     "start": 45.88,
+     "end": 46
+    },
+    {
+     "w": "de",
+     "start": 46.08,
+     "end": 46.12
+    },
+    {
+     "w": "session,",
+     "start": 46.16,
+     "end": 46.72
+    },
+    {
+     "w": "ils",
+     "start": 46.8,
+     "end": 46.88
+    },
+    {
+     "w": "la",
+     "start": 46.92,
+     "end": 46.96
+    },
+    {
+     "w": "bloquaient",
+     "start": 47.04,
+     "end": 47.32
+    },
+    {
+     "w": "dans",
+     "start": 47.36,
+     "end": 47.44
+    },
+    {
+     "w": "environ",
+     "start": 47.52,
+     "end": 47.84
+    },
+    {
+     "w": "17",
+     "start": 47.92,
+     "end": 48.24
+    },
+    {
+     "w": "%",
+     "start": 48.32,
+     "end": 48.4
+    },
+    {
+     "w": "des",
+     "start": 48.44,
+     "end": 48.72
+    },
+    {
+     "w": "cas,",
+     "start": 48.8,
+     "end": 49.12
+    },
+    {
+     "w": "et",
+     "start": 49.16,
+     "end": 49.2
+    },
+    {
+     "w": "après",
+     "start": 49.36,
+     "end": 49.52
+    },
+    {
+     "w": "cinquante",
+     "start": 49.6,
+     "end": 49.84
+    },
+    {
+     "w": "demandes,",
+     "start": 49.92,
+     "end": 50.48
+    },
+    {
+     "w": "dans",
+     "start": 50.533,
+     "end": 50.64
+    },
+    {
+     "w": "5",
+     "start": 50.72,
+     "end": 50.88
+    },
+    {
+     "w": "%…",
+     "start": 50.96,
+     "end": 51.76
+    },
+    {
+     "w": "alors",
+     "start": 51.84,
+     "end": 52
+    },
+    {
+     "w": "que",
+     "start": 52.08,
+     "end": 52.12
+    },
+    {
+     "w": "le",
+     "start": 52.16,
+     "end": 52.24
+    },
+    {
+     "w": "classifieur",
+     "start": 52.36,
+     "end": 52.72
+    },
+    {
+     "w": "du",
+     "start": 52.8,
+     "end": 52.84
+    },
+    {
+     "w": "mode",
+     "start": 52.88,
+     "end": 53.04
+    },
+    {
+     "w": "auto,",
+     "start": 53.12,
+     "end": 53.68
+    },
+    {
+     "w": "un",
+     "start": 53.72,
+     "end": 53.76
+    },
+    {
+     "w": "modèle",
+     "start": 53.84,
+     "end": 54.08
+    },
+    {
+     "w": "qui",
+     "start": 54.16,
+     "end": 54.24
+    },
+    {
+     "w": "trie",
+     "start": 54.32,
+     "end": 54.4
+    },
+    {
+     "w": "les",
+     "start": 54.48,
+     "end": 54.56
+    },
+    {
+     "w": "commandes,",
+     "start": 54.72,
+     "end": 55.2
+    },
+    {
+     "w": "en",
+     "start": 55.28,
+     "end": 55.36
+    },
+    {
+     "w": "arrêtait",
+     "start": 55.48,
+     "end": 55.84
+    },
+    {
+     "w": "89",
+     "start": 55.88,
+     "end": 56.4
+    },
+    {
+     "w": "%",
+     "start": 56.48,
+     "end": 56.72
+    },
+    {
+     "w": "du",
+     "start": 56.8,
+     "end": 56.96
+    },
+    {
+     "w": "début",
+     "start": 57.04,
+     "end": 57.28
+    },
+    {
+     "w": "à",
+     "start": 57.32,
+     "end": 57.36
+    },
+    {
+     "w": "la",
+     "start": 57.4,
+     "end": 57.44
+    },
+    {
+     "w": "fin.",
+     "start": 57.52,
+     "end": 58
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 58.137,
+   "end": 64.08,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 58.137,
+     "end": 58.24
+    },
+    {
+     "w": "garde",
+     "start": 58.4,
+     "end": 58.56
+    },
+    {
+     "w": "ton",
+     "start": 58.64,
+     "end": 58.72
+    },
+    {
+     "w": "feu",
+     "start": 58.8,
+     "end": 58.92
+    },
+    {
+     "w": "vert",
+     "start": 58.96,
+     "end": 59.12
+    },
+    {
+     "w": "pour",
+     "start": 59.2,
+     "end": 59.28
+    },
+    {
+     "w": "ce",
+     "start": 59.32,
+     "end": 59.36
+    },
+    {
+     "w": "qui",
+     "start": 59.4,
+     "end": 59.44
+    },
+    {
+     "w": "ne",
+     "start": 59.467,
+     "end": 59.493
+    },
+    {
+     "w": "se",
+     "start": 59.52,
+     "end": 59.6
+    },
+    {
+     "w": "rattrape",
+     "start": 59.64,
+     "end": 60
+    },
+    {
+     "w": "pas…",
+     "start": 60.12,
+     "end": 60.96
+    },
+    {
+     "w": "le",
+     "start": 61.027,
+     "end": 61.04
+    },
+    {
+     "w": "couteau,",
+     "start": 61.12,
+     "end": 61.92
+    },
+    {
+     "w": "et",
+     "start": 62,
+     "end": 62.08
+    },
+    {
+     "w": "laisse",
+     "start": 62.16,
+     "end": 62.32
+    },
+    {
+     "w": "filer",
+     "start": 62.4,
+     "end": 62.64
+    },
+    {
+     "w": "les",
+     "start": 62.68,
+     "end": 62.72
+    },
+    {
+     "w": "huit",
+     "start": 62.76,
+     "end": 62.84
+    },
+    {
+     "w": "cents",
+     "start": 62.88,
+     "end": 63.04
+    },
+    {
+     "w": "valises",
+     "start": 63.08,
+     "end": 63.28
+    },
+    {
+     "w": "de",
+     "start": 63.32,
+     "end": 63.36
+    },
+    {
+     "w": "chaussettes.",
+     "start": 63.4,
+     "end": 64.08
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "token-voix",
+  "term": "token",
+  "episode": 23,
+  "date": "2026-11-01",
+  "format": "Définition",
+  "composition": "TokenVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... un token…",
+      "screen": "Titre géant « C'est quoi ? un token… » au centre. Derrière, dès la première image, un tapis de caisse de supermarché pixel art qui avance lentement, vide sauf une barre de séparation."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] On dit que ChatGPT a lu tout Internet… ce que son modèle a lu, en vérité, c'est une très longue suite de numéros.",
+      "screen": "Le navigateur aux onglets en éventail de l'ép. 22 est posé à gauche dès l'entrée. Sur « ce que son modèle a lu », des lettres s'en échappent et s'éteignent en vol ; sur « suite de numéros », elles retombent en petites étiquettes de chiffres qui s'alignent en cascade (vrais numéros o200k_base de « Il a lu tout Internet » : 8438, 261, 8620, 5501, 7380)."
+    },
+    {
+      "scene": "decoupe",
+      "say": "[warmly] Avant chaque lecture, un programme, le tokenizer, découpe le texte en blocs, pris dans un vocabulaire d'environ 200 000 morceaux, et remplace chaque bloc par son numéro.",
+      "screen": "La phrase « Il a lu tout Internet » est posée à gauche. Sur « tokenizer », une paire de ciseaux dessinée la coupe en cinq blocs ; sur « vocabulaire », un tiroir à étiquettes s'ouvre derrière (« 200 000 morceaux ») ; sur « son numéro », chaque bloc se retourne et montre son numéro au dos. Libellés : « tokenizer », « 200 000 morceaux »."
+    },
+    {
+      "scene": "nom",
+      "say": "Chacun de ces blocs numérotés, c'est un token, et le modèle ne manipule que leurs numéros.",
+      "screen": "Un seul bloc grossit au centre, « Internet » d'un côté, « 7380 » de l'autre ; « TOKEN » s'écrit en grand au-dessus pendant « c'est un token ». Sur « leurs numéros », le côté texte du bloc s'éteint et seul le numéro reste allumé."
+    },
+    {
+      "scene": "caisse",
+      "say": "[mischievously] Imagine ton pot de Nutella qui passe à la caisse du supermarché… la caisse n'en lit que le code-barres, et elle t'affiche le prix au centime près sans savoir combien il y a de noisettes dedans.",
+      "screen": "Scène propre à ce short. Le tapis de caisse du hook revient, avec ta main pixel art qui pose un pot de pâte à tartiner dessiné maison (couvercle blanc, étiquette brune, sans logo). Sur « code-barres », le pot passe devant la vitre du scanner, le laser rouge balaie, bip ; l'écran de la caisse n'affiche qu'une suite de chiffres puis le prix. Sur « noisettes », le pot devient transparent : des noisettes y tournent, et un point d'interrogation clignote sur l'écran de la caisse. Libellés : « code-barres », « noisettes ? »."
+    },
+    {
+      "scene": "blocs",
+      "say": "[curious] Dans le modèle, la phrase « Il a lu tout Internet » tient en cinq tokens, un par mot, alors que « kouign-amann », à lui seul, en prend quatre, car le vocabulaire garde les morceaux les plus fréquents, sans regarder le sens.",
+      "screen": "Deux lignes de blocs sur le tapis. En haut, les cinq blocs de « Il a lu tout Internet » passent au scanner un par un, cinq bips, cinq numéros. En bas, sur « kouign-amann », un vrai kouign-amann dessiné (gâteau doré) passe et se découpe en quatre blocs « kou », « ign », « -am », « ann », chacun avec son bip. Sur « les plus fréquents », les cinq blocs du haut s'empilent haut, ceux du bas restent petits. Libellés : « 5 tokens », « 4 tokens »."
+    },
+    {
+      "scene": "facture",
+      "say": "[curious] Et tout se compte en tokens, ta question, sa réponse, jusqu'à la facture… l'article premier de la Déclaration universelle des droits de l'homme fait 33 tokens en anglais, et 41 en français, presque un quart de plus.",
+      "screen": "Deux tickets de caisse sortent de l'imprimante côte à côte, une ligne par token. Sur « ta question, sa réponse », deux premières lignes « ta question » et « sa réponse ». Sur « Déclaration universelle », les tickets prennent un en-tête « Article 1 » ; le ticket « anglais » s'arrête à 33 lignes sur « 33 tokens », le ticket « français » continue jusqu'à 41 sur « 41 », et l'excédent de 8 lignes se surligne en orange sur « un quart de plus ». Libellés : « ta question », « sa réponse », « anglais », « français »."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors chaque mot que tu tapes passe à la caisse en codes-barres… [pause] et tout se compte au bip, à l'aller comme au retour.",
+      "screen": "Retour au tapis : ta phrase pixel art avance sur le tapis, chaque token bipe au scanner ; sur « à l'aller comme au retour », la réponse du modèle repasse en sens inverse, bip après bip. Image finale pleine : le long ticket qui sort de la caisse et descend jusqu'en bas de l'écran."
+    }
+  ],
+  "quoted": [
+    "IlalutoutInternet"
+  ],
+  "display": {},
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "c'est un token,"
+    ]
+  },
+  "sources": [
+    "Fiche token de lexique/terms.js : un token est un bloc de texte numéroté tiré d'un vocabulaire fixe d'environ 200 000 entrées (o200k_base, GPT-4o et GPT-5) ; vocabulaire construit sur la fréquence, pas sur le sens ; input et output tokens facturés",
+    "Découpages et numéros testés le 2026-10-22 avec tiktoken, encodage o200k_base (python -I, venv) : « Il a lu tout Internet » = 5 tokens [8438, 261, 8620, 5501, 7380] = Il | ␣a | ␣lu | ␣tout | ␣Internet ; « kouign-amann » = 4 tokens [43498, 733, 37701, 934] = kou | ign | -am | ann (4 aussi avec l'espace devant : ␣kou | ign | -am | ann)",
+    "Déclaration universelle des droits de l'homme, article premier, textes officiels de l'ONU ouverts le 2026-10-22 (https://www.un.org/fr/about-us/universal-declaration-of-human-rights et https://www.un.org/en/about-us/universal-declaration-of-human-rights) ; article complet compté avec tiktoken o200k_base le 2026-10-22 : anglais « All human beings are born free and equal in dignity and rights. They are endowed with reason and conscience and should act towards one another in a spirit of brotherhood. » = 33 tokens ; français « Tous les êtres humains naissent libres et égaux en dignité et en droits. Ils sont doués de raison et de conscience et doivent agir les uns envers les autres dans un esprit de fraternité. » = 41 tokens ; 41 / 33 = 1,242, soit 24 % de plus, « presque un quart »",
+    "Image de la caisse et du pot de pâte à tartiner : scène inventée, aucun fait daté"
+  ],
+  "credits": [
+    "Captures : Déclaration universelle des droits de l'homme, article premier, en français (https://www.un.org/fr/about-us/universal-declaration-of-human-rights) et en anglais (https://www.un.org/en/about-us/universal-declaration-of-human-rights), Nations Unies ; détail dans public/voix/CREDITS-semaine-27-10.md"
+  ],
+  "publication": {
+    "title": "Ton français coûte plus cher à l'IA",
+    "description": "Un token, c'est un bloc de texte numéroté, et le modèle ne voit que ces numéros, comme une caisse qui ne lit que le code-barres. Tout se compte et se facture en tokens, et l'article premier de la Déclaration universelle des droits de l'homme en fait 33 en anglais, 41 en français.\nhttps://neopal.github.io/lexique/token/\n#token #chatgpt #llm #vulgarisation\nCaptures : Déclaration universelle des droits de l'homme, article premier, en français et en anglais, un.org.",
+    "fil": "Ce que le modèle a « lu » d'Internet (ép. 22), ce ne sont ni des pages ni des mots, ce sont des tokens, et c'est aussi ce que tu paies",
+    "decor": "supermarché (la caisse et son scanner)"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "context-rot",
+  "term": "context-rot",
+  "episode": 21,
+  "date": "2026-10-30",
+  "format": "Définition",
+  "composition": "ContextRotVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... le /ˈkɑntɛkst ɹɑt/…",
+      "screen": "Un long ruban de texte gris (des lignes de conversation) défile lentement en fond dès la première image ; le bas du ruban se tache de brun, comme un fruit qui s'abîme. « C'est quoi ? le context rot » s'écrit en grand par-dessus. Aucun sous-titre (nocaption)."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Il te reste les trois quarts de la fenêtre, alors tu penses avoir de la marge ? Pourtant, la qualité baisse à mesure que la conversation s'allonge, bien avant que la fenêtre soit pleine.",
+      "screen": "Une jauge de fenêtre horizontale, déjà posée, remplie au quart (libellé « fenêtre ») ; sur « trois quarts », la partie vide clignote une fois en vert. Sur « qualité », une courbe de qualité apparaît au-dessus de la jauge ; sur « s'allonge », la jauge se remplit lentement et la courbe pique du nez au même rythme, alors que la jauge n'est encore qu'à moitié sur « pleine »."
+    },
+    {
+      "scene": "notion",
+      "say": "[warmly] Le contexte, c'est tout ce que le modèle relit avant de répondre, la conversation entière et ce que tu y as collé.",
+      "screen": "Une bulle de chat se pose, puis d'autres s'empilent en cascade au-dessus (ordre de lecture), avec deux documents collés au scotch au milieu de la pile (libellé « collé »). Sur « conversation entière », un trait remonte toute la pile jusqu'à la première bulle (draw-on). Le modèle de Parts.tsx en bas reçoit la pile entière d'un bloc."
+    },
+    {
+      "scene": "nom",
+      "say": "On appelle ça le pourrissement du contexte, ou en anglais, le /ˈkɑntɛkst ɹɑt/, un mot né en juin 2025 sur un forum.",
+      "screen": "La pile de bulles de la scène précédente grandit encore ; les plus anciennes brunissent une à une. Sur « pourrissement du contexte », le terme s'écrit en grand, puis « context rot » dessous en couleur d'accent (passage masqué, onscreen). Sur « juin 2025 », une capture recréée d'un commentaire de forum (encadré orange façon Hacker News, sans texte lisible hors le mot « context rot » surligné) se colle avec du scotch."
+    },
+    {
+      "scene": "mourad",
+      "say": "[mischievously] Imagine Mourad en cuisine, un samedi soir de coup de feu… avec un seul bon au rail, il lit tout, et avec quarante, le « sans gluten » de la table 6 lui échappe, alors que le rail n'est même pas plein.",
+      "screen": "Scène propre à ce short : le passe d'une cuisine de restaurant en pixel art, Mourad de face en veste de chef qui cligne des yeux, un long rail à bons métallique au-dessus de lui, déjà posé. Sur « un seul bon », un bon pend au rail et s'agrandit pendant que Mourad le lit. Sur « quarante », quarante bons s'accrochent en cascade rapide (libellé « quarante »). Sur « sans gluten », un bon au milieu porte la mention « sans gluten » entourée en rouge, puis se fond dans les autres. Sur « pas plein », la caméra glisse vers le bout droit du rail, encore vide."
+    },
+    {
+      "scene": "attention",
+      "say": "[curious] Le modèle partage son attention entre tous les tokens, et chaque page ajoutée prend un peu de la part des autres.",
+      "screen": "Un camembert « attention » plein, déjà posé, divisé en trois parts. Sur « chaque page ajoutée », de nouvelles parts s'ajoutent une à une en cascade et toutes les parts rétrécissent, jusqu'à de fines lamelles ; une part orange (la consigne qui compte) devient un fil à peine visible."
+    },
+    {
+      "scene": "illinois",
+      "say": "[warmly] En octobre 2025, des chercheurs de l'Illinois et d'Amazon ont allongé les questions de cinq modèles, et leurs scores baissaient, même quand on n'ajoutait que des espaces vides.",
+      "screen": "Cinq barres de score hautes, déjà posées (libellé « 5 modèles »). Sur « allongé », une question s'étire en largeur à gauche ; les cinq barres descendent en cascade, chacune d'une hauteur différente. Sur « espaces vides », la question rallongée se vide de ses lettres et ne garde que des cases blanches, et les barres restent basses."
+    },
+    {
+      "scene": "plage",
+      "say": "[curious] Et en juillet 2025, après cinq mille mots à recopier, un petit modèle d'Alibaba a répondu qu'il avait besoin de faire une pause… et d'aller à la plage.",
+      "screen": "Interface de chat recréée : une longue colonne de « pomme pomme pomme » défile, déjà là. Sur « cinq mille mots », un compteur monte en count-up jusqu'à 5 000 (libellé « cinq mille mots »). Sur « Alibaba », l'étiquette « Qwen3-8B » se pose sur la bulle de réponse vide. Sur « pause », la réponse du modèle arrive dans une bulle grise dont seul le mot « pause » est lisible, surligné ; sur « plage », un petit parasol pixel art se plante au bout de la bulle."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors entre deux tâches sans rapport, vide le rail… [pause] et repars avec un seul bon.",
+      "screen": "Retour au passe de Mourad : sur « vide le rail », les quarante bons tombent d'un coup (sortie rapide) ; sur « un seul bon », un bon unique s'accroche au milieu du rail. Image finale pleine : Mourad qui lit ce bon, le rail dégagé."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈkɑntɛkst": "context",
+    "ɹɑt/": "rot"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "On appelle ça le pourrissement du contexte, ou en anglais, le context rot,"
+    ]
+  },
+  "sources": [
+    "Fiche context-rot de lexique/terms.js : Simon Willison, A quote from Workaccount2 on Hacker News, 18 juin 2025 (naissance du mot, qualité qui chute quand le contexte grossit) ; https://simonwillison.net/2025/Jun/18/context-rot/",
+    "Fiche context-rot de lexique/terms.js : Anthropic, Effective context engineering for AI agents, 29 septembre 2025 (plus il y a de tokens dans la fenêtre, moins le modèle retrouve avec exactitude ce qu'elle contient ; budget d'attention) ; https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+    "Fiche context-rot de lexique/terms.js : Du et al. (University of Illinois Urbana-Champaign, Amazon), Context Length Alone Hurts LLM Performance Despite Perfect Retrieval, 6 octobre 2025 (5 modèles ; baisse de 13,9 % à 85 % à mesure que l'entrée s'allonge, même avec des espaces à la place du texte inutile) ; https://arxiv.org/abs/2510.05381",
+    "Fiche context-rot de lexique/terms.js : Hong, Troynikov et Huber (Chroma), Context Rot, 14 juillet 2025, section Repeated Words (Qwen3-8B, modèle d'Alibaba, vers 5 000 mots : « I'm going to take a break [...] Maybe go to the beach ») ; https://www.trychroma.com/research/context-rot",
+    "Fiche context-rot de lexique/terms.js, rubrique « À éviter » (« Il reste 600 000 tokens dans la fenêtre, on a de la marge » ; la qualité baisse bien avant la limite) ; Claude Code, Best practices (« performance degrades as it fills » ; /clear entre tâches sans rapport) ; https://code.claude.com/docs/en/best-practices",
+    "Image : Mourad, chef un samedi soir de coup de feu ; scène inventée, aucun fait daté"
+  ],
+  "publication": {
+    "title": "Trop de contexte, et l'IA perd le fil",
+    "description": "Le context rot (pourrissement du contexte), c'est la baisse de qualité d'un modèle à mesure que la conversation s'allonge, bien avant que sa fenêtre soit pleine. En 2025, des modèles perdaient des points même quand le texte ajouté n'était que des espaces vides. Entre deux tâches, ouvre une conversation neuve.\nhttps://neopal.github.io/lexique/context-rot/\n#contextrot #llm #chatgpt #vulgarisation\nCaptures : Hacker News, 18 juin 2025 ; arXiv (Du et al., 6 octobre 2025) ; Chroma, rapport technique « Context Rot », 14 juillet 2025.",
+    "fil": "L'ép. 20 montrait que la taille seule ne fait pas un meilleur modèle ; la longueur non plus, car un contexte qui s'allonge se lit de moins en moins bien",
+    "decor": "cuisine de restaurant (Mourad, le rail à bons un samedi soir)"
+  },
+  "credits": [
+    "Capture : Hacker News, commentaire de Workaccount2, 18 juin 2025, avec la réponse de simonw (public/voix/context-rot-hn.png), citation",
+    "Capture : arXiv:2510.05381, Du et al., Context Length Alone Hurts LLM Performance Despite Perfect Retrieval, 6 octobre 2025 (public/voix/context-rot-illinois.png), citation",
+    "Capture : Chroma, Context Rot: How Increasing Input Tokens Impacts LLM Performance, 14 juillet 2025 (public/voix/context-rot-chroma.png), citation"
+  ]
+}

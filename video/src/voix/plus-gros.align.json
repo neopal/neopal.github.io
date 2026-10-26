@@ -1,0 +1,1169 @@
+{
+ "id": "plus-gros",
+ "audio": true,
+ "music": true,
+ "duration": 68.32,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.16,
+   "end": 7.2,
+   "words": [
+    {
+     "w": "«",
+     "start": 0.16,
+     "end": 0.187
+    },
+    {
+     "w": "Plus",
+     "start": 0.213,
+     "end": 0.24
+    },
+    {
+     "w": "le",
+     "start": 0.28,
+     "end": 0.32
+    },
+    {
+     "w": "modèle",
+     "start": 0.4,
+     "end": 0.64
+    },
+    {
+     "w": "est",
+     "start": 0.68,
+     "end": 0.72
+    },
+    {
+     "w": "gros,",
+     "start": 0.76,
+     "end": 1.28
+    },
+    {
+     "w": "plus",
+     "start": 1.4,
+     "end": 1.52
+    },
+    {
+     "w": "il",
+     "start": 1.56,
+     "end": 1.6
+    },
+    {
+     "w": "est",
+     "start": 1.68,
+     "end": 1.76
+    },
+    {
+     "w": "intelligent",
+     "start": 1.84,
+     "end": 2.32
+    },
+    {
+     "w": "»…",
+     "start": 2.72,
+     "end": 2.827
+    },
+    {
+     "w": "sauf",
+     "start": 2.88,
+     "end": 3.04
+    },
+    {
+     "w": "que",
+     "start": 3.12,
+     "end": 3.2
+    },
+    {
+     "w": "la",
+     "start": 3.24,
+     "end": 3.28
+    },
+    {
+     "w": "taille",
+     "start": 3.36,
+     "end": 3.52
+    },
+    {
+     "w": "ne",
+     "start": 3.6,
+     "end": 3.68
+    },
+    {
+     "w": "vaut",
+     "start": 3.733,
+     "end": 3.84
+    },
+    {
+     "w": "rien",
+     "start": 3.92,
+     "end": 4.16
+    },
+    {
+     "w": "sans",
+     "start": 4.24,
+     "end": 4.4
+    },
+    {
+     "w": "ce",
+     "start": 4.44,
+     "end": 4.48
+    },
+    {
+     "w": "que",
+     "start": 4.52,
+     "end": 4.56
+    },
+    {
+     "w": "le",
+     "start": 4.64,
+     "end": 4.72
+    },
+    {
+     "w": "modèle",
+     "start": 4.8,
+     "end": 4.96
+    },
+    {
+     "w": "a",
+     "start": 5.04,
+     "end": 5.08
+    },
+    {
+     "w": "lu,",
+     "start": 5.12,
+     "end": 5.52
+    },
+    {
+     "w": "et",
+     "start": 5.56,
+     "end": 5.6
+    },
+    {
+     "w": "la",
+     "start": 5.68,
+     "end": 5.76
+    },
+    {
+     "w": "façon",
+     "start": 5.84,
+     "end": 6.16
+    },
+    {
+     "w": "dont",
+     "start": 6.24,
+     "end": 6.32
+    },
+    {
+     "w": "on",
+     "start": 6.36,
+     "end": 6.4
+    },
+    {
+     "w": "l'a",
+     "start": 6.44,
+     "end": 6.52
+    },
+    {
+     "w": "entraîné.",
+     "start": 6.56,
+     "end": 7.2
+    }
+   ]
+  },
+  {
+   "scene": "taille",
+   "start": 7.504,
+   "end": 13.8,
+   "words": [
+    {
+     "w": "La",
+     "start": 7.504,
+     "end": 7.52
+    },
+    {
+     "w": "taille",
+     "start": 7.6,
+     "end": 7.76
+    },
+    {
+     "w": "d'un",
+     "start": 7.787,
+     "end": 7.84
+    },
+    {
+     "w": "modèle,",
+     "start": 7.92,
+     "end": 8.56
+    },
+    {
+     "w": "c'est",
+     "start": 8.613,
+     "end": 8.72
+    },
+    {
+     "w": "son",
+     "start": 8.8,
+     "end": 8.88
+    },
+    {
+     "w": "nombre",
+     "start": 8.96,
+     "end": 9.2
+    },
+    {
+     "w": "de",
+     "start": 9.28,
+     "end": 9.36
+    },
+    {
+     "w": "paramètres,",
+     "start": 9.48,
+     "end": 10
+    },
+    {
+     "w": "des",
+     "start": 10.08,
+     "end": 10.16
+    },
+    {
+     "w": "milliards",
+     "start": 10.24,
+     "end": 10.64
+    },
+    {
+     "w": "de",
+     "start": 10.72,
+     "end": 10.8
+    },
+    {
+     "w": "réglages,",
+     "start": 10.84,
+     "end": 11.52
+    },
+    {
+     "w": "et",
+     "start": 11.56,
+     "end": 11.6
+    },
+    {
+     "w": "on",
+     "start": 11.64,
+     "end": 11.68
+    },
+    {
+     "w": "a",
+     "start": 11.76,
+     "end": 11.84
+    },
+    {
+     "w": "longtemps",
+     "start": 11.96,
+     "end": 12.24
+    },
+    {
+     "w": "cru",
+     "start": 12.293,
+     "end": 12.4
+    },
+    {
+     "w": "qu'il",
+     "start": 12.44,
+     "end": 12.64
+    },
+    {
+     "w": "suffisait",
+     "start": 12.693,
+     "end": 13.04
+    },
+    {
+     "w": "d'en",
+     "start": 13.093,
+     "end": 13.2
+    },
+    {
+     "w": "ajouter.",
+     "start": 13.24,
+     "end": 13.8
+    }
+   ]
+  },
+  {
+   "scene": "chinchilla",
+   "start": 14.133,
+   "end": 25,
+   "words": [
+    {
+     "w": "En",
+     "start": 14.133,
+     "end": 14.16
+    },
+    {
+     "w": "mars",
+     "start": 14.28,
+     "end": 14.4
+    },
+    {
+     "w": "2022,",
+     "start": 14.48,
+     "end": 15.36
+    },
+    {
+     "w": "DeepMind",
+     "start": 15.48,
+     "end": 15.84
+    },
+    {
+     "w": "a",
+     "start": 15.88,
+     "end": 15.92
+    },
+    {
+     "w": "entraîné",
+     "start": 16,
+     "end": 16.32
+    },
+    {
+     "w": "Chinchilla,",
+     "start": 16.4,
+     "end": 17.2
+    },
+    {
+     "w": "quatre",
+     "start": 17.24,
+     "end": 17.44
+    },
+    {
+     "w": "fois",
+     "start": 17.52,
+     "end": 17.68
+    },
+    {
+     "w": "plus",
+     "start": 17.76,
+     "end": 17.84
+    },
+    {
+     "w": "petit",
+     "start": 17.92,
+     "end": 18.08
+    },
+    {
+     "w": "que",
+     "start": 18.16,
+     "end": 18.24
+    },
+    {
+     "w": "son",
+     "start": 18.32,
+     "end": 18.4
+    },
+    {
+     "w": "grand",
+     "start": 18.48,
+     "end": 18.56
+    },
+    {
+     "w": "frère",
+     "start": 18.64,
+     "end": 18.88
+    },
+    {
+     "w": "Gopher,",
+     "start": 18.96,
+     "end": 19.6
+    },
+    {
+     "w": "avec",
+     "start": 19.72,
+     "end": 19.84
+    },
+    {
+     "w": "le",
+     "start": 19.92,
+     "end": 20
+    },
+    {
+     "w": "même",
+     "start": 20.08,
+     "end": 20.16
+    },
+    {
+     "w": "budget",
+     "start": 20.24,
+     "end": 20.48
+    },
+    {
+     "w": "de",
+     "start": 20.52,
+     "end": 20.56
+    },
+    {
+     "w": "calcul",
+     "start": 20.76,
+     "end": 20.96
+    },
+    {
+     "w": "mais",
+     "start": 21.12,
+     "end": 21.36
+    },
+    {
+     "w": "quatre",
+     "start": 21.4,
+     "end": 21.6
+    },
+    {
+     "w": "fois",
+     "start": 21.68,
+     "end": 21.84
+    },
+    {
+     "w": "plus",
+     "start": 21.92,
+     "end": 22
+    },
+    {
+     "w": "de",
+     "start": 22.08,
+     "end": 22.16
+    },
+    {
+     "w": "textes…",
+     "start": 22.24,
+     "end": 22.96
+    },
+    {
+     "w": "et",
+     "start": 23,
+     "end": 23.04
+    },
+    {
+     "w": "Chinchilla",
+     "start": 23.12,
+     "end": 23.68
+    },
+    {
+     "w": "a",
+     "start": 23.84,
+     "end": 23.92
+    },
+    {
+     "w": "battu",
+     "start": 24,
+     "end": 24.32
+    },
+    {
+     "w": "Gopher.",
+     "start": 24.36,
+     "end": 25
+    }
+   ]
+  },
+  {
+   "scene": "verne",
+   "start": 25.28,
+   "end": 38.24,
+   "words": [
+    {
+     "w": "Imagine",
+     "start": 25.28,
+     "end": 25.6
+    },
+    {
+     "w": "que",
+     "start": 25.68,
+     "end": 25.76
+    },
+    {
+     "w": "tu",
+     "start": 25.84,
+     "end": 25.92
+    },
+    {
+     "w": "achètes",
+     "start": 26,
+     "end": 26.32
+    },
+    {
+     "w": "Vingt",
+     "start": 26.347,
+     "end": 26.4
+    },
+    {
+     "w": "mille",
+     "start": 26.48,
+     "end": 26.64
+    },
+    {
+     "w": "lieues",
+     "start": 26.68,
+     "end": 26.8
+    },
+    {
+     "w": "sous",
+     "start": 26.88,
+     "end": 26.96
+    },
+    {
+     "w": "les",
+     "start": 27,
+     "end": 27.04
+    },
+    {
+     "w": "mers",
+     "start": 27.12,
+     "end": 27.28
+    },
+    {
+     "w": "en",
+     "start": 27.32,
+     "end": 27.36
+    },
+    {
+     "w": "librairie,",
+     "start": 27.44,
+     "end": 28.08
+    },
+    {
+     "w": "et",
+     "start": 28.12,
+     "end": 28.16
+    },
+    {
+     "w": "que",
+     "start": 28.2,
+     "end": 28.24
+    },
+    {
+     "w": "tu",
+     "start": 28.32,
+     "end": 28.4
+    },
+    {
+     "w": "le",
+     "start": 28.44,
+     "end": 28.48
+    },
+    {
+     "w": "fais",
+     "start": 28.52,
+     "end": 28.64
+    },
+    {
+     "w": "lire",
+     "start": 28.693,
+     "end": 28.8
+    },
+    {
+     "w": "à",
+     "start": 28.84,
+     "end": 28.88
+    },
+    {
+     "w": "GPT-4.5,",
+     "start": 28.96,
+     "end": 30.36
+    },
+    {
+     "w": "le",
+     "start": 30.48,
+     "end": 30.56
+    },
+    {
+     "w": "plus",
+     "start": 30.64,
+     "end": 30.72
+    },
+    {
+     "w": "gros",
+     "start": 30.8,
+     "end": 31.04
+    },
+    {
+     "w": "modèle",
+     "start": 31.12,
+     "end": 31.36
+    },
+    {
+     "w": "d'OpenAI",
+     "start": 31.4,
+     "end": 31.92
+    },
+    {
+     "w": "en",
+     "start": 32,
+     "end": 32.08
+    },
+    {
+     "w": "2025…",
+     "start": 32.1,
+     "end": 33.2
+    },
+    {
+     "w": "il",
+     "start": 33.28,
+     "end": 33.36
+    },
+    {
+     "w": "faut",
+     "start": 33.413,
+     "end": 33.52
+    },
+    {
+     "w": "couper",
+     "start": 33.56,
+     "end": 33.76
+    },
+    {
+     "w": "le",
+     "start": 33.8,
+     "end": 33.84
+    },
+    {
+     "w": "roman",
+     "start": 34,
+     "end": 34.16
+    },
+    {
+     "w": "en",
+     "start": 34.2,
+     "end": 34.24
+    },
+    {
+     "w": "deux",
+     "start": 34.32,
+     "end": 34.4
+    },
+    {
+     "w": "pour",
+     "start": 34.48,
+     "end": 34.56
+    },
+    {
+     "w": "sa",
+     "start": 34.64,
+     "end": 34.72
+    },
+    {
+     "w": "fenêtre,",
+     "start": 34.8,
+     "end": 35.28
+    },
+    {
+     "w": "et",
+     "start": 35.32,
+     "end": 35.36
+    },
+    {
+     "w": "la",
+     "start": 35.4,
+     "end": 35.44
+    },
+    {
+     "w": "lecture",
+     "start": 35.52,
+     "end": 35.84
+    },
+    {
+     "w": "coûte",
+     "start": 35.92,
+     "end": 36.16
+    },
+    {
+     "w": "17,92",
+     "start": 36.24,
+     "end": 36.56
+    },
+    {
+     "w": "dollars.",
+     "start": 36.64,
+     "end": 38.24
+    }
+   ]
+  },
+  {
+   "scene": "gpt41",
+   "start": 38.373,
+   "end": 43.44,
+   "words": [
+    {
+     "w": "Un",
+     "start": 38.373,
+     "end": 38.4
+    },
+    {
+     "w": "mois",
+     "start": 38.44,
+     "end": 38.52
+    },
+    {
+     "w": "et",
+     "start": 38.56,
+     "end": 38.587
+    },
+    {
+     "w": "demi",
+     "start": 38.613,
+     "end": 38.72
+    },
+    {
+     "w": "plus",
+     "start": 38.8,
+     "end": 38.96
+    },
+    {
+     "w": "tard,",
+     "start": 39,
+     "end": 39.52
+    },
+    {
+     "w": "GPT-4.1",
+     "start": 39.56,
+     "end": 40.16
+    },
+    {
+     "w": "le",
+     "start": 40.24,
+     "end": 40.48
+    },
+    {
+     "w": "lisait",
+     "start": 40.64,
+     "end": 41.28
+    },
+    {
+     "w": "d'une",
+     "start": 41.32,
+     "end": 41.52
+    },
+    {
+     "w": "traite,",
+     "start": 41.6,
+     "end": 42
+    },
+    {
+     "w": "pour",
+     "start": 42.04,
+     "end": 42.08
+    },
+    {
+     "w": "48",
+     "start": 42.24,
+     "end": 42.6
+    },
+    {
+     "w": "centimes.",
+     "start": 42.64,
+     "end": 43.44
+    }
+   ]
+  },
+  {
+   "scene": "retrait",
+   "start": 43.577,
+   "end": 53.76,
+   "words": [
+    {
+     "w": "Et",
+     "start": 43.577,
+     "end": 43.6
+    },
+    {
+     "w": "dès",
+     "start": 43.68,
+     "end": 43.76
+    },
+    {
+     "w": "juillet",
+     "start": 43.84,
+     "end": 44.08
+    },
+    {
+     "w": "2025,",
+     "start": 44.16,
+     "end": 45.04
+    },
+    {
+     "w": "OpenAI",
+     "start": 45.2,
+     "end": 45.6
+    },
+    {
+     "w": "retirait",
+     "start": 45.68,
+     "end": 46.16
+    },
+    {
+     "w": "GPT-4.5",
+     "start": 46.2,
+     "end": 46.76
+    },
+    {
+     "w": "de",
+     "start": 46.8,
+     "end": 47.44
+    },
+    {
+     "w": "son",
+     "start": 47.52,
+     "end": 47.6
+    },
+    {
+     "w": "API,",
+     "start": 47.64,
+     "end": 48.24
+    },
+    {
+     "w": "moins",
+     "start": 48.28,
+     "end": 48.4
+    },
+    {
+     "w": "de",
+     "start": 48.52,
+     "end": 48.64
+    },
+    {
+     "w": "cinq",
+     "start": 48.68,
+     "end": 48.8
+    },
+    {
+     "w": "mois",
+     "start": 48.88,
+     "end": 49.04
+    },
+    {
+     "w": "après",
+     "start": 49.16,
+     "end": 49.28
+    },
+    {
+     "w": "son",
+     "start": 49.36,
+     "end": 49.44
+    },
+    {
+     "w": "lancement,",
+     "start": 49.547,
+     "end": 50.08
+    },
+    {
+     "w": "parce",
+     "start": 50.16,
+     "end": 50.267
+    },
+    {
+     "w": "que",
+     "start": 50.293,
+     "end": 50.32
+    },
+    {
+     "w": "GPT-4.1",
+     "start": 50.4,
+     "end": 51.36
+    },
+    {
+     "w": "faisait",
+     "start": 51.52,
+     "end": 51.92
+    },
+    {
+     "w": "aussi",
+     "start": 52.04,
+     "end": 52.24
+    },
+    {
+     "w": "bien",
+     "start": 52.293,
+     "end": 52.4
+    },
+    {
+     "w": "sur",
+     "start": 52.48,
+     "end": 52.64
+    },
+    {
+     "w": "beaucoup",
+     "start": 52.72,
+     "end": 52.88
+    },
+    {
+     "w": "de",
+     "start": 52.96,
+     "end": 53.04
+    },
+    {
+     "w": "tâches.",
+     "start": 53.067,
+     "end": 53.76
+    }
+   ]
+  },
+  {
+   "scene": "depuis",
+   "start": 53.84,
+   "end": 61.52,
+   "words": [
+    {
+     "w": "Deux",
+     "start": 53.84,
+     "end": 53.92
+    },
+    {
+     "w": "techniques",
+     "start": 54,
+     "end": 54.32
+    },
+    {
+     "w": "desserrent",
+     "start": 54.4,
+     "end": 54.72
+    },
+    {
+     "w": "encore",
+     "start": 54.8,
+     "end": 54.96
+    },
+    {
+     "w": "ce",
+     "start": 55.04,
+     "end": 55.12
+    },
+    {
+     "w": "lien,",
+     "start": 55.24,
+     "end": 55.68
+    },
+    {
+     "w": "ne",
+     "start": 55.76,
+     "end": 55.84
+    },
+    {
+     "w": "réveiller",
+     "start": 55.88,
+     "end": 56.24
+    },
+    {
+     "w": "qu'une",
+     "start": 56.28,
+     "end": 56.48
+    },
+    {
+     "w": "partie",
+     "start": 56.6,
+     "end": 56.76
+    },
+    {
+     "w": "des",
+     "start": 56.8,
+     "end": 56.88
+    },
+    {
+     "w": "paramètres",
+     "start": 56.96,
+     "end": 57.36
+    },
+    {
+     "w": "à",
+     "start": 57.44,
+     "end": 57.467
+    },
+    {
+     "w": "chaque",
+     "start": 57.493,
+     "end": 57.6
+    },
+    {
+     "w": "token,",
+     "start": 57.68,
+     "end": 58.32
+    },
+    {
+     "w": "ou",
+     "start": 58.4,
+     "end": 58.48
+    },
+    {
+     "w": "laisser",
+     "start": 58.533,
+     "end": 58.72
+    },
+    {
+     "w": "le",
+     "start": 58.8,
+     "end": 58.88
+    },
+    {
+     "w": "modèle",
+     "start": 58.96,
+     "end": 59.2
+    },
+    {
+     "w": "réfléchir",
+     "start": 59.28,
+     "end": 59.76
+    },
+    {
+     "w": "par",
+     "start": 59.84,
+     "end": 59.92
+    },
+    {
+     "w": "écrit",
+     "start": 60,
+     "end": 60.32
+    },
+    {
+     "w": "avant",
+     "start": 60.4,
+     "end": 60.64
+    },
+    {
+     "w": "de",
+     "start": 60.68,
+     "end": 60.72
+    },
+    {
+     "w": "répondre.",
+     "start": 60.8,
+     "end": 61.52
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 61.6,
+   "end": 68.32,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 61.6,
+     "end": 61.76
+    },
+    {
+     "w": "avant",
+     "start": 61.84,
+     "end": 62
+    },
+    {
+     "w": "de",
+     "start": 62.04,
+     "end": 62.08
+    },
+    {
+     "w": "prendre",
+     "start": 62.16,
+     "end": 62.32
+    },
+    {
+     "w": "le",
+     "start": 62.4,
+     "end": 62.48
+    },
+    {
+     "w": "plus",
+     "start": 62.56,
+     "end": 62.64
+    },
+    {
+     "w": "gros",
+     "start": 62.68,
+     "end": 62.88
+    },
+    {
+     "w": "modèle",
+     "start": 62.96,
+     "end": 63.2
+    },
+    {
+     "w": "du",
+     "start": 63.24,
+     "end": 63.28
+    },
+    {
+     "w": "rayon…",
+     "start": 63.4,
+     "end": 64.16
+    },
+    {
+     "w": "fais",
+     "start": 64.217,
+     "end": 64.24
+    },
+    {
+     "w": "lire",
+     "start": 64.28,
+     "end": 64.48
+    },
+    {
+     "w": "ton",
+     "start": 64.56,
+     "end": 64.64
+    },
+    {
+     "w": "propre",
+     "start": 64.72,
+     "end": 65.04
+    },
+    {
+     "w": "texte",
+     "start": 65.16,
+     "end": 65.307
+    },
+    {
+     "w": "à",
+     "start": 65.333,
+     "end": 65.36
+    },
+    {
+     "w": "un",
+     "start": 65.4,
+     "end": 65.44
+    },
+    {
+     "w": "modèle",
+     "start": 65.52,
+     "end": 65.76
+    },
+    {
+     "w": "moyen,",
+     "start": 65.8,
+     "end": 66.4
+    },
+    {
+     "w": "puis",
+     "start": 66.44,
+     "end": 66.56
+    },
+    {
+     "w": "à",
+     "start": 66.6,
+     "end": 66.64
+    },
+    {
+     "w": "un",
+     "start": 66.72,
+     "end": 66.8
+    },
+    {
+     "w": "petit,",
+     "start": 66.88,
+     "end": 67.44
+    },
+    {
+     "w": "et",
+     "start": 67.52,
+     "end": 67.6
+    },
+    {
+     "w": "compare.",
+     "start": 67.84,
+     "end": 68.32
+    }
+   ]
+  }
+ ]
+}
