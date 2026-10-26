@@ -1,9 +1,9 @@
 {
   "id": "black-october",
   "term": "chasse-aux-failles-par-ia",
-  "episode": 25,
-  "date": null,
-  "format": "Actu : un fait de la semaine, puis la notion qu'il illustre",
+  "episode": null,
+  "date": "2026-10-26",
+  "format": "Hors-série d'actu (sans numéro : les ép. 18 à 24 sont déjà programmés du 27/10 au 2/11, PR #35) : un fait de la semaine, puis la notion qu'il illustre",
   "composition": "BlackOctoberVoix",
   "voice": {
     "voice_name": "PAL - FR (voix clonée de PA)",
@@ -33,7 +33,7 @@
     },
     {
       "scene": "course",
-      "say": "[curious] Pour PHP, les failles signalées le 24 août n'ont été corrigées que le 21 octobre… et dès le 17, /ˈæməzɑn/ voyait passer une première attaque."
+      "say": "[curious] Pour PHP, les failles signalées le 24 août n'ont été corrigées que le 21 octobre… et dès le 17, Amazon voyait passer une première attaque."
     },
     {
       "scene": "etdonc",
@@ -41,22 +41,29 @@
     },
     {
       "scene": "chute",
-      "say": "[warmly] Alors, /blæk ɑkˈtoʊbɚ/ ou pas, ça se joue maintenant, chez chaque hébergeur qui met PHP à jour… [pause] ici, deux jours ont suffi pour l'exploiter, et il en a fallu plus de soixante pour la corriger."
+      "say": "[warmly] Alors, /blæk ɑkˈtoʊbɚ/ ou pas, ça se joue maintenant, chez chaque hébergeur qui met PHP à jour… [pause] ici, deux jours ont suffi pour exploiter la faille, et il en a fallu plus de soixante pour la corriger."
     }
   ],
   "quoted": [],
   "display": {
-    "/blæk ɑkˈtoʊbɚ/": "Black October",
+    "/blæk": "Black",
+    "ɑkˈtoʊbɚ/": "October",
     "/wɪz/": "Wiz",
-    "/ˈæməzɑn/": "Amazon",
     "/ˈwɝdpɹɛs/": "WordPress",
-    "/eɪ aɪ vʌlnɚəˈbɪlɪti dɪˈskʌvɚi/": "AI vulnerability discovery"
+    "/eɪ": "AI",
+    "vʌlnɚəˈbɪlɪti": "vulnerability",
+    "dɪˈskʌvɚi/": "discovery"
   },
   "nocaption": [
     "hook"
   ],
   "onscreen": {
-    "nom": ["C'est la chasse aux failles par IA,", "AI vulnerability discovery."]
+    "nom": [
+      "C'est la chasse aux failles par IA, ou en anglais, AI vulnerability discovery."
+    ],
+    "etdonc": [
+      "Black October."
+    ]
   },
   "scenes": {
     "hook": "« Et si on vivait un Black October ? » en grand, sur une page de calendrier d'octobre qui commence à noircir.",
@@ -73,7 +80,7 @@
   "publication": {
     "title": "Exploitée en 2 jours, réparée en 2 mois",
     "description": "En octobre 2026, des modèles d'IA ont trouvé deux failles cachées depuis plus de dix ans dans PHP, le langage de deux sites web sur trois ; il a fallu deux mois pour les corriger, et des gouvernements ont coupé leurs sites en attendant. C'est la chasse aux failles par IA (AI vulnerability discovery), et certains appellent déjà ce mois-là Black October ; l'histoire dira si le surnom tient.\nhttps://neopal.github.io/lexique/chasse-aux-failles-par-ia/\n#cybersecurite #php #ia #vulgarisation",
-    "fil": "Après le bachotage des benchmarks (ép. 24), un fait de la semaine : l'IA trouve les failles plus vite qu'on ne les répare",
+    "fil": "Après le bon score (ép. 17), un fait de la semaine : l'IA trouve les failles plus vite qu'on ne les répare",
     "decor": "immeuble et plombier du jeudi"
   }
 }

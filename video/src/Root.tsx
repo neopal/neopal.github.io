@@ -35,6 +35,7 @@ import {MytheCalculeVoix, MYTHECALCULEVOIX_DURATION} from './MytheCalculeVoix';
 import {AgiVoix, AGIVOIX_DURATION} from './AgiVoix';
 import {MytheSaitPasVoix, MYTHESAITPASVOIX_DURATION} from './MytheSaitPasVoix';
 import {PDoomVoix, PDOOMVOIX_DURATION} from './PDoomVoix';
+import {BlackOctoberVoix, BLACKOCTOBERVOIX_DURATION} from './BlackOctoberVoix';
 import {MytheScoreVoix, MYTHESCOREVOIX_DURATION} from './MytheScoreVoix';
 import {AiBrainFryVoix, AIBRAINFRYVOIX_DURATION} from './AiBrainFryVoix';
 import {HumanLoopVoix, HUMANLOOPVOIX_DURATION} from './HumanLoopVoix';
@@ -84,6 +85,7 @@ export const Root: React.FC = () => (
     <Composition id="AgiVoix" component={AgiVoix} durationInFrames={AGIVOIX_DURATION} {...C} />
     <Composition id="MytheSaitPasVoix" component={MytheSaitPasVoix} durationInFrames={MYTHESAITPASVOIX_DURATION} {...C} />
     <Composition id="PDoomVoix" component={PDoomVoix} durationInFrames={PDOOMVOIX_DURATION} {...C} />
+    <Composition id="BlackOctoberVoix" component={BlackOctoberVoix} durationInFrames={BLACKOCTOBERVOIX_DURATION} {...C} />
     <Composition id="MytheScoreVoix" component={MytheScoreVoix} durationInFrames={MYTHESCOREVOIX_DURATION} {...C} />
     <Composition id="AiBrainFryVoix" component={AiBrainFryVoix} durationInFrames={AIBRAINFRYVOIX_DURATION} {...C} />
     <Composition id="HumanLoopVoix" component={HumanLoopVoix} durationInFrames={HUMANLOOPVOIX_DURATION} {...C} />

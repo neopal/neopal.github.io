@@ -1,0 +1,1092 @@
+{
+  "id": "black-october",
+  "audio": true,
+  "music": false,
+  "duration": 59.76,
+  "segments": [
+    {
+      "scene": "hook",
+      "start": 0.137,
+      "end": 3.373,
+      "words": [
+        {
+          "w": "Et",
+          "start": 0.137,
+          "end": 0.16
+        },
+        {
+          "w": "si",
+          "start": 0.24,
+          "end": 0.32
+        },
+        {
+          "w": "on",
+          "start": 0.36,
+          "end": 0.4
+        },
+        {
+          "w": "était",
+          "start": 0.48,
+          "end": 0.64
+        },
+        {
+          "w": "en",
+          "start": 0.72,
+          "end": 0.8
+        },
+        {
+          "w": "train",
+          "start": 0.88,
+          "end": 0.96
+        },
+        {
+          "w": "de",
+          "start": 1.04,
+          "end": 1.12
+        },
+        {
+          "w": "vivre…",
+          "start": 1.227,
+          "end": 1.92
+        },
+        {
+          "w": "un",
+          "start": 2,
+          "end": 2.08
+        },
+        {
+          "w": "Black",
+          "start": 2.16,
+          "end": 2.32
+        },
+        {
+          "w": "October ?",
+          "start": 2.4,
+          "end": 3.373
+        }
+      ]
+    },
+    {
+      "scene": "sites",
+      "start": 3.44,
+      "end": 12.48,
+      "words": [
+        {
+          "w": "Le",
+          "start": 3.44,
+          "end": 3.48
+        },
+        {
+          "w": "21",
+          "start": 3.52,
+          "end": 3.707
+        },
+        {
+          "w": "octobre,",
+          "start": 3.733,
+          "end": 4.56
+        },
+        {
+          "w": "des",
+          "start": 4.64,
+          "end": 4.72
+        },
+        {
+          "w": "gouvernements",
+          "start": 4.8,
+          "end": 5.2
+        },
+        {
+          "w": "ont",
+          "start": 5.28,
+          "end": 5.36
+        },
+        {
+          "w": "débranché",
+          "start": 5.44,
+          "end": 5.84
+        },
+        {
+          "w": "leurs",
+          "start": 5.92,
+          "end": 6
+        },
+        {
+          "w": "propres",
+          "start": 6.08,
+          "end": 6.4
+        },
+        {
+          "w": "sites,",
+          "start": 6.52,
+          "end": 6.88
+        },
+        {
+          "w": "à",
+          "start": 6.92,
+          "end": 6.96
+        },
+        {
+          "w": "cause",
+          "start": 7.04,
+          "end": 7.2
+        },
+        {
+          "w": "de",
+          "start": 7.32,
+          "end": 7.44
+        },
+        {
+          "w": "deux",
+          "start": 7.48,
+          "end": 7.6
+        },
+        {
+          "w": "failles",
+          "start": 7.68,
+          "end": 7.92
+        },
+        {
+          "w": "cachées",
+          "start": 7.973,
+          "end": 8.16
+        },
+        {
+          "w": "depuis",
+          "start": 8.24,
+          "end": 8.48
+        },
+        {
+          "w": "plus",
+          "start": 8.56,
+          "end": 8.64
+        },
+        {
+          "w": "de",
+          "start": 8.72,
+          "end": 8.88
+        },
+        {
+          "w": "dix",
+          "start": 8.96,
+          "end": 9.12
+        },
+        {
+          "w": "ans",
+          "start": 9.2,
+          "end": 9.28
+        },
+        {
+          "w": "dans",
+          "start": 9.36,
+          "end": 9.44
+        },
+        {
+          "w": "PHP,",
+          "start": 9.6,
+          "end": 10.4
+        },
+        {
+          "w": "le",
+          "start": 10.44,
+          "end": 10.48
+        },
+        {
+          "w": "langage",
+          "start": 10.56,
+          "end": 10.88
+        },
+        {
+          "w": "de",
+          "start": 11,
+          "end": 11.12
+        },
+        {
+          "w": "deux",
+          "start": 11.16,
+          "end": 11.24
+        },
+        {
+          "w": "sites",
+          "start": 11.28,
+          "end": 11.52
+        },
+        {
+          "w": "web",
+          "start": 11.6,
+          "end": 11.68
+        },
+        {
+          "w": "sur",
+          "start": 11.76,
+          "end": 11.84
+        },
+        {
+          "w": "trois.",
+          "start": 11.92,
+          "end": 12.48
+        }
+      ]
+    },
+    {
+      "scene": "nom",
+      "start": 12.617,
+      "end": 24.24,
+      "words": [
+        {
+          "w": "En",
+          "start": 12.617,
+          "end": 12.64
+        },
+        {
+          "w": "août,",
+          "start": 12.68,
+          "end": 13.12
+        },
+        {
+          "w": "une",
+          "start": 13.16,
+          "end": 13.2
+        },
+        {
+          "w": "équipe",
+          "start": 13.28,
+          "end": 13.52
+        },
+        {
+          "w": "de",
+          "start": 13.56,
+          "end": 13.6
+        },
+        {
+          "w": "Wiz",
+          "start": 13.68,
+          "end": 13.893
+        },
+        {
+          "w": "les",
+          "start": 13.947,
+          "end": 14
+        },
+        {
+          "w": "avait",
+          "start": 14.04,
+          "end": 14.24
+        },
+        {
+          "w": "trouvées",
+          "start": 14.28,
+          "end": 14.56
+        },
+        {
+          "w": "avec",
+          "start": 14.64,
+          "end": 14.72
+        },
+        {
+          "w": "des",
+          "start": 14.8,
+          "end": 14.88
+        },
+        {
+          "w": "modèles",
+          "start": 14.96,
+          "end": 15.2
+        },
+        {
+          "w": "d'IA,",
+          "start": 15.24,
+          "end": 15.84
+        },
+        {
+          "w": "et",
+          "start": 15.92,
+          "end": 16
+        },
+        {
+          "w": "deux",
+          "start": 16.08,
+          "end": 16.16
+        },
+        {
+          "w": "jours",
+          "start": 16.24,
+          "end": 16.4
+        },
+        {
+          "w": "plus",
+          "start": 16.48,
+          "end": 16.56
+        },
+        {
+          "w": "tard,",
+          "start": 16.64,
+          "end": 16.96
+        },
+        {
+          "w": "elle",
+          "start": 17.08,
+          "end": 17.2
+        },
+        {
+          "w": "prenait",
+          "start": 17.253,
+          "end": 17.44
+        },
+        {
+          "w": "la",
+          "start": 17.52,
+          "end": 17.6
+        },
+        {
+          "w": "main",
+          "start": 17.68,
+          "end": 17.76
+        },
+        {
+          "w": "sur",
+          "start": 17.84,
+          "end": 17.92
+        },
+        {
+          "w": "un",
+          "start": 17.96,
+          "end": 18
+        },
+        {
+          "w": "site",
+          "start": 18.12,
+          "end": 18.24
+        },
+        {
+          "w": "WordPress",
+          "start": 18.28,
+          "end": 18.64
+        },
+        {
+          "w": "de",
+          "start": 18.72,
+          "end": 18.8
+        },
+        {
+          "w": "test.",
+          "start": 18.96,
+          "end": 19.6
+        },
+        {
+          "w": "C'est",
+          "start": 19.627,
+          "end": 19.68
+        },
+        {
+          "w": "la",
+          "start": 19.76,
+          "end": 19.84
+        },
+        {
+          "w": "chasse",
+          "start": 19.92,
+          "end": 20.16
+        },
+        {
+          "w": "aux",
+          "start": 20.2,
+          "end": 20.24
+        },
+        {
+          "w": "failles",
+          "start": 20.32,
+          "end": 20.48
+        },
+        {
+          "w": "par",
+          "start": 20.56,
+          "end": 20.72
+        },
+        {
+          "w": "IA,",
+          "start": 20.76,
+          "end": 21.2
+        },
+        {
+          "w": "ou",
+          "start": 21.24,
+          "end": 21.28
+        },
+        {
+          "w": "en",
+          "start": 21.32,
+          "end": 21.36
+        },
+        {
+          "w": "anglais,",
+          "start": 21.44,
+          "end": 22.08
+        },
+        {
+          "w": "AI",
+          "start": 22.16,
+          "end": 22.4
+        },
+        {
+          "w": "vulnerability",
+          "start": 22.56,
+          "end": 23.2
+        },
+        {
+          "w": "discovery.",
+          "start": 23.28,
+          "end": 24.24
+        }
+      ]
+    },
+    {
+      "scene": "immeuble",
+      "start": 24.667,
+      "end": 32.56,
+      "words": [
+        {
+          "w": "Imagine",
+          "start": 24.667,
+          "end": 24.72
+        },
+        {
+          "w": "un",
+          "start": 24.8,
+          "end": 24.88
+        },
+        {
+          "w": "immeuble",
+          "start": 24.96,
+          "end": 25.28
+        },
+        {
+          "w": "où",
+          "start": 25.44,
+          "end": 25.68
+        },
+        {
+          "w": "tout",
+          "start": 25.72,
+          "end": 25.76
+        },
+        {
+          "w": "le",
+          "start": 25.84,
+          "end": 25.88
+        },
+        {
+          "w": "monde",
+          "start": 25.92,
+          "end": 26.08
+        },
+        {
+          "w": "s'achète",
+          "start": 26.12,
+          "end": 26.4
+        },
+        {
+          "w": "un",
+          "start": 26.48,
+          "end": 26.56
+        },
+        {
+          "w": "détecteur",
+          "start": 26.613,
+          "end": 26.96
+        },
+        {
+          "w": "de",
+          "start": 27.04,
+          "end": 27.12
+        },
+        {
+          "w": "fuites…",
+          "start": 27.2,
+          "end": 27.84
+        },
+        {
+          "w": "on",
+          "start": 27.88,
+          "end": 27.92
+        },
+        {
+          "w": "en",
+          "start": 28,
+          "end": 28.08
+        },
+        {
+          "w": "trouve",
+          "start": 28.12,
+          "end": 28.4
+        },
+        {
+          "w": "dix",
+          "start": 28.453,
+          "end": 28.56
+        },
+        {
+          "w": "par",
+          "start": 28.64,
+          "end": 28.8
+        },
+        {
+          "w": "semaine,",
+          "start": 28.88,
+          "end": 29.44
+        },
+        {
+          "w": "mais",
+          "start": 29.48,
+          "end": 29.56
+        },
+        {
+          "w": "le",
+          "start": 29.6,
+          "end": 29.68
+        },
+        {
+          "w": "plombier",
+          "start": 29.72,
+          "end": 30
+        },
+        {
+          "w": "est",
+          "start": 30.08,
+          "end": 30.16
+        },
+        {
+          "w": "toujours",
+          "start": 30.2,
+          "end": 30.56
+        },
+        {
+          "w": "seul,",
+          "start": 30.6,
+          "end": 31.04
+        },
+        {
+          "w": "et",
+          "start": 31.08,
+          "end": 31.12
+        },
+        {
+          "w": "il",
+          "start": 31.16,
+          "end": 31.2
+        },
+        {
+          "w": "ne",
+          "start": 31.28,
+          "end": 31.36
+        },
+        {
+          "w": "passe",
+          "start": 31.44,
+          "end": 31.68
+        },
+        {
+          "w": "que",
+          "start": 31.72,
+          "end": 31.76
+        },
+        {
+          "w": "le",
+          "start": 31.84,
+          "end": 31.88
+        },
+        {
+          "w": "jeudi.",
+          "start": 31.92,
+          "end": 32.56
+        }
+      ]
+    },
+    {
+      "scene": "course",
+      "start": 32.627,
+      "end": 40.4,
+      "words": [
+        {
+          "w": "Pour",
+          "start": 32.627,
+          "end": 32.64
+        },
+        {
+          "w": "PHP,",
+          "start": 32.72,
+          "end": 33.44
+        },
+        {
+          "w": "les",
+          "start": 33.52,
+          "end": 33.6
+        },
+        {
+          "w": "failles",
+          "start": 33.64,
+          "end": 33.84
+        },
+        {
+          "w": "signalées",
+          "start": 34,
+          "end": 34.24
+        },
+        {
+          "w": "le",
+          "start": 34.28,
+          "end": 34.32
+        },
+        {
+          "w": "24",
+          "start": 34.4,
+          "end": 34.72
+        },
+        {
+          "w": "août",
+          "start": 34.8,
+          "end": 34.96
+        },
+        {
+          "w": "n'ont",
+          "start": 35.04,
+          "end": 35.12
+        },
+        {
+          "w": "été",
+          "start": 35.2,
+          "end": 35.36
+        },
+        {
+          "w": "corrigées",
+          "start": 35.4,
+          "end": 35.84
+        },
+        {
+          "w": "que",
+          "start": 35.92,
+          "end": 36
+        },
+        {
+          "w": "le",
+          "start": 36.04,
+          "end": 36.08
+        },
+        {
+          "w": "21",
+          "start": 36.16,
+          "end": 36.32
+        },
+        {
+          "w": "octobre…",
+          "start": 36.347,
+          "end": 37.28
+        },
+        {
+          "w": "et",
+          "start": 37.36,
+          "end": 37.44
+        },
+        {
+          "w": "dès",
+          "start": 37.48,
+          "end": 37.56
+        },
+        {
+          "w": "le",
+          "start": 37.6,
+          "end": 37.64
+        },
+        {
+          "w": "17,",
+          "start": 37.68,
+          "end": 38.32
+        },
+        {
+          "w": "Amazon",
+          "start": 38.52,
+          "end": 38.72
+        },
+        {
+          "w": "voyait",
+          "start": 38.8,
+          "end": 38.96
+        },
+        {
+          "w": "passer",
+          "start": 39.04,
+          "end": 39.2
+        },
+        {
+          "w": "une",
+          "start": 39.28,
+          "end": 39.36
+        },
+        {
+          "w": "première",
+          "start": 39.44,
+          "end": 39.68
+        },
+        {
+          "w": "attaque.",
+          "start": 39.76,
+          "end": 40.4
+        }
+      ]
+    },
+    {
+      "scene": "etdonc",
+      "start": 40.48,
+      "end": 49.12,
+      "words": [
+        {
+          "w": "L'IA",
+          "start": 40.48,
+          "end": 40.72
+        },
+        {
+          "w": "qui",
+          "start": 40.8,
+          "end": 40.88
+        },
+        {
+          "w": "aide",
+          "start": 40.96,
+          "end": 41.04
+        },
+        {
+          "w": "à",
+          "start": 41.12,
+          "end": 41.2
+        },
+        {
+          "w": "défendre",
+          "start": 41.28,
+          "end": 41.76
+        },
+        {
+          "w": "aide",
+          "start": 41.84,
+          "end": 42
+        },
+        {
+          "w": "aussi",
+          "start": 42.12,
+          "end": 42.32
+        },
+        {
+          "w": "à",
+          "start": 42.36,
+          "end": 42.4
+        },
+        {
+          "w": "attaquer,",
+          "start": 42.52,
+          "end": 43.12
+        },
+        {
+          "w": "et",
+          "start": 43.16,
+          "end": 43.2
+        },
+        {
+          "w": "c'est",
+          "start": 43.28,
+          "end": 43.44
+        },
+        {
+          "w": "cette",
+          "start": 43.48,
+          "end": 43.68
+        },
+        {
+          "w": "semaine",
+          "start": 43.72,
+          "end": 44
+        },
+        {
+          "w": "de",
+          "start": 44.04,
+          "end": 44.08
+        },
+        {
+          "w": "failles",
+          "start": 44.16,
+          "end": 44.32
+        },
+        {
+          "w": "en",
+          "start": 44.36,
+          "end": 44.4
+        },
+        {
+          "w": "série",
+          "start": 44.48,
+          "end": 44.72
+        },
+        {
+          "w": "que",
+          "start": 44.8,
+          "end": 44.88
+        },
+        {
+          "w": "des",
+          "start": 44.96,
+          "end": 45.04
+        },
+        {
+          "w": "pros",
+          "start": 45.12,
+          "end": 45.227
+        },
+        {
+          "w": "de",
+          "start": 45.253,
+          "end": 45.28
+        },
+        {
+          "w": "la",
+          "start": 45.32,
+          "end": 45.36
+        },
+        {
+          "w": "sécurité",
+          "start": 45.44,
+          "end": 45.92
+        },
+        {
+          "w": "ont",
+          "start": 46,
+          "end": 46.08
+        },
+        {
+          "w": "appelée,",
+          "start": 46.16,
+          "end": 46.72
+        },
+        {
+          "w": "un",
+          "start": 46.8,
+          "end": 46.88
+        },
+        {
+          "w": "peu",
+          "start": 46.92,
+          "end": 47
+        },
+        {
+          "w": "vite",
+          "start": 47.04,
+          "end": 47.2
+        },
+        {
+          "w": "peut-être,",
+          "start": 47.28,
+          "end": 48
+        },
+        {
+          "w": "Black",
+          "start": 48.08,
+          "end": 48.24
+        },
+        {
+          "w": "October.",
+          "start": 48.32,
+          "end": 49.12
+        }
+      ]
+    },
+    {
+      "scene": "chute",
+      "start": 49.257,
+      "end": 59.76,
+      "words": [
+        {
+          "w": "Alors,",
+          "start": 49.257,
+          "end": 49.6
+        },
+        {
+          "w": "Black",
+          "start": 49.68,
+          "end": 49.84
+        },
+        {
+          "w": "October",
+          "start": 49.92,
+          "end": 50.32
+        },
+        {
+          "w": "ou",
+          "start": 50.36,
+          "end": 50.4
+        },
+        {
+          "w": "pas,",
+          "start": 50.48,
+          "end": 50.8
+        },
+        {
+          "w": "ça",
+          "start": 50.88,
+          "end": 50.96
+        },
+        {
+          "w": "se",
+          "start": 51.04,
+          "end": 51.12
+        },
+        {
+          "w": "joue",
+          "start": 51.2,
+          "end": 51.36
+        },
+        {
+          "w": "maintenant,",
+          "start": 51.48,
+          "end": 51.92
+        },
+        {
+          "w": "chez",
+          "start": 52,
+          "end": 52.16
+        },
+        {
+          "w": "chaque",
+          "start": 52.24,
+          "end": 52.4
+        },
+        {
+          "w": "hébergeur",
+          "start": 52.48,
+          "end": 52.88
+        },
+        {
+          "w": "qui",
+          "start": 52.96,
+          "end": 53.04
+        },
+        {
+          "w": "met",
+          "start": 53.12,
+          "end": 53.2
+        },
+        {
+          "w": "PHP",
+          "start": 53.24,
+          "end": 53.6
+        },
+        {
+          "w": "à",
+          "start": 53.64,
+          "end": 53.68
+        },
+        {
+          "w": "jour…",
+          "start": 53.76,
+          "end": 54.48
+        },
+        {
+          "w": "ici,",
+          "start": 54.813,
+          "end": 55.2
+        },
+        {
+          "w": "deux",
+          "start": 55.24,
+          "end": 55.36
+        },
+        {
+          "w": "jours",
+          "start": 55.44,
+          "end": 55.52
+        },
+        {
+          "w": "ont",
+          "start": 55.6,
+          "end": 55.68
+        },
+        {
+          "w": "suffi",
+          "start": 55.72,
+          "end": 56
+        },
+        {
+          "w": "pour",
+          "start": 56.08,
+          "end": 56.16
+        },
+        {
+          "w": "exploiter",
+          "start": 56.28,
+          "end": 56.56
+        },
+        {
+          "w": "la",
+          "start": 56.6,
+          "end": 56.64
+        },
+        {
+          "w": "faille,",
+          "start": 56.72,
+          "end": 57.28
+        },
+        {
+          "w": "et",
+          "start": 57.32,
+          "end": 57.36
+        },
+        {
+          "w": "il",
+          "start": 57.4,
+          "end": 57.44
+        },
+        {
+          "w": "en",
+          "start": 57.52,
+          "end": 57.56
+        },
+        {
+          "w": "a",
+          "start": 57.6,
+          "end": 57.68
+        },
+        {
+          "w": "fallu",
+          "start": 57.76,
+          "end": 57.92
+        },
+        {
+          "w": "plus",
+          "start": 58,
+          "end": 58.08
+        },
+        {
+          "w": "de",
+          "start": 58.16,
+          "end": 58.24
+        },
+        {
+          "w": "soixante",
+          "start": 58.32,
+          "end": 58.72
+        },
+        {
+          "w": "pour",
+          "start": 58.8,
+          "end": 58.88
+        },
+        {
+          "w": "la",
+          "start": 58.96,
+          "end": 59.04
+        },
+        {
+          "w": "corriger.",
+          "start": 59.12,
+          "end": 59.76
+        }
+      ]
+    }
+  ]
+}
