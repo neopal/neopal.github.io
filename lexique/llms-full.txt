@@ -1,6 +1,6 @@
 # Lexique IA : toutes les définitions
 
-> 160 fiches écrites et sourcées par Pierre-Adrien Lair (https://neopal.github.io/). Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
+> 161 fiches écrites et sourcées par Pierre-Adrien Lair (https://neopal.github.io/). Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
 > Index : https://neopal.github.io/lexique/llms.txt
 
 ## Token
@@ -4374,6 +4374,7 @@ L'image de Carroll a sa limite, car les deux camps progressent pour de bon. Dans
 - Evals : https://neopal.github.io/lexique/evals/
 - Prompt injection : https://neopal.github.io/lexique/prompt-injection/
 - Modèles frontière : https://neopal.github.io/lexique/modeles-frontiere/
+- Chasse aux failles par IA : https://neopal.github.io/lexique/chasse-aux-failles-par-ia/
 
 ### Sources
 
@@ -8505,6 +8506,7 @@ En 2023, l'Alignment Research Center, chargé de tester GPT-4 avant sa sortie, l
 - Modèles frontière : https://neopal.github.io/lexique/modeles-frontiere/
 - Guardrails : https://neopal.github.io/lexique/guardrails/
 - Benchmarks : lesquels croire ? : https://neopal.github.io/lexique/benchmarks-lesquels-croire/
+- Chasse aux failles par IA : https://neopal.github.io/lexique/chasse-aux-failles-par-ia/
 
 ### Sources
 
@@ -10715,3 +10717,78 @@ Sur ce test, des humains entraînés abandonnaient 71 % des questions après deu
 - Anthropic, How we built our multi-agent research system, 13 juin 2025 (la consommation de tokens explique 80 % de la variance sur BrowseComp ; un système multi-agents consomme environ 15 fois plus de tokens qu'une conversation) : https://www.anthropic.com/engineering/multi-agent-research-system
 - Wei et al. (OpenAI), BrowseComp: A Simple Yet Challenging Benchmark for Browsing Agents, 16 avril 2025 (1 266 questions ; des formateurs humains abandonnent 888 questions sur 1 255, soit 70,8 %, après deux heures ; Deep Research à 51,5 %, GPT-4o avec navigation à 1,9 %) : https://arxiv.org/abs/2504.12516
 - Venkit et al., DeepTRACE: Auditing Deep Research AI Systems for Tracking Reliability Across Citations and Evidence, 2 septembre 2025 (réponses souvent partiales sur les questions débattues ; exactitude des citations de 40 à 80 % selon les systèmes, donc de 20 à 60 % de citations qui ne soutiennent pas leur phrase) : https://arxiv.org/abs/2509.04499
+
+## Chasse aux failles par IA
+
+URL : https://neopal.github.io/lexique/chasse-aux-failles-par-ia/
+Catégorie : Écosystème et industrie
+En anglais : AI vulnerability discovery
+Aussi appelé : IA chasseuse de failles, recherche de vulnérabilités par IA, découverte de failles par IA
+Variantes anglaises : AI vulnerability research, AI bug hunting, AI-powered vulnerability discovery, autonomous vulnerability discovery, cyber reasoning system
+
+### Définition courte
+
+La chasse aux failles par IA confie à un modèle la recherche de failles inconnues dans du vrai code, qu'il lit et teste, au service du défenseur comme de l'attaquant.
+
+### L'image
+
+« Depuis que tout l'immeuble s'est acheté un détecteur de fuites, on en trouve dix par semaine, soupire Monique au comptoir ; le plombier, lui, est toujours tout seul et ne passe que le jeudi. »
+
+### Imagine
+
+Étale sur une piste de 100 mètres les quatorze ans et demi que la faille a passés dans PHP, de PHP 5.4 en mars 2012 au 19 août 2026 ; chaque jour y fait 2 centimètres. Les deux jours qu'il a fallu à l'équipe de Wiz, aidée de modèles, pour passer de la faille repérée à un WordPress de test piraté tiennent sur une pointe de chaussure. Le correctif arrive 1,20 mètre plus loin, 8 centimètres après la première attaque repérée par Amazon.
+
+### Définition complète
+
+Un modèle qui chasse les failles fait le travail d'un chercheur en sécurité. Il lit le code, devine où une donnée mal contrôlée peut corrompre la mémoire, écrit l'entrée qui fait planter le programme, puis le plus souvent l'exploit qui le prouve. Le 1er novembre 2024, l'agent Big Sleep de Google publiait ce qu'il présentait comme le premier exemple public du genre, un dépassement de tampon dans SQLite, corrigé le jour même avant d'atteindre une version officielle.
+
+En août 2025, les sept finalistes du concours AIxCC de la DARPA trouvaient 54 des 63 failles cachées pour l'épreuve, en corrigeaient 43, et découvraient en passant 18 failles réelles, pour environ 152 dollars par tâche. En avril 2026, Anthropic réservait Claude Mythos Preview à des partenaires de la défense après l'avoir vu trouver des milliers de failles inconnues. Puis, en octobre 2026, la découverte a touché PHP, le langage côté serveur d'environ 69 % des sites dont on connaît le langage, selon W3Techs.
+
+Les deux failles de php2shell dormaient dans PHP depuis plus de dix ans, et l'une au moins touche déjà PHP 5.4, sorti en 2012. Wiz les a trouvées en août avec Gemini 4 Argon et GPT-5.6 Sol, et Calif, de son côté, avec GPT-5.6 Sol. Au correctif du 21 octobre, la NSA et le NCSC britannique ont conseillé de couper les sites qu'on ne pouvait pas mettre à jour, et des pans de Wikipédia et d'Internet Archive ont fermé quelques heures. Des professionnels ont baptisé « Black October » ce mois où s'ajoutait, sans lien avec l'IA, la compromission de huit certificats d'eMudhra, dont les clés privées n'étaient faites que de zéros, à un octet près.
+
+Trouver et exploiter coûte de moins en moins, corriger coûte toujours autant. La PHP Foundation parle d'un « échec structurel » de son équipe sécurité, trop petite, qui avait aperçu l'une des failles dès 2024 sans trouver comment l'exploiter. Amazon a vu une première tentative d'attaque le 17 octobre, quatre jours avant le correctif, et note que l'IA rend moins cher de tirer une attaque d'un correctif publié. Fin octobre, à Stanford, Sam Altman disait ne plus croire qu'on puisse « just patch all the bugs ».
+
+### 2024 vs 2026
+
+Le 1er novembre 2024, Google racontait qu'un agent avait trouvé une faille dans SQLite avant qu'elle n'entre dans une version publiée, sans qu'aucun utilisateur ne soit exposé. Le 21 octobre 2026, des modèles avaient trouvé deux failles qui tournaient depuis quatorze ans sur la majorité des sites web, et des gouvernements fermaient les leurs en attendant de pouvoir mettre PHP à jour.
+
+### Dans le jargon
+
+- zero-day : une faille que l'éditeur du logiciel ne connaît pas encore, donc sans correctif le jour où quelqu'un la trouve
+- patch diffing : comparer le code avant et après un correctif pour retrouver la faille qu'il bouche, puis l'exploiter chez tous ceux qui n'ont pas encore mis à jour
+- CRS : cyber reasoning system, un système qui trouve, prouve et corrige des failles sans humain dans la boucle, le nom retenu par le concours AIxCC de la DARPA
+- Black October : le surnom que des professionnels de la cybersécurité ont donné, selon Axios le 22 octobre 2026, à la série de failles et d'attaques de ce mois-là, tout en notant que beaucoup d'organisations avaient réduit le risque et évité de gros dégâts
+
+### Entendu au bureau
+
+- Question : Notre site est un WordPress chez un hébergeur, on est concernés par Black October ?
+- Réponse : Oui, tant que ton PHP n'est pas au moins en 8.2.35, 8.3.36, 8.4.27 ou 8.5.12 ; demande la version à ton hébergeur aujourd'hui. En 8.1 ou avant, le projet ne publie plus que des correctifs de code source, prévois la migration.
+
+### À éviter
+
+« Si l'IA trouve les failles, elle n'a qu'à les corriger toute seule. » Le correctif doit encore être écrit, relu et publié par une équipe qui connaît le code, puis installé sur chaque serveur ; pour PHP, il s'est passé deux mois entre le premier signalement et le correctif.
+
+### Termes liés
+
+- Évaluations de dangerosité : https://neopal.github.io/lexique/evaluations-de-dangerosite/
+- Effet Reine rouge : https://neopal.github.io/lexique/effet-reine-rouge/
+- Red teaming : https://neopal.github.io/lexique/red-teaming/
+- Modèles frontière : https://neopal.github.io/lexique/modeles-frontiere/
+- Open weights : https://neopal.github.io/lexique/open-weights/
+
+### Sources
+
+- Google Project Zero, From Naptime to Big Sleep, 1er novembre 2024 (dépassement de tampon exploitable dans SQLite ; « the first public example of an AI agent finding a previously unknown exploitable memory-safety issue » selon les auteurs ; corrigé le jour du signalement, avant toute version officielle) : https://projectzero.google/2024/10/from-naptime-to-big-sleep.html
+- DARPA, AI Cyber Challenge marks pivotal inflection point for cyber defense, 8 août 2025 (Team Atlanta gagnante ; 54 failles synthétiques trouvées sur 63, 43 corrigées ; 18 failles réelles ; environ 152 dollars par tâche ; systèmes publiés en open source) : https://darpa.mil/news/2025/aixcc-results
+- Anthropic, Project Glasswing, avril 2026 (Claude Mythos Preview réservé à des partenaires pour la défense ; des milliers de failles zero-day dans les grands systèmes d'exploitation et navigateurs) : https://www.anthropic.com/glasswing
+- Wiz Research, PHP2Shell: AI uncovers critical RCE vulnerabilities affecting 70% of the Internet, 21 octobre 2026 (Wiz Atlas, Gemini 4 Argon et GPT-5.6 Sol ; découverte le 19 août 2026, exécution de code sans authentification sur Drupal le 20 août et sur WordPress le 21 août, signalement le 24 août, correctif le 21 octobre ; presque toutes les versions touchées par au moins une des failles, jusqu'à PHP 5.4 ; code présent depuis plus de dix ans ; PHP sur 70 % des sites) : https://www.wiz.io/blog/php2shell-php-rce
+- PHP, actualités 2026, 20 et 21 octobre 2026 (CVE-2026-109618 et CVE-2026-109619, CVSS 4.0 à 9.2 ; exécution de code sans authentification ; versions corrigées 8.5.12, 8.4.27, 8.3.36 et 8.2.35 ; PHP 8.1 et antérieurs ne reçoivent plus de mises à jour du projet, correctifs minimaux en code source pour 7.4, 8.0 et 8.1) : https://www.php.net/archive/2026.php
+- PHP, PHP 5.4.0 Released, 1er mars 2012 (date de sortie de PHP 5.4) : https://www.php.net/releases/5_4_0.php
+- Wikipédia, PHP2Shell, consulté le 26 octobre 2026 (PHP utilisé par environ 69 % des sites dont le langage serveur est connu de W3Techs ; Ryan Austin, de Calif, trouve une des failles en août 2026 avec GPT-5.6 Sol ; Wikimedia et Internet Archive coupent des services ; avis de la NSA) : https://en.wikipedia.org/wiki/PHP2Shell
+- NCSC, Critical security issue affecting PHP, 21 octobre 2026 (« should consider taking the system offline until it can be fully mitigated » ; rechercher des traces de compromission et des portes dérobées avant la mise à jour) : https://www.ncsc.gov.uk/news/critical-security-issue-affecting-php
+- Axios (repris par Yahoo News), Black October: why bugs discovered by OpenAI tech are creating a cyber emergency, 22 octobre 2026 (« Black October » ; beaucoup d'organisations ont réduit le risque et évité des dégâts réels massifs à ce stade ; la NSA conseille aux opérateurs de « take their sites down » faute de pouvoir corriger à temps ; OpenAI : « frontier AI found these vulnerabilities before attackers did ») : https://www.yahoo.com/news/world/articles/black-october-why-bugs-discovered-180131955.html
+- The PHP Foundation, Today's PHP security release and how we're strengthening PHP security, 21 octobre 2026 (premiers signes de l'une des failles repérés par un développeur lors de l'audit de 2024, sans exploitation trouvée ; « the delay was a structural failure » ; équipe sécurité réduite) : https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/
+- AWS Security Blog, Amazon threat intelligence identifies PHP2Shell exploitation prior to public disclosure in MadPot, 21 octobre 2026 (tentative du 17 octobre, quatre jours avant la divulgation ; « AI-assisted analysis makes it cheaper to turn a patch diff or advisory into a working exploit ») : https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/
+- Gizmodo, Sam Altman: I no longer think we're gonna be able to just patch all the bugs, article du 23 octobre 2026 (intervention à la Stanford Graduate School of Business, date non précisée ; « I no longer think we're going to be able to just patch all the bugs ») : https://gizmodo.com/sam-altman-i-no-longer-think-were-gonna-be-able-to-just-patch-all-the-bugs-2000829947
+- Calcul de l'Imagine : du 1er mars 2012 au 19 août 2026, 5 284 jours ; 100 m / 5 284 = 1,9 cm par jour ; 2 jours (19 au 21 août) = 3,8 cm ; 63 jours (19 août au 21 octobre) = 1,19 m ; 4 jours (17 au 21 octobre) = 7,6 cm : https://www.wiz.io/blog/php2shell-php-rce
+- Mozilla Bugzilla, bug 2083449, eMudhra: Private key compromise of Intermediate Certificates, ouvert le 18 octobre 2026 (huit certificats intermédiaires, six TLS et deux de signature de code ; « The original key generation was flawed » ; clés privées P-384 nulles sauf le dernier octet, d'après le signalant Dennis Jackson) : https://bugzilla.mozilla.org/show_bug.cgi?id=2083449
