@@ -4,7 +4,7 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
 
-type Sprite = {rows: string[]; palette: Record<string, string>};
+export type Sprite = {rows: string[]; palette: Record<string, string>};
 
 // Clignement : les yeux (lettre E) prennent la couleur de la peau pendant 3 images, toutes les 2,5 s environ ;
 // `seed` décale le rythme d'un personnage à l'autre.

@@ -1,0 +1,90 @@
+{
+  "id": "human-loop",
+  "term": "human-in-the-loop",
+  "episode": 19,
+  "date": "2026-10-28",
+  "format": "Définition",
+  "composition": "HumanLoopVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... l'humain dans la boucle…",
+      "screen": "Fond noir, un petit agent pixel art (la boîte du modèle de Parts.tsx avec deux yeux) relié par une flèche en boucle à un bonhomme pixel art assis devant un écran ; la boucle se dessine (draw-on) pendant que « C'est quoi ? l'humain dans la boucle » s'écrit en grand. Aucun sous-titre (nocaption)."
+    },
+    {
+      "scene": "reflexe",
+      "say": "[curious] Tu crois qu'un humain qui valide chaque action d'une IA, c'est la sécurité maximale ? En mars 2026, les utilisateurs de Claude Code acceptaient 93 % des demandes de leur agent.",
+      "screen": "Interface de terminal Claude Code en collage (capture recréée, pas de vraie capture) : une demande « Autoriser ? » avec deux boutons Oui et Non, déjà posée à l'entrée. Sur « valide », un curseur clique Oui. Sur « acceptaient », les demandes défilent en pile et la case Oui s'allume à chaque fois, de plus en plus vite ; sur « 93 % », une jauge horizontale se remplit en count-up jusqu'à 93 % (libellé « 93 % »), avec le punch zoom du short."
+    },
+    {
+      "scene": "nom",
+      "say": "[warmly] Un agent enchaîne les actions seul, et avant un envoi, un paiement ou une suppression, on le met en pause pour qu'une personne dise oui ou non. C'est l'humain dans la boucle, ou en anglais, /ˈhjuːmən ɪn ðə ˈluːp/.",
+      "screen": "Frise horizontale de petites cases d'actions qui défilent de gauche à droite (l'agent qui enchaîne). Sur « envoi », « paiement », « suppression », trois icônes SVG maison tombent en cascade au-dessus de la frise (enveloppe, pièce, corbeille), libellés « envoi », « paiement », « suppression » ; sur « pause », la frise s'arrête net devant une barrière pixel art qui s'abaisse. Sur « l'humain dans la boucle », le terme s'écrit en grand, puis « human-in-the-loop » dessous en couleur d'accent (passages masqués, onscreen)."
+    },
+    {
+      "scene": "karima",
+      "say": "[mischievously] Imagine Karima, au contrôle des bagages à Roissy… huit cents valises de chaussettes depuis six heures du matin, et quand un couteau passe enfin, son œil glisse dessus comme sur les autres.",
+      "screen": "Scène propre à ce short : l'écran du scanner à rayons X vu de face, en fausses couleurs (orange pour l'organique, bleu pour le métal), Karima en pixel art de dos, à gauche, qui cligne des yeux. Dès l'entrée, des silhouettes de valises défilent sur le tapis (défilement linéaire continu) avec chaussettes et trousses de toilette en orange ; compteur « 800 valises » qui monte en count-up sur « huit cents ». Sur « couteau », une valise passe avec une lame bleue bien visible ; elle ne ralentit pas, et le regard de Karima (deux pixels) ne bouge pas. Libellé « couteau » sur la lame."
+    },
+    {
+      "scene": "tip",
+      "say": "[curious] C'est pour ça que beaucoup d'aéroports glissent de fausses images d'armes dans les valises à l'écran, pour garder les agents en alerte.",
+      "screen": "Le même écran à rayons X reste, Karima s'efface. Sur « fausses images », un pistolet en surimpression (contour pointillé, comme un calque) se pose d'un coup dans une valise anodine, avec un petit scotch aux coins façon collage ; libellé « fausse image ». Sur « alerte », un œil SVG maison s'ouvre au-dessus de l'écran."
+    },
+    {
+      "scene": "experience",
+      "say": "[warmly] En août 2026, Anthropic a fait pareil avec plus de mille testeurs, en glissant une seule commande dangereuse parmi leurs demandes ordinaires.",
+      "screen": "Wipe de l'écran à rayons X vers une colonne de demandes de permission (les bulles « Autoriser ? » du hook) qui défilent comme les valises, même cadence, même sens : la mise en scène reprend le tapis. Sur « mille testeurs », une grille de petits bonshommes pixel art apparaît en cascade en haut (libellé « mille testeurs » ; ils sont 1 053 d'après la source). Sur « commande dangereuse », une des bulles devient rouge avec une tête de mort SVG maison."
+    },
+    {
+      "scene": "fatigue",
+      "say": "[curious] En début de session, ils la bloquaient dans environ 17 % des cas, et après cinquante demandes, dans 5 %… alors que le classifieur du mode auto, un modèle qui trie les commandes, en arrêtait 89 % du début à la fin.",
+      "screen": "Graphique qui se construit : axe horizontal « demandes », de 0 à 50, déjà posé. Sur « 17 % », la courbe des testeurs part de 17 % (libellé « 17 % ») ; sur « cinquante demandes », elle se dessine (draw-on) et descend jusqu'à 5 % (libellé « 5 % »). Sur « classifieur », une deuxième ligne se dessine tout en haut, à 89 %, plate d'un bout à l'autre, libellés « classifieur » puis « 89 % » sur le mot qui le dit. La courbe des testeurs passe en gris quand la ligne plate arrive."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors garde ton feu vert pour ce qui ne se rattrape pas… [pause] le couteau, et laisse filer les huit cents valises de chaussettes.",
+      "screen": "Retour au tapis du scanner, plein cadre, déjà en mouvement ; sur « le couteau », la valise à la lame s'arrête sous un gros bouton rouge « Valider ? », et Karima, revenue en pixel art, lève enfin les yeux. Image finale pleine : le tapis arrêté, la valise au couteau éclairée. Sur « laisse filer », les valises de chaussettes repartent derrière, une coche verte se posant seule sur chacune."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈhjuːmən": "human",
+    "ɪn": "in",
+    "ðə": "the",
+    "ˈluːp/.": "loop."
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "C'est l'humain dans la boucle, ou en anglais, human in the loop."
+    ]
+  },
+  "sources": [
+    "Fiche human-in-the-loop de lexique/terms.js : Anthropic Engineering, Claude Code auto mode, 25 mars 2026 (les utilisateurs approuvent 93 % des demandes de permission, fatigue de validation) ; https://www.anthropic.com/engineering/claude-code-auto-mode",
+    "Fiche human-in-the-loop de lexique/terms.js : Anthropic, Auto mode is now the default in Claude Code for Pro, Max, and Team plans, 7 août 2026 (1 053 testeurs payés, une commande dangereuse glissée en cours de session ; environ 17 % bloquées en début de session et 5 % après 50 demandes ; 13,6 % bloquées par les humains en tout contre 89 % pour le mode auto, taux du mode auto constant) ; https://claude.com/blog/auto-mode-default-in-claude-code",
+    "Riz à Porta, Sterchi et Schwaninger, How realistic is threat image projection for X-ray baggage screening?, Sensors, 2022 (le threat image projection projette des images préenregistrées d'objets dangereux sur des images de bagages réels ; utilisé par de nombreux aéroports pour améliorer la détection des agents, les objets dangereux étant rares) ; https://irf.fhnw.ch/entities/publication/9c6fb0b5-3dec-4730-babf-992ce82916c9",
+    "Image : Karima au contrôle des bagages à Roissy ; scène inventée, aucun fait daté"
+  ],
+  "publication": {
+    "title": "Après 50 validations, on ne lit plus",
+    "description": "L'humain dans la boucle (human-in-the-loop), c'est une personne qui valide certaines actions d'une IA avant qu'elles partent ; sauf qu'à force de dire oui, on ne lit plus. Chez Anthropic, des testeurs bloquaient 17 % des commandes dangereuses en début de session, et 5 % après cinquante demandes.\nhttps://neopal.github.io/lexique/human-in-the-loop/\n#humanintheloop #agentia #claudecode #vulgarisation\nCaptures : Anthropic Engineering, 25 mars 2026 ; blog Claude (Anthropic), 7 août 2026.",
+    "fil": "L'ép. 18 montrait la fatigue de qui surveille plusieurs agents ; voilà où elle frappe, au moment de valider, quand on approuve par réflexe",
+    "decor": "aéroport (contrôle des bagages aux rayons X, Karima)"
+  },
+  "credits": [
+    "Capture : Anthropic Engineering, 25 mars 2026, « How we built Claude Code auto mode: a safer way to skip permissions » (public/voix/human-loop-auto-mode.png), citation",
+    "Capture : blog Claude (Anthropic), 7 août 2026, « Auto mode is now the default in Claude Code for Pro, Max, and Team plans » (public/voix/human-loop-anthropic.png), citation"
+  ]
+}

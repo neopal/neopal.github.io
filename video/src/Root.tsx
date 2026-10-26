@@ -36,6 +36,13 @@ import {AgiVoix, AGIVOIX_DURATION} from './AgiVoix';
 import {MytheSaitPasVoix, MYTHESAITPASVOIX_DURATION} from './MytheSaitPasVoix';
 import {PDoomVoix, PDOOMVOIX_DURATION} from './PDoomVoix';
 import {MytheScoreVoix, MYTHESCOREVOIX_DURATION} from './MytheScoreVoix';
+import {AiBrainFryVoix, AIBRAINFRYVOIX_DURATION} from './AiBrainFryVoix';
+import {HumanLoopVoix, HUMANLOOPVOIX_DURATION} from './HumanLoopVoix';
+import {MythePlusGrosVoix, MYTHEPLUSGROSVOIX_DURATION} from './MythePlusGrosVoix';
+import {ContextRotVoix, CONTEXTROTVOIX_DURATION} from './ContextRotVoix';
+import {MytheInternetVoix, MYTHEINTERNETVOIX_DURATION} from './MytheInternetVoix';
+import {TokenVoix, TOKENVOIX_DURATION} from './TokenVoix';
+import {BenchmaxxingVoix, BENCHMAXXINGVOIX_DURATION} from './BenchmaxxingVoix';
 
 // Les shorts dans une seule entrée (stills et rendus partagent le même bundle).
 const C = {fps: 30, width: 1080, height: 1920} as const;
@@ -78,5 +85,12 @@ export const Root: React.FC = () => (
     <Composition id="MytheSaitPasVoix" component={MytheSaitPasVoix} durationInFrames={MYTHESAITPASVOIX_DURATION} {...C} />
     <Composition id="PDoomVoix" component={PDoomVoix} durationInFrames={PDOOMVOIX_DURATION} {...C} />
     <Composition id="MytheScoreVoix" component={MytheScoreVoix} durationInFrames={MYTHESCOREVOIX_DURATION} {...C} />
+    <Composition id="AiBrainFryVoix" component={AiBrainFryVoix} durationInFrames={AIBRAINFRYVOIX_DURATION} {...C} />
+    <Composition id="HumanLoopVoix" component={HumanLoopVoix} durationInFrames={HUMANLOOPVOIX_DURATION} {...C} />
+    <Composition id="MythePlusGrosVoix" component={MythePlusGrosVoix} durationInFrames={MYTHEPLUSGROSVOIX_DURATION} {...C} />
+    <Composition id="ContextRotVoix" component={ContextRotVoix} durationInFrames={CONTEXTROTVOIX_DURATION} {...C} />
+    <Composition id="MytheInternetVoix" component={MytheInternetVoix} durationInFrames={MYTHEINTERNETVOIX_DURATION} {...C} />
+    <Composition id="TokenVoix" component={TokenVoix} durationInFrames={TOKENVOIX_DURATION} {...C} />
+    <Composition id="BenchmaxxingVoix" component={BenchmaxxingVoix} durationInFrames={BENCHMAXXINGVOIX_DURATION} {...C} />
   </>
 );

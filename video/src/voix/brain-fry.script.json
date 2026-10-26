@@ -1,0 +1,87 @@
+{
+  "id": "brain-fry",
+  "term": "ai-brain-fry",
+  "episode": 18,
+  "date": "2026-10-27",
+  "format": "Définition",
+  "composition": "AiBrainFryVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... l'/ˌeɪˈaɪ bɹeɪn fɹaɪ/…",
+      "screen": "Titre géant « AI BRAIN FRY » au centre. Derrière, quatre petites fenêtres d'agent empilées de travers, chacune avec un curseur qui clignote ; elles sont posées dès la première image."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Tu crois que plus tu lances d'agents, plus tu avances ? En mars 2026, une enquête du BCG a montré que ceux qui surveillent beaucoup d'IA à la fois parlent d'un bourdonnement dans la tête, de brouillard, de décisions qui traînent.",
+      "screen": "Les quatre fenêtres deviennent cinq, puis six, sur « plus tu avances ». Sur « BCG », collage de la capture du titre de l'article HBR (scotch aux coins). Puis trois icônes maison se dessinent sur leur mot : ondes autour d'une tête (« bourdonnement »), nuage gris (« brouillard »), sablier qui coule lentement (« traînent »). Libellé bas : « 1 488 salariés »."
+    },
+    {
+      "scene": "nom",
+      "say": "Le BCG a nommé cette fatigue le cerveau grillé, ou en anglais, l'/ˌeɪˈaɪ bɹeɪn fɹaɪ/.",
+      "screen": "« cerveau grillé » s'écrit en grand, puis « AI brain fry » s'écrit dessous en couleur d'accent ; une petite poêle dessinée grésille à côté (trois traits de fumée)."
+    },
+    {
+      "scene": "piscine",
+      "say": "[mischievously] Imagine Fabrice, maître-nageur à la piscine municipale, qui surveille quatre bassins depuis qu'on a supprimé le poste de son collègue… il n'a pas mis un pied dans l'eau, et il rentre plus rincé que le club de natation.",
+      "screen": "Vue de dessus de quatre bassins carrelés, un nageur pixel art dans chacun. Fabrice en pixel art sur sa chaise haute au milieu, sifflet au cou ; sa tête pivote d'un bassin à l'autre sur le beat, de plus en plus vite. Sur « rincé », une serviette lui tombe sur la tête et le club de natation sort de l'eau, frais, en file."
+    },
+    {
+      "scene": "attente",
+      "say": "[curious] Tes agents font comme les nageurs, ils avancent un peu, puis ils t'attendent. Chez Anthropic, en octobre 2026, près de 80 % du temps d'une session passait à attendre la réponse d'un humain.",
+      "screen": "Les quatre bassins se transforment en quatre lignes de temps horizontales (« agent 1 » à « agent 4 ») : un court segment orange « travaille », puis un long segment gris « attend » qui s'étire. Sur « 80 % », une barre se remplit aux quatre cinquièmes en gris. Libellé : « Anthropic, oct. 2026 »."
+    },
+    {
+      "scene": "bascule",
+      "say": "[warmly] Et chaque fois que tu passes d'un agent à l'autre, ta tête doit retrouver où celui-là en était. D'après l'enquête du BCG, la productivité qu'on ressent plafonne à trois outils en même temps, et redescend au-delà de quatre.",
+      "screen": "Sous les quatre lignes, une ligne « toi » : ton curseur saute 1, 2, 3, 4, 1, 2 avec un éclair rouge à chaque saut (même mécanisme que le schéma de la fiche). Puis tout glisse vers le haut et une courbe se trace sur un axe « outils » de 1 à 5 : elle monte, plafonne au-dessus du 3 et redescend après le 4 (forme seule, aucune valeur sur l'axe vertical)."
+    },
+    {
+      "scene": "erreurs",
+      "say": "Ceux qui en souffrent déclarent 39 % d'erreurs graves en plus… alors que ceux qui confient à l'IA leurs tâches répétitives se disent moins épuisés.",
+      "screen": "Deux colonnes. À gauche, sous une icône œil, « surveiller » : une pile de dossiers marqués d'une croix rouge monte (« +39 % »). À droite, sous une icône ciseaux, « déléguer » : une jauge d'épuisement descend d'un cran (« −15 % »)."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors avant d'ouvrir un cinquième agent, pense à Fabrice… [pause] on ne surveille bien que quelques bassins à la fois.",
+      "screen": "Retour à la piscine : une corde à flotteurs ferme deux bassins ; Fabrice, serviette sur l'épaule, regarde les deux bassins restants, tranquille. Image finale pleine, les deux nageurs font une longueur."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˌeɪˈaɪ": "AI",
+    "bɹeɪn": "brain",
+    "fɹaɪ/": "fry"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "le cerveau grillé, ou en anglais, l'AI brain fry."
+    ]
+  },
+  "sources": [
+    "Fiche ai-brain-fry de lexique/terms.js : Bedard et al. (BCG), When Using AI Leads to « Brain Fry », Harvard Business Review, 5 mars 2026 ; BCG, communiqué du 5 mars 2026 (1 488 salariés américains de grandes entreprises) ; The Decoder, 9 mars 2026 (bourdonnement, brouillard, décisions plus lentes ; productivité ressentie qui plafonne à trois outils et baisse au-delà de quatre ; 39 % d'erreurs graves en plus ; épuisement plus faible de 15 % quand l'IA remplace les tâches répétitives ; données déclaratives) ; image de Fabrice le maître-nageur",
+    "Anthropic, How employment is changing at Anthropic, 16 octobre 2026 (environ 80 % du temps de session à attendre une réponse humaine) ; https://www.anthropic.com/research/employment-at-anthropic"
+  ],
+  "publication": {
+    "title": "Quatre agents IA, un cerveau grillé",
+    "description": "L'AI brain fry, c'est la fatigue mentale de qui surveille plusieurs IA à la fois ; d'après une enquête du BCG (HBR, mars 2026), la productivité ressentie plafonne à trois outils et redescend au-delà de quatre.\nhttps://neopal.github.io/lexique/ai-brain-fry/\n#aibrainfry #agentsia #productivite #vulgarisation\nCaptures : Harvard Business Review, 5 mars 2026 ; Anthropic, 16 octobre 2026.",
+    "fil": "L'ép. 17 demandait si un benchmark mesure ton travail ; voilà ce que le travail avec plusieurs agents fait à ta tête",
+    "decor": "piscine municipale (maître-nageur)"
+  },
+  "credits": [
+    "Capture : Harvard Business Review, 5 mars 2026, « When Using AI Leads to “Brain Fry” », Julie Bedard et al. (public/voix/brain-fry-hbr.png), citation",
+    "Capture : Anthropic, 16 octobre 2026, « How employment is changing at Anthropic », Nathan Wilmers et al. (public/voix/brain-fry-anthropic.png), citation"
+  ]
+}

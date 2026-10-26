@@ -1,0 +1,1151 @@
+{
+ "id": "context-rot",
+ "audio": true,
+ "music": true,
+ "duration": 62,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.08,
+   "end": 2.28,
+   "words": [
+    {
+     "w": "C'est",
+     "start": 0.08,
+     "end": 0.32
+    },
+    {
+     "w": "quoi...",
+     "start": 0.48,
+     "end": 0.8
+    },
+    {
+     "w": "le",
+     "start": 0.96,
+     "end": 1.12
+    },
+    {
+     "w": "context",
+     "start": 1.2,
+     "end": 1.6
+    },
+    {
+     "w": "rot…",
+     "start": 1.68,
+     "end": 2.28
+    }
+   ]
+  },
+  {
+   "scene": "intro",
+   "start": 2.56,
+   "end": 11.04,
+   "words": [
+    {
+     "w": "Il",
+     "start": 2.56,
+     "end": 2.64
+    },
+    {
+     "w": "te",
+     "start": 2.68,
+     "end": 2.72
+    },
+    {
+     "w": "reste",
+     "start": 2.8,
+     "end": 2.96
+    },
+    {
+     "w": "les",
+     "start": 3.04,
+     "end": 3.12
+    },
+    {
+     "w": "trois",
+     "start": 3.16,
+     "end": 3.28
+    },
+    {
+     "w": "quarts",
+     "start": 3.36,
+     "end": 3.52
+    },
+    {
+     "w": "de",
+     "start": 3.56,
+     "end": 3.6
+    },
+    {
+     "w": "la",
+     "start": 3.64,
+     "end": 3.68
+    },
+    {
+     "w": "fenêtre,",
+     "start": 3.76,
+     "end": 4.32
+    },
+    {
+     "w": "alors",
+     "start": 4.4,
+     "end": 4.56
+    },
+    {
+     "w": "tu",
+     "start": 4.64,
+     "end": 4.8
+    },
+    {
+     "w": "penses",
+     "start": 4.853,
+     "end": 4.96
+    },
+    {
+     "w": "avoir",
+     "start": 5.04,
+     "end": 5.2
+    },
+    {
+     "w": "de",
+     "start": 5.24,
+     "end": 5.28
+    },
+    {
+     "w": "la",
+     "start": 5.32,
+     "end": 5.36
+    },
+    {
+     "w": "marge ?",
+     "start": 5.44,
+     "end": 6.107
+    },
+    {
+     "w": "Pourtant,",
+     "start": 6.133,
+     "end": 6.72
+    },
+    {
+     "w": "la",
+     "start": 6.8,
+     "end": 6.88
+    },
+    {
+     "w": "qualité",
+     "start": 6.96,
+     "end": 7.28
+    },
+    {
+     "w": "baisse",
+     "start": 7.36,
+     "end": 7.6
+    },
+    {
+     "w": "à",
+     "start": 7.64,
+     "end": 7.68
+    },
+    {
+     "w": "mesure",
+     "start": 7.76,
+     "end": 8
+    },
+    {
+     "w": "que",
+     "start": 8.08,
+     "end": 8.16
+    },
+    {
+     "w": "la",
+     "start": 8.2,
+     "end": 8.24
+    },
+    {
+     "w": "conversation",
+     "start": 8.32,
+     "end": 8.8
+    },
+    {
+     "w": "s'allonge,",
+     "start": 8.84,
+     "end": 9.52
+    },
+    {
+     "w": "bien",
+     "start": 9.56,
+     "end": 9.76
+    },
+    {
+     "w": "avant",
+     "start": 9.84,
+     "end": 10
+    },
+    {
+     "w": "que",
+     "start": 10.04,
+     "end": 10.08
+    },
+    {
+     "w": "la",
+     "start": 10.12,
+     "end": 10.16
+    },
+    {
+     "w": "fenêtre",
+     "start": 10.24,
+     "end": 10.48
+    },
+    {
+     "w": "soit",
+     "start": 10.52,
+     "end": 10.72
+    },
+    {
+     "w": "pleine.",
+     "start": 10.76,
+     "end": 11.04
+    }
+   ]
+  },
+  {
+   "scene": "notion",
+   "start": 11.507,
+   "end": 17.36,
+   "words": [
+    {
+     "w": "Le",
+     "start": 11.507,
+     "end": 11.52
+    },
+    {
+     "w": "contexte,",
+     "start": 11.6,
+     "end": 12.24
+    },
+    {
+     "w": "c'est",
+     "start": 12.28,
+     "end": 12.48
+    },
+    {
+     "w": "tout",
+     "start": 12.56,
+     "end": 12.64
+    },
+    {
+     "w": "ce",
+     "start": 12.72,
+     "end": 12.773
+    },
+    {
+     "w": "que",
+     "start": 12.827,
+     "end": 12.88
+    },
+    {
+     "w": "le",
+     "start": 12.92,
+     "end": 12.96
+    },
+    {
+     "w": "modèle",
+     "start": 13.04,
+     "end": 13.28
+    },
+    {
+     "w": "relit",
+     "start": 13.4,
+     "end": 13.6
+    },
+    {
+     "w": "avant",
+     "start": 13.64,
+     "end": 13.84
+    },
+    {
+     "w": "de",
+     "start": 13.867,
+     "end": 13.893
+    },
+    {
+     "w": "répondre,",
+     "start": 13.92,
+     "end": 14.56
+    },
+    {
+     "w": "la",
+     "start": 14.64,
+     "end": 14.72
+    },
+    {
+     "w": "conversation",
+     "start": 15.04,
+     "end": 15.36
+    },
+    {
+     "w": "entière",
+     "start": 15.52,
+     "end": 15.92
+    },
+    {
+     "w": "et",
+     "start": 16.08,
+     "end": 16.16
+    },
+    {
+     "w": "ce",
+     "start": 16.2,
+     "end": 16.24
+    },
+    {
+     "w": "que",
+     "start": 16.28,
+     "end": 16.32
+    },
+    {
+     "w": "tu",
+     "start": 16.4,
+     "end": 16.48
+    },
+    {
+     "w": "y",
+     "start": 16.56,
+     "end": 16.6
+    },
+    {
+     "w": "as",
+     "start": 16.64,
+     "end": 16.72
+    },
+    {
+     "w": "collé.",
+     "start": 16.8,
+     "end": 17.36
+    }
+   ]
+  },
+  {
+   "scene": "nom",
+   "start": 17.4,
+   "end": 24.24,
+   "words": [
+    {
+     "w": "On",
+     "start": 17.4,
+     "end": 17.44
+    },
+    {
+     "w": "appelle",
+     "start": 17.52,
+     "end": 17.76
+    },
+    {
+     "w": "ça",
+     "start": 17.84,
+     "end": 17.92
+    },
+    {
+     "w": "le",
+     "start": 18.08,
+     "end": 18.16
+    },
+    {
+     "w": "pourrissement",
+     "start": 18.32,
+     "end": 18.8
+    },
+    {
+     "w": "du",
+     "start": 18.84,
+     "end": 18.88
+    },
+    {
+     "w": "contexte,",
+     "start": 18.96,
+     "end": 19.6
+    },
+    {
+     "w": "ou",
+     "start": 19.64,
+     "end": 19.68
+    },
+    {
+     "w": "en",
+     "start": 19.72,
+     "end": 19.76
+    },
+    {
+     "w": "anglais,",
+     "start": 19.84,
+     "end": 20.16
+    },
+    {
+     "w": "le",
+     "start": 20.4,
+     "end": 20.48
+    },
+    {
+     "w": "context",
+     "start": 20.56,
+     "end": 20.96
+    },
+    {
+     "w": "rot,",
+     "start": 21.04,
+     "end": 21.68
+    },
+    {
+     "w": "un",
+     "start": 21.76,
+     "end": 21.84
+    },
+    {
+     "w": "mot",
+     "start": 21.92,
+     "end": 22.08
+    },
+    {
+     "w": "né",
+     "start": 22.16,
+     "end": 22.24
+    },
+    {
+     "w": "en",
+     "start": 22.32,
+     "end": 22.4
+    },
+    {
+     "w": "juin",
+     "start": 22.48,
+     "end": 22.64
+    },
+    {
+     "w": "2025",
+     "start": 22.68,
+     "end": 22.76
+    },
+    {
+     "w": "sur",
+     "start": 22.8,
+     "end": 23.44
+    },
+    {
+     "w": "un",
+     "start": 23.52,
+     "end": 23.6
+    },
+    {
+     "w": "forum.",
+     "start": 23.76,
+     "end": 24.24
+    }
+   ]
+  },
+  {
+   "scene": "mourad",
+   "start": 24.32,
+   "end": 35.2,
+   "words": [
+    {
+     "w": "Imagine",
+     "start": 24.32,
+     "end": 24.72
+    },
+    {
+     "w": "Mourad",
+     "start": 24.76,
+     "end": 25.04
+    },
+    {
+     "w": "en",
+     "start": 25.12,
+     "end": 25.2
+    },
+    {
+     "w": "cuisine,",
+     "start": 25.333,
+     "end": 25.84
+    },
+    {
+     "w": "un",
+     "start": 25.92,
+     "end": 26
+    },
+    {
+     "w": "samedi",
+     "start": 26.04,
+     "end": 26.32
+    },
+    {
+     "w": "soir",
+     "start": 26.4,
+     "end": 26.56
+    },
+    {
+     "w": "de",
+     "start": 26.64,
+     "end": 26.72
+    },
+    {
+     "w": "coup",
+     "start": 26.747,
+     "end": 26.8
+    },
+    {
+     "w": "de",
+     "start": 26.84,
+     "end": 26.88
+    },
+    {
+     "w": "feu…",
+     "start": 26.96,
+     "end": 27.52
+    },
+    {
+     "w": "avec",
+     "start": 27.64,
+     "end": 27.76
+    },
+    {
+     "w": "un",
+     "start": 27.92,
+     "end": 28
+    },
+    {
+     "w": "seul",
+     "start": 28.08,
+     "end": 28.24
+    },
+    {
+     "w": "bon",
+     "start": 28.32,
+     "end": 28.4
+    },
+    {
+     "w": "au",
+     "start": 28.48,
+     "end": 28.56
+    },
+    {
+     "w": "rail,",
+     "start": 28.72,
+     "end": 29.04
+    },
+    {
+     "w": "il",
+     "start": 29.12,
+     "end": 29.2
+    },
+    {
+     "w": "lit",
+     "start": 29.32,
+     "end": 29.44
+    },
+    {
+     "w": "tout,",
+     "start": 29.52,
+     "end": 29.92
+    },
+    {
+     "w": "et",
+     "start": 29.96,
+     "end": 30
+    },
+    {
+     "w": "avec",
+     "start": 30.12,
+     "end": 30.24
+    },
+    {
+     "w": "quarante,",
+     "start": 30.32,
+     "end": 30.96
+    },
+    {
+     "w": "le",
+     "start": 31.04,
+     "end": 31.12
+    },
+    {
+     "w": "«",
+     "start": 31.28,
+     "end": 31.32
+    },
+    {
+     "w": "sans",
+     "start": 31.36,
+     "end": 31.52
+    },
+    {
+     "w": "gluten",
+     "start": 31.56,
+     "end": 31.92
+    },
+    {
+     "w": "»",
+     "start": 31.947,
+     "end": 31.973
+    },
+    {
+     "w": "de",
+     "start": 32,
+     "end": 32.04
+    },
+    {
+     "w": "la",
+     "start": 32.08,
+     "end": 32.16
+    },
+    {
+     "w": "table",
+     "start": 32.24,
+     "end": 32.4
+    },
+    {
+     "w": "6",
+     "start": 32.56,
+     "end": 32.72
+    },
+    {
+     "w": "lui",
+     "start": 32.76,
+     "end": 32.88
+    },
+    {
+     "w": "échappe,",
+     "start": 32.92,
+     "end": 33.44
+    },
+    {
+     "w": "alors",
+     "start": 33.48,
+     "end": 33.68
+    },
+    {
+     "w": "que",
+     "start": 33.72,
+     "end": 33.76
+    },
+    {
+     "w": "le",
+     "start": 33.84,
+     "end": 33.88
+    },
+    {
+     "w": "rail",
+     "start": 33.92,
+     "end": 34.08
+    },
+    {
+     "w": "n'est",
+     "start": 34.133,
+     "end": 34.24
+    },
+    {
+     "w": "même",
+     "start": 34.32,
+     "end": 34.48
+    },
+    {
+     "w": "pas",
+     "start": 34.56,
+     "end": 34.64
+    },
+    {
+     "w": "plein.",
+     "start": 34.68,
+     "end": 35.2
+    }
+   ]
+  },
+  {
+   "scene": "attention",
+   "start": 35.28,
+   "end": 40.64,
+   "words": [
+    {
+     "w": "Le",
+     "start": 35.28,
+     "end": 35.32
+    },
+    {
+     "w": "modèle",
+     "start": 35.36,
+     "end": 35.6
+    },
+    {
+     "w": "partage",
+     "start": 35.68,
+     "end": 36
+    },
+    {
+     "w": "son",
+     "start": 36.08,
+     "end": 36.16
+    },
+    {
+     "w": "attention",
+     "start": 36.36,
+     "end": 36.56
+    },
+    {
+     "w": "entre",
+     "start": 36.72,
+     "end": 36.88
+    },
+    {
+     "w": "tous",
+     "start": 36.96,
+     "end": 37.04
+    },
+    {
+     "w": "les",
+     "start": 37.08,
+     "end": 37.12
+    },
+    {
+     "w": "tokens,",
+     "start": 37.2,
+     "end": 37.76
+    },
+    {
+     "w": "et",
+     "start": 37.84,
+     "end": 37.92
+    },
+    {
+     "w": "chaque",
+     "start": 38,
+     "end": 38.24
+    },
+    {
+     "w": "page",
+     "start": 38.32,
+     "end": 38.4
+    },
+    {
+     "w": "ajoutée",
+     "start": 38.48,
+     "end": 38.88
+    },
+    {
+     "w": "prend",
+     "start": 38.96,
+     "end": 39.2
+    },
+    {
+     "w": "un",
+     "start": 39.28,
+     "end": 39.36
+    },
+    {
+     "w": "peu",
+     "start": 39.4,
+     "end": 39.48
+    },
+    {
+     "w": "de",
+     "start": 39.52,
+     "end": 39.56
+    },
+    {
+     "w": "la",
+     "start": 39.6,
+     "end": 39.68
+    },
+    {
+     "w": "part",
+     "start": 39.76,
+     "end": 39.84
+    },
+    {
+     "w": "des",
+     "start": 39.92,
+     "end": 40
+    },
+    {
+     "w": "autres.",
+     "start": 40.08,
+     "end": 40.64
+    }
+   ]
+  },
+  {
+   "scene": "illinois",
+   "start": 40.709,
+   "end": 49.36,
+   "words": [
+    {
+     "w": "En",
+     "start": 40.709,
+     "end": 40.72
+    },
+    {
+     "w": "octobre",
+     "start": 40.8,
+     "end": 41.12
+    },
+    {
+     "w": "2025,",
+     "start": 41.2,
+     "end": 42.08
+    },
+    {
+     "w": "des",
+     "start": 42.16,
+     "end": 42.24
+    },
+    {
+     "w": "chercheurs",
+     "start": 42.36,
+     "end": 42.64
+    },
+    {
+     "w": "de",
+     "start": 42.68,
+     "end": 42.72
+    },
+    {
+     "w": "l'Illinois",
+     "start": 42.76,
+     "end": 43.2
+    },
+    {
+     "w": "et",
+     "start": 43.24,
+     "end": 43.28
+    },
+    {
+     "w": "d'Amazon",
+     "start": 43.36,
+     "end": 43.84
+    },
+    {
+     "w": "ont",
+     "start": 43.92,
+     "end": 44.08
+    },
+    {
+     "w": "allongé",
+     "start": 44.16,
+     "end": 44.44
+    },
+    {
+     "w": "les",
+     "start": 44.48,
+     "end": 44.56
+    },
+    {
+     "w": "questions",
+     "start": 44.64,
+     "end": 44.96
+    },
+    {
+     "w": "de",
+     "start": 45.04,
+     "end": 45.12
+    },
+    {
+     "w": "cinq",
+     "start": 45.2,
+     "end": 45.36
+    },
+    {
+     "w": "modèles,",
+     "start": 45.44,
+     "end": 46
+    },
+    {
+     "w": "et",
+     "start": 46.04,
+     "end": 46.08
+    },
+    {
+     "w": "leurs",
+     "start": 46.16,
+     "end": 46.24
+    },
+    {
+     "w": "scores",
+     "start": 46.4,
+     "end": 46.56
+    },
+    {
+     "w": "baissaient,",
+     "start": 46.6,
+     "end": 47.2
+    },
+    {
+     "w": "même",
+     "start": 47.28,
+     "end": 47.36
+    },
+    {
+     "w": "quand",
+     "start": 47.44,
+     "end": 47.52
+    },
+    {
+     "w": "on",
+     "start": 47.6,
+     "end": 47.68
+    },
+    {
+     "w": "n'ajoutait",
+     "start": 47.72,
+     "end": 48.16
+    },
+    {
+     "w": "que",
+     "start": 48.24,
+     "end": 48.32
+    },
+    {
+     "w": "des",
+     "start": 48.36,
+     "end": 48.4
+    },
+    {
+     "w": "espaces",
+     "start": 48.48,
+     "end": 48.8
+    },
+    {
+     "w": "vides.",
+     "start": 48.88,
+     "end": 49.36
+    }
+   ]
+  },
+  {
+   "scene": "plage",
+   "start": 49.427,
+   "end": 57.36,
+   "words": [
+    {
+     "w": "Et",
+     "start": 49.427,
+     "end": 49.44
+    },
+    {
+     "w": "en",
+     "start": 49.52,
+     "end": 49.6
+    },
+    {
+     "w": "juillet",
+     "start": 49.68,
+     "end": 49.92
+    },
+    {
+     "w": "2025,",
+     "start": 49.96,
+     "end": 50.68
+    },
+    {
+     "w": "après",
+     "start": 50.8,
+     "end": 51.12
+    },
+    {
+     "w": "cinq",
+     "start": 51.2,
+     "end": 51.36
+    },
+    {
+     "w": "mille",
+     "start": 51.44,
+     "end": 51.52
+    },
+    {
+     "w": "mots",
+     "start": 51.6,
+     "end": 51.76
+    },
+    {
+     "w": "à",
+     "start": 51.787,
+     "end": 51.813
+    },
+    {
+     "w": "recopier,",
+     "start": 51.84,
+     "end": 52.56
+    },
+    {
+     "w": "un",
+     "start": 52.64,
+     "end": 52.72
+    },
+    {
+     "w": "petit",
+     "start": 52.8,
+     "end": 53.04
+    },
+    {
+     "w": "modèle",
+     "start": 53.12,
+     "end": 53.28
+    },
+    {
+     "w": "d'Alibaba",
+     "start": 53.36,
+     "end": 53.92
+    },
+    {
+     "w": "a",
+     "start": 54,
+     "end": 54.08
+    },
+    {
+     "w": "répondu",
+     "start": 54.16,
+     "end": 54.48
+    },
+    {
+     "w": "qu'il",
+     "start": 54.52,
+     "end": 54.64
+    },
+    {
+     "w": "avait",
+     "start": 54.68,
+     "end": 54.88
+    },
+    {
+     "w": "besoin",
+     "start": 54.96,
+     "end": 55.12
+    },
+    {
+     "w": "de",
+     "start": 55.16,
+     "end": 55.2
+    },
+    {
+     "w": "faire",
+     "start": 55.24,
+     "end": 55.36
+    },
+    {
+     "w": "une",
+     "start": 55.44,
+     "end": 55.52
+    },
+    {
+     "w": "pause…",
+     "start": 55.64,
+     "end": 56.16
+    },
+    {
+     "w": "et",
+     "start": 56.2,
+     "end": 56.24
+    },
+    {
+     "w": "d'aller",
+     "start": 56.28,
+     "end": 56.48
+    },
+    {
+     "w": "à",
+     "start": 56.56,
+     "end": 56.587
+    },
+    {
+     "w": "la",
+     "start": 56.613,
+     "end": 56.64
+    },
+    {
+     "w": "plage.",
+     "start": 56.72,
+     "end": 57.36
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 57.497,
+   "end": 62,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 57.497,
+     "end": 57.6
+    },
+    {
+     "w": "entre",
+     "start": 57.68,
+     "end": 57.92
+    },
+    {
+     "w": "deux",
+     "start": 58,
+     "end": 58.08
+    },
+    {
+     "w": "tâches",
+     "start": 58.16,
+     "end": 58.32
+    },
+    {
+     "w": "sans",
+     "start": 58.4,
+     "end": 58.48
+    },
+    {
+     "w": "rapport,",
+     "start": 58.56,
+     "end": 59.28
+    },
+    {
+     "w": "vide",
+     "start": 59.36,
+     "end": 59.52
+    },
+    {
+     "w": "le",
+     "start": 59.6,
+     "end": 59.68
+    },
+    {
+     "w": "rail…",
+     "start": 59.84,
+     "end": 60.027
+    },
+    {
+     "w": "et",
+     "start": 60.613,
+     "end": 60.64
+    },
+    {
+     "w": "repars",
+     "start": 60.72,
+     "end": 61.04
+    },
+    {
+     "w": "avec",
+     "start": 61.12,
+     "end": 61.2
+    },
+    {
+     "w": "un",
+     "start": 61.28,
+     "end": 61.32
+    },
+    {
+     "w": "seul",
+     "start": 61.36,
+     "end": 61.52
+    },
+    {
+     "w": "bon.",
+     "start": 61.6,
+     "end": 62
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="ai-brain-fry-t">
+<title id="ai-brain-fry-t">Quatre agents lancés en même temps : chacun travaille quelques instants après ton passage, puis passe la plupart du temps à attendre ta réponse. Ton attention saute d'un agent à l'autre, et chaque saut est un changement de tâche.</title>
+<rect class="bxa" x="0" y="4" width="14" height="12" rx="2"/><text class="m mu" x="20" y="15">avec toi</text>
+<rect class="fa" x="110" y="4" width="14" height="12" rx="2"/><text class="m mu" x="130" y="15">travaille</text>
+<rect class="fd" x="222" y="4" width="14" height="12" rx="2"/><text class="m mu" x="242" y="15">attend</text>
+<text class="m d" x="0" y="50">agent 1</text>
+<rect class="bxa" x="79.0" y="37" width="38.3" height="18" rx="3"/>
+<rect class="fa" x="118.3" y="36" width="30.0" height="20"/>
+<rect class="fd" x="148.3" y="36" width="90.9" height="20"/>
+<rect class="bxa" x="240.2" y="37" width="38.3" height="18" rx="3"/>
+<rect class="fa" x="279.5" y="36" width="30.0" height="20"/>
+<rect class="fd" x="309.5" y="36" width="50.5" height="20"/>
+<text class="m d" x="0" y="84">agent 2</text>
+<rect class="fd" x="78.0" y="70" width="40.3" height="20"/>
+<rect class="bxa" x="119.3" y="71" width="38.3" height="18" rx="3"/>
+<rect class="fa" x="158.6" y="70" width="30.0" height="20"/>
+<rect class="fd" x="188.6" y="70" width="90.9" height="20"/>
+<rect class="bxa" x="280.5" y="71" width="38.3" height="18" rx="3"/>
+<rect class="fa" x="319.8" y="70" width="30.0" height="20"/>
+<rect class="fd" x="349.8" y="70" width="10.2" height="20"/>
+<text class="m d" x="0" y="118">agent 3</text>
+<rect class="fd" x="78.0" y="104" width="80.6" height="20"/>
+<rect class="bxa" x="159.6" y="105" width="38.3" height="18" rx="3"/>
+<rect class="fa" x="198.9" y="104" width="30.0" height="20"/>
+<rect class="fd" x="228.9" y="104" width="90.9" height="20"/>
+<rect class="bxa" x="320.8" y="105" width="38.3" height="18" rx="3"/>
+<text class="m d" x="0" y="152">agent 4</text>
+<rect class="fd" x="78.0" y="138" width="120.9" height="20"/>
+<rect class="bxa" x="199.9" y="139" width="38.3" height="18" rx="3"/>
+<rect class="fa" x="239.2" y="138" width="30.0" height="20"/>
+<rect class="fd" x="269.2" y="138" width="90.8" height="20"/>
+<path class="ln" d="M0 178 h360"/>
+<text class="m ac" x="0" y="211">toi</text>
+<rect class="bxa" x="79.0" y="196" width="38.3" height="22" rx="3"/>
+<text class="m" x="98.2" y="211" text-anchor="middle">1</text>
+<rect class="bxa" x="119.3" y="196" width="38.3" height="22" rx="3"/>
+<text class="m" x="138.4" y="211" text-anchor="middle">2</text>
+<path class="lr" d="M118.3 190 v34"/>
+<rect class="bxa" x="159.6" y="196" width="38.3" height="22" rx="3"/>
+<text class="m" x="178.8" y="211" text-anchor="middle">3</text>
+<path class="lr" d="M158.6 190 v34"/>
+<rect class="bxa" x="199.9" y="196" width="38.3" height="22" rx="3"/>
+<text class="m" x="219.0" y="211" text-anchor="middle">4</text>
+<path class="lr" d="M198.9 190 v34"/>
+<rect class="bxa" x="240.2" y="196" width="38.3" height="22" rx="3"/>
+<text class="m" x="259.3" y="211" text-anchor="middle">1</text>
+<path class="lr" d="M239.2 190 v34"/>
+<rect class="bxa" x="280.5" y="196" width="38.3" height="22" rx="3"/>
+<text class="m" x="299.6" y="211" text-anchor="middle">2</text>
+<path class="lr" d="M279.5 190 v34"/>
+<rect class="bxa" x="320.8" y="196" width="38.3" height="22" rx="3"/>
+<text class="m" x="339.9" y="211" text-anchor="middle">3</text>
+<path class="lr" d="M319.8 190 v34"/>
+<text class="m red" x="360" y="242" text-anchor="end">6 changements de tâche</text>
+<text class="i mu" x="0" y="272">Chaque agent attend ta réponse, et à chaque</text>
+<text class="i mu" x="0" y="292">saut, tu dois retrouver où en était le suivant.</text>
+</svg>

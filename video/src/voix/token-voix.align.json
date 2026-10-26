@@ -1,0 +1,1104 @@
+{
+ "id": "token-voix",
+ "audio": true,
+ "music": true,
+ "duration": 61.6,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.24,
+   "end": 1.88,
+   "words": [
+    {
+     "w": "C'est",
+     "start": 0.24,
+     "end": 0.32
+    },
+    {
+     "w": "quoi...",
+     "start": 0.56,
+     "end": 0.84
+    },
+    {
+     "w": "un",
+     "start": 0.88,
+     "end": 1.12
+    },
+    {
+     "w": "token…",
+     "start": 1.12,
+     "end": 1.88
+    }
+   ]
+  },
+  {
+   "scene": "intro",
+   "start": 2.16,
+   "end": 8.88,
+   "words": [
+    {
+     "w": "On",
+     "start": 2.16,
+     "end": 2.24
+    },
+    {
+     "w": "dit",
+     "start": 2.32,
+     "end": 2.4
+    },
+    {
+     "w": "que",
+     "start": 2.44,
+     "end": 2.48
+    },
+    {
+     "w": "ChatGPT",
+     "start": 2.64,
+     "end": 3.28
+    },
+    {
+     "w": "a",
+     "start": 3.32,
+     "end": 3.36
+    },
+    {
+     "w": "lu",
+     "start": 3.48,
+     "end": 3.6
+    },
+    {
+     "w": "tout",
+     "start": 3.68,
+     "end": 3.84
+    },
+    {
+     "w": "Internet…",
+     "start": 3.92,
+     "end": 4.88
+    },
+    {
+     "w": "ce",
+     "start": 4.96,
+     "end": 5.013
+    },
+    {
+     "w": "que",
+     "start": 5.067,
+     "end": 5.12
+    },
+    {
+     "w": "son",
+     "start": 5.2,
+     "end": 5.28
+    },
+    {
+     "w": "modèle",
+     "start": 5.36,
+     "end": 5.52
+    },
+    {
+     "w": "a",
+     "start": 5.6,
+     "end": 5.64
+    },
+    {
+     "w": "lu,",
+     "start": 5.68,
+     "end": 6
+    },
+    {
+     "w": "en",
+     "start": 6.04,
+     "end": 6.08
+    },
+    {
+     "w": "vérité,",
+     "start": 6.16,
+     "end": 6.88
+    },
+    {
+     "w": "c'est",
+     "start": 6.933,
+     "end": 7.04
+    },
+    {
+     "w": "une",
+     "start": 7.16,
+     "end": 7.28
+    },
+    {
+     "w": "très",
+     "start": 7.36,
+     "end": 7.52
+    },
+    {
+     "w": "longue",
+     "start": 7.6,
+     "end": 7.76
+    },
+    {
+     "w": "suite",
+     "start": 7.84,
+     "end": 8.08
+    },
+    {
+     "w": "de",
+     "start": 8.12,
+     "end": 8.16
+    },
+    {
+     "w": "numéros.",
+     "start": 8.24,
+     "end": 8.88
+    }
+   ]
+  },
+  {
+   "scene": "decoupe",
+   "start": 9.017,
+   "end": 18.56,
+   "words": [
+    {
+     "w": "Avant",
+     "start": 9.017,
+     "end": 9.12
+    },
+    {
+     "w": "chaque",
+     "start": 9.2,
+     "end": 9.36
+    },
+    {
+     "w": "lecture,",
+     "start": 9.6,
+     "end": 10.08
+    },
+    {
+     "w": "un",
+     "start": 10.12,
+     "end": 10.16
+    },
+    {
+     "w": "programme,",
+     "start": 10.24,
+     "end": 10.88
+    },
+    {
+     "w": "le",
+     "start": 10.92,
+     "end": 10.96
+    },
+    {
+     "w": "tokenizer,",
+     "start": 11.12,
+     "end": 11.92
+    },
+    {
+     "w": "découpe",
+     "start": 11.96,
+     "end": 12.24
+    },
+    {
+     "w": "le",
+     "start": 12.32,
+     "end": 12.36
+    },
+    {
+     "w": "texte",
+     "start": 12.4,
+     "end": 12.693
+    },
+    {
+     "w": "en",
+     "start": 12.747,
+     "end": 12.8
+    },
+    {
+     "w": "blocs,",
+     "start": 12.84,
+     "end": 13.28
+    },
+    {
+     "w": "pris",
+     "start": 13.32,
+     "end": 13.44
+    },
+    {
+     "w": "dans",
+     "start": 13.48,
+     "end": 13.6
+    },
+    {
+     "w": "un",
+     "start": 13.64,
+     "end": 13.68
+    },
+    {
+     "w": "vocabulaire",
+     "start": 13.76,
+     "end": 14.24
+    },
+    {
+     "w": "d'environ",
+     "start": 14.28,
+     "end": 14.72
+    },
+    {
+     "w": "200 000",
+     "start": 14.88,
+     "end": 15.12
+    },
+    {
+     "w": "morceaux,",
+     "start": 15.2,
+     "end": 16.16
+    },
+    {
+     "w": "et",
+     "start": 16.2,
+     "end": 16.24
+    },
+    {
+     "w": "remplace",
+     "start": 16.32,
+     "end": 16.72
+    },
+    {
+     "w": "chaque",
+     "start": 16.8,
+     "end": 16.96
+    },
+    {
+     "w": "bloc",
+     "start": 17.04,
+     "end": 17.28
+    },
+    {
+     "w": "par",
+     "start": 17.36,
+     "end": 17.44
+    },
+    {
+     "w": "son",
+     "start": 17.52,
+     "end": 17.6
+    },
+    {
+     "w": "numéro.",
+     "start": 17.68,
+     "end": 18.56
+    }
+   ]
+  },
+  {
+   "scene": "nom",
+   "start": 18.6,
+   "end": 23.28,
+   "words": [
+    {
+     "w": "Chacun",
+     "start": 18.6,
+     "end": 18.88
+    },
+    {
+     "w": "de",
+     "start": 18.92,
+     "end": 18.96
+    },
+    {
+     "w": "ces",
+     "start": 19,
+     "end": 19.04
+    },
+    {
+     "w": "blocs",
+     "start": 19.12,
+     "end": 19.28
+    },
+    {
+     "w": "numérotés,",
+     "start": 19.36,
+     "end": 20
+    },
+    {
+     "w": "c'est",
+     "start": 20.04,
+     "end": 20.16
+    },
+    {
+     "w": "un",
+     "start": 20.24,
+     "end": 20.32
+    },
+    {
+     "w": "token,",
+     "start": 20.4,
+     "end": 21.04
+    },
+    {
+     "w": "et",
+     "start": 21.08,
+     "end": 21.12
+    },
+    {
+     "w": "le",
+     "start": 21.16,
+     "end": 21.2
+    },
+    {
+     "w": "modèle",
+     "start": 21.28,
+     "end": 21.52
+    },
+    {
+     "w": "ne",
+     "start": 21.6,
+     "end": 21.68
+    },
+    {
+     "w": "manipule",
+     "start": 21.76,
+     "end": 22.24
+    },
+    {
+     "w": "que",
+     "start": 22.32,
+     "end": 22.4
+    },
+    {
+     "w": "leurs",
+     "start": 22.48,
+     "end": 22.56
+    },
+    {
+     "w": "numéros.",
+     "start": 22.64,
+     "end": 23.28
+    }
+   ]
+  },
+  {
+   "scene": "caisse",
+   "start": 23.707,
+   "end": 32.24,
+   "words": [
+    {
+     "w": "Imagine",
+     "start": 23.707,
+     "end": 23.76
+    },
+    {
+     "w": "ton",
+     "start": 23.84,
+     "end": 24
+    },
+    {
+     "w": "pot",
+     "start": 24.08,
+     "end": 24.16
+    },
+    {
+     "w": "de",
+     "start": 24.2,
+     "end": 24.24
+    },
+    {
+     "w": "Nutella",
+     "start": 24.36,
+     "end": 24.64
+    },
+    {
+     "w": "qui",
+     "start": 24.72,
+     "end": 24.88
+    },
+    {
+     "w": "passe",
+     "start": 24.933,
+     "end": 25.04
+    },
+    {
+     "w": "à",
+     "start": 25.12,
+     "end": 25.147
+    },
+    {
+     "w": "la",
+     "start": 25.173,
+     "end": 25.2
+    },
+    {
+     "w": "caisse",
+     "start": 25.28,
+     "end": 25.44
+    },
+    {
+     "w": "du",
+     "start": 25.48,
+     "end": 25.52
+    },
+    {
+     "w": "supermarché…",
+     "start": 25.6,
+     "end": 26.64
+    },
+    {
+     "w": "la",
+     "start": 26.72,
+     "end": 26.8
+    },
+    {
+     "w": "caisse",
+     "start": 26.88,
+     "end": 27.04
+    },
+    {
+     "w": "n'en",
+     "start": 27.12,
+     "end": 27.2
+    },
+    {
+     "w": "lit",
+     "start": 27.32,
+     "end": 27.44
+    },
+    {
+     "w": "que",
+     "start": 27.48,
+     "end": 27.52
+    },
+    {
+     "w": "le",
+     "start": 27.6,
+     "end": 27.68
+    },
+    {
+     "w": "code-barres,",
+     "start": 27.76,
+     "end": 28.32
+    },
+    {
+     "w": "et",
+     "start": 28.347,
+     "end": 28.373
+    },
+    {
+     "w": "elle",
+     "start": 28.4,
+     "end": 28.48
+    },
+    {
+     "w": "t'affiche",
+     "start": 28.52,
+     "end": 28.88
+    },
+    {
+     "w": "le",
+     "start": 28.92,
+     "end": 28.96
+    },
+    {
+     "w": "prix",
+     "start": 29.04,
+     "end": 29.28
+    },
+    {
+     "w": "au",
+     "start": 29.32,
+     "end": 29.36
+    },
+    {
+     "w": "centime",
+     "start": 29.52,
+     "end": 29.84
+    },
+    {
+     "w": "près",
+     "start": 29.92,
+     "end": 30.24
+    },
+    {
+     "w": "sans",
+     "start": 30.32,
+     "end": 30.48
+    },
+    {
+     "w": "savoir",
+     "start": 30.56,
+     "end": 30.88
+    },
+    {
+     "w": "combien",
+     "start": 30.96,
+     "end": 31.12
+    },
+    {
+     "w": "il",
+     "start": 31.16,
+     "end": 31.2
+    },
+    {
+     "w": "y",
+     "start": 31.22,
+     "end": 31.24
+    },
+    {
+     "w": "a",
+     "start": 31.26,
+     "end": 31.28
+    },
+    {
+     "w": "de",
+     "start": 31.32,
+     "end": 31.36
+    },
+    {
+     "w": "noisettes",
+     "start": 31.4,
+     "end": 31.68
+    },
+    {
+     "w": "dedans.",
+     "start": 31.76,
+     "end": 32.24
+    }
+   ]
+  },
+  {
+   "scene": "blocs",
+   "start": 32.32,
+   "end": 43.68,
+   "words": [
+    {
+     "w": "Dans",
+     "start": 32.32,
+     "end": 32.4
+    },
+    {
+     "w": "le",
+     "start": 32.427,
+     "end": 32.453
+    },
+    {
+     "w": "modèle,",
+     "start": 32.48,
+     "end": 33.04
+    },
+    {
+     "w": "la",
+     "start": 33.08,
+     "end": 33.12
+    },
+    {
+     "w": "phrase",
+     "start": 33.2,
+     "end": 33.52
+    },
+    {
+     "w": "«",
+     "start": 33.68,
+     "end": 33.72
+    },
+    {
+     "w": "Il",
+     "start": 33.76,
+     "end": 33.84
+    },
+    {
+     "w": "a",
+     "start": 33.88,
+     "end": 33.92
+    },
+    {
+     "w": "lu",
+     "start": 34,
+     "end": 34.08
+    },
+    {
+     "w": "tout",
+     "start": 34.16,
+     "end": 34.32
+    },
+    {
+     "w": "Internet",
+     "start": 34.4,
+     "end": 34.88
+    },
+    {
+     "w": "»",
+     "start": 34.92,
+     "end": 34.96
+    },
+    {
+     "w": "tient",
+     "start": 35.04,
+     "end": 35.28
+    },
+    {
+     "w": "en",
+     "start": 35.4,
+     "end": 35.52
+    },
+    {
+     "w": "cinq",
+     "start": 35.56,
+     "end": 35.68
+    },
+    {
+     "w": "tokens,",
+     "start": 35.76,
+     "end": 36.4
+    },
+    {
+     "w": "un",
+     "start": 36.44,
+     "end": 36.48
+    },
+    {
+     "w": "par",
+     "start": 36.56,
+     "end": 36.72
+    },
+    {
+     "w": "mot,",
+     "start": 36.8,
+     "end": 37.2
+    },
+    {
+     "w": "alors",
+     "start": 37.24,
+     "end": 37.44
+    },
+    {
+     "w": "que",
+     "start": 37.52,
+     "end": 37.6
+    },
+    {
+     "w": "«",
+     "start": 37.76,
+     "end": 37.78
+    },
+    {
+     "w": "kouign-amann",
+     "start": 37.8,
+     "end": 38.32
+    },
+    {
+     "w": "»,",
+     "start": 38.48,
+     "end": 38.507
+    },
+    {
+     "w": "à",
+     "start": 38.533,
+     "end": 38.56
+    },
+    {
+     "w": "lui",
+     "start": 38.6,
+     "end": 38.72
+    },
+    {
+     "w": "seul,",
+     "start": 38.8,
+     "end": 39.12
+    },
+    {
+     "w": "en",
+     "start": 39.16,
+     "end": 39.2
+    },
+    {
+     "w": "prend",
+     "start": 39.28,
+     "end": 39.52
+    },
+    {
+     "w": "quatre,",
+     "start": 39.56,
+     "end": 40.08
+    },
+    {
+     "w": "car",
+     "start": 40.12,
+     "end": 40.16
+    },
+    {
+     "w": "le",
+     "start": 40.24,
+     "end": 40.28
+    },
+    {
+     "w": "vocabulaire",
+     "start": 40.32,
+     "end": 40.88
+    },
+    {
+     "w": "garde",
+     "start": 40.96,
+     "end": 41.12
+    },
+    {
+     "w": "les",
+     "start": 41.2,
+     "end": 41.28
+    },
+    {
+     "w": "morceaux",
+     "start": 41.36,
+     "end": 41.56
+    },
+    {
+     "w": "les",
+     "start": 41.6,
+     "end": 41.68
+    },
+    {
+     "w": "plus",
+     "start": 41.76,
+     "end": 41.84
+    },
+    {
+     "w": "fréquents,",
+     "start": 41.88,
+     "end": 42.48
+    },
+    {
+     "w": "sans",
+     "start": 42.56,
+     "end": 42.64
+    },
+    {
+     "w": "regarder",
+     "start": 42.68,
+     "end": 42.96
+    },
+    {
+     "w": "le",
+     "start": 43,
+     "end": 43.04
+    },
+    {
+     "w": "sens.",
+     "start": 43.08,
+     "end": 43.68
+    }
+   ]
+  },
+  {
+   "scene": "facture",
+   "start": 43.88,
+   "end": 55.52,
+   "words": [
+    {
+     "w": "Et",
+     "start": 43.88,
+     "end": 43.92
+    },
+    {
+     "w": "tout",
+     "start": 44,
+     "end": 44.08
+    },
+    {
+     "w": "se",
+     "start": 44.16,
+     "end": 44.32
+    },
+    {
+     "w": "compte",
+     "start": 44.36,
+     "end": 44.48
+    },
+    {
+     "w": "en",
+     "start": 44.56,
+     "end": 44.64
+    },
+    {
+     "w": "tokens,",
+     "start": 44.84,
+     "end": 45.28
+    },
+    {
+     "w": "ta",
+     "start": 45.32,
+     "end": 45.36
+    },
+    {
+     "w": "question,",
+     "start": 45.44,
+     "end": 46.08
+    },
+    {
+     "w": "sa",
+     "start": 46.16,
+     "end": 46.24
+    },
+    {
+     "w": "réponse,",
+     "start": 46.32,
+     "end": 46.88
+    },
+    {
+     "w": "jusqu'à",
+     "start": 46.933,
+     "end": 47.16
+    },
+    {
+     "w": "la",
+     "start": 47.2,
+     "end": 47.24
+    },
+    {
+     "w": "facture…",
+     "start": 47.28,
+     "end": 48.08
+    },
+    {
+     "w": "l'article",
+     "start": 48.12,
+     "end": 48.56
+    },
+    {
+     "w": "premier",
+     "start": 48.68,
+     "end": 48.88
+    },
+    {
+     "w": "de",
+     "start": 48.92,
+     "end": 48.96
+    },
+    {
+     "w": "la",
+     "start": 49,
+     "end": 49.04
+    },
+    {
+     "w": "Déclaration",
+     "start": 49.12,
+     "end": 49.6
+    },
+    {
+     "w": "universelle",
+     "start": 49.68,
+     "end": 50.16
+    },
+    {
+     "w": "des",
+     "start": 50.2,
+     "end": 50.24
+    },
+    {
+     "w": "droits",
+     "start": 50.32,
+     "end": 50.48
+    },
+    {
+     "w": "de",
+     "start": 50.52,
+     "end": 50.56
+    },
+    {
+     "w": "l'homme",
+     "start": 50.587,
+     "end": 50.8
+    },
+    {
+     "w": "fait",
+     "start": 50.88,
+     "end": 51.12
+    },
+    {
+     "w": "33",
+     "start": 51.2,
+     "end": 51.56
+    },
+    {
+     "w": "tokens",
+     "start": 51.6,
+     "end": 51.92
+    },
+    {
+     "w": "en",
+     "start": 51.96,
+     "end": 52
+    },
+    {
+     "w": "anglais,",
+     "start": 52.08,
+     "end": 52.56
+    },
+    {
+     "w": "et",
+     "start": 52.64,
+     "end": 52.72
+    },
+    {
+     "w": "41",
+     "start": 52.8,
+     "end": 53.253
+    },
+    {
+     "w": "en",
+     "start": 53.28,
+     "end": 53.36
+    },
+    {
+     "w": "français,",
+     "start": 53.44,
+     "end": 54
+    },
+    {
+     "w": "presque",
+     "start": 54.12,
+     "end": 54.4
+    },
+    {
+     "w": "un",
+     "start": 54.48,
+     "end": 54.56
+    },
+    {
+     "w": "quart",
+     "start": 54.64,
+     "end": 54.8
+    },
+    {
+     "w": "de",
+     "start": 54.88,
+     "end": 54.96
+    },
+    {
+     "w": "plus.",
+     "start": 55.08,
+     "end": 55.52
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 55.6,
+   "end": 61.6,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 55.6,
+     "end": 55.84
+    },
+    {
+     "w": "chaque",
+     "start": 55.92,
+     "end": 56.16
+    },
+    {
+     "w": "mot",
+     "start": 56.2,
+     "end": 56.24
+    },
+    {
+     "w": "que",
+     "start": 56.28,
+     "end": 56.32
+    },
+    {
+     "w": "tu",
+     "start": 56.4,
+     "end": 56.48
+    },
+    {
+     "w": "tapes",
+     "start": 56.56,
+     "end": 56.88
+    },
+    {
+     "w": "passe",
+     "start": 56.92,
+     "end": 57.12
+    },
+    {
+     "w": "à",
+     "start": 57.147,
+     "end": 57.173
+    },
+    {
+     "w": "la",
+     "start": 57.2,
+     "end": 57.28
+    },
+    {
+     "w": "caisse",
+     "start": 57.36,
+     "end": 57.52
+    },
+    {
+     "w": "en",
+     "start": 57.6,
+     "end": 57.68
+    },
+    {
+     "w": "codes-barres…",
+     "start": 57.76,
+     "end": 58.72
+    },
+    {
+     "w": "et",
+     "start": 58.92,
+     "end": 58.96
+    },
+    {
+     "w": "tout",
+     "start": 59.04,
+     "end": 59.12
+    },
+    {
+     "w": "se",
+     "start": 59.2,
+     "end": 59.28
+    },
+    {
+     "w": "compte",
+     "start": 59.32,
+     "end": 59.52
+    },
+    {
+     "w": "au",
+     "start": 59.56,
+     "end": 59.6
+    },
+    {
+     "w": "bip,",
+     "start": 59.64,
+     "end": 60.16
+    },
+    {
+     "w": "à",
+     "start": 60.2,
+     "end": 60.24
+    },
+    {
+     "w": "l'aller",
+     "start": 60.28,
+     "end": 60.56
+    },
+    {
+     "w": "comme",
+     "start": 60.8,
+     "end": 60.96
+    },
+    {
+     "w": "au",
+     "start": 60.987,
+     "end": 61.013
+    },
+    {
+     "w": "retour.",
+     "start": 61.04,
+     "end": 61.6
+    }
+   ]
+  }
+ ]
+}

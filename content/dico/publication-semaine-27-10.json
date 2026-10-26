@@ -1,0 +1,125 @@
+{
+  "_regles": "YouTube : titre à part (40 caractères au plus, sans hashtag), description = texte + lien + crédits + hashtags en fin (YouTube affiche les 3 premiers au-dessus du titre). TikTok et Instagram : une seule légende = titre en première ligne + texte + lien (non cliquable, écrit en entier) + crédits + hashtags en fin. Mêmes 4 hashtags partout. Programmation à 8 h. Instagram : forcer le format d'origine (9:16) à l'import.",
+  "episodes": [
+    {
+      "ep": 18,
+      "date": "2026-10-27",
+      "id": "brain-fry",
+      "file": "brain-fry-v1.mp4",
+      "title": "Quatre agents IA, un cerveau grillé",
+      "body": "L'AI brain fry, c'est la fatigue mentale de qui surveille plusieurs IA à la fois ; d'après une enquête du BCG (HBR, mars 2026), la productivité ressentie plafonne à trois outils et redescend au-delà de quatre.",
+      "link": "https://neopal.github.io/lexique/ai-brain-fry/",
+      "credits": "Captures : Harvard Business Review, 5 mars 2026 ; Anthropic, 16 octobre 2026.",
+      "tags": "#aibrainfry #agentsia #productivite #vulgarisation",
+      "yt_tags": "AI brain fry, fatigue mentale, agents IA, productivité, BCG, Harvard Business Review, Anthropic, vulgarisation, lexique IA",
+      "yt_related": "L'IA qui agit au lieu de répondre"
+    },
+    {
+      "ep": 19,
+      "date": "2026-10-28",
+      "id": "human-loop",
+      "file": "human-loop-v1.mp4",
+      "title": "Après 50 validations, on ne lit plus",
+      "body": "L'humain dans la boucle (human-in-the-loop), c'est une personne qui valide certaines actions d'une IA avant qu'elles partent ; sauf qu'à force de dire oui, on ne lit plus. Chez Anthropic, des testeurs bloquaient 17 % des commandes dangereuses en début de session, et 5 % après cinquante demandes.",
+      "link": "https://neopal.github.io/lexique/human-in-the-loop/",
+      "credits": "Captures : Anthropic Engineering, 25 mars 2026 ; blog Claude (Anthropic), 7 août 2026.",
+      "tags": "#humanintheloop #agentia #claudecode #vulgarisation",
+      "yt_tags": "human in the loop, humain dans la boucle, agent IA, Claude Code, validation, sécurité, vulgarisation, lexique IA",
+      "yt_related": "L'IA qui agit au lieu de répondre"
+    },
+    {
+      "ep": 20,
+      "date": "2026-10-29",
+      "id": "plus-gros",
+      "file": "plus-gros-v1.mp4",
+      "title": "Plus gros ne veut pas dire plus malin",
+      "body": "On entend souvent que plus un modèle est gros, plus il est intelligent, alors que la taille ne suffit pas. En 2022, Chinchilla, quatre fois plus petit que Gopher mais nourri de quatre fois plus de textes, l'a battu, et GPT-4.5, le plus gros modèle d'OpenAI, a quitté l'API moins de cinq mois après sa sortie. Vingt mille lieues sous les mers lui coûtait 17,92 dollars de lecture, contre 48 centimes pour GPT-4.1.",
+      "link": "https://neopal.github.io/lexique/mythe-plus-gros-plus-intelligent/",
+      "credits": "Page de titre de Vingt mille lieues sous les mers, Jules Verne, Paris, J. Hetzel, [1871], scan Internet Archive (University of Ottawa) via Wikimedia Commons, domaine public. Captures : arXiv (DeepMind, 29 mars 2022) ; OpenAI, 14 avril 2025.",
+      "tags": "#llm #openai #ia #vulgarisation",
+      "yt_tags": "taille des modèles, paramètres, Chinchilla, GPT-4.5, GPT-4.1, OpenAI, LLM, vulgarisation, lexique IA",
+      "yt_related": "Derrière ChatGPT, quinze IA différentes"
+    },
+    {
+      "ep": 21,
+      "date": "2026-10-30",
+      "id": "context-rot",
+      "file": "context-rot-v1.mp4",
+      "title": "Trop de contexte, et l'IA perd le fil",
+      "body": "Le context rot (pourrissement du contexte), c'est la baisse de qualité d'un modèle à mesure que la conversation s'allonge, bien avant que sa fenêtre soit pleine. En 2025, des modèles perdaient des points même quand le texte ajouté n'était que des espaces vides. Entre deux tâches, ouvre une conversation neuve.",
+      "link": "https://neopal.github.io/lexique/context-rot/",
+      "credits": "Captures : Hacker News, 18 juin 2025 ; arXiv (Du et al., 6 octobre 2025) ; Chroma, rapport technique « Context Rot », 14 juillet 2025.",
+      "tags": "#contextrot #llm #chatgpt #vulgarisation",
+      "yt_tags": "context rot, fenêtre de contexte, LLM, ChatGPT, conversation longue, vulgarisation, lexique IA",
+      "yt_related": "Pourquoi ChatGPT oublie tes consignes"
+    },
+    {
+      "ep": 22,
+      "date": "2026-10-31",
+      "id": "tout-internet",
+      "file": "tout-internet-v1.mp4",
+      "title": "L'IA a lu Internet, mais retrouve mal",
+      "body": "On entend que l'IA a lu tout Internet et qu'elle sait donc tout, alors qu'elle a lu une partie triée du web public, avec 4,7 % de pages en français dans Common Crawl. Et Gemini 3 Pro retrouve de tête 85 faits appris sur 100 quand la page Wikipédia est très lue, 63 quand elle l'est peu. Pour un fait rare, donne-lui le document.",
+      "link": "https://neopal.github.io/lexique/mythe-a-lu-tout-internet/",
+      "credits": "Portraits pixelisés d'après Wikimedia Commons : Zinédine Zidane, photo Raphaël Labbé (CC BY-SA 2.0) ; Emmanuel Petit, photo Christophe95 (CC BY-SA 3.0). Captures : Common Crawl ; arXiv (Calderon et al., Google, février 2026).",
+      "tags": "#chatgpt #donneesdentrainement #ia #vulgarisation",
+      "yt_tags": "données d'entraînement, Common Crawl, Gemini, ChatGPT, mémoire du modèle, IA, vulgarisation, lexique IA",
+      "yt_related": "ChatGPT n'a pas de base de données"
+    },
+    {
+      "ep": 23,
+      "date": "2026-11-01",
+      "id": "token-voix",
+      "file": "token-voix-v1.mp4",
+      "title": "Ton français coûte plus cher à l'IA",
+      "body": "Un token, c'est un bloc de texte numéroté, et le modèle ne voit que ces numéros, comme une caisse qui ne lit que le code-barres. Tout se compte et se facture en tokens, et l'article premier de la Déclaration universelle des droits de l'homme en fait 33 en anglais, 41 en français.",
+      "link": "https://neopal.github.io/lexique/token/",
+      "credits": "Captures : Déclaration universelle des droits de l'homme, article premier, en français et en anglais, un.org.",
+      "tags": "#token #chatgpt #llm #vulgarisation",
+      "yt_tags": "token, tokenizer, LLM, ChatGPT, tokens français, facturation, vulgarisation, lexique IA",
+      "yt_related": "L'IA ne lit pas mot par mot"
+    },
+    {
+      "ep": 24,
+      "date": "2026-11-02",
+      "id": "benchmaxxing",
+      "file": "benchmaxxing-v1.mp4",
+      "title": "L'IA qui bachote ses annales",
+      "body": "Le benchmaxxing, c'est régler un modèle, ou la façon de montrer ses scores, pour grimper au classement plutôt que pour mieux te servir ; en avril 2025, Llama 4 finissait 2e sur LMArena dans une version spéciale, 32e dans celle qu'on pouvait télécharger. Quand un score devient un objectif, il cesse de mesurer.",
+      "link": "https://neopal.github.io/lexique/benchmaxxing/",
+      "credits": "Charles Goodhart, photo Financial Times (CC BY 2.0) ; Samsung Galaxy S4, photo Beamish4 (CC BY 4.0, détourée, perspective redressée, écran noirci), via Wikimedia Commons. Captures : MacTrast, 31 juillet 2013 ; The Register, 8 avril 2025.",
+      "tags": "#benchmark #llm #ia #vulgarisation",
+      "yt_tags": "benchmaxxing, benchmark, LMArena, Llama 4, loi de Goodhart, LLM, vulgarisation, lexique IA",
+      "yt_related": "Premier au benchmark, nul au boulot ?"
+    }
+  ],
+  "_statut": {
+    "youtube": {
+      "18": "programmé 2026-10-27 08:00, https://youtube.com/shorts/QaT7omNBnUg",
+      "19": "programmé 2026-10-28 08:00, https://youtube.com/shorts/YkBC416ugRQ",
+      "20": "programmé 2026-10-29 08:00, https://youtube.com/shorts/YuceP9VHx3I",
+      "21": "programmé 2026-10-30 08:00, https://youtube.com/shorts/GqfcxHRInhk",
+      "22": "programmé 2026-10-31 08:00, https://youtube.com/shorts/Rie-2j19Otc",
+      "23": "programmé 2026-11-01 08:00, https://youtube.com/shorts/5Gsb-qJ4jU4",
+      "24": "programmé 2026-11-02 08:00, https://youtube.com/shorts/APdzJUelmms"
+    },
+    "tiktok": {
+      "18": "programmé 2026-10-27 08:00",
+      "19": "programmé 2026-10-28 08:00",
+      "20": "programmé 2026-10-29 08:00",
+      "21": "programmé 2026-10-30 08:00",
+      "22": "programmé 2026-10-31 08:00",
+      "23": "programmé 2026-11-01 08:00",
+      "24": "programmé 2026-11-02 08:00"
+    },
+    "instagram": {
+      "18": "programmé 2026-10-27 08:00",
+      "19": "programmé 2026-10-28 08:00",
+      "20": "programmé 2026-10-29 08:00",
+      "21": "programmé 2026-10-30 08:00",
+      "22": "programmé 2026-10-31 08:00",
+      "23": "programmé 2026-11-01 08:00",
+      "24": "programmé 2026-11-02 08:00"
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "id": "benchmaxxing",
+  "term": "benchmaxxing",
+  "episode": 24,
+  "date": "2026-11-02",
+  "format": "Définition",
+  "composition": "BenchmaxxingVoix",
+  "todo": "Pas de portrait réel nécessaire (aucune personne réelle nommée à l'oral). Captures à préparer : le classement LMArena d'avril 2025 se redessine maison (pas de capture d'archive vérifiée) ; le Galaxy S4 se dessine en pixel art plutôt qu'en photo de presse. À vérifier si PA veut garder « 532 mégahertz » à l'oral ou dire « plus vite » sans chiffre.",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... le /ˈbɛntʃmæksɪŋ/…",
+      "screen": "Titre géant « C'est quoi ? le benchmaxxing… » au centre. Derrière, dès la première image, un tableau noir de salle de classe avec une colonne de notes à la craie."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Le texte se compte en tokens, et les modèles se comparent en points… et tu crois qu'il faut tricher pour gonfler ces points ? Souvent, aucune règle n'est enfreinte.",
+      "screen": "Un long ticket de caisse (le dernier plan de l'ép. 23) glisse à gauche et se replie ; sur « en points », il devient une colonne de scores à la craie sur le tableau. Sur « tricher », une antisèche dessinée apparaît dans une trousse ; sur « aucune règle », elle se barre d'une croix et la trousse se referme."
+    },
+    {
+      "scene": "bench",
+      "say": "[warmly] Un /ˈbɛntʃmɑɹk/, c'est un examen standard, les mêmes questions pour tous les modèles, pour les classer.",
+      "screen": "Trois pupitres d'écolier, sur chacun une petite boîte noire « modèle » ; sur « mêmes questions », la même copie d'examen tombe sur les trois pupitres en cascade ; sur « classer », un podium à la craie se dessine au tableau (draw-on). Libellés : « examen », « classement »."
+    },
+    {
+      "scene": "nom",
+      "say": "Régler un modèle, ou la façon de montrer ses scores, pour grimper au classement plutôt que pour mieux te servir, c'est ça, le /ˈbɛntʃmæksɪŋ/.",
+      "screen": "Sur le podium, une barre « classement » pousse vite vers le haut (bar grow), à côté une barre « te servir » qui ne bouge presque pas. « BENCHMAXXING » s'écrit en grand sur « c'est ça, le benchmaxxing »."
+    },
+    {
+      "scene": "annales",
+      "say": "[mischievously] Imagine Mathis, qui refait les annales du bac de maths jusqu'à connaître les corrigés par cœur… le jour J, deux exercices sont des reprises, il a 18, et sa prof ne sait toujours pas s'il sait faire une dérivée.",
+      "screen": "Scène propre à ce short. Mathis en pixel art à son bureau, derrière une pile d'annales qui monte jusqu'au plafond (cascade) ; sur « par cœur », les corrigés défilent au-dessus de sa tête comme dans un rétroviseur. Sur « deux exercices », deux pages du sujet du bac s'illuminent, identiques aux annales ; sur « 18 », la note rouge s'entoure sur la copie. Sur « dérivée », sa prof en pixel art apparaît à côté avec une bulle « f'(x) ? » et Mathis cligne des yeux. Libellés : « annales », « 18 »."
+    },
+    {
+      "scene": "galaxy",
+      "say": "[curious] En 2013, le Galaxy S4 de Samsung poussait sa puce graphique à 532 mégahertz dans les logiciels de test, alors qu'aucun jeu ne la faisait dépasser 480.",
+      "screen": "Un smartphone pixel art de 2013 (dessiné, sans logo) au centre, avec un compteur de vitesse à aiguille au-dessus. Sur « logiciels de test », l'écran du téléphone affiche une fiole « test » et l'aiguille file à 532 (countUp) ; sur « aucun jeu », l'écran passe à une manette dessinée et l'aiguille retombe à 480 et y reste. Libellés : « 532 », « 480 », « test », « jeu »."
+    },
+    {
+      "scene": "llama",
+      "say": "[warmly] En avril 2025, la version de Llama 4 que Meta avait inscrite au classement LMArena finissait deuxième, et celle que tout le monde pouvait télécharger, trente-deuxième.",
+      "screen": "Un classement vertical redessiné maison, 32 lignes anonymes grises. Sur « deuxième », une ligne orange « Llama 4 » se pose à la 2e place (punch zoom, le seul du short) ; sur « télécharger », une seconde ligne « Llama 4 » portant une flèche de téléchargement tombe en arc jusqu'à la 32e place. Libellés : « 2e », « 32e »."
+    },
+    {
+      "scene": "goodhart",
+      "say": "[warmly] Et dès qu'on vise un score, il grimpe plus vite que le niveau qu'il devait mesurer, comme l'avait vu l'économiste Charles Goodhart en 1975.",
+      "screen": "Deux courbes sur un même axe de temps, « score » et « niveau », posées dès l'entrée et qui montent ensemble ; sur « on vise un score », une cible se pose sur la courbe « score », qui s'envole pendant que « niveau » s'aplatit (draw-on). Sur « Goodhart », une petite fiche bristol « 1975 » se colle au coin avec du scotch. Libellés : « score », « niveau », « 1975 »."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors devant un modèle premier partout… [pause] demande d'abord s'il a fait les annales.",
+      "screen": "Retour au podium : la boîte noire « modèle » en haut, et derrière elle la même pile d'annales que Mathis qui monte jusqu'au plafond. Image finale pleine : la pile, le podium et la note entourée."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈbɛntʃmæksɪŋ/": "benchmaxxing",
+    "/ˈbɛntʃmɑɹk/": "benchmark"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "c'est ça, le benchmaxxing."
+    ]
+  },
+  "sources": [
+    "Fiche benchmaxxing de lexique/terms.js : définition (optimiser un modèle, ou la présentation de ses scores, pour grimper dans les classements plutôt que pour mieux servir), « À éviter » (souvent aucune règle enfreinte) ; Wikipédia, Goodhart's law (Charles Goodhart, 1975) ; image de Mathis et des annales",
+    "The Register, Meta accused of Llama 4 bait-n-switch to juice LMArena rank, 8 avril 2025 (variante expérimentale 2e) ; https://www.theregister.com/2025/04/08/meta_llama4_cheating/ ; TechCrunch, Meta's vanilla Maverick AI model ranks below rivals on a popular chat benchmark, 11 avril 2025 (version publique 32e) ; https://techcrunch.com/2025/04/11/metas-vanilla-maverick-ai-model-ranks-below-rivals-on-a-popular-chat-benchmark/",
+    "MacTrast, Samsung caught cheating in Galaxy S4 benchmarks, 31 juillet 2013, ouvert le 2026-10-22, d'après AnandTech (« Running any games, even the most demanding titles, returned a GPU frequency of 480MHz » ; « Firing up GLBenchmark 2.5.1 however triggers a GPU clock not available elsewhere: 532MHz », de même pour AnTuTu et Quadrant) ; https://www.mactrast.com/2013/07/samsung-caught-cheating-in-galaxy-s4-benchmarks/ ; l'article original d'AnandTech (anandtech.com/show/7187) redirige désormais vers le forum"
+  ],
+  "publication": {
+    "title": "L'IA qui bachote ses annales",
+    "description": "Le benchmaxxing, c'est régler un modèle, ou la façon de montrer ses scores, pour grimper au classement plutôt que pour mieux te servir ; en avril 2025, Llama 4 finissait 2e sur LMArena dans une version spéciale, 32e dans celle qu'on pouvait télécharger. Quand un score devient un objectif, il cesse de mesurer.\nhttps://neopal.github.io/lexique/benchmaxxing/\nCharles Goodhart, photo Financial Times (CC BY 2.0) ; Samsung Galaxy S4, photo Beamish4 (CC BY 4.0, détourée, perspective redressée, écran noirci), via Wikimedia Commons. Captures : MacTrast, 31 juillet 2013 ; The Register, 8 avril 2025.\n#benchmark #llm #ia #vulgarisation",
+    "fil": "Le texte se compte en tokens (ép. 23) et les modèles se comparent en points ; dès qu'un labo vise les points, le score que l'ép. 17 disait limité à un exercice grimpe plus vite que le niveau qu'il devait mesurer, et la semaine se ferme là",
+    "decor": "école (Mathis et le bachotage des annales)"
+  },
+  "credits": [
+    "Charles Goodhart, portrait pixelisé d'après « Charles Goodhart at the Financial Times Economists' Christmas Drinks Reception, London. (2015) », Financial Times, CC BY 2.0, via Wikimedia Commons",
+    "Samsung Galaxy S4, d'après « Samsung Galaxy S4 (Black Mist) - Front », Beamish4, CC BY 4.0, via Wikimedia Commons (détourée, perspective redressée, écran noirci)",
+    "Capture : MacTrast, « Samsung Caught 'Fudging the Numbers' in Galaxy S4 Benchmarks », 31 juillet 2013",
+    "Capture : The Register, « Meta accused of Llama 4 bait-and-switch to juice AI benchmark rank », 8 avril 2025"
+  ]
+}

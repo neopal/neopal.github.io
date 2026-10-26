@@ -1,0 +1,81 @@
+{
+  "id": "tout-internet",
+  "term": "mythe-a-lu-tout-internet",
+  "episode": 22,
+  "date": "2026-10-31",
+  "format": "Mythe",
+  "composition": "MytheInternetVoix",
+  "todo": "Phrase du hook provisoire (titre de la fiche) : aucune citation réelle et sourcée trouvée le 2026-10-22 (recherches « a lu tout Internet », « lu tout internet » + « sait tout », « a lu tout le web ») ; en chercher une avant la voix, sinon garder telle quelle comme les ép. 9, 11, 13, 15 et 17. Portraits de Zidane (Raphaël Labbé, CC BY-SA 2.0) et d'Emmanuel Petit (Christophe95, CC BY-SA 3.0) en place, voir credits. Vignettes façon album Panini : dessinées maison, sans logo Panini.",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] « L'IA a lu tout Internet, donc elle sait tout »… en réalité, elle a lu une partie du web, et elle ne retrouve pas tout ce qu'elle a lu.",
+      "screen": "Dès la première image, un écran de navigateur dessiné, collé de travers avec du scotch aux coins, dont les onglets débordent en éventail. La phrase du mythe s'écrit à la machine en grand au-dessus (typed), puis le tampon rouge FAUX s'écrase sur « donc elle sait tout » (squash) et reste jusqu'à la fin du hook : c'est l'image de couverture."
+    },
+    {
+      "scene": "vrai",
+      "say": "[curious] La masse de lecture est bien réelle, mais ce « tout Internet », c'est le web public que des robots parcourent, trié ensuite par les labos.",
+      "screen": "Le navigateur rétrécit et devient une petite tuile au milieu d'une mosaïque de pages qui remplit l'écran (« bien réelle »). Sur « robots », trois araignées pixel art descendent au bout de leur fil et ramassent des pages ; les pages derrière un cadenas (dessiné maison) restent grises. Sur « trié », un tamis secoue les pages ramassées et en laisse tomber une partie. Libellés : « web public », « trié »."
+    },
+    {
+      "scene": "crawl",
+      "say": "[warmly] Dans l'archive /ˈkɑmən kɹɔl/ de septembre 2026, d'où sortent la plupart des corpus, près de 42 % des pages sont en anglais, 4,7 % en français, et 0,002 % en breton… et tes messages, eux, n'y sont pas.",
+      "screen": "Le tamis se vide dans une grande barre horizontale « Common Crawl », posée dès l'entrée. Elle se colore sur chaque mot dit : un grand pan bleu « anglais » sur « 42 % » (bar grow), un mince pan « français » sur « 4,7 % », puis, sur « breton », un trait d'un pixel qu'une loupe vient grossir, avec un petit drapeau Gwenn ha Du dessiné. Sur « tes messages », une bulle de chat pixel art tente d'entrer dans la barre et rebondit dessus. Libellés : « anglais », « français », « breton »."
+    },
+    {
+      "scene": "stade",
+      "say": "[mischievously] Imagine Raymond, en tribune, qui a revu cent fois la finale de 98… les deux têtes de Zidane, il te les raconte sans hésiter, mais le troisième but, il cherche, alors qu'il l'a vu autant.",
+      "screen": "Scène propre à ce short. Une tribune pixel art, Raymond en écharpe bleue au premier rang (il cligne des yeux). À côté de lui s'ouvre l'album de sa mémoire, une double page façon album de vignettes « France 98 » : sur « deux têtes de Zidane », deux vignettes avec le portrait pixelisé de Zinédine Zidane (vraie photo Commons, pixelisée) se collent d'un coup. Sur « troisième but », la troisième case reste vide, un point d'interrogation y clignote, et Raymond se gratte la tête. Libellés : « Zidane », « troisième but »."
+    },
+    {
+      "scene": "google",
+      "say": "[curious] En février 2026, Google a testé Gemini 3 Pro sur des faits de Wikipédia qu'il avait bien appris… il en retrouvait de tête 85 sur 100 quand la page était très lue, et 63 quand elle l'était peu.",
+      "screen": "L'album glisse de côté et devient deux piles de pages Wikipédia dessinées : à gauche, des pages très feuilletées et cornées (« très lue »), à droite, des pages neuves et poussiéreuses (« peu lue »). Au-dessus de chaque pile, une grille de 100 cases déjà toutes cochées en gris (« bien appris »), puis les cases retrouvées s'allument en orange en cascade : le compte monte à 85 à gauche sur « 85 sur 100 » (countUp, punch zoom, le seul du short), à 63 à droite sur « 63 ». Libellés : « Gemini 3 Pro », « 85 », « 63 »."
+    },
+    {
+      "scene": "coupure",
+      "say": "[warmly] Et un modèle arrête sa lecture à sa date de coupure, erreurs et canulars compris.",
+      "screen": "Une frise horizontale défile vers la droite ; sur « date de coupure », des ciseaux dessinés tranchent la frise, et tout ce qui arrive après passe en gris. Sur « erreurs et canulars compris », deux pages marquées d'une croix rouge et d'un nez de clown remontent dans la pile, mêlées aux autres. Libellés : « coupure »."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors pour un fait rare, récent ou interne, ne compte pas sur la mémoire du modèle… [pause] colle-lui la bonne page, comme Raymond qui ressort le résumé du match et retrouve Emmanuel Petit.",
+      "screen": "Retour à la tribune : Raymond sort de sa poche un vieux résumé du match (une page de journal dessinée, sans titre réel) et la tend vers l'album ; sur « Emmanuel Petit », la troisième vignette se colle enfin avec le portrait pixelisé d'Emmanuel Petit (vraie photo Commons) et son nom en libellé, « Emmanuel Petit ». Image finale pleine : l'album complet ouvert, Raymond qui lève les bras."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈkɑmən": "Common",
+    "kɹɔl/": "Crawl"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "sources": [
+    "Fiche mythe-a-lu-tout-internet de lexique/terms.js : Common Crawl, statistiques de langues, archive CC-MAIN-2026-39 (septembre 2026) : anglais 41,862 % des pages, français 4,677 %, breton 0,002 % ; « tout Internet » = web public parcouru par des robots puis trié ; date de coupure ; https://commoncrawl.github.io/cc-crawl-statistics/plots/languages",
+    "Calderon et al. (Google), Empty Shelves or Lost Keys? Recall Is the Bottleneck for Parametric Factuality, 15 février 2026, v2 du 19 juin 2026, ouvert le 2026-10-22 : pour Gemini-3-Pro, rappel direct des faits encodés « 84.6% vs. 63.3% » entre les 20 % de pages les plus vues et les 20 % les moins vues (arrondis à 85 et 63 sur 100) ; https://arxiv.org/html/2602.14080v2",
+    "Google Research, Empty shelves or lost keys? Recall is the bottleneck for parametric factuality, 12 août 2026 (GPT-5 et Gemini 3 encodent 95 à 98 % des faits) ; https://research.google/blog/empty-shelves-or-lost-keys-recall-is-the-bottleneck-for-parametric-factuality/",
+    "Image : Wikipédia, 1998 FIFA World Cup final, ouverte le 2026-10-22 (12 juillet 1998, Stade de France ; Zidane marque deux buts de la tête sur corner, 27e et 45e+1 ; Petit marque le troisième dans le temps additionnel, 90e+3) ; https://en.wikipedia.org/wiki/1998_FIFA_World_Cup_final ; Raymond est un personnage inventé"
+  ],
+  "credits": [
+    "Portraits pixel art d'après Wikimedia Commons :",
+    "Zinédine Zidane, « Zinedine Zidane 2008.jpg », Raphaël Labbé, 7 septembre 2008, CC BY-SA 2.0",
+    "Emmanuel Petit, « Emmanuel Petit.jpg », Christophe95, 2005, CC BY-SA 3.0 (page du fichier ouverte le 2026-10-22)",
+    "Captures : Common Crawl, statistiques de langues (https://commoncrawl.github.io/cc-crawl-statistics/plots/languages) ; arXiv 2602.14080, Calderon et al. (Google), février 2026 ; détail dans public/voix/CREDITS-semaine-27-10.md"
+  ],
+  "publication": {
+    "title": "L'IA a lu Internet, mais retrouve mal",
+    "description": "« L'IA a lu tout Internet, donc elle sait tout » ; faux. Elle a lu une partie triée du web public (4,7 % de pages en français dans Common Crawl), et Gemini 3 Pro retrouve de tête 85 faits appris sur 100 quand la page Wikipédia est très lue, 63 quand elle l'est peu. Pour un fait rare, donne-lui le document.\nhttps://neopal.github.io/lexique/mythe-a-lu-tout-internet/\n#chatgpt #donneesdentrainement #ia #vulgarisation\nPortraits pixelisés d'après Wikimedia Commons : Zinédine Zidane, photo Raphaël Labbé (CC BY-SA 2.0) ; Emmanuel Petit, photo Christophe95 (CC BY-SA 3.0). Captures : Common Crawl ; arXiv (Calderon et al., Google, février 2026).",
+    "fil": "Ce qu'on lui colle sous les yeux, le modèle le lit moins bien quand ça s'allonge (ép. 21, context rot) ; et ce qu'il a lu pendant son entraînement, il ne le retrouve pas toujours non plus",
+    "decor": "stade (Raymond en tribune, la finale de 98)"
+  }
+}

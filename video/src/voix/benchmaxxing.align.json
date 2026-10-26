@@ -1,0 +1,1076 @@
+{
+ "id": "benchmaxxing",
+ "audio": true,
+ "music": true,
+ "duration": 65.04,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.187,
+   "end": 2.16,
+   "words": [
+    {
+     "w": "C'est",
+     "start": 0.187,
+     "end": 0.24
+    },
+    {
+     "w": "quoi...",
+     "start": 0.4,
+     "end": 0.72
+    },
+    {
+     "w": "le",
+     "start": 0.88,
+     "end": 0.96
+    },
+    {
+     "w": "benchmaxxing…",
+     "start": 1.12,
+     "end": 2.16
+    }
+   ]
+  },
+  {
+   "scene": "intro",
+   "start": 2.4,
+   "end": 10.64,
+   "words": [
+    {
+     "w": "Le",
+     "start": 2.4,
+     "end": 2.48
+    },
+    {
+     "w": "texte",
+     "start": 2.56,
+     "end": 2.88
+    },
+    {
+     "w": "se",
+     "start": 2.96,
+     "end": 3.04
+    },
+    {
+     "w": "compte",
+     "start": 3.08,
+     "end": 3.28
+    },
+    {
+     "w": "en",
+     "start": 3.36,
+     "end": 3.44
+    },
+    {
+     "w": "tokens,",
+     "start": 3.68,
+     "end": 4.04
+    },
+    {
+     "w": "et",
+     "start": 4.16,
+     "end": 4.24
+    },
+    {
+     "w": "les",
+     "start": 4.32,
+     "end": 4.4
+    },
+    {
+     "w": "modèles",
+     "start": 4.48,
+     "end": 4.64
+    },
+    {
+     "w": "se",
+     "start": 4.72,
+     "end": 4.8
+    },
+    {
+     "w": "comparent",
+     "start": 4.88,
+     "end": 5.12
+    },
+    {
+     "w": "en",
+     "start": 5.2,
+     "end": 5.28
+    },
+    {
+     "w": "points…",
+     "start": 5.6,
+     "end": 5.96
+    },
+    {
+     "w": "et",
+     "start": 6,
+     "end": 6.24
+    },
+    {
+     "w": "tu",
+     "start": 6.28,
+     "end": 6.32
+    },
+    {
+     "w": "crois",
+     "start": 6.4,
+     "end": 6.48
+    },
+    {
+     "w": "qu'il",
+     "start": 6.52,
+     "end": 6.64
+    },
+    {
+     "w": "faut",
+     "start": 6.72,
+     "end": 6.8
+    },
+    {
+     "w": "tricher",
+     "start": 6.88,
+     "end": 7.2
+    },
+    {
+     "w": "pour",
+     "start": 7.28,
+     "end": 7.36
+    },
+    {
+     "w": "gonfler",
+     "start": 7.44,
+     "end": 7.6
+    },
+    {
+     "w": "ces",
+     "start": 7.68,
+     "end": 7.76
+    },
+    {
+     "w": "points ?",
+     "start": 7.84,
+     "end": 8.533
+    },
+    {
+     "w": "Souvent,",
+     "start": 8.587,
+     "end": 9.12
+    },
+    {
+     "w": "aucune",
+     "start": 9.2,
+     "end": 9.36
+    },
+    {
+     "w": "règle",
+     "start": 9.44,
+     "end": 9.6
+    },
+    {
+     "w": "n'est",
+     "start": 9.68,
+     "end": 9.84
+    },
+    {
+     "w": "enfreinte.",
+     "start": 9.92,
+     "end": 10.64
+    }
+   ]
+  },
+  {
+   "scene": "bench",
+   "start": 10.777,
+   "end": 16,
+   "words": [
+    {
+     "w": "Un",
+     "start": 10.777,
+     "end": 10.8
+    },
+    {
+     "w": "benchmark,",
+     "start": 10.827,
+     "end": 11.52
+    },
+    {
+     "w": "c'est",
+     "start": 11.573,
+     "end": 11.68
+    },
+    {
+     "w": "un",
+     "start": 11.72,
+     "end": 11.76
+    },
+    {
+     "w": "examen",
+     "start": 11.84,
+     "end": 12.16
+    },
+    {
+     "w": "standard,",
+     "start": 12.24,
+     "end": 12.96
+    },
+    {
+     "w": "les",
+     "start": 13.08,
+     "end": 13.2
+    },
+    {
+     "w": "mêmes",
+     "start": 13.24,
+     "end": 13.36
+    },
+    {
+     "w": "questions",
+     "start": 13.44,
+     "end": 13.84
+    },
+    {
+     "w": "pour",
+     "start": 13.96,
+     "end": 14.08
+    },
+    {
+     "w": "tous",
+     "start": 14.107,
+     "end": 14.16
+    },
+    {
+     "w": "les",
+     "start": 14.24,
+     "end": 14.32
+    },
+    {
+     "w": "modèles,",
+     "start": 14.4,
+     "end": 14.88
+    },
+    {
+     "w": "pour",
+     "start": 14.92,
+     "end": 14.96
+    },
+    {
+     "w": "les",
+     "start": 15.04,
+     "end": 15.12
+    },
+    {
+     "w": "classer.",
+     "start": 15.24,
+     "end": 16
+    }
+   ]
+  },
+  {
+   "scene": "nom",
+   "start": 16.08,
+   "end": 23.2,
+   "words": [
+    {
+     "w": "Régler",
+     "start": 16.08,
+     "end": 16.32
+    },
+    {
+     "w": "un",
+     "start": 16.4,
+     "end": 16.44
+    },
+    {
+     "w": "modèle,",
+     "start": 16.48,
+     "end": 16.96
+    },
+    {
+     "w": "ou",
+     "start": 17,
+     "end": 17.04
+    },
+    {
+     "w": "la",
+     "start": 17.12,
+     "end": 17.2
+    },
+    {
+     "w": "façon",
+     "start": 17.28,
+     "end": 17.52
+    },
+    {
+     "w": "de",
+     "start": 17.56,
+     "end": 17.6
+    },
+    {
+     "w": "montrer",
+     "start": 17.68,
+     "end": 17.92
+    },
+    {
+     "w": "ses",
+     "start": 18,
+     "end": 18.08
+    },
+    {
+     "w": "scores,",
+     "start": 18.24,
+     "end": 18.72
+    },
+    {
+     "w": "pour",
+     "start": 18.8,
+     "end": 18.88
+    },
+    {
+     "w": "grimper",
+     "start": 19,
+     "end": 19.28
+    },
+    {
+     "w": "au",
+     "start": 19.32,
+     "end": 19.36
+    },
+    {
+     "w": "classement",
+     "start": 19.4,
+     "end": 19.84
+    },
+    {
+     "w": "plutôt",
+     "start": 19.88,
+     "end": 20.08
+    },
+    {
+     "w": "que",
+     "start": 20.16,
+     "end": 20.24
+    },
+    {
+     "w": "pour",
+     "start": 20.32,
+     "end": 20.4
+    },
+    {
+     "w": "mieux",
+     "start": 20.44,
+     "end": 20.56
+    },
+    {
+     "w": "te",
+     "start": 20.6,
+     "end": 20.64
+    },
+    {
+     "w": "servir,",
+     "start": 20.76,
+     "end": 21.44
+    },
+    {
+     "w": "c'est",
+     "start": 21.48,
+     "end": 21.68
+    },
+    {
+     "w": "ça,",
+     "start": 21.76,
+     "end": 22.08
+    },
+    {
+     "w": "le",
+     "start": 22.12,
+     "end": 22.16
+    },
+    {
+     "w": "benchmaxxing.",
+     "start": 22.24,
+     "end": 23.2
+    }
+   ]
+  },
+  {
+   "scene": "annales",
+   "start": 23.28,
+   "end": 34.4,
+   "words": [
+    {
+     "w": "Imagine",
+     "start": 23.28,
+     "end": 23.68
+    },
+    {
+     "w": "Mathis,",
+     "start": 23.8,
+     "end": 24.32
+    },
+    {
+     "w": "qui",
+     "start": 24.36,
+     "end": 24.4
+    },
+    {
+     "w": "refait",
+     "start": 24.48,
+     "end": 24.72
+    },
+    {
+     "w": "les",
+     "start": 24.8,
+     "end": 24.88
+    },
+    {
+     "w": "annales",
+     "start": 24.96,
+     "end": 25.2
+    },
+    {
+     "w": "du",
+     "start": 25.24,
+     "end": 25.28
+    },
+    {
+     "w": "bac",
+     "start": 25.36,
+     "end": 25.52
+    },
+    {
+     "w": "de",
+     "start": 25.6,
+     "end": 25.68
+    },
+    {
+     "w": "maths",
+     "start": 25.76,
+     "end": 25.88
+    },
+    {
+     "w": "jusqu'à",
+     "start": 25.92,
+     "end": 26.24
+    },
+    {
+     "w": "connaître",
+     "start": 26.32,
+     "end": 26.64
+    },
+    {
+     "w": "les",
+     "start": 26.72,
+     "end": 26.8
+    },
+    {
+     "w": "corrigés",
+     "start": 26.84,
+     "end": 27.2
+    },
+    {
+     "w": "par",
+     "start": 27.28,
+     "end": 27.36
+    },
+    {
+     "w": "cœur…",
+     "start": 27.44,
+     "end": 28.16
+    },
+    {
+     "w": "le",
+     "start": 28.2,
+     "end": 28.24
+    },
+    {
+     "w": "jour",
+     "start": 28.32,
+     "end": 28.48
+    },
+    {
+     "w": "J,",
+     "start": 28.56,
+     "end": 29.12
+    },
+    {
+     "w": "deux",
+     "start": 29.2,
+     "end": 29.28
+    },
+    {
+     "w": "exercices",
+     "start": 29.36,
+     "end": 29.84
+    },
+    {
+     "w": "sont",
+     "start": 29.867,
+     "end": 29.92
+    },
+    {
+     "w": "des",
+     "start": 30,
+     "end": 30.08
+    },
+    {
+     "w": "reprises,",
+     "start": 30.16,
+     "end": 30.72
+    },
+    {
+     "w": "il",
+     "start": 30.76,
+     "end": 30.8
+    },
+    {
+     "w": "a",
+     "start": 30.88,
+     "end": 30.96
+    },
+    {
+     "w": "18,",
+     "start": 31.04,
+     "end": 31.76
+    },
+    {
+     "w": "et",
+     "start": 31.8,
+     "end": 31.84
+    },
+    {
+     "w": "sa",
+     "start": 31.92,
+     "end": 32
+    },
+    {
+     "w": "prof",
+     "start": 32.08,
+     "end": 32.24
+    },
+    {
+     "w": "ne",
+     "start": 32.32,
+     "end": 32.4
+    },
+    {
+     "w": "sait",
+     "start": 32.44,
+     "end": 32.64
+    },
+    {
+     "w": "toujours",
+     "start": 32.693,
+     "end": 32.96
+    },
+    {
+     "w": "pas",
+     "start": 33,
+     "end": 33.04
+    },
+    {
+     "w": "s'il",
+     "start": 33.12,
+     "end": 33.28
+    },
+    {
+     "w": "sait",
+     "start": 33.32,
+     "end": 33.44
+    },
+    {
+     "w": "faire",
+     "start": 33.48,
+     "end": 33.6
+    },
+    {
+     "w": "une",
+     "start": 33.64,
+     "end": 33.68
+    },
+    {
+     "w": "dérivée.",
+     "start": 33.76,
+     "end": 34.4
+    }
+   ]
+  },
+  {
+   "scene": "galaxy",
+   "start": 34.48,
+   "end": 43.84,
+   "words": [
+    {
+     "w": "En",
+     "start": 34.48,
+     "end": 34.56
+    },
+    {
+     "w": "2013,",
+     "start": 34.64,
+     "end": 35.44
+    },
+    {
+     "w": "le",
+     "start": 35.48,
+     "end": 35.52
+    },
+    {
+     "w": "Galaxy",
+     "start": 35.6,
+     "end": 35.92
+    },
+    {
+     "w": "S4",
+     "start": 36,
+     "end": 36.32
+    },
+    {
+     "w": "de",
+     "start": 36.48,
+     "end": 36.52
+    },
+    {
+     "w": "Samsung",
+     "start": 36.56,
+     "end": 37.12
+    },
+    {
+     "w": "poussait",
+     "start": 37.16,
+     "end": 37.44
+    },
+    {
+     "w": "sa",
+     "start": 37.52,
+     "end": 37.6
+    },
+    {
+     "w": "puce",
+     "start": 37.64,
+     "end": 37.76
+    },
+    {
+     "w": "graphique",
+     "start": 37.84,
+     "end": 38.16
+    },
+    {
+     "w": "à",
+     "start": 38.24,
+     "end": 38.4
+    },
+    {
+     "w": "532",
+     "start": 38.44,
+     "end": 38.56
+    },
+    {
+     "w": "mégahertz",
+     "start": 38.64,
+     "end": 39.6
+    },
+    {
+     "w": "dans",
+     "start": 39.68,
+     "end": 39.76
+    },
+    {
+     "w": "les",
+     "start": 39.8,
+     "end": 39.84
+    },
+    {
+     "w": "logiciels",
+     "start": 39.92,
+     "end": 40.32
+    },
+    {
+     "w": "de",
+     "start": 40.36,
+     "end": 40.4
+    },
+    {
+     "w": "test,",
+     "start": 40.48,
+     "end": 41.04
+    },
+    {
+     "w": "alors",
+     "start": 41.12,
+     "end": 41.28
+    },
+    {
+     "w": "qu'aucun",
+     "start": 41.36,
+     "end": 41.68
+    },
+    {
+     "w": "jeu",
+     "start": 41.76,
+     "end": 41.88
+    },
+    {
+     "w": "ne",
+     "start": 41.92,
+     "end": 42
+    },
+    {
+     "w": "la",
+     "start": 42.04,
+     "end": 42.08
+    },
+    {
+     "w": "faisait",
+     "start": 42.133,
+     "end": 42.32
+    },
+    {
+     "w": "dépasser",
+     "start": 42.4,
+     "end": 42.8
+    },
+    {
+     "w": "480.",
+     "start": 42.84,
+     "end": 43.84
+    }
+   ]
+  },
+  {
+   "scene": "llama",
+   "start": 43.977,
+   "end": 53.2,
+   "words": [
+    {
+     "w": "En",
+     "start": 43.977,
+     "end": 44
+    },
+    {
+     "w": "avril",
+     "start": 44.08,
+     "end": 44.24
+    },
+    {
+     "w": "2025,",
+     "start": 44.32,
+     "end": 45.2
+    },
+    {
+     "w": "la",
+     "start": 45.28,
+     "end": 45.36
+    },
+    {
+     "w": "version",
+     "start": 45.52,
+     "end": 45.68
+    },
+    {
+     "w": "de",
+     "start": 45.72,
+     "end": 45.76
+    },
+    {
+     "w": "Llama",
+     "start": 45.84,
+     "end": 46.08
+    },
+    {
+     "w": "4",
+     "start": 46.16,
+     "end": 46.4
+    },
+    {
+     "w": "que",
+     "start": 46.48,
+     "end": 46.56
+    },
+    {
+     "w": "Meta",
+     "start": 46.72,
+     "end": 46.88
+    },
+    {
+     "w": "avait",
+     "start": 46.92,
+     "end": 47.12
+    },
+    {
+     "w": "inscrite",
+     "start": 47.2,
+     "end": 47.52
+    },
+    {
+     "w": "au",
+     "start": 47.56,
+     "end": 47.6
+    },
+    {
+     "w": "classement",
+     "start": 47.64,
+     "end": 48
+    },
+    {
+     "w": "LMArena",
+     "start": 48.16,
+     "end": 48.72
+    },
+    {
+     "w": "finissait",
+     "start": 48.8,
+     "end": 49.28
+    },
+    {
+     "w": "deuxième,",
+     "start": 49.36,
+     "end": 50.16
+    },
+    {
+     "w": "et",
+     "start": 50.2,
+     "end": 50.24
+    },
+    {
+     "w": "celle",
+     "start": 50.32,
+     "end": 50.48
+    },
+    {
+     "w": "que",
+     "start": 50.52,
+     "end": 50.56
+    },
+    {
+     "w": "tout",
+     "start": 50.72,
+     "end": 50.76
+    },
+    {
+     "w": "le",
+     "start": 50.8,
+     "end": 50.84
+    },
+    {
+     "w": "monde",
+     "start": 50.88,
+     "end": 50.96
+    },
+    {
+     "w": "pouvait",
+     "start": 51.04,
+     "end": 51.2
+    },
+    {
+     "w": "télécharger,",
+     "start": 51.24,
+     "end": 52.16
+    },
+    {
+     "w": "trente-deuxième.",
+     "start": 52.2,
+     "end": 53.2
+    }
+   ]
+  },
+  {
+   "scene": "goodhart",
+   "start": 53.337,
+   "end": 60.48,
+   "words": [
+    {
+     "w": "Et",
+     "start": 53.337,
+     "end": 53.36
+    },
+    {
+     "w": "dès",
+     "start": 53.44,
+     "end": 53.52
+    },
+    {
+     "w": "qu'on",
+     "start": 53.56,
+     "end": 53.68
+    },
+    {
+     "w": "vise",
+     "start": 53.72,
+     "end": 53.84
+    },
+    {
+     "w": "un",
+     "start": 53.92,
+     "end": 54
+    },
+    {
+     "w": "score,",
+     "start": 54.16,
+     "end": 54.56
+    },
+    {
+     "w": "il",
+     "start": 54.64,
+     "end": 54.72
+    },
+    {
+     "w": "grimpe",
+     "start": 54.8,
+     "end": 55.04
+    },
+    {
+     "w": "plus",
+     "start": 55.12,
+     "end": 55.2
+    },
+    {
+     "w": "vite",
+     "start": 55.24,
+     "end": 55.44
+    },
+    {
+     "w": "que",
+     "start": 55.48,
+     "end": 55.52
+    },
+    {
+     "w": "le",
+     "start": 55.6,
+     "end": 55.64
+    },
+    {
+     "w": "niveau",
+     "start": 55.68,
+     "end": 55.92
+    },
+    {
+     "w": "qu'il",
+     "start": 55.973,
+     "end": 56.08
+    },
+    {
+     "w": "devait",
+     "start": 56.12,
+     "end": 56.32
+    },
+    {
+     "w": "mesurer,",
+     "start": 56.4,
+     "end": 56.96
+    },
+    {
+     "w": "comme",
+     "start": 57,
+     "end": 57.08
+    },
+    {
+     "w": "l'avait",
+     "start": 57.12,
+     "end": 57.36
+    },
+    {
+     "w": "vu",
+     "start": 57.4,
+     "end": 57.44
+    },
+    {
+     "w": "l'économiste",
+     "start": 57.48,
+     "end": 58.08
+    },
+    {
+     "w": "Charles",
+     "start": 58.16,
+     "end": 58.4
+    },
+    {
+     "w": "Goodhart",
+     "start": 58.48,
+     "end": 58.8
+    },
+    {
+     "w": "en",
+     "start": 58.88,
+     "end": 58.96
+    },
+    {
+     "w": "1975.",
+     "start": 59,
+     "end": 60.48
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 60.617,
+   "end": 65.04,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 60.617,
+     "end": 60.8
+    },
+    {
+     "w": "devant",
+     "start": 60.88,
+     "end": 61.12
+    },
+    {
+     "w": "un",
+     "start": 61.16,
+     "end": 61.2
+    },
+    {
+     "w": "modèle",
+     "start": 61.28,
+     "end": 61.52
+    },
+    {
+     "w": "premier",
+     "start": 61.6,
+     "end": 61.92
+    },
+    {
+     "w": "partout…",
+     "start": 62.04,
+     "end": 62.4
+    },
+    {
+     "w": "demande",
+     "start": 63.472,
+     "end": 63.6
+    },
+    {
+     "w": "d'abord",
+     "start": 63.64,
+     "end": 63.92
+    },
+    {
+     "w": "s'il",
+     "start": 63.96,
+     "end": 64.08
+    },
+    {
+     "w": "a",
+     "start": 64.12,
+     "end": 64.16
+    },
+    {
+     "w": "fait",
+     "start": 64.24,
+     "end": 64.32
+    },
+    {
+     "w": "les",
+     "start": 64.36,
+     "end": 64.4
+    },
+    {
+     "w": "annales.",
+     "start": 64.48,
+     "end": 65.04
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+  "id": "plus-gros",
+  "term": "mythe-plus-gros-plus-intelligent",
+  "episode": 20,
+  "date": "2026-10-29",
+  "format": "Mythe",
+  "composition": "MythePlusGrosVoix",
+  "todo": "Phrase du hook provisoire (le titre de la fiche) : pas de citation réelle qui dise exactement le mythe. Candidate trouvée et vérifiée, mais à ne pas tamponner telle quelle : Nando de Freitas (DeepMind), tweet de mai 2022, « It's all about scale now! It's all about making these models bigger, safer, compute efficient, faster at sampling, smarter memory, more modalities, innovative data… » (VentureBeat, AI Weekly: Is AI alien invasion imminent?, 19 mai 2022, https://venturebeat.com/2022/05/19/ai-weekly-is-ai-alien-invasion-imminent/). Sa liste inclut les données, qui sont justement la leçon de Chinchilla : un FAUX sur sa phrase la tronquerait. Couverture : le scan Commons est l'édition Hetzel de 1871 (métadonnées Internet Archive vérifiées), mais c'est un livre broché scanné ; extraire la page de titre ou le frontispice et vérifier le rendu avant le montage.",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] « Plus le modèle est gros, plus il est intelligent »… sauf que la taille ne vaut rien sans ce que le modèle a lu, et la façon dont on l'a entraîné.",
+      "screen": "La phrase du mythe s'écrit à la machine en grand, entre guillemets « », sur un fond de rayonnage de librairie en pixel art (posé dès la première image). Sur « intelligent », le tampon FAUX tombe en squash & stretch et reste jusqu'à la fin de la scène ; c'est l'image de couverture. Pas de sous-titre (nocaption)."
+    },
+    {
+      "scene": "taille",
+      "say": "[curious] La taille d'un modèle, c'est son nombre de paramètres, des milliards de réglages, et on a longtemps cru qu'il suffisait d'en ajouter.",
+      "screen": "Le modèle de Parts.tsx au centre, déjà posé. Sur « paramètres », une grille de petits potards apparaît en cascade sur sa face (libellé « paramètres ») ; sur « milliards », la grille se démultiplie et déborde du cadre ; sur « ajouter », le modèle gonfle d'un cran puis d'un autre (bar grow sur sa largeur)."
+    },
+    {
+      "scene": "chinchilla",
+      "say": "[warmly] En mars 2022, DeepMind a entraîné Chinchilla, quatre fois plus petit que son grand frère Gopher, avec le même budget de calcul mais quatre fois plus de textes… et Chinchilla a battu Gopher.",
+      "screen": "Deux modèles côte à côte, déjà posés en silhouette : à gauche « Gopher », gros bloc ; à droite « Chinchilla », bloc quatre fois plus petit (libellés qui entrent sur leur nom, 5 images après le bloc). Sur « budget de calcul », une même pile de pièces se pose sous chacun. Sur « quatre fois plus de textes », une pile de pages pousse en bar grow sous Chinchilla, quatre fois plus haute que celle de Gopher. Sur « a battu », une coupe pixel art passe à droite au-dessus de Chinchilla."
+    },
+    {
+      "scene": "verne",
+      "say": "[mischievously] Imagine que tu achètes Vingt mille lieues sous les mers en librairie, et que tu le fais lire à GPT-4.5, le plus gros modèle d'OpenAI en 2025… il faut couper le roman en deux pour sa fenêtre, et la lecture coûte 17,92 dollars.",
+      "screen": "Scène propre à ce short : la vraie couverture de Vingt mille lieues sous les mers (scan Hetzel, domaine public, Commons) collée au scotch sur la table du libraire, avec Ken Burns de 5 %. Sur « GPT-4.5 », une étiquette « GPT-4.5 » vient se poser à côté. Sur « couper », des ciseaux SVG maison passent et le livre se sépare en deux moitiés ; sur « fenêtre », un cadre descend et ne peut contenir qu'une moitié à la fois. Sur « 17,92 dollars », une étiquette de prix de librairie se colle sur la couverture avec un count-up jusqu'à « 17,92 dollars »."
+    },
+    {
+      "scene": "gpt41",
+      "say": "[curious] Un mois et demi plus tard, GPT-4.1 le lisait d'une traite, pour 48 centimes.",
+      "screen": "Wipe : la même couverture, entière cette fois, glisse dans un grand cadre où elle tient avec de la marge ; étiquette « GPT-4.1 ». Sur « 48 centimes », une seconde étiquette de prix « 48 centimes » se colle par-dessus la première, qui reste en retrait barrée."
+    },
+    {
+      "scene": "retrait",
+      "say": "[warmly] Et dès juillet 2025, OpenAI retirait GPT-4.5 de son API, moins de cinq mois après son lancement, parce que GPT-4.1 faisait aussi bien sur beaucoup de tâches.",
+      "screen": "Frise qui se dessine de gauche à droite, l'étiquette GPT-4.5 déjà posée sur son premier point. Sur « juillet 2025 », un second point se pose au bout (libellé « juillet 2025 ») ; sur « cinq mois », l'intervalle entre les deux se surligne (libellé « cinq mois »). Sur « retirait », l'étiquette GPT-4.5 est décollée de la frise avec une anticipation et part en arc hors cadre ; sur « GPT-4.1 », l'étiquette GPT-4.1 prend sa place."
+    },
+    {
+      "scene": "depuis",
+      "say": "[curious] Deux techniques desserrent encore ce lien, ne réveiller qu'une partie des paramètres à chaque token, ou laisser le modèle réfléchir par écrit avant de répondre.",
+      "screen": "Retour au modèle à potards de la scène taille, à sa taille de départ, déjà posé. Sur « une partie », seuls quelques potards s'allument en couleur d'accent, les autres restent gris (libellé « une partie »). Sur « réfléchir par écrit », une bulle de brouillon se remplit de lignes au-dessus du modèle avant qu'une réponse sorte."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors avant de prendre le plus gros modèle du rayon… [pause] fais lire ton propre texte à un modèle moyen, puis à un petit, et compare.",
+      "screen": "Rayon de librairie pixel art avec trois modèles posés comme des livres de tailles différentes (grand, moyen, petit), étiquetés « le plus gros », « moyen », « petit ». Sur « ton propre texte », une feuille glisse en arc vers le moyen puis le petit, qui s'allument chacun d'une coche. Image finale pleine : les trois sur l'étagère, le petit éclairé."
+    }
+  ],
+  "quoted": [
+    "Pluslemodèleestgrosplusilestintelligent"
+  ],
+  "display": {},
+  "nocaption": [],
+  "sources": [
+    "Fiche mythe-plus-gros-plus-intelligent de lexique/terms.js : Hoffmann et al. (DeepMind), Training Compute-Optimal Large Language Models, 29 mars 2022 (Chinchilla 70B bat Gopher 280B avec le même budget de calcul et quatre fois plus de données) ; https://arxiv.org/abs/2203.15556",
+    "Fiche mythe-plus-gros-plus-intelligent de lexique/terms.js, calcul de l'Imagine : Vingt mille lieues sous les mers compte 238 916 tokens en o200k_base (Projet Gutenberg, ebook 5097) ; fenêtre de GPT-4.5 de 128 000 tokens ; 238 916 x 75 / 10^6 = 17,92 dollars pour GPT-4.5, 238 916 x 2 / 10^6 = 0,48 dollar pour GPT-4.1 (fenêtre de 1 million de tokens)",
+    "Fiche mythe-plus-gros-plus-intelligent de lexique/terms.js : OpenAI, Introducing GPT-4.1 in the API, 14 avril 2025 (retrait de GPT-4.5 de l'API le 14 juillet 2025, GPT-4.1 meilleur ou équivalent sur beaucoup de capacités clés) ; Wikipédia, GPT-4.5 (lancé le 27 février 2025) ; TechCrunch, 14 avril 2025 (GPT-4.5, le plus gros modèle d'OpenAI) ; https://openai.com/index/gpt-4-1/",
+    "Fiche mythe-plus-gros-plus-intelligent de lexique/terms.js : Qwen, Qwen3: Think Deeper, Act Faster, 29 avril 2025 (MoE, une partie des paramètres active) ; modèles de raisonnement (calcul ajouté au moment de la réponse, sans paramètre de plus)",
+    "Image : Jules Verne, Vingt mille lieues sous les mers, Paris, J. Hetzel, 1871, domaine public ; Wikimedia Commons, File:Verne - Vingt mille lieues sous les mers.djvu, scan Internet Archive vingtmillelieue00vern (University of Ottawa) ; https://commons.wikimedia.org/wiki/File:Verne_-_Vingt_mille_lieues_sous_les_mers.djvu"
+  ],
+  "publication": {
+    "title": "Plus gros ne veut pas dire plus malin",
+    "description": "« Plus le modèle est gros, plus il est intelligent » ; pas tout seul. Chinchilla, quatre fois plus petit que Gopher mais nourri de quatre fois plus de textes, l'a battu en 2022, et GPT-4.5, le plus gros modèle d'OpenAI, a quitté l'API moins de cinq mois après sa sortie. Vingt mille lieues sous les mers lui coûtait 17,92 dollars de lecture, contre 48 centimes pour GPT-4.1.\nhttps://neopal.github.io/lexique/mythe-plus-gros-plus-intelligent/\n#llm #openai #ia #vulgarisation\nPage de titre de Vingt mille lieues sous les mers, Jules Verne, Paris, J. Hetzel, [1871], scan Internet Archive (University of Ottawa) via Wikimedia Commons, domaine public. Captures : arXiv (DeepMind, 29 mars 2022) ; OpenAI, 14 avril 2025.",
+    "fil": "L'ép. 19 confiait le tri des commandes à un classifieur qui ne se fatigue pas ; faut-il pour autant le plus gros modèle du catalogue ? La taille seule n'a jamais suffi",
+    "decor": "librairie (Vingt mille lieues sous les mers)"
+  },
+  "credits": [
+    "Page de titre de Vingt mille lieues sous les mers, Jules Verne, Paris, J. Hetzel, [1871], scan Internet Archive vingtmillelieue00vern (University of Ottawa) via Wikimedia Commons, domaine public (public/voix/plus-gros-verne.jpg)",
+    "Capture : arXiv:2203.15556, Hoffmann et al. (DeepMind), Training Compute-Optimal Large Language Models, 29 mars 2022 (public/voix/plus-gros-chinchilla.png), citation",
+    "Capture : OpenAI, Introducing GPT-4.1 in the API, 14 avril 2025 (public/voix/plus-gros-gpt41.png), citation"
+  ]
+}

@@ -153,6 +153,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Loop (boucle d'itération) | loop | publié | | HAM | |
 | Prompt et prompt engineering | prompt, prompt engineering | publié | | ULT, HO, CAR, LLM | la première mesure qu'on joue au groupe |
 | Capacité inexploitée | capability overhang | publié | | CAR | le synthé dont on n'utilise que trois presets |
+| AI brain fry | AI brain fry | publié | | | le maître-nageur qui surveille quatre bassins |
 
 ## 9. Mythes vs réalité (une idée fausse par fiche)
 
