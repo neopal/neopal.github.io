@@ -25,7 +25,8 @@ Ce sont des archives figées. Les fiches ont été fusionnées dans `lexique/ter
 | [17-gguf](17-gguf/) | 19 oct. 2026 | Un enrichissement : GGUF en alias de Quantization, avec le sens du sigle | enrichit quantization |
 | [18-agents-ecran-recherche](18-agents-ecran-recherche/) | 21 oct. 2026 | Deux fiches d'agents et des alias entendus au bureau | computer-use, deep-research ; alias ajoutés à modeles-de-raisonnement, agent, planification, prompt-engineering, workflow-ou-agent |
 | [19-mise-a-jour](19-mise-a-jour/) | 21 oct. 2026 | Liens retour vers les nouvelles fiches, ggml.ai rejoint Hugging Face | enrichit quantization, open-weights, modele-de-diffusion, sandbox-et-permissions, webmcp, horizon-d-autonomie, multi-agents, test-time-compute, hugging-face |
+| [20-black-october](20-black-october/) | 26 oct. 2026 | Fiche d'actualité après php2shell et « Black October » | chasse-aux-failles-par-ia ; liens retour depuis effet-reine-rouge et evaluations-de-dangerosite ; script du short `video/src/voix/black-october.script.json` |
 
 Les fiches des débuts (token, parametres, rag…) et quelques ajouts isolés (prompt-caching, arxiv…) ont été écrits hors vague, directement dans `lexique/terms.js`.
 
-Prochaine vague : créer `20-<sujet>/` avec un `BRIEF.md` qui renvoie à `../brief-fiche.md` et ne contient que le sujet, le registre des ids, les formes d'Imagine par lot et les livrables attendus.
+Prochaine vague : créer `21-<sujet>/` avec un `BRIEF.md` qui renvoie à `../brief-fiche.md` et ne contient que le sujet, le registre des ids, les formes d'Imagine par lot et les livrables attendus.
