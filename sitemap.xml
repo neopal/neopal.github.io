@@ -8,7 +8,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/</loc>
-        <lastmod>2026-10-26</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -50,7 +50,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/fenetre-de-contexte/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -68,13 +68,13 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/temperature/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/rag/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -116,7 +116,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/evals/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -146,13 +146,13 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/date-de-coupure/</loc>
-        <lastmod>2026-10-09</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/modeles-de-raisonnement/</loc>
-        <lastmod>2026-10-21</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -170,43 +170,43 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/agent/</loc>
-        <lastmod>2026-10-21</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/harness/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/boucle-agent/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/tool-use/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/mcp/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/skill/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/system-prompt/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -218,7 +218,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/context-engineering/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -236,7 +236,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/loop/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -248,7 +248,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/mythe-apprend-de-nos-conversations/</loc>
-        <lastmod>2026-10-09</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -260,25 +260,25 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/mythe-agent-autonome/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/benchmarks-lesquels-croire/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/swe-bench/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/terminal-bench/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -290,7 +290,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/humanitys-last-exam/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -302,31 +302,31 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/lmarena/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/mmlu/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/modeles-frontiere/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/comparatif-des-modeles/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/cout-d-une-requete/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -410,7 +410,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/llm/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -446,7 +446,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/distillation/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -476,7 +476,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/multimodal/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -488,25 +488,25 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/jailbreak/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/guardrails/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/human-in-the-loop/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/multi-agents/</loc>
-        <lastmod>2026-10-21</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -524,7 +524,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/alignement/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -542,7 +542,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/intelligence-en-dents-de-scie/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -554,7 +554,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/memorisation-vs-generalisation/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -566,31 +566,31 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/interpretabilite/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/memoire/</loc>
-        <lastmod>2026-10-09</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/sandbox-et-permissions/</loc>
-        <lastmod>2026-10-21</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/planification/</loc>
-        <lastmod>2026-10-21</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/compaction-du-contexte/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -614,13 +614,13 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/horizon-d-autonomie/</loc>
-        <lastmod>2026-10-21</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/mythe-autocompletion/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -632,7 +632,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/mythe-ia-calcule/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -674,7 +674,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/mythe-agit-lui-meme/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -686,7 +686,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/responsabilite/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -740,7 +740,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/latence-vs-debit/</loc>
-        <lastmod>2026-10-21</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -752,37 +752,37 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/constitutional-ai/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/alignment-faking/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/cot-infidele/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/red-teaming/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/evaluations-de-dangerosite/</loc>
-        <lastmod>2026-10-26</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/mythe-ia-a-des-valeurs/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -824,19 +824,19 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/jepa/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/modele/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/mythe-ia-ne-cree-pas/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -860,7 +860,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/mythe-que-des-statistiques/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -872,19 +872,19 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/context-rot/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/non-determinisme/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/sans-etat/</loc>
-        <lastmod>2026-10-09</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -896,13 +896,13 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/agents-md/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/passation/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -914,13 +914,13 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/prompt-caching/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/hill-climbing/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -932,7 +932,7 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/routage-de-modeles/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -944,13 +944,13 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/forward-deployed-engineer/</loc>
-        <lastmod>2026-10-08</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/mythe-95-pourcent/</loc>
-        <lastmod>2026-10-19</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -968,25 +968,43 @@
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/computer-use/</loc>
-        <lastmod>2026-10-21</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/deep-research/</loc>
-        <lastmod>2026-10-26</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/chasse-aux-failles-par-ia/</loc>
-        <lastmod>2026-10-26</lastmod>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://neopal.github.io/lexique/ai-brain-fry/</loc>
-        <lastmod>2026-10-26</lastmod>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://neopal.github.io/lexique/claude/</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://neopal.github.io/lexique/ia-generative/</loc>
+        <lastmod>2026-10-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://neopal.github.io/lexique/automatiser-ou-augmenter/</loc>
+        <lastmod>2026-10-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>

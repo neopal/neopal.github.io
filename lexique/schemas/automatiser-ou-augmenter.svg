@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 372" role="img" aria-labelledby="automatiser-ou-augmenter-t">
+<title id="automatiser-ou-augmenter-t">Trois façons de travailler avec une IA : automatiser, une tâche part et un résultat revient ; augmenter, des allers-retours entre toi et l'IA jusqu'au résultat ; le troisième mode, agency, des règles posées une fois, puis l'IA agit seule chaque jour sans que tu relises chaque geste.</title>
+<text class="b ac" x="0" y="16">Automatiser</text>
+<rect class="bx" x="0" y="28" width="70" height="36" rx="6"/>
+<text class="m" x="35" y="51" text-anchor="middle">toi</text>
+<path class="la" d="M70 46 h196"/><path class="la" d="M261 41 l5 5 l-5 5"/>
+<text class="m mu" x="168" y="38" text-anchor="middle">la tâche</text>
+<rect class="bx" x="270" y="28" width="90" height="36" rx="6"/>
+<text class="m" x="315" y="51" text-anchor="middle">IA</text>
+<path class="lm" d="M266 60 q-98 12 -192 0"/><path class="lm" d="M79 55 l-5 5 l5 5"/>
+<text class="m mu" x="168" y="92" text-anchor="middle">le résultat revient, fini</text>
+<path class="lm dash" d="M0 104 h360"/>
+<text class="b ac" x="0" y="132">Augmenter</text>
+<rect class="bx" x="0" y="144" width="70" height="36" rx="6"/>
+<text class="m" x="35" y="167" text-anchor="middle">toi</text>
+<rect class="bx" x="270" y="144" width="90" height="36" rx="6"/>
+<text class="m" x="315" y="167" text-anchor="middle">IA</text>
+<path class="la" d="M74 152 q98 -18 192 0"/><path class="la" d="M261 147 l5 5 l-5 5"/>
+<path class="la" d="M266 172 q-98 18 -192 0"/><path class="la" d="M79 167 l-5 5 l5 5"/>
+<text class="m mu" x="168" y="210" text-anchor="middle">allers-retours, à deux</text>
+<path class="lm dash" d="M0 230 h360"/>
+<text class="b ac" x="0" y="258">Agency</text>
+<rect class="bx" x="0" y="270" width="70" height="36" rx="6"/>
+<text class="m" x="35" y="293" text-anchor="middle">toi</text>
+<path class="lm" d="M70 288 h28"/><path class="lm" d="M93 283 l5 5 l-5 5"/>
+<rect class="bxa" x="102" y="270" width="80" height="36" rx="6"/>
+<text class="m ac" x="142" y="293" text-anchor="middle">règles</text>
+<path class="lm" d="M182 288 h22"/><path class="lm" d="M199 283 l5 5 l-5 5"/>
+<rect class="bx" x="208" y="270" width="54" height="36" rx="6"/>
+<text class="m" x="235" y="293" text-anchor="middle">IA</text>
+<path class="la" d="M262 280 h16 M262 288 h16 M262 296 h16"/>
+<text class="m" x="284" y="284">lun</text>
+<text class="m" x="284" y="300">mar…</text>
+<text class="i mu" x="0" y="336">Tu poses les règles une fois ; ensuite,</text>
+<text class="i mu" x="0" y="356">personne ne relit chaque geste.</text>
+</svg>

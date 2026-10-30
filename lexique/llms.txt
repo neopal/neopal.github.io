@@ -1,6 +1,6 @@
 # Lexique IA
 
-> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 162 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
+> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 165 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
 
 Toutes les fiches en texte brut, sources comprises : https://neopal.github.io/lexique/llms-full.txt
 Auteur : https://neopal.github.io/
@@ -30,6 +30,7 @@ Auteur : https://neopal.github.io/
 - [JEPA](https://neopal.github.io/lexique/jepa/) (en anglais : Joint Embedding Predictive Architecture) : JEPA est une famille d'architectures proposée par Yann LeCun, qui apprend en prédisant le résumé abstrait d'une partie cachée d'une image ou d'une vidéo plutôt que ses pixels.
 - [Modèle](https://neopal.github.io/lexique/modele/) (en anglais : AI model) : Un modèle d'IA est une fonction aux paramètres appris sur des exemples, qui transforme une entrée (texte, image, son) en sortie et existe à part de l'application qui s'en sert.
 - [Connaissances paramétriques et contextuelles](https://neopal.github.io/lexique/connaissances-parametriques/) (en anglais : parametric and contextual knowledge) : Un modèle tient ses connaissances de deux sources, ses paramètres, figés à l'entraînement et parfois flous, et son contexte, qu'il lit au moment de répondre, exact et à jour.
+- [IA générative](https://neopal.github.io/lexique/ia-generative/) (en anglais : Generative AI) : L'IA générative désigne les systèmes qui produisent un contenu nouveau, texte, image, son, vidéo ou code, à partir de ce qu'ils ont appris, plutôt que de trier ou classer l'existant.
 
 ## Inférence
 
@@ -147,6 +148,7 @@ Auteur : https://neopal.github.io/
 - [Forward-deployed engineer](https://neopal.github.io/lexique/forward-deployed-engineer/) : Un forward-deployed engineer est un ingénieur qu'un éditeur de logiciel ou d'IA envoie chez un client pour construire dans ses systèmes ce que le produit seul ne fait pas.
 - [p(doom)](https://neopal.github.io/lexique/p-doom/) : Le p(doom) est la probabilité, donnée par une personne, que l'IA cause une catastrophe pour l'humanité comme l'extinction ; c'est une opinion chiffrée, pas une mesure.
 - [Chasse aux failles par IA](https://neopal.github.io/lexique/chasse-aux-failles-par-ia/) (en anglais : AI vulnerability discovery) : La chasse aux failles par IA confie à un modèle la recherche de failles inconnues dans du vrai code, qu'il lit et teste, au service du défenseur comme de l'attaquant.
+- [Claude](https://neopal.github.io/lexique/claude/) : Claude est la famille de modèles de langage d'Anthropic, et le nom des applications qui les font tourner, du chat sur claude.ai à l'agent de code Claude Code.
 
 ## Méthode : travailler avec l'IA
 
@@ -161,6 +163,7 @@ Auteur : https://neopal.github.io/
 - [Dark factory](https://neopal.github.io/lexique/dark-factory/) : Une dark factory est une chaîne de développement où des déclencheurs lancent les agents sans personne au clavier, et où leur code part en production sans qu'aucun humain le relise.
 - [Hill climbing](https://neopal.github.io/lexique/hill-climbing/) : Le hill climbing améliore un système d'IA par petites retouches testées une à une sur une éval, gardées seulement si elles font aussi monter les cas mis de côté.
 - [AI brain fry](https://neopal.github.io/lexique/ai-brain-fry/) : L'AI brain fry est la fatigue mentale qui vient d'un usage intensif de l'IA, surtout quand il faut surveiller plusieurs outils ou agents à la fois.
+- [Automatiser ou augmenter](https://neopal.github.io/lexique/automatiser-ou-augmenter/) (en anglais : Automation vs augmentation) : Automatiser, c'est confier une tâche à l'IA et prendre le résultat ; augmenter, c'est travailler avec elle en allers-retours. Anthropic ajoute un troisième mode, où l'IA agit seule pour toi.
 
 ## Mythes vs réalité
 

@@ -30,7 +30,9 @@
   // Un mot présent dans trop de fiches (« modèle ») n'est pas lié : il soulignerait la moitié du lexique.
   const MAX_SHARE = 0.75;
   // Formes trop ambiguës pour être liées automatiquement (sens courant différent du terme technique).
-  const NEVER = new Set(['mémoire', 'memory', 'temp', 'loop', 'corpus', 'test', 'tests', 'score', 'outil', 'outils', 'modèle', 'model', 'calcul', 'agentic', 'agentique', 'lab', 'fournisseur', 'provider', 'deployer', 'tools', 'harnais', 'plan', 'instructions', 'apprentissage', 'gpt', 'vision', 'constitution', 'position', 'doom']);
+  const NEVER = new Set(['mémoire', 'memory', 'temp', 'loop', 'corpus', 'test', 'tests', 'score', 'outil', 'outils', 'modèle', 'model', 'calcul', 'agentic', 'agentique', 'lab', 'fournisseur', 'provider', 'deployer', 'tools', 'harnais', 'plan', 'instructions', 'apprentissage', 'gpt', 'vision', 'constitution', 'position', 'doom', 'automation', 'automatisation', 'augmentation', 'agency']);
+  // Formes qui, suivies de ces mots, désignent autre chose que la fiche (Claude Shannon n'est pas Claude).
+  const NOT_BEFORE = {claude: /^\s+Shannon\b/};
   const reEsc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const isAcronym = (f) => /^[A-Z0-9-]{2,6}$/.test(f) && /[A-Z]/.test(f);
   const proseOf = (x) => [x.image, x.imagine, ...arr(x.full), x.then, x.avoid, ...arr(x.office).map((m) => m && m.text)].filter(Boolean).join(' ');
@@ -70,10 +72,12 @@
   // Lie, dans un texte déjà échappé, la première mention de chaque fiche (hors liens existants et hors la fiche elle-même).
   function linkTerms(html, ctx) {
     if (!ctx || !ctx.idx.re) return html;
-    return html.split(/(<a\b[^>]*>[\s\S]*?<\/a>)/).map((part) => (part.startsWith('<a') ? part : part.replace(ctx.idx.re, (all, word, suffix) => {
+    return html.split(/(<a\b[^>]*>[\s\S]*?<\/a>)/).map((part) => (part.startsWith('<a') ? part : part.replace(ctx.idx.re, (all, word, suffix, at, str) => {
       const raw = word.replace(/&#39;/g, "'").replace(/&amp;/g, '&');
       const hit = ctx.idx.forms.get(raw.toLowerCase());
       if (!hit || hit.id === ctx.self || ctx.seen.has(hit.id)) return all;
+      const nb = NOT_BEFORE[raw.toLowerCase()];
+      if (nb && nb.test(str.slice(at + all.length))) return all;
       if (suffix && (raw.length < 5 || hit.exact)) return all;
       if (hit.exact && raw !== hit.exact) return all;
       ctx.seen.add(hit.id);

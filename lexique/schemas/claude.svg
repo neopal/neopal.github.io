@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 352" role="img" aria-labelledby="claude-t">
+<title id="claude-t">Claude, deux étages : en haut les produits qui portent le nom (claude.ai, Claude Code, Cowork, l'API pour les autres entreprises), en bas les modèles qui répondent, en quatre paliers de Haiku à Mythos, du plus rapide et moins cher au plus capable ; la constitution règle les modèles ouverts au grand public.</title>
+<text class="m mu" x="0" y="14">les produits</text>
+<rect class="bx" x="0" y="24" width="84" height="36" rx="6"/>
+<text class="m" x="42" y="47" text-anchor="middle">claude.ai</text>
+<rect class="bx" x="92" y="24" width="84" height="36" rx="6"/>
+<text class="m" x="134" y="47" text-anchor="middle">Code</text>
+<rect class="bx" x="184" y="24" width="84" height="36" rx="6"/>
+<text class="m" x="226" y="47" text-anchor="middle">Cowork</text>
+<rect class="bx" x="276" y="24" width="84" height="36" rx="6"/>
+<text class="m" x="318" y="47" text-anchor="middle">API</text>
+<path class="lm" d="M42 60 v14 M134 60 v14 M226 60 v14 M318 60 v14 M42 74 h276 M180 74 v14"/><path class="lm" d="M175 83 l5 5 l5 -5"/>
+<text class="m mu" x="0" y="108">les modèles, un palier au choix</text>
+<rect class="bx" x="0" y="118" width="360" height="36" rx="6"/>
+<text class="b" x="14" y="141">Haiku</text>
+<rect class="fa" x="120" y="132" width="40" height="8" rx="2"/>
+<rect class="bx" x="0" y="160" width="360" height="36" rx="6"/>
+<text class="b" x="14" y="183">Sonnet</text>
+<rect class="fa" x="120" y="174" width="100" height="8" rx="2"/>
+<rect class="bx" x="0" y="202" width="360" height="36" rx="6"/>
+<text class="b" x="14" y="225">Opus</text>
+<rect class="fa" x="120" y="216" width="160" height="8" rx="2"/>
+<rect class="bxa" x="0" y="244" width="360" height="36" rx="6"/>
+<text class="b ac" x="14" y="267">Mythos</text>
+<rect class="fa" x="120" y="258" width="220" height="8" rx="2"/>
+<text class="m mu" x="120" y="298">rapide, bon marché</text>
+<text class="m mu" x="340" y="298" text-anchor="end">capable</text>
+<path class="lm dash" d="M0 312 h360"/>
+<text class="i mu" x="0" y="334">La constitution règle les modèles grand public.</text>
+</svg>

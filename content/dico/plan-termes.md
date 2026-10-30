@@ -22,6 +22,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Logits | logits | publié | | LLM | les VU-mètres avant le choix de la note |
 | Position | positional encoding | publié | | LLM | le numéro de mesure sur la partition |
 | LLM (grand modèle de langage) | large language model | publié | | LLM, HO, ULT | le groupe tout entier |
+| IA générative | generative AI | publié | | | l'orchestre du bal qui improvise une valse que tout le monde croit connaître |
 | Réseau de neurones | neural network | publié | | HAM, ULT | le câblage de la console, potard relié à potard |
 | Apprentissage automatique et deep learning | machine learning, deep learning | publié | | LLM, ULT, CAR | régler à l'oreille plutôt qu'écrire la partition |
 | Encodeur et décodeur | encoder, decoder | publié | | LLM, HO, ULT | l'oreille qui analyse, la voix qui chante |
@@ -142,6 +143,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Effet IA | AI effect | publié | | HAM | « ce n'est que de la technique », dit-on dès que le groupe réussit le morceau |
 | Optimisation pour les moteurs génératifs (GEO) | generative engine optimization | publié | | CAR | |
 | p(doom) | p(doom) | publié | | | le beau-frère et sa chance sur quatre, qu'aucun dimanche ne viendra vérifier |
+| Claude | Claude | publié | | | le croque du bar ou le menu en sept plats, au même restaurant |
 
 ## 8. Méthode : travailler avec l'IA
 
@@ -154,6 +156,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Prompt et prompt engineering | prompt, prompt engineering | publié | | ULT, HO, CAR, LLM | la première mesure qu'on joue au groupe |
 | Capacité inexploitée | capability overhang | publié | | CAR | le synthé dont on n'utilise que trois presets |
 | AI brain fry | AI brain fry | publié | | | le maître-nageur qui surveille quatre bassins |
+| Automatiser ou augmenter | automation vs augmentation, agency | publié | | | le patron de bistrot et ses trois sortes de clients |
 
 ## 9. Mythes vs réalité (une idée fausse par fiche)
 

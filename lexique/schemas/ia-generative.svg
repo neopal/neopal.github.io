@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="ia-generative-t">
+<title id="ia-generative-t">Deux familles d'IA : l'IA qui classe reçoit un paiement et choisit une étiquette parmi celles prévues d'avance (fraude ou pas fraude) ; l'IA générative reçoit une consigne et fabrique un contenu nouveau, texte, image, son ou code, qui ressemble à ce qu'elle a vu sans en être la copie.</title>
+<text class="b" x="0" y="16">L'IA qui classe</text>
+<rect class="bx" x="0" y="28" width="100" height="40" rx="6"/>
+<text class="m" x="50" y="53" text-anchor="middle">un paiement</text>
+<path class="lm" d="M100 48 h22"/><path class="lm" d="M117 43 l5 5 l-5 5"/>
+<rect class="bx" x="126" y="28" width="80" height="40" rx="6"/>
+<text class="m" x="166" y="53" text-anchor="middle">modèle</text>
+<path class="lm" d="M206 48 h14 M220 34 v28 M220 34 h12 M220 62 h12"/>
+<rect class="bxa" x="236" y="18" width="124" height="30" rx="6"/>
+<text class="m ac" x="298" y="38" text-anchor="middle">fraude</text>
+<rect class="bx" x="236" y="52" width="124" height="30" rx="6"/>
+<text class="m mu" x="298" y="72" text-anchor="middle">pas fraude</text>
+<text class="i mu" x="0" y="112">Il choisit une case prévue d'avance.</text>
+<path class="lm dash" d="M0 132 h360"/>
+<text class="b ac" x="0" y="164">L'IA générative</text>
+<rect class="bx" x="0" y="176" width="100" height="40" rx="6"/>
+<text class="m" x="50" y="201" text-anchor="middle">une consigne</text>
+<path class="lm" d="M100 196 h22"/><path class="lm" d="M117 191 l5 5 l-5 5"/>
+<rect class="bx" x="126" y="176" width="80" height="40" rx="6"/>
+<text class="m" x="166" y="201" text-anchor="middle">modèle</text>
+<path class="la" d="M206 196 h22"/><path class="la" d="M223 191 l5 5 l-5 5"/>
+<rect class="bxa" x="236" y="166" width="124" height="80" rx="6"/>
+<rect class="fa" x="248" y="180" width="96" height="6" rx="2"/>
+<rect class="fa" x="248" y="194" width="80" height="6" rx="2"/>
+<rect class="fa" x="248" y="208" width="100" height="6" rx="2"/>
+<rect class="fl" x="248" y="222" width="44" height="6" rx="2"/>
+<text class="i mu" x="0" y="280">Il fabrique un contenu qui n'existait pas,</text>
+<text class="i mu" x="0" y="300">texte, image, son ou code.</text>
+</svg>

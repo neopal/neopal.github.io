@@ -1,0 +1,1480 @@
+<!doctype html>
+<html lang="fr" data-term="ia-generative">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IA générative | Lexique IA</title>
+<meta name="description" content="L&#39;IA générative désigne les systèmes qui produisent un contenu nouveau, texte, image, son, vidéo ou code, à partir de ce qu&#39;ils ont appris, plutôt que de…">
+<link rel="canonical" href="https://neopal.github.io/lexique/ia-generative/">
+<meta property="og:site_name" content="Lexique IA">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IA générative | Lexique IA">
+<meta property="og:description" content="L&#39;IA générative désigne les systèmes qui produisent un contenu nouveau, texte, image, son, vidéo ou code, à partir de ce qu&#39;ils ont appris, plutôt que de…">
+<meta property="og:url" content="https://neopal.github.io/lexique/ia-generative/">
+<meta property="og:image" content="https://neopal.github.io/lexique/og/ia-generative.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="IA générative">
+<meta property="article:published_time" content="2026-10-29">
+<meta property="article:modified_time" content="2026-10-29">
+<meta property="article:author" content="https://neopal.github.io/">
+<meta property="article:section" content="Fondations">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="IA générative | Lexique IA">
+<meta name="twitter:description" content="L&#39;IA générative désigne les systèmes qui produisent un contenu nouveau, texte, image, son, vidéo ou code, à partir de ce qu&#39;ils ont appris, plutôt que de…">
+<meta name="twitter:image" content="https://neopal.github.io/lexique/og/ia-generative.jpg">
+<meta name="author" content="Pierre-Adrien Lair">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="author" href="https://neopal.github.io/">
+<link rel="license" href="https://creativecommons.org/licenses/by/4.0/">
+<link rel="alternate" type="text/plain" title="Lexique IA pour les assistants IA (llms.txt)" href="https://neopal.github.io/lexique/llms.txt">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<script src="/assets/analytics.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,800;1,6..72,400;1,6..72,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0b; --panel:#111; --line:#262626; --text:#f2f2f2; --muted:#a8a8a8; --dim:#8a8a8a;
+  --accent:#7CFFB2; --top:57px;
+  --serif:Newsreader,Georgia,'Times New Roman',serif; --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-wrap:break-word}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.sr{position:absolute;left:0;top:0;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+#graph g{outline:none}
+#graph text{paint-order:stroke;stroke:#0b0b0b;stroke-width:.3em;stroke-linejoin:round;transition:opacity .15s}
+#graph .clab{font-family:var(--mono);font-weight:600;letter-spacing:.04em;stroke-width:.35em}
+#graph g.minor text{opacity:0}
+#graph g.minor.show text{opacity:1}
+#graph g.far text{opacity:0}
+#graph g[data-id]:hover text,#graph g[data-id]:focus-visible text{opacity:1}
+#graph g[data-id]{touch-action:none}
+#graph.dragging,#graph.dragging g{cursor:grabbing!important}
+h1[tabindex]:focus{outline:none}
+#graph g:focus-visible circle{stroke:#fff;stroke-width:6}
+
+/* ---------- Barre du haut ---------- */
+.top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:16px;height:var(--top);padding:0 24px;border-bottom:1px solid var(--line);background:rgba(11,11,11,.94);backdrop-filter:blur(8px)}
+.brand{font-weight:800;font-variation-settings:'opsz' 72;font-size:22px;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+.top a.back{font-size:15px;color:var(--muted);text-decoration:none;white-space:nowrap;margin-left:auto}
+.top a.back:hover{color:var(--text)}
+.top a.navlink{font-size:16px;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+.top a.navlink:hover{color:var(--text)}
+.search{position:relative;flex:1 1 auto;min-width:0;max-width:440px;margin-left:24px}
+.search input{width:100%;font:inherit;font-size:16px;color:var(--text);background:#161616;border:1px solid var(--line);border-radius:8px;padding:7px 12px;outline:none}
+.search input::placeholder{color:var(--dim)}
+.search input:focus{border-color:#555;background:#1a1a1a}
+.search input::-webkit-search-cancel-button{filter:invert(1) opacity(.5)}
+.mapbtn{display:none;font:inherit;font-size:16px;font-weight:600;color:var(--text);background:transparent;border:1px solid var(--line);border-radius:8px;padding:7px 12px;cursor:pointer;white-space:nowrap}
+
+.results{position:absolute;top:calc(100% + 6px);left:0;width:min(480px,calc(100vw - 32px));max-height:min(420px,70vh);overflow-y:auto;list-style:none;background:#151515;border:1px solid #333;border-radius:10px;padding:6px;box-shadow:0 12px 40px rgba(0,0,0,.6)}
+.results[hidden]{display:none}
+.results li{display:flex;align-items:baseline;gap:10px;padding:9px 10px;border-radius:7px;cursor:pointer;min-width:0}
+.results li[aria-selected="true"]{background:#242424}
+.results li .t{font-size:17px;font-weight:600;flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.results li .h{font-family:var(--mono);font-size:13px;color:var(--muted);flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.results li .c{margin-left:auto;font-size:14px;color:var(--c,var(--muted));white-space:nowrap;flex:none}
+.results li.soon .t{color:var(--dim);font-weight:400}
+.results li.soon .c{color:var(--dim)}
+.results li.empty{color:var(--muted);cursor:default}
+
+/* ---------- Mise en page ---------- */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,560px);min-height:calc(100vh - var(--top))}
+.graph-wrap{position:sticky;top:var(--top);height:calc(100vh - var(--top));overflow:hidden;border-right:1px solid var(--line)}
+.viewtoggle{position:absolute;top:14px;right:16px;z-index:3;display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--bg)}
+.viewtoggle button{font:inherit;font-size:15px;color:var(--muted);background:transparent;border:0;padding:6px 14px;cursor:pointer}
+.viewtoggle button[aria-pressed="true"]{color:var(--text);background:#1d1d1d}
+.mapreset{position:absolute;top:14px;left:16px;z-index:3;display:flex;align-items:center;gap:8px;font:inherit;font-size:15px;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 14px;cursor:pointer}
+.mapreset:hover{border-color:#555;background:#161616}
+.mapreset[hidden]{display:none}
+.mapreset kbd{font-family:var(--mono);font-size:12px;color:var(--dim);border:1px solid var(--line);border-radius:4px;padding:0 5px}
+.graph-wrap[data-view="list"] #graph{display:none}
+.graph-wrap[data-view="map"] .az{display:none}
+.az{height:100%;overflow-y:auto;overflow-x:hidden;padding:60px 32px 140px}
+.az .cols{columns:2 240px;column-gap:40px}
+.az section{break-inside:avoid;margin-bottom:18px}
+.az h3{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;color:var(--muted);margin:0 0 4px}
+.az ul{list-style:none;margin:0;padding:0}
+.az a,.az .soon{display:flex;align-items:baseline;gap:8px;padding:3px 0;font-size:17px;line-height:1.35;text-decoration:none;color:var(--text)}
+.az a i,.az .soon i{flex:none;width:8px;height:8px;border-radius:50%;background:var(--c);transform:translateY(-2px)}
+.az a .e{font-family:var(--mono);font-size:12px;color:var(--dim)}
+.az a:hover .t{text-decoration:underline;text-decoration-color:var(--c)}
+.az a.on .t{color:var(--c);font-weight:600}
+.az .soon{color:var(--dim)}
+.az .soon i{background:transparent;border:1.5px solid #555}
+#graph{width:100%;height:100%;display:block;touch-action:manipulation}
+.legend{position:absolute;left:0;right:0;bottom:0;padding:12px 20px;background:linear-gradient(transparent,var(--bg) 35%);display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:12px;color:var(--muted);pointer-events:none}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+.legend button{pointer-events:auto;font:inherit;color:var(--muted);background:rgba(11,11,11,.8);border:1px solid var(--line);border-radius:999px;padding:4px 11px;cursor:pointer;white-space:nowrap}
+.legend button:hover{color:var(--text);border-color:#444}
+.legend button[aria-pressed="true"]{color:var(--text);border-color:var(--c,#777);background:#1d1d1d}
+.legend .n{color:var(--dim);margin-left:4px}
+.catchips{display:none}
+.mapclose{display:none}
+.ego{display:none}
+
+.panel{padding:40px 40px 80px;background:var(--panel);min-width:0}
+.kicker{font-size:16px;font-weight:600;color:var(--cat,var(--accent));margin-bottom:10px}
+h1{font-size:48px;line-height:1.02;font-weight:800;font-variation-settings:'opsz' 72;letter-spacing:-.01em;margin-bottom:20px}
+.en{margin:-8px 0 20px;font-size:16px;color:var(--muted)}
+.en span{color:var(--text);font-family:var(--mono);font-size:14px}
+.lead{font-size:21px;line-height:1.45;font-weight:400}
+h2{font-size:20px;font-weight:600;font-style:italic;color:var(--text);margin:36px 0 8px}
+p{margin-bottom:12px}
+.imagine{border-left:3px solid var(--cat,var(--accent));padding-left:16px;font-style:italic}
+
+.video{margin:28px 0 4px}
+.video video{display:block;width:240px;aspect-ratio:9/16;border-radius:14px;background:#000;border:1px solid var(--line)}
+
+.schema{margin:28px 0 8px;padding:18px 16px;border:1px solid var(--line);border-radius:14px;background:#0e0e0e}
+.schema svg{display:block;width:100%;height:auto;max-width:440px;margin:0 auto;overflow:visible}
+.schema svg text{fill:var(--text);font-family:var(--serif);font-size:15px}
+.schema svg .m{font-family:var(--mono);font-size:13px}
+.schema svg .b{font-weight:600}
+.schema svg .i{font-style:italic}
+.schema svg .big{font-size:20px;font-weight:600}
+.schema svg .mu{fill:var(--muted)}
+.schema svg .d{fill:var(--dim)}
+.schema svg .ac{fill:var(--cat)}
+.schema svg .red{fill:#FF7A7A}
+.schema svg .bx{fill:#181818;stroke:var(--line);stroke-width:1.5}
+.schema svg .bxa{fill:#181818;stroke:var(--cat);stroke-width:1.5}
+.schema svg .fa{fill:var(--cat);stroke:none}
+.schema svg .fl{fill:var(--line);stroke:none}
+.schema svg .fd{fill:#2c2c2c;stroke:none}
+.schema svg .ln{fill:none;stroke:var(--line);stroke-width:1.5}
+.schema svg .lm{fill:none;stroke:var(--muted);stroke-width:1.5}
+.schema svg .la{fill:none;stroke:var(--cat);stroke-width:2}
+.schema svg .lr{fill:none;stroke:#FF7A7A;stroke-width:2}
+.schema svg .dash{stroke-dasharray:4 4}
+.term p a,.bubble a{text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
+.term a.tw{color:inherit;text-decoration:underline dotted;text-decoration-thickness:2px;text-decoration-color:#6a6a6a;text-underline-offset:4px}
+.term a.tw:hover,.term a.tw:focus-visible{text-decoration-style:solid;text-decoration-color:var(--c)}
+.splits{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+.split{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.split .w{font-family:var(--mono);font-size:14px;color:var(--muted);min-width:96px}
+.chip{font-family:var(--mono);font-size:15px;padding:3px 10px;border:1.5px solid var(--cat,var(--accent));color:var(--text);border-radius:6px}
+
+.jargon div{padding:10px 0;border-top:1px solid var(--line)}
+.jargon div:first-child{border-top:0;padding-top:2px}
+.jargon dt{font-family:var(--mono);font-size:15px;color:var(--text)}
+.jargon dd{color:var(--muted)}
+
+.solutions div{padding:8px 0;border-top:1px solid var(--line)}
+.solutions div:first-child{border-top:0;padding-top:2px}
+.solutions dt{font-family:var(--mono);font-size:13px;color:var(--dim)}
+.tablewrap{overflow-x:auto;margin:6px 0 4px;border:1px solid var(--line);border-radius:10px}
+table.cmp{border-collapse:collapse;width:100%;font-size:15px;line-height:1.4}
+table.cmp th,table.cmp td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
+table.cmp thead th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted)}
+table.cmp tbody th{font-weight:600}
+table.cmp td{font-family:var(--mono);font-size:13px}
+table.cmp tr:last-child th,table.cmp tr:last-child td{border-bottom:0}
+.tnote{font-size:14px;color:var(--muted);margin-top:6px}
+.rely{display:flex;gap:14px;align-items:baseline;border-left:3px solid var(--rc,var(--cat));padding-left:14px}
+.rely b{flex:none;font-style:italic;color:var(--rc,var(--cat))}
+.rely-solide{--rc:#7CFFB2}.rely-a-nuancer{--rc:#FFB86B}.rely-fragile{--rc:#FF7A7A}
+
+.solutions dd a{color:var(--text);text-decoration-color:var(--cat,var(--accent));text-underline-offset:3px}
+
+.chat{display:flex;flex-direction:column;gap:10px}
+.bubble{max-width:88%;padding:12px 16px;border-radius:18px;font-size:17px;line-height:1.5}
+.bubble.q{align-self:flex-end;background:#232323}
+.bubble.a{align-self:flex-start;border:1.5px solid var(--line)}
+
+.avoid{display:flex;gap:12px}
+.avoid b{color:#FF7A7A;font-size:20px;line-height:1.4}
+
+.tl{position:relative;display:inline-block;font-size:16px;line-height:1.4;padding:6px 12px;border-radius:999px;border:1.5px solid var(--line);color:var(--text);text-decoration:none;white-space:nowrap}
+.tl.live{border-color:var(--c)}
+.tl.live:hover{background:rgba(255,255,255,.06)}
+.tl.soon{color:var(--dim)}
+.links{display:flex;flex-wrap:wrap;gap:8px}
+.rel{display:none}
+
+.cite{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;line-height:1.5;color:var(--muted);margin-bottom:8px}
+.cite .ct{flex:1 1 auto;min-width:0;overflow-wrap:anywhere}
+.cite button{flex:none;font:inherit;font-size:14px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;padding:5px 12px;cursor:pointer}
+.cite button:hover{border-color:#555}
+.lic{font-size:14px;color:var(--dim)}
+.lic a{color:var(--muted)}
+.sources{font-size:15px;color:var(--muted);padding-left:18px}
+.sources li{margin-bottom:6px;overflow-wrap:anywhere}
+
+.pager{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-top:44px;padding-top:20px;border-top:1px solid var(--line)}
+.pager a{font-size:16px;color:var(--muted);text-decoration:none;display:flex;gap:6px;min-width:0}
+.pager a:hover{color:var(--text)}
+.pager .prev,.pager .next{flex:1 1 0;min-width:0}
+.pager .next{justify-content:flex-end;text-align:right;flex-direction:row-reverse}
+.pager .all{flex:none}
+
+.index h1{font-size:56px}
+.index ul{list-style:none;margin-top:8px}
+.index li{border-top:1px solid var(--line)}
+.index li a,.index li .row{display:flex;align-items:baseline;gap:12px;padding:14px 0;text-decoration:none;color:var(--text)}
+.index li a:hover .t{color:var(--c,var(--accent))}
+.index li .e{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.index li .c{margin-left:auto;font-size:15px;color:var(--muted);text-align:right}
+.index li.soon .row{color:var(--dim)}
+.index li.soon .c{color:var(--dim)}
+.index li i{flex:none;align-self:center;width:10px;height:10px;border-radius:50%;background:var(--c)}
+.index li.soon i{background:transparent;border:1.5px solid #555}
+
+.foot{display:none}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#222;border:1px solid var(--line);padding:10px 16px;border-radius:10px;font-size:16px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:60;max-width:calc(100vw - 32px)}
+.toast.on{opacity:1}
+
+/* ---------- Mobile ---------- */
+@media (max-width:900px){
+  :root{--top:56px}
+  body{font-size:18px;line-height:1.6}
+  .top{gap:8px;padding:0 12px 0 16px;background:var(--bg);backdrop-filter:none;-webkit-backdrop-filter:none}
+  .brand{font-size:19px}
+  .top a.back{display:none}
+  .search{margin-left:0;max-width:none;position:static}
+  .search input{font-size:17px;padding:7px 8px}
+  .mapbtn{display:block;padding:7px 9px}
+  .results{position:fixed;top:var(--top);left:0;right:0;bottom:0;width:auto;max-height:none;border-radius:0;border-width:1px 0 0;padding:6px 8px 24px;box-shadow:none;background:#121212}
+  .results li{padding:13px 10px}
+
+  .layout{grid-template-columns:minmax(0,1fr);min-height:0}
+  .graph-wrap{display:none}
+  .graph-wrap.open{display:block;position:fixed;inset:0;z-index:50;height:auto;border:0;background:var(--bg)}
+  .viewtoggle,.mapreset,.az,#graph,.legend{display:none!important}
+
+  /* Carte mobile : vue centrée sur un terme, ses liens autour. */
+  .graph-wrap.open .ego{display:flex;flex-direction:column;height:100%}
+  .egobar{flex:none;display:flex;align-items:center;gap:8px;min-height:var(--top);padding:8px 12px;border-bottom:1px solid var(--line)}
+  .egobar button{font:inherit;font-size:16px;font-weight:600;color:var(--text);background:#1a1a1a;border:1px solid var(--line);border-radius:8px;min-height:44px;padding:0 14px;cursor:pointer}
+  .egobar .egoback{display:flex;align-items:center;gap:6px;padding:0 12px 0 10px}
+  .egobar .egoback[hidden]{display:none}
+  .mapclose{display:block;margin-left:auto}
+  .egostage{position:relative;flex:1 1 auto;min-height:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain}
+  .egonodes{position:relative;width:100%}
+  .egoedges{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+  .eg{position:absolute;left:0;top:0;will-change:transform,opacity}
+  .eg button{font:inherit;color:var(--text);background:transparent;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .eg .dot{flex:none;display:block;width:var(--d,14px);height:var(--d,14px);border-radius:50%;background:var(--c)}
+  .eg .lab{display:block;font-size:17px;line-height:1.2;font-weight:600;background:var(--bg);padding:2px 4px;border-radius:6px}
+  .eg .n{font-family:var(--mono);font-size:14px;font-weight:400;color:var(--muted);margin-left:6px;white-space:nowrap}
+  .eg .nb{display:flex;align-items:center;gap:8px;min-height:44px;padding:6px 4px;border-radius:10px}
+  .eg.l .nb{flex-direction:row-reverse;text-align:right}
+  .eg.r .nb{text-align:left}
+  .eg.tip .nb{flex-direction:column;gap:6px;text-align:center}
+  .eg.tip.up .nb{flex-direction:column-reverse}
+  .eg .nb:active .lab,.eg .nb:hover .lab{color:var(--c)}
+  .eg .nb:focus-visible{outline-offset:0}
+  .eg .nb:focus-visible .dot{box-shadow:0 0 0 3px var(--bg),0 0 0 5px #fff}
+  .eg.card{display:flex;flex-direction:column;align-items:center;text-align:center;padding:12px 16px 10px;border:1.5px solid var(--c);border-radius:16px;background:var(--bg)}
+  .eg.card .ct{display:block;min-height:44px;font-size:28px;line-height:1.08;font-weight:800;font-variation-settings:'opsz' 72;letter-spacing:-.01em;padding:4px 2px;border-radius:8px}
+  .eg.card .cc{display:block;font-size:15px;font-weight:600;color:var(--c);min-height:44px;padding:0 10px;border-radius:8px}
+  .eg.card.root{border-color:var(--line);padding:14px 22px}
+  .eg.card.root .cn{font-family:var(--mono);font-size:15px;color:var(--muted)}
+  .eg.card.pop>*{animation:egpop .42s cubic-bezier(.2,.8,.2,1)}
+  @keyframes egpop{from{opacity:.3;transform:scale(.82)}}
+  .egolist{padding:18px 16px 32px}
+  .egolist .crumb{font:inherit;font-size:16px;color:var(--muted);background:transparent;border:0;min-height:44px;padding:0;cursor:pointer;display:flex;align-items:center;gap:6px}
+  .egolist h2:focus{outline:none}
+  .egolist h2{margin:2px 0 10px;font-size:30px;line-height:1.1;font-style:italic;color:var(--c)}
+  .egolist ul{list-style:none}
+  .egolist li{border-top:1px solid var(--line)}
+  .egolist li button{width:100%;display:flex;align-items:baseline;column-gap:10px;min-height:52px;padding:13px 0;font:inherit;font-size:18px;text-align:left;color:var(--text);background:transparent;border:0;cursor:pointer}
+  .egolist li i{flex:none;width:10px;height:10px;border-radius:50%;background:var(--c);transform:translateY(-1px)}
+  .egolist li .t{margin-right:4px}
+  .egolist li .e{white-space:nowrap;font-family:var(--mono);font-size:14px;color:var(--muted)}
+  .egolist.in{animation:egfade .22s ease-out}
+  @keyframes egfade{from{opacity:0;transform:translateY(8px)}}
+  .egofoot{flex:none;padding:10px 16px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
+  .egofoot[hidden]{display:none}
+  .egoread{display:block;width:100%;min-height:48px;font:inherit;font-size:17px;font-weight:600;color:#0b0b0b;background:var(--c,var(--accent));border:0;border-radius:10px;cursor:pointer}
+  .egoread:focus-visible{outline-color:#fff}
+
+  .panel{padding:24px 16px calc(96px + env(safe-area-inset-bottom))}
+  h1{font-size:38px;margin-bottom:14px}
+  .index h1{font-size:44px}
+  .en{margin:-4px 0 16px}
+  .lead{font-size:20px;line-height:1.45}
+  h2{margin:32px 0 8px;font-size:20px}
+  .bubble{font-size:17px}
+
+  .rel{position:relative;display:flex;gap:8px;overflow-x:auto;margin:0 -16px 22px;padding:2px 16px 4px;scrollbar-width:none;scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .rel::-webkit-scrollbar{display:none}
+  .rel .tl{flex:none;scroll-snap-align:start;padding:8px 14px;font-size:16px}
+  .connexions{display:none}
+
+  .video{margin:24px 0 4px}
+  .schema{margin:24px -4px 8px;padding:14px 10px}
+  .video video{width:auto;max-width:100%;height:min(64vh,calc((100vw - 32px) * 16 / 9));height:min(64svh,calc((100vw - 32px) * 16 / 9));margin:0 auto}
+
+  .pager{position:fixed;left:0;right:0;bottom:0;z-index:30;margin:0;gap:0;padding:0 0 env(safe-area-inset-bottom);background:rgba(17,17,17,.97);border-top:1px solid var(--line);align-items:stretch}
+  .pager .all{display:none}
+  .pager a{align-items:center;min-height:56px;padding:8px 16px;color:var(--text);font-size:16px}
+  .pager .nt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+  .pager .prev{border-right:1px solid var(--line)}
+  .pager span.none{flex:1 1 0}
+
+  .index li a,.index li .row{padding:15px 0;flex-wrap:wrap;column-gap:10px;row-gap:0}
+  .catchips{display:flex;gap:8px;overflow-x:auto;margin:6px -16px 8px;padding:4px 16px 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .catchips::-webkit-scrollbar{display:none}
+  .catchips button{flex:none;display:flex;align-items:center;gap:7px;min-height:40px;font:inherit;font-size:15px;color:var(--muted);background:#161616;border:1px solid var(--line);border-radius:999px;padding:0 14px;cursor:pointer;white-space:nowrap}
+  .catchips button i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+  .catchips button[aria-pressed="true"]{color:var(--text);border-color:var(--c,#777);background:#1f1f1f}
+  .foot{display:block;padding:0 16px 32px;background:var(--panel);font-size:16px}
+  .foot a{color:var(--muted)}
+  body.has-pager .foot{padding-bottom:calc(88px + env(safe-area-inset-bottom))}
+  body.has-pager .panel{padding-bottom:24px}
+  .toast{bottom:calc(72px + env(safe-area-inset-bottom))}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+
+<!-- lex:jsonld -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"DefinedTerm","@id":"https://neopal.github.io/lexique/ia-generative/#term","name":"IA générative","description":"L'IA générative désigne les systèmes qui produisent un contenu nouveau, texte, image, son, vidéo ou code, à partir de ce qu'ils ont appris, plutôt que de trier ou classer l'existant.","url":"https://neopal.github.io/lexique/ia-generative/","inLanguage":"fr","inDefinedTermSet":{"@id":"https://neopal.github.io/lexique/#set"},"alternateName":["Generative AI","GenAI","gen AI","generative artificial intelligence","generative model","intelligence artificielle générative","modèle génératif"]},{"@type":"TechArticle","@id":"https://neopal.github.io/lexique/ia-generative/#article","headline":"IA générative","name":"IA générative | Lexique IA","description":"L'IA générative désigne les systèmes qui produisent un contenu nouveau, texte, image, son, vidéo ou code, à partir de ce qu'ils ont appris, plutôt que de trier ou classer l'existant.","url":"https://neopal.github.io/lexique/ia-generative/","mainEntityOfPage":"https://neopal.github.io/lexique/ia-generative/","inLanguage":"fr","image":"https://neopal.github.io/lexique/og/ia-generative.jpg","datePublished":"2026-10-29","dateModified":"2026-10-29","author":{"@id":"https://neopal.github.io/#person"},"publisher":{"@id":"https://neopal.github.io/#person"},"license":"https://creativecommons.org/licenses/by/4.0/","isAccessibleForFree":true,"articleSection":"Fondations","about":{"@id":"https://neopal.github.io/lexique/ia-generative/#term"},"mainEntity":{"@id":"https://neopal.github.io/lexique/ia-generative/#term"},"isPartOf":{"@id":"https://neopal.github.io/lexique/#set"},"mentions":[{"@id":"https://neopal.github.io/lexique/llm/#term"},{"@id":"https://neopal.github.io/lexique/modele-de-diffusion/#term"},{"@id":"https://neopal.github.io/lexique/multimodal/#term"},{"@id":"https://neopal.github.io/lexique/prediction-du-mot-suivant/#term"},{"@id":"https://neopal.github.io/lexique/donnees-d-entrainement/#term"},{"@id":"https://neopal.github.io/lexique/ai-slop/#term"},{"@id":"https://neopal.github.io/lexique/claude/#term"}],"citation":[{"@type":"CreativeWork","name":"Wikipédia, Markov chain, consulté le 29 octobre 2026 (premier article de Markov sur ses chaînes publié en 1906 ; étude ultérieure de la distribution des voyelles dans Eugène Onéguine de Pouchkine)","url":"https://en.wikipedia.org/wiki/Markov_chain"},{"@type":"CreativeWork","name":"Wikipédia, Generative AI, consulté le 29 octobre 2026 (texte probabiliste produit par une chaîne de Markov entraînée sur un corpus ; modèles discriminatifs puis génératifs ; VAE et GAN en 2014 ; transformer en 2017 ; Midjourney et Stable Diffusion en 2022 ; ChatGPT en novembre 2022 ; Théâtre D'opéra Spatial primé à la foire du Colorado ; critiques sur les copies presque identiques d'images protégées, procès Getty Images contre Stability AI)","url":"https://en.wikipedia.org/wiki/Generative_AI"},{"@type":"CreativeWork","name":"Goodfellow et al., Generative Adversarial Nets, NeurIPS 2014 (un générateur et un discriminateur entraînés l'un contre l'autre)","url":"https://papers.nips.cc/paper/5423-generative-adversarial-nets"}]},{"@type":"BreadcrumbList","@id":"https://neopal.github.io/lexique/ia-generative/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Lexique IA","item":"https://neopal.github.io/lexique/"},{"@type":"ListItem","position":2,"name":"IA générative","item":"https://neopal.github.io/lexique/ia-generative/"}]},{"@type":"Person","@id":"https://neopal.github.io/#person","name":"Pierre-Adrien Lair","url":"https://neopal.github.io/","jobTitle":"Senior Lead Analytics & AI, directeur du LAB IA Converteo","sameAs":["https://www.linkedin.com/in/pierre-adrien-lair-55a6a850/","https://x.com/pal_analytics"]},{"@type":"DefinedTermSet","@id":"https://neopal.github.io/lexique/#set","name":"Lexique IA","url":"https://neopal.github.io/lexique/"}]}</script>
+<!-- /lex:jsonld -->
+</head>
+<body class="has-pager">
+<header class="top">
+  <a class="brand" href="/lexique/" data-go="index">Lexique IA</a>
+  <div class="search">
+    <label class="sr" for="q">Chercher un terme</label>
+    <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Chercher un terme, en français ou en anglais"
+      role="combobox" aria-expanded="false" aria-controls="results" aria-autocomplete="list" aria-keyshortcuts="/ Control+K Meta+K">
+    <ul class="results" id="results" role="listbox" aria-label="Termes" hidden></ul>
+  </div>
+  <button class="mapbtn" id="mapOpen" type="button" aria-controls="map" aria-expanded="false">Carte</button>
+  <a class="navlink" href="/lexique/shorts/">Shorts</a>
+  <a class="back" href="/">Pierre-Adrien Lair, CV</a>
+</header>
+
+<div class="layout">
+  <div class="graph-wrap" id="map" aria-label="Carte des termes" data-view="map">
+    <div class="ego" id="ego">
+      <div class="egobar">
+        <button class="egoback" id="egoBack" type="button" hidden><span aria-hidden="true">←</span>Retour</button>
+        <button class="mapclose" id="mapClose" type="button">Fermer</button>
+      </div>
+      <div class="egostage" id="egoStage">
+        <div class="egonodes" id="egoNodes"><svg class="egoedges" id="egoEdges" aria-hidden="true"></svg></div>
+        <div class="egolist" id="egoList" hidden></div>
+      </div>
+      <div class="egofoot" id="egoFoot" hidden><button class="egoread" id="egoRead" type="button">Lire la fiche</button></div>
+    </div>
+    <button class="mapreset" id="mapReset" type="button" hidden><span aria-hidden="true">✕</span>Tous les termes<kbd aria-hidden="true">Échap</kbd></button>
+    <div class="viewtoggle" role="group" aria-label="Affichage des termes">
+      <button type="button" data-view="list" aria-pressed="false">Liste</button>
+      <button type="button" data-view="map" aria-pressed="true">Carte</button>
+    </div>
+    <nav class="az" id="az" aria-label="Termes de A à Z"></nav>
+    <svg id="graph" role="group" aria-label="Carte des termes et de leurs liens"></svg>
+    <div class="legend" id="legend" role="group" aria-label="Filtrer par catégorie"></div>
+  </div>
+  <main class="panel" id="panel">
+      <article class="term" data-term="ia-generative" style="--cat:#7CFFB2">
+        <div class="kicker">Fondations</div>
+        <h1>IA générative</h1>
+        <p class="en">En anglais : <span lang="en">Generative AI</span>, aussi <span lang="en">GenAI</span>, <span lang="en">gen AI</span>, <span lang="en">generative artificial intelligence</span>, <span lang="en">generative model</span></p><p class="en">Aussi appelé <span>intelligence artificielle générative</span>, <span>modèle génératif</span></p>
+        <nav class="rel" aria-label="Termes liés"><a class="tl live" style="--c:#7CFFB2" href="/lexique/llm/" data-go="llm">LLM (grand modèle de langage)</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/modele-de-diffusion/" data-go="modele-de-diffusion">Modèle de diffusion</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/multimodal/" data-go="multimodal">Multimodal</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/prediction-du-mot-suivant/" data-go="prediction-du-mot-suivant">Prédiction du mot suivant</a><a class="tl live" style="--c:#F5D76E" href="/lexique/donnees-d-entrainement/" data-go="donnees-d-entrainement">Données d&#39;entraînement</a><a class="tl live" style="--c:#F08DC2" href="/lexique/ai-slop/" data-go="ai-slop">AI slop</a><a class="tl live" style="--c:#F08DC2" href="/lexique/claude/" data-go="claude">Claude</a></nav>
+        <p class="lead">L&#39;IA générative désigne les systèmes qui produisent un contenu nouveau, texte, image, son, vidéo ou code, à partir de ce qu&#39;ils ont appris, plutôt que de trier ou classer l&#39;existant.</p>
+        
+        <h2>L'image</h2><p>Au bal du 14 juillet, l&#39;orchestre de Roland ne sort plus de partitions depuis longtemps. Il a joué tant de valses qu&#39;il en improvise une chaque année, que toute la salle croit connaître et que personne n&#39;a jamais entendue.</p>
+        <h2>Imagine</h2><p class="imagine">« Rédige-moi la lettre de contestation pour ce prélèvement », demandes-tu à l&#39;algorithme antifraude de ta banque. « Transaction suspecte, score 0,87 », répond-il.</p>
+        <figure class="schema"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="ia-generative-t"> <title id="ia-generative-t">Deux familles d'IA : l'IA qui classe reçoit un paiement et choisit une étiquette parmi celles prévues d'avance (fraude ou pas fraude) ; l'IA générative reçoit une consigne et fabrique un contenu nouveau, texte, image, son ou code, qui ressemble à ce qu'elle a vu sans en être la copie.</title> <text class="b" x="0" y="16">L'IA qui classe</text> <rect class="bx" x="0" y="28" width="100" height="40" rx="6"/> <text class="m" x="50" y="53" text-anchor="middle">un paiement</text> <path class="lm" d="M100 48 h22"/><path class="lm" d="M117 43 l5 5 l-5 5"/> <rect class="bx" x="126" y="28" width="80" height="40" rx="6"/> <text class="m" x="166" y="53" text-anchor="middle">modèle</text> <path class="lm" d="M206 48 h14 M220 34 v28 M220 34 h12 M220 62 h12"/> <rect class="bxa" x="236" y="18" width="124" height="30" rx="6"/> <text class="m ac" x="298" y="38" text-anchor="middle">fraude</text> <rect class="bx" x="236" y="52" width="124" height="30" rx="6"/> <text class="m mu" x="298" y="72" text-anchor="middle">pas fraude</text> <text class="i mu" x="0" y="112">Il choisit une case prévue d'avance.</text> <path class="lm dash" d="M0 132 h360"/> <text class="b ac" x="0" y="164">L'IA générative</text> <rect class="bx" x="0" y="176" width="100" height="40" rx="6"/> <text class="m" x="50" y="201" text-anchor="middle">une consigne</text> <path class="lm" d="M100 196 h22"/><path class="lm" d="M117 191 l5 5 l-5 5"/> <rect class="bx" x="126" y="176" width="80" height="40" rx="6"/> <text class="m" x="166" y="201" text-anchor="middle">modèle</text> <path class="la" d="M206 196 h22"/><path class="la" d="M223 191 l5 5 l-5 5"/> <rect class="bxa" x="236" y="166" width="124" height="80" rx="6"/> <rect class="fa" x="248" y="180" width="96" height="6" rx="2"/> <rect class="fa" x="248" y="194" width="80" height="6" rx="2"/> <rect class="fa" x="248" y="208" width="100" height="6" rx="2"/> <rect class="fl" x="248" y="222" width="44" height="6" rx="2"/> <text class="i mu" x="0" y="280">Il fabrique un contenu qui n'existait pas,</text> <text class="i mu" x="0" y="300">texte, image, son ou code.</text> </svg></figure>
+        <h2>Définition complète</h2><p>Pendant des décennies, l&#39;essentiel de l&#39;IA a servi à trier. Un filtre décide si un paiement est frauduleux, un moteur de recommandation range des vidéos, un modèle reconnaît un chat sur une photo, et chacun répond en choisissant parmi des réponses prévues d&#39;avance. L&#39;IA générative fabrique au contraire un exemple nouveau, une phrase, une image ou un morceau, qui ressemble à ce qu&#39;elle a vu à l&#39;<a class="tw" style="--c:#F5D76E" href="/lexique/entrainement/" data-go="entrainement">entraînement</a> sans en être la copie.</p><p>L&#39;idée est ancienne. Le mathématicien russe Andreï Markov a décrit en 1906 les chaînes qui portent son nom, puis s&#39;en est servi pour étudier l&#39;enchaînement des voyelles dans Eugène Onéguine, et une chaîne de Markov entraînée sur un texte sait en produire un autre au hasard. L&#39;<a class="tw" style="--c:#7CFFB2" href="/lexique/deep-learning/" data-go="deep-learning">apprentissage profond</a> a changé l&#39;échelle. En 2014 sont arrivés les GAN, où un réseau fabrique des images pendant qu&#39;un autre apprend à repérer les fausses, puis en 2017 le <a class="tw" style="--c:#7CFFB2" href="/lexique/transformer/" data-go="transformer">transformer</a>, sur lequel reposent les grands modèles de langage.</p><p>Le grand public l&#39;a découverte en 2022, avec Midjourney et Stable <a class="tw" style="--c:#7CFFB2" href="/lexique/modele-de-diffusion/" data-go="modele-de-diffusion">Diffusion</a> pour les images, puis ChatGPT le 30 novembre pour le texte. Cette année-là, Jason Allen a remporté un prix au concours d&#39;art de la foire du Colorado avec Théâtre D&#39;opéra Spatial, une image faite avec Midjourney. Comme ces systèmes produisent ce qui est plausible sans vérifier ce qui est vrai, la même mécanique écrit un bon mail de relance et invente une référence qui n&#39;existe pas.</p>
+        
+        
+        
+        <h2>Dans le jargon</h2><dl class="jargon"><div><dt>GenAI</dt><dd>l&#39;abréviation anglaise qu&#39;on lit dans les slides, les budgets et les intitulés de poste, pour tout ce qui produit du texte, des images ou du code</dd></div><div><dt>generative vs discriminative</dt><dd>la distinction des chercheurs ; un modèle discriminatif choisit une étiquette parmi celles qu&#39;on lui a données, un modèle génératif produit un nouvel exemple qui ressemble à ce qu&#39;il a vu</dd></div><div><dt>text-to-image</dt><dd>un modèle qui fabrique une image à partir d&#39;une phrase, comme Midjourney ou Stable Diffusion</dd></div></dl>
+        
+        <h2>Entendu au bureau</h2><div class="chat"><div class="bubble q">On a déjà de l&#39;IA dans l&#39;outil de scoring, on peut dire qu&#39;on fait de l&#39;IA générative ?</div><div class="bubble a">Ça dépend de ce qu&#39;il rend ; une note ou une catégorie, c&#39;est de l&#39;IA qui classe, et elle devient générative le jour où il rédige une relance, un résumé de dossier ou une réponse au client.</div></div>
+        <h2>À éviter</h2><div class="avoid"><b aria-hidden="true">✕</b><p>« L&#39;IA générative recopie des morceaux de ce qu&#39;elle a lu. » Elle produit une suite plausible à partir de régularités apprises, et le résultat est neuf la plupart du temps. Ses critiques lui reprochent pourtant de livrer parfois une quasi-copie d&#39;une œuvre très présente dans ses données, ce qui nourrit les procès sur le droit d&#39;auteur.</p></div>
+        <div class="connexions"><h2>Connexions</h2><div class="links"><a class="tl live" style="--c:#7CFFB2" href="/lexique/llm/" data-go="llm">LLM (grand modèle de langage)</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/modele-de-diffusion/" data-go="modele-de-diffusion">Modèle de diffusion</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/multimodal/" data-go="multimodal">Multimodal</a><a class="tl live" style="--c:#7CFFB2" href="/lexique/prediction-du-mot-suivant/" data-go="prediction-du-mot-suivant">Prédiction du mot suivant</a><a class="tl live" style="--c:#F5D76E" href="/lexique/donnees-d-entrainement/" data-go="donnees-d-entrainement">Données d&#39;entraînement</a><a class="tl live" style="--c:#F08DC2" href="/lexique/ai-slop/" data-go="ai-slop">AI slop</a><a class="tl live" style="--c:#F08DC2" href="/lexique/claude/" data-go="claude">Claude</a></div></div>
+        <h2>Citer cette définition</h2>
+        <div class="cite"><span class="ct">Pierre-Adrien Lair, « IA générative », Lexique IA, https://neopal.github.io/lexique/ia-generative/</span><button type="button" data-copy>Copier</button></div>
+        <p class="lic">Texte sous licence <a rel="license noopener" href="https://creativecommons.org/licenses/by/4.0/deed.fr" target="_blank">CC BY 4.0</a> : tu peux le reprendre, y compris dans un outil d'IA, en citant la source.</p>
+        <nav class="pager" aria-label="Fiches">
+          <a class="prev" href="/lexique/claude/" data-go="claude" rel="prev"><span aria-hidden="true">←</span><span class="nt">Claude</span></a>
+          <a class="all" href="/lexique/" data-go="index">Tous les termes</a>
+          <a class="next" href="/lexique/automatiser-ou-augmenter/" data-go="automatiser-ou-augmenter" rel="next"><span aria-hidden="true">→</span><span class="nt">Automatiser ou augmenter</span></a>
+        </nav>
+      </article>
+  </main>
+</div>
+<footer class="foot"><a href="/">Pierre-Adrien Lair, CV</a></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+// BASE : dossier du lexique, quel que soit le sous-dossier qui sert la page
+// (/lexique/, /lexique/<id>/). <html data-base="..."> l'emporte si présent.
+(function () {
+  var m = location.pathname.match(/^(.*?\/lexique\/)/);
+  var base = document.documentElement.getAttribute('data-base') || (m ? m[1] : '/lexique/');
+  if (base.slice(-1) !== '/') base += '/';
+  window.LEX_BASE = base;
+  var files = ['terms.js', 'schemas.js', 'render.js'];
+  var pending = files.length;
+  files.forEach(function (f) {
+    var s = document.createElement('script');
+    s.src = base + f;
+    s.async = false;
+    s.onload = function () { if (--pending === 0) window.__lexBoot(); };
+    s.onerror = function () {
+      document.getElementById('panel').innerHTML = '<p>Impossible de charger ' + f + '.</p>';
+    };
+    document.head.appendChild(s);
+  });
+})();
+
+window.__lexBoot = function () {
+  const BASE = window.LEX_BASE;
+  const track = (event, props) => { if (window.track) window.track(event, props); };
+  const R = window.LexRender;
+  const CATS = window.DICO_CATEGORIES;
+  const TERMS = window.DICO_TERMS;
+  const SCHEMAS = window.LEX_SCHEMAS || {};
+  TERMS.forEach((t) => { if (SCHEMAS[t.id]) t.schema = SCHEMAS[t.id]; });
+  const URLS = document.documentElement.getAttribute('data-urls') === 'query' ? 'query' : 'path';
+  const OPTS = {base: BASE, urls: URLS};
+  const SITE = 'https://neopal.github.io';
+  const byId = Object.fromEntries(TERMS.map((t) => [t.id, t]));
+  const panel = document.getElementById('panel');
+  const svg = document.getElementById('graph');
+  const map = document.getElementById('map');
+  const NS = 'http://www.w3.org/2000/svg';
+  const mqReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const mqMobile = window.matchMedia('(max-width: 900px)');
+  const color = (t) => (CATS[t.cat] || {}).color || '#7CFFB2';
+
+  function toast(msg) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.classList.add('on');
+    clearTimeout(toast.t);
+    toast.t = setTimeout(() => el.classList.remove('on'), 1800);
+  }
+
+  // ---------- Routage ----------
+  // Terme courant : ?term=<id>, sinon /lexique/<id>/, sinon <html data-term> (au chargement seulement).
+  function termFromLocation(initial) {
+    const q = new URLSearchParams(location.search).get('term');
+    if (q) return q;
+    let path = location.pathname;
+    try { path = decodeURIComponent(path); } catch (e) { /* chemin brut */ }
+    if (path.indexOf(BASE) === 0) {
+      const seg = path.slice(BASE.length).split('/').filter(Boolean)[0];
+      if (seg && seg !== 'index.html') return seg;
+    }
+    return (initial && document.documentElement.getAttribute('data-term')) || 'index';
+  }
+
+  function setCanonical(id) {
+    const href = SITE + R.termUrl(id, {base: BASE, urls: 'path'});
+    const c = document.querySelector('link[rel="canonical"]');
+    if (c) c.href = href;
+  }
+
+  // via : d'où vient le clic (carte, recherche, texte...), pour l'événement term_opened.
+  let current = null;
+  function go(id, push = true, focus = push, via) {
+    if (id === 'index' || !id || !byId[id]) {
+      current = null;
+      panel.innerHTML = R.renderIndex(CATS, TERMS, OPTS);
+      document.title = R.pageTitle(null);
+      setCanonical('');
+      if (push) history.pushState({}, '', R.termUrl('', OPTS));
+    } else {
+      const t = byId[id];
+      if (t.status !== 'live') { toast(`« ${t.title} » arrive bientôt.`); track('term_soon_clicked', {term_id: id, via}); return false; }
+      current = t;
+      panel.innerHTML = R.renderTerm(t, CATS, TERMS, OPTS);
+      document.title = R.pageTitle(t);
+      setCanonical(id);
+      if (push) {
+        history.pushState({id}, '', R.termUrl(id, OPTS));
+        track('term_opened', {term_id: id, term_category: t.cat, via});
+      }
+    }
+    document.body.classList.toggle('has-pager', !!current);
+    syncReset();
+    highlight();
+    if (typeof markAz === 'function') markAz();
+    applyListFilter();
+    window.scrollTo({top: 0, behavior: 'auto'});
+    if (focus) { const h = panel.querySelector('h1'); if (h) { h.tabIndex = -1; h.focus({preventScroll: true}); } }
+    return true;
+  }
+
+  const VIA = [['.pager', 'pager'], ['.tw', 'texte'], ['.connexions', 'connexions'], ['.az', 'liste'], ['.top', 'entete'], ['#panel', 'index']];
+  const viaOf = (el) => (VIA.find(([sel]) => el.closest(sel)) || [, 'autre'])[1];
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-go]');
+    if (!b || e.defaultPrevented) return;
+    if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    go(b.dataset.go, true, true, viaOf(b));
+  });
+  window.addEventListener('popstate', () => go(termFromLocation(false), false));
+  // Lecture d'une vidéo de fiche (l'événement play ne remonte pas : écoute en capture).
+  document.addEventListener('play', (e) => {
+    if (e.target.tagName === 'VIDEO' && current) track('video_played', {term_id: current.id});
+  }, true);
+  // « Citer cette définition » : copie la référence.
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-copy]');
+    if (!b) return;
+    const txt = (b.closest('.cite').querySelector('.ct') || {}).textContent || '';
+    const done = () => { toast('Citation copiée'); track('citation_copied', {term_id: current && current.id}); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt.trim()).then(done, () => toast('Copie impossible : sélectionne le texte'));
+    else toast('Copie impossible : sélectionne le texte');
+  });
+
+  // ---------- Recherche ----------
+  const input = document.getElementById('q');
+  const list = document.getElementById('results');
+  let results = [];
+  let active = -1;
+  const FIELD_LABEL = {en: '', alias: '', jargon: '', solution: ''};
+
+  const PH = {desk: input.placeholder, mob: 'Terme, FR ou EN'};
+  const setPlaceholder = () => { input.placeholder = mqMobile.matches ? PH.mob : PH.desk; };
+  setPlaceholder();
+  mqMobile.addEventListener('change', setPlaceholder);
+
+  function renderResults() {
+    results = R.search(input.value, TERMS);
+    if (!results.length) {
+      list.innerHTML = `<li class="empty" role="option" aria-disabled="true">Aucun terme pour « ${R.escapeHtml(input.value.trim())} »</li>`;
+      active = -1;
+    } else {
+      list.innerHTML = results.map((r, i) => {
+        const t = r.term;
+        const showHit = r.field && r.field in FIELD_LABEL && R.normalize(r.hit) !== R.normalize(t.title);
+        const side = t.status === 'live' ? R.escapeHtml((CATS[t.cat] || {}).label || '') : 'à venir';
+        return `<li id="opt-${i}" role="option" class="${t.status}" style="--c:${color(t)}" aria-selected="false" ${t.status !== 'live' ? 'aria-disabled="true"' : ''} data-i="${i}">
+          <span class="t">${R.escapeHtml(t.title)}</span>${showHit ? `<span class="h"${r.field === 'en' ? ' lang="en"' : ''}>${R.escapeHtml(r.hit)}</span>` : ''}<span class="c">${side}</span></li>`;
+      }).join('');
+      active = input.value.trim() ? 0 : -1;
+    }
+    setActive(active);
+    openList(true);
+  }
+
+  function setActive(i) {
+    const items = list.querySelectorAll('li[data-i]');
+    items.forEach((li) => li.setAttribute('aria-selected', 'false'));
+    active = i;
+    if (i >= 0 && items[i]) {
+      items[i].setAttribute('aria-selected', 'true');
+      input.setAttribute('aria-activedescendant', items[i].id);
+      items[i].scrollIntoView({block: 'nearest'});
+    } else {
+      input.removeAttribute('aria-activedescendant');
+    }
+  }
+
+  function openList(on) {
+    list.hidden = !on;
+    input.setAttribute('aria-expanded', on ? 'true' : 'false');
+    document.body.style.overflow = on && mqMobile.matches ? 'hidden' : '';
+  }
+
+  function choose(i) {
+    const r = results[i];
+    if (!r) return;
+    if (go(r.term.id, true, true, 'recherche')) {
+      input.value = '';
+      openList(false);
+      input.blur();
+    }
+  }
+
+  input.addEventListener('input', renderResults);
+  // Recherche suivie après une pause de frappe : les requêtes sans résultat disent quelles fiches manquent.
+  let searchTimer, lastSearch = '';
+  input.addEventListener('input', () => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
+      const q = input.value.trim();
+      if (q.length < 2 || R.normalize(q) === lastSearch) return;
+      lastSearch = R.normalize(q);
+      track('lexique_searched', {query: q.slice(0, 100), results_count: results.length});
+    }, 1200);
+  });
+  input.addEventListener('focus', renderResults);
+  input.addEventListener('blur', () => setTimeout(() => { if (document.activeElement !== input) openList(false); }, 120));
+  input.addEventListener('keydown', (e) => {
+    const n = results.length;
+    if (e.key === 'ArrowDown') { e.preventDefault(); if (list.hidden) renderResults(); else if (n) setActive((active + 1) % n); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); if (n) setActive(active <= 0 ? n - 1 : active - 1); }
+    else if (e.key === 'Enter') { e.preventDefault(); if (active >= 0) choose(active); else if (n === 1) choose(0); }
+    else if (e.key === 'Escape') {
+      e.preventDefault();
+      if (input.value) { input.value = ''; renderResults(); }
+      else { openList(false); input.blur(); }
+    }
+  });
+  list.addEventListener('mousedown', (e) => e.preventDefault());
+  list.addEventListener('click', (e) => {
+    const li = e.target.closest('li[data-i]');
+    if (li) choose(+li.dataset.i);
+  });
+  list.addEventListener('mousemove', (e) => {
+    const li = e.target.closest('li[data-i]');
+    if (li && +li.dataset.i !== active) setActive(+li.dataset.i);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    const k = e.key.toLowerCase();
+    const typing = /^(input|textarea|select)$/i.test(e.target.tagName) || e.target.isContentEditable;
+    if ((e.ctrlKey || e.metaKey) && k === 'k') { e.preventDefault(); closeMap(); input.focus(); input.select(); return; }
+    if (e.key === '/' && !typing && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); closeMap(); input.focus(); return; }
+    if (e.key === 'Escape' && map.classList.contains('open')) closeMap(true);
+    else if (e.key === 'Escape' && !typing && !mqMobile.matches && (current || catFilter)) resetAll();
+  });
+
+  // ---------- Carte (graphe) ----------
+  const edges = [];
+  const seen = new Set();
+  const nbr = Object.fromEntries(TERMS.map((t) => [t.id, new Set()]));
+  TERMS.forEach((t) => (t.links || []).forEach((l) => {
+    if (!byId[l] || l === t.id) return;
+    nbr[t.id].add(l); nbr[l].add(t.id);
+    const k = [t.id, l].sort().join('|');
+    if (!seen.has(k)) { seen.add(k); edges.push([t.id, l]); }
+  }));
+  // Taille d'un nœud : racine du nombre de liens, pour que les notions carrefour ressortent sans écraser les autres.
+  const deg = (t) => nbr[t.id].size;
+  const sqs = TERMS.map((t) => Math.sqrt(deg(t)));
+  const sqMin = Math.min(...sqs), sqMax = Math.max(...sqs);
+  const radius = (t) => (t.status !== 'live' ? 8 : 9 + ((Math.sqrt(deg(t)) - sqMin) / ((sqMax - sqMin) || 1)) * 21);
+  // Chaque catégorie a sa zone, réparties sur une ellipse large ; les termes partent groupés dans leur zone.
+  const catKeys = Object.keys(CATS);
+  const catCenter = Object.fromEntries(catKeys.map((c, i) => {
+    const a = (i / catKeys.length) * Math.PI * 2 - Math.PI / 2;
+    return [c, {x: Math.cos(a) * 760, y: Math.sin(a) * 440}];
+  }));
+  const perCat = {};
+  const nodes = TERMS.map((t) => {
+    const c = catCenter[t.cat] || {x: 0, y: 0};
+    const k = (perCat[t.cat] = (perCat[t.cat] || 0) + 1);
+    const a = k * 2.4;
+    return {t, cx: c.x, cy: c.y, x: c.x + Math.cos(a) * 30 * Math.sqrt(k), y: c.y + Math.sin(a) * 30 * Math.sqrt(k), vx: 0, vy: 0,
+      r: radius(t), m: 1 + deg(t) * 0.08};
+  });
+  const nodeOf = Object.fromEntries(nodes.map((n) => [n.t.id, n]));
+  // Mise en place, calculée une fois au chargement : les liens internes à une catégorie tirent fort,
+  // les liens entre catégories tirent peu, pour que les grappes restent lisibles.
+  for (let step = 0; step < 400; step++) {
+    for (const a of nodes) {
+      for (const b of nodes) {
+        if (a === b) continue;
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const d2 = Math.max(dx * dx + dy * dy, 100);
+        const f = (a.t.cat === b.t.cat ? 7000 : 7000) / d2;
+        a.vx += (dx / Math.sqrt(d2)) * f;
+        a.vy += (dy / Math.sqrt(d2)) * f;
+      }
+      a.vx += (a.cx - a.x) * 0.018;
+      a.vy += (a.cy - a.y) * 0.018;
+    }
+    for (const [s, d] of edges) {
+      const a = nodeOf[s], b = nodeOf[d];
+      const dx = b.x - a.x, dy = b.y - a.y;
+      const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+      const f = a.t.cat === b.t.cat ? (dist - 150) * 0.005 : (dist - 300) * 0.0005;
+      a.vx += (dx / dist) * f; a.vy += (dy / dist) * f;
+      b.vx -= (dx / dist) * f; b.vy -= (dy / dist) * f;
+    }
+    for (const n of nodes) { n.x += n.vx; n.y += n.vy; n.vx *= 0.6; n.vy *= 0.6; }
+  }
+  // Anti-collision sur les cercles seuls : les libellés ne déplacent pas les nœuds (fit() choisit lesquels afficher).
+  let catFilter = null;
+  let hoverId = null;
+  for (const n of nodes) { n.hw = n.r + 12; n.top = n.r + 12; n.bottom = n.r + 12; }
+  function collide() {
+  for (let step = 0; step < 1500; step++) {
+    let moved = false;
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const a = nodes[i], b = nodes[j];
+        const ox = a.hw + b.hw - Math.abs(a.x - b.x);
+        const up = a.y <= b.y ? a : b, down = up === a ? b : a;
+        const oy = up.bottom + down.top - (down.y - up.y);
+        if (ox <= 0 || oy <= 0) continue;
+        moved = true;
+        // Libellés larges : on préfère écarter à l'horizontale, sinon le graphe s'empile en colonne.
+        if (ox < oy * 3) {
+          const s = (a.x <= b.x ? -1 : 1) * ox / 2 + (a.x === b.x ? 0.5 : 0);
+          a.x += s; b.x -= s;
+        } else {
+          up.y -= oy / 2; down.y += oy / 2;
+        }
+      }
+    }
+    if (!moved) break;
+  }
+  }
+  collide();
+  let spanX, spanY;
+  function spans() {
+    spanX = Math.max(...nodes.map((n) => n.x)) - Math.min(...nodes.map((n) => n.x));
+    spanY = Math.max(...nodes.map((n) => n.y)) - Math.min(...nodes.map((n) => n.y));
+  }
+  spans();
+  const gHalos = document.createElementNS(NS, 'g');
+  const gEdges = document.createElementNS(NS, 'g');
+  const gNodes = document.createElementNS(NS, 'g');
+  gHalos.setAttribute('aria-hidden', 'true');
+  gHalos.style.pointerEvents = 'none';
+  gEdges.style.pointerEvents = 'none';
+  svg.append(gHalos, gEdges, gNodes);
+  // Un halo par catégorie, derrière ses termes, avec son nom au-dessus.
+  const haloEls = catKeys.map((cat) => {
+    const c = document.createElementNS(NS, 'circle');
+    c.setAttribute('fill', CATS[cat].color);
+    c.setAttribute('fill-opacity', '0.05');
+    c.setAttribute('stroke', CATS[cat].color);
+    c.setAttribute('stroke-opacity', '0.16');
+    c.setAttribute('stroke-dasharray', '3 6');
+    const txt = document.createElementNS(NS, 'text');
+    txt.textContent = CATS[cat].label;
+    txt.setAttribute('class', 'clab');
+    txt.setAttribute('text-anchor', 'middle');
+    txt.setAttribute('fill', CATS[cat].color);
+    gHalos.append(c, txt);
+    return {cat, c, txt};
+  });
+  const edgeEls = edges.map(([s, d]) => {
+    const l = document.createElementNS(NS, 'line');
+    gEdges.append(l);
+    return {s, d, same: byId[s].cat === byId[d].cat, el: l};
+  });
+  const nodeEls = nodes.map((n) => {
+    const live = n.t.status === 'live';
+    const g = document.createElementNS(NS, 'g');
+    g.dataset.id = n.t.id;
+    g.style.cursor = live ? 'pointer' : 'default';
+    g.setAttribute('tabindex', live ? '0' : '-1');
+    g.setAttribute('role', 'link');
+    g.setAttribute('aria-label', live ? n.t.title : `${n.t.title}, à venir`);
+    const c = document.createElementNS(NS, 'circle');
+    c.setAttribute('r', n.r);
+    c.setAttribute('fill', live ? color(n.t) : '#1a1a1a');
+    const txt = document.createElementNS(NS, 'text');
+    txt.textContent = n.t.graphLabel || n.t.title;
+    txt.setAttribute('y', n.r + 20);
+    txt.setAttribute('text-anchor', 'middle');
+    txt.setAttribute('fill', live ? '#f2f2f2' : '#8a8a8a');
+    txt.setAttribute('font-family', 'IBM Plex Mono, monospace');
+    txt.setAttribute('font-weight', live ? '600' : '400');
+    txt.setAttribute('font-size', live ? '15' : '12');
+    g.append(c, txt);
+    const pick = () => { if (go(n.t.id, true, true, 'carte')) closeMap(false); };
+    g.addEventListener('click', () => { if (suppressClick) { suppressClick = false; return; } pick(); });
+    g.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
+    g.addEventListener('pointerenter', () => { if (!drag) setHover(n.t.id); });
+    g.addEventListener('pointerleave', () => { if (!drag) setHover(null); });
+    g.addEventListener('focus', () => setHover(n.t.id));
+    g.addEventListener('blur', () => setHover(null));
+    gNodes.append(g);
+    return {n, g, c, txt};
+  });
+  function setHover(id) {
+    if (hoverId === id) return;
+    hoverId = id;
+    highlight();
+  }
+  // Mise en avant : le terme survolé (sinon la fiche ouverte), toutes ses connexions et ses voisins ;
+  // le filtre de catégorie estompe le reste.
+  function highlight() {
+    const id = hoverId || (current && current.id);
+    const near = new Set(id ? [id, ...nbr[id]] : []);
+    edgeEls.forEach((e) => {
+      const on = id && (e.s === id || e.d === id);
+      const out = catFilter && !(byId[e.s].cat === catFilter && byId[e.d].cat === catFilter);
+      let stroke = e.same ? color(byId[e.s]) : '#3a3a3a';
+      let op = e.same ? 0.24 : 0.32;
+      if (on) { stroke = color(byId[id]); op = 0.9; }
+      else if (id) op *= 0.35;
+      if (out && !on) op = 0.04;
+      e.el.setAttribute('stroke', stroke);
+      e.el.setAttribute('stroke-opacity', op.toFixed(2));
+      e.el.setAttribute('stroke-width', on ? '2.5' : '1.5');
+    });
+    nodeEls.forEach(({n, g, c}) => {
+      const out = !!catFilter && n.t.cat !== catFilter;
+      const isNear = near.has(n.t.id);
+      const far = (!!id && !isNear) || (out && !isNear);
+      g.style.opacity = isNear ? '1' : out ? '0.1' : far ? '0.3' : '1';
+      // Les libellés estompés réapparaissent au survol ; les petits nœuds montrent le leur quand ils sont concernés.
+      g.classList.toggle('far', far);
+      g.classList.toggle('show', isNear);
+      const live = n.t.status === 'live';
+      if (n.t.id === id) { c.setAttribute('stroke', 'rgba(255,255,255,.85)'); c.setAttribute('stroke-width', current && current.id === n.t.id ? '6' : '3'); }
+      else if (current && current.id === n.t.id) { c.setAttribute('stroke', 'rgba(255,255,255,.85)'); c.setAttribute('stroke-width', '6'); }
+      else { c.setAttribute('stroke', live ? color(n.t) : '#3a3a3a'); c.setAttribute('stroke-width', live ? '0' : '1.5'); }
+    });
+    haloEls.forEach((h) => { h.c.style.opacity = h.txt.style.opacity = catFilter && h.cat !== catFilter ? '0.15' : id ? '0.5' : '1'; });
+  }
+  // Sur un écran en portrait, la carte est étirée en hauteur (positions seulement, pas les libellés).
+  let sy = 1;
+  const lx = (n) => n.x;
+  const ly = (n) => n.y * sy;
+  function mapVisible() {
+    // Sur mobile, le graphe complet n'est jamais affiché : la carte passe par la vue centrée.
+    return !mqMobile.matches && map.dataset.view === 'map';
+  }
+  // Vue liste A-Z (desktop) : tri sans accents ni guillemets, groupé par lettre.
+  const az = document.getElementById('az');
+  const sortKey = (t) => R.normalize((t.title || '').replace(/[«»"]/g, '').trim());
+  const groups = {};
+  [...TERMS].sort((a, b) => sortKey(a).localeCompare(sortKey(b), 'fr')).forEach((t) => {
+    const L = (sortKey(t)[0] || '#').toUpperCase();
+    (groups[L] = groups[L] || []).push(t);
+  });
+  az.innerHTML = '<div class="cols">' + Object.keys(groups).map((L) => `<section><h3>${L}</h3><ul>${groups[L].map((t) => {
+    const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${R.escapeHtml(t.en)}</span>` : '';
+    return t.status === 'live'
+      ? `<li data-cat="${t.cat}"><a href="${R.termUrl(t.id, OPTS)}" data-go="${t.id}" data-az="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="t">${R.escapeHtml(t.title)}</span>${en}</a></li>`
+      : `<li data-cat="${t.cat}"><span class="soon"><i aria-hidden="true"></i>${R.escapeHtml(t.title)}</span></li>`;
+  }).join('')}</ul></section>`).join('') + '</div>';
+  function markAz() {
+    az.querySelectorAll('a.on').forEach((a) => { a.classList.remove('on'); a.removeAttribute('aria-current'); });
+    if (!current) return;
+    const a = az.querySelector(`a[data-az="${current.id}"]`);
+    if (a) { a.classList.add('on'); a.setAttribute('aria-current', 'page'); if (map.dataset.view === 'list') a.scrollIntoView({block: 'nearest'}); }
+  }
+  // ---------- Filtre par catégorie ----------
+  // Un seul état, partagé par la carte, la liste A-Z et l'index du panneau (puces sur mobile).
+  function applyListFilter() {
+    document.querySelectorAll('button[data-cat]').forEach((b) => b.setAttribute('aria-pressed', String((b.dataset.cat || null) === catFilter)));
+    document.querySelectorAll('.az li[data-cat], .index li[data-cat]').forEach((li) => { li.hidden = !!catFilter && li.dataset.cat !== catFilter; });
+    az.querySelectorAll('section').forEach((s) => { s.hidden = !s.querySelector('li:not([hidden])'); });
+  }
+  // Bouton « Tous les termes » sur la carte : referme la fiche et retire le filtre, pour revoir toute la carte.
+  const resetBtn = document.getElementById('mapReset');
+  function syncReset() { resetBtn.hidden = !current && !catFilter; }
+  function resetAll() {
+    catFilter = null;
+    applyListFilter();
+    if (current) go('index'); else { highlight(); syncReset(); }
+    if (mapVisible()) { fit(); startLoop(); }
+  }
+  resetBtn.addEventListener('click', resetAll);
+  function setFilter(c) {
+    catFilter = c && c !== catFilter ? c : null;
+    if (catFilter) track('category_filtered', {category: catFilter});
+    applyListFilter();
+    syncReset();
+    highlight();
+    if (mapVisible()) { fit(); startLoop(); }
+  }
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('button[data-cat]');
+    if (b) setFilter(b.dataset.cat);
+  });
+  function setView(v, save = true) {
+    map.dataset.view = v;
+    map.querySelectorAll('.viewtoggle button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.view === v)));
+    if (save) { try { localStorage.setItem('lexique-view', v); } catch (e) {} }
+    if (v === 'map') { fit(); startLoop(); } else markAz();
+  }
+  map.querySelectorAll('.viewtoggle button').forEach((b) => b.addEventListener('click', () => setView(b.dataset.view)));
+  function fit() {
+    const box = svg.getBoundingClientRect();
+    if (!box.width || !box.height) return;
+    const legendH = document.getElementById('legend').offsetHeight || 0;
+    const topH = mqMobile.matches ? 56 : 0;
+    const gut = mqMobile.matches ? 12 : 40;
+    const usableW = Math.max(120, box.width - gut * 2);
+    const usableH = Math.max(120, box.height - legendH - topH - gut);
+    sy = usableH > usableW ? Math.min(2.4, Math.max(1, (usableH / usableW) * (spanX / spanY) * 0.8)) : 1;
+    // Avec un filtre, on cadre sur la catégorie choisie.
+    const framed = (n) => !catFilter || n.t.cat === catFilter;
+    const bounds = (ns) => ({
+      minX: Math.min(...ns.map((n) => lx(n) - n.r)), maxX: Math.max(...ns.map((n) => lx(n) + n.r)),
+      minY: Math.min(...ns.map((n) => ly(n) - n.r)), maxY: Math.max(...ns.map((n) => ly(n) + n.r)),
+    });
+    // Marge en pixels autour des cercles pour les libellés du bord (90 px de chaque côté, 40 dessous, 30 dessus pour les halos).
+    const zoom = (o) => Math.min((usableW - 180) / (o.maxX - o.minX || 1), (usableH - 70) / (o.maxY - o.minY || 1));
+    const b = bounds(nodes.filter(framed));
+    // Zoom d'une catégorie plafonné à 3x la vue d'ensemble, pour que les billes gardent une taille raisonnable.
+    const k = Math.min(zoom(b), zoom(bounds(nodes)) * 3);
+    const padX = Math.max(90 / k, ((usableW / k) - (b.maxX - b.minX)) / 2);
+    const padY = Math.max(35 / k, ((usableH / k) - (b.maxY - b.minY)) / 2);
+    b.minX -= padX; b.maxX += padX; b.minY -= padY; b.maxY += padY;
+    placeHalos(k);
+    placeLabels(k, framed, b);
+    b.minX -= gut / k; b.maxX += gut / k;
+    const minY = b.minY - (topH + gut) / k;
+    const maxY = b.maxY + legendH / k;
+    svg.setAttribute('viewBox', `${b.minX.toFixed(1)} ${minY.toFixed(1)} ${(b.maxX - b.minX).toFixed(1)} ${(maxY - minY).toFixed(1)}`);
+    svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    highlight();
+    draw(performance.now());
+  }
+  // Libellés : taille constante à l'écran. On les pose du terme le plus relié au moins relié, et on garde ceux qui
+  // ne touchent ni un libellé déjà posé ni un cercle ; les autres apparaissent au survol. Plus on zoome (filtre,
+  // grand écran), plus il y en a.
+  function placeLabels(k, framed, view) {
+    const boxes = [];
+    const inside = (r) => r.x1 >= view.minX && r.x2 <= view.maxX && r.y1 >= view.minY && r.y2 <= view.maxY;
+    nodes.forEach((n) => boxes.push({x1: lx(n) - n.r, x2: lx(n) + n.r, y1: ly(n) - n.r, y2: ly(n) + n.r, own: n}));
+    // Noms de catégorie d'abord : au-dessus du halo, sinon au-dessous, sinon masqués (la légende reste là).
+    haloEls.forEach((h) => {
+      if (!h.geo) return;
+      const {cx, cy, r, size} = h.geo;
+      const w = (h.txt.getComputedTextLength() || 0) / 2 + 4 / k;
+      const spots = [
+        {y: cy - r - size * 0.5, r: {x1: cx - w, x2: cx + w, y1: cy - r - size * 1.4, y2: cy - r - size * 0.1}},
+        {y: cy + r + size * 1.2, r: {x1: cx - w, x2: cx + w, y1: cy + r + size * 0.2, y2: cy + r + size * 1.5}},
+      ];
+      const spot = spots.find((s) => inside(s.r) && !boxes.some((o) => s.r.x1 < o.x2 && o.x1 < s.r.x2 && s.r.y1 < o.y2 && o.y1 < s.r.y2));
+      h.txt.style.visibility = spot ? '' : 'hidden';
+      if (spot) { h.txt.setAttribute('y', spot.y.toFixed(1)); boxes.push(spot.r); }
+    });
+    const order = nodeEls.slice().sort((a, b) => (framed(b.n) - framed(a.n)) || (deg(b.n.t) - deg(a.n.t)));
+    order.forEach(({n, g, txt}) => {
+      const size = (n.t.status === 'live' ? 13 : 11) / k;
+      txt.setAttribute('font-size', size.toFixed(1));
+      const w = (txt.getComputedTextLength() || 0) + 6 / k;
+      const gap = 4 / k;
+      const x = lx(n), y = ly(n);
+      // Positions essayées dans l'ordre : dessous, dessus, à droite, à gauche. Un libellé caché revient dessous.
+      const spots = [
+        {anchor: 'middle', tx: 0, ty: n.r + size * 1.15, r: {x1: x - w / 2, x2: x + w / 2, y1: y + n.r + size * 0.15, y2: y + n.r + size * 1.4}},
+        {anchor: 'middle', tx: 0, ty: -n.r - size * 0.45, r: {x1: x - w / 2, x2: x + w / 2, y1: y - n.r - size * 1.35, y2: y - n.r - size * 0.1}},
+        {anchor: 'start', tx: n.r + gap, ty: size * 0.35, r: {x1: x + n.r, x2: x + n.r + gap + w, y1: y - size * 0.65, y2: y + size * 0.6}},
+        {anchor: 'end', tx: -n.r - gap, ty: size * 0.35, r: {x1: x - n.r - gap - w, x2: x - n.r, y1: y - size * 0.65, y2: y + size * 0.6}},
+      ];
+      const free = (r) => inside(r) && !boxes.some((o) => o.own !== n && r.x1 < o.x2 && o.x1 < r.x2 && r.y1 < o.y2 && o.y1 < r.y2);
+      const spot = framed(n) ? spots.find((s) => free(s.r)) : null;
+      const s = spot || spots[0];
+      txt.setAttribute('text-anchor', s.anchor);
+      txt.setAttribute('x', s.tx.toFixed(1));
+      txt.setAttribute('y', s.ty.toFixed(1));
+      g.classList.toggle('minor', !spot);
+      if (spot) boxes.push(spot.r);
+    });
+  }
+  function placeHalos(k) {
+    haloEls.forEach((h) => {
+      const ns = nodes.filter((n) => n.t.cat === h.cat);
+      if (!ns.length) return;
+      const cx = ns.reduce((s, n) => s + lx(n), 0) / ns.length;
+      const cy = ns.reduce((s, n) => s + ly(n), 0) / ns.length;
+      // Rayon : 75 % des termes dedans, pour qu'un terme isolé n'étire pas le halo sur toute la carte.
+      const ds = ns.map((n) => Math.hypot(lx(n) - cx, ly(n) - cy) + n.r).sort((a, b) => a - b);
+      const r = ds[Math.floor((ds.length - 1) * 0.75)] + 30;
+      h.c.setAttribute('cx', cx.toFixed(1)); h.c.setAttribute('cy', cy.toFixed(1)); h.c.setAttribute('r', r.toFixed(1));
+      const size = 12 / k;
+      h.txt.setAttribute('font-size', size.toFixed(1));
+      h.txt.setAttribute('x', cx.toFixed(1));
+      h.geo = {cx, cy, r, size};
+    });
+  }
+  // ---------- Carte vivante ----------
+  // Chaque nœud est une bille tenue à sa place par un ressort, et chaque lien garde l'écart d'origine entre ses deux bouts.
+  // On peut attraper une bille et la lancer : ses voisins suivent, puis tout revient en place. Le curseur qui passe
+  // vite pousse un peu les billes sur son chemin.
+  let drag = null; // {n, x, y, ox, oy, sx, sy, moved, id}
+  let pointer = null; // {x, y, vx, vy}
+  let suppressClick = false;
+  let energy = 0;
+  function step(t) {
+    const amp = mqReduced.matches ? 0 : 4;
+    nodes.forEach((n, i) => {
+      n.hx = lx(n) + Math.sin(t / 1900 + i) * amp;
+      n.hy = ly(n) + Math.cos(t / 2300 + i * 1.3) * amp;
+      if (n.px === undefined) { n.px = n.hx; n.py = n.hy; n.svx = 0; n.svy = 0; }
+      n.fx = (n.hx - n.px) * 0.02;
+      n.fy = (n.hy - n.py) * 0.02;
+    });
+    const held = drag && drag.moved ? drag.n : null;
+    for (const e of edgeEls) {
+      const a = nodeOf[e.s], b = nodeOf[e.d];
+      const kk = held === a || held === b ? 0.06 : 0.012;
+      const ex = (b.px - a.px) - (b.hx - a.hx), ey = (b.py - a.py) - (b.hy - a.hy);
+      a.fx += ex * kk; a.fy += ey * kk;
+      b.fx -= ex * kk; b.fy -= ey * kk;
+    }
+    if (pointer && !held && !mqReduced.matches) {
+      const v = Math.hypot(pointer.vx, pointer.vy);
+      if (v > 0.5) {
+        // Vitesse plafonnée, et seules les billes à côté ou derrière le curseur bougent : celle qu'on vise reste en place.
+        const s = Math.min(1, 40 / v);
+        const R2 = 110;
+        nodes.forEach((n) => {
+          if (n.t.id === hoverId) return;
+          const dx = n.px - pointer.x, dy = n.py - pointer.y;
+          const d = Math.hypot(dx, dy);
+          if (d > R2 || dx * pointer.vx + dy * pointer.vy > 0) return;
+          const w = (1 - d / R2) ** 2 * 0.08 * s;
+          n.fx += pointer.vx * w; n.fy += pointer.vy * w;
+        });
+      }
+      pointer.vx *= 0.5; pointer.vy *= 0.5;
+    }
+    energy = 0;
+    nodes.forEach((n) => {
+      if (n === held) {
+        n.svx = drag.x - n.px; n.svy = drag.y - n.py;
+        n.px = drag.x; n.py = drag.y;
+        return;
+      }
+      n.svx = (n.svx + n.fx / n.m) * 0.82;
+      n.svy = (n.svy + n.fy / n.m) * 0.82;
+      n.px += n.svx; n.py += n.svy;
+      energy += Math.abs(n.svx) + Math.abs(n.svy);
+    });
+  }
+  function draw(t) {
+    step(t);
+    nodeEls.forEach(({n, g}) => g.setAttribute('transform', `translate(${n.px.toFixed(1)},${n.py.toFixed(1)})`));
+    edgeEls.forEach((e) => {
+      const a = nodeOf[e.s], b = nodeOf[e.d];
+      e.el.setAttribute('x1', a.px.toFixed(1)); e.el.setAttribute('y1', a.py.toFixed(1));
+      e.el.setAttribute('x2', b.px.toFixed(1)); e.el.setAttribute('y2', b.py.toFixed(1));
+    });
+  }
+  function svgPoint(e) {
+    const m = svg.getScreenCTM();
+    if (!m) return null;
+    return new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse());
+  }
+  svg.addEventListener('pointerdown', (e) => {
+    if (e.button !== 0) return;
+    const g = e.target.closest('g[data-id]');
+    const p = svgPoint(e);
+    // Clic sur le fond (sans glisser) : même effet que « Tous les termes ».
+    if (!g) { bgDown = {x: e.clientX, y: e.clientY}; return; }
+    if (!p) return;
+    const n = nodeOf[g.dataset.id];
+    drag = {n, x: n.px, y: n.py, ox: n.px - p.x, oy: n.py - p.y, sx: e.clientX, sy: e.clientY, moved: false, id: e.pointerId};
+    setHover(n.t.id);
+  });
+  svg.addEventListener('pointermove', (e) => {
+    const p = svgPoint(e);
+    if (!p) return;
+    pointer = pointer ? {x: p.x, y: p.y, vx: pointer.vx * 0.5 + (p.x - pointer.x), vy: pointer.vy * 0.5 + (p.y - pointer.y)} : {x: p.x, y: p.y, vx: 0, vy: 0};
+    if (drag && drag.id === e.pointerId) {
+      if (!drag.moved && Math.hypot(e.clientX - drag.sx, e.clientY - drag.sy) > 4) {
+        drag.moved = true;
+        svg.classList.add('dragging');
+        try { svg.setPointerCapture(e.pointerId); } catch (err) {}
+      }
+      if (drag.moved) { drag.x = p.x + drag.ox; drag.y = p.y + drag.oy; }
+    }
+    startLoop();
+  });
+  let bgDown = null;
+  svg.addEventListener('click', (e) => {
+    const down = bgDown;
+    bgDown = null;
+    if (!down || e.target.closest('g[data-id]') || Math.hypot(e.clientX - down.x, e.clientY - down.y) > 4) return;
+    if (current || catFilter) resetAll();
+  });
+  function endDrag(e) {
+    if (!drag || drag.id !== e.pointerId) return;
+    const was = drag;
+    drag = null;
+    svg.classList.remove('dragging');
+    if (was.moved) {
+      // Le clic qui suit un glisser n'ouvre pas la fiche.
+      suppressClick = true;
+      setTimeout(() => { suppressClick = false; }, 0);
+      const g = document.elementFromPoint(e.clientX, e.clientY);
+      const over = g && g.closest && g.closest('#graph g[data-id]');
+      setHover(over ? over.dataset.id : null);
+    }
+    startLoop();
+  }
+  svg.addEventListener('pointerup', endDrag);
+  svg.addEventListener('pointercancel', endDrag);
+  svg.addEventListener('pointerleave', () => { pointer = null; });
+  // Boucle d'animation : tourne tant que la carte est visible et que quelque chose bouge (respiration, bille lancée).
+  let raf = 0;
+  function loop(t) {
+    raf = 0;
+    if (!mapVisible() || document.hidden) return;
+    draw(t);
+    if (drag || energy > 0.3 || !mqReduced.matches) raf = requestAnimationFrame(loop);
+  }
+  function startLoop() { if (!raf) raf = requestAnimationFrame(loop); }
+  let lastFocus = null;
+  const openBtn = document.getElementById('mapOpen');
+  function openMap() {
+    lastFocus = document.activeElement;
+    map.classList.add('open');
+    map.setAttribute('role', 'dialog');
+    map.setAttribute('aria-modal', 'true');
+    openBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+    egoStack.length = 0;
+    egoShow(current ? {kind: 'term', id: current.id} : {kind: 'root'}, {instant: true});
+  }
+  function closeMap(restore) {
+    if (!map.classList.contains('open')) return;
+    cancelAnimationFrame(egoRaf);
+    map.classList.remove('open');
+    map.removeAttribute('role');
+    map.removeAttribute('aria-modal');
+    openBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    if (restore && lastFocus) lastFocus.focus();
+  }
+  openBtn.addEventListener('click', openMap);
+  document.getElementById('mapClose').addEventListener('click', () => closeMap(true));
+
+  // ---------- Carte mobile : vue centrée ----------
+  // Un terme au centre, ses liens (t.links, ordre éditorial) au-dessus et au-dessous, en deux colonnes
+  // qui s'écartent près du centre. Sans terme ouvert : les catégories autour, puis la liste de leurs termes.
+  const egoStage = document.getElementById('egoStage');
+  const egoNodes = document.getElementById('egoNodes');
+  const egoEdges = document.getElementById('egoEdges');
+  const egoList = document.getElementById('egoList');
+  const egoBack = document.getElementById('egoBack');
+  const egoFoot = document.getElementById('egoFoot');
+  const egoRead = document.getElementById('egoRead');
+  const esc = R.escapeHtml;
+  const catCount = {};
+  TERMS.forEach((t) => { catCount[t.cat] = (catCount[t.cat] || 0) + 1; });
+  const egoEls = new Map(); // clé -> {key, el, x, y, o, ax, ay, side}
+  const egoStack = [];
+  let egoState = null;
+  let egoRing = null; // {center, nbs: [{key, side}]}
+  let egoRaf = 0;
+  const DUR = 440;
+  const ease = (k) => (k < 0.5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2);
+
+  function egoNode(key) {
+    let n = egoEls.get(key);
+    if (!n) {
+      const el = document.createElement('div');
+      n = {key, el, x: 0, y: 0, o: 0, ax: 0, ay: 0, fresh: true};
+      egoEls.set(key, n);
+    }
+    return n;
+  }
+
+  // Contenu d'un nœud selon son rôle : carte centrale, voisin en colonne (l / r) ou en pointe (tip up / down).
+  function fillNode(n, role, side, c) {
+    n.el.className = `eg ${role === 'card' ? 'card' : side}`;
+    n.el.style.setProperty('--c', c.color);
+    n.el.innerHTML = c.html;
+  }
+
+  function termCard(t) {
+    const cat = CATS[t.cat] || {};
+    return {color: color(t), html: `<button type="button" class="ct" data-read="${t.id}">${esc(t.title)}</button><button type="button" class="cc" data-ego-cat="${t.cat}">${esc(cat.label || '')}</button>`};
+  }
+  function termNb(t) {
+    return {color: color(t), html: `<button type="button" class="nb" data-ego="${t.id}"><i class="dot" aria-hidden="true"></i><span class="lab">${esc(t.graphLabel || t.title)}</span></button>`};
+  }
+  function catNb(k) {
+    const d = Math.round(12 + Math.min(catCount[k] || 0, 15) * 0.7);
+    return {color: CATS[k].color, html: `<button type="button" class="nb" data-ego-cat="${k}" style="--d:${d}px"><i class="dot" aria-hidden="true"></i><span class="lab">${esc(CATS[k].label)}<span class="n">${catCount[k] || 0}</span></span></button>`};
+  }
+
+  // Répartition : moitié au-dessus, moitié au-dessous ; un nombre impair donne une pointe seule à l'extrémité.
+  function rowsFor(k) {
+    const r = [];
+    let left = k;
+    if (left % 2) { r.push(1); left--; }
+    while (left > 0) { r.push(2); left -= 2; }
+    return r; // de l'extrémité vers le centre
+  }
+
+  function egoLayout() {
+    if (!egoRing) return;
+    const W = egoStage.clientWidth;
+    const H = egoStage.clientHeight;
+    const cx = W / 2;
+    const nbs = egoRing.nbs;
+    const N = nbs.length;
+    const up = rowsFor(Math.ceil(N / 2));
+    const down = rowsFor(N - Math.ceil(N / 2)).reverse();
+    // Écart entre les deux colonnes : large près du centre, resserré aux extrémités.
+    const gNear = Math.min(64, W * 0.13);
+    const gFar = 14;
+    const depth = Math.max(up.length, down.length, 1);
+    const gap = (d) => gFar + (gNear - gFar) * (1 - (d - 1) / Math.max(depth, 1));
+    // Rangées : [{items: [nb], d (distance au centre), half: 'up'|'down'}]
+    const rows = [];
+    let i = 0;
+    up.forEach((cnt, ri) => { rows.push({items: nbs.slice(i, i + cnt), d: up.length - ri, half: 'up'}); i += cnt; });
+    const centerIndex = rows.length;
+    rows.push({center: true});
+    down.forEach((cnt, ri) => { rows.push({items: nbs.slice(i, i + cnt), d: ri + 1, half: 'down'}); i += cnt; });
+
+    // Rôles et largeurs maximales, puis mesure.
+    const center = egoEls.get(egoRing.center);
+    center.el.style.maxWidth = Math.min(W - 40, 440) + 'px';
+    rows.forEach((row) => {
+      if (row.center) return;
+      row.items.forEach((nb, j) => {
+        const n = egoEls.get(nb.key);
+        const tip = row.items.length === 1;
+        nb.side = tip ? `tip ${row.half}` : (j === 0 ? 'l' : 'r');
+        n.el.classList.remove('l', 'r', 'tip', 'up', 'down');
+        nb.side.split(' ').forEach((s) => n.el.classList.add(s));
+        n.el.style.maxWidth = (tip ? Math.min(W - 40, 300) : Math.max(110, cx - gap(row.d) + 12 - 14)) + 'px';
+      });
+    });
+    const sizes = new Map();
+    egoEls.forEach((n) => {
+      const dot = n.el.querySelector('.dot');
+      const w = n.el.offsetWidth, h = n.el.offsetHeight;
+      let ax = w / 2, ay = h / 2;
+      if (dot && !n.el.classList.contains('card')) {
+        // offsetLeft/Top sont relatifs au nœud (positionné) : centre de la pastille.
+        ax = dot.offsetLeft + dot.offsetWidth / 2;
+        ay = dot.offsetTop + dot.offsetHeight / 2;
+      }
+      sizes.set(n.key, {w, h, ax, ay});
+    });
+    rows.forEach((row) => {
+      row.h = row.center ? sizes.get(egoRing.center).h : Math.max(...row.items.map((nb) => sizes.get(nb.key).h));
+    });
+    const sum = rows.reduce((s, r) => s + r.h, 0);
+    const gaps = rows.length - 1;
+    const pad = 16;
+    const free = H - pad * 2 - sum;
+    const g = Math.max(12, Math.min(60, gaps ? free / (gaps + 2) : 0));
+    const used = sum + g * gaps;
+    const innerH = Math.max(H, used + pad * 2);
+    let y = Math.max(pad, (innerH - used) / 2);
+    const targets = new Map();
+    rows.forEach((row) => {
+      if (row.center) {
+        const s = sizes.get(egoRing.center);
+        targets.set(egoRing.center, {x: cx, y: y + s.h / 2, s});
+        row.top = y; row.bottom = y + s.h;
+      } else {
+        row.items.forEach((nb, j) => {
+          const s = sizes.get(nb.key);
+          const tip = row.items.length === 1;
+          let dx = 0;
+          if (!tip) dx = (j === 0 ? -1 : 1) * gap(row.d);
+          // Pastille sur la colonne ; le libellé part vers l'extérieur. On garde 12 px de marge à l'écran.
+          let x = cx + dx;
+          const left = x - s.ax, right = left + s.w;
+          if (left < 12) x += 12 - left;
+          if (right > W - 12) x -= right - (W - 12);
+          const top = row.half === 'up' ? y + row.h - s.h : y;
+          targets.set(nb.key, {x, y: top + s.ay, s});
+        });
+      }
+      y += row.h + g;
+    });
+    egoNodes.style.height = innerH + 'px';
+    egoEdges.setAttribute('width', W);
+    egoEdges.setAttribute('height', innerH);
+    egoEdges.setAttribute('viewBox', `0 0 ${W} ${innerH}`);
+    return targets;
+  }
+
+  function applyNode(n) {
+    n.el.style.transform = `translate(${Math.round(n.x - n.ax)}px,${Math.round(n.y - n.ay)}px)`;
+    n.el.style.opacity = n.o.toFixed(3);
+    n.el.style.visibility = n.o < 0.01 ? 'hidden' : '';
+  }
+
+  // Liens : courbes du bord de la carte centrale vers chaque pastille.
+  function drawEdges() {
+    if (!egoRing) { egoEdges.innerHTML = ''; return; }
+    const c = egoEls.get(egoRing.center);
+    const ch = c.el.offsetHeight;
+    const stroke = egoState.kind === 'term' ? color(byId[egoState.id]) : null;
+    egoEdges.innerHTML = egoRing.nbs.map((nb) => {
+      const n = egoEls.get(nb.key);
+      if (!n) return '';
+      const upward = n.y < c.y;
+      const sx = c.x, sy = c.y + (upward ? -ch / 2 : ch / 2);
+      const my = (sy + n.y) / 2;
+      const col = stroke || n.el.style.getPropertyValue('--c');
+      return `<path d="M${sx.toFixed(1)} ${sy.toFixed(1)}C${sx.toFixed(1)} ${my.toFixed(1)} ${n.x.toFixed(1)} ${my.toFixed(1)} ${n.x.toFixed(1)} ${n.y.toFixed(1)}" fill="none" stroke="${col}" stroke-width="1.5" stroke-opacity="${(0.55 * Math.min(n.o, c.o)).toFixed(3)}"/>`;
+    }).join('');
+  }
+
+  // Affiche un état de la carte. opts : {push, origin (clé du nœud touché), instant, focusKey}.
+  function egoShow(state, opts = {}) {
+    if (opts.push && egoState) egoStack.push(egoState);
+    egoState = state;
+    egoBack.hidden = !egoStack.length;
+    cancelAnimationFrame(egoRaf);
+    const animate = !opts.instant && !mqReduced.matches;
+    // Les nœuds qui disparaissaient encore sont retirés tout de suite.
+    egoEls.forEach((n) => { if (n.leaving) { n.el.remove(); egoEls.delete(n.key); } });
+    const term = state.kind === 'term' ? byId[state.id] : null;
+    egoFoot.hidden = !term;
+    if (term) egoFoot.style.setProperty('--c', color(term));
+
+    if (state.kind === 'cat') {
+      // Liste des termes de la catégorie.
+      egoRing = null;
+      egoEls.forEach((n) => { n.el.remove(); });
+      egoEls.clear();
+      egoEdges.innerHTML = '';
+      egoNodes.hidden = true;
+      const cat = CATS[state.cat];
+      egoList.style.setProperty('--c', cat.color);
+      egoList.innerHTML = `<button type="button" class="crumb" data-ego-root><span aria-hidden="true">←</span>Catégories</button><h2 tabindex="-1">${esc(cat.label)}</h2><ul>${TERMS.filter((t) => t.cat === state.cat).map((t) => {
+        const en = t.en && R.normalize(t.en) !== R.normalize(t.title) && !/^Myth/.test(t.en) ? `<span class="e" lang="en">${esc(t.en)}</span>` : '';
+        return `<li><button type="button" data-ego="${t.id}" style="--c:${color(t)}"><i aria-hidden="true"></i><span class="tx"><span class="t">${esc(t.title)}</span>${en ? ' ' + en : ''}</span></button></li>`;
+      }).join('')}</ul>`;
+      egoList.hidden = false;
+      egoList.classList.remove('in');
+      if (animate) { void egoList.offsetWidth; egoList.classList.add('in'); }
+      egoStage.scrollTop = 0;
+      const f = opts.focusKey && egoList.querySelector(`[data-ego="${opts.focusKey}"]`);
+      (f || egoList.querySelector('h2')).focus({preventScroll: !f});
+      return;
+    }
+
+    egoList.hidden = true;
+    egoList.innerHTML = '';
+    egoNodes.hidden = false;
+    const prev = egoRing;
+    const keep = new Set();
+    let centerKey, nbItems;
+    if (term) {
+      centerKey = 't:' + term.id;
+      fillNode(egoNode(centerKey), 'card', '', termCard(term));
+      nbItems = (term.links || []).map((id) => byId[id]).filter(Boolean).map((t) => ({key: 't:' + t.id, c: termNb(t)}));
+    } else {
+      centerKey = 'root';
+      const n = egoNode('root');
+      n.el.className = 'eg card root';
+      n.el.style.setProperty('--c', 'var(--line)');
+      n.el.innerHTML = `<span class="cn">${TERMS.length} termes</span>`;
+      nbItems = Object.keys(CATS).map((k) => ({key: 'c:' + k, c: catNb(k)}));
+    }
+    keep.add(centerKey);
+    nbItems.forEach((it) => { keep.add(it.key); fillNode(egoNode(it.key), 'nb', 'r', it.c); });
+    egoRing = {center: centerKey, nbs: nbItems.map((it) => ({key: it.key}))};
+
+    // Ordre du DOM = ordre de lecture : la carte, puis les liens dans l'ordre éditorial.
+    egoNodes.append(egoEls.get(centerKey).el, ...nbItems.map((it) => egoEls.get(it.key).el));
+    const targets = egoLayout();
+    const centerT = targets.get(centerKey);
+    const originN = opts.origin && egoEls.get(opts.origin);
+    const wasCenter = prev && prev.center === centerKey;
+    const cEl = egoEls.get(centerKey).el;
+    cEl.classList.toggle('pop', animate && !wasCenter && !!originN);
+
+    const from = new Map();
+    egoEls.forEach((n) => {
+      const t = targets.get(n.key);
+      if (t) { n.ax = t.s.ax; n.ay = t.s.ay; }
+      if (n.fresh) {
+        // Les nouveaux liens partent du centre, à l'endroit où arrive la carte.
+        n.x = centerT.x; n.y = centerT.y; n.o = 0; n.fresh = false;
+      }
+      from.set(n.key, {x: n.x, y: n.y, o: n.o});
+      if (!keep.has(n.key)) n.leaving = true;
+      applyNode(n);
+    });
+
+    const finish = () => {
+      egoEls.forEach((n) => { if (n.leaving) { n.el.remove(); egoEls.delete(n.key); } });
+    };
+    const step = (now, t0) => {
+      const k = animate ? Math.min(1, (now - t0) / DUR) : 1;
+      const e = ease(k);
+      egoEls.forEach((n) => {
+        const f = from.get(n.key);
+        const t = targets.get(n.key);
+        if (t) { n.x = f.x + (t.x - f.x) * e; n.y = f.y + (t.y - f.y) * e; n.o = f.o + (1 - f.o) * Math.min(1, e * 1.4); }
+        else { n.o = f.o * (1 - Math.min(1, k * 2.2)); }
+        applyNode(n);
+      });
+      drawEdges();
+      if (k < 1) egoRaf = requestAnimationFrame((t) => step(t, t0));
+      else finish();
+    };
+    if (animate) { const t0 = performance.now(); egoRaf = requestAnimationFrame((t) => step(t, t0)); }
+    else step(0, 0);
+
+    if (!opts.keepScroll) egoStage.scrollTop = 0;
+    const fk = opts.focusKey && egoEls.get(opts.focusKey) && targets.has(opts.focusKey) ? opts.focusKey : centerKey;
+    const fEl = egoEls.get(fk).el.querySelector('button') || egoEls.get(fk).el;
+    if (fEl.tagName !== 'BUTTON') { egoEls.get(fk).el.tabIndex = -1; }
+    fEl.focus({preventScroll: true});
+  }
+
+  // Relayout sans animation (rotation, clavier virtuel, redimensionnement).
+  function egoRelayout() {
+    if (!map.classList.contains('open') || !egoRing) return;
+    cancelAnimationFrame(egoRaf);
+    egoEls.forEach((n) => { if (n.leaving) { n.el.remove(); egoEls.delete(n.key); } });
+    const targets = egoLayout();
+    egoEls.forEach((n) => { const t = targets.get(n.key); if (t) { n.ax = t.s.ax; n.ay = t.s.ay; n.x = t.x; n.y = t.y; n.o = 1; applyNode(n); } });
+    drawEdges();
+  }
+
+  function egoReadTerm(id) { if (go(id, true, true, 'carte')) closeMap(false); }
+
+  egoStage.addEventListener('click', (e) => {
+    const b = e.target.closest('button');
+    if (!b) return;
+    const node = b.closest('.eg');
+    const originKey = node && [...egoEls.values()].find((n) => n.el === node);
+    if (b.dataset.read) egoReadTerm(b.dataset.read);
+    else if (b.dataset.ego) {
+      if (egoState.kind === 'term' && egoState.id === b.dataset.ego) return;
+      egoShow({kind: 'term', id: b.dataset.ego}, {push: true, origin: originKey && originKey.key});
+    } else if (b.dataset.egoCat) egoShow({kind: 'cat', cat: b.dataset.egoCat}, {push: true});
+    else if ('egoRoot' in b.dataset) egoShow({kind: 'root'}, {push: true});
+  });
+  egoBack.addEventListener('click', () => {
+    const was = egoState;
+    const prevState = egoStack.pop();
+    if (!prevState) return;
+    const focusKey = was.kind === 'term' ? (prevState.kind === 'cat' ? was.id : 't:' + was.id) : was.kind === 'cat' ? 'c:' + was.cat : null;
+    egoShow(prevState, {focusKey});
+  });
+  egoRead.addEventListener('click', () => { if (egoState && egoState.kind === 'term') egoReadTerm(egoState.id); });
+
+  // Le focus reste dans la carte tant qu'elle est ouverte.
+  map.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab' || !map.classList.contains('open')) return;
+    const f = [...map.querySelectorAll('.ego button')].filter((b) => {
+      if (b.closest('[hidden]')) return false;
+      const node = b.closest('.eg');
+      return !node || node.style.visibility !== 'hidden';
+    });
+    if (!f.length) return;
+    const first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  document.getElementById('legend').innerHTML = '<button type="button" data-cat="" aria-pressed="true">Tout</button>' + Object.entries(CATS)
+    .map(([k, c]) => `<button type="button" data-cat="${k}" style="--c:${c.color}" aria-pressed="false"><i style="background:${c.color}"></i>${R.escapeHtml(c.label)}<span class="n">${catCount[k] || 0}</span></button>`)
+    .join('') + (TERMS.some((t) => t.status !== 'live') ? '<span><i style="background:#1a1a1a;border:1.5px solid #555"></i>à venir</span>' : '');
+
+  mqMobile.addEventListener('change', () => { if (!mqMobile.matches) closeMap(false); fit(); startLoop(); });
+  window.addEventListener('resize', () => { fit(); startLoop(); egoRelayout(); });
+  document.addEventListener('visibilitychange', startLoop);
+
+  // Carte par défaut sur desktop (sur mobile, l'index en liste s'affiche dans le panneau).
+  let savedView = 'map';
+  try { savedView = localStorage.getItem('lexique-view') === 'list' ? 'list' : 'map'; } catch (e) {}
+  setView(savedView, false);
+  go(termFromLocation(true), false);
+  fit();
+  startLoop();
+  if (document.fonts) {
+    document.fonts.ready.then(fit);
+    document.fonts.addEventListener('loadingdone', fit);
+  }
+};
+</script>
+</body>
+</html>
