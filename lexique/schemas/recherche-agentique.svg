@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 350" role="img" aria-labelledby="recherche-agentique-t">
+<title id="recherche-agentique-t">RAG classique contre recherche agentique : dans le RAG, un index préparé d'avance renvoie quelques passages en un seul coup ; dans la recherche agentique, le modèle cherche, lit, puis choisit la recherche suivante, sur plusieurs tours, au prix de plus de tokens et de temps.</title>
+<text class="b" x="0" y="16">RAG classique</text>
+<rect class="bx" x="0" y="28" width="96" height="36" rx="6"/>
+<text class="m" x="48" y="51" text-anchor="middle">question</text>
+<path class="lm" d="M96 46 h16"/><path class="lm" d="M107 41 l5 5 l-5 5"/>
+<rect class="bx" x="116" y="28" width="96" height="36" rx="6"/>
+<text class="m" x="164" y="51" text-anchor="middle">index</text>
+<path class="lm" d="M212 46 h16"/><path class="lm" d="M223 41 l5 5 l-5 5"/>
+<rect class="bx" x="232" y="28" width="128" height="36" rx="6"/>
+<text class="m" x="296" y="51" text-anchor="middle">3 passages</text>
+<text class="i mu" x="0" y="92">Un seul coup, préparé d'avance.</text>
+<path class="lm dash" d="M0 112 h360"/>
+<text class="b ac" x="0" y="142">Recherche agentique</text>
+<rect class="bxa" x="0" y="160" width="96" height="36" rx="6"/>
+<text class="m ac" x="48" y="183" text-anchor="middle">modèle</text>
+<rect class="bx" x="132" y="160" width="96" height="36" rx="6"/>
+<text class="m" x="180" y="183" text-anchor="middle">cherche</text>
+<rect class="bx" x="264" y="160" width="96" height="36" rx="6"/>
+<text class="m" x="312" y="183" text-anchor="middle">lit</text>
+<path class="la" d="M96 178 h32"/><path class="la" d="M123 173 l5 5 l-5 5"/>
+<path class="la" d="M228 178 h32"/><path class="la" d="M255 173 l5 5 l-5 5"/>
+<path class="la" d="M312 196 q0 40 -132 40 q-132 0 -132 -36"/><path class="la" d="M43 205 l5 -5 l5 5"/>
+<text class="m mu" x="180" y="262" text-anchor="middle">tour suivant, plusieurs fois</text>
+<text class="i mu" x="0" y="310">Plus souple, plus long,</text>
+<text class="i mu" x="0" y="330">et plus de tokens lus.</text>
+</svg>

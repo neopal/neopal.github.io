@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="declaration-d-usage-de-l-ia-t">
+<title id="declaration-d-usage-de-l-ia-t">Les quatre lignes d'une déclaration d'usage de l'IA, en bas d'un document : quel outil, ce qu'il a fait, comment le résultat a été vérifié, et qui en répond.</title>
+<rect class="bx" x="40" y="0" width="280" height="250" rx="6"/>
+<rect class="fd" x="60" y="20" width="220" height="8" rx="2"/>
+<rect class="fd" x="60" y="36" width="240" height="8" rx="2"/>
+<rect class="fd" x="60" y="52" width="180" height="8" rx="2"/>
+<rect class="fd" x="60" y="68" width="230" height="8" rx="2"/>
+<path class="ln dash" d="M60 98 h240"/>
+<text class="m ac" x="60" y="126">1 quel outil</text>
+<text class="m ac" x="60" y="156">2 ce qu'il a fait</text>
+<text class="m ac" x="60" y="186">3 comment tu as vérifié</text>
+<text class="m ac" x="60" y="216">4 qui en répond</text>
+<text class="i mu" x="0" y="284">Quatre lignes, et le lecteur sait quoi vérifier.</text>
+</svg>

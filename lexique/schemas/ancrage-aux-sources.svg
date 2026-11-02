@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 310" role="img" aria-labelledby="ancrage-aux-sources-t">
+<title id="ancrage-aux-sources-t">L'ancrage aux sources : chaque phrase de la réponse est reliée au passage exact du document fourni qui l'appuie ; une phrase sans passage est retirée ou remplacée par « le document ne le dit pas ».</title>
+<text class="m mu" x="0" y="14">le document fourni</text>
+<text class="m mu" x="200" y="14">la réponse</text>
+<rect class="bx" x="0" y="26" width="150" height="190" rx="6"/>
+<rect class="fd" x="14" y="44" width="122" height="8" rx="2"/>
+<rect class="fa" x="14" y="62" width="100" height="8" rx="2"/>
+<rect class="fd" x="14" y="80" width="118" height="8" rx="2"/>
+<rect class="fd" x="14" y="98" width="110" height="8" rx="2"/>
+<rect class="fa" x="14" y="116" width="122" height="8" rx="2"/>
+<rect class="fd" x="14" y="134" width="96" height="8" rx="2"/>
+<rect class="fd" x="14" y="152" width="120" height="8" rx="2"/>
+<rect class="fd" x="14" y="170" width="104" height="8" rx="2"/>
+<rect class="bxa" x="200" y="40" width="160" height="34" rx="6"/>
+<text class="m" x="214" y="62">phrase [1]</text>
+<rect class="bxa" x="200" y="94" width="160" height="34" rx="6"/>
+<text class="m" x="214" y="116">phrase [2]</text>
+<rect class="bx" x="200" y="148" width="160" height="34" rx="6"/>
+<text class="m red" x="214" y="170">phrase sans source</text>
+<path class="la" d="M114 66 q44 -10 86 -9"/>
+<path class="la" d="M136 120 q30 -8 64 -9"/>
+<path class="lr" d="M206 186 l12 12 M218 186 l-12 12"/>
+<text class="m mu" x="226" y="198">retirée</text>
+<text class="i mu" x="0" y="256">Chaque phrase remonte à un passage ;</text>
+<text class="i mu" x="0" y="276">sinon, « le document ne le dit pas ».</text>
+</svg>

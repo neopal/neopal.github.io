@@ -75,6 +75,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Terme | EN | Statut | Prio | Livres | Image |
 |---|---|---|---|---|---|
 | Hallucination | hallucination | publié | | AGT, ULT, ENT, HO, CAR | le morceau qui n'existe pas |
+| Pilotabilité | steerability | publié | | | le blanc chaleureux contre la référence du nuancier |
 | Flagornerie | sycophancy | publié | | ULT, CAR | jouer ce que le public veut entendre |
 | CoT infidèle | unfaithful chain-of-thought | publié | | CAR | |
 | Biais | bias | publié | | CAR, HO | |
@@ -121,6 +122,9 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Benchmarks | benchmarks | publié | | AGT, ULT, HO | le classement des ventes |
 | Sandbox et permissions | sandbox, permissions | publié | | AGT, ENT, CAR | la cabine insonorisée |
 | Human-in-the-loop | human-in-the-loop | publié | | AGT, ENT, CAR, HAM | le producteur qui valide chaque prise |
+| Hook | hook | publié | | | la prise programmée qui éteint la box à 23 heures |
+| Recherche agentique | agentic search | publié | | | la bibliothécaire qui t'emmène au fichier |
+| Version épinglée | pinned model version | publié | | | le plat du jour contre la blanquette |
 | Agent vs workflow | agent vs workflow | publié | | CAR, AGT, ENT | la setlist figée contre le groupe qui choisit le morceau suivant |
 | Planification | planning | publié | | AGT, ENT | la setlist réécrite entre deux morceaux |
 | Compaction du contexte | context compaction | publié | | AGT, CAR | résumer le début de la bande avant qu'il s'efface |
@@ -154,6 +158,9 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Vibe coding | vibe coding | publié | | AGT, ENT, CAR | |
 | Loop (boucle d'itération) | loop | publié | | HAM | |
 | Prompt et prompt engineering | prompt, prompt engineering | publié | | ULT, HO, CAR, LLM | la première mesure qu'on joue au groupe |
+| Déclaration d'usage de l'IA | AI use disclosure | publié | | | la ligne « relu par M. Perrin » au dos du mémoire |
+| Ancrage aux sources | grounding | publié | | | le quiz où il faut montrer la page du dictionnaire |
+| Fatigue d'approbation | approval fatigue, consent fatigue | publié | | | le détecteur de fumée qui sonne à chaque tartine |
 | Capacité inexploitée | capability overhang | publié | | CAR | le synthé dont on n'utilise que trois presets |
 | AI brain fry | AI brain fry | publié | | | le maître-nageur qui surveille quatre bassins |
 | Automatiser ou augmenter | automation vs augmentation, agency | publié | | | le patron de bistrot et ses trois sortes de clients |

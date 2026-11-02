@@ -1,6 +1,6 @@
 # Lexique IA
 
-> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 165 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
+> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 172 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
 
 Toutes les fiches en texte brut, sources comprises : https://neopal.github.io/lexique/llms-full.txt
 Auteur : https://neopal.github.io/
@@ -67,6 +67,7 @@ Auteur : https://neopal.github.io/
 - [Red teaming](https://neopal.github.io/lexique/red-teaming/) : Le red teaming consiste à attaquer exprès un modèle ou une application d'IA, avant et après sa sortie, pour trouver ses failles avant ceux qui voudraient s'en servir.
 - [Capacité inexploitée](https://neopal.github.io/lexique/capacite-inexploitee/) (en anglais : Capability overhang) : La capacité inexploitée (capability overhang) désigne l'écart entre ce qu'un modèle sait déjà faire et ce qu'on en tire, faute de bonne consigne, d'outils ou d'usage.
 - [Non-déterminisme](https://neopal.github.io/lexique/non-determinisme/) (en anglais : non-determinism) : Le non-déterminisme désigne le fait qu'une même demande, envoyée deux fois au même modèle, peut recevoir deux réponses différentes, même avec le hasard réglé au minimum.
+- [Pilotabilité](https://neopal.github.io/lexique/pilotabilite/) (en anglais : Steerability) : La pilotabilité mesure à quel point tu peux orienter un modèle par des consignes, sur le format, le ton, la longueur ou ce qu'il doit faire et éviter.
 
 ## Agents et produit
 
@@ -94,6 +95,9 @@ Auteur : https://neopal.github.io/
 - [Workflow ou agent](https://neopal.github.io/lexique/workflow-ou-agent/) (en anglais : Workflow vs agent) : Workflow ou agent, c'est la question de savoir qui fixe les étapes d'une tâche automatisée : le développeur, à l'avance, ou le modèle, en cours de route.
 - [Computer use](https://neopal.github.io/lexique/computer-use/) : Le computer use permet à un modèle d'utiliser un ordinateur comme une personne, en regardant des captures d'écran puis en bougeant la souris, en cliquant et en tapant au clavier.
 - [Deep research](https://neopal.github.io/lexique/deep-research/) : Le deep research confie une question à un agent qui cherche seul sur le web pendant plusieurs minutes, lit des dizaines de sources et rend un rapport avec ses citations.
+- [Hook](https://neopal.github.io/lexique/hook/) : Un hook est un script que l'outil d'IA lance de lui-même à un moment précis, par exemple avant ou après chaque action d'un agent, quoi que le modèle ait décidé.
+- [Recherche agentique](https://neopal.github.io/lexique/recherche-agentique/) (en anglais : Agentic search) : La recherche agentique laisse le modèle chercher lui-même l'information, en lançant ses requêtes, en lisant les résultats et en affinant sur plusieurs tours, au lieu de recevoir des passages préparés.
+- [Version épinglée](https://neopal.github.io/lexique/version-epinglee/) (en anglais : Pinned model version) : Épingler une version, c'est appeler un modèle par un identifiant figé plutôt que par un nom qui suit les mises à jour, pour qu'il réponde demain comme aujourd'hui.
 
 ## Entraînement
 
@@ -164,6 +168,9 @@ Auteur : https://neopal.github.io/
 - [Hill climbing](https://neopal.github.io/lexique/hill-climbing/) : Le hill climbing améliore un système d'IA par petites retouches testées une à une sur une éval, gardées seulement si elles font aussi monter les cas mis de côté.
 - [AI brain fry](https://neopal.github.io/lexique/ai-brain-fry/) : L'AI brain fry est la fatigue mentale qui vient d'un usage intensif de l'IA, surtout quand il faut surveiller plusieurs outils ou agents à la fois.
 - [Automatiser ou augmenter](https://neopal.github.io/lexique/automatiser-ou-augmenter/) (en anglais : Automation vs augmentation) : Automatiser, c'est confier une tâche à l'IA et prendre le résultat ; augmenter, c'est travailler avec elle en allers-retours. Anthropic ajoute un troisième mode, où l'IA agit seule pour toi.
+- [Déclaration d'usage de l'IA](https://neopal.github.io/lexique/declaration-d-usage-de-l-ia/) (en anglais : AI use disclosure) : Une déclaration d'usage de l'IA dit, dans un document, quelle IA a servi, pour quoi faire, comment le résultat a été relu, et qui en répond.
+- [Ancrage aux sources](https://neopal.github.io/lexique/ancrage-aux-sources/) (en anglais : Grounding) : L'ancrage aux sources oblige un modèle à appuyer chaque affirmation sur des documents fournis, avec le passage exact, et à dire ce que ces documents ne couvrent pas.
+- [Fatigue d'approbation](https://neopal.github.io/lexique/fatigue-d-approbation/) (en anglais : Approval fatigue) : La fatigue d'approbation est le moment où, à force de valider des demandes presque toujours anodines, on approuve par réflexe sans plus rien lire.
 
 ## Mythes vs réalité
 

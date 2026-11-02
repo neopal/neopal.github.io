@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" role="img" aria-labelledby="pilotabilite-t">
+<title id="pilotabilite-t">La pilotabilité d'un modèle selon le type de consigne : forte pour une contrainte courte et vérifiable (format, langue, longueur), moyenne pour un ton ou un style, faible quand il faut deviner l'intention ; une consigne en majuscules risque de le faire trop obéir.</title>
+<text class="m mu" x="0" y="14">la consigne porte sur…</text>
+<text class="m mu" x="360" y="14" text-anchor="end">elle tient</text>
+<rect class="bx" x="0" y="28" width="360" height="34" rx="6"/>
+<text class="m" x="14" y="50">un format, une langue</text>
+<text class="b ac" x="346" y="50" text-anchor="end">forte</text>
+<rect class="bx" x="0" y="68" width="360" height="34" rx="6"/>
+<text class="m" x="14" y="90">une longueur</text>
+<text class="b ac" x="346" y="90" text-anchor="end">forte</text>
+<rect class="bx" x="0" y="108" width="360" height="34" rx="6"/>
+<text class="m" x="14" y="130">un ton, un style</text>
+<text class="b" x="346" y="130" text-anchor="end">moyenne</text>
+<rect class="bx" x="0" y="148" width="360" height="34" rx="6"/>
+<text class="m" x="14" y="170">une intention à deviner</text>
+<text class="b mu" x="346" y="170" text-anchor="end">faible</text>
+<path class="lm dash" d="M0 202 h360"/>
+<text class="m" x="0" y="232">« CRITICAL: You MUST »</text>
+<path class="lr" d="M220 228 h40"/><path class="lr" d="M255 223 l5 5 l-5 5"/>
+<text class="m red" x="268" y="232">trop obéi</text>
+<text class="i mu" x="0" y="268">Plus la consigne est concrète et vérifiable,</text>
+<text class="i mu" x="0" y="288">mieux elle tient.</text>
+</svg>

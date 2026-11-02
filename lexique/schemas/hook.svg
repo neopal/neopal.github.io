@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="hook-t">
+<title id="hook-t">Le hook dans la boucle d'un agent : le modèle choisit une action, un hook PreToolUse peut la bloquer avant qu'elle parte et renvoyer la raison au modèle, l'outil s'exécute, puis un hook PostToolUse lance par exemple le formateur ou les tests ; les hooks tournent à chaque fois, sans passer par le modèle.</title>
+<rect class="bx" x="100" y="0" width="160" height="40" rx="6"/>
+<text class="m" x="180" y="25" text-anchor="middle">le modèle choisit</text>
+<path class="lm" d="M180 40 v16"/><path class="lm" d="M175 51 l5 5 l5 -5"/>
+<rect class="bxa" x="40" y="60" width="280" height="44" rx="6"/>
+<text class="b ac" x="56" y="87">hook PreToolUse</text>
+<text class="m mu" x="304" y="87" text-anchor="end">bloque ?</text>
+<path class="lr" d="M320 82 h24 v-62 h-84"/><path class="lr" d="M265 15 l-5 5 l5 5"/>
+<text class="m red" x="336" y="48" text-anchor="end">bloquée</text>
+<path class="lm" d="M180 104 v16"/><path class="lm" d="M175 115 l5 5 l5 -5"/>
+<rect class="bx" x="100" y="124" width="160" height="40" rx="6"/>
+<text class="m" x="180" y="149" text-anchor="middle">l'outil s'exécute</text>
+<path class="lm" d="M180 164 v16"/><path class="lm" d="M175 175 l5 5 l5 -5"/>
+<rect class="bxa" x="40" y="184" width="280" height="44" rx="6"/>
+<text class="b ac" x="56" y="211">hook PostToolUse</text>
+<text class="m mu" x="304" y="211" text-anchor="end">formate, teste</text>
+<path class="lm dash" d="M0 252 h360"/>
+<text class="i mu" x="0" y="282">Les hooks partent à chaque fois ;</text>
+<text class="i mu" x="0" y="302">le modèle ne peut pas les sauter.</text>
+</svg>

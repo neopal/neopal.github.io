@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 290" role="img" aria-labelledby="fatigue-d-approbation-t">
+<title id="fatigue-d-approbation-t">La fatigue d'approbation : une longue file de demandes anodines, toutes acceptées, au milieu de laquelle une demande dangereuse passe avec la même coche, faute d'attention.</title>
+<text class="m mu" x="0" y="14">les demandes de la matinée</text>
+<g class="fl">
+<rect x="0" y="30" width="28" height="28" rx="4"/><rect x="34" y="30" width="28" height="28" rx="4"/><rect x="68" y="30" width="28" height="28" rx="4"/><rect x="102" y="30" width="28" height="28" rx="4"/><rect x="136" y="30" width="28" height="28" rx="4"/><rect x="170" y="30" width="28" height="28" rx="4"/><rect x="204" y="30" width="28" height="28" rx="4"/><rect x="238" y="30" width="28" height="28" rx="4"/><rect x="272" y="30" width="28" height="28" rx="4"/><rect x="306" y="30" width="28" height="28" rx="4"/>
+<rect x="0" y="66" width="28" height="28" rx="4"/><rect x="34" y="66" width="28" height="28" rx="4"/><rect x="68" y="66" width="28" height="28" rx="4"/><rect x="102" y="66" width="28" height="28" rx="4"/><rect x="136" y="66" width="28" height="28" rx="4"/><rect x="204" y="66" width="28" height="28" rx="4"/><rect x="238" y="66" width="28" height="28" rx="4"/><rect x="272" y="66" width="28" height="28" rx="4"/><rect x="306" y="66" width="28" height="28" rx="4"/>
+</g>
+<rect class="lr" x="170" y="66" width="28" height="28" rx="4"/>
+<text class="m red" x="184" y="86" text-anchor="middle">!</text>
+<path class="la" d="M6 112 l5 5 l9 -10 M40 112 l5 5 l9 -10 M74 112 l5 5 l9 -10 M108 112 l5 5 l9 -10 M142 112 l5 5 l9 -10 M210 112 l5 5 l9 -10 M244 112 l5 5 l9 -10 M278 112 l5 5 l9 -10 M312 112 l5 5 l9 -10"/>
+<path class="lr" d="M176 112 l5 5 l9 -10"/>
+<text class="m" x="0" y="150">accepté</text>
+<text class="m red" x="184" y="150" text-anchor="middle">accepté aussi</text>
+<path class="lm dash" d="M0 176 h360"/>
+<text class="i mu" x="0" y="206">À la vingtième demande anodine,</text>
+<text class="i mu" x="0" y="226">la dangereuse reçoit la même coche.</text>
+<text class="i mu" x="0" y="262">La parade est de demander moins, et seulement</text>
+<text class="i mu" x="0" y="282">pour ce qui ne se rattrape pas.</text>
+</svg>

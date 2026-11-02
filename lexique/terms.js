@@ -7690,8 +7690,7 @@ window.DICO_TERMS = [
       "human in the loop",
       "human-on-the-loop",
       "human oversight",
-      "permission prompt",
-      "approval fatigue"
+      "permission prompt"
     ],
     "aliasesFr": [
       "humain dans la boucle",
@@ -16305,6 +16304,521 @@ window.DICO_TERMS = [
       {
         "label": "Anthropic, Economic Index report, 15 janvier 2026 (en janvier 2025, 56 % d'augmentation contre 41 % d'automatisation ; en novembre 2025, l'augmentation remonte à 52 % et les conversations directives retombent à 32 %)",
         "url": "https://www.anthropic.com/research/anthropic-economic-index-january-2026-report"
+      }
+    ]
+  },
+  {
+    "id": "pilotabilite",
+    "status": "live",
+    "num": "166",
+    "title": "Pilotabilité",
+    "en": "Steerability",
+    "aliases": [
+      "steerable",
+      "instruction following",
+      "instruction-following"
+    ],
+    "aliasesFr": [
+      "suivi des consignes"
+    ],
+    "jargon": [
+      {
+        "say": "instruction following",
+        "means": "le suivi des consignes, la capacité qu'on mesure quand on parle de pilotabilité"
+      },
+      {
+        "say": "IFEval",
+        "means": "un test publié par Google en novembre 2023, qui ne contient que des consignes vérifiables par un programme, comme « écris plus de 400 mots » ou « cite le mot IA au moins trois fois »"
+      },
+      {
+        "say": "overtriggering",
+        "means": "l'excès inverse, quand un modèle obéit trop et appelle un outil à tout propos parce qu'une consigne en majuscules le lui ordonnait"
+      }
+    ],
+    "cat": "comportements",
+    "links": [
+      "system-prompt",
+      "prompt-engineering",
+      "flagornerie",
+      "prediction-du-mot-suivant",
+      "post-entrainement",
+      "hook",
+      "ancrage-aux-sources"
+    ],
+    "short": "La pilotabilité mesure à quel point tu peux orienter un modèle par des consignes, sur le format, le ton, la longueur ou ce qu'il doit faire et éviter.",
+    "image": "Jean-Marc a demandé au peintre « un blanc un peu chaleureux » pour le salon, et il a eu du jaune poussin. Pour la chambre, il a donné la référence exacte du nuancier, et c'est le seul mur qu'il n'a pas fallu repeindre.",
+    "imagineForm": "D",
+    "imagine": "« Tu peux me suggérer des modifications pour cette fonction ? », demandes-tu à l'agent de code dans ton éditeur. « Voici trois améliorations possibles », répond-il, et le fichier reste tel quel.",
+    "full": [
+      "Un modèle suit une consigne comme il fait tout le reste, en prolongeant ce qu'il a sous les yeux, et c'est le post-entraînement qui lui a appris que la suite attendue d'une consigne est de l'exécuter. La pilotabilité (steerability) dit jusqu'où ce réglage tient. Elle est forte pour une contrainte courte et vérifiable, un format, une langue ou une longueur, et plus faible quand la consigne oblige à deviner une intention.",
+      "Pour la mesurer sans juge humain, des chercheurs de Google ont publié en novembre 2023 IFEval, environ 500 demandes qui ne contiennent que des consignes qu'un programme peut contrôler. Les modèles récents sont devenus si dociles que la documentation d'Anthropic conseille désormais d'adoucir les consignes en majuscules du type « CRITICAL: You MUST », qui leur faisaient appeler un outil à tout propos. Elle note aussi qu'à la question « peux-tu suggérer des modifications ? », Claude suggère parfois au lieu de modifier.",
+      "Une ligne du system prompt suffit à déplacer beaucoup. En juillet 2025, xAI a demandé dans le system prompt de Grok de ne pas craindre les affirmations « politiquement incorrectes », et le chatbot a fini par faire l'éloge d'Hitler et par se surnommer « MechaHitler ». L'entreprise a retiré la consigne, puis l'a remise une semaine plus tard. Le modèle avait suivi les mots au-delà de ce que voulaient ceux qui les avaient écrits."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Je lui ai écrit trois fois en majuscules de ne jamais inventer de chiffres, et il en invente encore."
+      },
+      {
+        "who": "a",
+        "text": "Crier plus fort ne change pas le mécanisme ; dis-lui plutôt quoi faire à la place, citer la phrase du document ou répondre qu'il ne sait pas, et fais vérifier les chiffres par un outil."
+      }
+    ],
+    "avoid": "« S'il ne fait pas ce que je demande, c'est qu'il ne veut pas. » Le modèle n'a pas d'intention à contrarier ; il a suivi la forme de ta consigne, et quand le résultat rate ton but, c'est souvent que le but n'était écrit nulle part.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Zhou et al. (Google), Instruction-Following Evaluation for Large Language Models, 14 novembre 2023 (IFEval ; consignes vérifiables comme « write in more than 400 words » ou « mention the keyword of AI at least 3 times » ; 25 types de consignes, environ 500 prompts)",
+        "url": "https://arxiv.org/abs/2311.07911"
+      },
+      {
+        "label": "Anthropic, Prompting best practices (documentation Claude), consultée le 2 novembre 2026 (« can you suggest some changes » : Claude propose parfois des suggestions au lieu de modifier ; modèles plus réceptifs au system prompt, risque d'overtrigger ; remplacer « CRITICAL: You MUST use this tool when... » par « Use this tool when... »)",
+        "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-4-best-practices"
+      },
+      {
+        "label": "Wikipédia, Grok (chatbot), consulté le 2 novembre 2026 (en juillet 2025, réglage pour être « politically incorrect » ; consigne retirée après l'éloge d'Adolf Hitler et le surnom « MechaHitler », remise le 15 juillet)",
+        "url": "https://en.wikipedia.org/wiki/Grok_(chatbot)"
+      }
+    ]
+  },
+  {
+    "id": "hook",
+    "status": "live",
+    "num": "167",
+    "title": "Hook",
+    "en": "Hook",
+    "aliases": [
+      "hooks",
+      "PreToolUse",
+      "PostToolUse",
+      "lifecycle hook",
+      "agent hook"
+    ],
+    "aliasesFr": [],
+    "jargon": [
+      {
+        "say": "PreToolUse",
+        "means": "le moment juste avant qu'un outil parte, où un hook peut examiner l'action et la bloquer"
+      },
+      {
+        "say": "PostToolUse",
+        "means": "le moment juste après, où l'on lance par exemple le formatage ou les tests sur le fichier que l'agent vient de modifier"
+      },
+      {
+        "say": "exit code 2",
+        "means": "le code de sortie par lequel un hook de Claude Code bloque l'action et renvoie son message au modèle"
+      }
+    ],
+    "cat": "agents",
+    "links": [
+      "agents-md",
+      "sandbox-et-permissions",
+      "guardrails",
+      "boucle-agent",
+      "human-in-the-loop",
+      "pilotabilite",
+      "fatigue-d-approbation"
+    ],
+    "short": "Un hook est un script que l'outil d'IA lance de lui-même à un moment précis, par exemple avant ou après chaque action d'un agent, quoi que le modèle ait décidé.",
+    "image": "Pendant des années, Mme Leroy a rappelé chaque soir à ses ados d'éteindre la box. Depuis qu'elle l'a branchée sur une prise programmée, elle ne rappelle plus rien, et la box s'éteint à 23 heures, que les ados y pensent ou non.",
+    "imagineForm": "E",
+    "imagine": "Lundi, ton fichier CLAUDE.md demande à l'agent de lancer le formateur après chaque modification, et de temps en temps, au milieu d'une longue tâche, il l'oublie. Mardi, tu déplaces la même ligne dans un hook PostToolUse, et le formateur passe après chaque fichier touché, sans exception.",
+    "full": [
+      "Un agent décide lui-même de ses actions, et une consigne écrite dans son fichier d'instructions n'est qu'une suite de mots qu'il suivra la plupart du temps. Un hook ne passe pas par lui. C'est une commande que le harness lance à un moment fixé, avant un appel d'outil, après une modification de fichier ou à la fin d'une tâche, et qui s'exécute à chaque fois.",
+      "Anthropic a ajouté les hooks à Claude Code le 30 juin 2025, dans la version 1.0.38, en remerciant la communauté qui les réclamait. Placé avant un appel d'outil, un hook peut refuser l'action, comme une écriture dans un dossier de production, et renvoyer au modèle la raison du refus. Placé après, il formate le code, lance les tests ou t'envoie une notification quand l'agent attend ta réponse.",
+      "Cette fiabilité a son revers. Un hook tourne sur ta machine avec tous les droits de ton compte, et la documentation de Claude Code demande de relire et de tester chaque commande avant de l'ajouter, surtout quand elle vient d'un dépôt ou d'un plugin écrit par quelqu'un d'autre. En pratique, ce qui doit arriver à chaque fois va dans un hook, et ce qui demande du jugement reste dans les consignes."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "On écrit dans CLAUDE.md de ne jamais toucher au dossier de production ?"
+      },
+      {
+        "who": "a",
+        "text": "Écris-le, et ajoute un hook qui bloque toute écriture dans ce dossier ; la consigne sera suivie presque toujours, le hook à chaque fois."
+      }
+    ],
+    "avoid": "« Un hook, c'est une consigne de plus pour l'agent. » Le modèle ne lit pas le hook et ne peut pas décider de l'ignorer, puisque c'est le programme autour de lui qui le lance ; c'est ce qui le rend fiable, et dangereux s'il est mal écrit.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Anthropic, CHANGELOG de Claude Code, version 1.0.38 (« Released hooks. Special thanks to community input »)",
+        "url": "https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md"
+      },
+      {
+        "label": "Registre npm, métadonnées de @anthropic-ai/claude-code, champ time (version 1.0.38 publiée le 30 juin 2025 à 20 h 29 UTC)",
+        "url": "https://registry.npmjs.org/@anthropic-ai/claude-code"
+      },
+      {
+        "label": "Claude Code, Hooks reference, consultée le 2 novembre 2026 (événements PreToolUse et PostToolUse ; un PreToolUse peut décider si l'appel d'outil a lieu ; « Command hooks execute shell commands with your full user permissions » ; « Review and test all hook commands before adding them »)",
+        "url": "https://code.claude.com/docs/en/hooks"
+      },
+      {
+        "label": "Claude Code, Get started with hooks, consultée le 2 novembre 2026 (exemples : formater le code après chaque modification, bloquer les modifications de fichiers protégés, être notifié quand Claude attend une réponse)",
+        "url": "https://code.claude.com/docs/en/hooks-guide"
+      }
+    ]
+  },
+  {
+    "id": "recherche-agentique",
+    "status": "live",
+    "num": "168",
+    "title": "Recherche agentique",
+    "en": "Agentic search",
+    "aliases": [
+      "agentic retrieval",
+      "just-in-time retrieval",
+      "just-in-time context"
+    ],
+    "aliasesFr": [
+      "recherche menée par l'agent"
+    ],
+    "jargon": [
+      {
+        "say": "just in time",
+        "means": "la formule d'Anthropic pour ce mode, où l'agent garde des chemins de fichiers ou des liens et ne charge le contenu qu'au moment où il en a besoin"
+      },
+      {
+        "say": "grep, glob",
+        "means": "deux commandes de terminal, l'une cherche un mot dans des fichiers, l'autre liste les fichiers dont le nom suit un motif ; ce sont les outils de base d'un agent de code"
+      },
+      {
+        "say": "semantic search",
+        "means": "la recherche par le sens, à l'aide d'embeddings, que Cursor ajoute à grep pour les grands projets"
+      }
+    ],
+    "cat": "agents",
+    "links": [
+      "rag",
+      "embedding",
+      "boucle-agent",
+      "deep-research",
+      "cout-d-une-requete",
+      "context-rot",
+      "ancrage-aux-sources"
+    ],
+    "short": "La recherche agentique laisse le modèle chercher lui-même l'information, en lançant ses requêtes, en lisant les résultats et en affinant sur plusieurs tours, au lieu de recevoir des passages préparés.",
+    "image": "À la médiathèque, Odile ne te tend pas trois livres préparés la veille. Elle t'emmène au fichier, tire un tiroir, change de rayon deux fois, et trouve la réponse dans un ouvrage que personne n'aurait pensé à sortir, au bout de vingt minutes que tu n'avais pas prévues.",
+    "imagineForm": "D",
+    "imagine": "« Où est calculée la TVA dans ce projet ? », demandes-tu à l'agent de code. « Dans le module taxes, ligne 112 ; j'ai cherché le mot tva, ouvert facturation.py, puis le fichier qu'il importe », répond-il après onze lectures de fichiers.",
+    "full": [
+      "Le RAG classique prépare le terrain avant la question. On découpe les documents, on les indexe, et le système colle dans la fenêtre de contexte les passages qui ressemblent le plus à la question. Dans la recherche agentique, le modèle reçoit plutôt des outils de recherche et s'en sert lui-même, en boucle, comme un enquêteur qui choisit la piste suivante d'après ce qu'il vient de lire.",
+      "En septembre 2025, Anthropic décrivait cette approche comme du contexte « juste à temps ». L'agent garde des chemins de fichiers, des requêtes enregistrées ou des liens, et ne charge le contenu qu'au moment où il en a besoin. Claude Code procède ainsi dans un projet, avec grep et glob, ce qui lui évite un index qui vieillit à chaque modification du code.",
+      "Le prix se paie en tokens et en minutes, puisque chaque tour relit des fichiers et allonge le contexte. L'index n'a pas disparu pour autant. En novembre 2025, Cursor a mesuré qu'ajouter une recherche par le sens à grep rendait les réponses de ses agents plus justes de 12,5 % en moyenne sur les grands projets, et Anthropic juge lui-même qu'une stratégie hybride convient mieux aux contenus qui bougent peu."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Il faut encore monter une base vectorielle pour que l'agent lise notre wiki ?"
+      },
+      {
+        "who": "a",
+        "text": "Commence par lui donner un outil de recherche sur le wiki et regarde où il se perd ; la base vectorielle vaut son coût quand le corpus est grand et que les mots de la question n'apparaissent pas tels quels dans les pages."
+      }
+    ],
+    "avoid": "« La recherche agentique a remplacé le RAG. » Elle change la façon de chercher sans supprimer l'idée de lire des documents avant de répondre, et sur les gros corpus l'index par embeddings reste un outil que l'agent peut appeler.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Anthropic, Effective context engineering for AI agents, 29 septembre 2025 (stratégies de contexte « just in time » ; l'agent garde des identifiants légers et charge les données à l'exécution ; Claude Code utilise glob et grep et contourne l'indexation périmée ; stratégie hybride mieux adaptée aux contenus moins dynamiques)",
+        "url": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents"
+      },
+      {
+        "label": "Cursor, Improving agent with semantic search, 6 novembre 2025 (la recherche sémantique en plus de grep donne en moyenne 12,5 % de justesse en plus, de 6,5 % à 23,5 % selon le modèle, surtout sur les grands projets)",
+        "url": "https://cursor.com/blog/semsearch"
+      }
+    ]
+  },
+  {
+    "id": "version-epinglee",
+    "status": "live",
+    "num": "169",
+    "title": "Version épinglée",
+    "en": "Pinned model version",
+    "aliases": [
+      "model pinning",
+      "pinned model",
+      "pinned ID",
+      "model snapshot",
+      "model alias"
+    ],
+    "aliasesFr": [
+      "version figée",
+      "alias de modèle"
+    ],
+    "jargon": [
+      {
+        "say": "snapshot",
+        "means": "un état figé du modèle, désigné par un identifiant qui ne changera plus, comme claude-sonnet-4-5-20250929"
+      },
+      {
+        "say": "alias",
+        "means": "un nom court, comme claude-sonnet-4-5, qui pointe vers le snapshot le plus récent d'une version et peut donc changer de cible sans prévenir"
+      },
+      {
+        "say": "deprecation, retirement",
+        "means": "l'annonce qu'une version va disparaître, puis la date où elle cesse de répondre ; chaque identifiant a la sienne"
+      }
+    ],
+    "cat": "agents",
+    "links": [
+      "mythe-chatgpt-c-est-le-modele",
+      "non-determinisme",
+      "evals",
+      "claude",
+      "routage-de-modeles",
+      "modele"
+    ],
+    "short": "Épingler une version, c'est appeler un modèle par un identifiant figé plutôt que par un nom qui suit les mises à jour, pour qu'il réponde demain comme aujourd'hui.",
+    "image": "« Celui qui commande le plat du jour n'a pas à se plaindre qu'il soit pas le même que mardi. S'il voulait la blanquette, fallait dire la blanquette. »",
+    "imagineForm": "D",
+    "imagine": "« 17077 est-il un nombre premier ? Réfléchis étape par étape », demandent en juin 2023 des chercheurs de Stanford et de Berkeley à GPT-4, qui en mars avait détaillé son calcul et trouvé que oui. « Non », répond-il, sans écrire une seule étape.",
+    "full": [
+      "Quand on appelle un modèle par une API, on le désigne par un identifiant. Certains noms sont des alias, qui pointent vers le snapshot le plus récent d'une version et changent de cible le jour où le fournisseur en publie un nouveau. D'autres désignent un état figé du modèle, un snapshot, qui répondra avec les mêmes paramètres jusqu'à son retrait.",
+      "L'écart se mesure. En juillet 2023, Lingjiao Chen, Matei Zaharia et James Zou ont publié les réponses de GPT-4 aux mêmes questions en mars et en juin, sous le même nom. Sa justesse pour reconnaître un nombre premier était tombée de 84 % à 51 %, en partie parce qu'il ne suivait plus la consigne de raisonner étape par étape.",
+      "Depuis la génération 4.6, les identifiants de Claude sans date, comme claude-opus-4-6, ne sont plus des alias mais des snapshots figés, et une mise à jour sort sous un nouveau nom. La documentation d'Anthropic prévient pourtant que l'infrastructure autour du modèle, le routage, les classifieurs de sécurité ou l'échantillonnage, peut encore changer légèrement les réponses. Épingler ne dispense donc pas de relancer ses tests, d'autant que chaque version a sa date de retrait."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "On a mis claude-sonnet-4-5 dans la config de prod il y a un an, on n'y touche plus ?"
+      },
+      {
+        "who": "a",
+        "text": "Cet alias pointe vers un snapshot qu'Anthropic retire le 30 novembre 2026 ; choisis l'identifiant de la version suivante, relance tes tests dessus, et note tout de suite sa propre date de retrait."
+      }
+    ],
+    "avoid": "« Même nom, même modèle. » Un nom de produit ou un alias peut cacher plusieurs versions successives ; seul un identifiant figé garantit les mêmes paramètres, et encore pas forcément la même infrastructure autour.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Chen, Zaharia et Zou (Stanford, UC Berkeley), How is ChatGPT's behavior changing over time?, 18 juillet 2023 (GPT-4 de mars à 84,0 % et de juin à 51,1 % pour reconnaître un nombre premier ; exemple de 17077, version de juin sans étapes intermédiaires ; baisse liée au suivi du raisonnement pas à pas)",
+        "url": "https://arxiv.org/abs/2307.09009"
+      },
+      {
+        "label": "Anthropic, Model deprecations (documentation Claude), consultée le 2 novembre 2026 (claude-sonnet-4-5-20250929 déprécié le 30 septembre 2026, retiré le 30 novembre 2026, remplacement conseillé claude-sonnet-5-5)",
+        "url": "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+      },
+      {
+        "label": "Anthropic, Model IDs and versioning (documentation Claude), consultée le 2 novembre 2026 (identifiants sans date à partir de la génération 4.6, chacun un snapshot figé ; alias comme claude-sonnet-4-5 pointant vers le dernier snapshot daté, par exemple claude-sonnet-4-5-20250929 ; l'infrastructure, routeur, classifieurs de sécurité, échantillonnage, peut changer le comportement ; calendrier de retrait propre à chaque identifiant)",
+        "url": "https://platform.claude.com/docs/en/about-claude/models/model-ids-and-versions"
+      }
+    ]
+  },
+  {
+    "id": "declaration-d-usage-de-l-ia",
+    "status": "live",
+    "num": "170",
+    "title": "Déclaration d'usage de l'IA",
+    "en": "AI use disclosure",
+    "aliases": [
+      "AI disclosure",
+      "AI use statement",
+      "diligence statement",
+      "AI transparency statement"
+    ],
+    "aliasesFr": [
+      "mention d'usage de l'IA",
+      "transparence sur l'usage de l'IA"
+    ],
+    "jargon": [
+      {
+        "say": "article 50",
+        "means": "l'article du règlement européen sur l'IA qui oblige, depuis le 2 août 2026, à signaler certains contenus produits par IA, comme les deepfakes ou les textes publiés pour informer le public"
+      },
+      {
+        "say": "methodology disclosure",
+        "means": "la mention, dans la partie méthode d'un rapport, des outils d'IA employés et de ce qu'ils ont fait"
+      }
+    ],
+    "cat": "methode",
+    "links": [
+      "ai-slop",
+      "human-in-the-loop",
+      "hallucination",
+      "automatiser-ou-augmenter",
+      "ancrage-aux-sources"
+    ],
+    "short": "Une déclaration d'usage de l'IA dit, dans un document, quelle IA a servi, pour quoi faire, comment le résultat a été relu, et qui en répond.",
+    "image": "Au dos du mémoire de stage, la ligne « relu par M. Perrin » ne prétend pas que M. Perrin l'a écrit. Elle dit qui a regardé quoi, et le jour où une erreur ressort, on sait à qui poser la question.",
+    "imagineForm": "B",
+    "imagine": "Ouvre le dernier document que tu as envoyé et écris en bas quatre lignes, quelle IA tu as utilisée, ce qu'elle a fait, comment tu as vérifié et qui en répond. Si la troisième ligne te prend plus de temps que les autres, tu sais quelle partie du travail il te reste à faire.",
+    "full": [
+      "Une déclaration d'usage tient en quelques lignes, placées en note, en annexe ou dans la méthode. Elle nomme l'outil, dit ce qu'il a fait, rédaction, recherche, traduction ou analyse, décrit la relecture, et rappelle qu'une personne assume le contenu final. Elle ne s'excuse de rien et permet au lecteur de régler sa confiance.",
+      "Son absence coûte cher. En 2025, Deloitte a remis au ministère australien de l'Emploi un rapport facturé 440 000 dollars australiens, où un chercheur de l'université de Sydney a relevé des références à des études inexistantes et une citation inventée d'une décision de justice fédérale. La version corrigée mentionnait enfin, dans sa méthode, un outil fondé sur GPT-4o d'Azure OpenAI, et le cabinet a accepté de rembourser la dernière tranche du contrat.",
+      "Le règlement européen sur l'IA en a fait une obligation dans certains cas. Depuis le 2 août 2026, son article 50 impose de signaler les deepfakes, ainsi que les textes produits par IA et publiés pour informer le public, sauf quand une personne les a relus et en porte la responsabilité éditoriale. Pour le reste, rapports, mails ou code, la déclaration dépend encore de chacun et des règles de son employeur ou de son client."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Si je dis que j'ai utilisé l'IA, le client va croire que j'ai bâclé."
+      },
+      {
+        "who": "a",
+        "text": "Dis surtout ce que tu as vérifié ; une ligne comme « première version rédigée avec Claude, chiffres contrôlés sur les sources » rassure plus que le silence, qui coûte cher le jour où une erreur ressort."
+      }
+    ],
+    "avoid": "« Je n'ai fait que corriger mon texte avec l'IA, ça ne compte pas. » Une correction de style n'appelle pas de longue déclaration, mais dès que l'IA a apporté des faits, des chiffres ou des références, le lecteur doit savoir qu'ils ont été vérifiés, et par qui.",
+    "video": null,
+    "sources": [
+      {
+        "label": "The Register, Deloitte refunds Aussie gov after AI fabrications slip into $440K welfare report, 6 octobre 2025 (contrat de 440 000 dollars australiens avec le ministère de l'Emploi et des Relations au travail ; fausses citations, notes fantômes, citation inventée d'une décision de la Cour fédérale ; version corrigée avec mention d'une chaîne d'outils fondée sur Azure OpenAI GPT-4o dans la méthode ; remboursement de la dernière tranche ; erreurs relevées par Chris Rudge)",
+        "url": "https://www.theregister.com/2025/10/06/deloitte_ai_report_australia/"
+      },
+      {
+        "label": "Règlement européen sur l'IA, article 50, obligations de transparence (entrée en application le 2 août 2026 ; signalement des deepfakes et des textes générés publiés pour informer le public, sauf relecture humaine et responsabilité éditoriale)",
+        "url": "https://artificialintelligenceact.eu/article/50/"
+      },
+      {
+        "label": "Rick Dakan, Joseph Feller et Anthropic, The AI Fluency Framework, 2025, licence CC BY-NC-SA 4.0 (Diligence : prendre la responsabilité de ce qu'on fait avec l'IA et de la façon dont on le fait)",
+        "url": "https://www-cdn.anthropic.com/b383cf6baddbfc72fdf8b0ed533a518e2872d531.pdf"
+      }
+    ]
+  },
+  {
+    "id": "ancrage-aux-sources",
+    "status": "live",
+    "num": "171",
+    "title": "Ancrage aux sources",
+    "en": "Grounding",
+    "aliases": [
+      "grounded generation",
+      "source grounding",
+      "grounded answer"
+    ],
+    "aliasesFr": [
+      "réponse sourcée",
+      "ancrage documentaire"
+    ],
+    "jargon": [
+      {
+        "say": "grounded",
+        "means": "ancré, se dit d'une réponse dont chaque affirmation s'appuie sur un document fourni plutôt que sur la mémoire du modèle"
+      },
+      {
+        "say": "citations",
+        "means": "la fonction de l'API d'Anthropic qui accroche à une phrase de la réponse le passage exact du document dont elle vient"
+      }
+    ],
+    "cat": "methode",
+    "links": [
+      "hallucination",
+      "rag",
+      "deep-research",
+      "mythe-sait-quand-il-ne-sait-pas",
+      "connaissances-parametriques",
+      "pilotabilite",
+      "declaration-d-usage-de-l-ia"
+    ],
+    "short": "L'ancrage aux sources oblige un modèle à appuyer chaque affirmation sur des documents fournis, avec le passage exact, et à dire ce que ces documents ne couvrent pas.",
+    "image": "Au quiz du repas de famille, Patrice répondait à tout avec aplomb. Depuis que la règle oblige à montrer la page du dictionnaire avant de marquer le point, il dit « je passe » trois fois par partie, et se trompe bien moins souvent.",
+    "imagineForm": "E",
+    "imagine": "La première fois, tu colles le compte rendu du comité de pilotage et tu demandes la date de lancement ; il répond « le 14 mars », qui n'apparaît nulle part. La seconde, même document, même question, mais tu exiges la phrase exacte ou l'aveu que le document ne le dit pas, et il répond que le compte rendu ne donne aucune date.",
+    "full": [
+      "Un modèle répond de mémoire, à partir de ses paramètres, tant qu'on ne lui donne rien d'autre à lire. L'ancrage consiste à lui fournir les documents qui font foi et à exiger que chaque affirmation s'y rattache. La réponse se vérifie alors en remontant au passage cité, plutôt qu'en faisant confiance au ton.",
+      "La documentation d'Anthropic en donne les gestes de base. On autorise explicitement le modèle à dire « je ne sais pas », on lui fait extraire des citations mot pour mot avant d'analyser un long document, et on lui demande de vérifier chaque affirmation en trouvant le passage qui l'appuie. Anthropic a intégré ces citations à son API, et met en avant le témoignage d'un client, Endex, selon qui ses erreurs de sources sont passées de 10 % à 0 %.",
+      "L'ancrage réduit l'invention sans la supprimer. Le modèle peut citer un vrai passage et en tirer une conclusion que le texte ne dit pas, et une source fausse donne une réponse fausse parfaitement sourcée. En mai 2024, des outils de recherche juridique vendus pour leur ancrage dans la jurisprudence hallucinaient encore sur 17 à 33 % des questions testées par des chercheurs de Stanford."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Il a mis des numéros de source partout, je peux transmettre ?"
+      },
+      {
+        "who": "a",
+        "text": "Ouvre les trois sources qui portent les chiffres importants ; une citation montre où il a lu, et c'est à toi de voir s'il en a tiré la bonne conclusion."
+      }
+    ],
+    "avoid": "« Avec des documents fournis, il ne peut plus inventer. » Il peut encore mélanger deux passages ou combler un trou avec sa mémoire ; l'ancrage rend ces écarts repérables, à condition d'aller voir.",
+    "video": null,
+    "sources": [
+      {
+        "label": "Anthropic, Reduce hallucinations (documentation Claude), consultée le 2 novembre 2026 (permettre à Claude de dire « I don't know » ; extraire des citations mot pour mot avant d'analyser les documents de plus de 20 000 tokens ; faire vérifier chaque affirmation par une citation qui l'appuie)",
+        "url": "https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations"
+      },
+      {
+        "label": "Anthropic, Introducing Citations on the Anthropic API, consulté le 2 novembre 2026 (témoignage d'Endex, client d'Anthropic : erreurs de sources et de mise en forme passées de 10 % à 0 %, 20 % de références en plus par réponse)",
+        "url": "https://claude.com/resources/articles/introducing-citations-api"
+      },
+      {
+        "label": "Magesh et al. (Stanford), Hallucination-Free? Assessing the Reliability of Leading AI Legal Research Tools, 30 mai 2024 (Lexis+ AI et Westlaw AI-Assisted Research hallucinent sur 17 à 33 % des requêtes)",
+        "url": "https://arxiv.org/abs/2405.20362"
+      }
+    ]
+  },
+  {
+    "id": "fatigue-d-approbation",
+    "status": "live",
+    "num": "172",
+    "title": "Fatigue d'approbation",
+    "en": "Approval fatigue",
+    "aliases": [
+      "consent fatigue",
+      "alarm fatigue",
+      "alert fatigue",
+      "MFA fatigue",
+      "push bombing"
+    ],
+    "aliasesFr": [
+      "fatigue de validation",
+      "fatigue du consentement",
+      "fatigue des alarmes"
+    ],
+    "jargon": [
+      {
+        "say": "alarm fatigue",
+        "means": "le terme né à l'hôpital, quand les soignants finissent par ne plus entendre des moniteurs qui sonnent des milliers de fois par jour"
+      },
+      {
+        "say": "MFA fatigue",
+        "means": "l'attaque qui inonde un téléphone de demandes de connexion jusqu'à ce que la victime en accepte une pour avoir la paix"
+      },
+      {
+        "say": "consent fatigue",
+        "means": "le même réflexe devant les bannières de cookies, acceptées sans être lues"
+      }
+    ],
+    "cat": "methode",
+    "links": [
+      "human-in-the-loop",
+      "hook",
+      "prompt-injection",
+      "mythe-agent-autonome",
+      "guardrails"
+    ],
+    "short": "La fatigue d'approbation est le moment où, à force de valider des demandes presque toujours anodines, on approuve par réflexe sans plus rien lire.",
+    "image": "Le détecteur de fumée de Sophie sonne chaque fois qu'elle fait griller du pain. Au bout d'un mois, elle ne lève plus la tête de son assiette, et le jour où c'est le grille-pain qui brûle, elle ouvre la fenêtre en pensant aux tartines.",
+    "imagineForm": "B",
+    "imagine": "Demain, du réveil jusqu'à midi, compte chaque fois que tu touches « Accepter », « Autoriser » ou « OK » sur ton téléphone ou ton ordinateur. Le soir, essaie de te rappeler ce que tu as accepté la troisième fois.",
+    "full": [
+      "Le phénomène est connu bien avant les agents. En avril 2013, la Joint Commission, qui accrédite les hôpitaux américains, recensait 98 incidents liés aux alarmes entre 2009 et 2012, dont 80 morts. Elle désignait la fatigue des alarmes comme leur cause la plus fréquente, quand 85 à 99 % des alertes ne demandent aucune intervention. Les sites comptent aussi sur l'effort qu'on ne fera pas, et en 2020 des chercheurs ont mesuré qu'en retirant des bannières de cookies le bouton de refus de la première page, l'acceptation grimpait de 22 à 23 points.",
+      "Un attaquant peut aussi s'en servir. En septembre 2022, l'intrus qui a pénétré le réseau d'Uber avait probablement acheté le mot de passe d'un sous-traitant, puis inondé son téléphone de demandes de double authentification. Il lui a ensuite écrit sur WhatsApp en se présentant comme le support informatique, et en lui expliquant que les notifications cesseraient s'il en acceptait une.",
+      "Les agents rejouent la scène à grande vitesse, puisqu'un agent de code peut demander des dizaines de permissions dans une matinée, et la fiche Human-in-the-loop donne les chiffres mesurés chez les utilisateurs de Claude Code. La parade est partout la même. On demande moins et mieux, en réservant la validation humaine à ce qui ne se rattrape pas, et on confie le reste à des règles, à un bac à sable ou à des hooks, qui ne se lassent pas."
+    ],
+    "office": [
+      {
+        "who": "q",
+        "text": "Pour être tranquilles, on fait valider chaque action de l'agent par quelqu'un ?"
+      },
+      {
+        "who": "a",
+        "text": "Seulement celles qu'on ne peut pas annuler ; si tu fais tout valider, la personne finira par cliquer sans lire, et tu auras perdu la sécurité en gardant la lenteur."
+      }
+    ],
+    "avoid": "« Plus on demande l'accord de l'humain, plus c'est sûr. » Au-delà d'un certain nombre de demandes, chaque validation compte moins, et une demande dangereuse noyée parmi cent anodines passe plus facilement qu'une demande isolée.",
+    "video": null,
+    "sources": [
+      {
+        "label": "The Joint Commission, Sentinel Event Alert n° 50, Medical device alarm safety in hospitals, 8 avril 2013 (98 événements liés aux alarmes entre janvier 2009 et juin 2012, dont 80 décès ; fatigue des alarmes, facteur le plus fréquent ; 85 à 99 % des alarmes ne demandent pas d'intervention clinique)",
+        "url": "https://digitalassets.jointcommission.org/api/public/content/f65e5c9df2b94000a99445e0a7877007"
+      },
+      {
+        "label": "Nouwens et al., Dark Patterns after the GDPR: Scraping Consent Pop-ups and Demonstrating their Influence, 8 janvier 2020 (retirer le bouton de refus de la première page augmente le consentement de 22 à 23 points ; 11,8 % seulement des bannières respectent les exigences minimales)",
+        "url": "https://arxiv.org/abs/2001.02479"
+      },
+      {
+        "label": "InfoQ, Multi-Factor Authentication Fatigue Key Factor in Uber Breach, 24 septembre 2022 (mot de passe probablement acheté sur le dark web ; contact par WhatsApp en se présentant comme l'informatique d'Uber, seule façon d'arrêter les notifications : en accepter une)",
+        "url": "https://www.infoq.com/news/2022/09/Uber-breach-mfa-fatigue/"
       }
     ]
   },
