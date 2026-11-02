@@ -1,0 +1,77 @@
+{
+  "_regles": "YouTube : titre à part (40 caractères au plus, sans hashtag), description = texte + lien + crédits + hashtags en fin (YouTube affiche les 3 premiers au-dessus du titre). TikTok et Instagram : une seule légende = titre en première ligne + texte + lien (non cliquable, écrit en entier) + crédits + hashtags en fin. Mêmes 4 hashtags partout. Programmation à 8 h. Instagram : forcer le format d'origine (9:16) à l'import. Semaine du 3 novembre : un jour sur deux (crédits ElevenLabs rechargés le 8 novembre).",
+  "episodes": [
+    {
+      "ep": 25,
+      "date": "2026-11-03",
+      "id": "claude",
+      "file": "claude-v1.mp4",
+      "title": "Claude, c'est qui exactement ?",
+      "body": "Claude, c'est la famille de modèles de langage d'Anthropic, Haiku, Sonnet, Opus et Mythos, ouvert au public sous le nom de Fable, et le nom des applications qui les font tourner, du chat à Claude Code. Sa constitution, le texte qui règle son caractère, dure 4 h 08 en livre audio.",
+      "link": "https://neopal.github.io/lexique/claude/",
+      "credits": "",
+      "tags": "#claude #anthropic #llm #vulgarisation",
+      "yt_tags": "Claude, Anthropic, Haiku, Sonnet, Opus, Mythos, Fable, Claude Code, LLM, vulgarisation, lexique IA",
+      "yt_related": "Derrière ChatGPT, quinze IA différentes"
+    },
+    {
+      "ep": 26,
+      "date": "2026-11-05",
+      "id": "autocompletion",
+      "file": "autocompletion-v1.mp4",
+      "title": "L'IA prévoit la rime avant d'écrire",
+      "body": "« Ce n'est que de l'autocomplétion » ; pas tout à fait. Un modèle écrit bien token après token, mais en mars 2025, Anthropic a montré que Claude choisit la rime d'un vers avant d'en écrire le premier mot.",
+      "link": "https://neopal.github.io/lexique/mythe-autocompletion/",
+      "credits": "Portrait pixelisé d'après Wikimedia Commons : Garry Kasparov, photo Comet Photo AG, 1987 (CC BY-SA 4.0).",
+      "tags": "#llm #chatgpt #ia #vulgarisation",
+      "yt_tags": "autocomplétion, LLM, prédiction du mot suivant, Claude, Anthropic, interprétabilité, Kasparov, vulgarisation, lexique IA",
+      "yt_related": "ChatGPT ne sait pas comment sa phrase va finir"
+    },
+    {
+      "ep": 27,
+      "date": "2026-11-07",
+      "id": "pilotabilite",
+      "file": "pilotabilite-v1.mp4",
+      "title": "L'IA suit tes mots, pas ton idée",
+      "body": "La pilotabilité (steerability), c'est jusqu'où une consigne guide un modèle ; forte pour un format ou une longueur, faible pour une intention à deviner. En juillet 2025, une seule ligne ajoutée aux consignes de Grok a suffi à le faire déraper.",
+      "link": "https://neopal.github.io/lexique/pilotabilite/",
+      "credits": "",
+      "tags": "#prompt #chatgpt #llm #vulgarisation",
+      "yt_tags": "pilotabilité, steerability, prompt, consignes, system prompt, Grok, Claude, vulgarisation, lexique IA",
+      "yt_related": "Pourquoi ChatGPT oublie tes consignes"
+    },
+    {
+      "ep": 28,
+      "date": "2026-11-09",
+      "id": "hook-voix",
+      "file": "hook-voix-v1.mp4",
+      "title": "Ton agent oublie ? Mets un hook",
+      "body": "Un hook, c'est un petit programme qu'un outil comme Claude Code lance de lui-même, avant ou après chaque action de l'agent ; la consigne est suivie presque toujours, le hook à chaque fois. Anthropic les a ajoutés à Claude Code le 30 juin 2025. Rien à voir avec le capitaine Crochet, ou presque.",
+      "link": "https://neopal.github.io/lexique/hook/",
+      "credits": "Affiche : Hook, Steven Spielberg, TriStar Pictures, 1991.",
+      "tags": "#claudecode #agentia #devtools #vulgarisation",
+      "yt_tags": "hook, Claude Code, agent IA, automatisation, sécurité, capitaine Crochet, vulgarisation, lexique IA",
+      "yt_related": "Après 50 validations, on ne lit plus"
+    }
+  ],
+  "_statut": {
+    "youtube": {
+      "25": "programmé 2026-11-03 08:00, https://youtube.com/shorts/EyKuZrWmFEs",
+      "26": "programmé 2026-11-05 08:00, https://youtube.com/shorts/mg_b9ZqdypI",
+      "27": "programmé 2026-11-07 08:00, https://youtube.com/shorts/lXz7la3RGSc",
+      "28": "programmé 2026-11-09 08:00, https://youtube.com/shorts/YobcItxSbUA"
+    },
+    "tiktok": {
+      "25": "programmé 2026-11-03 08:00",
+      "26": "programmé 2026-11-05 08:00",
+      "27": "programmé 2026-11-07 08:00",
+      "28": "programmé 2026-11-09 08:00"
+    },
+    "instagram": {
+      "25": "programmé 2026-11-03 08:00",
+      "26": "programmé 2026-11-05 08:00",
+      "27": "programmé 2026-11-07 08:00",
+      "28": "programmé 2026-11-09 08:00"
+    }
+  }
+}
