@@ -1,0 +1,82 @@
+{
+  "id": "autocompletion",
+  "term": "mythe-autocompletion",
+  "episode": 26,
+  "date": "2026-11-04",
+  "format": "Mythe",
+  "composition": "MytheAutocompletionVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "todo": "Phrase du hook provisoire (titre de la fiche) : aucune citation réelle et sourcée qui dise exactement « ce n'est que de l'autocomplétion » ; en chercher une avant la voix, sinon garder telle quelle comme les ép. 9, 11, 13, 15, 17, 20 et 22. Portrait de Kasparov en place (Comet Photo AG, 1987, CC BY-SA 4.0).",
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] « Ce n'est que de l'autocomplétion »… sauf qu'avant d'écrire un mot, le modèle a parfois déjà prévu les suivants.",
+      "screen": "Dès la première image, un clavier de téléphone dessiné, collé de travers avec du scotch aux coins, avec trois suggestions de mots au-dessus. La phrase du mythe s'écrit à la machine en grand (typed), puis le tampon rouge FAUX s'écrase dessus (squash) et reste jusqu'à la fin du hook : c'est l'image de couverture."
+    },
+    {
+      "scene": "vrai",
+      "say": "[curious] Le mythe a raison sur un point. Un modèle écrit bien sa réponse token après token, un petit bout de mot à la fois, comme le clavier de ton téléphone qui propose le mot suivant.",
+      "screen": "Le clavier recule. Une phrase s'écrit bloc par bloc, chaque token dans sa case (même rendu que le short Token) ; au-dessus de chaque nouvelle case, trois suggestions avec leurs barres de probabilité, et la plus haute est choisie. Libellé « token après token »."
+    },
+    {
+      "scene": "rime",
+      "say": "[warmly] Mais en mars 2025, des chercheurs d'Anthropic ont regardé le calcul de Claude pendant qu'il écrivait un petit poème en anglais. Le premier vers finissait par /ɡɹæb ɪt/, et avant d'écrire le second, le modèle avait déjà choisi sa rime… /ˈɹæbɪt/, le lapin.",
+      "screen": "Collage de la capture de l'article d'Anthropic (scotch). Le premier vers s'écrit à la machine en bas, « He saw a carrot and had to grab it, » ; « grab it » se surligne (Highlight). Au-dessus du vide du second vers, une petite bulle de pensée s'allume sur « déjà choisi » avec un lapin pixel art et le mot « rabbit », pendant que le vers est encore vide."
+    },
+    {
+      "scene": "effacer",
+      "say": "[curious] Les chercheurs ont effacé cette idée de son calcul… et le modèle a écrit un tout autre vers, qui finissait par /ˈhæbɪt/.",
+      "screen": "Sur « effacé », une gomme SVG maison passe sur la bulle et le lapin disparaît. Le second vers s'écrit alors à la machine et finit par « habit », surligné. Libellés « rabbit » barré, « habit »."
+    },
+    {
+      "scene": "kasparov",
+      "say": "[mischievously] Kasparov aussi jouait un coup après l'autre, et personne n'est allé lui dire qu'il ne faisait que pousser du bois.",
+      "screen": "Scène propre à ce short : un échiquier vu de dessus, Kasparov en portrait pixelisé (Commons) à côté. Une pièce avance d'une case ; en pointillés, trois coups suivants se dessinent derrière elle (draw-on), comme un plan déjà fait."
+    },
+    {
+      "scene": "apres",
+      "say": "[warmly] Et le ChatGPT ou le Claude que tu utilises a ensuite appris à répondre, à refuser et à raisonner avant d'écrire… toujours avec cette même prédiction.",
+      "screen": "Retour aux cases de tokens. Trois étiquettes se posent en cascade au-dessus, sur leur mot : « répondre », « refuser », « raisonner ». En dessous, la même rangée de cases continue de s'écrire, inchangée."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors oui, il écrit mot après mot… [pause] comme Kasparov joue coup après coup, en voyant plus loin que le prochain.",
+      "screen": "Retour à l'échiquier plein cadre, les coups en pointillés allumés jusqu'au bout du plan. Image finale pleine."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈɹæbɪt/": "rabbit",
+    "/ˈhæbɪt/": "habit",
+    "/ɡɹæb": "grab",
+    "ɪt/": "it"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {},
+  "sources": [
+    "Fiche mythe-autocompletion de lexique/terms.js : Anthropic, Tracing the thoughts of a large language model, 27 mars 2025 (le distique « He saw a carrot and had to grab it, / His hunger was like a starving rabbit » ; le modèle prévoit la rime avant le second vers ; en retirant le concept « rabbit », il écrit un vers qui finit par « habit ») ; https://www.anthropic.com/research/tracing-thoughts-language-model",
+    "Lindsey et al. (Anthropic), On the Biology of a Large Language Model, mars 2025 (Claude 3.5 Haiku) ; https://transformer-circuits.pub/2025/attribution-graphs/biology.html",
+    "Ouyang et al. (OpenAI), Training language models to follow instructions with human feedback, mars 2022 (post-entraînement) ; https://arxiv.org/abs/2203.02155",
+    "Image : Kasparov qui joue un coup après l'autre (fiche mythe-autocompletion)"
+  ],
+  "publication": {
+    "title": "L'IA prévoit la rime avant d'écrire",
+    "description": "« Ce n'est que de l'autocomplétion » ; pas tout à fait. Un modèle écrit bien token après token, mais en mars 2025, Anthropic a montré que Claude choisit la rime d'un vers avant d'en écrire le premier mot.\nhttps://neopal.github.io/lexique/mythe-autocompletion/\n#llm #chatgpt #ia #vulgarisation\nCapture : Anthropic, 27 mars 2025. Portrait pixelisé d'après Wikimedia Commons : Garry Kasparov, photo Comet Photo AG, 1987 (CC BY-SA 4.0).",
+    "fil": "L'ép. 25 disait que Claude est un modèle de langage ; on entend souvent que ce n'est que de l'autocomplétion",
+    "decor": "échiquier (Kasparov)"
+  },
+  "credits": [
+    "Capture : Anthropic, 27 mars 2025, « Tracing the thoughts of a large language model » (public/voix/autocompletion-anthropic.png), citation, à produire",
+    "Portrait : Garry Kasparov, « Garry Kasparov - 1987 - cropped.jpg », Comet Photo AG (Zürich), 5 avril 1987, CC BY-SA 4.0, Wikimedia Commons, pixelisé en 48 × 63 (public/voix/autocompletion-kasparov.png)"
+  ]
+}

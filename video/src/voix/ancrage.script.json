@@ -1,0 +1,80 @@
+{
+  "id": "ancrage",
+  "term": "ancrage-aux-sources",
+  "episode": 31,
+  "date": "2026-11-09",
+  "format": "Définition",
+  "composition": "AncrageVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... l'ancrage aux sources…",
+      "screen": "Titre géant « ANCRAGE AUX SOURCES ». Derrière, posée dès la première image, une ancre SVG maison dont la chaîne descend vers une pile de documents. Aucun sous-titre (nocaption)."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Tu crois qu'en donnant tes documents à une IA, elle ne peut plus inventer ? Elle peut encore… sauf si tu l'obliges à montrer d'où vient chaque phrase.",
+      "screen": "Une pile de documents glisse dans une bulle de chat ; la réponse s'écrit à côté, et sur « inventer », une de ses phrases devient rouge. Sur « d'où vient », un fil se tend de chaque phrase vers un passage des documents."
+    },
+    {
+      "scene": "nom",
+      "say": "[warmly] Faire appuyer chaque affirmation sur un passage exact des documents fournis, c'est l'ancrage aux sources, ou en anglais, le /ˈɡɹaʊndɪŋ/.",
+      "screen": "« ancrage aux sources » s'écrit en grand, puis « grounding » dessous en couleur d'accent (passages masqués, onscreen)."
+    },
+    {
+      "scene": "patrice",
+      "say": "[mischievously] Imagine Patrice au quiz du repas de famille, qui répond à tout avec aplomb… depuis que la règle oblige à montrer la page du dictionnaire avant de marquer le point, il dit « je passe » trois fois par partie, et il se trompe bien moins souvent.",
+      "screen": "Scène propre à ce short : table du dimanche en pixel art, Patrice qui lève la main à chaque question, un tableau de score derrière. Sur « la page du dictionnaire », un gros dictionnaire s'ouvre au milieu de la table ; sur « je passe », trois bulles « je passe » sortent de Patrice en cascade, et les croix rouges du tableau s'effacent une à une."
+    },
+    {
+      "scene": "gestes",
+      "say": "[curious] Avec une IA, ça tient en trois consignes… tu l'autorises à dire « je ne sais pas », tu lui fais citer le passage mot pour mot, et tu lui fais retirer toute phrase qui n'en a pas.",
+      "screen": "Trois cartes numérotées tombent en cascade, chacune sur son mot : « 1 je ne sais pas », « 2 citer mot pour mot », « 3 retirer ». Sur « retirer », une phrase de la réponse sans fil vers les documents est barrée et sort du cadre (même mécanisme que le schéma de la fiche)."
+    },
+    {
+      "scene": "limite",
+      "say": "[warmly] L'ancrage réduit l'invention, sans la supprimer. En 2024, des chercheurs de Stanford ont montré que des outils juridiques vendus pour ça se trompaient encore sur 17 à 33 % des questions.",
+      "screen": "Collage de la capture de l'article de Stanford (scotch). Une jauge horizontale se remplit en count-up de 17 à 33 % sur « 17 à 33 % » ; libellé « questions ratées »."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors quand une IA te cite ses sources… [pause] ouvre au moins celles qui portent les chiffres importants.",
+      "screen": "Retour à la réponse et à ses fils : trois fils marqués d'un chiffre s'allument, et un document s'ouvre au bout du premier. Image finale pleine."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈɡɹaʊndɪŋ/": "grounding"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "c'est l'ancrage aux sources, ou en anglais, le grounding."
+    ]
+  },
+  "sources": [
+    "Fiche ancrage-aux-sources de lexique/terms.js : Anthropic, Reduce hallucinations (dire « I don't know » ; citations mot pour mot ; vérifier chaque affirmation par une citation, sinon la retirer) ; https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/reduce-hallucinations",
+    "Fiche ancrage-aux-sources de lexique/terms.js : Magesh et al. (Stanford), 30 mai 2024 (Lexis+ AI et Westlaw AI-Assisted Research hallucinent sur 17 à 33 % des requêtes) ; https://arxiv.org/abs/2405.20362",
+    "Image : Patrice au quiz du repas de famille (fiche ancrage-aux-sources) ; scène inventée, aucun fait daté"
+  ],
+  "publication": {
+    "title": "Oblige l'IA à montrer sa page",
+    "description": "L'ancrage aux sources (grounding), c'est obliger un modèle à appuyer chaque phrase sur un passage exact des documents fournis, et à dire « je ne sais pas » quand ils ne couvrent pas la question. Ça réduit l'invention sans la supprimer.\nhttps://neopal.github.io/lexique/ancrage-aux-sources/\n#hallucination #chatgpt #rag #vulgarisation\nCapture : arXiv (Magesh et al., Stanford, mai 2024).",
+    "fil": "L'ép. 30 finissait sur des références inventées ; voilà comment on oblige un modèle à montrer d'où vient chaque phrase",
+    "decor": "repas de famille (Patrice au quiz)"
+  },
+  "credits": [
+    "Capture : arXiv, Magesh et al., « Hallucination-Free? » (public/voix/ancrage-stanford.png), citation, à produire"
+  ]
+}

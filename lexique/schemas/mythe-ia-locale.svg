@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="mythe-ia-locale-t">
+<title id="mythe-ia-locale-t">Ce que ta machine peut charger : un modèle de 20 à 40 milliards de paramètres tient sur une carte graphique de joueur et égale les meilleurs modèles d'il y a six à douze mois ; les meilleurs modèles ouverts, de 750 à 2 800 milliards de paramètres, demandent des serveurs. En échange, l'IA locale garde les données sur la machine et marche sans réseau.</title>
+<text class="m mu" x="0" y="14">ce qui tient où</text>
+<rect class="bxa" x="0" y="28" width="150" height="104" rx="6"/>
+<text class="b ac" x="14" y="54">ta machine</text>
+<text class="m" x="14" y="82">20 à 40 Md</text>
+<text class="m" x="14" y="104">de paramètres</text>
+<rect class="bx" x="180" y="28" width="180" height="104" rx="6"/>
+<text class="b" x="194" y="54">des serveurs</text>
+<text class="m" x="194" y="82">750 à 2 800 Md</text>
+<text class="m" x="194" y="104">de paramètres</text>
+<path class="lm dash" d="M0 156 h360"/>
+<text class="m mu" x="0" y="184">son niveau, sur la ligne du temps</text>
+<path class="ln" d="M0 230 h360"/>
+<circle class="fa" cx="90" cy="230" r="8"/>
+<circle class="fl" cx="330" cy="230" r="8"/>
+<text class="m ac" x="90" y="214" text-anchor="middle">ta machine</text>
+<text class="m" x="330" y="214" text-anchor="end">les meilleurs</text>
+<path class="la" d="M104 252 h212"/><path class="la" d="M109 247 l-5 5 l5 5"/><path class="la" d="M311 247 l5 5 l-5 5"/>
+<text class="m" x="210" y="276" text-anchor="middle">6 à 12 mois</text>
+<text class="i mu" x="0" y="308">En échange, tes données restent chez toi</text>
+<text class="i mu" x="0" y="326">et tout marche sans réseau.</text>
+</svg>

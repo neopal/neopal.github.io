@@ -1,0 +1,90 @@
+{
+  "id": "declaration",
+  "term": "declaration-d-usage-de-l-ia",
+  "episode": 30,
+  "date": "2026-11-08",
+  "format": "Définition",
+  "composition": "DeclarationVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... une déclaration d'usage de l'IA…",
+      "screen": "Titre géant « DÉCLARATION D'USAGE DE L'IA » sur deux lignes. Derrière, posé dès la première image, le bas d'un document avec quatre lignes vides. Aucun sous-titre (nocaption)."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Tu crois que dire que tu as utilisé l'IA, c'est avouer que tu as bâclé ? En 2025, c'est le silence qui a coûté cher à Deloitte.",
+      "screen": "Une bulle « j'ai utilisé l'IA » avec un point d'interrogation inquiet ; sur « Deloitte », collage de la capture du titre de l'article de The Register (scotch aux coins)."
+    },
+    {
+      "scene": "rapport",
+      "say": "[warmly] Le cabinet avait rendu au gouvernement australien un rapport facturé 440 000 dollars australiens… un chercheur y a trouvé des études qui n'existent pas, et une citation inventée d'une décision de justice.",
+      "screen": "Un rapport relié se pose ; une étiquette de prix se colle avec un count-up jusqu'à « 440 000 $ AU ». Sur « chercheur », une loupe passe sur les notes de bas de page : trois références deviennent rouges et se barrent, puis une citation entre guillemets se barre aussi."
+    },
+    {
+      "scene": "mention",
+      "say": "[curious] La version corrigée mentionnait enfin, dans sa méthode, un outil fondé sur GPT-4o… et Deloitte a remboursé la dernière tranche du contrat.",
+      "screen": "Le rapport se rouvre à la page « méthode », une ligne « Azure OpenAI GPT-4o » s'écrit à la machine et se surligne. Sur « remboursé », une pile de billets repart du rapport vers la gauche (arc)."
+    },
+    {
+      "scene": "nom",
+      "say": "[warmly] Ces quelques lignes qui disent quelle IA a servi, à quoi, comment on a relu, et qui en répond, c'est la déclaration d'usage de l'IA, ou en anglais, l'/ˌeɪˈaɪ dɪsˈkloʊʒɚ/.",
+      "screen": "Les quatre lignes vides du hook se remplissent en cascade, chacune sur son mot : « quelle IA », « à quoi », « comment on a relu », « qui en répond ». Puis « déclaration d'usage de l'IA » en grand et « AI disclosure » dessous en couleur d'accent (passages masqués, onscreen)."
+    },
+    {
+      "scene": "memoire",
+      "say": "[mischievously] Imagine le mémoire de stage de Léa, avec au dos la ligne « relu par Monsieur Perrin »… ça ne dit pas qu'il l'a écrit, ça dit qui a regardé quoi, et à qui poser la question le jour où une erreur ressort.",
+      "screen": "Scène propre à ce short : un mémoire relié posé sur un bureau d'école, Léa en pixel art qui cligne des yeux. Le mémoire se retourne, la ligne « relu par M. Perrin » se surligne ; sur « une erreur ressort », une page sort du mémoire avec un point rouge et une flèche file vers une petite photo de M. Perrin."
+    },
+    {
+      "scene": "loi",
+      "say": "[curious] Depuis le 2 août 2026, en Europe, le règlement sur l'IA rend la mention obligatoire pour les /ˈdipfeɪks/ et les textes générés pour informer le public… sauf quand une personne les a relus et en répond.",
+      "screen": "Collage de la capture de l'article 50 du règlement (scotch). Deux icônes tombent sur leur mot : un visage dédoublé (« deepfakes ») et une page de journal (« textes ») ; sur « sauf », une coche « relu et signé » vient se poser sur la page de journal."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors en bas de ton prochain document, écris tes quatre lignes… [pause] et si la troisième est la plus dure à écrire, c'est par elle qu'il faut commencer.",
+      "screen": "Retour au bas du document : les quatre lignes remplies, la troisième « comment on a relu » s'allume en couleur d'accent. Image finale pleine."
+    }
+  ],
+  "quoted": [
+    "reluparMonsieurPerrin"
+  ],
+  "display": {
+    "l'/ˌeɪˈaɪ": "l'AI",
+    "dɪsˈkloʊʒɚ/": "disclosure",
+    "/ˈdipfeɪks/": "deepfakes"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "c'est la déclaration d'usage de l'IA, ou en anglais, l'AI disclosure."
+    ]
+  },
+  "sources": [
+    "Fiche declaration-d-usage-de-l-ia de lexique/terms.js : The Register, 6 octobre 2025 (contrat de 440 000 dollars australiens ; fausses références et citation inventée d'une décision de la Cour fédérale ; version corrigée mentionnant Azure OpenAI GPT-4o dans la méthode ; remboursement de la dernière tranche ; erreurs relevées par Chris Rudge) ; https://www.theregister.com/2025/10/06/deloitte_ai_report_australia/",
+    "Fiche declaration-d-usage-de-l-ia de lexique/terms.js : règlement européen sur l'IA, article 50 (applicable le 2 août 2026 ; deepfakes et textes générés publiés pour informer le public, sauf relecture humaine et responsabilité éditoriale) ; https://artificialintelligenceact.eu/article/50/",
+    "Image : le mémoire de Léa relu par M. Perrin (fiche declaration-d-usage-de-l-ia) ; scène inventée, aucun fait daté"
+  ],
+  "publication": {
+    "title": "440 000 dollars de fausses références",
+    "description": "Une déclaration d'usage de l'IA (AI disclosure), ce sont quelques lignes qui disent quelle IA a servi, à quoi, comment on a relu, et qui en répond. En 2025, Deloitte a dû rembourser une partie d'un rapport plein de références inventées, qui ne mentionnait pas l'IA.\nhttps://neopal.github.io/lexique/declaration-d-usage-de-l-ia/\n#ia #transparence #aiact #vulgarisation\nCaptures : The Register, 6 octobre 2025 ; règlement européen sur l'IA, article 50.",
+    "fil": "L'ép. 29 demandait quelles tâches partent à l'IA ; quand c'est elle qui a écrit, encore faut-il le dire",
+    "decor": "bureau d'école (le mémoire de Léa)"
+  },
+  "credits": [
+    "Capture : The Register, 6 octobre 2025 (public/voix/declaration-register.png), citation, à produire",
+    "Capture : artificialintelligenceact.eu, article 50 (public/voix/declaration-article50.png), citation, à produire"
+  ]
+}

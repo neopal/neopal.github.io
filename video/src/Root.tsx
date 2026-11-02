@@ -44,6 +44,13 @@ import {ContextRotVoix, CONTEXTROTVOIX_DURATION} from './ContextRotVoix';
 import {MytheInternetVoix, MYTHEINTERNETVOIX_DURATION} from './MytheInternetVoix';
 import {TokenVoix, TOKENVOIX_DURATION} from './TokenVoix';
 import {BenchmaxxingVoix, BENCHMAXXINGVOIX_DURATION} from './BenchmaxxingVoix';
+import {AncrageVoix, ANCRAGEVOIX_DURATION} from './AncrageVoix';
+import {DeclarationVoix, DECLARATIONVOIX_DURATION} from './DeclarationVoix';
+import {MytheMetierVoix, MYTHEMETIERVOIX_DURATION} from './MytheMetierVoix';
+import {HookVoix, HOOKVOIX_DURATION} from './HookVoix';
+import {PilotabiliteVoix, PILOTABILITEVOIX_DURATION} from './PilotabiliteVoix';
+import {MytheAutocompletionVoix, MYTHEAUTOCOMPLETIONVOIX_DURATION} from './MytheAutocompletionVoix';
+import {ClaudeVoix, CLAUDEVOIX_DURATION} from './ClaudeVoix';
 
 // Les shorts dans une seule entrée (stills et rendus partagent le même bundle).
 const C = {fps: 30, width: 1080, height: 1920} as const;
@@ -94,5 +101,12 @@ export const Root: React.FC = () => (
     <Composition id="MytheInternetVoix" component={MytheInternetVoix} durationInFrames={MYTHEINTERNETVOIX_DURATION} {...C} />
     <Composition id="TokenVoix" component={TokenVoix} durationInFrames={TOKENVOIX_DURATION} {...C} />
     <Composition id="BenchmaxxingVoix" component={BenchmaxxingVoix} durationInFrames={BENCHMAXXINGVOIX_DURATION} {...C} />
+    <Composition id="AncrageVoix" component={AncrageVoix} durationInFrames={ANCRAGEVOIX_DURATION} {...C} />
+    <Composition id="DeclarationVoix" component={DeclarationVoix} durationInFrames={DECLARATIONVOIX_DURATION} {...C} />
+    <Composition id="MytheMetierVoix" component={MytheMetierVoix} durationInFrames={MYTHEMETIERVOIX_DURATION} {...C} />
+    <Composition id="HookVoix" component={HookVoix} durationInFrames={HOOKVOIX_DURATION} {...C} />
+    <Composition id="PilotabiliteVoix" component={PilotabiliteVoix} durationInFrames={PILOTABILITEVOIX_DURATION} {...C} />
+    <Composition id="MytheAutocompletionVoix" component={MytheAutocompletionVoix} durationInFrames={MYTHEAUTOCOMPLETIONVOIX_DURATION} {...C} />
+    <Composition id="ClaudeVoix" component={ClaudeVoix} durationInFrames={CLAUDEVOIX_DURATION} {...C} />
   </>
 );

@@ -1,0 +1,82 @@
+{
+  "id": "ia-locale",
+  "term": "mythe-ia-locale",
+  "episode": 32,
+  "date": "2026-11-10",
+  "format": "Mythe",
+  "composition": "MytheIaLocaleVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "todo": "Demandé par PA le 2026-11-02 (« l'IA locale, mythe ou réalité »). Phrase du hook provisoire (titre de la fiche) : pas de citation réelle et sourcée qui dise exactement le mythe ; titres approchants trouvés (« I Quit ChatGPT for a Free, Private, and Local AI », « ChatGPT GRATIS en tu PC »), à ne pas tamponner tels quels. Composition pas encore montée.",
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] « Une IA locale, c'est ChatGPT chez soi »… en vrai, c'est plutôt celui de l'an dernier.",
+      "screen": "Dès la première image, un ordinateur portable dessiné, collé de travers au scotch, avec une bulle de chat à l'écran. La phrase du mythe s'écrit à la machine en grand (typed), puis le tampon rouge FAUX s'écrase dessus (squash) et reste jusqu'à la fin du hook : c'est l'image de couverture."
+    },
+    {
+      "scene": "vrai",
+      "say": "[curious] Le mythe a sa part de vrai. Avec un logiciel gratuit comme Ollama, tu télécharges un modèle ouvert, et il tourne sur ton ordinateur… sans compte, sans abonnement, et tes messages ne sortent pas de chez toi.",
+      "screen": "Le portable au centre. Sur « télécharges », une barre de téléchargement se remplit (bar grow, libellé « 14 Go ») ; sur « sans compte » et « sans abonnement », deux icônes barrées tombent en cascade (carte d'identité, carte bancaire) ; sur « ne sortent pas », une enveloppe tente de quitter l'écran et rebondit contre un mur de maison dessiné autour du portable."
+    },
+    {
+      "scene": "train",
+      "say": "[warmly] Il marche même sans réseau, dans le train, ou le jour où ChatGPT tombe en panne.",
+      "screen": "Le portable posé sur une tablette de train pixel art, paysage qui défile derrière (défilement linéaire continu), icône de réseau barrée en haut ; la bulle de chat continue de répondre."
+    },
+    {
+      "scene": "taille",
+      "say": "[curious] Mais ta machine ne charge qu'un modèle de taille moyenne. Le petit modèle ouvert d'OpenAI demande seize gigaoctets de mémoire… et les meilleurs modèles ouverts sont des dizaines de fois plus gros, sur des serveurs.",
+      "screen": "Un petit bloc « 20 Md » (le modèle de Parts.tsx en petit) entre dans le portable ; libellé « 16 Go » sur la mémoire. Sur « des dizaines de fois », un bloc géant « 2 800 Md » descend du haut et ne tient pas dans le cadre ; sur « serveurs », il se pose sur une baie de serveurs dessinée."
+    },
+    {
+      "scene": "retard",
+      "say": "[warmly] En 2025, l'institut /ˈɛpək/ a mesuré que les modèles qui tiennent sur une carte graphique de joueur rattrapent les meilleurs avec six à douze mois de retard.",
+      "screen": "Une ligne du temps se dessine (draw-on). Un point « les meilleurs » avance à droite ; un point « ta machine » le suit à distance ; sur « six à douze mois », l'écart entre les deux se colore, libellé « 6 à 12 mois » (punch zoom du short sur ce libellé)."
+    },
+    {
+      "scene": "gilles",
+      "say": "[mischievously] Imagine Gilles et son home cinéma dans le garage… personne ne sait ce qu'il regarde, il ne paie plus la séance, mais les films y arrivent un an après leur sortie en salle.",
+      "screen": "Scène propre à ce short : garage en pixel art, Gilles dans un fauteuil, un projecteur qui éclaire un drap tendu. Sur « personne ne sait », la porte du garage se ferme ; sur « un an après », une affiche de film arrive sur le drap avec une étiquette « l'an dernier »."
+    },
+    {
+      "scene": "etdonc",
+      "say": "[curious] Pour résumer, classer ou traduire des documents qui ne doivent pas sortir de chez toi, c'est largement suffisant… pour le dernier cri, il faut aller au cinéma.",
+      "screen": "Trois cartes tombent en cascade sur leur mot : « résumer », « classer », « traduire », chacune avec une coche ; sur « dernier cri », une salle de cinéma dessinée s'allume à droite, plus grande."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors une IA locale, c'est bien réel… [pause] c'est juste le ChatGPT de l'an dernier, chez toi.",
+      "screen": "Retour au garage de Gilles plein cadre, le projecteur allumé, le portable posé sur l'accoudoir. Image finale pleine."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈɛpək/": "Epoch"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {},
+  "sources": [
+    "Fiche mythe-ia-locale de lexique/terms.js : Journal du Geek, 20 avril 2026 (IA sans internet quand ChatGPT, Gemini ou Claude tombent en panne) ; https://www.journaldugeek.com/2026/04/20/ces-2-apps-vous-permettent-dutiliser-une-ia-sans-internet-quand-chatgpt-gemini-ou-claude-tombent-en-panne/",
+    "Fiche mythe-ia-locale de lexique/terms.js : OpenAI, Introducing gpt-oss, 5 août 2025 (gpt-oss-20b tourne avec 16 Go de mémoire) ; Ollama, gpt-oss (14 Go) ; https://ollama.com/library/gpt-oss",
+    "Fiche mythe-ia-locale de lexique/terms.js : Epoch AI, What's the best model you can run on a single consumer GPU?, 9 septembre 2025 (6 à 12 mois de retard sur une carte graphique de joueur) ; https://epochai.substack.com/p/whats-the-best-model-you-can-run",
+    "Fiche mythe-ia-locale de lexique/terms.js : Kimi K3, 2 780 milliards de paramètres ; GLM-5.3, 753 milliards (API Hugging Face), contre environ 21 milliards pour gpt-oss-20b ; https://huggingface.co/moonshotai/Kimi-K3",
+    "Image : Gilles et son home cinéma (fiche mythe-ia-locale) ; scène inventée, aucun fait daté"
+  ],
+  "publication": {
+    "title": "L'IA chez toi a un an de retard",
+    "description": "« Une IA locale, c'est ChatGPT chez soi » ; pas tout à fait. Avec Ollama ou LM Studio, un modèle ouvert tourne sur ton ordinateur, sans abonnement et sans que tes messages sortent ; mais sur une carte graphique de joueur, il égale les meilleurs modèles d'il y a six à douze mois (Epoch AI, 2025).\nhttps://neopal.github.io/lexique/mythe-ia-locale/\n#ialocale #ollama #llm #vulgarisation",
+    "fil": "L'ép. 31 finissait sur les sources qu'on vérifie ; et si on gardait tout chez soi, avec une IA locale ?",
+    "decor": "garage (Gilles et son home cinéma)"
+  },
+  "credits": []
+}

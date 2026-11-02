@@ -1,6 +1,6 @@
 # Lexique IA
 
-> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 172 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
+> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 173 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
 
 Toutes les fiches en texte brut, sources comprises : https://neopal.github.io/lexique/llms-full.txt
 Auteur : https://neopal.github.io/
@@ -200,3 +200,4 @@ Auteur : https://neopal.github.io/
 - [Ce ne sont que des statistiques, donc ça ne décide rien](https://neopal.github.io/lexique/mythe-que-des-statistiques/) (en anglais : Myth: it's just statistics, so it can't decide anything) : Un modèle d'IA est bien une fonction mathématique, et une fonction peut choisir entre des options ; « que des maths » décrit son mécanisme, pas ce que font ses sorties.
 - [Il suffit d'ajouter de l'IA à nos processus](https://neopal.github.io/lexique/mythe-ajouter-ia/) (en anglais : Myth: just add AI to our processes) : Ajouter de l'IA à un processus existant accélère les étapes qu'il contient sans toucher aux attentes et aux passages de main, là où se perd souvent l'essentiel du temps.
 - [95 % des projets d'IA échouent](https://neopal.github.io/lexique/mythe-95-pourcent/) (en anglais : Myth: 95% of AI projects fail) : Le chiffre de 95 % de projets d'IA en échec vient d'un rapport de 2025 au petit échantillon, qui comptait parmi les échecs les entreprises n'ayant jamais lancé de pilote.
+- [Une IA locale, c'est ChatGPT chez soi](https://neopal.github.io/lexique/mythe-ia-locale/) (en anglais : Myth: local AI is ChatGPT at home) : Une IA locale garde tes données chez toi, mais sur une carte graphique de joueur, elle égale les meilleurs modèles d'il y a six mois à un an.

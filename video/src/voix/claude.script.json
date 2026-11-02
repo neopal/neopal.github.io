@@ -1,0 +1,81 @@
+{
+  "id": "claude",
+  "term": "claude",
+  "episode": 25,
+  "date": "2026-11-03",
+  "format": "Définition",
+  "composition": "ClaudeVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... Claude…",
+      "screen": "Titre géant « CLAUDE » au centre. Derrière, posés dès la première image, quatre cartons de tailles croissantes empilés de travers (Haiku, Sonnet, Opus, Mythos), sans libellé encore. Aucun sous-titre (nocaption)."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Tu crois que Claude, c'est un chatbot comme ChatGPT ? C'est d'abord une famille de modèles de langage d'Anthropic, et aussi le nom des applications qui les font tourner, du chat jusqu'à Claude Code.",
+      "screen": "Une bulle de chat dessinée, posée à l'entrée. Sur « famille de modèles », elle s'écarte et révèle derrière le modèle de Parts.tsx en quatre exemplaires de tailles différentes. Sur « applications », trois fenêtres glissent au-dessus en cascade, libellées « chat », « Code », « Cowork »."
+    },
+    {
+      "scene": "paliers",
+      "say": "[warmly] Depuis mars 2024, chaque génération sort en trois tailles, Haiku, Sonnet et Opus, de la plus rapide à la plus capable… et en 2026 s'est ajouté un quatrième palier, Mythos, ouvert au public sous le nom de Fable.",
+      "screen": "Les quatre modèles s'alignent de gauche à droite par taille (bar grow), chacun reçoit son nom sur le mot qui le dit, 5 images après le bloc. Sous la rangée, une flèche « rapide » à gauche, « capable » à droite. Mythos arrive en dernier, en couleur d'accent. Sur « Fable », une étiquette « Fable » se pose au-dessus du bloc Mythos, en couleur d'accent."
+    },
+    {
+      "scene": "herve",
+      "say": "[mischievously] Imagine Hervé, qui te dit « j'ai déjeuné au restaurant de l'hôtel »… a-t-il pris le croque-monsieur du bar, servi en cinq minutes, ou le menu en sept plats qui lui a coûté son après-midi ?",
+      "screen": "Scène propre à ce short : façade d'hôtel en pixel art, Hervé devant, qui cligne des yeux. Sur « croque-monsieur », à gauche, un croque sur une assiette et une horloge qui tourne de cinq minutes ; sur « sept plats », à droite, une table nappée où sept assiettes tombent en cascade pendant que l'horloge fait un tour complet."
+    },
+    {
+      "scene": "flou",
+      "say": "[curious] Quand on te dit « j'ai demandé à Claude », c'est le même flou… entre un Haiku pressé et un Opus qui prend son temps.",
+      "screen": "Wipe : le croque devient le carton « Haiku », le menu le carton « Opus ». Au centre, une bulle « J'ai demandé à Claude » avec un point d'interrogation qui oscille entre les deux."
+    },
+    {
+      "scene": "constitution",
+      "say": "[warmly] Anthropic règle son caractère avec une constitution, un texte qui dit ce que Claude doit faire et pourquoi. Elle existe en livre audio… lance-le à neuf heures, il se termine à treize heures sept.",
+      "screen": "Collage de la capture de la page « Claude's Constitution » (scotch aux coins). Sur « livre audio », une horloge murale pixel art à 9 h ; ses aiguilles tournent en continu jusqu'à 13 h 07 sur « treize heures sept », pendant qu'une barre de douze pistes se remplit (bar grow). Libellé bas : « 12 pistes »."
+    },
+    {
+      "scene": "garde",
+      "say": "[curious] Une constitution n'empêche pas tout. En août 2025, Anthropic a révélé qu'un groupe criminel s'était servi de Claude Code pour faire chanter au moins dix-sept organisations.",
+      "screen": "La capture se replie. Une rangée de dix-sept petits immeubles pixel art se pose en cascade (count-up « 17 » en bas) ; sur « faire chanter », un cadenas rouge se ferme sur chacun, de gauche à droite."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors la prochaine fois qu'on te dit « je l'ai demandé à Claude »… [pause] demande lequel, et ce qu'il avait sous les yeux.",
+      "screen": "Retour au restaurant de l'hôtel, plein cadre : Hervé à table entre le croque et le menu ; une étiquette « lequel ? » se pose entre les deux assiettes. Image finale pleine."
+    }
+  ],
+  "quoted": [],
+  "display": {},
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {},
+  "sources": [
+    "Fiche claude de lexique/terms.js : Wikipédia, Claude (AI), consulté le 29 octobre 2026 (famille de modèles d'Anthropic, applications claude.ai, Claude Code, Cowork ; quatre paliers Haiku, Sonnet, Opus, Mythos ; GTG-2002 et au moins 17 organisations, août 2025) ; https://en.wikipedia.org/wiki/Claude_(AI)",
+    "Anthropic, Introducing the next generation of Claude, 4 mars 2024 (Claude 3 en trois modèles, Haiku, Sonnet, Opus) ; https://www.anthropic.com/news/claude-3-family",
+    "Anthropic, Claude's Constitution (livre audio en 12 pistes, 14 858 s au total, soit 4 h 07 min 38 s ; 9 h + 4 h 07 = 13 h 07) ; https://www.anthropic.com/constitution",
+    "Image : Hervé au restaurant de l'hôtel (fiche claude) ; scène inventée, aucun fait daté",
+    "Anthropic, Claude Fable 5 and Claude Mythos 5, 9 juin 2026 (Fable 5, modèle de classe Mythos rendu sûr pour un usage général) ; https://www.anthropic.com/news/claude-fable-5-mythos-5"
+  ],
+  "publication": {
+    "title": "Claude, c'est qui exactement ?",
+    "description": "Claude, c'est la famille de modèles de langage d'Anthropic, Haiku, Sonnet, Opus et Mythos, ouvert au public sous le nom de Fable, et le nom des applications qui les font tourner, du chat à Claude Code. Sa constitution, le texte qui règle son caractère, dure 4 h 08 en livre audio.\nhttps://neopal.github.io/lexique/claude/\n#claude #anthropic #llm #vulgarisation\nCapture : Anthropic, Claude's Constitution.",
+    "fil": "L'ép. 24 parlait des scores que les labos visent ; voilà l'un de leurs modèles, celui qui porte un prénom, et comme ChatGPT (ép. 11), ce nom cache plusieurs modèles",
+    "decor": "restaurant d'hôtel (Hervé, le croque du bar ou le menu en sept plats)"
+  },
+  "credits": [
+    "Capture : Anthropic, « Claude's Constitution », anthropic.com/constitution (public/voix/claude-constitution.png), citation, à produire"
+  ]
+}

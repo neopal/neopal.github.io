@@ -1,0 +1,1149 @@
+{
+ "id": "claude",
+ "audio": true,
+ "music": true,
+ "duration": 66.4,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.24,
+   "end": 1.88,
+   "words": [
+    {
+     "w": "C'est",
+     "start": 0.24,
+     "end": 0.32
+    },
+    {
+     "w": "quoi...",
+     "start": 0.52,
+     "end": 0.92
+    },
+    {
+     "w": "Claude…",
+     "start": 1.12,
+     "end": 1.88
+    }
+   ]
+  },
+  {
+   "scene": "intro",
+   "start": 2.288,
+   "end": 12.24,
+   "words": [
+    {
+     "w": "Tu",
+     "start": 2.288,
+     "end": 2.32
+    },
+    {
+     "w": "crois",
+     "start": 2.36,
+     "end": 2.48
+    },
+    {
+     "w": "que",
+     "start": 2.52,
+     "end": 2.56
+    },
+    {
+     "w": "Claude,",
+     "start": 2.72,
+     "end": 3.2
+    },
+    {
+     "w": "c'est",
+     "start": 3.253,
+     "end": 3.36
+    },
+    {
+     "w": "un",
+     "start": 3.44,
+     "end": 3.52
+    },
+    {
+     "w": "chatbot",
+     "start": 3.64,
+     "end": 3.92
+    },
+    {
+     "w": "comme",
+     "start": 4,
+     "end": 4.12
+    },
+    {
+     "w": "ChatGPT ?",
+     "start": 4.16,
+     "end": 5.32
+    },
+    {
+     "w": "C'est",
+     "start": 5.36,
+     "end": 5.44
+    },
+    {
+     "w": "d'abord",
+     "start": 5.48,
+     "end": 5.76
+    },
+    {
+     "w": "une",
+     "start": 5.84,
+     "end": 5.92
+    },
+    {
+     "w": "famille",
+     "start": 5.973,
+     "end": 6.24
+    },
+    {
+     "w": "de",
+     "start": 6.28,
+     "end": 6.32
+    },
+    {
+     "w": "modèles",
+     "start": 6.4,
+     "end": 6.64
+    },
+    {
+     "w": "de",
+     "start": 6.68,
+     "end": 6.72
+    },
+    {
+     "w": "langage",
+     "start": 6.84,
+     "end": 7.12
+    },
+    {
+     "w": "d'Anthropic,",
+     "start": 7.16,
+     "end": 8
+    },
+    {
+     "w": "et",
+     "start": 8.04,
+     "end": 8.08
+    },
+    {
+     "w": "aussi",
+     "start": 8.2,
+     "end": 8.4
+    },
+    {
+     "w": "le",
+     "start": 8.44,
+     "end": 8.48
+    },
+    {
+     "w": "nom",
+     "start": 8.56,
+     "end": 8.64
+    },
+    {
+     "w": "des",
+     "start": 8.72,
+     "end": 8.8
+    },
+    {
+     "w": "applications",
+     "start": 9.08,
+     "end": 9.36
+    },
+    {
+     "w": "qui",
+     "start": 9.4,
+     "end": 9.44
+    },
+    {
+     "w": "les",
+     "start": 9.52,
+     "end": 9.6
+    },
+    {
+     "w": "font",
+     "start": 9.68,
+     "end": 9.76
+    },
+    {
+     "w": "tourner,",
+     "start": 9.84,
+     "end": 10.32
+    },
+    {
+     "w": "du",
+     "start": 10.36,
+     "end": 10.4
+    },
+    {
+     "w": "chat",
+     "start": 10.56,
+     "end": 10.88
+    },
+    {
+     "w": "jusqu'à",
+     "start": 10.96,
+     "end": 11.28
+    },
+    {
+     "w": "Claude",
+     "start": 11.36,
+     "end": 11.6
+    },
+    {
+     "w": "Code.",
+     "start": 11.72,
+     "end": 12.24
+    }
+   ]
+  },
+  {
+   "scene": "paliers",
+   "start": 12.446,
+   "end": 25.6,
+   "words": [
+    {
+     "w": "Depuis",
+     "start": 12.446,
+     "end": 12.56
+    },
+    {
+     "w": "mars",
+     "start": 12.64,
+     "end": 12.8
+    },
+    {
+     "w": "2024,",
+     "start": 12.88,
+     "end": 13.76
+    },
+    {
+     "w": "chaque",
+     "start": 13.84,
+     "end": 14
+    },
+    {
+     "w": "génération",
+     "start": 14.08,
+     "end": 14.56
+    },
+    {
+     "w": "sort",
+     "start": 14.64,
+     "end": 14.8
+    },
+    {
+     "w": "en",
+     "start": 14.88,
+     "end": 14.96
+    },
+    {
+     "w": "trois",
+     "start": 15,
+     "end": 15.12
+    },
+    {
+     "w": "tailles,",
+     "start": 15.2,
+     "end": 15.76
+    },
+    {
+     "w": "Haiku,",
+     "start": 15.8,
+     "end": 16.4
+    },
+    {
+     "w": "Sonnet",
+     "start": 16.48,
+     "end": 16.96
+    },
+    {
+     "w": "et",
+     "start": 17,
+     "end": 17.04
+    },
+    {
+     "w": "Opus,",
+     "start": 17.12,
+     "end": 17.84
+    },
+    {
+     "w": "de",
+     "start": 17.88,
+     "end": 17.92
+    },
+    {
+     "w": "la",
+     "start": 18,
+     "end": 18.08
+    },
+    {
+     "w": "plus",
+     "start": 18.12,
+     "end": 18.16
+    },
+    {
+     "w": "rapide",
+     "start": 18.24,
+     "end": 18.72
+    },
+    {
+     "w": "à",
+     "start": 18.76,
+     "end": 18.8
+    },
+    {
+     "w": "la",
+     "start": 18.88,
+     "end": 18.96
+    },
+    {
+     "w": "plus",
+     "start": 19,
+     "end": 19.04
+    },
+    {
+     "w": "capable…",
+     "start": 19.12,
+     "end": 19.92
+    },
+    {
+     "w": "et",
+     "start": 19.96,
+     "end": 20
+    },
+    {
+     "w": "en",
+     "start": 20.08,
+     "end": 20.16
+    },
+    {
+     "w": "2026",
+     "start": 20.24,
+     "end": 20.293
+    },
+    {
+     "w": "s'est",
+     "start": 20.32,
+     "end": 21.2
+    },
+    {
+     "w": "ajouté",
+     "start": 21.24,
+     "end": 21.52
+    },
+    {
+     "w": "un",
+     "start": 21.6,
+     "end": 21.68
+    },
+    {
+     "w": "quatrième",
+     "start": 21.72,
+     "end": 22.16
+    },
+    {
+     "w": "palier,",
+     "start": 22.24,
+     "end": 22.72
+    },
+    {
+     "w": "Mythos,",
+     "start": 22.8,
+     "end": 23.52
+    },
+    {
+     "w": "ouvert",
+     "start": 23.56,
+     "end": 23.76
+    },
+    {
+     "w": "au",
+     "start": 23.8,
+     "end": 23.84
+    },
+    {
+     "w": "public",
+     "start": 23.92,
+     "end": 24.24
+    },
+    {
+     "w": "sous",
+     "start": 24.28,
+     "end": 24.4
+    },
+    {
+     "w": "le",
+     "start": 24.44,
+     "end": 24.48
+    },
+    {
+     "w": "nom",
+     "start": 24.56,
+     "end": 24.64
+    },
+    {
+     "w": "de",
+     "start": 24.68,
+     "end": 24.72
+    },
+    {
+     "w": "Fable.",
+     "start": 24.88,
+     "end": 25.6
+    }
+   ]
+  },
+  {
+   "scene": "herve",
+   "start": 26.027,
+   "end": 35.291,
+   "words": [
+    {
+     "w": "Imagine",
+     "start": 26.027,
+     "end": 26.08
+    },
+    {
+     "w": "Hervé,",
+     "start": 26.16,
+     "end": 26.64
+    },
+    {
+     "w": "qui",
+     "start": 26.72,
+     "end": 26.8
+    },
+    {
+     "w": "te",
+     "start": 26.84,
+     "end": 26.88
+    },
+    {
+     "w": "dit",
+     "start": 26.96,
+     "end": 27.12
+    },
+    {
+     "w": "«",
+     "start": 27.6,
+     "end": 27.627
+    },
+    {
+     "w": "j'ai",
+     "start": 27.653,
+     "end": 27.76
+    },
+    {
+     "w": "déjeuné",
+     "start": 27.84,
+     "end": 28.16
+    },
+    {
+     "w": "au",
+     "start": 28.2,
+     "end": 28.24
+    },
+    {
+     "w": "restaurant",
+     "start": 28.44,
+     "end": 28.64
+    },
+    {
+     "w": "de",
+     "start": 28.667,
+     "end": 28.693
+    },
+    {
+     "w": "l'hôtel",
+     "start": 28.72,
+     "end": 29.04
+    },
+    {
+     "w": "»…",
+     "start": 29.08,
+     "end": 29.52
+    },
+    {
+     "w": "a-t-il",
+     "start": 29.56,
+     "end": 29.84
+    },
+    {
+     "w": "pris",
+     "start": 29.88,
+     "end": 30
+    },
+    {
+     "w": "le",
+     "start": 30.04,
+     "end": 30.08
+    },
+    {
+     "w": "croque-monsieur",
+     "start": 30.16,
+     "end": 30.64
+    },
+    {
+     "w": "du",
+     "start": 30.68,
+     "end": 30.72
+    },
+    {
+     "w": "bar,",
+     "start": 30.8,
+     "end": 31.2
+    },
+    {
+     "w": "servi",
+     "start": 31.32,
+     "end": 31.52
+    },
+    {
+     "w": "en",
+     "start": 31.6,
+     "end": 31.68
+    },
+    {
+     "w": "cinq",
+     "start": 31.707,
+     "end": 31.76
+    },
+    {
+     "w": "minutes,",
+     "start": 31.84,
+     "end": 32.48
+    },
+    {
+     "w": "ou",
+     "start": 32.56,
+     "end": 32.64
+    },
+    {
+     "w": "le",
+     "start": 32.68,
+     "end": 32.72
+    },
+    {
+     "w": "menu",
+     "start": 32.8,
+     "end": 33.04
+    },
+    {
+     "w": "en",
+     "start": 33.12,
+     "end": 33.2
+    },
+    {
+     "w": "sept",
+     "start": 33.24,
+     "end": 33.44
+    },
+    {
+     "w": "plats",
+     "start": 33.48,
+     "end": 33.68
+    },
+    {
+     "w": "qui",
+     "start": 33.72,
+     "end": 33.76
+    },
+    {
+     "w": "lui",
+     "start": 33.8,
+     "end": 33.88
+    },
+    {
+     "w": "a",
+     "start": 33.92,
+     "end": 34
+    },
+    {
+     "w": "coûté",
+     "start": 34.04,
+     "end": 34.24
+    },
+    {
+     "w": "son",
+     "start": 34.32,
+     "end": 34.4
+    },
+    {
+     "w": "après-midi ?",
+     "start": 34.48,
+     "end": 35.291
+    }
+   ]
+  },
+  {
+   "scene": "flou",
+   "start": 35.349,
+   "end": 41.44,
+   "words": [
+    {
+     "w": "Quand",
+     "start": 35.349,
+     "end": 35.44
+    },
+    {
+     "w": "on",
+     "start": 35.52,
+     "end": 35.56
+    },
+    {
+     "w": "te",
+     "start": 35.6,
+     "end": 35.76
+    },
+    {
+     "w": "dit",
+     "start": 35.84,
+     "end": 35.92
+    },
+    {
+     "w": "«",
+     "start": 36.16,
+     "end": 36.2
+    },
+    {
+     "w": "j'ai",
+     "start": 36.24,
+     "end": 36.32
+    },
+    {
+     "w": "demandé",
+     "start": 36.4,
+     "end": 36.68
+    },
+    {
+     "w": "à",
+     "start": 36.72,
+     "end": 36.8
+    },
+    {
+     "w": "Claude",
+     "start": 36.88,
+     "end": 37.2
+    },
+    {
+     "w": "»,",
+     "start": 37.36,
+     "end": 37.52
+    },
+    {
+     "w": "c'est",
+     "start": 37.547,
+     "end": 37.6
+    },
+    {
+     "w": "le",
+     "start": 37.68,
+     "end": 37.72
+    },
+    {
+     "w": "même",
+     "start": 37.76,
+     "end": 37.92
+    },
+    {
+     "w": "flou…",
+     "start": 38,
+     "end": 38.48
+    },
+    {
+     "w": "entre",
+     "start": 38.6,
+     "end": 38.72
+    },
+    {
+     "w": "un",
+     "start": 38.76,
+     "end": 38.8
+    },
+    {
+     "w": "Haiku",
+     "start": 38.88,
+     "end": 39.2
+    },
+    {
+     "w": "pressé",
+     "start": 39.28,
+     "end": 39.76
+    },
+    {
+     "w": "et",
+     "start": 39.84,
+     "end": 39.92
+    },
+    {
+     "w": "un",
+     "start": 39.96,
+     "end": 40
+    },
+    {
+     "w": "Opus",
+     "start": 40.08,
+     "end": 40.4
+    },
+    {
+     "w": "qui",
+     "start": 40.44,
+     "end": 40.48
+    },
+    {
+     "w": "prend",
+     "start": 40.56,
+     "end": 40.72
+    },
+    {
+     "w": "son",
+     "start": 40.8,
+     "end": 40.88
+    },
+    {
+     "w": "temps.",
+     "start": 40.96,
+     "end": 41.44
+    }
+   ]
+  },
+  {
+   "scene": "constitution",
+   "start": 41.646,
+   "end": 51.68,
+   "words": [
+    {
+     "w": "Anthropic",
+     "start": 41.646,
+     "end": 42
+    },
+    {
+     "w": "règle",
+     "start": 42.04,
+     "end": 42.32
+    },
+    {
+     "w": "son",
+     "start": 42.4,
+     "end": 42.48
+    },
+    {
+     "w": "caractère",
+     "start": 42.56,
+     "end": 42.88
+    },
+    {
+     "w": "avec",
+     "start": 42.96,
+     "end": 43.12
+    },
+    {
+     "w": "une",
+     "start": 43.2,
+     "end": 43.28
+    },
+    {
+     "w": "constitution,",
+     "start": 43.36,
+     "end": 44.32
+    },
+    {
+     "w": "un",
+     "start": 44.4,
+     "end": 44.48
+    },
+    {
+     "w": "texte",
+     "start": 44.6,
+     "end": 44.88
+    },
+    {
+     "w": "qui",
+     "start": 44.96,
+     "end": 45.04
+    },
+    {
+     "w": "dit",
+     "start": 45.12,
+     "end": 45.2
+    },
+    {
+     "w": "ce",
+     "start": 45.28,
+     "end": 45.36
+    },
+    {
+     "w": "que",
+     "start": 45.4,
+     "end": 45.44
+    },
+    {
+     "w": "Claude",
+     "start": 45.52,
+     "end": 45.76
+    },
+    {
+     "w": "doit",
+     "start": 45.84,
+     "end": 46
+    },
+    {
+     "w": "faire",
+     "start": 46.08,
+     "end": 46.4
+    },
+    {
+     "w": "et",
+     "start": 46.48,
+     "end": 46.56
+    },
+    {
+     "w": "pourquoi.",
+     "start": 46.68,
+     "end": 47.36
+    },
+    {
+     "w": "Elle",
+     "start": 47.4,
+     "end": 47.48
+    },
+    {
+     "w": "existe",
+     "start": 47.52,
+     "end": 47.84
+    },
+    {
+     "w": "en",
+     "start": 47.88,
+     "end": 47.92
+    },
+    {
+     "w": "livre",
+     "start": 48,
+     "end": 48.12
+    },
+    {
+     "w": "audio…",
+     "start": 48.16,
+     "end": 48.88
+    },
+    {
+     "w": "lance-le",
+     "start": 48.92,
+     "end": 49.2
+    },
+    {
+     "w": "à",
+     "start": 49.28,
+     "end": 49.32
+    },
+    {
+     "w": "neuf",
+     "start": 49.36,
+     "end": 49.52
+    },
+    {
+     "w": "heures,",
+     "start": 49.56,
+     "end": 49.92
+    },
+    {
+     "w": "il",
+     "start": 49.96,
+     "end": 50
+    },
+    {
+     "w": "se",
+     "start": 50.08,
+     "end": 50.16
+    },
+    {
+     "w": "termine",
+     "start": 50.24,
+     "end": 50.48
+    },
+    {
+     "w": "à",
+     "start": 50.56,
+     "end": 50.64
+    },
+    {
+     "w": "treize",
+     "start": 50.68,
+     "end": 50.8
+    },
+    {
+     "w": "heures",
+     "start": 50.88,
+     "end": 51.04
+    },
+    {
+     "w": "sept.",
+     "start": 51.08,
+     "end": 51.68
+    }
+   ]
+  },
+  {
+   "scene": "garde",
+   "start": 51.76,
+   "end": 60.64,
+   "words": [
+    {
+     "w": "Une",
+     "start": 51.76,
+     "end": 51.84
+    },
+    {
+     "w": "constitution",
+     "start": 51.92,
+     "end": 52.48
+    },
+    {
+     "w": "n'empêche",
+     "start": 52.52,
+     "end": 52.8
+    },
+    {
+     "w": "pas",
+     "start": 52.88,
+     "end": 52.96
+    },
+    {
+     "w": "tout.",
+     "start": 53.04,
+     "end": 53.6
+    },
+    {
+     "w": "En",
+     "start": 53.68,
+     "end": 53.76
+    },
+    {
+     "w": "août",
+     "start": 53.8,
+     "end": 53.92
+    },
+    {
+     "w": "2025,",
+     "start": 54,
+     "end": 54.8
+    },
+    {
+     "w": "Anthropic",
+     "start": 54.88,
+     "end": 55.28
+    },
+    {
+     "w": "a",
+     "start": 55.36,
+     "end": 55.4
+    },
+    {
+     "w": "révélé",
+     "start": 55.44,
+     "end": 55.76
+    },
+    {
+     "w": "qu'un",
+     "start": 55.813,
+     "end": 55.92
+    },
+    {
+     "w": "groupe",
+     "start": 55.96,
+     "end": 56.16
+    },
+    {
+     "w": "criminel",
+     "start": 56.2,
+     "end": 56.64
+    },
+    {
+     "w": "s'était",
+     "start": 56.68,
+     "end": 56.96
+    },
+    {
+     "w": "servi",
+     "start": 57.04,
+     "end": 57.2
+    },
+    {
+     "w": "de",
+     "start": 57.28,
+     "end": 57.36
+    },
+    {
+     "w": "Claude",
+     "start": 57.44,
+     "end": 57.68
+    },
+    {
+     "w": "Code",
+     "start": 57.8,
+     "end": 57.92
+    },
+    {
+     "w": "pour",
+     "start": 58,
+     "end": 58.16
+    },
+    {
+     "w": "faire",
+     "start": 58.2,
+     "end": 58.32
+    },
+    {
+     "w": "chanter",
+     "start": 58.4,
+     "end": 58.72
+    },
+    {
+     "w": "au",
+     "start": 58.76,
+     "end": 58.8
+    },
+    {
+     "w": "moins",
+     "start": 58.88,
+     "end": 59.12
+    },
+    {
+     "w": "dix-sept",
+     "start": 59.2,
+     "end": 59.52
+    },
+    {
+     "w": "organisations.",
+     "start": 59.6,
+     "end": 60.64
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 60.777,
+   "end": 66.4,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 60.777,
+     "end": 60.88
+    },
+    {
+     "w": "la",
+     "start": 60.96,
+     "end": 61.04
+    },
+    {
+     "w": "prochaine",
+     "start": 61.12,
+     "end": 61.36
+    },
+    {
+     "w": "fois",
+     "start": 61.44,
+     "end": 61.52
+    },
+    {
+     "w": "qu'on",
+     "start": 61.56,
+     "end": 61.68
+    },
+    {
+     "w": "te",
+     "start": 61.76,
+     "end": 61.84
+    },
+    {
+     "w": "dit",
+     "start": 61.92,
+     "end": 62.08
+    },
+    {
+     "w": "«",
+     "start": 62.32,
+     "end": 62.347
+    },
+    {
+     "w": "je",
+     "start": 62.373,
+     "end": 62.4
+    },
+    {
+     "w": "l'ai",
+     "start": 62.44,
+     "end": 62.56
+    },
+    {
+     "w": "demandé",
+     "start": 62.68,
+     "end": 62.84
+    },
+    {
+     "w": "à",
+     "start": 62.88,
+     "end": 62.96
+    },
+    {
+     "w": "Claude",
+     "start": 63.04,
+     "end": 63.28
+    },
+    {
+     "w": "»…",
+     "start": 63.32,
+     "end": 64
+    },
+    {
+     "w": "demande",
+     "start": 64.08,
+     "end": 64.32
+    },
+    {
+     "w": "lequel,",
+     "start": 64.4,
+     "end": 65.04
+    },
+    {
+     "w": "et",
+     "start": 65.12,
+     "end": 65.2
+    },
+    {
+     "w": "ce",
+     "start": 65.24,
+     "end": 65.28
+    },
+    {
+     "w": "qu'il",
+     "start": 65.307,
+     "end": 65.36
+    },
+    {
+     "w": "avait",
+     "start": 65.44,
+     "end": 65.6
+    },
+    {
+     "w": "sous",
+     "start": 65.64,
+     "end": 65.76
+    },
+    {
+     "w": "les",
+     "start": 65.8,
+     "end": 65.84
+    },
+    {
+     "w": "yeux.",
+     "start": 65.92,
+     "end": 66.4
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "pilotabilite",
+  "term": "pilotabilite",
+  "episode": 27,
+  "date": "2026-11-05",
+  "format": "Définition",
+  "composition": "PilotabiliteVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... la pilotabilité…",
+      "screen": "Titre géant « PILOTABILITÉ ». Derrière, posé dès la première image, un nuancier de peintre en éventail, à moitié ouvert. Aucun sous-titre (nocaption)."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Tu crois qu'une IA fait ce que tu veux ? Elle fait ce que tu écris, en prolongeant tes mots comme elle prolonge tout le reste.",
+      "screen": "Une bulle de consigne s'écrit (typed) ; sur « prolongeant », la réponse sort de sa dernière ligne comme une suite, même police, même alignement. Libellé « tes mots », puis « la suite »."
+    },
+    {
+      "scene": "nom",
+      "say": "[warmly] Jusqu'où une consigne la guide, c'est sa pilotabilité, ou en anglais, sa /ˌstɪɹəˈbɪləti/.",
+      "screen": "« pilotabilité » s'écrit en grand, puis « steerability » dessous en couleur d'accent (passages masqués, onscreen). Un petit volant SVG maison tourne d'un quart de tour à côté."
+    },
+    {
+      "scene": "peintre",
+      "say": "[mischievously] Imagine Jean-Marc, qui demande au peintre un blanc un peu chaleureux pour le salon… il a eu du jaune poussin. Pour la chambre, il a donné la référence du nuancier, et c'est le seul mur qu'il n'a pas fallu repeindre.",
+      "screen": "Scène propre à ce short : deux pièces vues de face, côte à côte, le peintre en pixel art avec son rouleau, Jean-Marc qui cligne des yeux. Sur « jaune poussin », le mur du salon se remplit de jaune (wipe) ; sur « référence du nuancier », une pastille numérotée du nuancier se colle à côté de la chambre, et le mur se remplit exactement de sa couleur, avec une coche."
+    },
+    {
+      "scene": "regle",
+      "say": "[curious] Avec une IA, c'est pareil. Une consigne courte et vérifiable, un format, une langue, une longueur, tient très bien… une intention à deviner, beaucoup moins.",
+      "screen": "Quatre lignes se posent en cascade : « un format », « une langue », « une longueur », « une intention » ; à droite, chacune reçoit son verdict sur son mot, « forte » en couleur d'accent pour les trois premières, « faible » en gris pour la dernière (mots, pas de barres chiffrées)."
+    },
+    {
+      "scene": "grok",
+      "say": "[warmly] Une seule ligne peut déplacer beaucoup. En juillet 2025, l'entreprise d'Elon Musk a demandé à son chatbot Grok de ne pas craindre d'être politiquement incorrect… et Grok a fini par faire l'éloge d'Hitler, avant qu'on retire la ligne.",
+      "screen": "Une fenêtre de consignes dessinée (system prompt) avec des lignes grises ; sur « une seule ligne », une ligne s'ajoute en rouge et se surligne. Sur « politiquement incorrect », les réponses dessous basculent d'un cran vers la droite, puis de plusieurs ; sur « retire », la ligne rouge est barrée. Aucune image de la personne ni capture des messages."
+    },
+    {
+      "scene": "majuscules",
+      "say": "[curious] Les modèles récents sont même devenus si dociles qu'Anthropic conseille d'arrêter d'écrire ses consignes en majuscules, qui les font trop obéir.",
+      "screen": "Une consigne « CRITICAL: YOU MUST » en grosses capitales tremble à l'écran ; sur « trop obéir », un petit agent appelle un outil, puis dix, en cascade. Sur « conseille », la consigne se réécrit en casse normale et les appels retombent à un."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors quand l'IA rate ton but… [pause] demande-toi si tu lui as donné la référence du nuancier.",
+      "screen": "Retour aux deux pièces plein cadre : le salon jaune, la chambre juste ; le nuancier s'ouvre en grand au milieu. Image finale pleine."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˌstɪɹəˈbɪləti/": "steerability"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "c'est sa pilotabilité, ou en anglais, sa steerability."
+    ]
+  },
+  "sources": [
+    "Fiche pilotabilite de lexique/terms.js : Anthropic, Prompting best practices (modèles plus réceptifs au system prompt ; adoucir « CRITICAL: You MUST ») ; https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-4-best-practices",
+    "Fiche pilotabilite de lexique/terms.js : Wikipédia, Grok (chatbot) (juillet 2025, consigne « politically incorrect », éloge d'Adolf Hitler, consigne retirée puis remise le 15 juillet) ; https://en.wikipedia.org/wiki/Grok_(chatbot)",
+    "Fiche pilotabilite de lexique/terms.js : Zhou et al. (Google), IFEval, 14 novembre 2023 (consignes vérifiables) ; https://arxiv.org/abs/2311.07911",
+    "Image : Jean-Marc et le peintre (fiche pilotabilite) ; scène inventée, aucun fait daté"
+  ],
+  "publication": {
+    "title": "L'IA suit tes mots, pas ton idée",
+    "description": "La pilotabilité (steerability), c'est jusqu'où une consigne guide un modèle ; forte pour un format ou une longueur, faible pour une intention à deviner. En juillet 2025, une seule ligne ajoutée aux consignes de Grok a suffi à le faire déraper.\nhttps://neopal.github.io/lexique/pilotabilite/\n#prompt #chatgpt #llm #vulgarisation",
+    "fil": "L'ép. 26 montrait que le modèle prolonge un motif ; une consigne en est un, et il la suit jusqu'à un certain point",
+    "decor": "chantier de peinture (Jean-Marc et le peintre)"
+  },
+  "credits": []
+}

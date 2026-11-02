@@ -1,0 +1,69 @@
+{
+  "id": "remplace-metier",
+  "term": "mythe-remplace-metier",
+  "episode": 29,
+  "date": "2026-11-07",
+  "format": "Mythe",
+  "composition": "MytheMetierVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "todo": "Hook : vraie citation de Geoffrey Hinton en 2016 (« people should stop training radiologists now », rapportée par Works in Progress, 25 septembre 2025), traduite ; l'auteur n'est pas nommé à l'oral (univers.md, shorts mythe), la couverture suffit. Si on le montre, portrait Commons pixelisé et crédité. Portrait d'Erik Brynjolfsson (Commons) à vérifier.",
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] « On devrait arrêter dès maintenant de former des radiologues »… c'était en 2016, et les radiologues n'ont jamais été aussi demandés.",
+      "screen": "Dès la première image, une radio de thorax dessinée sur un négatoscope, collée au scotch. La phrase s'écrit à la machine en grand entre guillemets, avec « 2016 » en petit dessous ; le tampon rouge FAUX s'écrase dessus (squash) et reste jusqu'à la fin du hook : c'est l'image de couverture."
+    },
+    {
+      "scene": "taches",
+      "say": "[curious] Un métier, c'est un paquet de tâches. D'après une étude de 2012, les radiologues ne passaient que 36 % de leur temps à lire des images… le reste, ce sont les patients, les autres médecins, l'enseignement.",
+      "screen": "Un radiologue pixel art à son bureau. Un camembert se construit à côté : une part de 36 % s'allume en couleur d'accent sur « 36 % » (libellé « images »), puis les trois autres parts tombent en cascade, libellées « patients », « médecins », « enseignement »."
+    },
+    {
+      "scene": "records",
+      "say": "[warmly] En 2025, plus de 700 IA de radiologie avaient l'aval des autorités sanitaires américaines… et les internats ont ouvert un nombre record de 1 208 postes en radiologie.",
+      "screen": "Deux compteurs côte à côte. À gauche, des petites puces « IA » tombent en grille (count-up jusqu'à « 700 »). À droite, des blouses pixel art se rangent en colonnes (count-up jusqu'à « 1 208 postes », punch zoom du short sur le chiffre)."
+    },
+    {
+      "scene": "jeunes",
+      "say": "[curious] Ça ne veut pas dire que rien ne bouge. En août 2026, à Stanford, l'équipe d'Erik Brynjolfsson ne voit pas de destruction d'emplois… mais chez les 22-25 ans, dans les métiers les plus exposés à l'IA, l'emploi est environ 19 % sous ce qu'il aurait été.",
+      "screen": "Portrait pixelisé d'Erik Brynjolfsson (Commons) en collage, en haut à gauche. Graphique qui se construit : deux courbes partent du même point, « exposés » et « moins exposés » ; sur « 22-25 ans », la courbe « exposés » se détache vers le bas et l'écart se colore, libellé « −19 % »."
+    },
+    {
+      "scene": "embauche",
+      "say": "[warmly] Le recul passe par des jeunes qu'on n'embauche pas, plutôt que par des licenciements… et une embauche qui n'a pas lieu ne se voit pas dans les chiffres du chômage.",
+      "screen": "Une porte de bureau avec un panneau « on recrute » qui se retourne en « complet ». Devant, une file de jeunes pixel art qui s'allonge, sans que personne ne sorte du bureau. En bas, une courbe du chômage reste plate, libellé « chômage »."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors plutôt qu'une date de disparition… [pause] regarde quelles tâches de ton métier partent à l'IA, et combien de juniors on recrute encore.",
+      "screen": "Retour au radiologue à son bureau, plein cadre : un écran d'IA s'allume à côté de lui et prend la part « images » du camembert, il se tourne vers un patient. Image finale pleine."
+    }
+  ],
+  "quoted": [],
+  "display": {},
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {},
+  "sources": [
+    "Fiche mythe-remplace-metier de lexique/terms.js : Deena Mousa, Works in Progress, « AI isn't replacing radiologists », 25 septembre 2025 (Geoffrey Hinton en 2016 : « people should stop training radiologists now » ; plus de 700 modèles de radiologie autorisés par la FDA ; record de 1 208 postes d'internat en 2025 ; 36 % du temps à interpréter des images, étude de 2012) ; https://www.worksinprogress.news/p/why-ai-isnt-replacing-radiologists",
+    "Fiche mythe-remplace-metier de lexique/terms.js : Stanford Digital Economy Lab, 12 août 2026 (pas de destruction d'emplois généralisée ; emploi des 22-25 ans dans les métiers exposés environ 19 % sous la tendance ; recul par moins d'embauches) ; https://digitaleconomy.stanford.edu/news/canariesaug26/"
+  ],
+  "publication": {
+    "title": "Les radiologues devaient disparaître",
+    "description": "« L'IA va remplacer tel métier demain » ; en 2016, on annonçait la fin des radiologues, et en 2025 leurs internats ont ouvert un nombre record de postes. Ce qui recule pour l'instant, d'après Stanford, ce sont les embauches de jeunes dans les métiers les plus exposés.\nhttps://neopal.github.io/lexique/mythe-remplace-metier/\n#emploi #ia #travail #vulgarisation\nCapture et chiffres : Works in Progress, 25 septembre 2025 ; Stanford Digital Economy Lab, 12 août 2026.",
+    "fil": "L'ép. 28 gardait aux humains ce qui demande du jugement ; alors l'IA va-t-elle remplacer tel métier demain ?",
+    "decor": "service de radiologie (le radiologue, le négatoscope)"
+  },
+  "credits": [
+    "Portrait : Erik Brynjolfsson, Wikimedia Commons, pixelisé (licence à vérifier), à produire"
+  ]
+}

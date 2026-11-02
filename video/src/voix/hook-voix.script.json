@@ -1,0 +1,93 @@
+{
+  "id": "hook-voix",
+  "term": "hook",
+  "episode": 28,
+  "date": "2026-11-06",
+  "format": "Définition",
+  "composition": "HookVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... un /hʊk/…",
+      "screen": "Titre géant « HOOK ». Derrière, posée dès la première image, une porte de métro pixel art fermée, avec son voyant. Aucun sous-titre (nocaption)."
+    },
+    {
+      "scene": "crochet",
+      "say": "[mischievously] Non, pas le film de Spielberg avec le capitaine Crochet… quoique, l'idée est la même, un crochet qui attrape chaque geste au passage.",
+      "screen": "Scène propre à ce short : la vraie affiche de Hook (1991) collée d'un coup au scotch sur « film », Ken Burns de 5 %. En bas, des cartes d'action défilent ; sur « attrape », le crochet du capitaine en happe une en arc et brille ; sur « passage », une deuxième."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Tu crois qu'il suffit d'écrire une règle à ton agent pour qu'il la respecte ? Il la suivra presque toujours… et en production, presque, c'est un problème.",
+      "screen": "Une liste de consignes dessinée (fichier CLAUDE.md recréé), une règle surlignée « ne touche pas au dossier prod ». Sur « presque toujours », une rangée de vingt actions défile avec des coches ; sur « presque », une seule case devient rouge."
+    },
+    {
+      "scene": "nom",
+      "say": "[warmly] Pour ce qui doit arriver à chaque fois, des outils comme Claude Code lancent eux-mêmes un petit programme, à un moment fixé, avant ou après chaque action de l'agent. C'est ce qu'on appelle un /hʊk/.",
+      "screen": "Frise des actions de l'agent ; devant et derrière chaque case, une petite porte s'insère (un portique avant, un portique après). « hook » s'écrit en grand au-dessus (passage masqué, onscreen)."
+    },
+    {
+      "scene": "metro",
+      "say": "[mischievously] Imagine le passager qui bloque la porte du métro pour son copain… il peut crier, le conducteur peut être en retard, la rame ne partira pas tant qu'une porte reste ouverte.",
+      "screen": "Scène propre à ce short : quai de métro, rame à l'arrêt, un passager pixel art qui retient la porte d'un bras, le conducteur en cabine. Le voyant de la porte reste rouge ; sur « ne partira pas », la rame tremble sans avancer, puis le voyant passe au vert quand la porte se ferme et la rame démarre."
+    },
+    {
+      "scene": "avant",
+      "say": "[curious] Placé avant une action, un /hʊk/ peut la bloquer, une écriture dans le dossier de production par exemple, et dire à l'agent pourquoi. Placé après, il range le code ou lance les tests, sans jamais oublier.",
+      "screen": "Retour à la frise. Une action « écrire dans prod » arrive au portique avant : il se ferme, croix rouge, et une petite bulle repart vers l'agent « bloquée : dossier protégé ». Puis une action normale passe ; au portique après, une brosse SVG maison range le code et une coche « tests » s'allume."
+    },
+    {
+      "scene": "date",
+      "say": "[warmly] Anthropic les a ajoutés à Claude Code le 30 juin 2025… parce que les utilisateurs les réclamaient.",
+      "screen": "Collage de la ligne du changelog de Claude Code, « Released hooks », sur une page de calendrier arrachée au 30 juin 2025 (scotch aux coins)."
+    },
+    {
+      "scene": "danger",
+      "say": "[curious] Mais un /hʊk/ tourne sur ta machine avec tous tes droits… alors on relit ceux qu'on récupère ailleurs.",
+      "screen": "Le portique grossit ; derrière lui, l'icône d'un ordinateur avec une clé. Sur « relit », une loupe passe sur un portique venu d'ailleurs, étiqueté « récupéré »."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Ce qui doit arriver à chaque fois va dans un /hʊk/… [pause] et ce qui demande du jugement reste dans les consignes.",
+      "screen": "Retour au quai plein cadre : la porte se ferme, voyant vert, la rame part. Image finale pleine."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/hʊk/": "hook"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "C'est ce qu'on appelle un hook."
+    ]
+  },
+  "sources": [
+    "Fiche hook de lexique/terms.js : CHANGELOG de Claude Code, version 1.0.38 (« Released hooks. Special thanks to community input ») ; https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md",
+    "Fiche hook de lexique/terms.js : registre npm, @anthropic-ai/claude-code 1.0.38 publiée le 30 juin 2025 ; https://registry.npmjs.org/@anthropic-ai/claude-code",
+    "Fiche hook de lexique/terms.js : Claude Code, Hooks reference (PreToolUse peut bloquer l'appel d'outil ; « Command hooks execute shell commands with your full user permissions » ; relire et tester avant d'ajouter) ; https://code.claude.com/docs/en/hooks",
+    "Image : le passager qui bloque la porte du métro ; scène inventée, aucun fait daté",
+    "Wikipédia, Hook ou la Revanche du capitaine Crochet (film américain de Steven Spielberg, 1991, d'après Peter Pan de J. M. Barrie) ; https://fr.wikipedia.org/wiki/Hook_ou_la_Revanche_du_capitaine_Crochet"
+  ],
+  "publication": {
+    "title": "Ton agent oublie ? Mets un hook",
+    "description": "Un hook, c'est un petit programme qu'un outil comme Claude Code lance de lui-même, avant ou après chaque action de l'agent ; la consigne est suivie presque toujours, le hook à chaque fois. Anthropic les a ajoutés à Claude Code le 30 juin 2025.\nhttps://neopal.github.io/lexique/hook/\nRien à voir avec le capitaine Crochet, ou presque.\n#claudecode #agentia #devtools #vulgarisation\nCapture : CHANGELOG de Claude Code (GitHub). Affiche : Hook, Steven Spielberg, TriStar Pictures, 1991.",
+    "fil": "L'ép. 27 montrait qu'une consigne tient presque toujours ; pour ce qui doit tenir à chaque fois, il y a les hooks",
+    "decor": "quai de métro (le passager qui bloque la porte)"
+  },
+  "credits": [
+    "Capture : CHANGELOG de Claude Code, version 1.0.38, GitHub anthropics/claude-code (public/voix/hook-voix-changelog.png), citation, à produire",
+    "Affiche : Hook (Steven Spielberg, TriStar Pictures, 1991), « Hook poster transparent.png », Wikipédia en anglais (public/voix/hook-voix-film.png), citation"
+  ]
+}

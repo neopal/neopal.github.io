@@ -187,6 +187,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Ce n'est que de l'autocomplétion | publié | | HAM, ULT, LLM |
 | Un bon score au benchmark fait un bon modèle | publié | | HAM, HO, ULT, AGT |
 | Le modèle agit lui-même | publié | | AGT, CAR |
+| Une IA locale, c'est ChatGPT chez soi | publié | | |
 
 ## Bilan de la synthèse des livres (2026-10-02)
 

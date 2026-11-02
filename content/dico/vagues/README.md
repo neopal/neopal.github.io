@@ -29,7 +29,8 @@ Ce sont des archives figées. Les fiches ont été fusionnées dans `lexique/ter
 | [21-ai-brain-fry](21-ai-brain-fry/) | 22 oct. 2026 | Une fiche sur la fatigue de qui surveille plusieurs agents (BCG/HBR, mars 2026 ; Anthropic, octobre 2026) | ai-brain-fry |
 | [22-claude-ia-generative](22-claude-ia-generative/) | 29 oct. 2026 | Trois termes du parcours AI Fluency d'Anthropic qui manquaient au lexique | claude, ia-generative, automatiser-ou-augmenter ; render.js : « Claude Shannon » n'est plus lié, automatisation et augmentation exclues des liens |
 | [23-certif-claude](23-certif-claude/) | 2 nov. 2026 | Sept notions repérées dans la formation partenaires d'Anthropic, toutes sourcées sur des pages publiques | pilotabilite, hook, recherche-agentique, version-epinglee, declaration-d-usage-de-l-ia, ancrage-aux-sources, fatigue-d-approbation ; « approval fatigue » passe de human-in-the-loop à fatigue-d-approbation |
+| [24-ia-locale](24-ia-locale/) | 2 nov. 2026 | Mythe de l'IA locale, demandé par PA (données chez soi, mais six à douze mois de retard sur une carte graphique de joueur) | mythe-ia-locale |
 
 Les fiches des débuts (token, parametres, rag…) et quelques ajouts isolés (prompt-caching, arxiv…) ont été écrits hors vague, directement dans `lexique/terms.js`.
 
-Prochaine vague : créer `24-<sujet>/` avec un `BRIEF.md` qui renvoie à `../brief-fiche.md` et ne contient que le sujet, le registre des ids, les formes d'Imagine par lot et les livrables attendus.
+Prochaine vague : créer `25-<sujet>/` avec un `BRIEF.md` qui renvoie à `../brief-fiche.md` et ne contient que le sujet, le registre des ids, les formes d'Imagine par lot et les livrables attendus.

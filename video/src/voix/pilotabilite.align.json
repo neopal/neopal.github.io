@@ -1,0 +1,974 @@
+{
+ "id": "pilotabilite",
+ "audio": true,
+ "music": true,
+ "duration": 59.04,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.187,
+   "end": 2.36,
+   "words": [
+    {
+     "w": "C'est",
+     "start": 0.187,
+     "end": 0.24
+    },
+    {
+     "w": "quoi...",
+     "start": 0.44,
+     "end": 0.84
+    },
+    {
+     "w": "la",
+     "start": 1.04,
+     "end": 1.2
+    },
+    {
+     "w": "pilotabilité…",
+     "start": 1.28,
+     "end": 2.36
+    }
+   ]
+  },
+  {
+   "scene": "intro",
+   "start": 2.64,
+   "end": 8.4,
+   "words": [
+    {
+     "w": "Tu",
+     "start": 2.64,
+     "end": 2.72
+    },
+    {
+     "w": "crois",
+     "start": 2.76,
+     "end": 2.88
+    },
+    {
+     "w": "qu'une",
+     "start": 2.96,
+     "end": 3.12
+    },
+    {
+     "w": "IA",
+     "start": 3.16,
+     "end": 3.36
+    },
+    {
+     "w": "fait",
+     "start": 3.44,
+     "end": 3.52
+    },
+    {
+     "w": "ce",
+     "start": 3.56,
+     "end": 3.6
+    },
+    {
+     "w": "que",
+     "start": 3.64,
+     "end": 3.68
+    },
+    {
+     "w": "tu",
+     "start": 3.76,
+     "end": 3.84
+    },
+    {
+     "w": "veux ?",
+     "start": 3.92,
+     "end": 4.427
+    },
+    {
+     "w": "Elle",
+     "start": 4.453,
+     "end": 4.56
+    },
+    {
+     "w": "fait",
+     "start": 4.64,
+     "end": 4.8
+    },
+    {
+     "w": "ce",
+     "start": 4.84,
+     "end": 4.88
+    },
+    {
+     "w": "que",
+     "start": 4.96,
+     "end": 5.04
+    },
+    {
+     "w": "tu",
+     "start": 5.12,
+     "end": 5.2
+    },
+    {
+     "w": "écris,",
+     "start": 5.28,
+     "end": 5.76
+    },
+    {
+     "w": "en",
+     "start": 5.84,
+     "end": 5.92
+    },
+    {
+     "w": "prolongeant",
+     "start": 6,
+     "end": 6.4
+    },
+    {
+     "w": "tes",
+     "start": 6.48,
+     "end": 6.56
+    },
+    {
+     "w": "mots",
+     "start": 6.6,
+     "end": 6.8
+    },
+    {
+     "w": "comme",
+     "start": 6.84,
+     "end": 6.96
+    },
+    {
+     "w": "elle",
+     "start": 7.04,
+     "end": 7.12
+    },
+    {
+     "w": "prolonge",
+     "start": 7.2,
+     "end": 7.52
+    },
+    {
+     "w": "tout",
+     "start": 7.6,
+     "end": 7.68
+    },
+    {
+     "w": "le",
+     "start": 7.72,
+     "end": 7.76
+    },
+    {
+     "w": "reste.",
+     "start": 7.92,
+     "end": 8.4
+    }
+   ]
+  },
+  {
+   "scene": "nom",
+   "start": 8.48,
+   "end": 13.6,
+   "words": [
+    {
+     "w": "Jusqu'où",
+     "start": 8.48,
+     "end": 8.84
+    },
+    {
+     "w": "une",
+     "start": 8.88,
+     "end": 9.04
+    },
+    {
+     "w": "consigne",
+     "start": 9.16,
+     "end": 9.44
+    },
+    {
+     "w": "la",
+     "start": 9.52,
+     "end": 9.6
+    },
+    {
+     "w": "guide,",
+     "start": 9.76,
+     "end": 10.16
+    },
+    {
+     "w": "c'est",
+     "start": 10.213,
+     "end": 10.32
+    },
+    {
+     "w": "sa",
+     "start": 10.44,
+     "end": 10.56
+    },
+    {
+     "w": "pilotabilité,",
+     "start": 10.6,
+     "end": 11.68
+    },
+    {
+     "w": "ou",
+     "start": 11.72,
+     "end": 11.76
+    },
+    {
+     "w": "en",
+     "start": 11.84,
+     "end": 11.92
+    },
+    {
+     "w": "anglais,",
+     "start": 12,
+     "end": 12.48
+    },
+    {
+     "w": "sa",
+     "start": 12.56,
+     "end": 12.64
+    },
+    {
+     "w": "steerability.",
+     "start": 12.72,
+     "end": 13.6
+    }
+   ]
+  },
+  {
+   "scene": "peintre",
+   "start": 14.34,
+   "end": 24.8,
+   "words": [
+    {
+     "w": "Imagine",
+     "start": 14.34,
+     "end": 14.4
+    },
+    {
+     "w": "Jean-Marc,",
+     "start": 14.48,
+     "end": 15.12
+    },
+    {
+     "w": "qui",
+     "start": 15.2,
+     "end": 15.28
+    },
+    {
+     "w": "demande",
+     "start": 15.4,
+     "end": 15.573
+    },
+    {
+     "w": "au",
+     "start": 15.627,
+     "end": 15.68
+    },
+    {
+     "w": "peintre",
+     "start": 15.72,
+     "end": 16
+    },
+    {
+     "w": "un",
+     "start": 16.08,
+     "end": 16.16
+    },
+    {
+     "w": "blanc",
+     "start": 16.2,
+     "end": 16.48
+    },
+    {
+     "w": "un",
+     "start": 16.6,
+     "end": 16.72
+    },
+    {
+     "w": "peu",
+     "start": 16.76,
+     "end": 16.84
+    },
+    {
+     "w": "chaleureux",
+     "start": 16.88,
+     "end": 17.28
+    },
+    {
+     "w": "pour",
+     "start": 17.36,
+     "end": 17.44
+    },
+    {
+     "w": "le",
+     "start": 17.48,
+     "end": 17.52
+    },
+    {
+     "w": "salon…",
+     "start": 17.6,
+     "end": 18.32
+    },
+    {
+     "w": "il",
+     "start": 18.4,
+     "end": 18.48
+    },
+    {
+     "w": "a",
+     "start": 18.52,
+     "end": 18.56
+    },
+    {
+     "w": "eu",
+     "start": 18.6,
+     "end": 18.64
+    },
+    {
+     "w": "du",
+     "start": 18.72,
+     "end": 18.8
+    },
+    {
+     "w": "jaune",
+     "start": 18.84,
+     "end": 19.04
+    },
+    {
+     "w": "poussin.",
+     "start": 19.08,
+     "end": 19.84
+    },
+    {
+     "w": "Pour",
+     "start": 19.88,
+     "end": 19.92
+    },
+    {
+     "w": "la",
+     "start": 20,
+     "end": 20.04
+    },
+    {
+     "w": "chambre,",
+     "start": 20.08,
+     "end": 20.56
+    },
+    {
+     "w": "il",
+     "start": 20.6,
+     "end": 20.64
+    },
+    {
+     "w": "a",
+     "start": 20.68,
+     "end": 20.72
+    },
+    {
+     "w": "donné",
+     "start": 20.76,
+     "end": 20.96
+    },
+    {
+     "w": "la",
+     "start": 21,
+     "end": 21.04
+    },
+    {
+     "w": "référence",
+     "start": 21.12,
+     "end": 21.44
+    },
+    {
+     "w": "du",
+     "start": 21.48,
+     "end": 21.52
+    },
+    {
+     "w": "nuancier,",
+     "start": 21.6,
+     "end": 22.4
+    },
+    {
+     "w": "et",
+     "start": 22.48,
+     "end": 22.56
+    },
+    {
+     "w": "c'est",
+     "start": 22.587,
+     "end": 22.64
+    },
+    {
+     "w": "le",
+     "start": 22.72,
+     "end": 22.88
+    },
+    {
+     "w": "seul",
+     "start": 22.92,
+     "end": 23.12
+    },
+    {
+     "w": "mur",
+     "start": 23.24,
+     "end": 23.36
+    },
+    {
+     "w": "qu'il",
+     "start": 23.4,
+     "end": 23.52
+    },
+    {
+     "w": "n'a",
+     "start": 23.573,
+     "end": 23.68
+    },
+    {
+     "w": "pas",
+     "start": 23.72,
+     "end": 23.76
+    },
+    {
+     "w": "fallu",
+     "start": 23.84,
+     "end": 24
+    },
+    {
+     "w": "repeindre.",
+     "start": 24.08,
+     "end": 24.8
+    }
+   ]
+  },
+  {
+   "scene": "regle",
+   "start": 24.867,
+   "end": 34.16,
+   "words": [
+    {
+     "w": "Avec",
+     "start": 24.867,
+     "end": 25.04
+    },
+    {
+     "w": "une",
+     "start": 25.12,
+     "end": 25.2
+    },
+    {
+     "w": "IA,",
+     "start": 25.24,
+     "end": 25.68
+    },
+    {
+     "w": "c'est",
+     "start": 25.733,
+     "end": 25.84
+    },
+    {
+     "w": "pareil.",
+     "start": 25.96,
+     "end": 26.56
+    },
+    {
+     "w": "Une",
+     "start": 26.64,
+     "end": 26.72
+    },
+    {
+     "w": "consigne",
+     "start": 26.84,
+     "end": 27.2
+    },
+    {
+     "w": "courte",
+     "start": 27.28,
+     "end": 27.6
+    },
+    {
+     "w": "et",
+     "start": 27.64,
+     "end": 27.68
+    },
+    {
+     "w": "vérifiable,",
+     "start": 27.76,
+     "end": 28.56
+    },
+    {
+     "w": "un",
+     "start": 28.64,
+     "end": 28.72
+    },
+    {
+     "w": "format,",
+     "start": 28.92,
+     "end": 29.28
+    },
+    {
+     "w": "une",
+     "start": 29.36,
+     "end": 29.44
+    },
+    {
+     "w": "langue,",
+     "start": 29.52,
+     "end": 29.893
+    },
+    {
+     "w": "une",
+     "start": 29.947,
+     "end": 30
+    },
+    {
+     "w": "longueur,",
+     "start": 30.08,
+     "end": 30.72
+    },
+    {
+     "w": "tient",
+     "start": 30.76,
+     "end": 30.96
+    },
+    {
+     "w": "très",
+     "start": 31,
+     "end": 31.12
+    },
+    {
+     "w": "bien…",
+     "start": 31.2,
+     "end": 31.76
+    },
+    {
+     "w": "une",
+     "start": 31.84,
+     "end": 31.92
+    },
+    {
+     "w": "intention",
+     "start": 32,
+     "end": 32.4
+    },
+    {
+     "w": "à",
+     "start": 32.44,
+     "end": 32.48
+    },
+    {
+     "w": "deviner,",
+     "start": 32.6,
+     "end": 33.36
+    },
+    {
+     "w": "beaucoup",
+     "start": 33.4,
+     "end": 33.68
+    },
+    {
+     "w": "moins.",
+     "start": 33.72,
+     "end": 34.16
+    }
+   ]
+  },
+  {
+   "scene": "grok",
+   "start": 34.366,
+   "end": 46.88,
+   "words": [
+    {
+     "w": "Une",
+     "start": 34.366,
+     "end": 34.4
+    },
+    {
+     "w": "seule",
+     "start": 34.48,
+     "end": 34.64
+    },
+    {
+     "w": "ligne",
+     "start": 34.72,
+     "end": 34.96
+    },
+    {
+     "w": "peut",
+     "start": 35.12,
+     "end": 35.253
+    },
+    {
+     "w": "déplacer",
+     "start": 35.307,
+     "end": 35.76
+    },
+    {
+     "w": "beaucoup.",
+     "start": 35.8,
+     "end": 36.56
+    },
+    {
+     "w": "En",
+     "start": 36.6,
+     "end": 36.64
+    },
+    {
+     "w": "juillet",
+     "start": 36.72,
+     "end": 36.96
+    },
+    {
+     "w": "2025,",
+     "start": 36.987,
+     "end": 37.84
+    },
+    {
+     "w": "l'entreprise",
+     "start": 37.88,
+     "end": 38.32
+    },
+    {
+     "w": "d'Elon",
+     "start": 38.36,
+     "end": 38.64
+    },
+    {
+     "w": "Musk",
+     "start": 38.68,
+     "end": 38.88
+    },
+    {
+     "w": "a",
+     "start": 38.92,
+     "end": 38.96
+    },
+    {
+     "w": "demandé",
+     "start": 39.04,
+     "end": 39.36
+    },
+    {
+     "w": "à",
+     "start": 39.4,
+     "end": 39.44
+    },
+    {
+     "w": "son",
+     "start": 39.52,
+     "end": 39.6
+    },
+    {
+     "w": "chatbot",
+     "start": 39.68,
+     "end": 40.08
+    },
+    {
+     "w": "Grok",
+     "start": 40.12,
+     "end": 40.48
+    },
+    {
+     "w": "de",
+     "start": 40.64,
+     "end": 40.72
+    },
+    {
+     "w": "ne",
+     "start": 40.8,
+     "end": 40.88
+    },
+    {
+     "w": "pas",
+     "start": 40.96,
+     "end": 41.04
+    },
+    {
+     "w": "craindre",
+     "start": 41.12,
+     "end": 41.44
+    },
+    {
+     "w": "d'être",
+     "start": 41.48,
+     "end": 41.76
+    },
+    {
+     "w": "politiquement",
+     "start": 41.88,
+     "end": 42.24
+    },
+    {
+     "w": "incorrect…",
+     "start": 42.52,
+     "end": 43.2
+    },
+    {
+     "w": "et",
+     "start": 43.28,
+     "end": 43.36
+    },
+    {
+     "w": "Grok",
+     "start": 43.4,
+     "end": 43.68
+    },
+    {
+     "w": "a",
+     "start": 43.76,
+     "end": 43.84
+    },
+    {
+     "w": "fini",
+     "start": 43.92,
+     "end": 44.16
+    },
+    {
+     "w": "par",
+     "start": 44.24,
+     "end": 44.32
+    },
+    {
+     "w": "faire",
+     "start": 44.36,
+     "end": 44.48
+    },
+    {
+     "w": "l'éloge",
+     "start": 44.52,
+     "end": 44.8
+    },
+    {
+     "w": "d'Hitler,",
+     "start": 44.84,
+     "end": 45.52
+    },
+    {
+     "w": "avant",
+     "start": 45.6,
+     "end": 45.76
+    },
+    {
+     "w": "qu'on",
+     "start": 45.8,
+     "end": 45.92
+    },
+    {
+     "w": "retire",
+     "start": 46,
+     "end": 46.16
+    },
+    {
+     "w": "la",
+     "start": 46.24,
+     "end": 46.32
+    },
+    {
+     "w": "ligne.",
+     "start": 46.44,
+     "end": 46.88
+    }
+   ]
+  },
+  {
+   "scene": "majuscules",
+   "start": 46.947,
+   "end": 53.76,
+   "words": [
+    {
+     "w": "Les",
+     "start": 46.947,
+     "end": 46.96
+    },
+    {
+     "w": "modèles",
+     "start": 47.04,
+     "end": 47.28
+    },
+    {
+     "w": "récents",
+     "start": 47.36,
+     "end": 47.68
+    },
+    {
+     "w": "sont",
+     "start": 47.733,
+     "end": 47.84
+    },
+    {
+     "w": "même",
+     "start": 47.92,
+     "end": 48
+    },
+    {
+     "w": "devenus",
+     "start": 48.08,
+     "end": 48.48
+    },
+    {
+     "w": "si",
+     "start": 48.56,
+     "end": 48.64
+    },
+    {
+     "w": "dociles",
+     "start": 48.76,
+     "end": 49.28
+    },
+    {
+     "w": "qu'Anthropic",
+     "start": 49.32,
+     "end": 49.84
+    },
+    {
+     "w": "conseille",
+     "start": 49.92,
+     "end": 50.24
+    },
+    {
+     "w": "d'arrêter",
+     "start": 50.28,
+     "end": 50.64
+    },
+    {
+     "w": "d'écrire",
+     "start": 50.68,
+     "end": 50.96
+    },
+    {
+     "w": "ses",
+     "start": 51.04,
+     "end": 51.12
+    },
+    {
+     "w": "consignes",
+     "start": 51.2,
+     "end": 51.493
+    },
+    {
+     "w": "en",
+     "start": 51.547,
+     "end": 51.6
+    },
+    {
+     "w": "majuscules,",
+     "start": 51.68,
+     "end": 52.32
+    },
+    {
+     "w": "qui",
+     "start": 52.36,
+     "end": 52.4
+    },
+    {
+     "w": "les",
+     "start": 52.48,
+     "end": 52.56
+    },
+    {
+     "w": "font",
+     "start": 52.64,
+     "end": 52.72
+    },
+    {
+     "w": "trop",
+     "start": 52.76,
+     "end": 52.96
+    },
+    {
+     "w": "obéir.",
+     "start": 53.04,
+     "end": 53.76
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 53.897,
+   "end": 59.04,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 53.897,
+     "end": 54
+    },
+    {
+     "w": "quand",
+     "start": 54.08,
+     "end": 54.16
+    },
+    {
+     "w": "l'IA",
+     "start": 54.24,
+     "end": 54.48
+    },
+    {
+     "w": "rate",
+     "start": 54.56,
+     "end": 54.8
+    },
+    {
+     "w": "ton",
+     "start": 54.88,
+     "end": 54.96
+    },
+    {
+     "w": "but…",
+     "start": 55.12,
+     "end": 55.36
+    },
+    {
+     "w": "demande-toi",
+     "start": 56.4,
+     "end": 56.88
+    },
+    {
+     "w": "si",
+     "start": 56.96,
+     "end": 57.04
+    },
+    {
+     "w": "tu",
+     "start": 57.08,
+     "end": 57.12
+    },
+    {
+     "w": "lui",
+     "start": 57.2,
+     "end": 57.28
+    },
+    {
+     "w": "as",
+     "start": 57.32,
+     "end": 57.36
+    },
+    {
+     "w": "donné",
+     "start": 57.44,
+     "end": 57.6
+    },
+    {
+     "w": "la",
+     "start": 57.64,
+     "end": 57.68
+    },
+    {
+     "w": "référence",
+     "start": 57.76,
+     "end": 58.16
+    },
+    {
+     "w": "du",
+     "start": 58.2,
+     "end": 58.24
+    },
+    {
+     "w": "nuancier.",
+     "start": 58.32,
+     "end": 59.04
+    }
+   ]
+  }
+ ]
+}
