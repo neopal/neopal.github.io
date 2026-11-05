@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 462" role="img" aria-labelledby="mythe-bouteille-d-eau-t">
+<title id="mythe-bouteille-d-eau-t">Combien de réponses remplissent une bouteille d'un demi-litre, selon cinq chiffres publiés, sur une échelle logarithmique : moins d'une pour l'e-mail du Washington Post (estimé, 2024), 11 pour Mistral (analyse de cycle de vie, 2025), 30 pour GPT-3 chez Li, Ren et al. (estimé, eau des centrales comprise), environ 1 550 pour OpenAI (déclaré sans méthode, 2025) et 1 900 pour Google (refroidissement seul, 2025). L'écart vient surtout de ce que chacun compte.</title>
+<text class="m mu" x="0" y="14">réponses pour remplir un demi-litre (échelle log)</text>
+<rect class="fl" x="0" y="30" width="12" height="12" rx="2"/>
+<text class="m mu" x="20" y="41">estimé par des chercheurs</text>
+<rect class="fa" x="0" y="50" width="12" height="12" rx="2"/>
+<text class="m mu" x="20" y="61">déclaré par le labo</text>
+<path class="ln" d="M60 106v14M120 106v14M180 106v14M60 170v14M120 170v14M180 170v14M60 234v14M120 234v14M180 234v14M60 298v14M120 298v14M180 298v14M60 362v14M120 362v14M180 362v14"/>
+<text class="b" x="0" y="100">Washington Post, 2024</text>
+<text class="big" x="360" y="100" text-anchor="end">&lt; 1</text>
+<rect class="fl" x="0" y="108" width="4" height="10" rx="1"/>
+<text class="m mu" x="0" y="136">GPT-4, e-mail de 100 mots</text>
+<text class="b" x="0" y="164">Mistral, 2025</text>
+<text class="big ac" x="360" y="164" text-anchor="end">11</text>
+<rect class="fa" x="0" y="172" width="63" height="10" rx="1"/>
+<text class="m mu" x="0" y="200">cycle de vie, 400 tokens</text>
+<text class="b" x="0" y="228">Li, Ren et al., 2023</text>
+<text class="big" x="360" y="228" text-anchor="end">30</text>
+<rect class="fl" x="0" y="236" width="89" height="10" rx="1"/>
+<text class="m mu" x="0" y="264">GPT-3, centrales comprises</text>
+<text class="b" x="0" y="292">OpenAI, 2025</text>
+<text class="big ac" x="360" y="292" text-anchor="end">1 550</text>
+<rect class="fa" x="0" y="300" width="192" height="10" rx="1"/>
+<text class="m mu" x="0" y="328">ChatGPT, sans méthode</text>
+<text class="b" x="0" y="356">Google, 2025</text>
+<text class="big ac" x="360" y="356" text-anchor="end">1 900</text>
+<rect class="fa" x="0" y="364" width="197" height="10" rx="1"/>
+<text class="m mu" x="0" y="392">Gemini, refroidissement seul</text>
+<path class="ln" d="M0 404h200M0 404v6M60 404v6M120 404v6M180 404v6"/>
+<text class="m d" x="0" y="426">1</text>
+<text class="m d" x="60" y="426" text-anchor="middle">10</text>
+<text class="m d" x="120" y="426" text-anchor="middle">100</text>
+<text class="m d" x="180" y="426" text-anchor="middle">1 000</text>
+<text class="i mu" x="0" y="452">L'écart vient surtout de ce que chacun compte.</text>
+</svg>

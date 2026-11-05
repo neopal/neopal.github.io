@@ -1,6 +1,6 @@
 # Lexique IA
 
-> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 173 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
+> Glossaire français de l'intelligence artificielle (LLM, agents, entraînement, inférence, évaluation, écosystème), écrit et sourcé par Pierre-Adrien Lair, directeur du LAB IA de Converteo. 178 définitions, chacune avec une définition courte, une image concrète, la définition complète datée et ses sources. Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
 
 Toutes les fiches en texte brut, sources comprises : https://neopal.github.io/lexique/llms-full.txt
 Auteur : https://neopal.github.io/
@@ -153,6 +153,8 @@ Auteur : https://neopal.github.io/
 - [p(doom)](https://neopal.github.io/lexique/p-doom/) : Le p(doom) est la probabilité, donnée par une personne, que l'IA cause une catastrophe pour l'humanité comme l'extinction ; c'est une opinion chiffrée, pas une mesure.
 - [Chasse aux failles par IA](https://neopal.github.io/lexique/chasse-aux-failles-par-ia/) (en anglais : AI vulnerability discovery) : La chasse aux failles par IA confie à un modèle la recherche de failles inconnues dans du vrai code, qu'il lit et teste, au service du défenseur comme de l'attaquant.
 - [Claude](https://neopal.github.io/lexique/claude/) : Claude est la famille de modèles de langage d'Anthropic, et le nom des applications qui les font tourner, du chat sur claude.ai à l'agent de code Claude Code.
+- [Clonage de voix](https://neopal.github.io/lexique/clonage-de-voix/) (en anglais : Voice cloning) : Le clonage de voix fait parler un logiciel avec la voix d'une personne réelle, à partir de quelques secondes ou minutes d'enregistrement, pour lui faire dire n'importe quel texte.
+- [AI Act (règlement européen sur l'IA)](https://neopal.github.io/lexique/ai-act/) (en anglais : AI Act) : L'AI Act est le règlement européen sur l'intelligence artificielle, qui interdit certains usages, encadre ceux à haut risque et impose de la transparence, avec des obligations applicables par étapes.
 
 ## Méthode : travailler avec l'IA
 
@@ -171,6 +173,7 @@ Auteur : https://neopal.github.io/
 - [Déclaration d'usage de l'IA](https://neopal.github.io/lexique/declaration-d-usage-de-l-ia/) (en anglais : AI use disclosure) : Une déclaration d'usage de l'IA dit, dans un document, quelle IA a servi, pour quoi faire, comment le résultat a été relu, et qui en répond.
 - [Ancrage aux sources](https://neopal.github.io/lexique/ancrage-aux-sources/) (en anglais : Grounding) : L'ancrage aux sources oblige un modèle à appuyer chaque affirmation sur des documents fournis, avec le passage exact, et à dire ce que ces documents ne couvrent pas.
 - [Fatigue d'approbation](https://neopal.github.io/lexique/fatigue-d-approbation/) (en anglais : Approval fatigue) : La fatigue d'approbation est le moment où, à force de valider des demandes presque toujours anodines, on approuve par réflexe sans plus rien lire.
+- [Shadow AI (IA fantôme)](https://neopal.github.io/lexique/shadow-ai/) (en anglais : Shadow AI) : Le shadow AI, ou IA fantôme, désigne l'usage au travail d'outils d'IA que l'employeur n'a pas validés, comme un compte ChatGPT perso, une extension ou une appli gratuite.
 
 ## Mythes vs réalité
 
@@ -201,3 +204,5 @@ Auteur : https://neopal.github.io/
 - [Il suffit d'ajouter de l'IA à nos processus](https://neopal.github.io/lexique/mythe-ajouter-ia/) (en anglais : Myth: just add AI to our processes) : Ajouter de l'IA à un processus existant accélère les étapes qu'il contient sans toucher aux attentes et aux passages de main, là où se perd souvent l'essentiel du temps.
 - [95 % des projets d'IA échouent](https://neopal.github.io/lexique/mythe-95-pourcent/) (en anglais : Myth: 95% of AI projects fail) : Le chiffre de 95 % de projets d'IA en échec vient d'un rapport de 2025 au petit échantillon, qui comptait parmi les échecs les entreprises n'ayant jamais lancé de pilote.
 - [Une IA locale, c'est ChatGPT chez soi](https://neopal.github.io/lexique/mythe-ia-locale/) (en anglais : Myth: local AI is ChatGPT at home) : Une IA locale garde tes données chez toi, mais sur une carte graphique de joueur, elle égale les meilleurs modèles d'il y a six mois à un an.
+- [Une question à ChatGPT, c'est une bouteille d'eau](https://neopal.github.io/lexique/mythe-bouteille-d-eau/) (en anglais : Myth: one ChatGPT question uses a bottle of water) : Selon ce qu'on compte, une question texte à un chatbot consomme de quelques gouttes à quelques centilitres d'eau, loin de la bouteille, mais le total des centres de données grimpe.
+- [Un détecteur prouve qu'un texte vient d'une IA](https://neopal.github.io/lexique/mythe-detecteur-de-texte-ia/) (en anglais : Myth: an AI detector proves a text was AI-written) : Un détecteur de texte IA estime d'après le style la probabilité qu'un texte soit généré, sans voir son origine ; son score n'est pas une preuve.

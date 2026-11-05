@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 330" role="img" aria-labelledby="shadow-ai-t">
+<title id="shadow-ai-t">Le shadow AI : un fichier du bureau part vers le compte entreprise quand l'employeur fournit un outil, où il n'entraîne aucun modèle par défaut ; quand l'outil manque, il part vers un compte perso, où l'entraînement est activé par défaut et où l'entreprise ne le voit plus, comme le code source collé chez Samsung en 2023.</title>
+<rect class="bx" x="90" y="8" width="180" height="42" rx="6"/>
+<text class="m" x="180" y="34" text-anchor="middle">un fichier du bureau</text>
+<path class="lm" d="M130 50 v20 h-45 v34"/>
+<path class="lm" d="M79 98 l6 6 l6 -6"/>
+<text class="m d" x="0" y="90">fourni</text>
+<path class="la" d="M230 50 v20 h45 v34"/>
+<path class="la" d="M269 98 l6 6 l6 -6"/>
+<text class="m ac" x="287" y="90">manquant</text>
+<rect class="bx" x="0" y="110" width="170" height="80" rx="6"/>
+<text class="m" x="10" y="134">compte entreprise</text>
+<text class="m mu" x="10" y="156">pas d'entraînement</text>
+<text class="m mu" x="10" y="176">par défaut</text>
+<rect class="bxa" x="190" y="110" width="170" height="80" rx="6"/>
+<text class="m ac" x="200" y="134">compte perso</text>
+<text class="m mu" x="200" y="156">entraînement activé</text>
+<text class="m mu" x="200" y="176">par défaut</text>
+<path class="lr" d="M275 190 v30"/>
+<path class="lr" d="M269 214 l6 6 l6 -6"/>
+<rect class="bx" x="190" y="226" width="170" height="48" rx="6"/>
+<text class="m red" x="200" y="246">Samsung, 2023</text>
+<text class="m mu" x="200" y="264">code source collé</text>
+<text class="m d" x="0" y="246">28 % : pas d'outil</text>
+<text class="m d" x="0" y="264">validé (UK, 2025)</text>
+<text class="i mu" x="0" y="302">Quand l'outil de gauche manque,</text>
+<text class="i mu" x="0" y="322">le fichier part par la droite.</text>
+</svg>

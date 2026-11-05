@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 400" role="img" aria-labelledby="ai-act-t">
+<title id="ai-act-t">Le calendrier de l'AI Act, de l'entrée en vigueur le 1er août 2024 au 2 août 2028 : les interdictions en 2025, les modèles d'usage général en août 2025, la transparence en août 2026, puis le haut risque, que le règlement omnibus de juillet 2026 a repoussé du 2 août 2026 au 2 décembre 2027 et du 2 août 2027 au 2 août 2028.</title>
+<path class="ln" d="M100 14 V352"/>
+<text class="m mu" x="0" y="28">1 août 2024</text>
+<circle class="fl" cx="100" cy="24" r="4"/>
+<text x="112" y="28">entrée en vigueur</text>
+<text class="m mu" x="0" y="64">2 févr. 2025</text>
+<circle class="fl" cx="100" cy="60" r="4"/>
+<text x="112" y="64">pratiques interdites</text>
+<text class="m mu" x="0" y="100">2 août 2025</text>
+<circle class="fl" cx="100" cy="96" r="4"/>
+<text x="112" y="100">modèles d'usage général</text>
+<text class="m mu" x="0" y="136">2 août 2026</text>
+<circle class="fl" cx="100" cy="132" r="4"/>
+<text x="112" y="136">transparence, deepfakes</text>
+<text class="m d" x="112" y="156">haut risque, prévu ici</text>
+<rect class="bxa" x="0" y="172" width="360" height="26" rx="4"/>
+<text class="m ac" x="8" y="190">5 nov. 2026</text>
+<circle class="fa" cx="100" cy="185" r="5"/>
+<text class="ac b" x="112" y="190">état de la fiche</text>
+<text class="m mu" x="0" y="226">2 déc. 2026</text>
+<circle class="fl" cx="100" cy="222" r="4"/>
+<text x="112" y="226">images intimes interdites</text>
+<text class="m mu" x="0" y="262">2 août 2027</text>
+<text class="m d" x="112" y="262">produits, prévu ici</text>
+<text class="m ac" x="0" y="298">2 déc. 2027</text>
+<circle class="fa" cx="100" cy="294" r="5"/>
+<text class="ac" x="112" y="298">haut risque, annexe III</text>
+<text class="m ac" x="0" y="334">2 août 2028</text>
+<circle class="fa" cx="100" cy="330" r="5"/>
+<text class="ac" x="112" y="334">haut risque des produits</text>
+<path class="la dash" d="M294 152 C356 160 356 286 318 294"/>
+<path class="la" d="M324 288 l-6 6 l8 3"/>
+<path class="la dash" d="M270 258 C306 262 306 322 292 330"/>
+<path class="la" d="M298 325 l-6 5 l8 3"/>
+<text class="i mu" x="0" y="372">En couleur, les deux dates que l'omnibus</text>
+<text class="i mu" x="0" y="392">de juillet 2026 a repoussées.</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 336" role="img" aria-labelledby="mythe-detecteur-de-texte-ia-t">
+<title id="mythe-detecteur-de-texte-ia-t">Deux courbes sur un axe qui va du texte prévisible au texte surprenant : les textes d'IA à gauche, les textes humains à droite, qui se chevauchent. Le détecteur tranche par un seuil ; un texte humain très prévisible tombe du côté IA, et un texte d'IA reformulé passe du côté humain.</title>
+<text class="m ac" x="0" y="20">jugé IA</text>
+<text class="m mu" x="360" y="20" text-anchor="end">jugé humain</text>
+<path class="ln dash" d="M150 30V204"/>
+<text class="m mu" x="156" y="44">seuil</text>
+<path class="la" d="M8 200C48 200 62 78 95 78C128 78 140 200 182 200"/>
+<text class="m ac" x="40" y="68">textes d'IA</text>
+<path class="lm" d="M112 200C170 200 190 72 232 72C274 72 292 200 352 200"/>
+<text class="m" x="232" y="62" text-anchor="middle">textes humains</text>
+<path class="ln" d="M0 200H360"/>
+<circle class="mu" cx="128" cy="193" r="5"/>
+<circle class="mu" cx="140" cy="186" r="5"/>
+<path class="la dash" d="M100 112Q160 100 188 186"/>
+<path class="fa" d="M190 194L181 184L194 182Z"/>
+<circle class="fa" cx="192" cy="193" r="5"/>
+<circle class="mu" cx="8" cy="231" r="5"/>
+<text class="m" x="20" y="235">texte humain jugé IA</text>
+<circle class="fa" cx="8" cy="255" r="5"/>
+<text class="m" x="20" y="259">texte d'IA reformulé, jugé humain</text>
+<path class="lm" d="M0 282H352"/>
+<path class="fl" d="M360 282L351 277V287Z"/>
+<text class="m mu" x="0" y="300">prévisible</text>
+<text class="m mu" x="360" y="300" text-anchor="end">surprenant</text>
+<text class="i mu" x="0" y="326">Le détecteur ne voit que la prévisibilité.</text>
+</svg>

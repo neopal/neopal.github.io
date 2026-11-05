@@ -12,6 +12,46 @@ Shorts à voix off pour YouTube, TikTok et Instagram ; recette dans `video/VOIX.
 - **Chaque épisode répond au précédent**, pour qu'un spectateur qui en voit un ait une raison de voir le suivant. L'ordre va du plus grand public au plus technique.
 - **Après l'épisode 7**, on regarde dans YouTube Studio la rétention à 3 s et le pourcentage de vues complètes par format, puis on ajuste le rythme et les formats.
 
+## Bilan YouTube après 26 épisodes (2026-11-05)
+
+Le bilan prévu « après l'épisode 7 », fait le 2026-11-05 dans YouTube Studio (mode avancé, depuis le début de la chaîne : 16 655 vues, 46 abonnés, 51,9 % de chaque vidéo regardée en moyenne). TikTok et Instagram ne sont pas comptés.
+
+| Épisode | Vues | % regardé | Abonnés |
+|---|---|---|---|
+| 11 · Derrière ChatGPT, quinze IA différentes | 1 855 | 39,8 % | 6 |
+| 13 · ChatGPT ne calcule pas, il devine | 1 450 | 79,9 % | 3 |
+| 19 · Après 50 validations, on ne lit plus | 1 332 | 57,9 % | 2 |
+| 23 · Ton français coûte plus cher à l'IA | 1 128 | 53,2 % | 2 |
+| 7 · L'IA se trompe à 36 % ? Pas vraiment | 1 083 | 45,2 % | 1 |
+| … | | | |
+| 25 · Claude, c'est qui exactement ? | 196 | 45,9 % | 0 |
+| 5 · ChatGPT apprend en te parlant ? | 191 | 53,9 % | 0 |
+| 15 · ChatGPT ne sait pas qu'il ne sait pas | 187 | 50,9 % | 0 |
+| 18 · Quatre agents IA, un cerveau grillé | 141 | 51,2 % | 1 |
+| 24 · L'IA qui bachote ses annales | 126 | 44,1 % | 0 |
+
+Ce qu'on en retient :
+- **Le sujet compte plus que le format** : mythes et définitions se mélangent en haut comme en bas. Ce qui marche, c'est une surprise sur un outil du quotidien, avec un chiffre ou « ChatGPT » dans le titre. À un jour d'écart, Token fait 1 128 vues et Benchmaxxing 126.
+- **Le jargon du milieu ne prend pas** : les benchmarks échouent deux fois (ép. 17 et 24), AI brain fry aussi ; « Claude » ne dit rien au grand public quand « ChatGPT » attire.
+- **La rétention suit le mécanisme qu'on voit** : 80 % pour le calcul deviné (Des chiffres et des lettres), 67 % au départ pour la rime prévue d'avance (ép. 26).
+- Biais connu : les premiers épisodes ont eu plus de temps pour faire des vues ; on compare des sorties proches.
+
+Conséquences : la vague 25 du lexique (`vagues/25-grand-public/`) ouvre cinq sujets grand public pensés pour des shorts ; l'ép. 28 (hook, le plus technique) gagnerait à passer après les ép. 29 et 30, si PA le déprogramme du 9 novembre.
+
+## Après le 8 novembre (proposition du 2026-11-05)
+
+Un short tous les deux jours tant que les crédits ElevenLabs manquent (ou en voix locale si le test de clonage local, lancé le 2026-11-05, est concluant).
+
+| Date | Ép. | Fiche | État |
+|---|---|---|---|
+| sam. 07/11 | 27 | `pilotabilite` | programmé |
+| lun. 09/11 | 28 | `hook` | programmé ; à décaler au 17/11 si possible |
+| mer. 11/11 | 29 | `mythe-remplace-metier` | composition prête, voix à faire |
+| ven. 13/11 | 30 | `declaration-d-usage-de-l-ia` | composition prête, voix à faire |
+| dim. 15/11 | 31 | `ancrage-aux-sources` | composition prête, voix à faire |
+| mar. 17/11 | 32 | `mythe-ia-locale` | script prêt, composition à monter |
+| ensuite | 33 à 37 | vague 25 : bouteille d'eau, clonage de voix, détecteurs, shadow AI, AI Act | fiches en cours d'écriture |
+
 ## La semaine du 3 novembre
 
 Décidée le 2026-11-02, à la demande de PA, à partir des vagues 22 et 23 du lexique (fiches écrites les 29 octobre et 2 novembre) et de deux mythes encore sans short. Cinq définitions et deux mythes ; fil du grand public (Claude) vers la méthode (hook, déclaration, ancrage). Fatigue d'approbation et Version épinglée restent en réserve : la première est trop proche de l'ép. 19 (validation humaine). Scripts et visuel scène par scène (champ `screen`) écrits le 2026-11-02, à relire dans `scripts-semaine-03-11.md` ; calage estimé sans voix, contrôle des sous-titres OK pour les sept. Reste à faire : relecture par PA, compositions Remotion, captures et portraits (champ `credits`, « à produire »), voix PAL - FR (environ 9 000 crédits pour les sept), rendu, programmation. Hook provisoire pour le mythe de l'autocomplétion (champ `todo`) ; celui des radiologues est une vraie citation de 2016.

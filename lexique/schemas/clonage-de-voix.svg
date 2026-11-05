@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 380" role="img" aria-labelledby="clonage-de-voix-t">
+<title id="clonage-de-voix-t">Un modèle de synthèse vocale reçoit d'un côté un court échantillon de la voix d'Enzo, de l'autre un texte écrit par n'importe qui, et rend la voix d'Enzo disant une phrase qu'il n'a jamais prononcée. Dessous, l'audio nécessaire sur une échelle logarithmique : dix secondes au minimum chez ElevenLabs, quinze à vingt secondes selon Hany Farid, une à deux minutes recommandées, quatre minutes dans l'étude où 58 % des clones ont été jugés humains, plus d'une heure pour la voix de Jennifer Wexton.</title>
+<text class="m mu" x="85" y="14" text-anchor="middle">la voix d'Enzo</text>
+<text class="m mu" x="275" y="14" text-anchor="middle">le texte</text>
+<rect class="bx" x="0" y="22" width="170" height="34" rx="4"/>
+<text x="85" y="44" text-anchor="middle">20 s de vacances</text>
+<rect class="bx" x="190" y="22" width="170" height="34" rx="4"/>
+<text x="275" y="44" text-anchor="middle">« Envoie 2 000 € »</text>
+<path class="lm" d="M85 56 L150 84 M275 56 L210 84"/>
+<rect class="bx" x="60" y="84" width="240" height="34" rx="4"/>
+<text x="180" y="106" text-anchor="middle">modèle de synthèse vocale</text>
+<path class="la" d="M180 118 v20"/><path class="la" d="M174 132 l6 7 l6 -7"/>
+<rect class="bxa" x="10" y="144" width="340" height="34" rx="4"/>
+<text class="ac" x="180" y="166" text-anchor="middle">la voix d'Enzo : « Envoie 2 000 € »</text>
+<text class="m mu" x="180" y="198" text-anchor="middle">une phrase qu'il n'a jamais dite</text>
+<text class="m" x="0" y="234">audio nécessaire (échelle log)</text>
+<text class="m ac" x="50" y="256" text-anchor="middle">15 à 20 s</text>
+<text class="m mu" x="50" y="272" text-anchor="middle">suffisent</text>
+<text class="m ac" x="193" y="256" text-anchor="middle">4 min</text>
+<text class="m mu" x="193" y="272" text-anchor="middle">58 % jugés humains</text>
+<path class="ln" d="M10 290 H350"/>
+<rect class="fa" x="113" y="285" width="40" height="10" rx="2"/>
+<path class="lm" d="M10 284 v12 M50 280 v16 M193 280 v16 M350 284 v12"/>
+<text class="m" x="10" y="314">10 s</text>
+<text class="m mu" x="10" y="330">minimum</text>
+<text class="m ac" x="133" y="314" text-anchor="middle">1 à 2 min</text>
+<text class="m mu" x="133" y="330" text-anchor="middle">recommandé</text>
+<text class="m" x="350" y="314" text-anchor="end">plus d'1 h</text>
+<text class="m mu" x="350" y="330" text-anchor="end">Wexton</text>
+<text class="i mu" x="0" y="356">La voix et le texte entrent séparément,</text>
+<text class="i mu" x="0" y="376">et le texte, n'importe qui peut l'écrire.</text>
+</svg>

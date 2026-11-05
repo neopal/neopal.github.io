@@ -148,6 +148,8 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Optimisation pour les moteurs génératifs (GEO) | generative engine optimization | publié | | CAR | |
 | p(doom) | p(doom) | publié | | | le beau-frère et sa chance sur quatre, qu'aucun dimanche ne viendra vérifier |
 | Claude | Claude | publié | | | le croque du bar ou le menu en sept plats, au même restaurant |
+| Clonage de voix | voice cloning, deepfake | publié | | | |
+| AI Act | EU AI Act | publié | | | |
 
 ## 8. Méthode : travailler avec l'IA
 
@@ -164,6 +166,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Capacité inexploitée | capability overhang | publié | | CAR | le synthé dont on n'utilise que trois presets |
 | AI brain fry | AI brain fry | publié | | | le maître-nageur qui surveille quatre bassins |
 | Automatiser ou augmenter | automation vs augmentation, agency | publié | | | le patron de bistrot et ses trois sortes de clients |
+| Shadow AI | shadow AI, BYOAI | publié | | | |
 
 ## 9. Mythes vs réalité (une idée fausse par fiche)
 
@@ -188,6 +191,10 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Un bon score au benchmark fait un bon modèle | publié | | HAM, HO, ULT, AGT |
 | Le modèle agit lui-même | publié | | AGT, CAR |
 | Une IA locale, c'est ChatGPT chez soi | publié | | |
+| Une question à ChatGPT, c'est une bouteille d'eau | publié | | |
+| Un détecteur prouve qu'un texte vient d'une IA | publié | P1 | |
+
+Réserve grand public (2026-11-05, d'après les stats YouTube) : droit d'auteur et entraînement (« L'IA a-t-elle le droit de lire tes livres ? »).
 
 ## Bilan de la synthèse des livres (2026-10-02)
 
