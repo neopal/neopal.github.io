@@ -6,7 +6,7 @@ import vm from 'node:vm';
 
 export const SHORTS_DIR = 'shorts';
 
-// Lit et vérifie lexique/shorts.js ; renvoie la liste, le plus récent d'abord. fail : arrête le build.
+// Lit et vérifie lexique/shorts.js ; renvoie la liste, le plus récent d'abord (ep : numéro, ou 'HS' pour un hors-série). fail : arrête le build.
 export function loadShorts(lexDir, liveIds, fail) {
   const file = join(lexDir, 'shorts.js');
   if (!existsSync(file)) return [];
@@ -19,7 +19,7 @@ export function loadShorts(lexDir, liveIds, fail) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(v.date || '')) fail(`shorts.js : date invalide pour ${v.term}`);
     if (!existsSync(join(lexDir, SHORTS_DIR, `${v.term}.jpg`))) fail(`couverture manquante : lexique/${SHORTS_DIR}/${v.term}.jpg`);
   }
-  return [...list].sort((a, b) => b.ep - a.ep);
+  return [...list].sort((a, b) => b.date.localeCompare(a.date) || (b.ep || 0) - (a.ep || 0));
 }
 
 // ctx : {url (URL absolue de la page), lexUrl, author, genMark, esc, jsonLd, termHref(id), termAbsUrl(id), title(t), clean}
@@ -62,7 +62,7 @@ export function shortsPage(shorts, byId, ctx) {
         <span class="tri" aria-hidden="true"></span>
       </button>
       <h2>${esc(v.title)}</h2>
-      <p class="meta">Épisode ${v.ep} · <a href="${esc(ctx.termHref(v.term))}">la fiche ${esc(ctx.title(byId[v.term]))}</a> · <a href="https://www.youtube.com/shorts/${esc(v.youtube)}">YouTube</a></p>
+      <p class="meta">${typeof v.ep === 'number' ? `Épisode ${v.ep}` : 'Hors-série'} · <a href="${esc(ctx.termHref(v.term))}">la fiche ${esc(ctx.title(byId[v.term]))}</a> · <a href="https://www.youtube.com/shorts/${esc(v.youtube)}">YouTube</a></p>
     </article>`;
   return `<!doctype html>
 ${ctx.genMark}
