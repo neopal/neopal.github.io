@@ -31,6 +31,7 @@ Ce sont des archives figées. Les fiches ont été fusionnées dans `lexique/ter
 | [23-certif-claude](23-certif-claude/) | 2 nov. 2026 | Sept notions repérées dans la formation partenaires d'Anthropic, toutes sourcées sur des pages publiques | pilotabilite, hook, recherche-agentique, version-epinglee, declaration-d-usage-de-l-ia, ancrage-aux-sources, fatigue-d-approbation ; « approval fatigue » passe de human-in-the-loop à fatigue-d-approbation |
 | [24-ia-locale](24-ia-locale/) | 2 nov. 2026 | Mythe de l'IA locale, demandé par PA (données chez soi, mais six à douze mois de retard sur une carte graphique de joueur) | mythe-ia-locale |
 | [25-grand-public](25-grand-public/) | 5 nov. 2026 | Cinq sujets grand public choisis d'après les stats YouTube des 26 premiers shorts, pensés pour des shorts | mythe-bouteille-d-eau, clonage-de-voix, mythe-detecteur-de-texte-ia, shadow-ai, ai-act |
+| [26-ia-sur-ta-machine](26-ia-sur-ta-machine/) | 9 nov. 2026 | Les mots de l'IA locale vus dans des tweets (fine-tune, prefill, quant agressive, experts retirés) | prefill-et-decode, bande-passante-memoire, offloading, elagage-d-experts, abliteration ; enrichit kv-cache, moe ; liens retour depuis inference, quantization, latence-vs-debit, mythe-ia-locale, gpu, jailbreak, post-entrainement ; alias prefill déplacé de mythe-lit-mot-par-mot |
 
 Les fiches des débuts (token, parametres, rag…) et quelques ajouts isolés (prompt-caching, arxiv…) ont été écrits hors vague, directement dans `lexique/terms.js`.
 

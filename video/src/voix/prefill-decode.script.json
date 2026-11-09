@@ -1,0 +1,92 @@
+{
+  "id": "prefill-decode",
+  "term": "prefill-et-decode",
+  "episode": 38,
+  "date": "2026-11-29",
+  "format": "Définition",
+  "composition": "PrefillVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme ; tons variés scène par scène, ouverture différente à chaque épisode (PA, 2026-11-09 : ne pas sonner IA)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[softly] C'est quoi... le /ˈpɹiːfɪl/ et le /ˈdiːkoʊd/…",
+      "screen": "Titre géant sur deux lignes « PREFILL » et « DECODE ». Derrière, posée dès la première image, une fenêtre de chat dessinée avec une pièce jointe « rapport.pdf ». Aucun sous-titre (nocaption)."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Tu colles un long PDF dans ton IA, et l'écran reste vide de longues secondes… puis la réponse défile d'un coup. [quickly] Pourquoi deux vitesses ?",
+      "screen": "La fenêtre de chat. Sur « long PDF », la pièce jointe s'épaissit en pile de pages (stagger). Sur « écran reste vide », une zone de réponse vide avec trois points qui pulsent et un chronomètre qui tourne. Sur « défile d'un coup », des lignes de texte s'écrivent en typewriter rapide. Sur « deux vitesses », deux petites jauges apparaissent côte à côte, l'une lente, l'autre rapide."
+    },
+    {
+      "scene": "base",
+      "say": "[matter-of-fact] Une réponse se fait en deux temps. D'abord, le modèle lit ton message d'un seul bloc, tous les tokens en même temps, et range ses calculs dans sa mémoire de travail.",
+      "screen": "Une rangée de dix tokens (cases avec de vrais bouts de mots : « Ré », « sume », «-moi », « ce », « rapport »…). Sur « d'un bloc », les dix cases s'allument ensemble en un seul flash, pas en cascade. Sur « mémoire de travail », une boîte « KV cache » se remplit de dix petites cases."
+    },
+    {
+      "scene": "nom",
+      "say": "[curious] Cette lecture, c'est le /ˈpɹiːfɪl/. Ensuite, il écrit sa réponse token par token… c'est le /ˈdiːkoʊd/.",
+      "screen": "Deux colonnes. À gauche, « prefill » s'écrit en grand au-dessus de la rangée allumée d'un bloc. À droite, « decode » s'écrit en grand au-dessus d'une rangée qui se remplit case par case, une case à chaque battement (passages masqués, onscreen)."
+    },
+    {
+      "scene": "serveur",
+      "say": "[mischievously] Imagine un serveur qui prend la commande d'une table de douze en une minute… puis qui fait un aller-retour en cuisine pour chaque assiette.",
+      "screen": "Scène propre à ce short : une brasserie en pixel art, une grande table de douze convives qui parlent tous en même temps (bulles qui pop ensemble), le serveur qui note sur son carnet. Sur « aller-retour en cuisine », le serveur part en arc vers la porte de la cuisine et revient avec une seule assiette ; sur « chaque assiette », il repart, et un compteur d'assiettes servies avance lentement « 1 / 12 », « 2 / 12 »."
+    },
+    {
+      "scene": "mesure",
+      "say": "[excited] Sur une carte graphique, un petit modèle lit sept mille tokens par seconde… et n'en écrit que cent vingt.",
+      "screen": "Deux barres horizontales à la même échelle, en bar grow. Sur « sept mille », la barre « lecture » pousse jusqu'au bord, libellé « 7 340 tokens/s » (count-up, punch zoom du short). Sur « cent vingt », la barre « écriture » ne pousse que d'un trait minuscule, libellé « 121 tokens/s »."
+    },
+    {
+      "scene": "pourquoi",
+      "say": "[thoughtful] Pour lire, la puce calcule tout d'un coup. Pour écrire, elle doit relire tout le modèle, à chaque token.",
+      "screen": "La puce au centre, une boîte « poids du modèle » au-dessus. Sur « calcule tout d'un coup », tous les cœurs de la puce s'allument d'un flash. Sur « relire tout le modèle », la boîte des poids descend vers la puce en pointillés, puis remonte, puis redescend, un token orange sort à chaque passage."
+    },
+    {
+      "scene": "etdonc",
+      "say": "[warmly] Sur un Mac récent, un mail de dix lignes est lu en moins d'une seconde. Un PDF de quatre-vingts pages, en plus de quatre minutes. Et la réponse s'écrit ensuite en quelques secondes.",
+      "screen": "Un portable Mac dessiné. Sur « mail de dix lignes », une enveloppe entre et un chronomètre s'arrête vite, libellé « moins d'1 s ». Sur « quatre-vingts pages », une pile de pages entre, le chronomètre tourne longtemps, libellé « plus de 4 min ». Sur « quelques secondes », cinq lignes de réponse s'écrivent d'un coup."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors la prochaine fois que ton IA hésite avant de répondre… [pause] elle ne réfléchit pas forcément, elle est peut-être encore en train de lire.",
+      "screen": "Retour à la brasserie plein cadre : le serveur relit encore sa longue commande sur son carnet, la table de douze attend, une fenêtre de chat avec ses trois points posée sur la table. Image finale pleine."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈpɹiːfɪl/": "prefill",
+    "/ˈdiːkoʊd/": "decode"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "Cette lecture, c'est le prefill.",
+      "c'est le decode."
+    ]
+  },
+  "sources": [
+    "Fiche prefill-et-decode de lexique/terms.js (vague 26, 2026-11-09)",
+    "NVIDIA, Mastering LLM Techniques: Inference Optimization, 17 novembre 2023 : le prefill sature le calcul du GPU, le decode est limité par la mémoire",
+    "llama.cpp, documentation de llama-bench : Qwen2 7B Q4_K_M sur CUDA, 7 340 tokens/s en lecture (pp512) et 120,6 en écriture (tg128) ; https://github.com/ggml-org/llama.cpp/tree/master/tools/llama-bench",
+    "llama.cpp, discussion #4167 (Apple Silicon) : LLaMA 7B Q4_0 sur M4 10 cœurs graphiques, 221 tokens/s en lecture et 24,1 en écriture ; calculs : mail de 150 tokens / 221 = 0,7 s ; PDF de 80 pages × 500 mots × 1,66 token par mot = 66 500 tokens / 221 = 300 s ; https://github.com/ggml-org/llama.cpp/discussions/4167",
+    "Image : le serveur qui prend la commande de douze puis fait un aller-retour par assiette (fiche prefill-et-decode) ; scène inventée"
+  ],
+  "publication": {
+    "title": "Pourquoi ton IA met du temps à répondre",
+    "description": "Une réponse d'IA se fait en deux temps : le prefill lit tout ton message d'un bloc, le decode écrit la réponse token après token. Sur une carte graphique, un petit modèle lit 7 340 tokens par seconde et n'en écrit que 121 (llama.cpp). Un long PDF fait donc attendre avant le premier mot.\nhttps://neopal.github.io/lexique/prefill-et-decode/\n#llm #ialocale #chatgpt #vulgarisation",
+    "fil": "L'ép. 37 montrait un modèle qui écrit lentement faute de mémoire ; il y a aussi l'attente avant le premier mot, et ce n'est pas la même chose",
+    "decor": "brasserie (le serveur et la table de douze)"
+  },
+  "credits": []
+}

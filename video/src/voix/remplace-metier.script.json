@@ -9,7 +9,7 @@
     "voice_name": "PAL - FR (voix clonée de PA)",
     "voice_id": "mW090pzjsAt4gvt0DNB8",
     "model_id": "eleven_v4",
-    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+    "direction": "podcast narré, un tout petit peu d'enthousiasme ; tons variés scène par scène, ouverture différente à chaque épisode (PA, 2026-11-09 : ne pas sonner IA)"
   },
   "music": {
     "reuse": "voix/prediction-music.mp3"
@@ -18,27 +18,27 @@
   "segments": [
     {
       "scene": "hook",
-      "say": "[warmly] « On devrait arrêter dès maintenant de former des radiologues »… c'était en 2016, et les radiologues n'ont jamais été aussi demandés.",
+      "say": "[deadpan] « On devrait arrêter dès maintenant de former des radiologues »… [amused] c'était en 2016, et les radiologues n'ont jamais été aussi demandés.",
       "screen": "Dès la première image, une radio de thorax dessinée sur un négatoscope, collée au scotch. La phrase s'écrit à la machine en grand entre guillemets, avec « 2016 » en petit dessous ; le tampon rouge FAUX s'écrase dessus (squash) et reste jusqu'à la fin du hook : c'est l'image de couverture."
     },
     {
       "scene": "taches",
-      "say": "[curious] Un métier, c'est un paquet de tâches. D'après une étude de 2012, les radiologues ne passaient que 36 % de leur temps à lire des images… le reste, ce sont les patients, les autres médecins, l'enseignement.",
+      "say": "[matter-of-fact] Un métier, c'est un paquet de tâches. D'après une étude de 2012, les radiologues ne passaient que 36 % de leur temps à lire des images… le reste, ce sont les patients, les autres médecins, l'enseignement.",
       "screen": "Un radiologue pixel art à son bureau. Un camembert se construit à côté : une part de 36 % s'allume en couleur d'accent sur « 36 % » (libellé « images »), puis les trois autres parts tombent en cascade, libellées « patients », « médecins », « enseignement »."
     },
     {
       "scene": "records",
-      "say": "[warmly] En 2025, plus de 700 IA de radiologie avaient l'aval des autorités sanitaires américaines… et les internats ont ouvert un nombre record de 1 208 postes en radiologie.",
+      "say": "[amused] En 2025, plus de 700 IA de radiologie avaient l'aval des autorités sanitaires américaines… et les internats ont ouvert un nombre record de 1 208 postes en radiologie.",
       "screen": "Deux compteurs côte à côte. À gauche, des petites puces « IA » tombent en grille (count-up jusqu'à « 700 »). À droite, des blouses pixel art se rangent en colonnes (count-up jusqu'à « 1 208 postes », punch zoom du short sur le chiffre)."
     },
     {
       "scene": "jeunes",
-      "say": "[curious] Ça ne veut pas dire que rien ne bouge. En août 2026, à Stanford, l'équipe d'Erik Brynjolfsson ne voit pas de destruction d'emplois… mais chez les 22-25 ans, dans les métiers les plus exposés à l'IA, l'emploi est environ 19 % sous ce qu'il aurait été.",
+      "say": "[thoughtful] Ça ne veut pas dire que rien ne bouge. En août 2026, à Stanford, l'équipe d'Erik Brynjolfsson ne voit pas de destruction d'emplois… mais chez les 22-25 ans, dans les métiers les plus exposés à l'IA, l'emploi est environ 19 % sous ce qu'il aurait été.",
       "screen": "Portrait pixelisé d'Erik Brynjolfsson (Commons) en collage, en haut à gauche. Graphique qui se construit : deux courbes partent du même point, « exposés » et « moins exposés » ; sur « 22-25 ans », la courbe « exposés » se détache vers le bas et l'écart se colore, libellé « −19 % »."
     },
     {
       "scene": "embauche",
-      "say": "[warmly] Le recul passe par des jeunes qu'on n'embauche pas, plutôt que par des licenciements… et une embauche qui n'a pas lieu ne se voit pas dans les chiffres du chômage.",
+      "say": "[serious] Le recul passe par des jeunes qu'on n'embauche pas, plutôt que par des licenciements… et une embauche qui n'a pas lieu ne se voit pas dans les chiffres du chômage.",
       "screen": "Une porte de bureau avec un panneau « on recrute » qui se retourne en « complet ». Devant, une file de jeunes pixel art qui s'allonge, sans que personne ne sorte du bureau. En bas, une courbe du chômage reste plate, libellé « chômage »."
     },
     {

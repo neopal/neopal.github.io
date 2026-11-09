@@ -49,6 +49,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Fine-tuning | fine-tuning | publié | | LLM, HO, ULT, ENT, CAR | régler la console pour un genre |
 | LoRA | Low-Rank Adaptation, QLoRA | publié | | | le sirop dans la pression, le fût reste le même |
 | MoE | mixture of experts | publié | | AGT, CAR | l'orchestre de solistes |
+| Élagage d'experts | expert pruning, REAP | publié | | | la brasserie qui tient dans un food truck |
 | Architectures hybrides | hybrid architectures (Mamba, Gated DeltaNet) | publié | | | |
 | Petits modèles embarqués | small / on-device models | dans slm | | ENT, LLM | le groupe acoustique |
 | Open weights vs open source | open weights | publié | | LLM, ULT, HO | le preset donné à tout le monde |
@@ -66,6 +67,9 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | Modèles de raisonnement, chain-of-thought | reasoning models, CoT | publié | | AGT, HO, ULT, CAR, ENT | le brouillon avant la prise |
 | Speculative decoding | speculative decoding | publié | | | |
 | Quantization | quantization, GGUF | publié | | HO, CAR | du WAV au MP3 |
+| Prefill et decode | prefill, decode | publié | | | le serveur qui prend la commande de douze, puis fait un aller-retour par assiette |
+| Bande passante mémoire | memory bandwidth, memory-bound | publié | | | le dictionnaire relu en entier pour chaque mot de la carte de vœux |
+| Offloading | offloading, mmap | publié | | | les chaussures gauches au garde-meuble |
 | Coût d'une requête | cost per request | publié | | | la facture du studio |
 | Latence vs débit | latency vs throughput | publié | | | |
 | Apprentissage en contexte (few-shot) | in-context learning, few-shot | publié | | LLM, HO, CAR | jouer deux mesures au groupe pour lui donner le style |
@@ -80,6 +84,7 @@ La colonne « Livres » indique quels livres d'inspiration traitent la notion, c
 | CoT infidèle | unfaithful chain-of-thought | publié | | CAR | |
 | Biais | bias | publié | | CAR, HO | |
 | Jailbreak | jailbreak | publié | | | |
+| Abliteration | abliteration | publié | | | la bague de bridage retirée du scooter |
 | Prompt injection | prompt injection | publié | | AGT, ENT, CAR | la fausse partition glissée sur le pupitre |
 | Mémorisation vs généralisation | memorization vs generalization | publié | | LLM, ULT, HAM | |
 | L'IA comprend-elle ? | understanding | dans mythe-ia-comprend | | LLM, HAM, ULT, HO | |

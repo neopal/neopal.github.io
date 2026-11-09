@@ -1,0 +1,60 @@
+{
+  "kv-cache": {
+    "links": [
+      "prediction-du-mot-suivant",
+      "fenetre-de-contexte",
+      "inference",
+      "cout-d-une-requete",
+      "prompt-caching",
+      "bande-passante-memoire"
+    ],
+    "full": [
+      "Pour choisir le token suivant, chaque couche du modèle consulte tous les tokens déjà présents à travers deux séries de nombres calculées pour chacun, ses clés et ses valeurs. Ces nombres ne changent plus une fois calculés, donc le serveur les garde dans la mémoire du GPU et n'ajoute à chaque pas que ceux du nouveau token. Sans ce cache, une réponse de 1 000 tokens obligerait le modèle à traiter 500 500 tokens en tout, au lieu de 1 000. La lecture du message remplit le cache d'un coup, l'écriture de la réponse l'allonge d'un token à chaque fois.",
+      "Ce cache pèse lourd, et les auteurs de vLLM l'estimaient en 2023 à 800 Ko par token pour un modèle de 13 milliards de paramètres, soit jusqu'à 1,6 Go pour une seule requête de 2 048 tokens. Pour Mistral Small 3.2, sorti en juin 2025, le calcul tiré de sa configuration donne environ 164 Ko par token, et quelque 21 Go quand sa fenêtre est pleine, près de la moitié de ce que pèsent ses paramètres. C'est souvent ce cache, plus que le modèle, qui limite le nombre de conversations qu'un GPU sert en même temps.",
+      "Ce cache peut se compresser, comme les poids. Dans llama.cpp, les options --cache-type-k et --cache-type-v le stockent en q8_0 ou en q4_0 au lieu de 16 bits, soit 8,5 ou 4,5 bits par nombre, et le cache plein de Mistral Small 3.2 descend d'environ 21 Go à 11 Go, ou à 6 Go. Le moteur vLLM propose de même un cache en FP8, qui loge deux fois plus de tokens dans la même mémoire, et conseille un calibrage pour limiter la perte de précision. Comme le cache est relu en entier à chaque token écrit, l'alléger réduit aussi ce que la bande passante mémoire doit faire passer.",
+      "Le même principe sert d'une requête à l'autre. Quand deux requêtes commencent par le même texte, un moteur comme vLLM peut réutiliser les blocs de cache du début commun au lieu de les recalculer. C'est ce qui permet aux fournisseurs d'API de facturer moins cher un début de requête déjà envoyé quelques minutes plus tôt, et la fiche Coût d'une requête en donne les prix."
+    ],
+    "sources": [
+      {
+        "label": "Kwon et al., Efficient Memory Management for Large Language Model Serving with PagedAttention (vLLM), septembre 2023 (800 Ko de cache par token pour OPT-13B, jusqu'à 1,6 Go par requête de 2 048 tokens ; 20,4 à 38,2 % seulement de la mémoire du cache réellement utilisée dans les systèmes précédents ; taille du cache qui limite le nombre de requêtes servies ensemble)",
+        "url": "https://arxiv.org/abs/2309.06180"
+      },
+      {
+        "label": "Mistral AI, configuration de Mistral-Small-3.2-24B-Instruct-2506 (40 couches, 32 têtes d'attention, 8 têtes clé-valeur de dimension 128, fenêtre de 131 072 tokens, bfloat16). Calcul : 2 x 40 x 8 x 128 x 2 octets = 163 840 octets, environ 164 Ko par token ; x 131 072 tokens = 21,5 Go ; 24 milliards de paramètres x 2 octets = 48 Go. Imagine : 80 - 48 = 32 Go libres, 32 - 21,5 = 10,5 Go, environ la moitié d'une deuxième fenêtre pleine, hors mémoire de calcul. Sans cache : 1 + 2 + ... + 1 000 = 500 500",
+        "url": "https://huggingface.co/mistralai/Mistral-Small-3.2-24B-Instruct-2506/blob/main/config.json"
+      },
+      {
+        "label": "Wikipédia, Hopper (microarchitecture) (H100 avec jusqu'à 80 Go de mémoire)",
+        "url": "https://en.wikipedia.org/wiki/Hopper_(microarchitecture)"
+      },
+      {
+        "label": "NVIDIA, Mastering LLM Techniques: Inference Optimization, 17 novembre 2023 (clés et valeurs gardées en mémoire pour éviter de les recalculer, cache qui grandit avec la longueur de la séquence)",
+        "url": "https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/"
+      },
+      {
+        "label": "Ainslie et al., GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints, mai 2023",
+        "url": "https://arxiv.org/abs/2305.13245"
+      },
+      {
+        "label": "vLLM, documentation Automatic Prefix Caching (réutilisation des blocs de KV cache quand deux requêtes partagent un même début)",
+        "url": "https://docs.vllm.ai/en/latest/design/prefix_caching.html"
+      },
+      {
+        "label": "llama.cpp, documentation de llama-server, consultée le 9 novembre 2026 (-ctk, --cache-type-k et -ctv, --cache-type-v : type de donnée du KV cache pour K et pour V, valeurs permises f32, f16, bf16, q8_0, q4_0, q4_1, iq4_nl, q5_0, q5_1, f16 par défaut)",
+        "url": "https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md"
+      },
+      {
+        "label": "llama.cpp, ggml/src/ggml-common.h, consulté le 9 novembre 2026 (blocs de 32 valeurs : q8_0 = une échelle de 16 bits + 32 octets, soit 34 octets ou 8,5 bits par valeur ; q4_0 = une échelle de 16 bits + 16 octets, soit 18 octets ou 4,5 bits par valeur). Calcul pour Mistral Small 3.2 : 21,5 Go x 8,5 / 16 = 11,4 Go ; 21,5 Go x 4,5 / 16 = 6,0 Go",
+        "url": "https://github.com/ggml-org/llama.cpp/blob/master/ggml/src/ggml-common.h"
+      },
+      {
+        "label": "vLLM, documentation Quantized KV Cache, consultée le 9 novembre 2026 (« Quantizing the KV (Key-Value) cache to FP8 format can significantly reduce its memory footprint », ce qui permet de « store more tokens in memory » ; option kv_cache_dtype, fp8_e4m3 ou fp8_e5m2 ; échelles à 1,0 sans calibrage, calibrage recommandé avec llm-compressor). Calcul : 16 bits / 8 bits = deux fois plus de tokens dans la même mémoire",
+        "url": "https://docs.vllm.ai/en/latest/features/quantization/quantized_kvcache.html"
+      },
+      {
+        "label": "Databricks, LLM Inference Performance Engineering: Best Practices, 12 octobre 2023 (bande passante consommée par token = (taille des paramètres + taille du KV cache) / temps par token)",
+        "url": "https://www.databricks.com/blog/llm-inference-performance-engineering-best-practices"
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "id": "bouteille-d-eau",
+  "term": "mythe-bouteille-d-eau",
+  "episode": 33,
+  "date": "2026-11-19",
+  "format": "Mythe",
+  "composition": "MytheBouteilleVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme ; tons variés scène par scène, ouverture [curious] sobre sur le chiffre qui circule puis [amused] (PA, 2026-11-09 : ne pas sonner IA)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "todo": "Hook : phrase du mythe telle qu'elle a circulé (titre du Washington Post du 18 septembre 2024, « A bottle of water per email », traduit et resserré sur ChatGPT comme le titre de la fiche) ; le journal n'est pas nommé dans le hook, il l'est dans la scène suivante. Calage estimé, sans voix.",
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[curious] « Une question à ChatGPT, c'est une bouteille d'eau »… [amused] ce chiffre a fait le tour des réseaux, et il compte très large.",
+      "screen": "Dès la première image, une bouteille d'eau d'un demi-litre dessinée, collée de travers au scotch à côté d'une bulle de chat. La phrase du mythe s'écrit à la machine en grand (typed), puis le tampon rouge FAUX s'écrase dessus (squash) et reste jusqu'à la fin du hook : c'est l'image de couverture. Sur « réseaux », trois petits téléphones qui montrent la même bouteille tombent en cascade."
+    },
+    {
+      "scene": "origine",
+      "say": "[matter-of-fact] Elle vient du /ˈwɑʃɪŋtən poʊst/, en septembre 2024. Des chercheurs y estiment qu'un e-mail de 100 mots écrit par GPT-4 demande 519 millilitres d'eau.",
+      "screen": "Une page de journal dessinée (colonnes de traits, pas de logo) posée d'un coup, libellé « Washington Post », puis « septembre 2024 » dessous. Sur « e-mail », une enveloppe entre, libellé « 100 mots » ; sur « 519 », la bouteille se remplit (bar grow) pendant que le compte monte jusqu'à « 519 mL »."
+    },
+    {
+      "scene": "centrales",
+      "say": "[mischievously] Mais l'essentiel de cette eau ne refroidit pas les serveurs… elle s'évapore dans les centrales électriques qui les alimentent.",
+      "screen": "La bouteille pleine au centre. Sur « serveurs », une baie de serveurs à droite, un petit filet d'eau y part ; sur « centrales », une tour de refroidissement à gauche, plus grande, et l'essentiel de l'eau de la bouteille s'y vide en arc ; sur « s'évapore », un panache de vapeur monte de la tour. Libellés « serveurs », « centrales »."
+    },
+    {
+      "scene": "labos",
+      "say": "[casual] Depuis 2025, les labos publient leurs propres chiffres. Google annonce 0,26 millilitre pour une question à Gemini, à peu près cinq gouttes… [deadpan] en ne comptant que ses centres de données, et sans vérification extérieure.",
+      "screen": "« 2025 » en haut. Sur « Google », une étiquette « Google » ; sur « 0,26 », libellé « 0,26 mL » ; sur « cinq gouttes », cinq gouttes tombent une à une dans un petit verre. Sur « centres », un cadre pointillé entoure la seule baie de serveurs, la tour de refroidissement grisée hors du cadre ; sur « vérification », une loupe barrée, libellé « sans vérification »."
+    },
+    {
+      "scene": "mistral",
+      "say": "[matter-of-fact] Mistral compte jusqu'à la fabrication des serveurs, dans une analyse relue par deux cabinets… et arrive à 45 millilitres par réponse.",
+      "screen": "Une chaîne se dessine de gauche à droite : une usine (« fabrication »), une baie de serveurs, une bulle de réponse. Sur « deux cabinets », deux feuilles tamponnées d'une coche tombent en cascade. Sur « 45 », un verre se remplit, compte jusqu'à « 45 mL »."
+    },
+    {
+      "scene": "bouteille",
+      "say": "[amused] Pour remplir la bouteille, il faut donc près de deux mille questions avec le chiffre de Google, et onze avec celui de Mistral.",
+      "screen": "Scène propre à ce short : deux bouteilles vides côte à côte, « Google » à gauche, « Mistral » à droite. Sur « deux mille », la bouteille de gauche se remplit goutte à goutte pendant qu'un compteur monte à « 2 000 » ; sur « onze », onze verres se vident en cascade dans celle de droite, qui se remplit d'un coup (punch zoom du short sur « 11 »)."
+    },
+    {
+      "scene": "vrai",
+      "say": "[serious] Ce qui pèse vraiment, ce sont les gros usages… faire lire un très long document demande plus de cent fois l'énergie d'une question simple.",
+      "screen": "Deux barres d'énergie (bar grow) : à gauche, une bulle de question avec une barre minuscule (« question simple ») ; à droite, un long rouleau de papier qui se déroule sur « document », et sa barre monte jusqu'en haut du cadre, libellé « plus de 100 fois »."
+    },
+    {
+      "scene": "total",
+      "say": "[thoughtful] Et la somme grimpe. En 2025, l'électricité des centres de données a bondi de 17 %, et l'Agence internationale de l'énergie la voit doubler d'ici 2030.",
+      "screen": "Un graphique en barres sans valeur sur l'axe : sur « 2025 », une barre « 2025 » monte, plus haute qu'une barre grise « 2024 » posée dès l'entrée, libellé « +17 % » ; sur « doubler », une barre en pointillés « 2030 » monte à deux fois la hauteur."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Ta question, c'est quelques gouttes. Ce qui remplit les bouteilles, c'est qu'on en pose chaque année davantage.",
+      "screen": "Retour à la bouteille du hook, plein cadre : une goutte tombe sur « gouttes ». Sur « remplit », une pluie de petites bulles de chat se change en gouttes et la remplit ; sur « chaque année », d'autres bouteilles pleines se rangent à côté, en cascade. Image finale pleine."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈwɑʃɪŋtən": "Washington",
+    "poʊst/": "Post"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {},
+  "sources": [
+    "Fiche mythe-bouteille-d-eau de lexique/terms.js : The Verge, 19 septembre 2024, relayant le Washington Post du 18 septembre 2024 (« A bottle of water per email ») ; Projet Celsius, 2026 (519 mL pour un e-mail de 100 mots écrit par GPT-4, d'après l'équipe de UC Riverside) ; https://www.theverge.com/2024/9/19/24249092/how-much-water-and-energy-does-it-take-to-write-an-email-using-chatgpt",
+    "Fiche mythe-bouteille-d-eau de lexique/terms.js : Li, Yang, Islam et Ren, Making AI Less « Thirsty », révisé le 26 mars 2025 (tableau 1, moyenne des États-Unis : 2,2 mL sur place, 14,7 mL pour la production d'électricité, soit 87 % de l'eau comptée ; dit « l'essentiel » à l'oral) ; https://arxiv.org/abs/2304.03271",
+    "Fiche mythe-bouteille-d-eau de lexique/terms.js : Google Cloud, 21 août 2025 (question texte médiane de Gemini Apps : 0,26 mL, environ cinq gouttes, eau des centres de données seulement, données non vérifiées par un tiers) ; https://cloud.google.com/blog/products/infrastructure/measuring-the-environmental-impact-of-ai-inference",
+    "Fiche mythe-bouteille-d-eau de lexique/terms.js : Mistral AI, 22 juillet 2025 (analyse de cycle de vie avec Carbone 4 et l'Ademe, relue par Resilio et Hubblo : 45 mL pour une réponse de 400 tokens, fabrication des serveurs comprise) ; https://mistral.ai/news/our-contribution-to-a-global-environmental-standard-for-ai",
+    "Calcul de la scène bouteille (repris de l'Imagine de la fiche) : 500 / 0,26 = 1 923 questions, « près de deux mille » ; 500 / 45 = 11,1 réponses, « onze »",
+    "Fiche mythe-bouteille-d-eau de lexique/terms.js : Josh You, Epoch AI, 7 février 2025 (environ 0,3 Wh pour une requête type à GPT-4o, près de 40 Wh avec 100 000 tokens en entrée). Calcul : 40 / 0,3 = 133, « plus de cent fois » ; https://epoch.ai/gradient-updates/how-much-energy-does-chatgpt-use",
+    "Fiche mythe-bouteille-d-eau de lexique/terms.js : AIE, Data centre electricity use surged in 2025, 16 avril 2026 (hausse de 17 % en 2025, doublement attendu d'ici 2030) ; https://www.iea.org/news/data-centre-electricity-use-surged-in-2025-even-with-tightening-bottlenecks-driving-a-scramble-for-solutions"
+  ],
+  "publication": {
+    "title": "ChatGPT boit-il une bouteille d'eau ?",
+    "description": "« Une question à ChatGPT, c'est une bouteille d'eau » ; le chiffre de 2024 comptait surtout l'eau évaporée par les centrales électriques. Depuis 2025, Google déclare 0,26 mL par question à Gemini, Mistral 45 mL en comptant la fabrication des serveurs. Ce qui grimpe vraiment, c'est le total des centres de données (AIE, 2026).\nhttps://neopal.github.io/lexique/mythe-bouteille-d-eau/\n#eau #environnement #chatgpt #vulgarisation\nChiffres : Washington Post, 18 septembre 2024 ; Google, 21 août 2025 ; Mistral AI, 22 juillet 2025 ; Epoch AI, 7 février 2025 ; AIE, 16 avril 2026.",
+    "fil": "L'ép. 32 gardait l'IA chez soi, sur son ordinateur ; quand on la questionne en ligne, combien d'eau coûte une question ?",
+    "decor": "la bouteille d'eau d'un demi-litre, une centrale électrique et sa tour de refroidissement"
+  },
+  "credits": []
+}

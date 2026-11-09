@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 398" role="img" aria-labelledby="bande-passante-memoire-t">
+<title id="bande-passante-memoire-t">Pour écrire un token, la puce relit les 6 Go du modèle depuis sa mémoire, à 84,8 Go/s sur un téléphone ; la vitesse d'écriture plafonne donc à la bande passante divisée par les poids lus, soit 14 tokens/s sur le téléphone, 60 sur une RTX 3060, 299 sur une RTX 5090 et 558 sur une H100.</title>
+<text class="m" x="0" y="14">mémoire</text>
+<text class="m" x="294" y="14" text-anchor="middle">calcul</text>
+<rect class="bx" x="0" y="24" width="120" height="80" rx="4"/>
+<rect class="fa" x="12" y="35" width="96" height="8" rx="2" opacity="0.55"/>
+<rect class="fa" x="12" y="49" width="96" height="8" rx="2" opacity="0.55"/>
+<rect class="fa" x="12" y="63" width="96" height="8" rx="2" opacity="0.55"/>
+<rect class="fa" x="12" y="77" width="96" height="8" rx="2" opacity="0.55"/>
+<rect class="fa" x="12" y="91" width="96" height="6" rx="2" opacity="0.55"/>
+<text class="m mu" x="60" y="124" text-anchor="middle">6 Go de poids</text>
+<path class="la" d="M128 64 H218"/><path class="la" d="M212 59 l6 5 l-6 5"/>
+<text class="m ac" x="173" y="54" text-anchor="middle">84,8 Go/s</text>
+<rect class="bx" x="228" y="24" width="132" height="80" rx="4"/>
+<rect class="fa" x="242" y="38" width="16" height="16" rx="3"/>
+<rect class="fd" x="264" y="38" width="16" height="16" rx="3"/>
+<rect class="fd" x="286" y="38" width="16" height="16" rx="3"/>
+<rect class="fd" x="308" y="38" width="16" height="16" rx="3"/>
+<rect class="fd" x="330" y="38" width="16" height="16" rx="3"/>
+<rect class="fd" x="242" y="72" width="16" height="16" rx="3"/>
+<rect class="fd" x="264" y="72" width="16" height="16" rx="3"/>
+<rect class="fa" x="286" y="72" width="16" height="16" rx="3"/>
+<rect class="fd" x="308" y="72" width="16" height="16" rx="3"/>
+<rect class="fd" x="330" y="72" width="16" height="16" rx="3"/>
+<text class="m mu" x="294" y="124" text-anchor="middle">1 token écrit</text>
+<path class="lm" d="M294 132 V146 H60 V136"/>
+<path class="lm" d="M55 141 l5 -6 l5 6"/>
+<text class="m" x="177" y="164" text-anchor="middle">tout relire pour le token suivant</text>
+<rect class="bxa" x="0" y="180" width="360" height="36" rx="4"/>
+<text class="m" x="180" y="203" text-anchor="middle">tokens/s ≤ bande passante ÷ poids lus</text>
+<text class="m mu" x="0" y="246">même modèle de 6 Go, plafond</text>
+<text class="m" x="0" y="272">téléphone</text>
+<rect class="fa" x="96" y="261" width="4" height="14" rx="1"/>
+<text class="m ac" x="106" y="272">14 tokens/s</text>
+<text class="m" x="0" y="296">RTX 3060</text>
+<rect class="fl" x="96" y="285" width="17" height="14" rx="1"/>
+<text class="m d" x="119" y="296">60 tokens/s</text>
+<text class="m" x="0" y="320">RTX 5090</text>
+<rect class="fl" x="96" y="309" width="86" height="14" rx="1"/>
+<text class="m d" x="188" y="320">299 tokens/s</text>
+<text class="m" x="0" y="344">H100</text>
+<rect class="fl" x="96" y="333" width="160" height="14" rx="1"/>
+<text class="m d" x="262" y="344">558 tokens/s</text>
+<text class="i mu" x="0" y="372">Le plafond ne monte qu'avec une mémoire plus</text>
+<text class="i mu" x="0" y="392">rapide, ou des poids plus légers à relire.</text>
+</svg>

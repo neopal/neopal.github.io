@@ -1,0 +1,93 @@
+{
+  "id": "shadow-ai",
+  "term": "shadow-ai",
+  "episode": 35,
+  "date": "2026-11-23",
+  "format": "Définition",
+  "composition": "ShadowAiVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme ; titre en confidence de bureau, intro plus vive, tons variés scène par scène (PA, 2026-11-09 : ne pas sonner IA)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[casual] C'est quoi... le /ˈʃædoʊ ˌeɪˈaɪ/…",
+      "screen": "Titre « C'est quoi ? le shadow AI ». Au-dessus, posé dès la première image, un bureau vu de face : l'écran d'ordinateur éteint, et dessous, dans l'ombre, un téléphone allumé avec une bulle de chat. Aucun sous-titre (nocaption)."
+    },
+    {
+      "scene": "intro",
+      "say": "[quickly] Dans ta boîte, l'IA est peut-être interdite. [amused] Pourtant en 2025, au Royaume-Uni, soixante et onze pour cent des salariés avaient déjà travaillé avec une IA que leur employeur n'avait pas validée.",
+      "screen": "Une affichette scotchée au mur sur « boîte », « IA » en gros ; une croix rouge se trace dessus sur « interdite ». Sur « soixante et onze », une grille de 100 petits salariés en pixel art : 71 s'allument en couleur d'accent en cascade, compteur « 71 % » en count-up (punch zoom du short). Libellé « Royaume-Uni » sur « Royaume-Uni ». Sur « validée », l'affichette pâlit."
+    },
+    {
+      "scene": "base",
+      "say": "[matter-of-fact] Au bureau, il y a l'outil validé, choisi et payé par l'entreprise… et il y a le compte gratuit, ouvert un soir avec ton adresse perso.",
+      "screen": "Deux colonnes. À gauche, sur « outil validé », un ordinateur portable avec un badge coché ; libellé « outil validé ». Sur « payé », une étiquette « payé » pop sur le portable. À droite, sur « compte gratuit », un téléphone avec une bulle de chat ; libellé « compte gratuit ». Sur « soir », une lune pixel art au-dessus du téléphone. Sur « perso », une ligne « @perso » s'écrit sur l'écran du téléphone."
+    },
+    {
+      "scene": "nom",
+      "say": "[mischievously] Quand c'est ce compte qui travaille, c'est l'IA fantôme, ou en anglais, le /ˈʃædoʊ ˌeɪˈaɪ/.",
+      "screen": "Le téléphone de base au centre ; sur « travaille », des lignes de texte s'écrivent dans sa bulle. Puis une ombre glisse sur lui et le met en retrait. « IA fantôme » puis « shadow AI » s'écrivent en grand au-dessus (passages masqués, onscreen)."
+    },
+    {
+      "scene": "image",
+      "say": "[thoughtful] Imagine, au troisième, la photocopieuse en panne depuis mars. Tout l'étage fait ses copies chez le reprographe d'en face… [deadpan] qui connaît maintenant les contrats de la boîte mieux que le juridique.",
+      "screen": "Scène propre à ce short : à gauche, le bureau du troisième (étage numéroté « 3 »), la photocopieuse pop sur « photocopieuse », affichette « en panne » sur « panne », une page de calendrier « mars » sur « mars ». Sur « étage », deux collègues en pixel art. À droite, de l'autre côté de la rue, la boutique du reprographe, lui en pixel art, sur « reprographe ». Sur « copies », des feuilles volent en arc du bureau vers la boutique. Sur « contrats », une pile de chemises « contrats » s'empile derrière le reprographe. Sur « juridique », une porte « juridique » au fond du bureau, avec une chemise vide."
+    },
+    {
+      "scene": "mecanisme",
+      "say": "[serious] Ce reprographe, c'est ton ChatGPT perso. Dans ses réglages, « Améliorer le modèle pour tous » est activé par défaut… ce que tu y colles peut servir à entraîner les modèles d'OpenAI.",
+      "screen": "Sur « reprographe », le reprographe pixel art à gauche, qui glisse et laisse la place au téléphone du compte perso. Sur « réglages », un panneau de réglages dessiné (sans logo) pop au centre ; la ligne « Améliorer le modèle pour tous » s'écrit à la machine (citation masquée, quoted). Sur « activé », l'interrupteur bascule en couleur d'accent. Sur « colles », une feuille (le budget) vole en arc dans le téléphone. Sur « entraîner », la feuille repart vers un bloc « modèles », libellé « OpenAI » sur « OpenAI »."
+    },
+    {
+      "scene": "etdonc",
+      "say": "[curious] Le bloquer sur le réseau ? Ça ne sert à rien, tout le monde a la 4G dans sa poche. [matter-of-fact] Ce qui marche, c'est un compte entreprise, qui n'entraîne aucun modèle par défaut, et une règle d'une ligne sur ce qu'on peut y coller.",
+      "screen": "Sur « réseau », un mur de briques (le réseau) barre la route entre le bureau et une bulle de chat. Sur « 4G », le téléphone sort d'une poche et sa bulle passe au-dessus du mur en arc, libellé « 4G ». Sur « marche », le mur s'efface ; sur « compte entreprise », une carte « compte entreprise » pop, avec l'interrupteur de la scène d'avant, cette fois éteint (sur « aucun »). Sur « règle », un post-it pop avec une seule ligne tracée."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors avant de chercher qui triche, répare la photocopieuse.",
+      "screen": "Retour au bureau du troisième, plein cadre : la photocopieuse avec son affichette « en panne », les deux collègues. Sur « triche », une loupe passe sur les collègues. Sur « répare », l'affichette tombe, une coche verte pop sur la photocopieuse et des copies en sortent en cascade. Image finale pleine."
+    }
+  ],
+  "quoted": [
+    "Améliorerlemodèlepourtous"
+  ],
+  "display": {
+    "/ˈʃædoʊ": "shadow",
+    "ˌeɪˈaɪ/": "AI"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "c'est l'IA fantôme, ou en anglais, le shadow AI."
+    ],
+    "mecanisme": [
+      "Dans ses réglages, « Améliorer le modèle pour tous »"
+    ]
+  },
+  "sources": [
+    "Fiche shadow-ai de lexique/terms.js (vague 25, 2026-11-05) : image (la photocopieuse du troisième et le reprographe d'en face), Imagine (le réglage « Améliorer le modèle pour tous »), réplique « Entendu au bureau » (la 4G dans la poche, la règle d'une ligne)",
+    "Microsoft UK Stories, Rise in Shadow AI tools raising security concerns for UK, 13 octobre 2025 : sondage Censuswide auprès de 2 003 salariés britanniques, 71 % ont déjà utilisé au travail des outils d'IA grand public non approuvés ; https://ukstories.microsoft.com/features/rise-in-shadow-ai-tools-raising-security-concerns-for-uk",
+    "Centre d'aide OpenAI, Contrôles des données dans ChatGPT, consulté le 5 novembre 2026 : partage des données activé par défaut sur les espaces personnels Free, Plus et Pro, réglage « Améliorer le modèle pour tous » ; https://help.openai.com/fr-fr/articles/7730893-data-controls-in-chatgpt",
+    "OpenAI, Enterprise privacy, consulté le 5 novembre 2026 : par défaut, les données de ChatGPT Business, Enterprise, Edu et de l'API n'entraînent pas les modèles ; https://openai.com/enterprise-privacy/",
+    "Image : la photocopieuse en panne et le reprographe d'en face (fiche shadow-ai) ; scène inventée"
+  ],
+  "publication": {
+    "title": "Ton IA de bureau vient de chez toi ?",
+    "description": "Le shadow AI (IA fantôme), c'est travailler avec une IA que ton employeur n'a pas validée, souvent un compte ChatGPT perso. En 2025, 71 % des salariés britanniques l'avaient déjà fait. Et sur un compte perso, ce que tu colles peut servir à entraîner les modèles, sauf si tu l'as désactivé.\nhttps://neopal.github.io/lexique/shadow-ai/\n#shadowai #chatgpt #travail #vulgarisation",
+    "fil": "L'ép. 34 montrait qu'aucun détecteur ne prouve qu'un texte vient d'une IA ; au bureau, l'IA qu'on utilise en douce passe donc inaperçue, et le vrai sujet devient ce qu'on y colle",
+    "decor": "bureau du troisième (la photocopieuse en panne) et la boutique du reprographe d'en face, puis un panneau de réglages"
+  },
+  "credits": [
+    "Panneau de réglages dessiné dans la composition, sans logo ni capture"
+  ]
+}

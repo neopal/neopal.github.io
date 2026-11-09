@@ -2,43 +2,43 @@
   "id": "ia-locale",
   "term": "mythe-ia-locale",
   "episode": 32,
-  "date": "2026-11-10",
+  "date": "2026-11-17",
   "format": "Mythe",
   "composition": "MytheIaLocaleVoix",
   "voice": {
     "voice_name": "PAL - FR (voix clonée de PA)",
     "voice_id": "mW090pzjsAt4gvt0DNB8",
     "model_id": "eleven_v4",
-    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+    "direction": "podcast narré, un tout petit peu d'enthousiasme ; tons variés scène par scène, ouverture différente à chaque épisode (PA, 2026-11-09 : ne pas sonner IA)"
   },
   "music": {
     "reuse": "voix/prediction-music.mp3"
   },
-  "todo": "Demandé par PA le 2026-11-02 (« l'IA locale, mythe ou réalité »). Phrase du hook provisoire (titre de la fiche) : pas de citation réelle et sourcée qui dise exactement le mythe ; titres approchants trouvés (« I Quit ChatGPT for a Free, Private, and Local AI », « ChatGPT GRATIS en tu PC »), à ne pas tamponner tels quels. Composition pas encore montée.",
+  "todo": "Demandé par PA le 2026-11-02 (« l'IA locale, mythe ou réalité »). Phrase du hook provisoire (titre de la fiche) : pas de citation réelle et sourcée qui dise exactement le mythe ; titres approchants trouvés (« I Quit ChatGPT for a Free, Private, and Local AI », « ChatGPT GRATIS en tu PC »), à ne pas tamponner tels quels. Composition montée le 2026-11-09 sur calage estimé (sans voix).",
   "segments": [
     {
       "scene": "hook",
-      "say": "[warmly] « Une IA locale, c'est ChatGPT chez soi »… en vrai, c'est plutôt celui de l'an dernier.",
+      "say": "[sarcastic] « Une IA locale, c'est ChatGPT chez soi. » [matter-of-fact] En vrai, c'est plutôt celui de l'an dernier.",
       "screen": "Dès la première image, un ordinateur portable dessiné, collé de travers au scotch, avec une bulle de chat à l'écran. La phrase du mythe s'écrit à la machine en grand (typed), puis le tampon rouge FAUX s'écrase dessus (squash) et reste jusqu'à la fin du hook : c'est l'image de couverture."
     },
     {
       "scene": "vrai",
-      "say": "[curious] Le mythe a sa part de vrai. Avec un logiciel gratuit comme Ollama, tu télécharges un modèle ouvert, et il tourne sur ton ordinateur… sans compte, sans abonnement, et tes messages ne sortent pas de chez toi.",
+      "say": "[warmly] Le mythe a sa part de vrai. Avec un logiciel gratuit comme Ollama, tu télécharges un modèle ouvert, et il tourne sur ton ordinateur, sans compte, sans abonnement, et tes messages ne sortent pas de chez toi.",
       "screen": "Le portable au centre. Sur « télécharges », une barre de téléchargement se remplit (bar grow, libellé « 14 Go ») ; sur « sans compte » et « sans abonnement », deux icônes barrées tombent en cascade (carte d'identité, carte bancaire) ; sur « ne sortent pas », une enveloppe tente de quitter l'écran et rebondit contre un mur de maison dessiné autour du portable."
     },
     {
       "scene": "train",
-      "say": "[warmly] Il marche même sans réseau, dans le train, ou le jour où ChatGPT tombe en panne.",
+      "say": "[amused] Il marche même sans réseau, dans le train, ou le jour où ChatGPT tombe en panne.",
       "screen": "Le portable posé sur une tablette de train pixel art, paysage qui défile derrière (défilement linéaire continu), icône de réseau barrée en haut ; la bulle de chat continue de répondre."
     },
     {
       "scene": "taille",
-      "say": "[curious] Mais ta machine ne charge qu'un modèle de taille moyenne. Le petit modèle ouvert d'OpenAI demande seize gigaoctets de mémoire… et les meilleurs modèles ouverts sont des dizaines de fois plus gros, sur des serveurs.",
+      "say": "[thoughtful] Mais ta machine ne charge qu'un modèle de taille moyenne. Le petit modèle ouvert d'OpenAI demande seize gigaoctets de mémoire, et les meilleurs modèles ouverts sont des dizaines de fois plus gros, sur des serveurs.",
       "screen": "Un petit bloc « 20 Md » (le modèle de Parts.tsx en petit) entre dans le portable ; libellé « 16 Go » sur la mémoire. Sur « des dizaines de fois », un bloc géant « 2 800 Md » descend du haut et ne tient pas dans le cadre ; sur « serveurs », il se pose sur une baie de serveurs dessinée."
     },
     {
       "scene": "retard",
-      "say": "[warmly] En 2025, l'institut /ˈɛpək/ a mesuré que les modèles qui tiennent sur une carte graphique de joueur rattrapent les meilleurs avec six à douze mois de retard.",
+      "say": "[matter-of-fact] En 2025, l'institut /ˈɛpək/ a mesuré que les modèles qui tiennent sur une carte graphique de joueur rattrapent les meilleurs avec six à douze mois de retard.",
       "screen": "Une ligne du temps se dessine (draw-on). Un point « les meilleurs » avance à droite ; un point « ta machine » le suit à distance ; sur « six à douze mois », l'écart entre les deux se colore, libellé « 6 à 12 mois » (punch zoom du short sur ce libellé)."
     },
     {
@@ -48,7 +48,7 @@
     },
     {
       "scene": "etdonc",
-      "say": "[curious] Pour résumer, classer ou traduire des documents qui ne doivent pas sortir de chez toi, c'est largement suffisant… pour le dernier cri, il faut aller au cinéma.",
+      "say": "[casual] Pour résumer, classer ou traduire des documents qui ne doivent pas sortir de chez toi, c'est largement suffisant. [amused] Pour le dernier cri, il faut aller au cinéma.",
       "screen": "Trois cartes tombent en cascade sur leur mot : « résumer », « classer », « traduire », chacune avec une coche ; sur « dernier cri », une salle de cinéma dessinée s'allume à droite, plus grande."
     },
     {

@@ -1,0 +1,97 @@
+{
+  "id": "ai-act",
+  "term": "ai-act",
+  "episode": 36,
+  "date": "2026-11-25",
+  "format": "Définition",
+  "composition": "AiActVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme ; titre en [serious] calme, presque solennel, puis l'intro casse ce sérieux en [amused] ; tons variés scène par scène (PA, 2026-11-09 : ne pas sonner IA)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[serious] C'est quoi... l'/ˌeɪˈaɪ ˈækt/…",
+      "screen": "Titre géant « l'AI Act ». Au-dessus, posé dès la première image, un texte de loi relié, couverture sombre, avec un cercle d'étoiles stylisées en couleur d'accent (pas le drapeau : pas de fond bleu, étoiles dessinées à la main, cercle incomplet). Aucun sous-titre (nocaption)."
+    },
+    {
+      "scene": "intro",
+      "say": "[amused] On lit partout qu'il a été repoussé… pourtant, une bonne partie s'applique déjà.",
+      "screen": "Trois titres de presse génériques (sans logo ni nom de journal) tombent en cascade sur « repoussé », le mot « repoussé » surligné dans chacun. Sur « bonne partie », une frise 2024 → 2028 se pose dessous ; sur « déjà », sa partie gauche se remplit en couleur d'accent jusqu'à un repère « aujourd'hui »."
+    },
+    {
+      "scene": "base",
+      "say": "[thoughtful] En Europe, une IA se range selon son risque. Certains usages sont interdits, d'autres encadrés, d'autres doivent juste se signaler.",
+      "screen": "Une pyramide de trois étages se construit de haut en bas, chaque étage sur son mot : « interdits » (rouge), « encadrés » (orange), « se signaler » (couleur d'accent). Sur « range », trois petites cartes « IA » attendent à gauche ; chacune tombe en arc dans un étage quand il apparaît."
+    },
+    {
+      "scene": "nom",
+      "say": "[matter-of-fact] Ce tri, en vigueur depuis août 2024, c'est le règlement européen sur l'IA, ou en anglais, l'/ˌeɪˈaɪ ˈækt/.",
+      "screen": "La pyramide en retrait, en bas. Sur « août 2024 », une étiquette « août 2024 ». « règlement européen sur l'IA » puis « AI Act » s'écrivent en grand au-dessus (passages masqués, onscreen), avec le cercle d'étoiles stylisées qui se dessine autour d'« AI Act »."
+    },
+    {
+      "scene": "piscine",
+      "say": "[mischievously] Imagine une piscine qui change son règlement en trois fois. Le saut du toit est interdit tout de suite, le bonnet obligatoire à la rentrée… et le toboggan attendra l'an prochain.",
+      "screen": "Scène propre à ce short : une piscine municipale en coupe, le bassin bleu, le maître-nageur en pixel art sur sa chaise haute (il cligne des yeux). Sur « règlement », un panneau vide au mur. Sur « toit », le toit du bâtiment et une croix rouge ; sur « bonnet », un bonnet de bain qui tombe sur le panneau ; sur « toboggan », un grand toboggan qui pousse à droite. Libellés repris de la voix : « tout de suite », « à la rentrée », « l'an prochain »."
+    },
+    {
+      "scene": "interdits",
+      "say": "[serious] Le saut du toit, ce sont les interdits. Depuis février 2025, personne ne peut te donner une note sociale, ni lire tes émotions au bureau ou à l'école. [matter-of-fact] Le 2 décembre, s'y ajoutent les applis qui déshabillent quelqu'un sur une photo, sans son accord.",
+      "screen": "Le toit barré en petit, en haut à gauche. Sur « février 2025 », une étiquette. Sur « note sociale », une carte de personne avec une note en étoiles, barrée en rouge ; sur « émotions », un visage avec une jauge d'humeur au-dessus d'un bureau, barré. Puis les deux passent en retrait ; sur « 2 décembre », une étiquette, et sur « photo », un cadre photo avec une silhouette (aucune nudité), barré d'une croix rouge."
+    },
+    {
+      "scene": "bonnet",
+      "say": "[casual] Le bonnet, c'est la transparence. Depuis le 2 août, un chatbot doit dire qu'il est une machine, et un /ˈdipfeɪk/ doit être signalé.",
+      "screen": "Le bonnet en petit, en haut à gauche. Sur « 2 août », une étiquette. Sur « chatbot », une bulle de chat ; sur « machine », un badge « machine » s'y accroche. Sur « deepfake », un visage dédoublé (deux contours décalés) ; sur « signalé », une étiquette « signalé » se colle dessus."
+    },
+    {
+      "scene": "toboggan",
+      "say": "[thoughtful] Le toboggan, ce sont les IA à haut risque, comme celles qui notent ta demande de crédit. [deadpan] Leurs règles ont glissé à décembre 2027.",
+      "screen": "Le toboggan en grand, de haut en bas. Sur « haut risque », l'étiquette en haut du toboggan ; sur « crédit », une demande de crédit avec une note qui se remplit. Sur « glissé », une bille marquée « août 2026 » descend le toboggan et arrive en bas sur l'étiquette « décembre 2027 »."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors repoussé, oui… mais seulement le toboggan. Le saut du toit, lui, est interdit depuis bientôt deux ans.",
+      "screen": "Retour à la piscine entière : le toboggan avec sa bille arrivée en bas et un titre « repoussé » collé dessus ; le toit barré de rouge, le bonnet sur le panneau, le maître-nageur qui cligne des yeux. Image finale pleine."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "l'/ˌeɪˈaɪ": "l'AI",
+    "ˈækt/": "Act",
+    "/ˈdipfeɪk/": "deepfake"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "c'est le règlement européen sur l'IA, ou en anglais, l'AI Act."
+    ]
+  },
+  "sources": [
+    "Fiche ai-act de lexique/terms.js (vague 25, 2026-11-05), qui fait foi pour le calendrier",
+    "Commission européenne, Regulatory framework for AI, mise à jour le 19 octobre 2026 : règlement (UE) 2024/1689 entré en vigueur le 1er août 2024 ; interdictions au 2 février 2025 ; deepfakes étiquetés et règles de transparence en août 2026 ; haut risque de l'annexe III au 2 décembre 2027 ; interdiction des applications de « nudification » en décembre 2026 ; https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    "AI Act, article 5, version consolidée : point c, notation sociale ; point f, inférer les émotions sur le lieu de travail et dans l'enseignement (sauf raisons médicales ou de sécurité) ; point ba ajouté par l'omnibus, images intimes réalistes d'une personne identifiable sans son consentement ; https://artificialintelligenceact.eu/article/5/",
+    "AI Act, article 50 : informer qu'on interagit avec un système d'IA, sauf si c'est évident ; le déployeur d'un deepfake indique que le contenu est généré ou manipulé ; https://artificialintelligenceact.eu/article/50/",
+    "AI Act, article 113 modifié par l'omnibus (règlement (UE) 2026/1744, en vigueur le 27 juillet 2026) : nouvelles interdictions au 2 décembre 2026, annexe III au 2 décembre 2027 ; https://artificialintelligenceact.eu/article/113/",
+    "AI Act, annexe III, point 5 b : évaluer la solvabilité ou établir le score de crédit d'une personne physique ; https://artificialintelligenceact.eu/annex/3/",
+    "Calcul « bientôt deux ans » : du 2 février 2025 à la sortie du short (25 novembre 2026), 21 mois et demi",
+    "Image : la piscine municipale dont le règlement arrive en trois fois (fiche ai-act, champ image) ; scène inventée, aucun fait daté"
+  ],
+  "publication": {
+    "title": "Ce que l'Europe interdit déjà à l'IA",
+    "description": "L'AI Act, le règlement européen sur l'IA, range les usages selon leur risque. La notation sociale et la lecture des émotions au travail ou à l'école sont interdites depuis février 2025, un chatbot et un deepfake doivent se signaler depuis août 2026, et seules les règles du haut risque, comme le crédit, ont glissé à décembre 2027.\nhttps://neopal.github.io/lexique/ai-act/\n#aiact #europe #ia #vulgarisation",
+    "fil": "L'ép. 35 parlait des outils d'IA que ton employeur n'a pas validés ; voilà les règles que l'Europe impose déjà, à toutes les IA, et celles qui attendent encore",
+    "decor": "piscine municipale (le maître-nageur, le toit, le bonnet, le toboggan)"
+  },
+  "credits": [
+    "Titres de presse génériques (sans nom ni logo de journal) et étoiles stylisées, dessinés dans la composition ; aucun drapeau ni logo officiel reproduit"
+  ]
+}

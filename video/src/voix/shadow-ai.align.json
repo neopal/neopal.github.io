@@ -1,0 +1,1024 @@
+{
+ "id": "shadow-ai",
+ "audio": true,
+ "music": true,
+ "duration": 54.32,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.08,
+   "end": 2.4,
+   "words": [
+    {
+     "w": "C'est",
+     "start": 0.08,
+     "end": 0.32
+    },
+    {
+     "w": "quoi...",
+     "start": 0.56,
+     "end": 0.96
+    },
+    {
+     "w": "le",
+     "start": 1.12,
+     "end": 1.28
+    },
+    {
+     "w": "shadow",
+     "start": 1.44,
+     "end": 1.76
+    },
+    {
+     "w": "AI…",
+     "start": 1.84,
+     "end": 2.4
+    }
+   ]
+  },
+  {
+   "scene": "intro",
+   "start": 2.64,
+   "end": 11.68,
+   "words": [
+    {
+     "w": "Dans",
+     "start": 2.64,
+     "end": 2.72
+    },
+    {
+     "w": "ta",
+     "start": 2.8,
+     "end": 2.88
+    },
+    {
+     "w": "boîte,",
+     "start": 2.92,
+     "end": 3.24
+    },
+    {
+     "w": "l'IA",
+     "start": 3.28,
+     "end": 3.52
+    },
+    {
+     "w": "est",
+     "start": 3.6,
+     "end": 3.68
+    },
+    {
+     "w": "peut-être",
+     "start": 3.707,
+     "end": 3.92
+    },
+    {
+     "w": "interdite.",
+     "start": 4.04,
+     "end": 4.56
+    },
+    {
+     "w": "Pourtant",
+     "start": 4.891,
+     "end": 5.04
+    },
+    {
+     "w": "en",
+     "start": 5.12,
+     "end": 5.2
+    },
+    {
+     "w": "2025,",
+     "start": 5.24,
+     "end": 6
+    },
+    {
+     "w": "au",
+     "start": 6.08,
+     "end": 6.16
+    },
+    {
+     "w": "Royaume-Uni,",
+     "start": 6.213,
+     "end": 6.88
+    },
+    {
+     "w": "soixante",
+     "start": 6.96,
+     "end": 7.28
+    },
+    {
+     "w": "et",
+     "start": 7.36,
+     "end": 7.4
+    },
+    {
+     "w": "onze",
+     "start": 7.44,
+     "end": 7.52
+    },
+    {
+     "w": "pour",
+     "start": 7.6,
+     "end": 7.68
+    },
+    {
+     "w": "cent",
+     "start": 7.76,
+     "end": 7.84
+    },
+    {
+     "w": "des",
+     "start": 7.92,
+     "end": 8
+    },
+    {
+     "w": "salariés",
+     "start": 8.08,
+     "end": 8.4
+    },
+    {
+     "w": "avaient",
+     "start": 8.48,
+     "end": 8.72
+    },
+    {
+     "w": "déjà",
+     "start": 8.8,
+     "end": 8.96
+    },
+    {
+     "w": "travaillé",
+     "start": 9.04,
+     "end": 9.44
+    },
+    {
+     "w": "avec",
+     "start": 9.56,
+     "end": 9.68
+    },
+    {
+     "w": "une",
+     "start": 9.76,
+     "end": 9.84
+    },
+    {
+     "w": "IA",
+     "start": 9.88,
+     "end": 10.08
+    },
+    {
+     "w": "que",
+     "start": 10.12,
+     "end": 10.16
+    },
+    {
+     "w": "leur",
+     "start": 10.24,
+     "end": 10.32
+    },
+    {
+     "w": "employeur",
+     "start": 10.48,
+     "end": 10.72
+    },
+    {
+     "w": "n'avait",
+     "start": 10.76,
+     "end": 11.04
+    },
+    {
+     "w": "pas",
+     "start": 11.08,
+     "end": 11.12
+    },
+    {
+     "w": "validée.",
+     "start": 11.2,
+     "end": 11.68
+    }
+   ]
+  },
+  {
+   "scene": "base",
+   "start": 11.91,
+   "end": 18.8,
+   "words": [
+    {
+     "w": "Au",
+     "start": 11.91,
+     "end": 11.92
+    },
+    {
+     "w": "bureau,",
+     "start": 12,
+     "end": 12.4
+    },
+    {
+     "w": "il",
+     "start": 12.44,
+     "end": 12.48
+    },
+    {
+     "w": "y",
+     "start": 12.56,
+     "end": 12.587
+    },
+    {
+     "w": "a",
+     "start": 12.613,
+     "end": 12.64
+    },
+    {
+     "w": "l'outil",
+     "start": 12.667,
+     "end": 12.88
+    },
+    {
+     "w": "validé,",
+     "start": 12.96,
+     "end": 13.52
+    },
+    {
+     "w": "choisi",
+     "start": 13.6,
+     "end": 14
+    },
+    {
+     "w": "et",
+     "start": 14.08,
+     "end": 14.16
+    },
+    {
+     "w": "payé",
+     "start": 14.24,
+     "end": 14.4
+    },
+    {
+     "w": "par",
+     "start": 14.48,
+     "end": 14.56
+    },
+    {
+     "w": "l'entreprise…",
+     "start": 14.587,
+     "end": 15.6
+    },
+    {
+     "w": "et",
+     "start": 15.64,
+     "end": 15.68
+    },
+    {
+     "w": "il",
+     "start": 15.72,
+     "end": 15.76
+    },
+    {
+     "w": "y",
+     "start": 15.84,
+     "end": 15.867
+    },
+    {
+     "w": "a",
+     "start": 15.893,
+     "end": 15.92
+    },
+    {
+     "w": "le",
+     "start": 15.96,
+     "end": 16
+    },
+    {
+     "w": "compte",
+     "start": 16.08,
+     "end": 16.24
+    },
+    {
+     "w": "gratuit,",
+     "start": 16.28,
+     "end": 16.88
+    },
+    {
+     "w": "ouvert",
+     "start": 16.92,
+     "end": 17.12
+    },
+    {
+     "w": "un",
+     "start": 17.2,
+     "end": 17.28
+    },
+    {
+     "w": "soir",
+     "start": 17.32,
+     "end": 17.52
+    },
+    {
+     "w": "avec",
+     "start": 17.6,
+     "end": 17.68
+    },
+    {
+     "w": "ton",
+     "start": 17.76,
+     "end": 17.84
+    },
+    {
+     "w": "adresse",
+     "start": 17.96,
+     "end": 18.08
+    },
+    {
+     "w": "perso.",
+     "start": 18.16,
+     "end": 18.8
+    }
+   ]
+  },
+  {
+   "scene": "nom",
+   "start": 18.864,
+   "end": 23.44,
+   "words": [
+    {
+     "w": "Quand",
+     "start": 18.864,
+     "end": 18.88
+    },
+    {
+     "w": "c'est",
+     "start": 18.96,
+     "end": 19.12
+    },
+    {
+     "w": "ce",
+     "start": 19.2,
+     "end": 19.28
+    },
+    {
+     "w": "compte",
+     "start": 19.36,
+     "end": 19.52
+    },
+    {
+     "w": "qui",
+     "start": 19.56,
+     "end": 19.6
+    },
+    {
+     "w": "travaille,",
+     "start": 19.68,
+     "end": 20.32
+    },
+    {
+     "w": "c'est",
+     "start": 20.373,
+     "end": 20.48
+    },
+    {
+     "w": "l'IA",
+     "start": 20.52,
+     "end": 20.8
+    },
+    {
+     "w": "fantôme,",
+     "start": 20.92,
+     "end": 21.44
+    },
+    {
+     "w": "ou",
+     "start": 21.48,
+     "end": 21.52
+    },
+    {
+     "w": "en",
+     "start": 21.56,
+     "end": 21.6
+    },
+    {
+     "w": "anglais,",
+     "start": 21.68,
+     "end": 22.16
+    },
+    {
+     "w": "le",
+     "start": 22.2,
+     "end": 22.24
+    },
+    {
+     "w": "shadow",
+     "start": 22.4,
+     "end": 22.68
+    },
+    {
+     "w": "AI.",
+     "start": 22.72,
+     "end": 23.44
+    }
+   ]
+  },
+  {
+   "scene": "image",
+   "start": 23.851,
+   "end": 32,
+   "words": [
+    {
+     "w": "Imagine,",
+     "start": 23.851,
+     "end": 24.08
+    },
+    {
+     "w": "au",
+     "start": 24.12,
+     "end": 24.16
+    },
+    {
+     "w": "troisième,",
+     "start": 24.24,
+     "end": 24.88
+    },
+    {
+     "w": "la",
+     "start": 24.92,
+     "end": 24.96
+    },
+    {
+     "w": "photocopieuse",
+     "start": 25.04,
+     "end": 25.6
+    },
+    {
+     "w": "en",
+     "start": 25.68,
+     "end": 25.76
+    },
+    {
+     "w": "panne",
+     "start": 25.8,
+     "end": 25.92
+    },
+    {
+     "w": "depuis",
+     "start": 26,
+     "end": 26.24
+    },
+    {
+     "w": "mars.",
+     "start": 26.4,
+     "end": 26.96
+    },
+    {
+     "w": "Tout",
+     "start": 26.987,
+     "end": 27.04
+    },
+    {
+     "w": "l'étage",
+     "start": 27.12,
+     "end": 27.44
+    },
+    {
+     "w": "fait",
+     "start": 27.52,
+     "end": 27.6
+    },
+    {
+     "w": "ses",
+     "start": 27.68,
+     "end": 27.76
+    },
+    {
+     "w": "copies",
+     "start": 27.88,
+     "end": 28
+    },
+    {
+     "w": "chez",
+     "start": 28.08,
+     "end": 28.16
+    },
+    {
+     "w": "le",
+     "start": 28.2,
+     "end": 28.24
+    },
+    {
+     "w": "reprographe",
+     "start": 28.32,
+     "end": 28.72
+    },
+    {
+     "w": "d'en",
+     "start": 28.773,
+     "end": 28.88
+    },
+    {
+     "w": "face…",
+     "start": 29.04,
+     "end": 29.44
+    },
+    {
+     "w": "qui",
+     "start": 29.509,
+     "end": 29.52
+    },
+    {
+     "w": "connaît",
+     "start": 29.6,
+     "end": 29.84
+    },
+    {
+     "w": "maintenant",
+     "start": 29.92,
+     "end": 30.16
+    },
+    {
+     "w": "les",
+     "start": 30.2,
+     "end": 30.24
+    },
+    {
+     "w": "contrats",
+     "start": 30.32,
+     "end": 30.56
+    },
+    {
+     "w": "de",
+     "start": 30.6,
+     "end": 30.64
+    },
+    {
+     "w": "la",
+     "start": 30.68,
+     "end": 30.72
+    },
+    {
+     "w": "boîte",
+     "start": 30.8,
+     "end": 31.04
+    },
+    {
+     "w": "mieux",
+     "start": 31.12,
+     "end": 31.28
+    },
+    {
+     "w": "que",
+     "start": 31.32,
+     "end": 31.36
+    },
+    {
+     "w": "le",
+     "start": 31.4,
+     "end": 31.44
+    },
+    {
+     "w": "juridique.",
+     "start": 31.52,
+     "end": 32
+    }
+   ]
+  },
+  {
+   "scene": "mecanisme",
+   "start": 32.384,
+   "end": 41.28,
+   "words": [
+    {
+     "w": "Ce",
+     "start": 32.384,
+     "end": 32.4
+    },
+    {
+     "w": "reprographe,",
+     "start": 32.48,
+     "end": 33.2
+    },
+    {
+     "w": "c'est",
+     "start": 33.227,
+     "end": 33.28
+    },
+    {
+     "w": "ton",
+     "start": 33.36,
+     "end": 33.44
+    },
+    {
+     "w": "ChatGPT",
+     "start": 33.52,
+     "end": 34
+    },
+    {
+     "w": "perso.",
+     "start": 34.12,
+     "end": 34.8
+    },
+    {
+     "w": "Dans",
+     "start": 34.88,
+     "end": 34.96
+    },
+    {
+     "w": "ses",
+     "start": 35,
+     "end": 35.04
+    },
+    {
+     "w": "réglages,",
+     "start": 35.08,
+     "end": 35.76
+    },
+    {
+     "w": "«",
+     "start": 35.8,
+     "end": 35.84
+    },
+    {
+     "w": "Améliorer",
+     "start": 35.88,
+     "end": 36.24
+    },
+    {
+     "w": "le",
+     "start": 36.28,
+     "end": 36.32
+    },
+    {
+     "w": "modèle",
+     "start": 36.4,
+     "end": 36.64
+    },
+    {
+     "w": "pour",
+     "start": 36.72,
+     "end": 36.8
+    },
+    {
+     "w": "tous",
+     "start": 36.88,
+     "end": 37.12
+    },
+    {
+     "w": "»",
+     "start": 37.16,
+     "end": 37.2
+    },
+    {
+     "w": "est",
+     "start": 37.24,
+     "end": 37.28
+    },
+    {
+     "w": "activé",
+     "start": 37.44,
+     "end": 37.68
+    },
+    {
+     "w": "par",
+     "start": 37.76,
+     "end": 37.84
+    },
+    {
+     "w": "défaut…",
+     "start": 37.92,
+     "end": 38.56
+    },
+    {
+     "w": "ce",
+     "start": 38.6,
+     "end": 38.64
+    },
+    {
+     "w": "que",
+     "start": 38.68,
+     "end": 38.72
+    },
+    {
+     "w": "tu",
+     "start": 38.8,
+     "end": 38.88
+    },
+    {
+     "w": "y",
+     "start": 38.96,
+     "end": 39.04
+    },
+    {
+     "w": "colles",
+     "start": 39.12,
+     "end": 39.28
+    },
+    {
+     "w": "peut",
+     "start": 39.32,
+     "end": 39.44
+    },
+    {
+     "w": "servir",
+     "start": 39.56,
+     "end": 39.76
+    },
+    {
+     "w": "à",
+     "start": 39.84,
+     "end": 39.88
+    },
+    {
+     "w": "entraîner",
+     "start": 39.92,
+     "end": 40.24
+    },
+    {
+     "w": "les",
+     "start": 40.28,
+     "end": 40.32
+    },
+    {
+     "w": "modèles",
+     "start": 40.4,
+     "end": 40.64
+    },
+    {
+     "w": "d'OpenAI.",
+     "start": 40.667,
+     "end": 41.28
+    }
+   ]
+  },
+  {
+   "scene": "etdonc",
+   "start": 41.6,
+   "end": 51.36,
+   "words": [
+    {
+     "w": "Le",
+     "start": 41.6,
+     "end": 41.68
+    },
+    {
+     "w": "bloquer",
+     "start": 41.72,
+     "end": 42
+    },
+    {
+     "w": "sur",
+     "start": 42.04,
+     "end": 42.08
+    },
+    {
+     "w": "le",
+     "start": 42.12,
+     "end": 42.16
+    },
+    {
+     "w": "réseau ?",
+     "start": 42.2,
+     "end": 42.827
+    },
+    {
+     "w": "Ça",
+     "start": 42.853,
+     "end": 42.907
+    },
+    {
+     "w": "ne",
+     "start": 42.933,
+     "end": 42.96
+    },
+    {
+     "w": "sert",
+     "start": 43.04,
+     "end": 43.2
+    },
+    {
+     "w": "à",
+     "start": 43.24,
+     "end": 43.28
+    },
+    {
+     "w": "rien,",
+     "start": 43.4,
+     "end": 43.68
+    },
+    {
+     "w": "tout",
+     "start": 43.72,
+     "end": 43.76
+    },
+    {
+     "w": "le",
+     "start": 43.8,
+     "end": 43.84
+    },
+    {
+     "w": "monde",
+     "start": 43.88,
+     "end": 44
+    },
+    {
+     "w": "a",
+     "start": 44.04,
+     "end": 44.08
+    },
+    {
+     "w": "la",
+     "start": 44.12,
+     "end": 44.16
+    },
+    {
+     "w": "4G",
+     "start": 44.24,
+     "end": 44.48
+    },
+    {
+     "w": "dans",
+     "start": 44.507,
+     "end": 44.56
+    },
+    {
+     "w": "sa",
+     "start": 44.64,
+     "end": 44.72
+    },
+    {
+     "w": "poche.",
+     "start": 44.8,
+     "end": 45.28
+    },
+    {
+     "w": "Ce",
+     "start": 45.351,
+     "end": 45.36
+    },
+    {
+     "w": "qui",
+     "start": 45.44,
+     "end": 45.52
+    },
+    {
+     "w": "marche,",
+     "start": 45.6,
+     "end": 46
+    },
+    {
+     "w": "c'est",
+     "start": 46.053,
+     "end": 46.16
+    },
+    {
+     "w": "un",
+     "start": 46.2,
+     "end": 46.24
+    },
+    {
+     "w": "compte",
+     "start": 46.32,
+     "end": 46.48
+    },
+    {
+     "w": "entreprise,",
+     "start": 46.76,
+     "end": 47.2
+    },
+    {
+     "w": "qui",
+     "start": 47.24,
+     "end": 47.28
+    },
+    {
+     "w": "n'entraîne",
+     "start": 47.32,
+     "end": 47.76
+    },
+    {
+     "w": "aucun",
+     "start": 47.84,
+     "end": 48
+    },
+    {
+     "w": "modèle",
+     "start": 48.08,
+     "end": 48.24
+    },
+    {
+     "w": "par",
+     "start": 48.32,
+     "end": 48.4
+    },
+    {
+     "w": "défaut,",
+     "start": 48.48,
+     "end": 49.12
+    },
+    {
+     "w": "et",
+     "start": 49.16,
+     "end": 49.2
+    },
+    {
+     "w": "une",
+     "start": 49.28,
+     "end": 49.36
+    },
+    {
+     "w": "règle",
+     "start": 49.44,
+     "end": 49.68
+    },
+    {
+     "w": "d'une",
+     "start": 49.76,
+     "end": 49.92
+    },
+    {
+     "w": "ligne",
+     "start": 50,
+     "end": 50.16
+    },
+    {
+     "w": "sur",
+     "start": 50.24,
+     "end": 50.32
+    },
+    {
+     "w": "ce",
+     "start": 50.36,
+     "end": 50.4
+    },
+    {
+     "w": "qu'on",
+     "start": 50.44,
+     "end": 50.56
+    },
+    {
+     "w": "peut",
+     "start": 50.6,
+     "end": 50.68
+    },
+    {
+     "w": "y",
+     "start": 50.72,
+     "end": 50.8
+    },
+    {
+     "w": "coller.",
+     "start": 50.88,
+     "end": 51.36
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 51.429,
+   "end": 54.32,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 51.429,
+     "end": 51.52
+    },
+    {
+     "w": "avant",
+     "start": 51.6,
+     "end": 51.76
+    },
+    {
+     "w": "de",
+     "start": 51.787,
+     "end": 51.813
+    },
+    {
+     "w": "chercher",
+     "start": 51.84,
+     "end": 52.08
+    },
+    {
+     "w": "qui",
+     "start": 52.16,
+     "end": 52.24
+    },
+    {
+     "w": "triche,",
+     "start": 52.32,
+     "end": 52.88
+    },
+    {
+     "w": "répare",
+     "start": 52.96,
+     "end": 53.2
+    },
+    {
+     "w": "la",
+     "start": 53.28,
+     "end": 53.36
+    },
+    {
+     "w": "photocopieuse.",
+     "start": 53.44,
+     "end": 54.32
+    }
+   ]
+  }
+ ]
+}

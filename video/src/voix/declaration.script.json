@@ -9,7 +9,7 @@
     "voice_name": "PAL - FR (voix clonée de PA)",
     "voice_id": "mW090pzjsAt4gvt0DNB8",
     "model_id": "eleven_v4",
-    "direction": "podcast narré, un tout petit peu d'enthousiasme, variations légères (PA, 2026-10-09)"
+    "direction": "podcast narré, un tout petit peu d'enthousiasme ; tons variés scène par scène, ouverture différente à chaque épisode (PA, 2026-11-09 : ne pas sonner IA)"
   },
   "music": {
     "reuse": "voix/prediction-music.mp3"
@@ -17,22 +17,22 @@
   "segments": [
     {
       "scene": "hook",
-      "say": "[warmly] C'est quoi... une déclaration d'usage de l'IA…",
+      "say": "[thoughtful] C'est quoi... une déclaration d'usage de l'IA…",
       "screen": "Titre géant « DÉCLARATION D'USAGE DE L'IA » sur deux lignes. Derrière, posé dès la première image, le bas d'un document avec quatre lignes vides. Aucun sous-titre (nocaption)."
     },
     {
       "scene": "intro",
-      "say": "[curious] Tu crois que dire que tu as utilisé l'IA, c'est avouer que tu as bâclé ? En 2025, c'est le silence qui a coûté cher à Deloitte.",
+      "say": "[matter-of-fact] Dire que tu as utilisé l'IA, ça sonne comme un aveu de travail bâclé. Pourtant en 2025, c'est le silence qui a coûté cher à Deloitte.",
       "screen": "Une bulle « j'ai utilisé l'IA » avec un point d'interrogation inquiet ; sur « Deloitte », collage de la capture du titre de l'article de The Register (scotch aux coins)."
     },
     {
       "scene": "rapport",
-      "say": "[warmly] Le cabinet avait rendu au gouvernement australien un rapport facturé 440 000 dollars australiens… un chercheur y a trouvé des études qui n'existent pas, et une citation inventée d'une décision de justice.",
+      "say": "[serious] Le cabinet avait rendu au gouvernement australien un rapport facturé 440 000 dollars australiens… un chercheur y a trouvé des études qui n'existent pas, et une citation inventée d'une décision de justice.",
       "screen": "Un rapport relié se pose ; une étiquette de prix se colle avec un count-up jusqu'à « 440 000 $ AU ». Sur « chercheur », une loupe passe sur les notes de bas de page : trois références deviennent rouges et se barrent, puis une citation entre guillemets se barre aussi."
     },
     {
       "scene": "mention",
-      "say": "[curious] La version corrigée mentionnait enfin, dans sa méthode, un outil fondé sur GPT-4o… et Deloitte a remboursé la dernière tranche du contrat.",
+      "say": "[amused] La version corrigée mentionnait enfin, dans sa méthode, un outil fondé sur GPT-4o… et Deloitte a remboursé la dernière tranche du contrat.",
       "screen": "Le rapport se rouvre à la page « méthode », une ligne « Azure OpenAI GPT-4o » s'écrit à la machine et se surligne. Sur « remboursé », une pile de billets repart du rapport vers la gauche (arc)."
     },
     {
@@ -47,7 +47,7 @@
     },
     {
       "scene": "loi",
-      "say": "[curious] Depuis le 2 août 2026, en Europe, le règlement sur l'IA rend la mention obligatoire pour les /ˈdipfeɪks/ et les textes générés pour informer le public… sauf quand une personne les a relus et en répond.",
+      "say": "[matter-of-fact] Depuis le 2 août 2026, en Europe, le règlement sur l'IA rend la mention obligatoire pour les /ˈdipfeɪks/ et les textes générés pour informer le public… sauf quand une personne les a relus et en répond.",
       "screen": "Collage de la capture de l'article 50 du règlement (scotch). Deux icônes tombent sur leur mot : un visage dédoublé (« deepfakes ») et une page de journal (« textes ») ; sur « sauf », une coche « relu et signé » vient se poser sur la page de journal."
     },
     {

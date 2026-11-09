@@ -1,0 +1,90 @@
+{
+  "id": "detecteur",
+  "term": "mythe-detecteur-de-texte-ia",
+  "episode": 34,
+  "date": "2026-11-21",
+  "format": "Mythe",
+  "composition": "MytheDetecteurVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme ; une balise par scène choisie pour ce qu'elle dit, pas d'alternance warmly / curious (PA, 2026-11-09 : ne pas sonner IA) ; ouverture sceptique sur la phrase du mythe, puis le fait dit platement"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "todo": "Calage estimé (sans voix). Le hook vise la phrase du mythe telle qu'elle est écrite ; la capture virale de 2023 (GPTZero et la Constitution) n'est pas montrée en image, l'écran dessine un parchemin et une fenêtre de détecteur sans marque. L'étudiant de l'affaire de New York n'est ni nommé ni montré en portrait : silhouette inventée.",
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[skeptical] « Un détecteur prouve qu'un texte vient d'une IA. » [pause]",
+      "screen": "Dès la première image, une fenêtre de détecteur dessinée (cadre gris, jauge vide). La phrase s'écrit à la machine en grand entre guillemets ; le tampon rouge FAUX s'écrase dessus (squash) juste après le guillemet fermant et reste jusqu'à la fin du hook : c'est l'image de couverture."
+    },
+    {
+      "scene": "constitution",
+      "say": "[matter-of-fact] En 2023, l'un d'eux a jugé la Constitution américaine probablement écrite par une IA. Elle date de 1787.",
+      "screen": "La fenêtre du détecteur reste au centre. « 2023 » en haut sur le mot. Sur « Constitution », un parchemin (« We the People » en calligraphie) est collé au scotch dans la fenêtre. Sur « écrite », la jauge se remplit jusqu'en haut (bar grow) et « IA » s'allume en couleur d'accent sur le mot. Sur « 1787 », la date s'inscrit à la plume en bas du parchemin."
+    },
+    {
+      "scene": "perplexite",
+      "say": "[thoughtful] Un détecteur n'a que le texte. Il mesure si chaque mot était prévisible pour un modèle de langage, et un texte trop prévisible passe pour généré. [amused] La Constitution, les modèles l'ont tant lue qu'elle leur paraît écrite d'avance.",
+      "screen": "Sur « texte », trois lignes de mots en blocs gris (sans lettres). Sur « modèle », le bloc du modèle se pose au-dessus. Sur « prévisible », sous chaque bloc une barre monte en cascade (bar grow). Sur « généré », le libellé « généré » en couleur d'accent. Sur « Constitution », les blocs prennent la teinte du parchemin et toutes les barres montent au maximum."
+    },
+    {
+      "scene": "toefl",
+      "say": "[serious] Ça frappe d'abord ceux qui écrivent simplement. En 2023, à Stanford, sept détecteurs ont lu 91 rédactions d'anglais de non-natifs… et en ont classé en moyenne 61 % comme générées.",
+      "screen": "Une élève pixel art qui écrit, posée dès l'entrée. Sur « sept détecteurs », sept petites fenêtres de détecteur en rang (stagger). Sur « 91 », une grille de 91 copies se remplit en cascade avec le compte « 91 ». Sur « 61 », 61 % des copies virent au rouge d'accent, compte jusqu'à « 61 % » avec le punch zoom du short ; « générées » en libellé."
+    },
+    {
+      "scene": "contour",
+      "say": "[mischievously] Dans l'autre sens, on demande à ChatGPT de réécrire son texte dans une langue plus littéraire… et la détection tombe de 100 % à 13 %.",
+      "screen": "Une bulle de chat sur « ChatGPT ». Sur « littéraire », les blocs du texte se couvrent d'arabesques à la plume. Une barre « détection » pleine à 100 % sur « 100 », qui chute à 13 % sur « 13 » (le chiffre compte à rebours)."
+    },
+    {
+      "scene": "progres",
+      "say": "[casual] En 2025, les meilleurs outils accusaient à tort moins d'un texte humain sur cent.",
+      "screen": "Une grille de 100 copies blanches, posée dès l'entrée. « 2025 » sur le mot. Sur « accusaient », une loupe passe sur la grille ; sur « moins », une seule copie clignote à moitié en rouge, libellé « sur cent »."
+    },
+    {
+      "scene": "tribunal",
+      "say": "[serious] Mais en janvier 2026, à New York, un tribunal a annulé la sanction d'un étudiant accusé sur un score de 100 %… deux autres détecteurs donnaient 0 %.",
+      "screen": "Un pupitre de juge et son marteau, posés dès l'entrée. Sur « annulé », le marteau frappe et la feuille de sanction se barre. Sur « étudiant », la silhouette d'un étudiant (inventé, non nommé). Sur « 100 », un détecteur affiche « 100 % » en rouge ; sur « deux autres », deux détecteurs à côté affichent « 0 % » en vert."
+    },
+    {
+      "scene": "filigrane",
+      "say": "[curious] Ce qui signe vraiment l'origine, c'est un filigrane glissé pendant l'écriture, comme chez Google… et il ne se lit qu'avec la clé du modèle qui l'a posé.",
+      "screen": "Les lignes de texte en blocs gris. Sur « filigrane », un motif discret se tisse dans les blocs (fade in très léger). « Google » en libellé sur le mot. Sur « clé », une clé se dessine (draw-on), passe sur le texte et le filigrane s'allume en couleur d'accent."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors devant un pourcentage, demande plutôt les brouillons et les sources… et laisse la personne t'expliquer deux passages de son texte.",
+      "screen": "Une table, un prof et une élève pixel art face à face, plein cadre. Sur « pourcentage », la jauge du détecteur apparaît puis passe en retrait. Sur « brouillons », une pile de feuilles raturées ; sur « sources », deux livres. Sur « expliquer », une bulle part de l'élève ; sur « deux passages », deux lignes de sa copie se surlignent. Image finale pleine."
+    }
+  ],
+  "quoted": [
+    "Undétecteurprouvequ'untextevientd'uneIA"
+  ],
+  "display": {},
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {},
+  "sources": [
+    "Fiche mythe-detecteur-de-texte-ia de lexique/terms.js : Benj Edwards, Ars Technica, « Why AI writing detectors don't work », 14 juillet 2023 (capture virale d'avril 2023, GPTZero juge un extrait de la Constitution américaine « likely to be written entirely by AI » ; perplexité ; Edward Tian : la Constitution revient sans cesse dans les données d'entraînement) ; https://arstechnica.com/information-technology/2023/07/why-ai-detectors-think-the-us-constitution-was-written-by-ai/",
+    "Fiche mythe-detecteur-de-texte-ia : Liang, Yuksekgonul, Mao, Wu et Zou (Stanford), « GPT detectors are biased against non-native English writers », 2023 (sept détecteurs, 91 rédactions du TOEFL, 61,22 % de faux positifs en moyenne ; quasi aucune erreur sur les copies de collégiens américains ; consigne de langue littéraire : détection de 100 % à 13 %) ; https://arxiv.org/abs/2304.02819",
+    "Fiche mythe-detecteur-de-texte-ia : Chicago Booth Review, 2 décembre 2025, étude de Brian Jabarian et Alex Imas (les trois détecteurs commerciaux sous 1 % de faux positifs) ; https://www.chicagobooth.edu/review/2025/december/do-ai-detectors-work-well-enough-trust",
+    "Fiche mythe-detecteur-de-texte-ia : Cour suprême de l'État de New York, comté de Nassau, Matter of Newby v Adelphi Univ., 28 janvier 2026 (score Turnitin de 100 %, Grammarly et ZeroGPT à 0 %, sanction annulée) ; https://www.nycourts.gov/reporter/3dseries/2026/2026_26021.htm ; l'étudiant n'est pas nommé dans le short",
+    "Fiche mythe-detecteur-de-texte-ia : Dathathri, See et al. (Google DeepMind), Nature, 23 octobre 2024 (SynthID-Text ; la détection demande la clé du filigrane) ; https://www.nature.com/articles/s41586-024-08025-4",
+    "1787 : date de signature de la Constitution des États-Unis, reprise de la fiche (Imagine)"
+  ],
+  "publication": {
+    "title": "La Constitution, écrite par une IA ?",
+    "description": "« Le détecteur l'a dit, donc c'est une IA. » En 2023, un détecteur jugeait la Constitution américaine, signée en 1787, probablement écrite par une IA. Ces outils ne voient que le style, accusent d'abord ceux qui écrivent simplement et se contournent en une consigne ; seul un filigrane posé à la génération signe l'origine.\nhttps://neopal.github.io/lexique/mythe-detecteur-de-texte-ia/\n#detecteurIA #chatgpt #education #vulgarisation\nChiffres : Ars Technica, 14 juillet 2023 ; Liang et al., Stanford, 2023 ; Chicago Booth Review, 2 décembre 2025 ; Cour suprême de l'État de New York, 28 janvier 2026 ; Nature, 23 octobre 2024.",
+    "fil": "L'ép. 33 pesait l'eau d'une question à ChatGPT ; on reste sur les chiffres qu'on prend pour des preuves, avec le pourcentage d'un détecteur d'IA.",
+    "decor": "un bureau d'examen (le détecteur, les copies, le prof et l'élève)"
+  },
+  "credits": [
+    "Aucun : parchemin, détecteur, personnages et objets dessinés pour le short ; pas de capture ni de portrait réel"
+  ]
+}

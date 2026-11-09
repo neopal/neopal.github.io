@@ -1,0 +1,1186 @@
+{
+ "id": "offloading",
+ "audio": true,
+ "music": true,
+ "duration": 65.92,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.08,
+   "end": 1.92,
+   "words": [
+    {
+     "w": "C'est",
+     "start": 0.08,
+     "end": 0.32
+    },
+    {
+     "w": "quoi...",
+     "start": 0.52,
+     "end": 0.96
+    },
+    {
+     "w": "l'offloading…",
+     "start": 1,
+     "end": 1.92
+    }
+   ]
+  },
+  {
+   "scene": "intro",
+   "start": 2.387,
+   "end": 11.04,
+   "words": [
+    {
+     "w": "Le",
+     "start": 2.387,
+     "end": 2.4
+    },
+    {
+     "w": "8",
+     "start": 2.48,
+     "end": 2.56
+    },
+    {
+     "w": "novembre,",
+     "start": 2.64,
+     "end": 3.2
+    },
+    {
+     "w": "sur",
+     "start": 3.28,
+     "end": 3.44
+    },
+    {
+     "w": "X,",
+     "start": 3.52,
+     "end": 4
+    },
+    {
+     "w": "quelqu'un",
+     "start": 4.08,
+     "end": 4.32
+    },
+    {
+     "w": "annonce",
+     "start": 4.48,
+     "end": 4.64
+    },
+    {
+     "w": "faire",
+     "start": 4.68,
+     "end": 4.8
+    },
+    {
+     "w": "tourner",
+     "start": 4.88,
+     "end": 5.12
+    },
+    {
+     "w": "une",
+     "start": 5.2,
+     "end": 5.28
+    },
+    {
+     "w": "IA",
+     "start": 5.32,
+     "end": 5.52
+    },
+    {
+     "w": "de",
+     "start": 5.64,
+     "end": 5.76
+    },
+    {
+     "w": "mille",
+     "start": 5.8,
+     "end": 5.92
+    },
+    {
+     "w": "milliards",
+     "start": 6.08,
+     "end": 6.4
+    },
+    {
+     "w": "de",
+     "start": 6.48,
+     "end": 6.56
+    },
+    {
+     "w": "paramètres…",
+     "start": 6.68,
+     "end": 7.36
+    },
+    {
+     "w": "sur",
+     "start": 7.44,
+     "end": 7.52
+    },
+    {
+     "w": "son",
+     "start": 7.6,
+     "end": 7.68
+    },
+    {
+     "w": "téléphone.",
+     "start": 7.76,
+     "end": 8.44
+    },
+    {
+     "w": "C'est",
+     "start": 8.72,
+     "end": 8.88
+    },
+    {
+     "w": "vrai…",
+     "start": 8.96,
+     "end": 9.84
+    },
+    {
+     "w": "mais",
+     "start": 9.92,
+     "end": 10.08
+    },
+    {
+     "w": "il",
+     "start": 10.16,
+     "end": 10.24
+    },
+    {
+     "w": "y",
+     "start": 10.267,
+     "end": 10.293
+    },
+    {
+     "w": "a",
+     "start": 10.32,
+     "end": 10.4
+    },
+    {
+     "w": "un",
+     "start": 10.48,
+     "end": 10.56
+    },
+    {
+     "w": "hic.",
+     "start": 10.64,
+     "end": 11.04
+    }
+   ]
+  },
+  {
+   "scene": "base",
+   "start": 11.493,
+   "end": 22.32,
+   "words": [
+    {
+     "w": "Pour",
+     "start": 11.493,
+     "end": 11.52
+    },
+    {
+     "w": "répondre",
+     "start": 11.6,
+     "end": 11.92
+    },
+    {
+     "w": "vite,",
+     "start": 11.96,
+     "end": 12.4
+    },
+    {
+     "w": "un",
+     "start": 12.44,
+     "end": 12.48
+    },
+    {
+     "w": "modèle",
+     "start": 12.56,
+     "end": 12.8
+    },
+    {
+     "w": "range",
+     "start": 12.88,
+     "end": 13.12
+    },
+    {
+     "w": "ses",
+     "start": 13.2,
+     "end": 13.28
+    },
+    {
+     "w": "paramètres",
+     "start": 13.4,
+     "end": 13.76
+    },
+    {
+     "w": "dans",
+     "start": 13.787,
+     "end": 13.84
+    },
+    {
+     "w": "la",
+     "start": 13.88,
+     "end": 13.92
+    },
+    {
+     "w": "mémoire",
+     "start": 14,
+     "end": 14.24
+    },
+    {
+     "w": "rapide,",
+     "start": 14.32,
+     "end": 14.88
+    },
+    {
+     "w": "tout",
+     "start": 14.96,
+     "end": 15.04
+    },
+    {
+     "w": "près",
+     "start": 15.08,
+     "end": 15.2
+    },
+    {
+     "w": "de",
+     "start": 15.24,
+     "end": 15.28
+    },
+    {
+     "w": "la",
+     "start": 15.32,
+     "end": 15.36
+    },
+    {
+     "w": "puce.",
+     "start": 15.44,
+     "end": 16.16
+    },
+    {
+     "w": "Même",
+     "start": 16.24,
+     "end": 16.4
+    },
+    {
+     "w": "compressé",
+     "start": 16.48,
+     "end": 16.88
+    },
+    {
+     "w": "au",
+     "start": 16.92,
+     "end": 16.96
+    },
+    {
+     "w": "maximum,",
+     "start": 17.04,
+     "end": 17.76
+    },
+    {
+     "w": "ce",
+     "start": 17.8,
+     "end": 17.84
+    },
+    {
+     "w": "modèle",
+     "start": 17.92,
+     "end": 18.24
+    },
+    {
+     "w": "pèse",
+     "start": 18.28,
+     "end": 18.56
+    },
+    {
+     "w": "deux",
+     "start": 18.6,
+     "end": 18.72
+    },
+    {
+     "w": "cent",
+     "start": 18.8,
+     "end": 18.88
+    },
+    {
+     "w": "trente-trois",
+     "start": 18.96,
+     "end": 19.32
+    },
+    {
+     "w": "gigaoctets…",
+     "start": 19.36,
+     "end": 20.24
+    },
+    {
+     "w": "et",
+     "start": 20.28,
+     "end": 20.32
+    },
+    {
+     "w": "un",
+     "start": 20.4,
+     "end": 20.44
+    },
+    {
+     "w": "téléphone",
+     "start": 20.48,
+     "end": 20.8
+    },
+    {
+     "w": "haut",
+     "start": 20.827,
+     "end": 20.88
+    },
+    {
+     "w": "de",
+     "start": 20.96,
+     "end": 21
+    },
+    {
+     "w": "gamme",
+     "start": 21.04,
+     "end": 21.2
+    },
+    {
+     "w": "n'en",
+     "start": 21.24,
+     "end": 21.36
+    },
+    {
+     "w": "a",
+     "start": 21.4,
+     "end": 21.44
+    },
+    {
+     "w": "que",
+     "start": 21.52,
+     "end": 21.6
+    },
+    {
+     "w": "douze.",
+     "start": 21.68,
+     "end": 22.32
+    }
+   ]
+  },
+  {
+   "scene": "nom",
+   "start": 22.453,
+   "end": 29.28,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 22.453,
+     "end": 22.56
+    },
+    {
+     "w": "on",
+     "start": 22.6,
+     "end": 22.64
+    },
+    {
+     "w": "laisse",
+     "start": 22.68,
+     "end": 22.88
+    },
+    {
+     "w": "le",
+     "start": 22.92,
+     "end": 22.96
+    },
+    {
+     "w": "reste",
+     "start": 23.08,
+     "end": 23.2
+    },
+    {
+     "w": "sur",
+     "start": 23.28,
+     "end": 23.36
+    },
+    {
+     "w": "le",
+     "start": 23.44,
+     "end": 23.48
+    },
+    {
+     "w": "stockage,",
+     "start": 23.52,
+     "end": 24.24
+    },
+    {
+     "w": "et",
+     "start": 24.28,
+     "end": 24.32
+    },
+    {
+     "w": "on",
+     "start": 24.36,
+     "end": 24.4
+    },
+    {
+     "w": "va",
+     "start": 24.44,
+     "end": 24.48
+    },
+    {
+     "w": "le",
+     "start": 24.52,
+     "end": 24.56
+    },
+    {
+     "w": "chercher",
+     "start": 24.64,
+     "end": 24.96
+    },
+    {
+     "w": "chaque",
+     "start": 25,
+     "end": 25.2
+    },
+    {
+     "w": "fois",
+     "start": 25.24,
+     "end": 25.28
+    },
+    {
+     "w": "qu'il",
+     "start": 25.36,
+     "end": 25.52
+    },
+    {
+     "w": "sert.",
+     "start": 25.64,
+     "end": 26.16
+    },
+    {
+     "w": "C'est",
+     "start": 26.213,
+     "end": 26.32
+    },
+    {
+     "w": "ça,",
+     "start": 26.4,
+     "end": 26.64
+    },
+    {
+     "w": "le",
+     "start": 26.68,
+     "end": 26.72
+    },
+    {
+     "w": "déchargement,",
+     "start": 26.8,
+     "end": 27.52
+    },
+    {
+     "w": "ou",
+     "start": 27.56,
+     "end": 27.6
+    },
+    {
+     "w": "en",
+     "start": 27.68,
+     "end": 27.76
+    },
+    {
+     "w": "anglais,",
+     "start": 27.84,
+     "end": 28.32
+    },
+    {
+     "w": "l'offloading.",
+     "start": 28.36,
+     "end": 29.28
+    }
+   ]
+  },
+  {
+   "scene": "bastien",
+   "start": 29.707,
+   "end": 38.8,
+   "words": [
+    {
+     "w": "Imagine",
+     "start": 29.707,
+     "end": 29.76
+    },
+    {
+     "w": "Bastien,",
+     "start": 29.84,
+     "end": 30.4
+    },
+    {
+     "w": "qui",
+     "start": 30.48,
+     "end": 30.56
+    },
+    {
+     "w": "n'a",
+     "start": 30.613,
+     "end": 30.72
+    },
+    {
+     "w": "qu'un",
+     "start": 30.76,
+     "end": 30.88
+    },
+    {
+     "w": "frigo",
+     "start": 30.96,
+     "end": 31.2
+    },
+    {
+     "w": "de",
+     "start": 31.24,
+     "end": 31.28
+    },
+    {
+     "w": "bar…",
+     "start": 31.4,
+     "end": 31.92
+    },
+    {
+     "w": "ses",
+     "start": 32,
+     "end": 32.08
+    },
+    {
+     "w": "courses",
+     "start": 32.16,
+     "end": 32.4
+    },
+    {
+     "w": "sont",
+     "start": 32.453,
+     "end": 32.56
+    },
+    {
+     "w": "à",
+     "start": 32.6,
+     "end": 32.64
+    },
+    {
+     "w": "la",
+     "start": 32.68,
+     "end": 32.72
+    },
+    {
+     "w": "cave,",
+     "start": 32.8,
+     "end": 33.28
+    },
+    {
+     "w": "six",
+     "start": 33.36,
+     "end": 33.44
+    },
+    {
+     "w": "étages",
+     "start": 33.52,
+     "end": 33.76
+    },
+    {
+     "w": "plus",
+     "start": 33.84,
+     "end": 33.92
+    },
+    {
+     "w": "bas.",
+     "start": 34,
+     "end": 34.56
+    },
+    {
+     "w": "Pour",
+     "start": 34.64,
+     "end": 34.72
+    },
+    {
+     "w": "chaque",
+     "start": 34.8,
+     "end": 34.96
+    },
+    {
+     "w": "plat,",
+     "start": 35.04,
+     "end": 35.36
+    },
+    {
+     "w": "il",
+     "start": 35.44,
+     "end": 35.52
+    },
+    {
+     "w": "descend",
+     "start": 35.6,
+     "end": 35.84
+    },
+    {
+     "w": "chercher",
+     "start": 35.92,
+     "end": 36.32
+    },
+    {
+     "w": "juste",
+     "start": 36.44,
+     "end": 36.64
+    },
+    {
+     "w": "ce",
+     "start": 36.68,
+     "end": 36.72
+    },
+    {
+     "w": "qu'il",
+     "start": 36.76,
+     "end": 36.96
+    },
+    {
+     "w": "faut,",
+     "start": 37.013,
+     "end": 37.36
+    },
+    {
+     "w": "et",
+     "start": 37.4,
+     "end": 37.44
+    },
+    {
+     "w": "le",
+     "start": 37.52,
+     "end": 37.6
+    },
+    {
+     "w": "dîner",
+     "start": 37.64,
+     "end": 37.84
+    },
+    {
+     "w": "arrive",
+     "start": 37.92,
+     "end": 38.08
+    },
+    {
+     "w": "à",
+     "start": 38.12,
+     "end": 38.16
+    },
+    {
+     "w": "minuit.",
+     "start": 38.24,
+     "end": 38.8
+    }
+   ]
+  },
+  {
+   "scene": "mecanisme",
+   "start": 38.871,
+   "end": 47.6,
+   "words": [
+    {
+     "w": "Ce",
+     "start": 38.871,
+     "end": 38.88
+    },
+    {
+     "w": "modèle",
+     "start": 38.96,
+     "end": 39.2
+    },
+    {
+     "w": "n'active",
+     "start": 39.24,
+     "end": 39.6
+    },
+    {
+     "w": "que",
+     "start": 39.72,
+     "end": 39.84
+    },
+    {
+     "w": "quatre",
+     "start": 39.88,
+     "end": 40.16
+    },
+    {
+     "w": "de",
+     "start": 40.24,
+     "end": 40.32
+    },
+    {
+     "w": "ses",
+     "start": 40.4,
+     "end": 40.48
+    },
+    {
+     "w": "cent",
+     "start": 40.56,
+     "end": 40.64
+    },
+    {
+     "w": "vingt-huit",
+     "start": 40.72,
+     "end": 40.96
+    },
+    {
+     "w": "experts",
+     "start": 41.04,
+     "end": 41.36
+    },
+    {
+     "w": "pour",
+     "start": 41.44,
+     "end": 41.52
+    },
+    {
+     "w": "chaque",
+     "start": 41.6,
+     "end": 41.76
+    },
+    {
+     "w": "token…",
+     "start": 41.96,
+     "end": 42.48
+    },
+    {
+     "w": "ça",
+     "start": 42.52,
+     "end": 42.56
+    },
+    {
+     "w": "fait",
+     "start": 42.64,
+     "end": 42.72
+    },
+    {
+     "w": "encore",
+     "start": 42.8,
+     "end": 43.12
+    },
+    {
+     "w": "onze",
+     "start": 43.2,
+     "end": 43.36
+    },
+    {
+     "w": "gigaoctets",
+     "start": 43.44,
+     "end": 43.92
+    },
+    {
+     "w": "à",
+     "start": 43.96,
+     "end": 44
+    },
+    {
+     "w": "relire,",
+     "start": 44.08,
+     "end": 44.56
+    },
+    {
+     "w": "et",
+     "start": 44.6,
+     "end": 44.64
+    },
+    {
+     "w": "le",
+     "start": 44.68,
+     "end": 44.72
+    },
+    {
+     "w": "stockage",
+     "start": 44.84,
+     "end": 45.12
+    },
+    {
+     "w": "d'un",
+     "start": 45.173,
+     "end": 45.28
+    },
+    {
+     "w": "téléphone",
+     "start": 45.36,
+     "end": 45.68
+    },
+    {
+     "w": "en",
+     "start": 45.72,
+     "end": 45.76
+    },
+    {
+     "w": "lit",
+     "start": 45.84,
+     "end": 46
+    },
+    {
+     "w": "à",
+     "start": 46.08,
+     "end": 46.16
+    },
+    {
+     "w": "peine",
+     "start": 46.2,
+     "end": 46.48
+    },
+    {
+     "w": "cinq",
+     "start": 46.533,
+     "end": 46.64
+    },
+    {
+     "w": "par",
+     "start": 46.72,
+     "end": 46.88
+    },
+    {
+     "w": "seconde.",
+     "start": 46.96,
+     "end": 47.6
+    }
+   ]
+  },
+  {
+   "scene": "etdonc",
+   "start": 47.669,
+   "end": 54.16,
+   "words": [
+    {
+     "w": "Résultat,",
+     "start": 47.669,
+     "end": 48.4
+    },
+    {
+     "w": "une",
+     "start": 48.48,
+     "end": 48.64
+    },
+    {
+     "w": "à",
+     "start": 48.72,
+     "end": 48.8
+    },
+    {
+     "w": "deux",
+     "start": 48.827,
+     "end": 48.88
+    },
+    {
+     "w": "secondes",
+     "start": 48.96,
+     "end": 49.28
+    },
+    {
+     "w": "par",
+     "start": 49.32,
+     "end": 49.36
+    },
+    {
+     "w": "token…",
+     "start": 49.44,
+     "end": 50.08
+    },
+    {
+     "w": "pose",
+     "start": 50.16,
+     "end": 50.24
+    },
+    {
+     "w": "ta",
+     "start": 50.32,
+     "end": 50.4
+    },
+    {
+     "w": "question",
+     "start": 50.48,
+     "end": 50.72
+    },
+    {
+     "w": "en",
+     "start": 50.8,
+     "end": 50.88
+    },
+    {
+     "w": "montant",
+     "start": 50.96,
+     "end": 51.12
+    },
+    {
+     "w": "dans",
+     "start": 51.16,
+     "end": 51.227
+    },
+    {
+     "w": "le",
+     "start": 51.253,
+     "end": 51.28
+    },
+    {
+     "w": "métro,",
+     "start": 51.36,
+     "end": 51.84
+    },
+    {
+     "w": "la",
+     "start": 51.92,
+     "end": 52
+    },
+    {
+     "w": "première",
+     "start": 52.08,
+     "end": 52.4
+    },
+    {
+     "w": "phrase",
+     "start": 52.52,
+     "end": 52.64
+    },
+    {
+     "w": "arrive",
+     "start": 52.72,
+     "end": 52.88
+    },
+    {
+     "w": "à",
+     "start": 52.96,
+     "end": 52.987
+    },
+    {
+     "w": "la",
+     "start": 53.013,
+     "end": 53.04
+    },
+    {
+     "w": "station",
+     "start": 53.2,
+     "end": 53.36
+    },
+    {
+     "w": "suivante.",
+     "start": 53.44,
+     "end": 54.16
+    }
+   ]
+  },
+  {
+   "scene": "pc",
+   "start": 54.293,
+   "end": 59.92,
+   "words": [
+    {
+     "w": "Sur",
+     "start": 54.293,
+     "end": 54.32
+    },
+    {
+     "w": "un",
+     "start": 54.36,
+     "end": 54.4
+    },
+    {
+     "w": "ordinateur",
+     "start": 54.6,
+     "end": 54.88
+    },
+    {
+     "w": "avec",
+     "start": 54.96,
+     "end": 55.2
+    },
+    {
+     "w": "beaucoup",
+     "start": 55.24,
+     "end": 55.44
+    },
+    {
+     "w": "de",
+     "start": 55.467,
+     "end": 55.493
+    },
+    {
+     "w": "mémoire",
+     "start": 55.52,
+     "end": 55.84
+    },
+    {
+     "w": "vive,",
+     "start": 55.88,
+     "end": 56.32
+    },
+    {
+     "w": "la",
+     "start": 56.4,
+     "end": 56.48
+    },
+    {
+     "w": "même",
+     "start": 56.56,
+     "end": 56.64
+    },
+    {
+     "w": "astuce",
+     "start": 56.76,
+     "end": 57.04
+    },
+    {
+     "w": "fait",
+     "start": 57.12,
+     "end": 57.2
+    },
+    {
+     "w": "écrire",
+     "start": 57.24,
+     "end": 57.44
+    },
+    {
+     "w": "DeepSeek",
+     "start": 57.52,
+     "end": 58
+    },
+    {
+     "w": "à",
+     "start": 58.04,
+     "end": 58.08
+    },
+    {
+     "w": "une",
+     "start": 58.16,
+     "end": 58.24
+    },
+    {
+     "w": "dizaine",
+     "start": 58.32,
+     "end": 58.64
+    },
+    {
+     "w": "de",
+     "start": 58.68,
+     "end": 58.72
+    },
+    {
+     "w": "tokens",
+     "start": 58.8,
+     "end": 59.04
+    },
+    {
+     "w": "par",
+     "start": 59.12,
+     "end": 59.2
+    },
+    {
+     "w": "seconde.",
+     "start": 59.28,
+     "end": 59.92
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 59.989,
+   "end": 65.92,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 59.989,
+     "end": 60.16
+    },
+    {
+     "w": "oui,",
+     "start": 60.28,
+     "end": 60.64
+    },
+    {
+     "w": "une",
+     "start": 60.72,
+     "end": 60.8
+    },
+    {
+     "w": "IA",
+     "start": 60.84,
+     "end": 61.04
+    },
+    {
+     "w": "géante",
+     "start": 61.12,
+     "end": 61.52
+    },
+    {
+     "w": "démarre",
+     "start": 61.6,
+     "end": 61.92
+    },
+    {
+     "w": "sur",
+     "start": 61.96,
+     "end": 62
+    },
+    {
+     "w": "un",
+     "start": 62.08,
+     "end": 62.16
+    },
+    {
+     "w": "téléphone…",
+     "start": 62.24,
+     "end": 63.12
+    },
+    {
+     "w": "mais",
+     "start": 63.187,
+     "end": 63.28
+    },
+    {
+     "w": "pour",
+     "start": 63.32,
+     "end": 63.36
+    },
+    {
+     "w": "la",
+     "start": 63.44,
+     "end": 63.52
+    },
+    {
+     "w": "faire",
+     "start": 63.56,
+     "end": 63.76
+    },
+    {
+     "w": "parler,",
+     "start": 63.84,
+     "end": 64.4
+    },
+    {
+     "w": "tout",
+     "start": 64.52,
+     "end": 64.64
+    },
+    {
+     "w": "est",
+     "start": 64.68,
+     "end": 64.72
+    },
+    {
+     "w": "une",
+     "start": 64.8,
+     "end": 64.88
+    },
+    {
+     "w": "question",
+     "start": 64.96,
+     "end": 65.2
+    },
+    {
+     "w": "de",
+     "start": 65.24,
+     "end": 65.28
+    },
+    {
+     "w": "mémoire.",
+     "start": 65.36,
+     "end": 65.92
+    }
+   ]
+  }
+ ]
+}

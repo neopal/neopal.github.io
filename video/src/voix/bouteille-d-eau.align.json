@@ -1,0 +1,1126 @@
+{
+ "id": "bouteille-d-eau",
+ "audio": true,
+ "music": true,
+ "duration": 68.56,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.1,
+   "end": 6.52,
+   "words": [
+    {
+     "w": "«",
+     "start": 0.1,
+     "end": 0.12
+    },
+    {
+     "w": "Une",
+     "start": 0.14,
+     "end": 0.16
+    },
+    {
+     "w": "question",
+     "start": 0.24,
+     "end": 0.56
+    },
+    {
+     "w": "à",
+     "start": 0.6,
+     "end": 0.64
+    },
+    {
+     "w": "ChatGPT,",
+     "start": 0.72,
+     "end": 1.76
+    },
+    {
+     "w": "c'est",
+     "start": 1.8,
+     "end": 2
+    },
+    {
+     "w": "une",
+     "start": 2.08,
+     "end": 2.16
+    },
+    {
+     "w": "bouteille",
+     "start": 2.24,
+     "end": 2.48
+    },
+    {
+     "w": "d'eau",
+     "start": 2.56,
+     "end": 2.8
+    },
+    {
+     "w": "»…",
+     "start": 2.84,
+     "end": 3.28
+    },
+    {
+     "w": "ce",
+     "start": 3.36,
+     "end": 3.44
+    },
+    {
+     "w": "chiffre",
+     "start": 3.52,
+     "end": 3.8
+    },
+    {
+     "w": "a",
+     "start": 3.84,
+     "end": 3.92
+    },
+    {
+     "w": "fait",
+     "start": 3.96,
+     "end": 4
+    },
+    {
+     "w": "le",
+     "start": 4.08,
+     "end": 4.16
+    },
+    {
+     "w": "tour",
+     "start": 4.24,
+     "end": 4.4
+    },
+    {
+     "w": "des",
+     "start": 4.48,
+     "end": 4.56
+    },
+    {
+     "w": "réseaux,",
+     "start": 4.64,
+     "end": 5.12
+    },
+    {
+     "w": "et",
+     "start": 5.16,
+     "end": 5.2
+    },
+    {
+     "w": "il",
+     "start": 5.28,
+     "end": 5.36
+    },
+    {
+     "w": "compte",
+     "start": 5.44,
+     "end": 5.68
+    },
+    {
+     "w": "très",
+     "start": 5.76,
+     "end": 5.92
+    },
+    {
+     "w": "large.",
+     "start": 6,
+     "end": 6.52
+    }
+   ]
+  },
+  {
+   "scene": "origine",
+   "start": 6.79,
+   "end": 15.92,
+   "words": [
+    {
+     "w": "Elle",
+     "start": 6.79,
+     "end": 6.84
+    },
+    {
+     "w": "vient",
+     "start": 6.88,
+     "end": 7.04
+    },
+    {
+     "w": "du",
+     "start": 7.12,
+     "end": 7.2
+    },
+    {
+     "w": "Washington",
+     "start": 7.227,
+     "end": 7.68
+    },
+    {
+     "w": "Post,",
+     "start": 7.76,
+     "end": 8.16
+    },
+    {
+     "w": "en",
+     "start": 8.24,
+     "end": 8.32
+    },
+    {
+     "w": "septembre",
+     "start": 8.4,
+     "end": 8.72
+    },
+    {
+     "w": "2024.",
+     "start": 8.8,
+     "end": 9.92
+    },
+    {
+     "w": "Des",
+     "start": 10,
+     "end": 10.08
+    },
+    {
+     "w": "chercheurs",
+     "start": 10.24,
+     "end": 10.48
+    },
+    {
+     "w": "y",
+     "start": 10.52,
+     "end": 10.56
+    },
+    {
+     "w": "estiment",
+     "start": 10.68,
+     "end": 10.96
+    },
+    {
+     "w": "qu'un",
+     "start": 11.013,
+     "end": 11.12
+    },
+    {
+     "w": "e-mail",
+     "start": 11.16,
+     "end": 11.44
+    },
+    {
+     "w": "de",
+     "start": 11.52,
+     "end": 11.6
+    },
+    {
+     "w": "100",
+     "start": 11.68,
+     "end": 11.76
+    },
+    {
+     "w": "mots",
+     "start": 11.84,
+     "end": 12.08
+    },
+    {
+     "w": "écrit",
+     "start": 12.16,
+     "end": 12.4
+    },
+    {
+     "w": "par",
+     "start": 12.48,
+     "end": 12.56
+    },
+    {
+     "w": "GPT-4",
+     "start": 12.64,
+     "end": 13.28
+    },
+    {
+     "w": "demande",
+     "start": 13.52,
+     "end": 13.92
+    },
+    {
+     "w": "519",
+     "start": 13.96,
+     "end": 14.08
+    },
+    {
+     "w": "millilitres",
+     "start": 14.16,
+     "end": 15.28
+    },
+    {
+     "w": "d'eau.",
+     "start": 15.36,
+     "end": 15.92
+    }
+   ]
+  },
+  {
+   "scene": "centrales",
+   "start": 16.062,
+   "end": 21.6,
+   "words": [
+    {
+     "w": "Mais",
+     "start": 16.062,
+     "end": 16.08
+    },
+    {
+     "w": "l'essentiel",
+     "start": 16.12,
+     "end": 16.64
+    },
+    {
+     "w": "de",
+     "start": 16.68,
+     "end": 16.72
+    },
+    {
+     "w": "cette",
+     "start": 16.76,
+     "end": 16.96
+    },
+    {
+     "w": "eau",
+     "start": 16.987,
+     "end": 17.04
+    },
+    {
+     "w": "ne",
+     "start": 17.12,
+     "end": 17.2
+    },
+    {
+     "w": "refroidit",
+     "start": 17.28,
+     "end": 17.68
+    },
+    {
+     "w": "pas",
+     "start": 17.72,
+     "end": 17.76
+    },
+    {
+     "w": "les",
+     "start": 17.84,
+     "end": 17.92
+    },
+    {
+     "w": "serveurs…",
+     "start": 18.08,
+     "end": 18.72
+    },
+    {
+     "w": "elle",
+     "start": 18.8,
+     "end": 18.88
+    },
+    {
+     "w": "s'évapore",
+     "start": 18.96,
+     "end": 19.44
+    },
+    {
+     "w": "dans",
+     "start": 19.48,
+     "end": 19.56
+    },
+    {
+     "w": "les",
+     "start": 19.6,
+     "end": 19.68
+    },
+    {
+     "w": "centrales",
+     "start": 19.8,
+     "end": 20.08
+    },
+    {
+     "w": "électriques",
+     "start": 20.12,
+     "end": 20.48
+    },
+    {
+     "w": "qui",
+     "start": 20.56,
+     "end": 20.64
+    },
+    {
+     "w": "les",
+     "start": 20.68,
+     "end": 20.72
+    },
+    {
+     "w": "alimentent.",
+     "start": 20.8,
+     "end": 21.6
+    }
+   ]
+  },
+  {
+   "scene": "labos",
+   "start": 21.737,
+   "end": 33.6,
+   "words": [
+    {
+     "w": "Depuis",
+     "start": 21.737,
+     "end": 21.84
+    },
+    {
+     "w": "2025,",
+     "start": 21.92,
+     "end": 22.8
+    },
+    {
+     "w": "les",
+     "start": 22.88,
+     "end": 22.96
+    },
+    {
+     "w": "labos",
+     "start": 23.04,
+     "end": 23.2
+    },
+    {
+     "w": "publient",
+     "start": 23.28,
+     "end": 23.52
+    },
+    {
+     "w": "leurs",
+     "start": 23.6,
+     "end": 23.68
+    },
+    {
+     "w": "propres",
+     "start": 23.8,
+     "end": 24.08
+    },
+    {
+     "w": "chiffres.",
+     "start": 24.12,
+     "end": 24.72
+    },
+    {
+     "w": "Google",
+     "start": 24.8,
+     "end": 25.12
+    },
+    {
+     "w": "annonce",
+     "start": 25.32,
+     "end": 25.52
+    },
+    {
+     "w": "0,26",
+     "start": 25.68,
+     "end": 25.84
+    },
+    {
+     "w": "millilitre",
+     "start": 26,
+     "end": 27.12
+    },
+    {
+     "w": "pour",
+     "start": 27.2,
+     "end": 27.36
+    },
+    {
+     "w": "une",
+     "start": 27.4,
+     "end": 27.44
+    },
+    {
+     "w": "question",
+     "start": 27.52,
+     "end": 27.76
+    },
+    {
+     "w": "à",
+     "start": 27.84,
+     "end": 27.88
+    },
+    {
+     "w": "Gemini,",
+     "start": 27.92,
+     "end": 28.56
+    },
+    {
+     "w": "à",
+     "start": 28.6,
+     "end": 28.64
+    },
+    {
+     "w": "peu",
+     "start": 28.72,
+     "end": 28.8
+    },
+    {
+     "w": "près",
+     "start": 28.84,
+     "end": 29.04
+    },
+    {
+     "w": "cinq",
+     "start": 29.2,
+     "end": 29.36
+    },
+    {
+     "w": "gouttes…",
+     "start": 29.44,
+     "end": 30.08
+    },
+    {
+     "w": "en",
+     "start": 30.149,
+     "end": 30.16
+    },
+    {
+     "w": "ne",
+     "start": 30.24,
+     "end": 30.32
+    },
+    {
+     "w": "comptant",
+     "start": 30.36,
+     "end": 30.72
+    },
+    {
+     "w": "que",
+     "start": 30.8,
+     "end": 30.88
+    },
+    {
+     "w": "ses",
+     "start": 30.96,
+     "end": 31.04
+    },
+    {
+     "w": "centres",
+     "start": 31.12,
+     "end": 31.36
+    },
+    {
+     "w": "de",
+     "start": 31.44,
+     "end": 31.48
+    },
+    {
+     "w": "données,",
+     "start": 31.52,
+     "end": 32
+    },
+    {
+     "w": "et",
+     "start": 32.08,
+     "end": 32.16
+    },
+    {
+     "w": "sans",
+     "start": 32.24,
+     "end": 32.4
+    },
+    {
+     "w": "vérification",
+     "start": 32.44,
+     "end": 32.96
+    },
+    {
+     "w": "extérieure.",
+     "start": 33.04,
+     "end": 33.6
+    }
+   ]
+  },
+  {
+   "scene": "mistral",
+   "start": 33.99,
+   "end": 41.12,
+   "words": [
+    {
+     "w": "Mistral",
+     "start": 33.99,
+     "end": 34.4
+    },
+    {
+     "w": "compte",
+     "start": 34.48,
+     "end": 34.64
+    },
+    {
+     "w": "jusqu'à",
+     "start": 34.68,
+     "end": 34.92
+    },
+    {
+     "w": "la",
+     "start": 34.96,
+     "end": 35.04
+    },
+    {
+     "w": "fabrication",
+     "start": 35.12,
+     "end": 35.68
+    },
+    {
+     "w": "des",
+     "start": 35.72,
+     "end": 35.76
+    },
+    {
+     "w": "serveurs,",
+     "start": 35.84,
+     "end": 36.4
+    },
+    {
+     "w": "dans",
+     "start": 36.453,
+     "end": 36.56
+    },
+    {
+     "w": "une",
+     "start": 36.6,
+     "end": 36.64
+    },
+    {
+     "w": "analyse",
+     "start": 36.72,
+     "end": 37.04
+    },
+    {
+     "w": "relue",
+     "start": 37.12,
+     "end": 37.36
+    },
+    {
+     "w": "par",
+     "start": 37.44,
+     "end": 37.52
+    },
+    {
+     "w": "deux",
+     "start": 37.6,
+     "end": 37.72
+    },
+    {
+     "w": "cabinets…",
+     "start": 37.76,
+     "end": 38.48
+    },
+    {
+     "w": "et",
+     "start": 38.52,
+     "end": 38.56
+    },
+    {
+     "w": "arrive",
+     "start": 38.64,
+     "end": 38.88
+    },
+    {
+     "w": "à",
+     "start": 38.96,
+     "end": 39.04
+    },
+    {
+     "w": "45",
+     "start": 39.12,
+     "end": 39.6
+    },
+    {
+     "w": "millilitres",
+     "start": 39.68,
+     "end": 40.16
+    },
+    {
+     "w": "par",
+     "start": 40.24,
+     "end": 40.32
+    },
+    {
+     "w": "réponse.",
+     "start": 40.4,
+     "end": 41.12
+    }
+   ]
+  },
+  {
+   "scene": "bouteille",
+   "start": 41.257,
+   "end": 47.28,
+   "words": [
+    {
+     "w": "Pour",
+     "start": 41.257,
+     "end": 41.28
+    },
+    {
+     "w": "remplir",
+     "start": 41.36,
+     "end": 41.6
+    },
+    {
+     "w": "la",
+     "start": 41.64,
+     "end": 41.68
+    },
+    {
+     "w": "bouteille,",
+     "start": 41.76,
+     "end": 42.24
+    },
+    {
+     "w": "il",
+     "start": 42.32,
+     "end": 42.4
+    },
+    {
+     "w": "faut",
+     "start": 42.427,
+     "end": 42.48
+    },
+    {
+     "w": "donc",
+     "start": 42.56,
+     "end": 42.72
+    },
+    {
+     "w": "près",
+     "start": 42.76,
+     "end": 42.88
+    },
+    {
+     "w": "de",
+     "start": 42.96,
+     "end": 43.12
+    },
+    {
+     "w": "deux",
+     "start": 43.2,
+     "end": 43.307
+    },
+    {
+     "w": "mille",
+     "start": 43.36,
+     "end": 43.52
+    },
+    {
+     "w": "questions",
+     "start": 43.72,
+     "end": 43.92
+    },
+    {
+     "w": "avec",
+     "start": 44.04,
+     "end": 44.16
+    },
+    {
+     "w": "le",
+     "start": 44.2,
+     "end": 44.24
+    },
+    {
+     "w": "chiffre",
+     "start": 44.32,
+     "end": 44.56
+    },
+    {
+     "w": "de",
+     "start": 44.6,
+     "end": 44.64
+    },
+    {
+     "w": "Google,",
+     "start": 44.72,
+     "end": 45.28
+    },
+    {
+     "w": "et",
+     "start": 45.4,
+     "end": 45.52
+    },
+    {
+     "w": "onze",
+     "start": 45.6,
+     "end": 45.76
+    },
+    {
+     "w": "avec",
+     "start": 45.92,
+     "end": 46.16
+    },
+    {
+     "w": "celui",
+     "start": 46.24,
+     "end": 46.36
+    },
+    {
+     "w": "de",
+     "start": 46.4,
+     "end": 46.44
+    },
+    {
+     "w": "Mistral.",
+     "start": 46.48,
+     "end": 47.28
+    }
+   ]
+  },
+  {
+   "scene": "vrai",
+   "start": 47.347,
+   "end": 54,
+   "words": [
+    {
+     "w": "Ce",
+     "start": 47.347,
+     "end": 47.36
+    },
+    {
+     "w": "qui",
+     "start": 47.44,
+     "end": 47.52
+    },
+    {
+     "w": "pèse",
+     "start": 47.6,
+     "end": 47.76
+    },
+    {
+     "w": "vraiment,",
+     "start": 47.8,
+     "end": 48.32
+    },
+    {
+     "w": "ce",
+     "start": 48.36,
+     "end": 48.4
+    },
+    {
+     "w": "sont",
+     "start": 48.48,
+     "end": 48.56
+    },
+    {
+     "w": "les",
+     "start": 48.64,
+     "end": 48.72
+    },
+    {
+     "w": "gros",
+     "start": 48.8,
+     "end": 49.04
+    },
+    {
+     "w": "usages…",
+     "start": 49.12,
+     "end": 49.76
+    },
+    {
+     "w": "faire",
+     "start": 49.8,
+     "end": 49.92
+    },
+    {
+     "w": "lire",
+     "start": 50,
+     "end": 50.16
+    },
+    {
+     "w": "un",
+     "start": 50.24,
+     "end": 50.32
+    },
+    {
+     "w": "très",
+     "start": 50.4,
+     "end": 50.56
+    },
+    {
+     "w": "long",
+     "start": 50.64,
+     "end": 50.72
+    },
+    {
+     "w": "document",
+     "start": 50.96,
+     "end": 51.2
+    },
+    {
+     "w": "demande",
+     "start": 51.28,
+     "end": 51.6
+    },
+    {
+     "w": "plus",
+     "start": 51.68,
+     "end": 51.76
+    },
+    {
+     "w": "de",
+     "start": 51.88,
+     "end": 52
+    },
+    {
+     "w": "cent",
+     "start": 52.12,
+     "end": 52.24
+    },
+    {
+     "w": "fois",
+     "start": 52.32,
+     "end": 52.4
+    },
+    {
+     "w": "l'énergie",
+     "start": 52.44,
+     "end": 52.8
+    },
+    {
+     "w": "d'une",
+     "start": 52.88,
+     "end": 53.04
+    },
+    {
+     "w": "question",
+     "start": 53.2,
+     "end": 53.36
+    },
+    {
+     "w": "simple.",
+     "start": 53.52,
+     "end": 54
+    }
+   ]
+  },
+  {
+   "scene": "total",
+   "start": 54.08,
+   "end": 63.28,
+   "words": [
+    {
+     "w": "Et",
+     "start": 54.08,
+     "end": 54.12
+    },
+    {
+     "w": "la",
+     "start": 54.16,
+     "end": 54.24
+    },
+    {
+     "w": "somme",
+     "start": 54.32,
+     "end": 54.48
+    },
+    {
+     "w": "grimpe.",
+     "start": 54.56,
+     "end": 55.2
+    },
+    {
+     "w": "En",
+     "start": 55.28,
+     "end": 55.36
+    },
+    {
+     "w": "2025,",
+     "start": 55.44,
+     "end": 56.24
+    },
+    {
+     "w": "l'électricité",
+     "start": 56.32,
+     "end": 56.96
+    },
+    {
+     "w": "des",
+     "start": 57.04,
+     "end": 57.12
+    },
+    {
+     "w": "centres",
+     "start": 57.2,
+     "end": 57.44
+    },
+    {
+     "w": "de",
+     "start": 57.48,
+     "end": 57.52
+    },
+    {
+     "w": "données",
+     "start": 57.6,
+     "end": 57.84
+    },
+    {
+     "w": "a",
+     "start": 57.88,
+     "end": 57.92
+    },
+    {
+     "w": "bondi",
+     "start": 58,
+     "end": 58.24
+    },
+    {
+     "w": "de",
+     "start": 58.36,
+     "end": 58.48
+    },
+    {
+     "w": "17",
+     "start": 58.52,
+     "end": 58.8
+    },
+    {
+     "w": "%,",
+     "start": 58.88,
+     "end": 59.52
+    },
+    {
+     "w": "et",
+     "start": 59.56,
+     "end": 59.6
+    },
+    {
+     "w": "l'Agence",
+     "start": 59.68,
+     "end": 59.92
+    },
+    {
+     "w": "internationale",
+     "start": 60,
+     "end": 60.64
+    },
+    {
+     "w": "de",
+     "start": 60.68,
+     "end": 60.72
+    },
+    {
+     "w": "l'énergie",
+     "start": 60.773,
+     "end": 61.2
+    },
+    {
+     "w": "la",
+     "start": 61.28,
+     "end": 61.36
+    },
+    {
+     "w": "voit",
+     "start": 61.4,
+     "end": 61.6
+    },
+    {
+     "w": "doubler",
+     "start": 61.64,
+     "end": 62
+    },
+    {
+     "w": "d'ici",
+     "start": 62.027,
+     "end": 62.24
+    },
+    {
+     "w": "2030.",
+     "start": 62.32,
+     "end": 63.28
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 63.349,
+   "end": 68.56,
+   "words": [
+    {
+     "w": "Ta",
+     "start": 63.349,
+     "end": 63.36
+    },
+    {
+     "w": "question,",
+     "start": 63.44,
+     "end": 64.08
+    },
+    {
+     "w": "c'est",
+     "start": 64.133,
+     "end": 64.24
+    },
+    {
+     "w": "quelques",
+     "start": 64.32,
+     "end": 64.56
+    },
+    {
+     "w": "gouttes.",
+     "start": 64.6,
+     "end": 65.28
+    },
+    {
+     "w": "Ce",
+     "start": 65.32,
+     "end": 65.36
+    },
+    {
+     "w": "qui",
+     "start": 65.44,
+     "end": 65.52
+    },
+    {
+     "w": "remplit",
+     "start": 65.6,
+     "end": 65.84
+    },
+    {
+     "w": "les",
+     "start": 65.92,
+     "end": 66
+    },
+    {
+     "w": "bouteilles,",
+     "start": 66.08,
+     "end": 66.64
+    },
+    {
+     "w": "c'est",
+     "start": 66.667,
+     "end": 66.72
+    },
+    {
+     "w": "qu'on",
+     "start": 66.76,
+     "end": 66.88
+    },
+    {
+     "w": "en",
+     "start": 66.96,
+     "end": 67.04
+    },
+    {
+     "w": "pose",
+     "start": 67.16,
+     "end": 67.28
+    },
+    {
+     "w": "chaque",
+     "start": 67.32,
+     "end": 67.44
+    },
+    {
+     "w": "année",
+     "start": 67.52,
+     "end": 67.68
+    },
+    {
+     "w": "davantage.",
+     "start": 67.72,
+     "end": 68.56
+    }
+   ]
+  }
+ ]
+}

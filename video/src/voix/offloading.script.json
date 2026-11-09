@@ -1,0 +1,95 @@
+{
+  "id": "offloading",
+  "term": "offloading",
+  "episode": 37,
+  "date": "2026-11-27",
+  "format": "Définition",
+  "composition": "OffloadingVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme ; tons variés scène par scène, ouverture différente à chaque épisode (PA, 2026-11-09 : ne pas sonner IA)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[excited] C'est quoi... l'/ˈɔfloʊdɪŋ/…",
+      "screen": "Titre géant « OFFLOADING ». Derrière, posé dès la première image, un smartphone dessiné, écran allumé sur une bulle de chat vide avec un curseur qui clignote. Aucun sous-titre (nocaption)."
+    },
+    {
+      "scene": "intro",
+      "say": "[casual] Le 8 novembre, sur X, quelqu'un annonce faire tourner une IA de mille milliards de paramètres… sur son téléphone. [thoughtful] C'est vrai… mais il y a un hic.",
+      "screen": "Une publication X reconstituée, sans nom ni photo (avatar gris, « @… »), collée de travers au scotch sur « sur X » ; son texte : « 1T paramètres, en local, sur mon smartphone ». Sur « mille milliards », un compteur « 1 000 000 000 000 » compte en count-up. Sur « téléphone », le smartphone glisse à côté de la publication. Sur « hic », un petit point d'interrogation rouge pop au-dessus du téléphone."
+    },
+    {
+      "scene": "base",
+      "say": "[warmly] Pour répondre vite, un modèle range ses paramètres dans la mémoire rapide, tout près de la puce. Même compressé au maximum, ce modèle pèse deux cent trente-trois gigaoctets… et un téléphone haut de gamme n'en a que douze.",
+      "screen": "Le téléphone en coupe : la puce au centre, une petite case « mémoire » collée à côté. Sur « deux cent trente-trois gigaoctets », une barre « 233 Go » pousse en bar grow depuis la gauche et déborde du cadre (punch zoom du short sur « 233 Go »). Sur « douze gigaoctets », la case mémoire s'allume, libellé « 12 Go », minuscule à côté de la barre."
+    },
+    {
+      "scene": "nom",
+      "say": "[curious] Alors on laisse le reste sur le stockage, et on va le chercher chaque fois qu'il sert. C'est ça, le déchargement, ou en anglais, l'/ˈɔfloʊdɪŋ/.",
+      "screen": "Le téléphone en coupe, deux zones : « mémoire » (petite, près de la puce) et « stockage » (grande, plus loin). Sur « on laisse le reste », la majorité des blocs de poids glisse vers le stockage. Sur « on va le chercher », une flèche fait l'aller-retour stockage → puce. « déchargement » puis « offloading » s'écrivent en grand au-dessus (passages masqués, onscreen)."
+    },
+    {
+      "scene": "bastien",
+      "say": "[mischievously] Imagine Bastien, qui n'a qu'un frigo de bar… ses courses sont à la cave, six étages plus bas. Pour chaque plat, il descend chercher juste ce qu'il faut, et le dîner arrive à minuit.",
+      "screen": "Scène propre à ce short : Bastien en pixel art dans un studio minuscule, un frigo de bar à côté de lui. Sur « cave », la cave apparaît en bas à droite, des étagères pleines de bocaux. Sur « six étages », un escalier en zigzag relie le studio à la cave. Sur « chaque plat », Bastien descend en arc à la cave et remonte avec un seul bocal. Sur « minuit », une horloge pop, aiguilles sur 12 h."
+    },
+    {
+      "scene": "mecanisme",
+      "say": "[matter-of-fact] Ce modèle n'active que quatre de ses cent vingt-huit experts pour chaque token… ça fait encore onze gigaoctets à relire, et le stockage d'un téléphone en lit à peine cinq par seconde.",
+      "screen": "Une grille de 128 petites cases (les experts) en mémoire de stockage. Sur « quatre experts », quatre cases s'allument en couleur d'accent, en cascade. Sur « onze gigaoctets », une jauge « 11 Go » se remplit au-dessus de la flèche stockage → puce. Sur « cinq par seconde », un tuyau étroit entre le stockage et la puce, libellé « 5 Go/s », et un chronomètre qui commence à tourner."
+    },
+    {
+      "scene": "etdonc",
+      "say": "[amused] Résultat, une à deux secondes par token… pose ta question en montant dans le métro, la première phrase arrive à la station suivante.",
+      "screen": "Un plan de ligne de métro horizontal, deux stations. Sur « une à deux secondes », un compteur « 1 à 2 s / token » au-dessus du chronomètre. Sur « métro », une rame pixel art part de la première station ; sur « station suivante », elle arrive, et la bulle de chat du téléphone affiche enfin une seule ligne de texte."
+    },
+    {
+      "scene": "pc",
+      "say": "[curious] Sur un ordinateur avec beaucoup de mémoire vive, la même astuce fait écrire DeepSeek à une dizaine de tokens par seconde.",
+      "screen": "Une tour de PC dessinée, avec une rangée de barrettes de mémoire vive bien visibles. Sur « une dizaine de tokens par seconde », des tokens sortent de la tour en cascade rapide, à côté du téléphone qui n'en sort qu'un."
+    },
+    {
+      "scene": "chute",
+      "say": "[warmly] Alors oui, une IA géante démarre sur un téléphone… [pause] mais pour la faire parler, tout est une question de mémoire.",
+      "screen": "Retour au téléphone plein cadre, la bulle de chat avec sa ligne unique, le curseur qui clignote ; à côté, Bastien devant son frigo de bar, un bocal à la main, l'horloge sur minuit. Image finale pleine."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈɔfloʊdɪŋ/": "offloading"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "C'est ça, le déchargement, ou en anglais, l'offloading."
+    ]
+  },
+  "sources": [
+    "Fiche offloading de lexique/terms.js (vague 26, 2026-11-09)",
+    "Publication sur X du 8 novembre 2026 (modèle de 1T paramètres sur un smartphone) : anecdote, compte non nommé, aucun chiffre repris",
+    "Mistral Large 4, fiche Hugging Face : 1 000 milliards de paramètres, 49 milliards actifs, 128 experts dont 4 actifs par token ; https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B",
+    "Unsloth, GGUF de Mistral Large 4, version UD-IQ1_S : 233,0 Go (API Hugging Face) ; calcul : 49 Md × 233 Go / 1 000 Md ≈ 11,4 Go relus par token",
+    "Samsung, communiqué UFS 5.0 du 23 juin 2026 : 10,8 Go/s, plus de deux fois l'UFS 4.1 (donc moins de 5,4 Go/s) ; 11,4 Go / 5 à 10,8 Go/s ≈ 1 à 2 s par token",
+    "Galaxy S25 Ultra, 12 Go de mémoire vive (Wikipédia), cité dans la fiche bande-passante-memoire",
+    "KTransformers, tutoriel du 10 février 2025 : DeepSeek-R1 671B, 14 Go de VRAM et 382 Go de mémoire vive, 8,73 à 11,26 tokens/s ; https://github.com/kvcache-ai/ktransformers",
+    "Image : Bastien, son frigo de bar et ses courses à la cave six étages plus bas (fiche offloading, image changée le 2026-11-09 à la demande de PA) ; scène inventée"
+  ],
+  "publication": {
+    "title": "Une IA géante sur ton téléphone ?",
+    "description": "L'offloading (déchargement), c'est laisser sur le disque la partie d'un modèle qui ne tient pas dans la mémoire rapide, et aller la relire à chaque token. Une IA de mille milliards de paramètres démarre alors sur un téléphone, mais elle écrit une à deux secondes par token.\nhttps://neopal.github.io/lexique/offloading/\n#ialocale #llm #smartphone #vulgarisation",
+    "fil": "Après la vague grand public, on revient chez toi : une IA géante peut-elle tourner sur ton téléphone ?",
+    "decor": "studio de Bastien et sa cave, puis ligne de métro"
+  },
+  "credits": [
+    "Publication X reconstituée (sans nom ni photo), dessinée dans la composition"
+  ]
+}

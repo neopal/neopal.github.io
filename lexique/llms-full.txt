@@ -1,6 +1,6 @@
 # Lexique IA : toutes les définitions
 
-> 178 fiches écrites et sourcées par Pierre-Adrien Lair (https://neopal.github.io/). Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
+> 183 fiches écrites et sourcées par Pierre-Adrien Lair (https://neopal.github.io/). Licence CC BY 4.0 : réutilisation libre, y compris par des IA, en citant « Pierre-Adrien Lair, Lexique IA » et l'URL de la fiche.
 > Index : https://neopal.github.io/lexique/llms.txt
 
 ## Token
@@ -748,6 +748,8 @@ Dans un MoE, une partie du réseau est remplacée par des dizaines ou des centai
 
 Le gain se paie en mémoire, parce que tous les experts doivent être chargés même quand ils se taisent. Les fichiers de Kimi K2 pèsent environ 1 000 Go, alors que chaque token n'active que 32 milliards de ses 1 000 milliards de paramètres.
 
+Sur une machine personnelle, l'offloading tire parti de ce découpage en laissant les experts dans la mémoire vive du processeur et le reste du modèle sur la carte graphique, une option que llama.cpp propose depuis juillet 2025. Comme chaque token ne lit que les quelques experts choisis, le modèle ralentit bien moins qu'un modèle dense déchargé de la même façon. L'élagage d'experts va plus loin, en retirant ceux qui travaillent le moins.
+
 Le mot « expert » trompe un peu. L'équipe de Mistral a regardé comment Mixtral répartissait des articles d'ArXiv, des résumés de biologie et des textes de philosophie. Les trois se distribuaient à peu près dans les mêmes proportions entre les experts, qui ne se partagent donc pas les sujets comme le mot le laisse croire.
 
 ### 2024 vs 2026
@@ -776,6 +778,8 @@ Jusqu'à Llama 3, Meta publiait des modèles denses. En avril 2025, Llama 4 Mave
 - Tailles de modèle : https://neopal.github.io/lexique/tailles-de-modele/
 - Open weights : https://neopal.github.io/lexique/open-weights/
 - Plus le modèle est gros, plus il est intelligent : https://neopal.github.io/lexique/mythe-plus-gros-plus-intelligent/
+- Offloading (déchargement des poids) : https://neopal.github.io/lexique/offloading/
+- Élagage d'experts : https://neopal.github.io/lexique/elagage-d-experts/
 
 ### Sources
 
@@ -788,6 +792,9 @@ Jusqu'à Llama 3, Meta publiait des modèles denses. En avril 2025, Llama 4 Mave
 - Meta, The Llama 3 Herd of Models, juillet 2024 (architecture Transformer dense) : https://arxiv.org/abs/2407.21783
 - Wikipédia, Llama (Llama 4 Maverick, 5 avril 2025 : 400B au total, 17B actifs, 128 experts) : https://en.wikipedia.org/wiki/Llama_(language_model)
 - Wikipédia, Open-source artificial intelligence (Kimi K3 et Qwen3.8, plus gros modèles ouverts en 2026) : https://en.wikipedia.org/wiki/Open-source_artificial_intelligence
+- llama.cpp, pull request 14992, fusionnée le 31 juillet 2025 (option --cpu-moe, qui met les poids des experts sur le CPU) : https://github.com/ggml-org/llama.cpp/pull/14992
+- KTransformers, tutoriel DeepSeek-R1/V3, février 2025 (experts calculés sur le CPU, attention et KV cache sur le GPU ; 671B en Q4_K_M avec 14 Go de VRAM) : https://github.com/kvcache-ai/ktransformers/blob/main/doc/en/DeepseekR1_V3_tutorial.md
+- Lasby et al. (Cerebras), REAP the Experts: Why Pruning Prevails for One-Shot MoE compression, 15 octobre 2025 (retirer des experts d'un MoE pour le compresser) : https://arxiv.org/abs/2510.13999
 
 ## Open weights
 
@@ -942,6 +949,9 @@ En 2024, la quantization se faisait surtout après coup, sur un modèle publié 
 - Tailles de modèle : https://neopal.github.io/lexique/tailles-de-modele/
 - Open weights : https://neopal.github.io/lexique/open-weights/
 - LoRA : https://neopal.github.io/lexique/lora/
+- Bande passante mémoire : https://neopal.github.io/lexique/bande-passante-memoire/
+- Offloading (déchargement des poids) : https://neopal.github.io/lexique/offloading/
+- Élagage d'experts : https://neopal.github.io/lexique/elagage-d-experts/
 
 ### Sources
 
@@ -3624,6 +3634,7 @@ NVIDIA n'est pas seul. Google conçoit ses propres puces, les TPU, et Ironwood, 
 - Open weights : https://neopal.github.io/lexique/open-weights/
 - Modèles frontière : https://neopal.github.io/lexique/modeles-frontiere/
 - Transformer : https://neopal.github.io/lexique/transformer/
+- Bande passante mémoire : https://neopal.github.io/lexique/bande-passante-memoire/
 
 ### Sources
 
@@ -3697,6 +3708,7 @@ Ramené à une seule question, le coût reste petit. En août 2025, Google a mes
 - Token : https://neopal.github.io/lexique/token/
 - Latence et débit : https://neopal.github.io/lexique/latence-vs-debit/
 - Décodage spéculatif : https://neopal.github.io/lexique/speculative-decoding/
+- Prefill et decode : https://neopal.github.io/lexique/prefill-et-decode/
 
 ### Sources
 
@@ -3732,6 +3744,8 @@ Pour choisir le token suivant, chaque couche du modèle consulte tous les tokens
 
 Ce cache pèse lourd, et les auteurs de vLLM l'estimaient en 2023 à 800 Ko par token pour un modèle de 13 milliards de paramètres, soit jusqu'à 1,6 Go pour une seule requête de 2 048 tokens. Pour Mistral Small 3.2, sorti en juin 2025, le calcul tiré de sa configuration donne environ 164 Ko par token, et quelque 21 Go quand sa fenêtre est pleine, près de la moitié de ce que pèsent ses paramètres. C'est souvent ce cache, plus que le modèle, qui limite le nombre de conversations qu'un GPU sert en même temps.
 
+Ce cache peut se compresser, comme les poids. Dans llama.cpp, les options --cache-type-k et --cache-type-v le stockent en q8_0 ou en q4_0 au lieu de 16 bits, soit 8,5 ou 4,5 bits par nombre, et le cache plein de Mistral Small 3.2 descend d'environ 21 Go à 11 Go, ou à 6 Go. Le moteur vLLM propose de même un cache en FP8, qui loge deux fois plus de tokens dans la même mémoire, et conseille un calibrage pour limiter la perte de précision. Comme le cache est relu en entier à chaque token écrit, l'alléger réduit aussi ce que la bande passante mémoire doit faire passer.
+
 Le même principe sert d'une requête à l'autre. Quand deux requêtes commencent par le même texte, un moteur comme vLLM peut réutiliser les blocs de cache du début commun au lieu de les recalculer. C'est ce qui permet aux fournisseurs d'API de facturer moins cher un début de requête déjà envoyé quelques minutes plus tôt, et la fiche Coût d'une requête en donne les prix.
 
 ### Dans le jargon
@@ -3757,6 +3771,7 @@ Le même principe sert d'une requête à l'autre. Quand deux requêtes commencen
 - Inférence : https://neopal.github.io/lexique/inference/
 - Coût d'une requête : https://neopal.github.io/lexique/cout-d-une-requete/
 - Cache de prompt : https://neopal.github.io/lexique/prompt-caching/
+- Bande passante mémoire : https://neopal.github.io/lexique/bande-passante-memoire/
 
 ### Sources
 
@@ -3766,6 +3781,10 @@ Le même principe sert d'une requête à l'autre. Quand deux requêtes commencen
 - NVIDIA, Mastering LLM Techniques: Inference Optimization, 17 novembre 2023 (clés et valeurs gardées en mémoire pour éviter de les recalculer, cache qui grandit avec la longueur de la séquence) : https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/
 - Ainslie et al., GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints, mai 2023 : https://arxiv.org/abs/2305.13245
 - vLLM, documentation Automatic Prefix Caching (réutilisation des blocs de KV cache quand deux requêtes partagent un même début) : https://docs.vllm.ai/en/latest/design/prefix_caching.html
+- llama.cpp, documentation de llama-server, consultée le 9 novembre 2026 (-ctk, --cache-type-k et -ctv, --cache-type-v : type de donnée du KV cache pour K et pour V, valeurs permises f32, f16, bf16, q8_0, q4_0, q4_1, iq4_nl, q5_0, q5_1, f16 par défaut) : https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md
+- llama.cpp, ggml/src/ggml-common.h, consulté le 9 novembre 2026 (blocs de 32 valeurs : q8_0 = une échelle de 16 bits + 32 octets, soit 34 octets ou 8,5 bits par valeur ; q4_0 = une échelle de 16 bits + 16 octets, soit 18 octets ou 4,5 bits par valeur). Calcul pour Mistral Small 3.2 : 21,5 Go x 8,5 / 16 = 11,4 Go ; 21,5 Go x 4,5 / 16 = 6,0 Go : https://github.com/ggml-org/llama.cpp/blob/master/ggml/src/ggml-common.h
+- vLLM, documentation Quantized KV Cache, consultée le 9 novembre 2026 (« Quantizing the KV (Key-Value) cache to FP8 format can significantly reduce its memory footprint », ce qui permet de « store more tokens in memory » ; option kv_cache_dtype, fp8_e4m3 ou fp8_e5m2 ; échelles à 1,0 sans calibrage, calibrage recommandé avec llm-compressor). Calcul : 16 bits / 8 bits = deux fois plus de tokens dans la même mémoire : https://docs.vllm.ai/en/latest/features/quantization/quantized_kvcache.html
+- Databricks, LLM Inference Performance Engineering: Best Practices, 12 octobre 2023 (bande passante consommée par token = (taille des paramètres + taille du KV cache) / temps par token) : https://www.databricks.com/blog/llm-inference-performance-engineering-best-practices
 
 ## Descente de gradient
 
@@ -4711,6 +4730,7 @@ Le post-entraînement apprend à répondre, pas à savoir. En 2022, à la questi
 - Flagornerie : https://neopal.github.io/lexique/flagornerie/
 - DPO : https://neopal.github.io/lexique/dpo/
 - Données synthétiques : https://neopal.github.io/lexique/donnees-synthetiques/
+- Abliteration : https://neopal.github.io/lexique/abliteration/
 
 ### Sources
 
@@ -5302,6 +5322,7 @@ En 2023, un jailbreak se bricolait à la main, comme la grand-mère au napalm, e
 - RLHF : https://neopal.github.io/lexique/rlhf/
 - Post-entraînement : https://neopal.github.io/lexique/post-entrainement/
 - Prompt engineering : https://neopal.github.io/lexique/prompt-engineering/
+- Abliteration : https://neopal.github.io/lexique/abliteration/
 
 ### Sources
 
@@ -7001,7 +7022,7 @@ URL : https://neopal.github.io/lexique/mythe-lit-mot-par-mot/
 Catégorie : Mythes vs réalité
 En anglais : Myth: AI reads word by word
 Aussi appelé : lit mot par mot, lecture mot à mot, lit de gauche à droite
-Variantes anglaises : reads word by word, word by word, prefill, parallel processing, typoglycemia
+Variantes anglaises : reads word by word, word by word, parallel processing, typoglycemia
 
 ### Définition courte
 
@@ -7048,6 +7069,7 @@ Tout lire d'un coup ne veut pas dire tout peser pareil. En février 2025, le tes
 - L'IA calcule : https://neopal.github.io/lexique/mythe-ia-calcule/
 - Encodeur-décodeur : https://neopal.github.io/lexique/encodeur-decodeur/
 - Logits : https://neopal.github.io/lexique/logits/
+- Prefill et decode : https://neopal.github.io/lexique/prefill-et-decode/
 
 ### Sources
 
@@ -8107,6 +8129,8 @@ Relevé du 2 octobre 2026. Tarifs pour les requêtes de 272 000 tokens d'entrée
 - Coût d'une requête : https://neopal.github.io/lexique/cout-d-une-requete/
 - Décodage spéculatif : https://neopal.github.io/lexique/speculative-decoding/
 - Architectures hybrides : https://neopal.github.io/lexique/architectures-hybrides/
+- Prefill et decode : https://neopal.github.io/lexique/prefill-et-decode/
+- Bande passante mémoire : https://neopal.github.io/lexique/bande-passante-memoire/
 
 ### Sources
 
@@ -11498,6 +11522,8 @@ Le décalage se mesure. En septembre 2025, Epoch AI a regardé les modèles asse
 - Quantization : https://neopal.github.io/lexique/quantization/
 - Modèles frontière : https://neopal.github.io/lexique/modeles-frontiere/
 - ChatGPT, c'est le modèle : https://neopal.github.io/lexique/mythe-chatgpt-c-est-le-modele/
+- Bande passante mémoire : https://neopal.github.io/lexique/bande-passante-memoire/
+- Élagage d'experts : https://neopal.github.io/lexique/elagage-d-experts/
 
 ### Sources
 
@@ -11861,3 +11887,404 @@ En 2024, le texte publié au Journal officiel faisait tomber le 2 août 2026 les
 - Next, Règlement sur l'IA : le monde économique demande un report, Bruxelles tient bon, 7 juillet 2025 (lettre d'une cinquantaine de dirigeants envoyée le jeudi, dont Mistral, TotalEnergies, BNP Paribas, Mercedes-Benz ; pause d'au moins deux ans demandée ; porte-parole de la Commission, vendredi : « Il n'y a pas de pause. Il n'y a pas de période de grâce, de répit ») : https://next.ink/191202/reglement-sur-lia-le-monde-economique-demande-un-report-bruxelles-tient-bon/
 - TechCrunch, Meta refuses to sign EU's AI code of practice, 18 juillet 2025 (Joel Kaplan, responsable des affaires publiques de Meta : « Europe is heading down the wrong path on AI »), citation traduite : https://techcrunch.com/2025/07/18/meta-refuses-to-sign-eus-ai-code-of-practice/
 - Alphabet, Announces Fourth Quarter and Fiscal Year 2025 Results, 4 février 2026, pièce 99.1 déposée à la SEC (chiffre d'affaires 2025 : 402 836 millions de dollars). Calcul : 7 % × 402,836 = 28,2 milliards de dollars ; 7 % × 365 jours = 25,55 jours, soit du 1er janvier à minuit au 26 janvier vers 13 heures : https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/googexhibit991q42025.htm
+
+## Prefill et decode
+
+URL : https://neopal.github.io/lexique/prefill-et-decode/
+Catégorie : Inférence
+En anglais : Prefill and decode
+Aussi appelé : préremplissage, phase de décodage, lecture du prompt, séparation prefill-decode
+Variantes anglaises : prefill, decode, prefill phase, decode phase, prompt processing, token generation, disaggregated serving, P/D disaggregation, TPOT, time per output token
+
+### Définition courte
+
+Prefill et decode sont les deux phases d'une réponse, la lecture de tout ton message d'un bloc, limitée par le calcul, puis l'écriture token par token, limitée par la mémoire.
+
+### L'image
+
+« La commande d'une table de douze, je la prends en une minute, ils parlent tous en même temps et je note tout. Ensuite, c'est un aller-retour en cuisine par assiette, et j'ai beau courir, c'est la longueur du couloir qui fait attendre les clients. »
+
+### Imagine
+
+Sur un Mac à puce M4, tu demandes à un petit modèle local de 7 milliards de paramètres « Résume-moi ça en cinq points » sous un mail de dix lignes. Le premier mot s'affiche en moins d'une seconde, et les cinq points tiennent en quelques secondes. Tu poses la même question sous un PDF de 80 pages, et l'écran reste vide plus de quatre minutes avant que les cinq points s'écrivent, eux aussi, en quelques secondes.
+
+### Définition complète
+
+Une réponse se fait en deux temps qui sollicitent des pièces différentes de la machine. Le prefill, la lecture, traite tous les tokens de ton message d'un seul passage et en parallèle, remplit le KV cache avec leurs clés et leurs valeurs, puis en tire le premier token de la réponse. Le decode, l'écriture, produit ensuite les suivants un à un, chacun dépendant du précédent, et chaque pas oblige la puce à relire en mémoire les poids du modèle pour un seul token. Selon NVIDIA, la lecture occupe toute la puissance de calcul du GPU, alors que l'écriture passe l'essentiel de son temps à attendre les données, et c'est la bande passante mémoire qui fixe alors son rythme.
+
+Les outils qui font tourner un modèle sur ta machine affichent donc deux vitesses, pp et tg dans llama.cpp, prompt eval et eval dans Ollama. Dans l'exemple de la documentation de llama.cpp, un Qwen2 de 7 milliards de paramètres compressé en 4 bits lit 7 340 tokens par seconde sur un GPU et en écrit 121, soixante fois moins. Les deux vitesses ne progressent pas non plus au même rythme. Dans le tableau que tient le projet sur les puces d'Apple, passer de la M4 Max à la M5 Max, à 40 cœurs graphiques chacune, rend la lecture 3,6 fois plus rapide et l'écriture 1,4 fois seulement.
+
+Le temps avant le premier token, le TTFT (time to first token), mesure surtout la lecture, et il grandit avec tout ce que tu envoies, documents collés, historique de la conversation et consignes comprises. Un début de requête déjà lu peut sauter cette étape grâce au cache de prompt, qui garde le KV cache calculé la fois précédente. L'écriture a ses propres remèdes, comme le décodage spéculatif, qui fait vérifier plusieurs tokens d'un coup au modèle pour employer la puissance de calcul qu'elle laisse dormir.
+
+Chez les fournisseurs, les deux phases se gênent quand elles partagent les mêmes GPU, et selon les auteurs de DistServe, une seule longue lecture peut rendre l'écriture des autres conversations 2 à 30 fois plus lente. Fin 2023, l'étude Splitwise propose de confier chaque phase à des machines différentes, et en janvier 2024, DistServe, coécrit par le laboratoire de Hao Zhang à l'UC San Diego, sert ainsi jusqu'à 7,4 fois plus de requêtes dans les délais visés. Moonshot AI a bâti sur ce principe Mooncake, la plateforme de son assistant Kimi, qui y traite 75 % de requêtes en plus, et NVIDIA l'a intégré en mars 2025 à Dynamo, son logiciel de service d'inférence. En novembre 2025, d'après le bilan de l'équipe de DistServe, presque tous les moteurs de service utilisés en production séparaient les deux phases.
+
+### Dans le jargon
+
+- pp, tg : prompt processing et text generation, les deux vitesses que mesure llama-bench, l'outil de test de llama.cpp ; la première, celle de la lecture, est presque toujours la plus élevée
+- TTFT : time to first token, le délai avant le premier mot de la réponse ; il mesure surtout la durée du prefill, donc la longueur de ce que tu as envoyé
+- TPOT : time per output token, le temps moyen entre deux tokens de la réponse, la mesure du decode
+- P/D disaggregation : la séparation du prefill et du decode sur des GPU différents, que pratiquent les gros serveurs d'inférence
+
+### Entendu au bureau
+
+- Question : On a branché notre base documentaire sur le modèle local, et les collègues attendent une minute avant le premier mot. Il écrit trop lentement ?
+- Réponse : Il écrit sans doute bien, c'est la lecture des dizaines de pages jointes à chaque question qui fait attendre ; envoie seulement les passages utiles, et garde un début de requête identique d'une question à l'autre pour que le cache t'évite de tout relire.
+
+### À éviter
+
+« Ce modèle tourne à 500 tokens par seconde sur ma carte, il m'écrira une page en deux secondes. » Le chiffre le plus flatteur d'un test est souvent celui de la lecture ; la réponse s'écrit à la vitesse de l'autre phase, de neuf à soixante fois plus lente dans les mesures de llama.cpp citées ici, et c'est elle qui compte dans une conversation.
+
+### Termes liés
+
+- Inférence : https://neopal.github.io/lexique/inference/
+- KV cache : https://neopal.github.io/lexique/kv-cache/
+- Latence et débit : https://neopal.github.io/lexique/latence-vs-debit/
+- L'IA lit mot par mot : https://neopal.github.io/lexique/mythe-lit-mot-par-mot/
+- Décodage spéculatif : https://neopal.github.io/lexique/speculative-decoding/
+- Cache de prompt : https://neopal.github.io/lexique/prompt-caching/
+- Bande passante mémoire : https://neopal.github.io/lexique/bande-passante-memoire/
+
+### Sources
+
+- NVIDIA, Mastering LLM Techniques: Inference Optimization, 17 novembre 2023 (prefill : opération matrice-matrice très parallélisée qui « effectively saturates GPU utilization » ; decode : un token à la fois, « the speed at which the data (weights, keys, values, activations) is transferred to the GPU from memory dominates the latency », « a memory-bound operation ») : https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/
+- NVIDIA, LLM Inference Benchmarking: Fundamental Concepts, 2 avril 2025 (le TTFT comprend l'attente, le prefill et le réseau ; « The longer the prompt, the larger the TTFT » ; la longueur d'entrée compte le prompt système, l'historique et les documents) : https://developer.nvidia.com/blog/llm-benchmarking-fundamental-concepts
+- llama.cpp, documentation de llama-bench, consultée le 9 novembre 2026 (tests « Prompt processing (pp) » et « Text generation (tg) » ; exemple qwen2 7B Q4_K - Medium sur CUDA : pp512 à 7 340,20 tokens/s, tg128 à 120,60 tokens/s). Calcul : 7 340 / 121 = 60,7 : https://github.com/ggml-org/llama.cpp/blob/master/tools/llama-bench/README.md
+- llama.cpp, discussion #4167 Performance of llama.cpp on Apple Silicon M-series, tableau tenu par Georgi Gerganov, consulté le 9 novembre 2026 (LLaMA 7B en Q4_0 ; M4 à 10 cœurs graphiques : 221,29 tokens/s en lecture, 24,11 en écriture ; M4 Max à 40 cœurs : 885,68 et 83,06 ; M5 Max à 40 cœurs : 3 219,99 et 119,92). Calculs : 3 220 / 886 = 3,6 ; 119,9 / 83,1 = 1,44 ; 221 / 24 = 9,2. Imagine, au rythme de la M4 : un mail de dix lignes, environ 150 tokens, se lit en 150 / 221 = 0,7 s ; cinq points d'environ 100 tokens s'écrivent en 100 / 24 = 4 s ; un PDF de 80 pages, compté à 500 mots par page, fait 40 000 mots x 1,66 = 66 500 tokens environ, lus en au moins 66 500 / 221 = 300 s, la lecture ralentissant quand le contexte s'allonge : https://github.com/ggml-org/llama.cpp/discussions/4167
+- Candide, ou l'optimisme, Voltaire, texte du Projet Gutenberg compté avec tiktoken (o200k_base) le 9 novembre 2026 entre les marqueurs START et END : 56 650 tokens pour 34 080 mots, soit 1,66 token par mot en français (base du calcul de l'Imagine) : https://www.gutenberg.org/ebooks/4650
+- Ollama, documentation Usage de l'API, consultée le 9 novembre 2026 (prompt_eval_count et prompt_eval_duration pour les tokens d'entrée, eval_count et eval_duration pour les tokens de sortie ; prompt_eval_cached_count pour les tokens d'entrée relus depuis le cache) : https://docs.ollama.com/api/usage
+- Patel et al., Splitwise: Efficient generative LLM inference using phase splitting, 30 novembre 2023 (« a compute-intensive prompt computation, and a memory-intensive token generation » ; la génération sous-utilise le calcul ; les deux phases confiées à des machines séparées) : https://arxiv.org/abs/2311.18677
+- Zhong et al., DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving, 18 janvier 2024 (prefill et decode sur des GPU différents ; TTFT pour le prefill, TPOT pour le decode ; « 7.4x more requests » dans les contraintes de latence) : https://arxiv.org/abs/2401.09670
+- Junda Chen, Yonghao Zhuang et Hao Zhang (Hao AI Lab, UC San Diego), Disaggregated Inference: 18 Months Later, 3 novembre 2025, bilan des auteurs de DistServe (« a single large prefill can inflate TPOT by 2~30x » même avec le chunked prefill ; « almost every production-grade LLM serving framework » tourne désormais en mode séparé, dont NVIDIA Dynamo, llm-d, SGLang, vLLM et Mooncake) : https://hao-ai-lab.github.io/blogs/distserve-retro/
+- Qin et al. (Moonshot AI), Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving, 24 juin 2024 (plateforme de service de Kimi, grappes de prefill et de decode séparées ; « enables Kimi to handle 75% more requests » en conditions réelles) : https://arxiv.org/abs/2407.00079
+- NVIDIA, NVIDIA Dynamo Open-Source Library Accelerates and Scales AI Reasoning Models, 18 mars 2025 (« uses disaggregated serving to separate the processing and generation phases of large language models (LLMs) on different GPUs ») : https://nvidianews.nvidia.com/news/nvidia-dynamo-open-source-library-accelerates-and-scales-ai-reasoning-models
+
+## Bande passante mémoire
+
+URL : https://neopal.github.io/lexique/bande-passante-memoire/
+Catégorie : Inférence
+En anglais : Memory bandwidth
+Aussi appelé : débit mémoire, mur de la mémoire
+Variantes anglaises : memory bandwidth, memory-bound, memory wall, MBU, model bandwidth utilization
+
+### Définition courte
+
+La bande passante mémoire est le volume de données qu'une puce lit dans sa mémoire par seconde ; elle fixe, plus que le calcul, la vitesse d'écriture d'un modèle.
+
+### L'image
+
+Pour chaque mot de sa carte de vœux, Jean-Claude relit son dictionnaire de 2 000 pages en entier ; il réfléchit très vite, et c'est de tourner les pages qui lui prend la soirée. Depuis qu'il a pris l'édition de poche, ses cartes partent deux fois plus vite, et ses neveux trouvent qu'il écrit plus simplement.
+
+### Imagine
+
+Sur un Galaxy S25 Ultra, tu demandes à Ministral 3 8B, dans sa version 4 bits de 6 Go, un message pour annuler le dîner de samedi. Pour chacun des 50 tokens de sa réponse, le téléphone relit le modèle entier dans sa mémoire, soit 300 Go déplacés en trois secondes et demie au mieux, davantage que ses 256 Go de stockage ne pourraient en contenir. Le message d'excuse, lui, fait trois lignes.
+
+### Définition complète
+
+La bande passante mémoire (memory bandwidth) mesure combien d'octets une puce peut faire passer chaque seconde de sa mémoire à ses unités de calcul. Elle passe au premier plan quand un modèle écrit, parce que chaque nouveau token oblige un modèle dense à relire tous ses poids, pour ne faire que quelques opérations sur chaque octet lu. La vitesse d'écriture a donc un plafond qu'on calcule de tête, la bande passante divisée par ce que pèsent les poids en mémoire. Un Mac M1 Pro lit sa mémoire à 200 Go/s, et un modèle de 7 milliards de paramètres en 16 bits pèse 14 Go, d'où un plafond vers 14 tokens par seconde ; les mesures de llama.cpp lui en donnent 12,75. Le KV cache de la conversation s'ajoute aux poids à relire, et pèse d'autant plus qu'elle s'allonge.
+
+Tout ce qui réduit les octets à lire par token accélère donc l'écriture. Sur un Mac M2 Ultra, le même modèle de 7 milliards écrit 41 tokens par seconde en 16 bits et 94 une fois quantifié en 4 bits, sans que la puce ait changé. Un MoE gagne autrement, en ne relisant que les experts choisis pour le token, et Qwen3-30B-A3B, qui fait travailler 3,3 de ses 30,5 milliards de paramètres, en relit à chaque pas environ dix fois moins que Qwen3-32B, un modèle dense de taille voisine. La lecture de ton message échappe en revanche à ce plafond, parce que les poids chargés une fois servent à tous ses tokens en même temps, et c'est alors la puissance de calcul qui limite (voir Prefill et decode).
+
+L'écart entre les machines se lit dans leur fiche technique, et le tableau ci-dessous en donne quelques-unes. Un téléphone haut de gamme lit sa mémoire à 85 Go/s, une RTX 5090 à 1 792 Go/s, et une H100 de serveur, dont la mémoire HBM est montée contre la puce, à 3,35 To/s, quarante fois plus vite que le téléphone. Un modèle trop gros pour la mémoire peut être lu directement depuis le SSD, mais un très bon SSD plafonne à 7,45 Go/s, et Qwen3-32B en 4 bits n'en sortirait qu'un token toutes les 2,7 secondes.
+
+L'écart grandit avec le temps. En mars 2024, Amir Gholami et ses coauteurs comptaient que la puissance de calcul des serveurs avait triplé tous les deux ans depuis vingt ans, quand la bande passante de leur mémoire n'était multipliée que par 1,6 sur la même période. Ils appellent ce décalage le mur de la mémoire (memory wall), et le tiennent pour le principal goulot d'étranglement du service des modèles.
+
+### Bande passante de quelques machines, et plafond d'écriture pour Qwen3-32B en 4 bits (20 Go)
+
+| Machine | Mémoire | Capacité | Bande passante | Plafond |
+| --- | --- | --- | --- | --- |
+| Galaxy S25 Ultra (Snapdragon 8 Elite) | LPDDR5X | 12 Go | 84,8 Go/s | ne tient pas |
+| PC avec RTX 3060 | GDDR6 | 12 Go | 360 Go/s | ne tient pas |
+| PC avec RTX 5090 | GDDR7 | 32 Go | 1 792 Go/s | 90 tokens/s |
+| Mac Studio M5 Ultra | unifiée | jusqu'à 512 Go | 1,2 To/s | 60 tokens/s |
+| Serveur avec H100 SXM | HBM | 80 Go | 3,35 To/s | 168 tokens/s |
+| SSD Samsung 990 PRO | flash NVMe | jusqu'à 4 To | 7,45 Go/s | 0,37 token/s |
+
+Relevé du 9 novembre 2026. Plafond : bande passante divisée par les 20 Go à relire pour chaque token, sans compter le KV cache. C'est une borne haute, et les vitesses mesurées restent en dessous.
+
+### Dans le jargon
+
+- memory-bound : limité par la mémoire : la puce attend ses données plus qu'elle ne calcule, ce qui est le cas pendant l'écriture d'une réponse ; l'inverse se dit compute-bound
+- MBU : model bandwidth utilization, la part de la bande passante théorique qu'un moteur exploite vraiment ; dans l'exemple de Databricks, un modèle de 7 milliards en 16 bits qui écrit un token toutes les 14 ms fait passer 1 To par seconde
+- mémoire unifiée : chez Apple, une seule mémoire partagée par le processeur et la partie graphique de la puce, si bien que le modèle n'a pas à tenir dans une carte graphique séparée
+
+### Entendu au bureau
+
+- Question : On a mis 64 Go de RAM dans le PC pour faire tourner le modèle sur le processeur. Il tient, mais il écrit deux mots par seconde.
+- Réponse : La capacité dit si le modèle tient, la bande passante dit à quelle vitesse il écrit. Une barrette de DDR5 se lit à 70 Go/s au mieux, vingt-cinq fois moins vite que la mémoire d'une RTX 5090 ; prends un modèle plus compressé, ou un MoE qui relit moins de poids par token.
+
+### À éviter
+
+« Le modèle tient dans la mémoire, il sera rapide. » Tenir dit seulement qu'il démarre. Un Mac Studio M5 Ultra de 512 Go peut charger un modèle dense de 400 Go, mais il le relit à 1,2 To/s et n'en tire que trois tokens par seconde au mieux.
+
+### Termes liés
+
+- GPU : https://neopal.github.io/lexique/gpu/
+- Quantization : https://neopal.github.io/lexique/quantization/
+- MoE (Mixture of Experts) : https://neopal.github.io/lexique/moe/
+- Prefill et decode : https://neopal.github.io/lexique/prefill-et-decode/
+- Tailles de modèle : https://neopal.github.io/lexique/tailles-de-modele/
+- Latence et débit : https://neopal.github.io/lexique/latence-vs-debit/
+- Offloading (déchargement des poids) : https://neopal.github.io/lexique/offloading/
+
+### Sources
+
+- NVIDIA, Mastering LLM Techniques: Inference Optimization, 17 novembre 2023 (le prefill « effectively saturates GPU utilization » ; pendant le decode, « the speed at which the data (weights, keys, values, activations) is transferred to the GPU from memory dominates the latency » ; un modèle de 7 milliards en 16 bits « would take roughly 7B * sizeof(FP16) ~= 14 GB » ; la quantization permet de « transfer more parameters over the same amount of bandwidth ») : https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/
+- Databricks, LLM Inference Performance Engineering: Best Practices, 12 octobre 2023 (vitesse d'écriture dépendante du chargement des paramètres depuis la mémoire ; MBU = bande passante obtenue / bande passante maximale, avec bande passante obtenue = (taille des paramètres + taille du KV cache) / temps par token ; exemple d'un 7B en 16 bits à 14 ms par token, soit 14 Go en 14 ms, 1 To/s) : https://www.databricks.com/blog/llm-inference-performance-engineering-best-practices
+- llama.cpp, discussion #4167 Performance of llama.cpp on Apple Silicon M-series, tableau de mesures consulté le 9 novembre 2026 (Llama 2 7B, vitesse d'écriture tg : M1 Pro à 200 Go/s, 12,75 tokens/s en F16 ; M2 Ultra à 800 Go/s et 76 cœurs graphiques, 41,02 tokens/s en F16 et 94,27 en Q4_0). Calcul du plafond : 200 / 14 = 14,3 tokens/s : https://github.com/ggml-org/llama.cpp/discussions/4167
+- Gholami et al., AI and Memory Wall, 21 mars 2024, publié dans IEEE Micro (sur vingt ans, puissance de calcul des serveurs multipliée par 3,0 tous les deux ans, bande passante de la DRAM par 1,6 ; la mémoire devenue le principal goulot, en particulier pour servir les modèles) : https://arxiv.org/abs/2403.14123
+- Mistral AI, fiche de Ministral-3-8B-Instruct-2512 (8,4 milliards de paramètres de langage et 0,4 milliard pour la vision, « designed for edge deployment ») : https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512
+- Ollama, ministral-3, consulté le 9 novembre 2026 (ministral-3:8b-instruct-2512-q4_K_M : 6,0 Go). Calcul de l'Imagine : 50 tokens x 6,0 Go = 300 Go relus ; 6,0 / 84,8 = 0,071 s par token au mieux, x 50 = 3,5 s ; plafond 84,8 / 6,0 = 14 tokens/s (schéma : 360 / 6 = 60, 1 792 / 6 = 299, 3 350 / 6 = 558) : https://ollama.com/library/ministral-3/tags
+- Wikipédia, Samsung Galaxy S25 (S25 Ultra : Snapdragon 8 Elite for Galaxy, 12 Go de mémoire LPDDR5X, stockage à partir de 256 Go) : https://en.wikipedia.org/wiki/Samsung_Galaxy_S25
+- Wikipédia, List of Qualcomm Snapdragon systems on chips (Snapdragon 8 Elite, annoncé le 22 octobre 2024 : LPDDR5X sur quatre canaux de 16 bits, 5 300 MHz, 84,8 Go/s) : https://en.wikipedia.org/wiki/List_of_Qualcomm_Snapdragon_systems_on_chips
+- NVIDIA, GeForce RTX 3060 Family (RTX 3060 : 12 Go de GDDR6, bus de 192 bits) : https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3060-3060ti/
+- Wikipédia, GeForce RTX 30 series (RTX 3060 12 Go : mémoire à 15 Gb/s par broche sur 192 bits, 360 Go/s ; calcul : 15 x 192 / 8 = 360) : https://en.wikipedia.org/wiki/GeForce_RTX_30_series
+- NVIDIA, GeForce RTX 5090 (32 Go de GDDR7, bus de 512 bits) : https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/
+- Wikipédia, GeForce RTX 50 series (RTX 5090 : 28 Gb/s par broche sur 512 bits, 1 792 Go/s ; calcul : 28 x 512 / 8 = 1 792) : https://en.wikipedia.org/wiki/GeForce_RTX_50_series
+- Apple, Apple introduces new Mac Studio with M5 Max and M5 Ultra, 25 août 2026 (M5 Ultra : « 1.2TB/s of memory bandwidth », jusqu'à 512 Go de mémoire unifiée ; M5 Max jusqu'à 614 Go/s). Calcul de « À éviter » : 1 200 / 400 = 3 tokens/s : https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/
+- NVIDIA, H100 Tensor Core GPU (H100 SXM : 80 Go, 3,35 To/s ; H100 NVL : 94 Go, 3,9 To/s). Calcul : 3 350 / 84,8 = 39,5, environ quarante fois le téléphone : https://www.nvidia.com/en-us/data-center/h100/
+- Samsung, 990 PRO 4TB PCIe 4.0 NVMe M.2 SSD (lecture séquentielle jusqu'à 7 450 Mo/s ; « PCIe 4.0's best theoretical sequential read is 8000 MB/s »). Calcul : 20 / 7,45 = 2,7 s par token pour Qwen3-32B en 4 bits : https://www.samsung.com/ie/business/memory-storage/nvme-ssd/990-pro-4tb-nvme-pcie-gen-4-mz-v9p4t0bw/
+- Qwen, Qwen3: Think Deeper, Act Faster, 29 avril 2025 (Qwen3-32B parmi les six modèles denses publiés, Qwen3-30B-A3B parmi les deux MoE) : https://qwenlm.github.io/blog/qwen3/
+- Qwen, fiche de Qwen3-30B-A3B (30,5 milliards de paramètres, 3,3 milliards activés, 8 experts sur 128). Calcul : 32,8 / 3,3 = 9,9, environ dix fois moins de paramètres relus par token que Qwen3-32B : https://huggingface.co/Qwen/Qwen3-30B-A3B
+- Qwen, fiche de Qwen3-32B (32,8 milliards de paramètres) : https://huggingface.co/Qwen/Qwen3-32B
+- Ollama, qwen3, consulté le 9 novembre 2026 (qwen3:32b en q4_K_M : 20 Go ; qwen3:30b-a3b-q4_K_M : 19 Go). Calculs du tableau : 1 792 / 20 = 90 ; 1 200 / 20 = 60 ; 3 350 / 20 = 168 ; 7,45 / 20 = 0,37 : https://ollama.com/library/qwen3/tags
+- Wikipédia, DDR5 SDRAM (bande passante d'un module de 32 à 70,4 Go/s). Calcul : 1 792 / 70,4 = 25,5 : https://en.wikipedia.org/wiki/DDR5_SDRAM
+
+## Offloading (déchargement des poids)
+
+URL : https://neopal.github.io/lexique/offloading/
+Catégorie : Inférence
+En anglais : Offloading
+Aussi appelé : déchargement, déchargement des poids, inférence hybride CPU-GPU
+Variantes anglaises : offload, CPU offload, GPU offloading, partial offload, expert offloading, MoE offloading
+
+### Définition courte
+
+L'offloading range ailleurs, en mémoire vive ou sur disque, les poids d'un modèle trop gros pour la mémoire de la carte graphique ; le modèle tourne, mais plus lentement.
+
+### L'image
+
+Dans son studio de 18 m², Bastien n'a qu'un frigo de bar, alors ses courses dorment à la cave, six étages plus bas. Pour chaque plat, il descend chercher juste ce qu'il lui faut, et le dîner arrive à minuit.
+
+### Imagine
+
+« Mon téléphone peut vraiment faire tourner un modèle de mille milliards de paramètres ? », demande Malik à sa cousine, qui vient d'installer Mistral Large 4 sur le sien. « Oui, pose-lui ta question en montant dans le métro, il aura fini sa première phrase à la station suivante. »
+
+### Définition complète
+
+Une carte graphique calcule vite parce que les poids du modèle sont rangés dans sa propre mémoire, tout près de la puce. Quand le fichier dépasse cette mémoire, le déchargement (offloading) en garde une partie ailleurs. Dans llama.cpp, l'option -ngl fixe le nombre de couches confiées à la carte, et les suivantes restent en mémoire vive, où le processeur les calcule. Le logiciel ouvre aussi le fichier en mmap par défaut, et le système ne va chercher sur le disque que les morceaux dont le calcul a besoin. La bibliothèque Accelerate de Hugging Face suit la même pente, en remplissant la carte, puis la mémoire vive, puis le disque.
+
+Le modèle démarre alors, ce qui ne dit rien de sa vitesse, parce que chaque token oblige à relire tous les poids qui servent, y compris ceux qu'on a relégués dans la mémoire lente. Le 8 novembre 2026, une publication sur X annonçait Mistral Large 4, mille milliards de paramètres, en local sur un smartphone. Sa version la plus compressée pèse 233 Go, bien plus que la mémoire vive d'un téléphone, et chaque token relit une dizaine de gigaoctets sur le stockage. L'UFS 5.0 que Samsung a présenté en juin 2026, le stockage mobile le plus rapide annoncé à ce jour avec 10,8 Go par seconde, laisse encore environ une seconde par token, et la génération précédente, l'UFS 4.1, lit deux fois moins vite. En décembre 2023, les chercheurs d'Apple avaient montré avec « LLM in a flash » qu'en lisant moins, et par plus gros blocs, on allait 4 à 5 fois plus vite qu'un chargement naïf sur processeur, et 20 à 25 fois sur carte graphique. Leurs modèles faisaient deux fois la taille de la mémoire vive, loin de l'écart qui sépare les 233 Go de Mistral Large 4 de celle d'un téléphone.
+
+Les MoE se prêtent mieux au déchargement, parce que chaque token ne fait travailler que quelques experts. En février 2025, l'équipe de KTransformers a fait tourner DeepSeek-R1, 671 milliards de paramètres réduits à environ 4 bits par quantization, avec 14 Go de mémoire graphique et 382 Go de mémoire vive, en écrivant 8,7 à 11,3 tokens par seconde. Les experts restaient en mémoire vive, calculés par le processeur, pendant que la carte gardait l'attention et le cache. L'autre façon de faire tenir un MoE dans moins de mémoire consiste à lui retirer des experts, c'est l'élagage d'experts.
+
+### 2024 vs 2026
+
+Jusqu'en 2024, on déchargeait un modèle couche par couche, les premières sur la carte graphique et les suivantes au processeur. En 2025, KTransformers puis llama.cpp, avec --override-tensor en avril et --cpu-moe en juillet, ont trié les poids selon leur rôle, l'attention sur la carte et les experts en mémoire vive, ce qui suit enfin la façon dont un MoE lit ses poids.
+
+### Dans le jargon
+
+- -ngl : l'option de llama.cpp qui fixe combien de couches du modèle vont dans la mémoire de la carte graphique ; les autres restent en mémoire vive, calculées par le processeur
+- --cpu-moe : l'option de llama.cpp, ajoutée en juillet 2025, qui laisse tous les experts d'un MoE en mémoire vive et met le reste du modèle sur la carte graphique
+- offload sur le GPU : dans llama.cpp, le mot sert dans l'autre sens : on « offloade » vers la carte graphique les couches qu'elle peut prendre, et le reste demeure au processeur
+- mmap : memory map, le mode de chargement par défaut de llama.cpp : le système traite le fichier du modèle comme s'il était en mémoire et ne lit sur le disque que les morceaux touchés
+
+### Solutions populaires
+
+- llama.cpp (bibliothèque open source) : https://github.com/ggml-org/llama.cpp
+- KTransformers (bibliothèque open source) : https://github.com/kvcache-ai/ktransformers
+- Accelerate (Hugging Face) (bibliothèque open source) : https://huggingface.co/docs/accelerate/concept_guides/big_model_inference
+
+### Entendu au bureau
+
+- Question : On n'a qu'une carte de 24 Go sur le serveur, on peut quand même y faire tourner un modèle de 200 Go ?
+- Réponse : Il démarrera grâce à l'offloading, mais un modèle dense relira à chaque token tout ce qui ne tient pas sur la carte ; prends plutôt un MoE, laisse ses experts en mémoire vive, et mesure la vitesse avant de l'annoncer à qui que ce soit.
+
+### À éviter
+
+« S'il se charge, il tourne. » Un modèle qui se charge a seulement trouvé de la place pour ses poids. Sa vitesse dépend de la mémoire la plus lente où il doit les relire à chaque token, et sous un token par seconde, une réponse de dix lignes prend plusieurs minutes.
+
+### Termes liés
+
+- Bande passante mémoire : https://neopal.github.io/lexique/bande-passante-memoire/
+- Quantization : https://neopal.github.io/lexique/quantization/
+- MoE (Mixture of Experts) : https://neopal.github.io/lexique/moe/
+- Open weights : https://neopal.github.io/lexique/open-weights/
+- Élagage d'experts : https://neopal.github.io/lexique/elagage-d-experts/
+
+### Sources
+
+- llama.cpp, README de llama-server (-ngl : nombre de couches gardées en VRAM ; --override-tensor ; --cpu-moe et --n-cpu-moe : experts du MoE gardés côté CPU ; chargement en mmap par défaut ; lecture de certains tenseurs sur le disque à la demande), consulté le 9 novembre 2026 : https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md
+- llama.cpp, README (inférence hybride CPU + GPU pour accélérer en partie les modèles plus gros que la VRAM) : https://github.com/ggml-org/llama.cpp
+- llama.cpp, pull request 11397, fusionnée le 2 avril 2025 (option --override-tensor ; exemple « -ngl 99 -ot exps=CPU » pour garder les experts d'un MoE sur le CPU et décharger le reste vers le GPU) : https://github.com/ggml-org/llama.cpp/pull/11397
+- llama.cpp, pull request 14992, fusionnée le 31 juillet 2025 (option --cpu-moe, raccourci pour mettre les poids des experts sur le CPU) : https://github.com/ggml-org/llama.cpp/pull/14992
+- Wikipédia, Memory-mapped file (chargement paresseux : seules les pages réellement lues sont amenées en mémoire, par pagination à la demande) : https://en.wikipedia.org/wiki/Memory-mapped_file
+- Hugging Face, Accelerate, Big Model Inference (remplir les GPU, puis décharger les poids en mémoire du CPU, puis sur le disque ; poids remontés sur le GPU juste avant chaque passage) : https://huggingface.co/docs/accelerate/concept_guides/big_model_inference
+- Alizadeh et al. (Apple), LLM in a flash: Efficient Large Language Model Inference with Limited Memory, 12 décembre 2023 (poids gardés en mémoire flash et lus à la demande ; modèles jusqu'à deux fois la taille de la DRAM ; 4 à 5 fois plus rapide sur CPU et 20 à 25 fois sur GPU qu'un chargement naïf) : https://arxiv.org/abs/2312.11514
+- Mistral AI, fiche de Mistral Large 4 sur Hugging Face (1 000 milliards de paramètres, 49 milliards actifs par token hors embeddings, 128 experts dont 4 actifs par token ; dépôt créé le 30 septembre 2026) : https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B
+- Unsloth, GGUF de Mistral Large 4 (version 1 bit UD-IQ1_S : 233,0 Go selon l'API Hugging Face, consultée le 9 novembre 2026). Calcul : 49 Md de paramètres actifs × 233 Go / 1 000 Md ≈ 11,4 Go relus par token ; 11,4 / 10,8 Go/s ≈ 1,1 s par token en UFS 5.0, plus de 2 s en UFS 4.1 (moins de 5,4 Go/s) ; une phrase de 20 tokens prend donc de 20 à 45 s, plus la lecture de la question, hors poids gardés en mémoire vive et lectures non séquentielles : https://huggingface.co/unsloth/Mistral-Large-4-1T-A52B-GGUF
+- Samsung, Samsung Unveils Industry's Fastest UFS 5.0 Solution for Next-Gen On-Device AI Applications, 23 juin 2026 (lecture séquentielle jusqu'à 10,8 Go/s, plus de deux fois l'UFS 4.1 ; production en série au quatrième trimestre 2026) : https://news.samsung.com/global/samsung-unveils-industrys-fastest-ufs-5-0-solution-for-next-gen-on-device-ai-applications
+- KTransformers, tutoriel DeepSeek-R1/V3 (10 février 2025 : DeepSeek-R1 671B en Q4_K_M avec 14 Go de VRAM et 382 Go de DRAM ; écriture à 8,73 tokens/s sur 32 cœurs et 11,26 sur deux processeurs ; experts calculés sur le CPU, attention et KV cache sur le GPU, à la différence du déchargement par couches de llama.cpp) : https://github.com/kvcache-ai/ktransformers/blob/main/doc/en/DeepseekR1_V3_tutorial.md
+
+## Élagage d'experts
+
+URL : https://neopal.github.io/lexique/elagage-d-experts/
+Catégorie : Entraînement
+En anglais : Expert pruning
+Aussi appelé : élagage, fusion d'experts, modèle élagué
+Variantes anglaises : expert pruning, MoE pruning, REAP, pruning, pruned model, expert merging
+
+### Définition courte
+
+L'élagage d'experts retire d'un MoE les experts qui servent le moins, repérés sur un lot d'exemples, pour qu'il prenne moins de mémoire sans le réentraîner.
+
+### L'image
+
+Pour faire tenir sa brasserie dans un food truck, Joël a relevé une semaine de commandes en plein mois d'août, puis laissé au dépôt les cuisiniers qu'on n'appelait presque jamais. Chaque plat passe toujours entre trois paires de mains et le camion roule très bien, jusqu'au jour de novembre où un client demande une choucroute ; Régis, qui la faisait, est resté au dépôt.
+
+### Imagine
+
+Le fichier de Qwen3-Coder-480B, le grand modèle de code de Qwen, pèse 960 Go en 16 bits, de quoi occuper une fibre à 1 gigabit par seconde pendant 2 h 08. Cerebras lui a retiré la moitié des experts de chaque couche, et la version élaguée se télécharge en 1 h 06. Sur les tests de programmation, elle garde 97,6 % de son score.
+
+### Définition complète
+
+Un MoE garde en mémoire tous ses experts, alors que chaque token n'en fait travailler qu'une poignée. L'élagage d'experts (expert pruning) retire ceux qui servent le moins. On fait passer dans le modèle un lot d'exemples, la calibration, on note chaque expert d'après ce qu'il y a fait, puis on supprime les moins bien notés de chaque couche, en une passe et sans réentraînement. La méthode REAP, publiée par Cerebras en octobre 2025, pose deux questions à chaque expert : avec quelle force le routeur le choisit-il, et combien sa sortie pèse-t-elle quand il travaille ? Le routeur choisit ensuite autant d'experts qu'avant parmi ceux qui restent, et Qwen3-Coder-REAP-25B-A3B garde le A3B de l'original, parce que le modèle prend moins de place sans calculer moins pour chaque token.
+
+Le gain se voit sur une machine perso. En 4 bits (Q4_K_M), le fichier de Qwen3-Coder-30B pèse 18,6 Go, trop pour une carte graphique de 16 Go, qui devrait en laisser une partie dans la mémoire du processeur et tournerait plus lentement. Sa version élaguée par Cerebras, à 103 experts par couche au lieu de 128, pèse 15,2 Go dans le même format. Les auteurs de REAP reconnaissent pourtant qu'à taille égale, la quantization fait mieux tant qu'on ne descend pas sous 4 bits, puisqu'un Qwen3-30B-A3B quantifié en 4 bits bat sa version élaguée de moitié restée en 16 bits, avec un fichier deux fois plus petit. Les deux méthodes s'additionnent, et sur leur plus gros modèle testé, de mille milliards de paramètres, 4 bits et moitié des experts retirés font 87,5 % de mémoire en moins, là où la quantization seule devrait descendre à 2 bits.
+
+L'élagage ne date pas des MoE. En janvier 2023, SparseGPT mettait à zéro jusqu'à 60 % des poids d'OPT-175B en une passe, presque sans perte sur ses mesures. En 2024, NVIDIA a taillé dans Nemotron-4 15B pour en tirer des modèles de 8 et 4 milliards de paramètres, réentraînés par distillation avec moins de 3 % des données d'origine. Dans un MoE, on coupe des experts entiers. L'autre voie, la fusion d'experts (expert merging), regroupe ceux qui se ressemblent et en fait la moyenne ; elle tient sur les QCM, mais d'après Cerebras, elle rend le texte généré plus répétitif. En avril 2026, le laboratoire de Samsung à Montréal a proposé REAM, une fusion guidée par la note de REAP, souvent proche du modèle d'origine dans ses tests.
+
+Ce qu'on perd dépend des exemples de calibration. Cerebras a montré qu'un modèle de code compressé d'après des textes du web tout-venant pouvait ne plus rien écrire de cohérent. Le 5 novembre 2026, deux chercheurs de Hostinger ont élagué au quart, avec REAP et des exemples en anglais, quatre MoE dont Gemma 4 et GLM-4.7-Flash, et la compréhension écrite a perdu 1,7 point en médiane en anglais, contre 21,4 points en lituanien. Dans les dernières couches, le lituanien envoie 55 à 72 % de ses choix vers huit experts seulement, que des exemples en anglais font en partie retirer ; une calibration en lituanien répare l'essentiel. En septembre 2026, les auteurs de RAZOR relevaient encore des changements de style, de mise en forme et de fin de réponse chez des modèles élagués dont les scores montaient. Les mesures publiées portent surtout sur le code, les maths et quelques langues, et la tenue d'un modèle élagué sur tes propres tâches, en français, reste à vérifier.
+
+### Quelques modèles élagués et publiés par Cerebras avec REAP
+
+| Modèle d'origine | Version élaguée publiée | Experts par couche | Paramètres (milliards) | Experts actifs par token |
+| --- | --- | --- | --- | --- |
+| Qwen3-Coder-30B-A3B | octobre 2025 | 128 → 103 | 30,5 → 24,9 | 8 |
+| GLM-4.7-Flash | janvier 2026 | 64 → 48 | 31,2 → 23,0 | 4 |
+| MiniMax-M2.5 | février 2026 | 256 → 154 | 228,7 → 139,1 | 8 |
+| Qwen3-Coder-480B-A35B | octobre 2025 | 160 → 80 | 480,2 → 246,1 | 8 |
+| DeepSeek-V3.2 | décembre 2025 | 256 → 128 | 685,4 → 344,9 | 8 |
+
+Relevé du 9 novembre 2026. Nombre de paramètres selon l'API Hugging Face, experts lus dans les fichiers de configuration. Le nombre d'experts actifs ne bouge pas : le modèle élagué calcule chaque token comme l'original.
+
+### 2024 vs 2026
+
+En février 2024, des chercheurs retiraient 2 experts sur 8 d'un MoE de 47 milliards de paramètres, pour environ 3 points de perte, dans un article de recherche. En octobre 2025, Cerebras a élagué jusqu'à la moitié des experts de modèles allant jusqu'à mille milliards de paramètres, puis a publié ses versions élaguées sur Hugging Face, où des centaines de modèles portent REAP dans leur nom en novembre 2026.
+
+### Dans le jargon
+
+- REAP : Router-weighted Expert Activation Pruning, la méthode publiée par Cerebras en octobre 2025 : chaque expert est noté sur la force avec laquelle le routeur le choisit et sur le poids de sa sortie, et les moins bien notés partent
+- REAP-25B-A3B : un nom de modèle élagué : Qwen3-Coder-30B-A3B ramené à 25 milliards de paramètres, qui en fait toujours travailler 3 milliards pour chaque token
+- calibration set : le lot d'exemples qu'on fait passer dans le modèle pour noter ses experts ; ce qu'il ne contient pas risque de partir avec les experts retirés
+- REAP50, 50 % compression : la part des experts retirés dans chaque couche, ici la moitié
+
+### Entendu au bureau
+
+- Question : Qwen3-Coder 30B ne tient pas sur notre carte de 16 Go. On prend la version élaguée de Cerebras ou on descend en 3 bits ?
+- Réponse : Pour du code, prends la version élaguée en 4 bits, puisque Cerebras a choisi les experts à garder sur du code et des appels d'outils. Si l'outil doit aussi répondre aux clients en français, teste-la d'abord sur une dizaine de vraies demandes en français.
+
+### À éviter
+
+« Un modèle élagué de moitié répond deux fois plus vite. » Chaque token passe toujours par autant d'experts, donc le calcul ne change pas ; la vitesse ne grimpe que si le modèle, devenu plus petit, tient enfin tout entier dans la mémoire de la carte au lieu d'en déborder.
+
+### Termes liés
+
+- MoE (Mixture of Experts) : https://neopal.github.io/lexique/moe/
+- Quantization : https://neopal.github.io/lexique/quantization/
+- Offloading (déchargement des poids) : https://neopal.github.io/lexique/offloading/
+- Distillation : https://neopal.github.io/lexique/distillation/
+- Tailles de modèle : https://neopal.github.io/lexique/tailles-de-modele/
+- Une IA locale, c'est ChatGPT chez soi : https://neopal.github.io/lexique/mythe-ia-locale/
+
+### Sources
+
+- Lasby et al. (Cerebras et université de Calgary), REAP the Experts: Why Pruning Prevails for One-Shot MoE compression, 15 octobre 2025, version 3 du 13 mai 2026 (critère qui combine le choix du routeur et la sortie de l'expert ; quasi sans perte sur le code après 50 % d'experts retirés de Qwen3-Coder-480B et Kimi-K2 ; fusion plus répétitive en génération ; calibration sur C4 qui effondre le code ; à taille égale, Qwen3-30B-A3B en 4 bits AWQ bat la version élaguée de 50 % en 16 bits ; 4 bits et 50 % d'experts retirés = 87,5 % de taille en moins, sinon il faudrait 2 bits) : https://arxiv.org/abs/2510.13999
+- Cerebras, REAP: One-Shot Pruning for Trillion-Parameter Mixture-of-Experts Models, 16 octobre 2025 (deux questions : force du choix par le routeur, poids de la sortie ; Qwen3-Coder-480B en FP8 élagué de 50 % garde 97,6 % de son score de code hors agents et 96,7 % sur SWE-bench) : https://www.cerebras.ai/blog/reap
+- Qwen, fiche de Qwen3-Coder-480B-A35B-Instruct : 160 experts par couche, 62 couches, 8 actifs ; 960,3 Go de fichiers selon l'API Hugging Face, consultée le 9 novembre 2026. Calcul : 960,3 Go x 8 = 7 682 gigabits, soit 7 682 s = 2 h 08 à 1 Gbit/s, débit théorique : https://huggingface.co/Qwen/Qwen3-Coder-480B-A35B-Instruct
+- Cerebras, fiche de Qwen3-Coder-REAP-246B-A35B : 80 experts par couche, 246,1 milliards de paramètres, 492,2 Go de fichiers selon l'API Hugging Face, publiée le 30 octobre 2025. Calcul : 492,2 Go x 8 = 3 938 gigabits, soit 3 938 s = 1 h 06 à 1 Gbit/s : https://huggingface.co/cerebras/Qwen3-Coder-REAP-246B-A35B
+- Cerebras, fiche de Qwen3-Coder-REAP-25B-A3B, 20 octobre 2025 (20 % d'experts retirés, 103 sur 128, 3 milliards actifs, calibration sur du code, des appels de fonctions et des trajectoires d'agent ; scores proches de l'original) : https://huggingface.co/cerebras/Qwen3-Coder-REAP-25B-A3B
+- Qwen, fiche de Qwen3-Coder-30B-A3B-Instruct (128 experts, 8 actifs, 30,5 milliards de paramètres selon l'API Hugging Face) : https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct
+- Unsloth, Qwen3-Coder-30B-A3B-Instruct-GGUF : fichier Q4_K_M de 18,56 Go (API Hugging Face, consultée le 9 novembre 2026) : https://huggingface.co/unsloth/Qwen3-Coder-30B-A3B-Instruct-GGUF
+- Bartowski, cerebras_Qwen3-Coder-REAP-25B-A3B-GGUF : fichier Q4_K_M de 15,19 Go (API Hugging Face, consultée le 9 novembre 2026) : https://huggingface.co/bartowski/cerebras_Qwen3-Coder-REAP-25B-A3B-GGUF
+- Cerebras, fiche de GLM-4.7-Flash-REAP-23B-A3B, 23 janvier 2026 (48 experts routés par couche au lieu de 64 chez zai-org/GLM-4.7-Flash, 4 actifs ; 23,0 contre 31,2 milliards de paramètres selon l'API Hugging Face) : https://huggingface.co/cerebras/GLM-4.7-Flash-REAP-23B-A3B
+- Cerebras, fiche de MiniMax-M2.5-REAP-139B-A10B, 18 février 2026 (154 experts par couche au lieu de 256 chez MiniMaxAI/MiniMax-M2.5, 8 actifs ; 139,1 contre 228,7 milliards de paramètres selon l'API Hugging Face) : https://huggingface.co/cerebras/MiniMax-M2.5-REAP-139B-A10B
+- Cerebras, fiche de DeepSeek-V3.2-REAP-345B-A37B, 9 décembre 2025 (128 experts routés par couche au lieu de 256 chez deepseek-ai/DeepSeek-V3.2, 8 actifs ; 344,9 contre 685,4 milliards de paramètres selon l'API Hugging Face) : https://huggingface.co/cerebras/DeepSeek-V3.2-REAP-345B-A37B
+- Rasymas et Kvedaras (Hostinger Research), English Calibration Erodes Lithuanian in Expert-Pruned Mixture-of-Experts Language Models, 5 novembre 2026 (quatre MoE dont Qwen3.6, Gemma 4 et GLM-4.7-Flash élagués avec REAP ; à 25 %, compréhension en baisse médiane de 1,7 point en anglais et 21,4 en lituanien ; 55 à 72 % des choix lituaniens des dernières couches vers huit experts ; la calibration en lituanien répare l'essentiel) : https://arxiv.org/abs/2611.07654
+- Jha et al. (Samsung SAIL Montréal), REAM: Merging Improves Pruning of Experts in LLMs, 6 avril 2026 (fusion d'experts guidée par le critère de REAP, souvent comparable au modèle non compressé) : https://arxiv.org/abs/2604.04356
+- Song et Zheng, RAZOR: Pruning Replaceable Experts in LLMs, 24 septembre 2026 (changements de diversité, de mise en forme et de fin de génération malgré des scores plus élevés) : https://arxiv.org/abs/2609.30465
+- Frantar et Alistarh, SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot, 2 janvier 2023 (OPT-175B et BLOOM-176B élagués à 50 % en une passe, 60 % avec une hausse de perplexité négligeable) : https://arxiv.org/abs/2301.00774
+- Muralidharan et al. (NVIDIA), Compact Language Models via Pruning and Knowledge Distillation, 19 juillet 2024 (Minitron : modèles de 8B et 4B tirés de Nemotron-4 15B par élagage puis distillation, moins de 3 % des données d'origine) : https://arxiv.org/abs/2407.14679
+- Li et al., Merge, Then Compress: Demystify Efficient SMoE with Hints from Its Routing Policy, 2 octobre 2023 (M-SMoE, fusion des experts guidée par le routage) : https://arxiv.org/abs/2310.01334
+- Lu et al., Not All Experts are Equal: Efficient Expert Pruning and Skipping for Mixture-of-Experts Large Language Models, 22 février 2024 (Mixtral 8x7B, 47 milliards de paramètres : environ 2,9 points de perte en retirant 2 experts sur 8 ; chaque token passe toujours par k experts, sans réduction du calcul) : https://arxiv.org/abs/2402.14800
+- Hugging Face, recherche de modèles « REAP », consultée le 9 novembre 2026 (plus de 800 modèles portent REAP dans leur nom parmi les 1 000 premiers résultats de l'API, homonymes exclus) : https://huggingface.co/models?search=REAP
+
+## Abliteration
+
+URL : https://neopal.github.io/lexique/abliteration/
+Catégorie : Comportements et limites
+Aussi appelé : direction du refus, ablation du refus, modèle décensuré
+Variantes anglaises : abliterated model, refusal direction, refusal ablation, refusal feature ablation, directional ablation, weight orthogonalization
+
+### Définition courte
+
+L'abliteration retire à un modèle à poids ouverts sa capacité de refuser, sans le réentraîner, en effaçant de ses poids la direction de ses activations qui commande le refus.
+
+### L'image
+
+En troisième, Mathis a retiré la bague de bridage du variateur de son scooter, une pièce de quelques centimes, et il dépasse maintenant les 70 km/h sans avoir touché au moteur, qui en était capable depuis la sortie d'usine.
+
+### Imagine
+
+Sur ton ordinateur, tu demandes à un modèle Qwen d'Alibaba ce qui s'est passé à Pékin en juin 1989, et il refuse poliment d'en parler. Tu poses la même question à une copie du même modèle dont on a seulement effacé des poids la direction du refus, sans lui faire lire une ligne de plus, et elle te répond avec ce qu'elle savait déjà.
+
+### Définition complète
+
+Un assistant apprend à refuser pendant son post-entraînement, et on pourrait croire ce refus dilué dans ses milliards de paramètres. En juin 2024, Andy Arditi et ses coauteurs ont montré le contraire sur 13 modèles ouverts, jusqu'à 72 milliards de paramètres. Pendant que le modèle lit une demande, chacune de ses couches produit une longue liste de nombres, ses activations, et celles des demandes qu'il va refuser penchent toutes dans une même direction. Effacer cette direction l'empêche de refuser, et l'ajouter lui fait refuser des demandes anodines.
+
+L'abliteration rend l'effacement permanent. Au lieu d'intervenir à chaque réponse, on corrige une fois pour toutes les matrices du modèle pour qu'aucune couche ne puisse plus écrire dans la direction du refus, sans la moindre étape d'entraînement. Le mot, contraction d'« ablation » et d'« obliteration », s'est répandu avec un billet que Maxime Labonne a publié sur Hugging Face le 13 juin 2024. L'opération suppose d'avoir les poids entre les mains, ce qui la réserve aux modèles ouverts ; ceux de ChatGPT ou de Claude restent chez leur éditeur.
+
+Trois voisins font autre chose. Un jailbreak contourne le refus par la formulation et laisse le modèle intact, et les guardrails d'un service en ligne relisent demandes et réponses sur les serveurs de l'éditeur, hors de tout poids. Le fine-tuning va plus loin et apprend au modèle de nouvelles réponses. Le 6 novembre 2026, Nous Research a publié Arete-27B, Qwen3.8-27B réentraîné sur vingt mille questions touchant à la liberté d'expression, à la démocratie ou à la surveillance. La part de ses réponses qui reprenaient la version de l'État chinois est tombée de 22 % à 0,9 %. L'abliteration ne retire que le refus, et une prépublication d'octobre 2026 l'a vérifié sur un autre Qwen qui, débarrassé de tous ses refus sur 1989, affirmait toujours que Taïwan fait partie de la République populaire de Chine.
+
+L'opération a un prix. Dans l'étude de 2024, les modèles retouchés gardaient leurs scores en culture générale et en maths, mais perdaient de 1 à 3,5 points sur TruthfulQA, un test truffé d'idées reçues et de théories du complot. En juillet 2026, une autre prépublication a fait pronostiquer à deux modèles de Google et d'Alibaba la hausse ou la baisse de 60 actions de la Bourse de Varsovie, une tâche où aucun refus n'entre en jeu. Leurs versions retouchées s'y montraient plus optimistes de 7 à 12 points. Le modèle répond aussi à tout ce qu'il refusait, demandes dangereuses comprises, et les auteurs de 2024 en tiraient la leçon que les modèles de chat ouverts sont sans défense face à une retouche aussi simple.
+
+### 2024 vs 2026
+
+La découverte de 2024 venait de chercheurs en interprétabilité, et des amateurs l'ont aussitôt appliquée aux modèles ouverts du moment. Depuis, la parade est devenue un sujet de recherche. En mai 2025, une équipe a appris à des modèles à justifier longuement leur refus avant de le formuler, et l'abliteration ne leur retirait plus que 10 % de leurs refus au plus, contre 70 à 80 % sans cet entraînement. En juillet 2026, un audit des modèles publiés ne laissait passer que 4 des 57 modèles retouchés de son échantillon, au prix de quelques fausses alertes.
+
+### Dans le jargon
+
+- -abliterated : le suffixe ajouté au nom d'un modèle ouvert dont on a retiré la direction du refus, puis republié par quelqu'un d'autre que son éditeur
+- refusal direction : la direction du refus, le sens dans lequel penchent les activations du modèle quand il s'apprête à décliner une demande
+- weight orthogonalization : la retouche des matrices du modèle qui l'empêche d'écrire dans cette direction ; c'est elle qui rend l'abliteration permanente
+- healing : le petit réentraînement qu'on fait parfois après coup pour regagner une partie de la qualité perdue
+
+### Entendu au bureau
+
+- Question : Un modèle « uncensored » trouvé sur Hugging Face, ça nous ferait un assistant interne plus franc ?
+- Réponse : Il refusera moins, mais il garde les biais de son modèle d'origine et peut avoir changé sur des points que personne n'a mesurés ; passe-le sur tes propres cas de test, et laisse un filtre relire ses réponses avant qu'elles partent.
+
+### À éviter
+
+« Ce modèle ouvert refuse les demandes dangereuses, il est donc sûr. » Quiconque a ses poids peut retirer ce refus sans réentraîner. OpenAI l'a pris en compte avant de publier gpt-oss en août 2025, en réentraînant lui-même le modèle pour le rendre aussi capable que possible en biologie et en cybersécurité, et n'a publié qu'après avoir vu qu'il restait ainsi en dessous de son modèle fermé o3.
+
+### Termes liés
+
+- Post-entraînement : https://neopal.github.io/lexique/post-entrainement/
+- L'IA est neutre : https://neopal.github.io/lexique/mythe-ia-neutre/
+- Jailbreak : https://neopal.github.io/lexique/jailbreak/
+- Interprétabilité : https://neopal.github.io/lexique/interpretabilite/
+- Guardrails : https://neopal.github.io/lexique/guardrails/
+- Open weights : https://neopal.github.io/lexique/open-weights/
+- Fine-tuning : https://neopal.github.io/lexique/fine-tuning/
+
+### Sources
+
+- Arditi et al., Refusal in Language Models Is Mediated by a Single Direction, 17 juin 2024, révisé le 30 octobre 2024 (13 modèles de chat open source jusqu'à 72B ; effacer une seule direction des activations supprime le refus, l'ajouter fait refuser des demandes inoffensives ; retouche des poids de rang un ; tableau 3 : MMLU, ARC et GSM8K quasi inchangés, TruthfulQA en baisse de 1,0 à 3,5 points ; « how defenseless current open-source chat models are ») : https://arxiv.org/abs/2406.11717
+- Maxime Labonne, Uncensor any LLM with abliteration, billet sur Hugging Face, 13 juin 2024 (direction du refus dans le flux résiduel ; intervention à l'inférence ou orthogonalisation des poids, sans réentraînement ; baisse de performance sur tous les benchmarks du modèle retouché, en grande partie regagnée par un réentraînement DPO, sauf sur GSM8K) : https://huggingface.co/blog/mlabonne/abliteration
+- Wikipédia, Ablation (artificial intelligence), section « Use for uncensoring LLMs » (abliteration, mot-valise d'« ablation » et d'« obliteration ») : https://en.wikipedia.org/wiki/Ablation_(artificial_intelligence)
+- Nous Research, fiche de Arete-27B sur Hugging Face, créée le 6 novembre 2026 selon l'API Hugging Face (fine-tuning supervisé seul de Qwen3.8-27B ; vingt mille prompts sur sept catégories de valeurs ; réponses contenant de la propagande passées de 22 % à 0,9 % sur 803 questions ; pas de recul notable sur les benchmarks généraux mesurés) : https://huggingface.co/NousResearch/Arete-27B
+- Ko, Uncensored Is Not Unbiased: Abliteration Removes Refusals but Not Script-Dependent Bias About Taiwan, prépublication du 21 octobre 2026 (sur Qwen3.8-Flash-Next quantifié en 2 bits, l'abliteration retire tous les refus sur 1989, et le modèle retouché affirme toujours que Taïwan fait partie de la RPC dans les trois écritures testées) : https://arxiv.org/abs/2610.29342
+- Fafuła, Abliteration Is Not a Scalpel: Off-Target Effects of Refusal Removal on Decision Disposition Across Model Families, prépublication du 19 juillet 2026 (Gemma-4-26B-A4B-it et Qwen3-30B-A3B-Instruct-2507 ; 21 600 pronostics de hausse ou de baisse sur 60 actions de la Bourse de Varsovie, tâche sans refus ; versions retouchées plus optimistes de 12,2 points pour Gemma et 7,4 points pour Qwen) : https://arxiv.org/abs/2607.17427
+- Abu Shairah et al., An Embarrassingly Simple Defense Against LLM Abliteration Attacks, 25 mai 2025 (refus détaillés avant de décliner ; sous abliteration, taux de refus en baisse de 10 % au plus, contre 70 à 80 % pour les modèles de départ) : https://arxiv.org/abs/2505.19056
+- Hurtado, Has This Checkpoint Been Abliterated? A Two-Signal Audit and Its Failure Map, prépublication du 2 juillet 2026, révisée le 18 août (273 modèles, dont 57 abliterations publiques ; sur des familles non vues, 4 sur 57 manqués, taux de fausses alertes de 0,11) : https://arxiv.org/abs/2607.01854
+- Wallace et al. (OpenAI), Estimating Worst-Case Frontier Risks of Open-Weight LLMs, 5 août 2025 (malicious fine-tuning de gpt-oss en biologie et en cybersécurité avant sa publication ; le modèle ainsi réentraîné reste en dessous d'o3 ; résultats pris en compte dans la décision de publier) : https://arxiv.org/abs/2508.03153

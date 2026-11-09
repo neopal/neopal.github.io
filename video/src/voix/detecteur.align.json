@@ -1,0 +1,1131 @@
+{
+ "id": "detecteur",
+ "audio": true,
+ "music": true,
+ "duration": 69.84,
+ "segments": [
+  {
+   "scene": "hook",
+   "start": 0.06,
+   "end": 2.84,
+   "words": [
+    {
+     "w": "«",
+     "start": 0.06,
+     "end": 0.07
+    },
+    {
+     "w": "Un",
+     "start": 0.08,
+     "end": 0.16
+    },
+    {
+     "w": "détecteur",
+     "start": 0.24,
+     "end": 0.8
+    },
+    {
+     "w": "prouve",
+     "start": 0.88,
+     "end": 1.12
+    },
+    {
+     "w": "qu'un",
+     "start": 1.2,
+     "end": 1.44
+    },
+    {
+     "w": "texte",
+     "start": 1.56,
+     "end": 1.84
+    },
+    {
+     "w": "vient",
+     "start": 1.88,
+     "end": 2.08
+    },
+    {
+     "w": "d'une",
+     "start": 2.16,
+     "end": 2.32
+    },
+    {
+     "w": "IA.",
+     "start": 2.4,
+     "end": 2.76
+    },
+    {
+     "w": "»",
+     "start": 2.8,
+     "end": 2.84
+    }
+   ]
+  },
+  {
+   "scene": "constitution",
+   "start": 3.98,
+   "end": 11.36,
+   "words": [
+    {
+     "w": "En",
+     "start": 3.98,
+     "end": 4
+    },
+    {
+     "w": "2023,",
+     "start": 4.02,
+     "end": 4.827
+    },
+    {
+     "w": "l'un",
+     "start": 4.96,
+     "end": 5.12
+    },
+    {
+     "w": "d'eux",
+     "start": 5.147,
+     "end": 5.24
+    },
+    {
+     "w": "a",
+     "start": 5.28,
+     "end": 5.36
+    },
+    {
+     "w": "jugé",
+     "start": 5.44,
+     "end": 5.6
+    },
+    {
+     "w": "la",
+     "start": 5.68,
+     "end": 5.76
+    },
+    {
+     "w": "Constitution",
+     "start": 5.84,
+     "end": 6.32
+    },
+    {
+     "w": "américaine",
+     "start": 6.4,
+     "end": 6.96
+    },
+    {
+     "w": "probablement",
+     "start": 7.04,
+     "end": 7.6
+    },
+    {
+     "w": "écrite",
+     "start": 7.68,
+     "end": 8
+    },
+    {
+     "w": "par",
+     "start": 8.08,
+     "end": 8.16
+    },
+    {
+     "w": "une",
+     "start": 8.2,
+     "end": 8.24
+    },
+    {
+     "w": "IA.",
+     "start": 8.4,
+     "end": 9.12
+    },
+    {
+     "w": "Elle",
+     "start": 9.16,
+     "end": 9.28
+    },
+    {
+     "w": "date",
+     "start": 9.4,
+     "end": 9.52
+    },
+    {
+     "w": "de",
+     "start": 9.6,
+     "end": 9.68
+    },
+    {
+     "w": "1787.",
+     "start": 9.72,
+     "end": 11.36
+    }
+   ]
+  },
+  {
+   "scene": "perplexite",
+   "start": 11.429,
+   "end": 23.44,
+   "words": [
+    {
+     "w": "Un",
+     "start": 11.429,
+     "end": 11.44
+    },
+    {
+     "w": "détecteur",
+     "start": 11.52,
+     "end": 11.92
+    },
+    {
+     "w": "n'a",
+     "start": 12,
+     "end": 12.16
+    },
+    {
+     "w": "que",
+     "start": 12.2,
+     "end": 12.24
+    },
+    {
+     "w": "le",
+     "start": 12.32,
+     "end": 12.4
+    },
+    {
+     "w": "texte.",
+     "start": 12.48,
+     "end": 13.173
+    },
+    {
+     "w": "Il",
+     "start": 13.227,
+     "end": 13.28
+    },
+    {
+     "w": "mesure",
+     "start": 13.36,
+     "end": 13.6
+    },
+    {
+     "w": "si",
+     "start": 13.72,
+     "end": 13.84
+    },
+    {
+     "w": "chaque",
+     "start": 13.88,
+     "end": 14.08
+    },
+    {
+     "w": "mot",
+     "start": 14.16,
+     "end": 14.24
+    },
+    {
+     "w": "était",
+     "start": 14.36,
+     "end": 14.48
+    },
+    {
+     "w": "prévisible",
+     "start": 14.56,
+     "end": 15.12
+    },
+    {
+     "w": "pour",
+     "start": 15.16,
+     "end": 15.2
+    },
+    {
+     "w": "un",
+     "start": 15.24,
+     "end": 15.28
+    },
+    {
+     "w": "modèle",
+     "start": 15.36,
+     "end": 15.6
+    },
+    {
+     "w": "de",
+     "start": 15.64,
+     "end": 15.68
+    },
+    {
+     "w": "langage,",
+     "start": 15.8,
+     "end": 16.48
+    },
+    {
+     "w": "et",
+     "start": 16.52,
+     "end": 16.56
+    },
+    {
+     "w": "un",
+     "start": 16.64,
+     "end": 16.72
+    },
+    {
+     "w": "texte",
+     "start": 16.84,
+     "end": 17.12
+    },
+    {
+     "w": "trop",
+     "start": 17.2,
+     "end": 17.36
+    },
+    {
+     "w": "prévisible",
+     "start": 17.44,
+     "end": 18
+    },
+    {
+     "w": "passe",
+     "start": 18.04,
+     "end": 18.24
+    },
+    {
+     "w": "pour",
+     "start": 18.32,
+     "end": 18.4
+    },
+    {
+     "w": "généré.",
+     "start": 18.48,
+     "end": 19.2
+    },
+    {
+     "w": "La",
+     "start": 19.28,
+     "end": 19.36
+    },
+    {
+     "w": "Constitution,",
+     "start": 19.44,
+     "end": 20.48
+    },
+    {
+     "w": "les",
+     "start": 20.56,
+     "end": 20.64
+    },
+    {
+     "w": "modèles",
+     "start": 20.72,
+     "end": 20.96
+    },
+    {
+     "w": "l'ont",
+     "start": 20.987,
+     "end": 21.2
+    },
+    {
+     "w": "tant",
+     "start": 21.32,
+     "end": 21.44
+    },
+    {
+     "w": "lue",
+     "start": 21.48,
+     "end": 21.6
+    },
+    {
+     "w": "qu'elle",
+     "start": 21.68,
+     "end": 21.84
+    },
+    {
+     "w": "leur",
+     "start": 21.92,
+     "end": 22
+    },
+    {
+     "w": "paraît",
+     "start": 22.08,
+     "end": 22.28
+    },
+    {
+     "w": "écrite",
+     "start": 22.32,
+     "end": 22.56
+    },
+    {
+     "w": "d'avance.",
+     "start": 22.6,
+     "end": 23.44
+    }
+   ]
+  },
+  {
+   "scene": "toefl",
+   "start": 23.507,
+   "end": 34.64,
+   "words": [
+    {
+     "w": "Ça",
+     "start": 23.507,
+     "end": 23.56
+    },
+    {
+     "w": "frappe",
+     "start": 23.6,
+     "end": 23.84
+    },
+    {
+     "w": "d'abord",
+     "start": 23.867,
+     "end": 24.16
+    },
+    {
+     "w": "ceux",
+     "start": 24.24,
+     "end": 24.4
+    },
+    {
+     "w": "qui",
+     "start": 24.44,
+     "end": 24.48
+    },
+    {
+     "w": "écrivent",
+     "start": 24.56,
+     "end": 24.88
+    },
+    {
+     "w": "simplement.",
+     "start": 24.96,
+     "end": 25.76
+    },
+    {
+     "w": "En",
+     "start": 25.84,
+     "end": 25.92
+    },
+    {
+     "w": "2023,",
+     "start": 25.96,
+     "end": 26.8
+    },
+    {
+     "w": "à",
+     "start": 26.84,
+     "end": 26.88
+    },
+    {
+     "w": "Stanford,",
+     "start": 27.04,
+     "end": 27.84
+    },
+    {
+     "w": "sept",
+     "start": 27.92,
+     "end": 28.08
+    },
+    {
+     "w": "détecteurs",
+     "start": 28.16,
+     "end": 28.64
+    },
+    {
+     "w": "ont",
+     "start": 28.72,
+     "end": 28.8
+    },
+    {
+     "w": "lu",
+     "start": 28.88,
+     "end": 28.96
+    },
+    {
+     "w": "91",
+     "start": 29.04,
+     "end": 29.64
+    },
+    {
+     "w": "rédactions",
+     "start": 29.68,
+     "end": 30.08
+    },
+    {
+     "w": "d'anglais",
+     "start": 30.12,
+     "end": 30.48
+    },
+    {
+     "w": "de",
+     "start": 30.52,
+     "end": 30.56
+    },
+    {
+     "w": "non-natifs…",
+     "start": 30.64,
+     "end": 31.52
+    },
+    {
+     "w": "et",
+     "start": 31.56,
+     "end": 31.6
+    },
+    {
+     "w": "en",
+     "start": 31.64,
+     "end": 31.68
+    },
+    {
+     "w": "ont",
+     "start": 31.76,
+     "end": 31.84
+    },
+    {
+     "w": "classé",
+     "start": 31.96,
+     "end": 32.12
+    },
+    {
+     "w": "en",
+     "start": 32.16,
+     "end": 32.24
+    },
+    {
+     "w": "moyenne",
+     "start": 32.293,
+     "end": 32.64
+    },
+    {
+     "w": "61",
+     "start": 32.72,
+     "end": 33.12
+    },
+    {
+     "w": "%",
+     "start": 33.16,
+     "end": 33.2
+    },
+    {
+     "w": "comme",
+     "start": 33.24,
+     "end": 33.84
+    },
+    {
+     "w": "générées.",
+     "start": 33.92,
+     "end": 34.64
+    }
+   ]
+  },
+  {
+   "scene": "contour",
+   "start": 34.711,
+   "end": 42.56,
+   "words": [
+    {
+     "w": "Dans",
+     "start": 34.711,
+     "end": 34.72
+    },
+    {
+     "w": "l'autre",
+     "start": 34.76,
+     "end": 35.04
+    },
+    {
+     "w": "sens,",
+     "start": 35.08,
+     "end": 35.52
+    },
+    {
+     "w": "on",
+     "start": 35.6,
+     "end": 35.68
+    },
+    {
+     "w": "demande",
+     "start": 35.8,
+     "end": 35.947
+    },
+    {
+     "w": "à",
+     "start": 35.973,
+     "end": 36
+    },
+    {
+     "w": "ChatGPT",
+     "start": 36.08,
+     "end": 36.64
+    },
+    {
+     "w": "de",
+     "start": 36.72,
+     "end": 36.8
+    },
+    {
+     "w": "réécrire",
+     "start": 36.88,
+     "end": 37.36
+    },
+    {
+     "w": "son",
+     "start": 37.48,
+     "end": 37.6
+    },
+    {
+     "w": "texte",
+     "start": 37.72,
+     "end": 37.92
+    },
+    {
+     "w": "dans",
+     "start": 37.973,
+     "end": 38.08
+    },
+    {
+     "w": "une",
+     "start": 38.12,
+     "end": 38.16
+    },
+    {
+     "w": "langue",
+     "start": 38.24,
+     "end": 38.48
+    },
+    {
+     "w": "plus",
+     "start": 38.56,
+     "end": 38.64
+    },
+    {
+     "w": "littéraire…",
+     "start": 38.68,
+     "end": 39.52
+    },
+    {
+     "w": "et",
+     "start": 39.56,
+     "end": 39.6
+    },
+    {
+     "w": "la",
+     "start": 39.68,
+     "end": 39.76
+    },
+    {
+     "w": "détection",
+     "start": 39.8,
+     "end": 40.24
+    },
+    {
+     "w": "tombe",
+     "start": 40.32,
+     "end": 40.48
+    },
+    {
+     "w": "de",
+     "start": 40.56,
+     "end": 40.64
+    },
+    {
+     "w": "100",
+     "start": 40.72,
+     "end": 40.8
+    },
+    {
+     "w": "%",
+     "start": 40.88,
+     "end": 41.04
+    },
+    {
+     "w": "à",
+     "start": 41.12,
+     "end": 41.6
+    },
+    {
+     "w": "13",
+     "start": 41.68,
+     "end": 41.84
+    },
+    {
+     "w": "%.",
+     "start": 41.92,
+     "end": 42.56
+    }
+   ]
+  },
+  {
+   "scene": "progres",
+   "start": 42.697,
+   "end": 46.96,
+   "words": [
+    {
+     "w": "En",
+     "start": 42.697,
+     "end": 42.72
+    },
+    {
+     "w": "2025,",
+     "start": 42.747,
+     "end": 43.52
+    },
+    {
+     "w": "les",
+     "start": 43.68,
+     "end": 43.76
+    },
+    {
+     "w": "meilleurs",
+     "start": 43.84,
+     "end": 44.08
+    },
+    {
+     "w": "outils",
+     "start": 44.16,
+     "end": 44.4
+    },
+    {
+     "w": "accusaient",
+     "start": 44.48,
+     "end": 44.8
+    },
+    {
+     "w": "à",
+     "start": 44.84,
+     "end": 44.88
+    },
+    {
+     "w": "tort",
+     "start": 44.96,
+     "end": 45.2
+    },
+    {
+     "w": "moins",
+     "start": 45.28,
+     "end": 45.44
+    },
+    {
+     "w": "d'un",
+     "start": 45.48,
+     "end": 45.6
+    },
+    {
+     "w": "texte",
+     "start": 45.68,
+     "end": 45.92
+    },
+    {
+     "w": "humain",
+     "start": 45.96,
+     "end": 46.16
+    },
+    {
+     "w": "sur",
+     "start": 46.24,
+     "end": 46.32
+    },
+    {
+     "w": "cent.",
+     "start": 46.4,
+     "end": 46.96
+    }
+   ]
+  },
+  {
+   "scene": "tribunal",
+   "start": 47.027,
+   "end": 55.92,
+   "words": [
+    {
+     "w": "Mais",
+     "start": 47.027,
+     "end": 47.04
+    },
+    {
+     "w": "en",
+     "start": 47.08,
+     "end": 47.12
+    },
+    {
+     "w": "janvier",
+     "start": 47.2,
+     "end": 47.44
+    },
+    {
+     "w": "2026,",
+     "start": 47.52,
+     "end": 48.24
+    },
+    {
+     "w": "à",
+     "start": 48.32,
+     "end": 48.4
+    },
+    {
+     "w": "New",
+     "start": 48.48,
+     "end": 48.56
+    },
+    {
+     "w": "York,",
+     "start": 48.72,
+     "end": 49.04
+    },
+    {
+     "w": "un",
+     "start": 49.08,
+     "end": 49.12
+    },
+    {
+     "w": "tribunal",
+     "start": 49.2,
+     "end": 49.6
+    },
+    {
+     "w": "a",
+     "start": 49.68,
+     "end": 49.72
+    },
+    {
+     "w": "annulé",
+     "start": 49.76,
+     "end": 50.08
+    },
+    {
+     "w": "la",
+     "start": 50.12,
+     "end": 50.16
+    },
+    {
+     "w": "sanction",
+     "start": 50.24,
+     "end": 50.56
+    },
+    {
+     "w": "d'un",
+     "start": 50.64,
+     "end": 50.8
+    },
+    {
+     "w": "étudiant",
+     "start": 50.88,
+     "end": 51.28
+    },
+    {
+     "w": "accusé",
+     "start": 51.36,
+     "end": 51.76
+    },
+    {
+     "w": "sur",
+     "start": 51.84,
+     "end": 51.92
+    },
+    {
+     "w": "un",
+     "start": 51.96,
+     "end": 52
+    },
+    {
+     "w": "score",
+     "start": 52.16,
+     "end": 52.32
+    },
+    {
+     "w": "de",
+     "start": 52.36,
+     "end": 52.4
+    },
+    {
+     "w": "100",
+     "start": 52.56,
+     "end": 52.64
+    },
+    {
+     "w": "%…",
+     "start": 52.72,
+     "end": 53.6
+    },
+    {
+     "w": "deux",
+     "start": 53.64,
+     "end": 53.76
+    },
+    {
+     "w": "autres",
+     "start": 53.84,
+     "end": 54
+    },
+    {
+     "w": "détecteurs",
+     "start": 54.08,
+     "end": 54.56
+    },
+    {
+     "w": "donnaient",
+     "start": 54.6,
+     "end": 54.88
+    },
+    {
+     "w": "0",
+     "start": 54.96,
+     "end": 55.12
+    },
+    {
+     "w": "%.",
+     "start": 55.28,
+     "end": 55.92
+    }
+   ]
+  },
+  {
+   "scene": "filigrane",
+   "start": 56,
+   "end": 63.52,
+   "words": [
+    {
+     "w": "Ce",
+     "start": 56,
+     "end": 56.08
+    },
+    {
+     "w": "qui",
+     "start": 56.16,
+     "end": 56.24
+    },
+    {
+     "w": "signe",
+     "start": 56.32,
+     "end": 56.48
+    },
+    {
+     "w": "vraiment",
+     "start": 56.56,
+     "end": 56.88
+    },
+    {
+     "w": "l'origine,",
+     "start": 56.907,
+     "end": 57.6
+    },
+    {
+     "w": "c'est",
+     "start": 57.653,
+     "end": 57.76
+    },
+    {
+     "w": "un",
+     "start": 57.84,
+     "end": 57.92
+    },
+    {
+     "w": "filigrane",
+     "start": 58,
+     "end": 58.4
+    },
+    {
+     "w": "glissé",
+     "start": 58.48,
+     "end": 58.88
+    },
+    {
+     "w": "pendant",
+     "start": 58.96,
+     "end": 59.12
+    },
+    {
+     "w": "l'écriture,",
+     "start": 59.147,
+     "end": 59.84
+    },
+    {
+     "w": "comme",
+     "start": 59.88,
+     "end": 59.96
+    },
+    {
+     "w": "chez",
+     "start": 60,
+     "end": 60.08
+    },
+    {
+     "w": "Google…",
+     "start": 60.16,
+     "end": 60.88
+    },
+    {
+     "w": "et",
+     "start": 60.92,
+     "end": 60.96
+    },
+    {
+     "w": "il",
+     "start": 61,
+     "end": 61.04
+    },
+    {
+     "w": "ne",
+     "start": 61.12,
+     "end": 61.2
+    },
+    {
+     "w": "se",
+     "start": 61.28,
+     "end": 61.36
+    },
+    {
+     "w": "lit",
+     "start": 61.48,
+     "end": 61.6
+    },
+    {
+     "w": "qu'avec",
+     "start": 61.627,
+     "end": 61.92
+    },
+    {
+     "w": "la",
+     "start": 61.96,
+     "end": 62
+    },
+    {
+     "w": "clé",
+     "start": 62.08,
+     "end": 62.24
+    },
+    {
+     "w": "du",
+     "start": 62.28,
+     "end": 62.32
+    },
+    {
+     "w": "modèle",
+     "start": 62.4,
+     "end": 62.64
+    },
+    {
+     "w": "qui",
+     "start": 62.72,
+     "end": 62.8
+    },
+    {
+     "w": "l'a",
+     "start": 62.853,
+     "end": 62.96
+    },
+    {
+     "w": "posé.",
+     "start": 63.08,
+     "end": 63.52
+    }
+   ]
+  },
+  {
+   "scene": "chute",
+   "start": 63.657,
+   "end": 69.84,
+   "words": [
+    {
+     "w": "Alors",
+     "start": 63.657,
+     "end": 63.76
+    },
+    {
+     "w": "devant",
+     "start": 63.84,
+     "end": 64
+    },
+    {
+     "w": "un",
+     "start": 64.08,
+     "end": 64.16
+    },
+    {
+     "w": "pourcentage,",
+     "start": 64.24,
+     "end": 65.04
+    },
+    {
+     "w": "demande",
+     "start": 65.16,
+     "end": 65.36
+    },
+    {
+     "w": "plutôt",
+     "start": 65.4,
+     "end": 65.68
+    },
+    {
+     "w": "les",
+     "start": 65.72,
+     "end": 65.76
+    },
+    {
+     "w": "brouillons",
+     "start": 65.84,
+     "end": 66.24
+    },
+    {
+     "w": "et",
+     "start": 66.28,
+     "end": 66.32
+    },
+    {
+     "w": "les",
+     "start": 66.4,
+     "end": 66.48
+    },
+    {
+     "w": "sources…",
+     "start": 66.64,
+     "end": 67.12
+    },
+    {
+     "w": "et",
+     "start": 67.2,
+     "end": 67.28
+    },
+    {
+     "w": "laisse",
+     "start": 67.307,
+     "end": 67.44
+    },
+    {
+     "w": "la",
+     "start": 67.52,
+     "end": 67.6
+    },
+    {
+     "w": "personne",
+     "start": 67.72,
+     "end": 67.92
+    },
+    {
+     "w": "t'expliquer",
+     "start": 67.96,
+     "end": 68.48
+    },
+    {
+     "w": "deux",
+     "start": 68.507,
+     "end": 68.56
+    },
+    {
+     "w": "passages",
+     "start": 68.64,
+     "end": 68.96
+    },
+    {
+     "w": "de",
+     "start": 69,
+     "end": 69.04
+    },
+    {
+     "w": "son",
+     "start": 69.12,
+     "end": 69.2
+    },
+    {
+     "w": "texte.",
+     "start": 69.28,
+     "end": 69.84
+    }
+   ]
+  }
+ ]
+}

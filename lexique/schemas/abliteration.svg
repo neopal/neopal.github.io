@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 326" role="img" aria-labelledby="abliteration-t">
+<title id="abliteration-t">Avant : les activations des demandes que le modèle refuse s'écartent de celles qu'il accepte le long d'une même direction, la direction du refus. Après l'abliteration, cette direction est retirée des poids : toutes les activations se retrouvent alignées au même endroit sur cet axe, plus rien ne distingue les demandes à refuser, et le modèle répond à tout sans avoir rien réappris.</title>
+<text class="b" x="0" y="16">avant</text>
+<text class="m mu" x="65" y="38" text-anchor="middle">accepte</text>
+<text class="m ac" x="285" y="38" text-anchor="middle">refuse</text>
+<circle class="fl" cx="50" cy="50" r="5"/>
+<circle class="fl" cx="82" cy="70" r="5"/>
+<circle class="fl" cx="62" cy="90" r="5"/>
+<circle class="fa" cx="270" cy="60" r="5"/>
+<circle class="fa" cx="302" cy="80" r="5"/>
+<circle class="fa" cx="284" cy="100" r="5"/>
+<path class="la" d="M20 116 H338"/><path class="la" d="M330 110 l8 6 l-8 6"/>
+<text class="m ac" x="340" y="140" text-anchor="end">direction du refus</text>
+<path class="ln" d="M0 154 H360"/>
+<text class="b" x="0" y="178">après, direction retirée des poids</text>
+<circle class="ln dash" cx="50" cy="198" r="5"/>
+<circle class="ln dash" cx="82" cy="218" r="5"/>
+<circle class="ln dash" cx="62" cy="238" r="5"/>
+<circle class="ln dash" cx="270" cy="208" r="5"/>
+<circle class="ln dash" cx="302" cy="228" r="5"/>
+<circle class="ln dash" cx="284" cy="248" r="5"/>
+<circle class="fl" cx="180" cy="198" r="5"/>
+<circle class="fa" cx="180" cy="208" r="5"/>
+<circle class="fl" cx="180" cy="218" r="5"/>
+<circle class="fa" cx="180" cy="228" r="5"/>
+<circle class="fl" cx="180" cy="238" r="5"/>
+<circle class="fa" cx="180" cy="248" r="5"/>
+<path class="ln dash" d="M20 264 H340"/>
+<text class="m mu" x="180" y="288" text-anchor="middle">plus aucun écart dans ce sens</text>
+<text class="i mu" x="0" y="318">Il répond à tout, sans avoir rien réappris.</text>
+</svg>

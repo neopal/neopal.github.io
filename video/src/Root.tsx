@@ -48,9 +48,17 @@ import {AncrageVoix, ANCRAGEVOIX_DURATION} from './AncrageVoix';
 import {DeclarationVoix, DECLARATIONVOIX_DURATION} from './DeclarationVoix';
 import {MytheMetierVoix, MYTHEMETIERVOIX_DURATION} from './MytheMetierVoix';
 import {HookVoix, HOOKVOIX_DURATION} from './HookVoix';
+import {MytheBouteilleVoix, MYTHEBOUTEILLEVOIX_DURATION} from './MytheBouteilleVoix';
+import {MytheDetecteurVoix, MYTHEDETECTEURVOIX_DURATION} from './MytheDetecteurVoix';
+import {ShadowAiVoix, SHADOWAIVOIX_DURATION} from './ShadowAiVoix';
+import {AiActVoix, AIACTVOIX_DURATION} from './AiActVoix';
+import {BandePassanteVoix, BANDEPASSANTEVOIX_DURATION} from './BandePassanteVoix';
+import {PrefillVoix, PREFILLVOIX_DURATION} from './PrefillVoix';
+import {OffloadingVoix, OFFLOADINGVOIX_DURATION} from './OffloadingVoix';
 import {PilotabiliteVoix, PILOTABILITEVOIX_DURATION} from './PilotabiliteVoix';
 import {MytheAutocompletionVoix, MYTHEAUTOCOMPLETIONVOIX_DURATION} from './MytheAutocompletionVoix';
 import {ClaudeVoix, CLAUDEVOIX_DURATION} from './ClaudeVoix';
+import {MytheIaLocaleVoix, MYTHEIALOCALEVOIX_DURATION} from './MytheIaLocaleVoix';
 
 // Les shorts dans une seule entrée (stills et rendus partagent le même bundle).
 const C = {fps: 30, width: 1080, height: 1920} as const;
@@ -108,5 +116,13 @@ export const Root: React.FC = () => (
     <Composition id="PilotabiliteVoix" component={PilotabiliteVoix} durationInFrames={PILOTABILITEVOIX_DURATION} {...C} />
     <Composition id="MytheAutocompletionVoix" component={MytheAutocompletionVoix} durationInFrames={MYTHEAUTOCOMPLETIONVOIX_DURATION} {...C} />
     <Composition id="ClaudeVoix" component={ClaudeVoix} durationInFrames={CLAUDEVOIX_DURATION} {...C} />
+    <Composition id="MytheBouteilleVoix" component={MytheBouteilleVoix} durationInFrames={MYTHEBOUTEILLEVOIX_DURATION} {...C} />
+    <Composition id="MytheDetecteurVoix" component={MytheDetecteurVoix} durationInFrames={MYTHEDETECTEURVOIX_DURATION} {...C} />
+    <Composition id="ShadowAiVoix" component={ShadowAiVoix} durationInFrames={SHADOWAIVOIX_DURATION} {...C} />
+    <Composition id="MytheIaLocaleVoix" component={MytheIaLocaleVoix} durationInFrames={MYTHEIALOCALEVOIX_DURATION} {...C} />
+    <Composition id="AiActVoix" component={AiActVoix} durationInFrames={AIACTVOIX_DURATION} {...C} />
+    <Composition id="BandePassanteVoix" component={BandePassanteVoix} durationInFrames={BANDEPASSANTEVOIX_DURATION} {...C} />
+    <Composition id="PrefillVoix" component={PrefillVoix} durationInFrames={PREFILLVOIX_DURATION} {...C} />
+    <Composition id="OffloadingVoix" component={OffloadingVoix} durationInFrames={OFFLOADINGVOIX_DURATION} {...C} />
   </>
 );

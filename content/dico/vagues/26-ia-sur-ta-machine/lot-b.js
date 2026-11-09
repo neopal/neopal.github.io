@@ -1,0 +1,73 @@
+// Lexique IA, vague 26, lot B (une fiche : bande passante mémoire). Format identique à lexique/terms.js, sans `num`.
+// imagineForm : forme de l'« Imagine » (content/dico/univers.md, section « Les formes de l'Imagine »).
+// Faits et chiffres relevés le 9 novembre 2026 sur les pages citées dans `sources`.
+// Enrichissement associé : enrichissements-kv-cache.json (compression du KV cache, lien vers cette fiche).
+module.exports = [
+  {
+    id: 'bande-passante-memoire',
+    status: 'live',
+    title: 'Bande passante mémoire',
+    en: 'Memory bandwidth',
+    aliases: ['memory bandwidth', 'memory-bound', 'memory wall', 'MBU', 'model bandwidth utilization'],
+    aliasesFr: ['débit mémoire', 'mur de la mémoire'],
+    jargon: [
+      {say: 'memory-bound', means: "limité par la mémoire : la puce attend ses données plus qu'elle ne calcule, ce qui est le cas pendant l'écriture d'une réponse ; l'inverse se dit compute-bound"},
+      {say: 'MBU', means: "model bandwidth utilization, la part de la bande passante théorique qu'un moteur exploite vraiment ; dans l'exemple de Databricks, un modèle de 7 milliards en 16 bits qui écrit un token toutes les 14 ms fait passer 1 To par seconde"},
+      {say: 'mémoire unifiée', means: "chez Apple, une seule mémoire partagée par le processeur et la partie graphique de la puce, si bien que le modèle n'a pas à tenir dans une carte graphique séparée"},
+    ],
+    cat: 'inference',
+    links: ['gpu', 'quantization', 'moe', 'prefill-et-decode', 'tailles-de-modele', 'latence-vs-debit', 'offloading'],
+    short: "La bande passante mémoire est le volume de données qu'une puce lit dans sa mémoire par seconde ; elle fixe, plus que le calcul, la vitesse d'écriture d'un modèle.",
+    image: "Pour chaque mot de sa carte de vœux, Jean-Claude relit son dictionnaire de 2 000 pages en entier ; il réfléchit très vite, et c'est de tourner les pages qui lui prend la soirée. Depuis qu'il a pris l'édition de poche, ses cartes partent deux fois plus vite, et ses neveux trouvent qu'il écrit plus simplement.",
+    imagineForm: 'A',
+    imagine: "Sur un Galaxy S25 Ultra, tu demandes à Ministral 3 8B, dans sa version 4 bits de 6 Go, un message pour annuler le dîner de samedi. Pour chacun des 50 tokens de sa réponse, le téléphone relit le modèle entier dans sa mémoire, soit 300 Go déplacés en trois secondes et demie au mieux, davantage que ses 256 Go de stockage ne pourraient en contenir. Le message d'excuse, lui, fait trois lignes.",
+    full: [
+      "La bande passante mémoire (memory bandwidth) mesure combien d'octets une puce peut faire passer chaque seconde de sa mémoire à ses unités de calcul. Elle passe au premier plan quand un modèle écrit, parce que chaque nouveau token oblige un modèle dense à relire tous ses poids, pour ne faire que quelques opérations sur chaque octet lu. La vitesse d'écriture a donc un plafond qu'on calcule de tête, la bande passante divisée par ce que pèsent les poids en mémoire. Un Mac M1 Pro lit sa mémoire à 200 Go/s, et un modèle de 7 milliards de paramètres en 16 bits pèse 14 Go, d'où un plafond vers 14 tokens par seconde ; les mesures de llama.cpp lui en donnent 12,75. Le KV cache de la conversation s'ajoute aux poids à relire, et pèse d'autant plus qu'elle s'allonge.",
+      "Tout ce qui réduit les octets à lire par token accélère donc l'écriture. Sur un Mac M2 Ultra, le même modèle de 7 milliards écrit 41 tokens par seconde en 16 bits et 94 une fois quantifié en 4 bits, sans que la puce ait changé. Un MoE gagne autrement, en ne relisant que les experts choisis pour le token, et Qwen3-30B-A3B, qui fait travailler 3,3 de ses 30,5 milliards de paramètres, en relit à chaque pas environ dix fois moins que Qwen3-32B, un modèle dense de taille voisine. La lecture de ton message échappe en revanche à ce plafond, parce que les poids chargés une fois servent à tous ses tokens en même temps, et c'est alors la puissance de calcul qui limite (voir Prefill et decode).",
+      "L'écart entre les machines se lit dans leur fiche technique, et le tableau ci-dessous en donne quelques-unes. Un téléphone haut de gamme lit sa mémoire à 85 Go/s, une RTX 5090 à 1 792 Go/s, et une H100 de serveur, dont la mémoire HBM est montée contre la puce, à 3,35 To/s, quarante fois plus vite que le téléphone. Un modèle trop gros pour la mémoire peut être lu directement depuis le SSD, mais un très bon SSD plafonne à 7,45 Go/s, et Qwen3-32B en 4 bits n'en sortirait qu'un token toutes les 2,7 secondes.",
+      "L'écart grandit avec le temps. En mars 2024, Amir Gholami et ses coauteurs comptaient que la puissance de calcul des serveurs avait triplé tous les deux ans depuis vingt ans, quand la bande passante de leur mémoire n'était multipliée que par 1,6 sur la même période. Ils appellent ce décalage le mur de la mémoire (memory wall), et le tiennent pour le principal goulot d'étranglement du service des modèles.",
+    ],
+    table: {
+      caption: "Bande passante de quelques machines, et plafond d'écriture pour Qwen3-32B en 4 bits (20 Go)",
+      asOf: '9 novembre 2026',
+      columns: ['Machine', 'Mémoire', 'Capacité', 'Bande passante', 'Plafond'],
+      rows: [
+        ['Galaxy S25 Ultra (Snapdragon 8 Elite)', 'LPDDR5X', '12 Go', '84,8 Go/s', 'ne tient pas'],
+        ['PC avec RTX 3060', 'GDDR6', '12 Go', '360 Go/s', 'ne tient pas'],
+        ['PC avec RTX 5090', 'GDDR7', '32 Go', '1 792 Go/s', '90 tokens/s'],
+        ['Mac Studio M5 Ultra', 'unifiée', "jusqu'à 512 Go", '1,2 To/s', '60 tokens/s'],
+        ['Serveur avec H100 SXM', 'HBM', '80 Go', '3,35 To/s', '168 tokens/s'],
+        ['SSD Samsung 990 PRO', 'flash NVMe', "jusqu'à 4 To", '7,45 Go/s', '0,37 token/s'],
+      ],
+      note: "Plafond : bande passante divisée par les 20 Go à relire pour chaque token, sans compter le KV cache. C'est une borne haute, et les vitesses mesurées restent en dessous.",
+    },
+    office: [
+      {who: 'q', text: "On a mis 64 Go de RAM dans le PC pour faire tourner le modèle sur le processeur. Il tient, mais il écrit deux mots par seconde."},
+      {who: 'a', text: "La capacité dit si le modèle tient, la bande passante dit à quelle vitesse il écrit. Une barrette de DDR5 se lit à 70 Go/s au mieux, vingt-cinq fois moins vite que la mémoire d'une RTX 5090 ; prends un modèle plus compressé, ou un MoE qui relit moins de poids par token."},
+    ],
+    avoid: "« Le modèle tient dans la mémoire, il sera rapide. » Tenir dit seulement qu'il démarre. Un Mac Studio M5 Ultra de 512 Go peut charger un modèle dense de 400 Go, mais il le relit à 1,2 To/s et n'en tire que trois tokens par seconde au mieux.",
+    video: null,
+    sources: [
+      {label: "NVIDIA, Mastering LLM Techniques: Inference Optimization, 17 novembre 2023 (le prefill « effectively saturates GPU utilization » ; pendant le decode, « the speed at which the data (weights, keys, values, activations) is transferred to the GPU from memory dominates the latency » ; un modèle de 7 milliards en 16 bits « would take roughly 7B * sizeof(FP16) ~= 14 GB » ; la quantization permet de « transfer more parameters over the same amount of bandwidth »)", url: 'https://developer.nvidia.com/blog/mastering-llm-techniques-inference-optimization/'},
+      {label: "Databricks, LLM Inference Performance Engineering: Best Practices, 12 octobre 2023 (vitesse d'écriture dépendante du chargement des paramètres depuis la mémoire ; MBU = bande passante obtenue / bande passante maximale, avec bande passante obtenue = (taille des paramètres + taille du KV cache) / temps par token ; exemple d'un 7B en 16 bits à 14 ms par token, soit 14 Go en 14 ms, 1 To/s)", url: 'https://www.databricks.com/blog/llm-inference-performance-engineering-best-practices'},
+      {label: "llama.cpp, discussion #4167 Performance of llama.cpp on Apple Silicon M-series, tableau de mesures consulté le 9 novembre 2026 (Llama 2 7B, vitesse d'écriture tg : M1 Pro à 200 Go/s, 12,75 tokens/s en F16 ; M2 Ultra à 800 Go/s et 76 cœurs graphiques, 41,02 tokens/s en F16 et 94,27 en Q4_0). Calcul du plafond : 200 / 14 = 14,3 tokens/s", url: 'https://github.com/ggml-org/llama.cpp/discussions/4167'},
+      {label: "Gholami et al., AI and Memory Wall, 21 mars 2024, publié dans IEEE Micro (sur vingt ans, puissance de calcul des serveurs multipliée par 3,0 tous les deux ans, bande passante de la DRAM par 1,6 ; la mémoire devenue le principal goulot, en particulier pour servir les modèles)", url: 'https://arxiv.org/abs/2403.14123'},
+      {label: "Mistral AI, fiche de Ministral-3-8B-Instruct-2512 (8,4 milliards de paramètres de langage et 0,4 milliard pour la vision, « designed for edge deployment »)", url: 'https://huggingface.co/mistralai/Ministral-3-8B-Instruct-2512'},
+      {label: "Ollama, ministral-3, consulté le 9 novembre 2026 (ministral-3:8b-instruct-2512-q4_K_M : 6,0 Go). Calcul de l'Imagine : 50 tokens x 6,0 Go = 300 Go relus ; 6,0 / 84,8 = 0,071 s par token au mieux, x 50 = 3,5 s ; plafond 84,8 / 6,0 = 14 tokens/s (schéma : 360 / 6 = 60, 1 792 / 6 = 299, 3 350 / 6 = 558)", url: 'https://ollama.com/library/ministral-3/tags'},
+      {label: "Wikipédia, Samsung Galaxy S25 (S25 Ultra : Snapdragon 8 Elite for Galaxy, 12 Go de mémoire LPDDR5X, stockage à partir de 256 Go)", url: 'https://en.wikipedia.org/wiki/Samsung_Galaxy_S25'},
+      {label: "Wikipédia, List of Qualcomm Snapdragon systems on chips (Snapdragon 8 Elite, annoncé le 22 octobre 2024 : LPDDR5X sur quatre canaux de 16 bits, 5 300 MHz, 84,8 Go/s)", url: 'https://en.wikipedia.org/wiki/List_of_Qualcomm_Snapdragon_systems_on_chips'},
+      {label: "NVIDIA, GeForce RTX 3060 Family (RTX 3060 : 12 Go de GDDR6, bus de 192 bits)", url: 'https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3060-3060ti/'},
+      {label: "Wikipédia, GeForce RTX 30 series (RTX 3060 12 Go : mémoire à 15 Gb/s par broche sur 192 bits, 360 Go/s ; calcul : 15 x 192 / 8 = 360)", url: 'https://en.wikipedia.org/wiki/GeForce_RTX_30_series'},
+      {label: "NVIDIA, GeForce RTX 5090 (32 Go de GDDR7, bus de 512 bits)", url: 'https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/'},
+      {label: "Wikipédia, GeForce RTX 50 series (RTX 5090 : 28 Gb/s par broche sur 512 bits, 1 792 Go/s ; calcul : 28 x 512 / 8 = 1 792)", url: 'https://en.wikipedia.org/wiki/GeForce_RTX_50_series'},
+      {label: "Apple, Apple introduces new Mac Studio with M5 Max and M5 Ultra, 25 août 2026 (M5 Ultra : « 1.2TB/s of memory bandwidth », jusqu'à 512 Go de mémoire unifiée ; M5 Max jusqu'à 614 Go/s). Calcul de « À éviter » : 1 200 / 400 = 3 tokens/s", url: 'https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/'},
+      {label: "NVIDIA, H100 Tensor Core GPU (H100 SXM : 80 Go, 3,35 To/s ; H100 NVL : 94 Go, 3,9 To/s). Calcul : 3 350 / 84,8 = 39,5, environ quarante fois le téléphone", url: 'https://www.nvidia.com/en-us/data-center/h100/'},
+      {label: "Samsung, 990 PRO 4TB PCIe 4.0 NVMe M.2 SSD (lecture séquentielle jusqu'à 7 450 Mo/s ; « PCIe 4.0's best theoretical sequential read is 8000 MB/s »). Calcul : 20 / 7,45 = 2,7 s par token pour Qwen3-32B en 4 bits", url: 'https://www.samsung.com/ie/business/memory-storage/nvme-ssd/990-pro-4tb-nvme-pcie-gen-4-mz-v9p4t0bw/'},
+      {label: "Qwen, Qwen3: Think Deeper, Act Faster, 29 avril 2025 (Qwen3-32B parmi les six modèles denses publiés, Qwen3-30B-A3B parmi les deux MoE)", url: 'https://qwenlm.github.io/blog/qwen3/'},
+      {label: "Qwen, fiche de Qwen3-30B-A3B (30,5 milliards de paramètres, 3,3 milliards activés, 8 experts sur 128). Calcul : 32,8 / 3,3 = 9,9, environ dix fois moins de paramètres relus par token que Qwen3-32B", url: 'https://huggingface.co/Qwen/Qwen3-30B-A3B'},
+      {label: "Qwen, fiche de Qwen3-32B (32,8 milliards de paramètres)", url: 'https://huggingface.co/Qwen/Qwen3-32B'},
+      {label: "Ollama, qwen3, consulté le 9 novembre 2026 (qwen3:32b en q4_K_M : 20 Go ; qwen3:30b-a3b-q4_K_M : 19 Go). Calculs du tableau : 1 792 / 20 = 90 ; 1 200 / 20 = 60 ; 3 350 / 20 = 168 ; 7,45 / 20 = 0,37", url: 'https://ollama.com/library/qwen3/tags'},
+      {label: "Wikipédia, DDR5 SDRAM (bande passante d'un module de 32 à 70,4 Go/s). Calcul : 1 792 / 70,4 = 25,5", url: 'https://en.wikipedia.org/wiki/DDR5_SDRAM'},
+    ],
+  },
+];

@@ -1,0 +1,68 @@
+{
+  "moe": {
+    "links": [
+      "parametres",
+      "tailles-de-modele",
+      "open-weights",
+      "mythe-plus-gros-plus-intelligent",
+      "offloading",
+      "elagage-d-experts"
+    ],
+    "full": [
+      "Dans un MoE, une partie du réseau est remplacée par des dizaines ou des centaines de variantes, les experts, et un petit réseau, le routeur, choisit pour chaque token et à chaque couche ceux qui vont le traiter. Chez Mixtral 8x7B, publié par Mistral en décembre 2023, le routeur prend 2 experts sur 8 : le modèle compte 46,7 milliards de paramètres, n'en utilise que 12,9 milliards par token, et répond à la vitesse et au coût d'un modèle de 12,9 milliards.",
+      "Le gain se paie en mémoire, parce que tous les experts doivent être chargés même quand ils se taisent. Les fichiers de Kimi K2 pèsent environ 1 000 Go, alors que chaque token n'active que 32 milliards de ses 1 000 milliards de paramètres.",
+      "Sur une machine personnelle, l'offloading tire parti de ce découpage en laissant les experts dans la mémoire vive du processeur et le reste du modèle sur la carte graphique, une option que llama.cpp propose depuis juillet 2025. Comme chaque token ne lit que les quelques experts choisis, le modèle ralentit bien moins qu'un modèle dense déchargé de la même façon. L'élagage d'experts va plus loin, en retirant ceux qui travaillent le moins.",
+      "Le mot « expert » trompe un peu. L'équipe de Mistral a regardé comment Mixtral répartissait des articles d'ArXiv, des résumés de biologie et des textes de philosophie. Les trois se distribuaient à peu près dans les mêmes proportions entre les experts, qui ne se partagent donc pas les sujets comme le mot le laisse croire."
+    ],
+    "sources": [
+      {
+        "label": "Mistral AI, Mixtral of experts, 11 décembre 2023 (2 experts sur 8 par couche et par token, 46,7B au total, 12,9B par token, vitesse et coût d'un 12,9B)",
+        "url": "https://mistral.ai/news/mixtral-of-experts"
+      },
+      {
+        "label": "Jiang et al., Mixtral of Experts, janvier 2024 (pas de spécialisation évidente des experts par sujet sur ArXiv, PubMed et PhilPapers)",
+        "url": "https://arxiv.org/abs/2401.04088"
+      },
+      {
+        "label": "Moonshot AI, fiche de Kimi K2 (1T paramètres, 32B activés, 384 experts) ; environ 1 029 Go de fichiers selon l'API Hugging Face, consultée le 2 octobre 2026",
+        "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+      },
+      {
+        "label": "Moonshot AI, fiche de Kimi K3 (2,8T paramètres, 896 experts, 16 choisis par token, 2 experts partagés)",
+        "url": "https://huggingface.co/moonshotai/Kimi-K3"
+      },
+      {
+        "label": "Qwen, fiche de Qwen3.8-2.4T-A95B (2,4T paramètres, 512 experts, 10 routés et 1 partagé, 95B activés). Calcul : 2 400 / 95 = 25,3",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B"
+      },
+      {
+        "label": "DeepSeek, fiche de DeepSeek-V4 (V4-Flash : 284B paramètres, 13B activés)",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
+      },
+      {
+        "label": "Meta, The Llama 3 Herd of Models, juillet 2024 (architecture Transformer dense)",
+        "url": "https://arxiv.org/abs/2407.21783"
+      },
+      {
+        "label": "Wikipédia, Llama (Llama 4 Maverick, 5 avril 2025 : 400B au total, 17B actifs, 128 experts)",
+        "url": "https://en.wikipedia.org/wiki/Llama_(language_model)"
+      },
+      {
+        "label": "Wikipédia, Open-source artificial intelligence (Kimi K3 et Qwen3.8, plus gros modèles ouverts en 2026)",
+        "url": "https://en.wikipedia.org/wiki/Open-source_artificial_intelligence"
+      },
+      {
+        "label": "llama.cpp, pull request 14992, fusionnée le 31 juillet 2025 (option --cpu-moe, qui met les poids des experts sur le CPU)",
+        "url": "https://github.com/ggml-org/llama.cpp/pull/14992"
+      },
+      {
+        "label": "KTransformers, tutoriel DeepSeek-R1/V3, février 2025 (experts calculés sur le CPU, attention et KV cache sur le GPU ; 671B en Q4_K_M avec 14 Go de VRAM)",
+        "url": "https://github.com/kvcache-ai/ktransformers/blob/main/doc/en/DeepseekR1_V3_tutorial.md"
+      },
+      {
+        "label": "Lasby et al. (Cerebras), REAP the Experts: Why Pruning Prevails for One-Shot MoE compression, 15 octobre 2025 (retirer des experts d'un MoE pour le compresser)",
+        "url": "https://arxiv.org/abs/2510.13999"
+      }
+    ]
+  }
+}

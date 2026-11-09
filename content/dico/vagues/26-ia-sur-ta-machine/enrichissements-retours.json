@@ -1,0 +1,103 @@
+{
+  "inference": {
+    "links": [
+      "entrainement",
+      "prediction-du-mot-suivant",
+      "kv-cache",
+      "quantization",
+      "cout-d-une-requete",
+      "token",
+      "latence-vs-debit",
+      "speculative-decoding",
+      "prefill-et-decode"
+    ]
+  },
+  "mythe-lit-mot-par-mot": {
+    "links": [
+      "token",
+      "tokenizer",
+      "transformer",
+      "fenetre-de-contexte",
+      "multimodal",
+      "mythe-ia-calcule",
+      "encodeur-decodeur",
+      "logits",
+      "prefill-et-decode"
+    ],
+    "aliases": [
+      "reads word by word",
+      "word by word",
+      "parallel processing",
+      "typoglycemia"
+    ]
+  },
+  "quantization": {
+    "links": [
+      "parametres",
+      "tailles-de-modele",
+      "open-weights",
+      "lora",
+      "bande-passante-memoire",
+      "offloading",
+      "elagage-d-experts"
+    ]
+  },
+  "latence-vs-debit": {
+    "links": [
+      "inference",
+      "kv-cache",
+      "gpu",
+      "cout-d-une-requete",
+      "speculative-decoding",
+      "architectures-hybrides",
+      "prefill-et-decode",
+      "bande-passante-memoire"
+    ]
+  },
+  "mythe-ia-locale": {
+    "links": [
+      "slm",
+      "open-weights",
+      "quantization",
+      "modeles-frontiere",
+      "mythe-chatgpt-c-est-le-modele",
+      "bande-passante-memoire",
+      "elagage-d-experts"
+    ]
+  },
+  "jailbreak": {
+    "links": [
+      "prompt-injection",
+      "guardrails",
+      "rlhf",
+      "post-entrainement",
+      "prompt-engineering",
+      "abliteration"
+    ]
+  },
+  "post-entrainement": {
+    "links": [
+      "entrainement",
+      "pre-entrainement",
+      "rlhf",
+      "fine-tuning",
+      "modeles-de-raisonnement",
+      "flagornerie",
+      "dpo",
+      "donnees-synthetiques",
+      "abliteration"
+    ]
+  },
+  "gpu": {
+    "links": [
+      "compute",
+      "parametres",
+      "quantization",
+      "cout-d-une-requete",
+      "open-weights",
+      "modeles-frontiere",
+      "transformer",
+      "bande-passante-memoire"
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "bande-passante",
+  "term": "bande-passante-memoire",
+  "episode": 39,
+  "date": "2026-12-01",
+  "format": "Définition",
+  "composition": "BandePassanteVoix",
+  "voice": {
+    "voice_name": "PAL - FR (voix clonée de PA)",
+    "voice_id": "mW090pzjsAt4gvt0DNB8",
+    "model_id": "eleven_v4",
+    "direction": "podcast narré, un tout petit peu d'enthousiasme ; tons variés scène par scène, ouverture différente à chaque épisode (PA, 2026-11-09 : ne pas sonner IA)"
+  },
+  "music": {
+    "reuse": "voix/prediction-music.mp3"
+  },
+  "segments": [
+    {
+      "scene": "hook",
+      "say": "[warmly] C'est quoi... la bande passante mémoire…",
+      "screen": "Titre géant « BANDE PASSANTE » avec « mémoire » en dessous. Derrière, posé dès la première image, un tuyau dessiné entre une boîte « mémoire » et une puce, avec un mince filet de données qui y coule. Aucun sous-titre (nocaption)."
+    },
+    {
+      "scene": "intro",
+      "say": "[curious] Ta carte graphique fait des milliers de calculs à la fois… et pourtant, ton IA locale écrit token après token, [amused] comme si elle tapait avec deux doigts.",
+      "screen": "Une carte graphique dessinée. Sur « des milliers de calculs », une grille de centaines de petits cœurs s'allume en flash. Sur « token après token », une fenêtre de chat où les tokens arrivent un par un, lentement. Sur « deux doigts », deux doigts pixel art tapent sur une touche, en rythme."
+    },
+    {
+      "scene": "base",
+      "say": "[matter-of-fact] Pour écrire chaque token, le modèle relit tous ses paramètres, rangés dans la mémoire. Un petit modèle compressé pèse six gigaoctets… relus en entier, à chaque token.",
+      "screen": "La boîte « mémoire » remplie de blocs de poids, libellé « 6 Go » sur « six gigaoctets ». Sur « relus en entier », tous les blocs traversent le tuyau vers la puce en cascade, un token sort ; sur « à chaque token », le flux recommence, un deuxième token sort."
+    },
+    {
+      "scene": "nom",
+      "say": "[warmly] Ce que la puce peut lire dans sa mémoire chaque seconde, c'est la bande passante mémoire, ou en anglais, la /ˈmɛməɹi ˈbændwɪdθ/.",
+      "screen": "Le tuyau en gros plan, un débit qui y coule. « bande passante mémoire » puis « memory bandwidth » s'écrivent en grand au-dessus (passages masqués, onscreen). Le tuyau garde le même diamètre tout du long."
+    },
+    {
+      "scene": "jeanclaude",
+      "say": "[mischievously] Imagine Jean-Claude, qui relit son dictionnaire de deux mille pages en entier pour chaque mot de sa carte de vœux… il pense vite, c'est tourner les pages qui lui prend la soirée.",
+      "screen": "Scène propre à ce short : Jean-Claude en pixel art à son bureau, une carte de vœux devant lui, un énorme dictionnaire ouvert. Sur « deux mille pages », les pages défilent à toute vitesse (flipbook). Sur « chaque mot », un seul mot s'écrit sur la carte, puis le dictionnaire se referme et se rouvre. Sur « la soirée », la fenêtre derrière lui passe du jour à la nuit."
+    },
+    {
+      "scene": "plafonds",
+      "say": "[curious] Un téléphone haut de gamme lit environ quatre-vingt-cinq gigaoctets par seconde… avec six gigaoctets par token, il plafonne à quatorze tokens par seconde. La plus grosse carte de joueur monte à trois cents, et une puce de data center, à plus de cinq cents.",
+      "screen": "Quatre tuyaux de plus en plus larges, chacun avec son appareil dessiné (téléphone, carte de joueur, puce de data center). Sur « quatre-vingt-cinq gigaoctets », le tuyau du téléphone, libellé « 85 Go/s ». Puis des barres horizontales en bar grow, en cascade sur leur mot : « 14 tokens/s » (téléphone, punch zoom du short), « 300 » (carte de joueur), « plus de 500 » (data center). Les barres à la même échelle."
+    },
+    {
+      "scene": "etdonc",
+      "say": "[excited] C'est pour ça qu'un modèle compressé écrit plus vite. Sur le même Mac, quarante et un tokens par seconde en seize bits… quatre-vingt-quatorze en quatre bits.",
+      "screen": "Un Mac dessiné et deux blocs de poids côte à côte : un gros bloc « 16 bits » et un petit bloc « 4 bits ». Sur « quarante et un », le gros bloc traverse le tuyau lentement, compteur « 41 tokens/s ». Sur « quatre-vingt-quatorze », le petit bloc traverse vite, compteur « 94 tokens/s »."
+    },
+    {
+      "scene": "chute",
+      "say": "[thoughtful] Pour écrire plus vite, une IA n'a pas besoin de réfléchir plus vite… [pause] elle a besoin de lire plus vite.",
+      "screen": "Retour à Jean-Claude plein cadre, de nuit, qui a troqué son gros dictionnaire contre une édition de poche ; la carte de vœux est finie à côté de lui. Image finale pleine."
+    }
+  ],
+  "quoted": [],
+  "display": {
+    "/ˈmɛməɹi": "memory",
+    "ˈbændwɪdθ/": "bandwidth"
+  },
+  "nocaption": [
+    "hook"
+  ],
+  "onscreen": {
+    "nom": [
+      "c'est la bande passante mémoire, ou en anglais, la memory bandwidth."
+    ]
+  },
+  "sources": [
+    "Fiche bande-passante-memoire de lexique/terms.js (vague 26, 2026-11-09)",
+    "NVIDIA, Mastering LLM Techniques: Inference Optimization, 17 novembre 2023 : le decode relit les poids, il est limité par la bande passante mémoire",
+    "Ministral 3 8B en 4 bits : 6,0 Go (Ollama) ; Snapdragon 8 Elite du Galaxy S25 Ultra : 84,8 Go/s (Wikipédia) ; calcul : 84,8 / 6 = 14 tokens/s au plus",
+    "NVIDIA RTX 5090 : 1 792 Go/s ; calcul : 1 792 / 6 = 299 tokens/s au plus. NVIDIA H100 SXM : 3,35 To/s ; calcul : 3 350 / 6 = 558 tokens/s au plus",
+    "llama.cpp, discussion #4167 : LLaMA 7B sur M2 Ultra, 41 tokens/s en F16 et 94,27 en Q4_0 ; https://github.com/ggml-org/llama.cpp/discussions/4167",
+    "Image : Jean-Claude et son dictionnaire de 2 000 pages (fiche bande-passante-memoire) ; scène inventée"
+  ],
+  "publication": {
+    "title": "Pourquoi ton IA écrit si lentement",
+    "description": "La bande passante mémoire, c'est ce qu'une puce peut lire dans sa mémoire chaque seconde ; un modèle relit tous ses paramètres à chaque token, c'est donc elle qui fixe sa vitesse d'écriture, plus que la puissance de calcul. Un téléphone haut de gamme plafonne à 14 tokens par seconde avec un modèle de 6 Go.\nhttps://neopal.github.io/lexique/bande-passante-memoire/\n#llm #gpu #ialocale #vulgarisation",
+    "fil": "L'ép. 38 disait que l'écriture relit tout le modèle à chaque token ; à quelle vitesse, et qu'est-ce qui la fixe ?",
+    "decor": "bureau de Jean-Claude (la carte de vœux)"
+  },
+  "credits": []
+}

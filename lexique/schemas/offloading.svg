@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 318" role="img" aria-labelledby="offloading-t">
+<title id="offloading-t">Deux façons de décharger un modèle trop gros pour la carte graphique : un modèle dense coupé par couches, où chaque token traverse aussi les couches restées en mémoire vive, et un MoE dont l'attention reste sur la carte, les experts en mémoire vive, et dont seuls les experts choisis pour le token sont lus.</title>
+<text class="m" x="0" y="16">modèle dense, coupé par couches</text>
+<rect class="bxa" x="0" y="28" width="160" height="60" rx="6"/>
+<rect class="bx" x="200" y="28" width="160" height="60" rx="6"/>
+<path class="la" d="M6 58 H354"/>
+<path class="la" d="M346 52 L355 58 L346 64"/>
+<rect class="fa" x="22" y="40" width="22" height="36" rx="3"/>
+<rect class="fa" x="54" y="40" width="22" height="36" rx="3"/>
+<rect class="fa" x="86" y="40" width="22" height="36" rx="3"/>
+<rect class="fa" x="118" y="40" width="22" height="36" rx="3"/>
+<rect class="fl" x="222" y="40" width="22" height="36" rx="3"/>
+<rect class="fl" x="254" y="40" width="22" height="36" rx="3"/>
+<rect class="fl" x="286" y="40" width="22" height="36" rx="3"/>
+<rect class="fl" x="318" y="40" width="22" height="36" rx="3"/>
+<text class="m ac" x="80" y="106" text-anchor="middle">carte graphique</text>
+<text class="m mu" x="280" y="106" text-anchor="middle">mémoire vive</text>
+<text class="m" x="0" y="146">MoE, experts en mémoire vive</text>
+<rect class="bxa" x="0" y="158" width="160" height="84" rx="6"/>
+<rect class="bx" x="200" y="158" width="160" height="84" rx="6"/>
+<text class="m ac" x="80" y="194" text-anchor="middle">attention</text>
+<text class="m ac" x="80" y="216" text-anchor="middle">KV cache</text>
+<path class="la" d="M160 190 H264 V184"/>
+<path class="la" d="M160 218 H332 V224"/>
+<rect class="fd" x="222" y="168" width="16" height="16" rx="3"/>
+<rect class="fa" x="256" y="168" width="16" height="16" rx="3"/>
+<rect class="fd" x="290" y="168" width="16" height="16" rx="3"/>
+<rect class="fd" x="324" y="168" width="16" height="16" rx="3"/>
+<rect class="fd" x="222" y="196" width="16" height="16" rx="3"/>
+<rect class="fd" x="256" y="196" width="16" height="16" rx="3"/>
+<rect class="fd" x="290" y="196" width="16" height="16" rx="3"/>
+<rect class="fd" x="324" y="196" width="16" height="16" rx="3"/>
+<rect class="fd" x="222" y="224" width="16" height="16" rx="3"/>
+<rect class="fd" x="256" y="224" width="16" height="16" rx="3"/>
+<rect class="fd" x="290" y="224" width="16" height="16" rx="3"/>
+<rect class="fa" x="324" y="224" width="16" height="16" rx="3"/>
+<text class="m ac" x="80" y="260" text-anchor="middle">carte graphique</text>
+<text class="m mu" x="280" y="260" text-anchor="middle">2 experts lus sur 12</text>
+<text class="i mu" x="0" y="292">Chaque token attend tout ce qu'il doit relire</text>
+<text class="i mu" x="0" y="312">dans la mémoire la plus lente.</text>
+</svg>
