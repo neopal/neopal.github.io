@@ -20,7 +20,7 @@ Consignes de PA du 2026-10-19. Les textes de chaque semaine sont dans `publicati
    - Promotion rémunérée : non.
    - Contenu modifié ou synthétique : non. La question vise une modification du réel faite pour passer pour réelle, ce qui n'est pas le cas de nos shorts.
    - Tags : les mots clés, séparés par des virgules.
-   - Date d'enregistrement : le jour de la mise en ligne. Lieu : Normandie.
+   - Date d'enregistrement : le jour de la mise en ligne (YouTube refuse une date future : pour un short programmé, mettre le jour de l'import). Lieu : Normandie.
 8. Étape « Éléments vidéo » : ajouter une vidéo similaire, un short déjà publié et proche par le sujet.
 9. Visibilité : Programmer, à la date de l'épisode, à 08:00. L'heure se choisit dans la liste, elle ne se tape pas.
 
@@ -34,6 +34,7 @@ Consignes de PA du 2026-10-19. Les textes de chaque semaine sont dans `publicati
 6. Quand publier : « Programmer ». La date se choisit dans le calendrier ; l'heure se règle dans une roue, où un clic sur l'heure du haut remonte de trois heures, puis on clique 08 et 00. Vérifier « 08:00 » et la date.
 7. Bouton « Programmer ». Le message affiche « Vidéo publiée » même pour une programmation : vérifier dans « Publications » l'étiquette bleue de la date.
 - On ne peut pas programmer plus de 10 jours à l'avance.
+- La vérification de contenu peut rester « en cours » plus de 30 minutes puis tomber en « Une erreur est survenue » : cliquer « Réessayer », elle passe alors en quelques secondes. On peut préparer plusieurs vidéos dans des onglets séparés, leurs vérifications tournent en parallèle (2026-11-09).
 - La colonne des minutes de la roue part de l'heure en cours : cliquer la minute du haut jusqu'à voir 00.
 - Attendre « Aucun problème constaté » de la vérification de contenu avant de cliquer « Programmer » ; sinon TikTok propose « Publier maintenant », qu'il ne faut pas cliquer (Annuler, puis Réessayer la vérification).
 - Vidéo de moins de 60 s : TikTok coche d'office « Réutilisation du contenu » (duos et collages). PA l'autorise (2026-10-19), on la laisse cochée ; même chose pour le remix sur Instagram.

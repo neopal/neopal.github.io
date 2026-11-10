@@ -1,0 +1,225 @@
+{
+  "_regles": "Mode opératoire : publication-modop.md. YouTube : titre seul (40 caractères au plus, sans hashtag) ; description = texte, lien, crédits, hashtags, séparés par des lignes vides ; tags dans « Plus ». TikTok et Instagram : légende = titre, texte, lien, crédits, hashtags ; hashtags tapés un par un et sélectionnés. Instagram : forcer le format Original (9:16). Programmation à 8 h. TikTok : 10 jours d'avance au plus. Clonage de voix écarté (PA, 2026-11-09).",
+  "episodes": [
+    {
+      "ep": 29,
+      "date": "2026-11-11",
+      "id": "remplace-metier",
+      "file": "remplace-metier-v1.mp4",
+      "cover": "remplace-metier-cover.jpg",
+      "title": "Les radiologues devaient disparaître",
+      "body": "« L'IA va remplacer tel métier demain » ; en 2016, on annonçait la fin des radiologues, et en 2025 leurs internats ont ouvert un nombre record de postes. Ce qui recule pour l'instant, d'après Stanford, ce sont les embauches de jeunes dans les métiers les plus exposés.",
+      "link": "https://neopal.github.io/lexique/mythe-remplace-metier/",
+      "credits": "Chiffres : Works in Progress, 25 septembre 2025 ; Stanford Digital Economy Lab, 12 août 2026.",
+      "tags": "#emploi #ia #travail #vulgarisation",
+      "yt_tags": "Emploi, IA, radiologues, Stanford, Brynjolfsson, métier, vulgarisation, lexique IA",
+      "yt_related": "Après 50 validations, on ne lit plus",
+      "youtube": "8XuqlTlHvLY",
+      "programme": {
+        "youtube": true,
+        "instagram": true,
+        "tiktok": true
+      }
+    },
+    {
+      "ep": 30,
+      "date": "2026-11-13",
+      "id": "declaration",
+      "file": "declaration-v1.mp4",
+      "cover": "declaration-cover.jpg",
+      "title": "440 000 dollars de fausses références",
+      "body": "Une déclaration d'usage de l'IA (AI disclosure), ce sont quelques lignes qui disent quelle IA a servi, à quoi, comment on a relu, et qui en répond. En 2025, Deloitte a dû rembourser une partie d'un rapport plein de références inventées, qui ne mentionnait pas l'IA.",
+      "link": "https://neopal.github.io/lexique/declaration-d-usage-de-l-ia/",
+      "credits": "Sources : The Register, 6 octobre 2025 ; règlement européen sur l'IA, article 50.",
+      "tags": "#ia #transparence #aiact #vulgarisation",
+      "yt_tags": "déclaration d usage de l IA, AI disclosure, Deloitte, AI Act, transparence, vulgarisation, lexique IA",
+      "yt_related": "Pourquoi ChatGPT invente des sources",
+      "youtube": "o8Y7UtcHn0g",
+      "programme": {
+        "youtube": true,
+        "instagram": true,
+        "tiktok": true
+      }
+    },
+    {
+      "ep": 31,
+      "date": "2026-11-15",
+      "id": "ancrage",
+      "file": "ancrage-v1.mp4",
+      "cover": "ancrage-cover.jpg",
+      "title": "Oblige l'IA à montrer sa page",
+      "body": "L'ancrage aux sources (grounding), c'est obliger un modèle à appuyer chaque phrase sur un passage exact des documents fournis, et à dire « je ne sais pas » quand ils ne couvrent pas la question. Ça réduit l'invention sans la supprimer.",
+      "link": "https://neopal.github.io/lexique/ancrage-aux-sources/",
+      "credits": "Sources : arXiv (Magesh et al., Stanford, mai 2024).",
+      "tags": "#hallucination #chatgpt #rag #vulgarisation",
+      "yt_tags": "ancrage aux sources, grounding, hallucination, RAG, sources, vulgarisation, lexique IA",
+      "yt_related": "Le chatbot de tes RH peut-il se tromper ?",
+      "youtube": "Wv6oWrcoiMg",
+      "programme": {
+        "youtube": true,
+        "instagram": true,
+        "tiktok": true
+      }
+    },
+    {
+      "ep": 32,
+      "date": "2026-11-17",
+      "id": "ia-locale",
+      "file": "ia-locale-v1.mp4",
+      "cover": "ia-locale-cover.jpg",
+      "title": "L'IA chez toi a un an de retard",
+      "body": "« Une IA locale, c'est ChatGPT chez soi » ; pas tout à fait. Avec Ollama ou LM Studio, un modèle ouvert tourne sur ton ordinateur, sans abonnement et sans que tes messages sortent ; mais sur une carte graphique de joueur, il égale les meilleurs modèles d'il y a six à douze mois (Epoch AI, 2025).",
+      "link": "https://neopal.github.io/lexique/mythe-ia-locale/",
+      "credits": "",
+      "tags": "#ialocale #ollama #llm #vulgarisation",
+      "yt_tags": "IA locale, Ollama, LM Studio, modèle ouvert, LLM, Epoch AI, vulgarisation, lexique IA",
+      "yt_related": "Derrière ChatGPT, quinze IA différentes",
+      "youtube": "5E9ZCyAKsf4",
+      "programme": {
+        "youtube": true,
+        "instagram": true,
+        "tiktok": true
+      }
+    },
+    {
+      "ep": 33,
+      "date": "2026-11-19",
+      "id": "bouteille-d-eau",
+      "file": "bouteille-d-eau-v1.mp4",
+      "cover": "bouteille-d-eau-cover.jpg",
+      "title": "ChatGPT boit-il une bouteille d'eau ?",
+      "body": "« Une question à ChatGPT, c'est une bouteille d'eau » ; le chiffre de 2024 comptait surtout l'eau évaporée par les centrales électriques. Depuis 2025, Google déclare 0,26 mL par question à Gemini, Mistral 45 mL en comptant la fabrication des serveurs. Ce qui grimpe vraiment, c'est le total des centres de données (AIE, 2026).",
+      "link": "https://neopal.github.io/lexique/mythe-bouteille-d-eau/",
+      "credits": "Chiffres : Washington Post, 18 septembre 2024 ; Google, 21 août 2025 ; Mistral AI, 22 juillet 2025 ; Epoch AI, 7 février 2025 ; AIE, 16 avril 2026.",
+      "tags": "#eau #environnement #chatgpt #vulgarisation",
+      "yt_tags": "eau, environnement, ChatGPT, data center, Google, Mistral, énergie, vulgarisation, lexique IA",
+      "yt_related": "Ton français coûte plus cher à l'IA",
+      "youtube": "_KixRt2deCI",
+      "programme": {
+        "youtube": true,
+        "instagram": true,
+        "tiktok": true
+      }
+    },
+    {
+      "ep": 34,
+      "date": "2026-11-21",
+      "id": "detecteur",
+      "file": "detecteur-v1.mp4",
+      "cover": "detecteur-cover.jpg",
+      "title": "La Constitution, écrite par une IA ?",
+      "body": "« Le détecteur l'a dit, donc c'est une IA. » En 2023, un détecteur jugeait la Constitution américaine, signée en 1787, probablement écrite par une IA. Ces outils ne voient que le style, accusent d'abord ceux qui écrivent simplement et se contournent en une consigne ; seul un filigrane posé à la génération signe l'origine.",
+      "link": "https://neopal.github.io/lexique/mythe-detecteur-de-texte-ia/",
+      "credits": "Chiffres : Ars Technica, 14 juillet 2023 ; Liang et al., Stanford, 2023 ; Chicago Booth Review, 2 décembre 2025 ; Cour suprême de l'État de New York, 28 janvier 2026 ; Nature, 23 octobre 2024.",
+      "tags": "#detecteurIA #chatgpt #education #vulgarisation",
+      "yt_tags": "détecteur IA, ChatGPT, école, triche, filigrane, SynthID, vulgarisation, lexique IA",
+      "yt_related": "ChatGPT ne sait pas qu'il ne sait pas",
+      "youtube": "xxANqvyWMnM",
+      "programme": {
+        "youtube": true,
+        "instagram": true,
+        "tiktok": false
+      }
+    },
+    {
+      "ep": 35,
+      "date": "2026-11-23",
+      "id": "shadow-ai",
+      "file": "shadow-ai-v1.mp4",
+      "cover": "shadow-ai-cover.jpg",
+      "title": "Ton IA de bureau vient de chez toi ?",
+      "body": "Le shadow AI (IA fantôme), c'est travailler avec une IA que ton employeur n'a pas validée, souvent un compte ChatGPT perso. En 2025, 71 % des salariés britanniques l'avaient déjà fait. Et sur un compte perso, ce que tu colles peut servir à entraîner les modèles, sauf si tu l'as désactivé.",
+      "link": "https://neopal.github.io/lexique/shadow-ai/",
+      "credits": "",
+      "tags": "#shadowai #chatgpt #travail #vulgarisation",
+      "yt_tags": "shadow AI, IA fantôme, ChatGPT, travail, entreprise, données, vulgarisation, lexique IA",
+      "yt_related": "ChatGPT apprend en te parlant ?",
+      "youtube": "JsZ32p8WWBQ",
+      "programme": {
+        "youtube": true,
+        "instagram": true,
+        "tiktok": false
+      }
+    },
+    {
+      "ep": 36,
+      "date": "2026-11-25",
+      "id": "ai-act",
+      "file": "ai-act-v1.mp4",
+      "cover": "ai-act-cover.jpg",
+      "title": "Ce que l'Europe interdit déjà à l'IA",
+      "body": "L'AI Act, le règlement européen sur l'IA, range les usages selon leur risque. La notation sociale et la lecture des émotions au travail ou à l'école sont interdites depuis février 2025, un chatbot et un deepfake doivent se signaler depuis août 2026, et seules les règles du haut risque, comme le crédit, ont glissé à décembre 2027.",
+      "link": "https://neopal.github.io/lexique/ai-act/",
+      "credits": "",
+      "tags": "#aiact #europe #ia #vulgarisation",
+      "yt_tags": "AI Act, règlement européen, Europe, IA, deepfake, chatbot, vulgarisation, lexique IA",
+      "yt_related": "Un Short sur cinq est de la pâtée",
+      "youtube": "Hdykir0OMOQ",
+      "programme": {
+        "youtube": true,
+        "instagram": true,
+        "tiktok": false
+      }
+    },
+    {
+      "ep": 37,
+      "date": "2026-11-27",
+      "id": "offloading",
+      "file": "offloading-v1.mp4",
+      "cover": "offloading-cover.jpg",
+      "title": "Une IA géante sur ton téléphone ?",
+      "body": "L'offloading (déchargement), c'est laisser sur le disque la partie d'un modèle qui ne tient pas dans la mémoire rapide, et aller la relire à chaque token. Une IA de mille milliards de paramètres démarre alors sur un téléphone, mais elle écrit une à deux secondes par token.",
+      "link": "https://neopal.github.io/lexique/offloading/",
+      "credits": "",
+      "tags": "#ialocale #llm #smartphone #vulgarisation",
+      "yt_tags": "offloading, déchargement, IA locale, smartphone, MoE, LLM, vulgarisation, lexique IA",
+      "yt_related": "Plus gros ne veut pas dire plus malin",
+      "youtube": "etm01_KjNf8",
+      "programme": {
+        "youtube": true,
+        "instagram": true,
+        "tiktok": false
+      }
+    },
+    {
+      "ep": 38,
+      "date": "2026-11-29",
+      "id": "prefill-decode",
+      "file": "prefill-decode-v1.mp4",
+      "cover": "prefill-decode-cover.jpg",
+      "title": "Pourquoi ton IA met du temps à répondre",
+      "body": "Une réponse d'IA se fait en deux temps : le prefill lit tout ton message d'un bloc, le decode écrit la réponse token après token. Sur une carte graphique, un petit modèle lit 7 340 tokens par seconde et n'en écrit que 121 (llama.cpp). Un long PDF fait donc attendre avant le premier mot.",
+      "link": "https://neopal.github.io/lexique/prefill-et-decode/",
+      "credits": "",
+      "tags": "#llm #ialocale #chatgpt #vulgarisation",
+      "yt_tags": "prefill, decode, inférence, LLM, GPU, PDF, vulgarisation, lexique IA",
+      "yt_related": "Ton français coûte plus cher à l'IA",
+      "youtube": "BubkgdVwWjY",
+      "programme": {
+        "youtube": true,
+        "instagram": true,
+        "tiktok": false
+      }
+    },
+    {
+      "ep": 39,
+      "date": "2026-12-01",
+      "id": "bande-passante",
+      "file": "bande-passante-v1.mp4",
+      "cover": "bande-passante-cover.jpg",
+      "title": "Pourquoi ton IA écrit si lentement",
+      "body": "La bande passante mémoire, c'est ce qu'une puce peut lire dans sa mémoire chaque seconde ; un modèle relit tous ses paramètres à chaque token, c'est donc elle qui fixe sa vitesse d'écriture, plus que la puissance de calcul. Un téléphone haut de gamme plafonne à 14 tokens par seconde avec un modèle de 6 Go.",
+      "link": "https://neopal.github.io/lexique/bande-passante-memoire/",
+      "credits": "",
+      "tags": "#llm #gpu #ialocale #vulgarisation",
+      "yt_tags": "bande passante mémoire, memory bandwidth, GPU, LLM, tokens par seconde, vulgarisation, lexique IA",
+      "yt_related": "Plus gros ne veut pas dire plus malin",
+      "youtube": "h3CSIkCSuJw",
+      "programme": {
+        "youtube": true,
+        "instagram": true,
+        "tiktok": false
+      }
+    }
+  ]
+}
