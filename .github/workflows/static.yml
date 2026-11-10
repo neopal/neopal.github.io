@@ -44,3 +44,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Pages reste parfois > 10 min en "syncing_files" : 30 min au lieu du défaut
+          timeout: 1800000
