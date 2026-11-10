@@ -33,6 +33,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Drop non-public folders
+        # Sources Remotion (~50 Mo) et captures de dev : inutiles en ligne, alourdissent l'artefact
+        run: rm -rf video .playwright-mcp
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
